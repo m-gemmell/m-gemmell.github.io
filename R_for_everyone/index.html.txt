@@ -1,0 +1,3 @@
+<head>
+	<meta http-equiv="Refresh" content=0; URL=/R_for_everyone/01-Intro_to_R.html">
+<head>
