@@ -4,4 +4,4 @@ I'm a bioinformatician and trainer. I am a very impassioned trainer believing th
 
 ### Online materials
 
-__[R for everyone]{https://m-gemmell.github.io/R_for_everyone/01-Intro_to_R.html}__
+#### [R for everyone](https://m-gemmell.github.io/R_for_everyone/01-Intro_to_R.html)
