@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Matthew R. Gemmell">
+<meta name="dcterms.date" content="2022-07-21">
 
-<title>R for Everyone - 9&nbsp; Files solutions</title>
+<title>R for Everyone</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -88,8 +90,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./10-Handy_tips_and_tricks.html" rel="next">
-<link href="./08-Files_exercises.html" rel="prev">
+<link href="./02-Foundations.html" rel="next">
 <link href="./figures/R.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -129,7 +130,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Files solutions</span></h1>
+      <h1 class="quarto-secondary-nav-title">R for Everyone</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -162,7 +163,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
   </div>
 </li>
       </ul>
@@ -222,7 +223,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./09-Files_solutions.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Files solutions</span></a>
+  <a href="./09-Files_solutions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Files solutions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -328,8 +329,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">In this chapter</h2>
    
   <ul>
-  <li><a href="#bats-solution" id="toc-bats-solution" class="nav-link active" data-scroll-target="#bats-solution"> <span class="header-section-number">9.1</span> Bats solution</a></li>
-  <li><a href="#uk-retail-solution" id="toc-uk-retail-solution" class="nav-link" data-scroll-target="#uk-retail-solution"> <span class="header-section-number">9.2</span> UK retail solution</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"> <span class="header-section-number">1</span> Introduction</a></li>
   </ul>
 </nav>
 </nav>
@@ -341,96 +341,65 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Files solutions</span></h1>
+<h1 class="title d-none d-lg-block">R for Everyone</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Matthew R. Gemmell </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 21, 2022</p>
+    </div>
+  </div>
     
   </div>
   
 
 </header>
 
-<p>Before looking at these solutions keep in mind that there are many different ways to do the same thing in R. Therefore if your scripts are different than the ones below it does not mean they are wrong. As long as they produce the intended output they are correct.</p>
-<section id="bats-solution" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="bats-solution"><span class="header-section-number">9.1</span> Bats solution</h2>
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/bat.png" class="img-fluid figure-img" style="width:20.0%"></p>
+<p><img src="figures/R.png" class="img-fluid figure-img" style="width:20.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>Read in the file as a <strong>data frame</strong>:</p>
+<p>These materials will teach you the fundamentals of R and are intended for beginners. The first section will focus on the basics of R with foundations and objects. Next you will look at how to read in files and write out files from R. This will be followed by getting further practice on the completed materials whilst learning some handy tips and tricks.</p>
+<p>You will then get to apply your R skills to create plots and carry out some statistics. You will learn how to make four types of plots with R:</p>
+<ul>
+<li>Line graphs</li>
+<li>Histograms</li>
+<li>Scatterplots</li>
+<li>Boxplots</li>
+</ul>
+<p>You will then be carrying out some basic statistics, don’t worry it won’t be a statistics lesson.</p>
+<p>The materials will finish with some harder coding where you’ll learn to make loops, use ifs, and create R functions.</p>
+<p>These materials will involve theory, practice, exercises, and solutions:</p>
+<ul>
+<li>The theory will explain R concepts and terminology. R terminology can be quite confusing but it is important to learn as it makes asking questions online a lot easier.</li>
+<li>Practice will involve code to run whilst reading through the theory. This will allow you to see the output of R and hopefully help you understand how R works.</li>
+<li>Exercises will give you a task to carry out based on the knowledge and skills you learned from the theory and practise.</li>
+<li>Solutions for the exercise are after the exercise. Please try the exercise before looking at the solution, however make sure you read the solutions even if you completed the exercise successfully as there is extra information in these sections.</li>
+</ul>
+<p>Commands are in the following font and colour and should be run in RStudio (These should not be copied into R from this document):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>bat_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Chapter_8_files/bat_roosts.csv"</span>, <span class="at">row.names =</span> <span class="dv">1</span>, <span class="at">check.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>This is a command </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Add a row with column totals:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>bat_df[<span class="st">"UK"</span>,] <span class="ot">&lt;-</span> <span class="fu">colSums</span>(bat_df) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Add a column with row totals:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>bat_df<span class="sc">$</span>All_Bat_Species <span class="ot">&lt;-</span> <span class="fu">rowSums</span>(bat_df) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Create transposed <strong>data frame</strong>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>bat_t_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">t</span>(bat_df)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><strong>Write</strong> file:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(bat_t_df, </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">file =</span> <span class="st">"Chapter_8_files/bat_roosts_t.csv"</span>, </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">","</span>, <span class="at">quote =</span> <span class="cn">FALSE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="uk-retail-solution" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="uk-retail-solution"><span class="header-section-number">9.2</span> UK retail solution</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/UKPounds.png" class="img-fluid figure-img" style="width:20.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Read in file:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>uk_retail_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Chapter_8_files/UK_retail.tsv"</span>, </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                         <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>, <span class="at">row.names =</span> <span class="dv">1</span>, </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                         <span class="at">check.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Create 2020 <strong>data frame</strong>: Read in file:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Can index to get the desired columns</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>uk_retail_2020_df <span class="ot">&lt;-</span> uk_retail_df[<span class="dv">29</span><span class="sc">:</span><span class="dv">37</span>,]</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Alternatively the tail() function can be used</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#It is like head() but will get lowest rows</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>uk_retail_2020_df <span class="ot">&lt;-</span> <span class="fu">tail</span>(uk_retail_df, <span class="at">n =</span> <span class="dv">9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Print food index phrases:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"The Food retail index for"</span>, <span class="fu">row.names</span>(uk_retail_2020_df),</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>      <span class="st">"was"</span>, uk_retail_2020_df<span class="sc">$</span>Food, </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">sep =</span> <span class="st">" "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Total and mean rows:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>uk_retail_2020_df[<span class="st">"Total"</span>,] <span class="ot">&lt;-</span> <span class="fu">colSums</span>(uk_retail_2020_df)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>uk_retail_2020_df[<span class="st">"Average"</span>,] <span class="ot">&lt;-</span> <span class="fu">colMeans</span>(<span class="fu">head</span>(uk_retail_2020_df, <span class="at">n =</span> <span class="dv">9</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Write out file:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">write.table</span>(uk_retail_2020_df, <span class="st">"Chapter_8_files/UK_retail_2020.tsv"</span>, </span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>, <span class="at">col.names =</span> <span class="cn">NA</span>, <span class="at">quote =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Licence" style="border-width:0"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
 
 
 </section>
@@ -535,13 +504,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
-      <a href="./08-Files_exercises.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Files exercises</span></span>
-      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./10-Handy_tips_and_tricks.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Handy tips &amp; tricks</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./02-Foundations.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Foundations of R</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

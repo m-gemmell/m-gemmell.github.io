@@ -1,73 +1,26 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 17 Basic stats | R for everyone</title>
-  <meta name="description" content="Chapter 17 Basic stats | R for everyone" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
 
-  <meta property="og:title" content="Chapter 17 Basic stats | R for everyone" />
-  <meta property="og:type" content="book" />
-  
-  
-  
-  
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 17 Basic stats | R for everyone" />
-  
-  
-  
-
-<meta name="author" content="Matthew R. Gemmell" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<meta name="date" content="2022-03-14" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  <link rel="shortcut icon" href="figures/R.png" type="image/x-icon" />
-<link rel="prev" href="16-Plots_solutions.html"/>
-<link rel="next" href="18-Stats_exercises.html"/>
-<script src="libs/header-attrs-2.13/header-attrs.js"></script>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<link href="libs/font-awesome-5.13.0/css/all.min.css" rel="stylesheet" />
-<link href="libs/font-awesome-5.13.0/css/v4-shims.min.css" rel="stylesheet" />
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
-
-
-<style type="text/css">
+<title>R for Everyone - 17&nbsp; Basic stats</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -128,288 +81,349 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./18-Stats_exercises.html" rel="next">
+<link href="./16-Plots_solutions.html" rel="prev">
+<link href="./figures/R.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<link href="site_libs/font-awesome-5.13.0/css/all.min.css" rel="stylesheet">
+<link href="site_libs/font-awesome-5.13.0/css/v4-shims.min.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
 </head>
 
-<body>
+<body class="nav-sidebar floating">
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a>R for everyone</a></li>
-
-<li class="divider"></li>
-<li class="part"><span><b>Start<span></span></b></span></li>
-<li class="chapter" data-level="1" data-path="01-Intro_to_R.html"><a href="01-Intro_to_R.html"><i class="fa fa-check"></i><b>1</b> Introduction<span></span></a></li>
-<li class="part"><span><b>Foundations &amp; Objects<span></span></b></span></li>
-<li class="chapter" data-level="2" data-path="02-Foundations.html"><a href="02-Foundations.html"><i class="fa fa-check"></i><b>2</b> Foundations of R<span></span></a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="02-Foundations.html"><a href="02-Foundations.html#operators"><i class="fa fa-check"></i><b>2.1</b> Operators<span></span></a></li>
-<li class="chapter" data-level="2.2" data-path="02-Foundations.html"><a href="02-Foundations.html#variables"><i class="fa fa-check"></i><b>2.2</b> Variables<span></span></a></li>
-<li class="chapter" data-level="2.3" data-path="02-Foundations.html"><a href="02-Foundations.html#functions"><i class="fa fa-check"></i><b>2.3</b> Functions<span></span></a></li>
-<li class="chapter" data-level="2.4" data-path="02-Foundations.html"><a href="02-Foundations.html#directories"><i class="fa fa-check"></i><b>2.4</b> Directories<span></span></a>
-<ul>
-<li class="chapter" data-level="2.4.1" data-path="02-Foundations.html"><a href="02-Foundations.html#commands"><i class="fa fa-check"></i><b>2.4.1</b> Commands<span></span></a></li>
-<li class="chapter" data-level="2.4.2" data-path="02-Foundations.html"><a href="02-Foundations.html#rstudio-interface"><i class="fa fa-check"></i><b>2.4.2</b> RStudio Interface<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="02-Foundations.html"><a href="02-Foundations.html#script-editor"><i class="fa fa-check"></i><b>2.5</b> Script editor<span></span></a>
-<ul>
-<li class="chapter" data-level="2.5.1" data-path="02-Foundations.html"><a href="02-Foundations.html#running-commands"><i class="fa fa-check"></i><b>2.5.1</b> Running commands<span></span></a></li>
-<li class="chapter" data-level="2.5.2" data-path="02-Foundations.html"><a href="02-Foundations.html#annotations"><i class="fa fa-check"></i><b>2.5.2</b> Annotations<span></span></a></li>
-<li class="chapter" data-level="2.5.3" data-path="02-Foundations.html"><a href="02-Foundations.html#saving-scripts"><i class="fa fa-check"></i><b>2.5.3</b> Saving scripts<span></span></a></li>
-<li class="chapter" data-level="2.5.4" data-path="02-Foundations.html"><a href="02-Foundations.html#open-a-saved-script"><i class="fa fa-check"></i><b>2.5.4</b> Open a saved script<span></span></a></li>
-<li class="chapter" data-level="2.5.5" data-path="02-Foundations.html"><a href="02-Foundations.html#new-script"><i class="fa fa-check"></i><b>2.5.5</b> New script<span></span></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="03-Foundations_exercises.html"><a href="03-Foundations_exercises.html"><i class="fa fa-check"></i><b>3</b> Foundations of R exercises<span></span></a></li>
-<li class="chapter" data-level="4" data-path="04-R_objects.html"><a href="04-R_objects.html"><i class="fa fa-check"></i><b>4</b> R objects<span></span></a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="04-R_objects.html"><a href="04-R_objects.html#code-sections"><i class="fa fa-check"></i><b>4.1</b> Code sections<span></span></a></li>
-<li class="chapter" data-level="4.2" data-path="04-R_objects.html"><a href="04-R_objects.html#classes"><i class="fa fa-check"></i><b>4.2</b> Classes<span></span></a>
-<ul>
-<li class="chapter" data-level="4.2.1" data-path="04-R_objects.html"><a href="04-R_objects.html#numeric"><i class="fa fa-check"></i><b>4.2.1</b> Numeric<span></span></a></li>
-<li class="chapter" data-level="4.2.2" data-path="04-R_objects.html"><a href="04-R_objects.html#logical"><i class="fa fa-check"></i><b>4.2.2</b> Logical<span></span></a></li>
-<li class="chapter" data-level="4.2.3" data-path="04-R_objects.html"><a href="04-R_objects.html#string"><i class="fa fa-check"></i><b>4.2.3</b> String<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="4.3" data-path="04-R_objects.html"><a href="04-R_objects.html#code-section-continued"><i class="fa fa-check"></i><b>4.3</b> Code section continued<span></span></a></li>
-<li class="chapter" data-level="4.4" data-path="04-R_objects.html"><a href="04-R_objects.html#data-structures"><i class="fa fa-check"></i><b>4.4</b> Data structures<span></span></a>
-<ul>
-<li class="chapter" data-level="4.4.1" data-path="04-R_objects.html"><a href="04-R_objects.html#scalar"><i class="fa fa-check"></i><b>4.4.1</b> Scalar<span></span></a></li>
-<li class="chapter" data-level="4.4.2" data-path="04-R_objects.html"><a href="04-R_objects.html#vectors-lists"><i class="fa fa-check"></i><b>4.4.2</b> Vectors &amp; Lists<span></span></a></li>
-<li class="chapter" data-level="4.4.3" data-path="04-R_objects.html"><a href="04-R_objects.html#data-frames-matrices"><i class="fa fa-check"></i><b>4.4.3</b> Data frames &amp; Matrices<span></span></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="05-R_objects_exercises.html"><a href="05-R_objects_exercises.html"><i class="fa fa-check"></i><b>5</b> R objects exercises<span></span></a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="05-R_objects_exercises.html"><a href="05-R_objects_exercises.html#df"><i class="fa fa-check"></i><b>5.1</b> df<span></span></a></li>
-<li class="chapter" data-level="5.2" data-path="05-R_objects_exercises.html"><a href="05-R_objects_exercises.html#beach_df_2"><i class="fa fa-check"></i><b>5.2</b> beach_df_2<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html"><i class="fa fa-check"></i><b>6</b> R objects solutions<span></span></a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#df-solution"><i class="fa fa-check"></i><b>6.1</b> df solution<span></span></a>
-<ul>
-<li class="chapter" data-level="6.1.1" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#step-1"><i class="fa fa-check"></i><b>6.1.1</b> Step 1<span></span></a></li>
-<li class="chapter" data-level="6.1.2" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#step-2a"><i class="fa fa-check"></i><b>6.1.2</b> Step 2a<span></span></a></li>
-<li class="chapter" data-level="6.1.3" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#step-2b"><i class="fa fa-check"></i><b>6.1.3</b> Step 2b<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="6.2" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#beach_df_2-solution"><i class="fa fa-check"></i><b>6.2</b> beach_df_2 solution<span></span></a>
-<ul>
-<li class="chapter" data-level="6.2.1" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#step-1-1"><i class="fa fa-check"></i><b>6.2.1</b> Step 1<span></span></a></li>
-<li class="chapter" data-level="6.2.2" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#step-2a-1"><i class="fa fa-check"></i><b>6.2.2</b> Step 2a<span></span></a></li>
-<li class="chapter" data-level="6.2.3" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#step-2b-1"><i class="fa fa-check"></i><b>6.2.3</b> Step 2b<span></span></a></li>
-</ul></li>
-</ul></li>
-<li class="part"><span><b>Files, Subsetting, &amp; Tips<span></span></b></span></li>
-<li class="chapter" data-level="7" data-path="07-Files_and_subsetting_data.html"><a href="07-Files_and_subsetting_data.html"><i class="fa fa-check"></i><b>7</b> Files and subsetting data<span></span></a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="07-Files_and_subsetting_data.html"><a href="07-Files_and_subsetting_data.html#reading-from-a-file"><i class="fa fa-check"></i><b>7.1</b> Reading from a file<span></span></a></li>
-<li class="chapter" data-level="7.2" data-path="07-Files_and_subsetting_data.html"><a href="07-Files_and_subsetting_data.html#subsetting-data"><i class="fa fa-check"></i><b>7.2</b> Subsetting data<span></span></a>
-<ul>
-<li class="chapter" data-level="7.2.1" data-path="07-Files_and_subsetting_data.html"><a href="07-Files_and_subsetting_data.html#vectors"><i class="fa fa-check"></i><b>7.2.1</b> Vectors<span></span></a></li>
-<li class="chapter" data-level="7.2.2" data-path="07-Files_and_subsetting_data.html"><a href="07-Files_and_subsetting_data.html#data-frames"><i class="fa fa-check"></i><b>7.2.2</b> Data frames<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="07-Files_and_subsetting_data.html"><a href="07-Files_and_subsetting_data.html#writing-to-a-file"><i class="fa fa-check"></i><b>7.3</b> Writing to a file<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="08-Files_exercises.html"><a href="08-Files_exercises.html"><i class="fa fa-check"></i><b>8</b> Files exercises<span></span></a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="08-Files_exercises.html"><a href="08-Files_exercises.html#bats"><i class="fa fa-check"></i><b>8.1</b> Bats<span></span></a></li>
-<li class="chapter" data-level="8.2" data-path="08-Files_exercises.html"><a href="08-Files_exercises.html#uk-retail"><i class="fa fa-check"></i><b>8.2</b> UK retail<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="09-Files_solutions.html"><a href="09-Files_solutions.html"><i class="fa fa-check"></i><b>9</b> Files solutions<span></span></a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="09-Files_solutions.html"><a href="09-Files_solutions.html#bats-solution"><i class="fa fa-check"></i><b>9.1</b> Bats solution<span></span></a></li>
-<li class="chapter" data-level="9.2" data-path="09-Files_solutions.html"><a href="09-Files_solutions.html#uk-retail-solution"><i class="fa fa-check"></i><b>9.2</b> UK retail solution<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html"><i class="fa fa-check"></i><b>10</b> Handy tips &amp; tricks<span></span></a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#r-conventions"><i class="fa fa-check"></i><b>10.1</b> R conventions<span></span></a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#variable-names"><i class="fa fa-check"></i><b>10.1.1</b> Variable names<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="10.2" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#rstudio"><i class="fa fa-check"></i><b>10.2</b> RStudio<span></span></a>
-<ul>
-<li class="chapter" data-level="10.2.1" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#global-options"><i class="fa fa-check"></i><b>10.2.1</b> Global options<span></span></a></li>
-<li class="chapter" data-level="10.2.2" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#sweep-buttons"><i class="fa fa-check"></i><b>10.2.2</b> Sweep buttons<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="10.3" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#multiplication-table"><i class="fa fa-check"></i><b>10.3</b> Multiplication table<span></span></a></li>
-<li class="chapter" data-level="10.4" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#tab-complete"><i class="fa fa-check"></i><b>10.4</b> Tab complete<span></span></a></li>
-<li class="chapter" data-level="10.5" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#tea"><i class="fa fa-check"></i><b>10.5</b> Tea<span></span></a></li>
-<li class="chapter" data-level="10.6" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#english-speakers-across-the-world"><i class="fa fa-check"></i><b>10.6</b> English speakers across the world<span></span></a></li>
-<li class="chapter" data-level="10.7" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#identical"><i class="fa fa-check"></i><b>10.7</b> Identical<span></span></a></li>
-<li class="chapter" data-level="10.8" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#shortcuts"><i class="fa fa-check"></i><b>10.8</b> Shortcuts<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="11-Tips_exercises.html"><a href="11-Tips_exercises.html"><i class="fa fa-check"></i><b>11</b> Handy exercises<span></span></a>
-<ul>
-<li class="chapter" data-level="11.1" data-path="11-Tips_exercises.html"><a href="11-Tips_exercises.html#tea-exercise"><i class="fa fa-check"></i><b>11.1</b> Tea exercise<span></span></a></li>
-<li class="chapter" data-level="11.2" data-path="11-Tips_exercises.html"><a href="11-Tips_exercises.html#english-speakers-across-the-world-exercise"><i class="fa fa-check"></i><b>11.2</b> English speakers across the world exercise<span></span></a></li>
-<li class="chapter" data-level="11.3" data-path="11-Tips_exercises.html"><a href="11-Tips_exercises.html#extra-exercise"><i class="fa fa-check"></i><b>11.3</b> Extra exercise<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="12-Tips_solutions.html"><a href="12-Tips_solutions.html"><i class="fa fa-check"></i><b>12</b> Handy Solutions<span></span></a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="12-Tips_solutions.html"><a href="12-Tips_solutions.html#tea-solution"><i class="fa fa-check"></i><b>12.1</b> Tea solution<span></span></a></li>
-<li class="chapter" data-level="12.2" data-path="12-Tips_solutions.html"><a href="12-Tips_solutions.html#english-speakers-across-the-world-solution"><i class="fa fa-check"></i><b>12.2</b> English speakers across the world solution<span></span></a></li>
-</ul></li>
-<li class="part"><span><b>Plots<span></span></b></span></li>
-<li class="chapter" data-level="13" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html"><i class="fa fa-check"></i><b>13</b> Histograms and Line graphs<span></span></a>
-<ul>
-<li class="chapter" data-level="13.1" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#histogram"><i class="fa fa-check"></i><b>13.1</b> Histogram<span></span></a></li>
-<li class="chapter" data-level="13.2" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#line-graphs"><i class="fa fa-check"></i><b>13.2</b> Line graphs<span></span></a>
-<ul>
-<li class="chapter" data-level="13.2.1" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#read-in-data"><i class="fa fa-check"></i><b>13.2.1</b> Read in data<span></span></a></li>
-<li class="chapter" data-level="13.2.2" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#plotting-a-line-graph"><i class="fa fa-check"></i><b>13.2.2</b> Plotting a line graph<span></span></a></li>
-<li class="chapter" data-level="13.2.3" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#adding-lines-to-a-plot"><i class="fa fa-check"></i><b>13.2.3</b> Adding lines to a plot<span></span></a></li>
-<li class="chapter" data-level="13.2.4" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#axis-limits"><i class="fa fa-check"></i><b>13.2.4</b> Axis limits<span></span></a></li>
-<li class="chapter" data-level="13.2.5" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#axis-labels"><i class="fa fa-check"></i><b>13.2.5</b> Axis labels<span></span></a></li>
-<li class="chapter" data-level="13.2.6" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#plot-titles"><i class="fa fa-check"></i><b>13.2.6</b> Plot titles<span></span></a></li>
-<li class="chapter" data-level="13.2.7" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#line-colours"><i class="fa fa-check"></i><b>13.2.7</b> Line colours<span></span></a></li>
-<li class="chapter" data-level="13.2.8" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#plot-legend"><i class="fa fa-check"></i><b>13.2.8</b> Plot legend<span></span></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="14-Plots_scatterplot_and_box_plots.html"><a href="14-Plots_scatterplot_and_box_plots.html"><i class="fa fa-check"></i><b>14</b> Scatter plots and Box plot<span></span></a>
-<ul>
-<li class="chapter" data-level="14.1" data-path="14-Plots_scatterplot_and_box_plots.html"><a href="14-Plots_scatterplot_and_box_plots.html#scatter-plot"><i class="fa fa-check"></i><b>14.1</b> Scatter plot<span></span></a>
-<ul>
-<li class="chapter" data-level="14.1.1" data-path="14-Plots_scatterplot_and_box_plots.html"><a href="14-Plots_scatterplot_and_box_plots.html#basic-examples"><i class="fa fa-check"></i><b>14.1.1</b> Basic examples<span></span></a></li>
-<li class="chapter" data-level="14.1.2" data-path="14-Plots_scatterplot_and_box_plots.html"><a href="14-Plots_scatterplot_and_box_plots.html#animal-sizes"><i class="fa fa-check"></i><b>14.1.2</b> Animal sizes<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="14.2" data-path="14-Plots_scatterplot_and_box_plots.html"><a href="14-Plots_scatterplot_and_box_plots.html#factors"><i class="fa fa-check"></i><b>14.2</b> Factors<span></span></a></li>
-<li class="chapter" data-level="14.3" data-path="14-Plots_scatterplot_and_box_plots.html"><a href="14-Plots_scatterplot_and_box_plots.html#box-plot"><i class="fa fa-check"></i><b>14.3</b> Box plot<span></span></a></li>
-<li class="chapter" data-level="14.4" data-path="14-Plots_scatterplot_and_box_plots.html"><a href="14-Plots_scatterplot_and_box_plots.html#saving-a-plot-to-a-file"><i class="fa fa-check"></i><b>14.4</b> Saving a plot to a file<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="15" data-path="15-Plots_exercises.html"><a href="15-Plots_exercises.html"><i class="fa fa-check"></i><b>15</b> Plots exercises<span></span></a>
-<ul>
-<li class="chapter" data-level="15.1" data-path="15-Plots_exercises.html"><a href="15-Plots_exercises.html#line-graph"><i class="fa fa-check"></i><b>15.1</b> Line graph<span></span></a></li>
-<li class="chapter" data-level="15.2" data-path="15-Plots_exercises.html"><a href="15-Plots_exercises.html#histogram-1"><i class="fa fa-check"></i><b>15.2</b> Histogram<span></span></a></li>
-<li class="chapter" data-level="15.3" data-path="15-Plots_exercises.html"><a href="15-Plots_exercises.html#scatterplot"><i class="fa fa-check"></i><b>15.3</b> Scatterplot<span></span></a></li>
-<li class="chapter" data-level="15.4" data-path="15-Plots_exercises.html"><a href="15-Plots_exercises.html#boxplot"><i class="fa fa-check"></i><b>15.4</b> Boxplot<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="16" data-path="16-Plots_solutions.html"><a href="16-Plots_solutions.html"><i class="fa fa-check"></i><b>16</b> Plots solutions<span></span></a>
-<ul>
-<li class="chapter" data-level="16.1" data-path="16-Plots_solutions.html"><a href="16-Plots_solutions.html#line-graph-solution"><i class="fa fa-check"></i><b>16.1</b> Line graph solution<span></span></a></li>
-<li class="chapter" data-level="16.2" data-path="16-Plots_solutions.html"><a href="16-Plots_solutions.html#histogram-solution"><i class="fa fa-check"></i><b>16.2</b> Histogram solution<span></span></a></li>
-<li class="chapter" data-level="16.3" data-path="16-Plots_solutions.html"><a href="16-Plots_solutions.html#scatterplot-solution"><i class="fa fa-check"></i><b>16.3</b> Scatterplot solution<span></span></a></li>
-<li class="chapter" data-level="16.4" data-path="16-Plots_solutions.html"><a href="16-Plots_solutions.html#boxplot-solutions"><i class="fa fa-check"></i><b>16.4</b> Boxplot solutions<span></span></a></li>
-</ul></li>
-<li class="part"><span><b>Stats &amp; Programming<span></span></b></span></li>
-<li class="chapter" data-level="17" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html"><i class="fa fa-check"></i><b>17</b> Basic stats<span></span></a>
-<ul>
-<li class="chapter" data-level="17.1" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#linear-regression"><i class="fa fa-check"></i><b>17.1</b> Linear regression<span></span></a>
-<ul>
-<li class="chapter" data-level="17.1.1" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#fish-market-dataset"><i class="fa fa-check"></i><b>17.1.1</b> Fish market dataset<span></span></a></li>
-<li class="chapter" data-level="17.1.2" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#scatterplot-1"><i class="fa fa-check"></i><b>17.1.2</b> Scatterplot<span></span></a></li>
-<li class="chapter" data-level="17.1.3" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#linear-model"><i class="fa fa-check"></i><b>17.1.3</b> Linear model<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="17.2" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#t-test"><i class="fa fa-check"></i><b>17.2</b> t-test<span></span></a>
-<ul>
-<li class="chapter" data-level="17.2.1" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#boxplot-1"><i class="fa fa-check"></i><b>17.2.1</b> Boxplot<span></span></a></li>
-<li class="chapter" data-level="17.2.2" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#t-test-comparison"><i class="fa fa-check"></i><b>17.2.2</b> t-test comparison<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="17.3" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#some-more-useful-functions"><i class="fa fa-check"></i><b>17.3</b> Some more useful functions<span></span></a>
-<ul>
-<li class="chapter" data-level="17.3.1" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#summary"><i class="fa fa-check"></i><b>17.3.1</b> Summary<span></span></a></li>
-<li class="chapter" data-level="17.3.2" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#table"><i class="fa fa-check"></i><b>17.3.2</b> Table<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="17.4" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#further-resources"><i class="fa fa-check"></i><b>17.4</b> Further resources<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="18" data-path="18-Stats_exercises.html"><a href="18-Stats_exercises.html"><i class="fa fa-check"></i><b>18</b> Stats exercises<span></span></a>
-<ul>
-<li class="chapter" data-level="18.1" data-path="18-Stats_exercises.html"><a href="18-Stats_exercises.html#world-happiness-report"><i class="fa fa-check"></i><b>18.1</b> World happiness report<span></span></a>
-<ul>
-<li class="chapter" data-level="18.1.1" data-path="18-Stats_exercises.html"><a href="18-Stats_exercises.html#data"><i class="fa fa-check"></i><b>18.1.1</b> Data<span></span></a></li>
-<li class="chapter" data-level="18.1.2" data-path="18-Stats_exercises.html"><a href="18-Stats_exercises.html#tasks-questions"><i class="fa fa-check"></i><b>18.1.2</b> Tasks &amp; questions<span></span></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="19" data-path="19-Stats_solutions.html"><a href="19-Stats_solutions.html"><i class="fa fa-check"></i><b>19</b> Stats solutions<span></span></a>
-<ul>
-<li class="chapter" data-level="19.1" data-path="19-Stats_solutions.html"><a href="19-Stats_solutions.html#world-happiness-report-solutions"><i class="fa fa-check"></i><b>19.1</b> World happiness report solutions<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="20" data-path="20-Basic_programming.html"><a href="20-Basic_programming.html"><i class="fa fa-check"></i><b>20</b> Basic programming<span></span></a>
-<ul>
-<li class="chapter" data-level="20.1" data-path="20-Basic_programming.html"><a href="20-Basic_programming.html#recycle-rule"><i class="fa fa-check"></i><b>20.1</b> Recycle rule<span></span></a></li>
-<li class="chapter" data-level="20.2" data-path="20-Basic_programming.html"><a href="20-Basic_programming.html#loops"><i class="fa fa-check"></i><b>20.2</b> Loops<span></span></a>
-<ul>
-<li class="chapter" data-level="20.2.1" data-path="20-Basic_programming.html"><a href="20-Basic_programming.html#for-loops"><i class="fa fa-check"></i><b>20.2.1</b> For loops<span></span></a></li>
-<li class="chapter" data-level="20.2.2" data-path="20-Basic_programming.html"><a href="20-Basic_programming.html#while-loops"><i class="fa fa-check"></i><b>20.2.2</b> While loops<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="20.3" data-path="20-Basic_programming.html"><a href="20-Basic_programming.html#if-statements"><i class="fa fa-check"></i><b>20.3</b> If statements<span></span></a></li>
-<li class="chapter" data-level="20.4" data-path="20-Basic_programming.html"><a href="20-Basic_programming.html#functions-1"><i class="fa fa-check"></i><b>20.4</b> Functions<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="21" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html"><i class="fa fa-check"></i><b>21</b> Student grades example<span></span></a>
-<ul>
-<li class="chapter" data-level="21.1" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#the-student-grades-data"><i class="fa fa-check"></i><b>21.1</b> The student grades data<span></span></a></li>
-<li class="chapter" data-level="21.2" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#analysis-script"><i class="fa fa-check"></i><b>21.2</b> Analysis script<span></span></a></li>
-<li class="chapter" data-level="21.3" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#reading-in-and-preprocessing-the-data"><i class="fa fa-check"></i><b>21.3</b> Reading in and preprocessing the data<span></span></a></li>
-<li class="chapter" data-level="21.4" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#combining-the-data-frames"><i class="fa fa-check"></i><b>21.4</b> Combining the data frames<span></span></a></li>
-<li class="chapter" data-level="21.5" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#saving-the-data-frame"><i class="fa fa-check"></i><b>21.5</b> Saving the data frame<span></span></a></li>
-<li class="chapter" data-level="21.6" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#scaling-grading"><i class="fa fa-check"></i><b>21.6</b> Scaling &amp; Grading<span></span></a></li>
-<li class="chapter" data-level="21.7" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#some-quick-plots"><i class="fa fa-check"></i><b>21.7</b> Some quick plots<span></span></a></li>
-<li class="chapter" data-level="21.8" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#tips-for-creating-your-own-loops-and-functions"><i class="fa fa-check"></i><b>21.8</b> Tips for creating your own loops and functions<span></span></a></li>
-</ul></li>
-<li class="appendix"><span><b>Appendix<span></span></b></span></li>
-<li class="chapter" data-level="A" data-path="22-Further_resources.html"><a href="22-Further_resources.html"><i class="fa fa-check"></i><b>A</b> R user groups and forums<span></span></a></li>
-<li class="chapter" data-level="B" data-path="22-Further_resources.html"><a href="22-Further_resources.html#workshopfiles"><i class="fa fa-check"></i><b>B</b> Workshop files<span></span></a>
-<ul>
-<li class="chapter" data-level="B.1" data-path="22-Further_resources.html"><a href="22-Further_resources.html#chapter-7-files"><i class="fa fa-check"></i><b>B.1</b> Chapter 7 files<span></span></a></li>
-<li class="chapter" data-level="B.2" data-path="22-Further_resources.html"><a href="22-Further_resources.html#chapter-8-files"><i class="fa fa-check"></i><b>B.2</b> Chapter 8 files<span></span></a></li>
-<li class="chapter" data-level="B.3" data-path="22-Further_resources.html"><a href="22-Further_resources.html#chapter-10-11-files"><i class="fa fa-check"></i><b>B.3</b> Chapter 10-11 files<span></span></a></li>
-<li class="chapter" data-level="B.4" data-path="22-Further_resources.html"><a href="22-Further_resources.html#chapter-13-16-files"><i class="fa fa-check"></i><b>B.4</b> Chapter 13-16 files<span></span></a></li>
-<li class="chapter" data-level="B.5" data-path="22-Further_resources.html"><a href="22-Further_resources.html#chapter-17-19"><i class="fa fa-check"></i><b>B.5</b> Chapter 17-19<span></span></a></li>
-<li class="chapter" data-level="B.6" data-path="22-Further_resources.html"><a href="22-Further_resources.html#chapter-20-21"><i class="fa fa-check"></i><b>B.6</b> Chapter 20-21<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="C" data-path="22-Further_resources.html"><a href="22-Further_resources.html#base-r-books-and-links"><i class="fa fa-check"></i><b>C</b> Base R books and links<span></span></a></li>
-<li class="chapter" data-level="D" data-path="22-Further_resources.html"><a href="22-Further_resources.html#r-cheat-sheets"><i class="fa fa-check"></i><b>D</b> R cheat sheets<span></span></a></li>
-<li class="chapter" data-level="E" data-path="22-Further_resources.html"><a href="22-Further_resources.html#advanced-r-topics"><i class="fa fa-check"></i><b>E</b> Advanced R topics<span></span></a></li>
-<li class="chapter" data-level="F" data-path="22-Further_resources.html"><a href="22-Further_resources.html#datasets"><i class="fa fa-check"></i><b>F</b> Datasets<span></span></a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
-</ul>
-
-      </nav>
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Basic stats</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
     </div>
-
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R for everyone</a>
-          </h1>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">R for Everyone</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
         </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Start</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Foundations &amp; Objects</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-Foundations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Foundations of R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-Foundations_exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Foundations of R exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-R_objects.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R objects</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-R_objects_exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">R objects exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-R_objects_solutions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">R objects solutions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Files, Subsetting, &amp; Tips</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-Files_and_subsetting_data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Files and subsetting data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-Files_exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Files exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-Files_solutions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Files solutions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-Handy_tips_and_tricks.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Handy tips &amp; tricks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-Tips_exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Handy exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-Tips_solutions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Handy Solutions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Plots</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-Plots_line_graphs_and_histograms.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Histograms and Line graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14-Plots_scatterplot_and_box_plots.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Scatter plots and Box plot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15-Plots_exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Plots exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16-Plots_solutions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Plots solutions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Stats &amp; Programming</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./17-Basic_stats.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Basic stats</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./18-Stats_exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Stats exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./19-Stats_solutions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Stats solutions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-Basic_programming.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Basic programming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./21-Student_grades_example.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Student grades example</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Appendices</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./22-Further_resources.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Further resources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">In this chapter</h2>
+   
+  <ul>
+  <li><a href="#linear-regression" id="toc-linear-regression" class="nav-link active" data-scroll-target="#linear-regression"> <span class="header-section-number">17.1</span> Linear regression</a>
+  <ul class="collapse">
+  <li><a href="#fish-market-dataset" id="toc-fish-market-dataset" class="nav-link" data-scroll-target="#fish-market-dataset"> <span class="header-section-number">17.1.1</span> Fish market dataset</a></li>
+  <li><a href="#scatterplot" id="toc-scatterplot" class="nav-link" data-scroll-target="#scatterplot"> <span class="header-section-number">17.1.2</span> Scatterplot</a></li>
+  <li><a href="#linear-model" id="toc-linear-model" class="nav-link" data-scroll-target="#linear-model"> <span class="header-section-number">17.1.3</span> Linear model</a></li>
+  </ul></li>
+  <li><a href="#t-test" id="toc-t-test" class="nav-link" data-scroll-target="#t-test"> <span class="header-section-number">17.2</span> t-test</a>
+  <ul class="collapse">
+  <li><a href="#boxplot" id="toc-boxplot" class="nav-link" data-scroll-target="#boxplot"> <span class="header-section-number">17.2.1</span> Boxplot</a></li>
+  <li><a href="#t-test-comparison" id="toc-t-test-comparison" class="nav-link" data-scroll-target="#t-test-comparison"> <span class="header-section-number">17.2.2</span> t-test comparison</a></li>
+  </ul></li>
+  <li><a href="#some-more-useful-functions" id="toc-some-more-useful-functions" class="nav-link" data-scroll-target="#some-more-useful-functions"> <span class="header-section-number">17.3</span> Some more useful functions</a>
+  <ul class="collapse">
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"> <span class="header-section-number">17.3.1</span> Summary</a></li>
+  <li><a href="#table" id="toc-table" class="nav-link" data-scroll-target="#table"> <span class="header-section-number">17.3.2</span> Table</a></li>
+  </ul></li>
+  <li><a href="#further-resources" id="toc-further-resources" class="nav-link" data-scroll-target="#further-resources"> <span class="header-section-number">17.4</span> Further resources</a></li>
+  </ul>
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content">
 
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Basic stats</span></h1>
+</div>
 
-            <section class="normal" id="section-">
-<div id="basic-stats" class="section level1 hasAnchor" number="17">
-<h1><span class="header-section-number">Chapter 17</span> Basic stats<a href="17-Basic_stats.html#basic-stats" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="figures/basic_stats.png" width="20%" style="display: block; margin: auto;" /></p>
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/basic_stats.png" class="img-fluid figure-img" style="width:20.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>This week we’ll learn how to carry out some basic stats. This will involve linear regressions and some t-tests.</p>
 <p>Create and use the directory “Chapter_17-18” as the working directory for this chapter. Additionally create a new script called “Stats.R” for this chapter.</p>
 <p>Before we continue just a reminder about annotations and code sections.</p>
-<div id="linear-regression" class="section level2 hasAnchor" number="17.1">
-<h2><span class="header-section-number">17.1</span> Linear regression<a href="17-Basic_stats.html#linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/linear_regression.png" width="20%" style="display: block; margin: auto;" /></p>
+<section id="linear-regression" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="linear-regression"><span class="header-section-number">17.1</span> Linear regression</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/linear_regression.png" class="img-fluid figure-img" style="width:20.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>Linear regression is a method to model the relationship between two <strong>numeric vectors</strong>. Ultimately we want to produce the predictive equation:</p>
 <p><span class="math display">\[
 y = mx + c
 \]</span></p>
 <p>Where <em>m</em> is equal to the gradient and <em>c</em> is equal to the intercept. With this we can predict the value of <em>y</em> if we know the value of <em>x</em> and vice versa.</p>
-<div id="fish-market-dataset" class="section level3 hasAnchor" number="17.1.1">
-<h3><span class="header-section-number">17.1.1</span> Fish market dataset<a href="17-Basic_stats.html#fish-market-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figures/bream.png" width="30%" style="display: block; margin: auto;" /></p>
+<section id="fish-market-dataset" class="level3" data-number="17.1.1">
+<h3 data-number="17.1.1" class="anchored" data-anchor-id="fish-market-dataset"><span class="header-section-number">17.1.1</span> Fish market dataset</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/bream.png" class="img-fluid figure-img" style="width:30.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>Before getting to the analysis we need to read in the data. For this chapter we will be looking at the file <strong>Fish.csv</strong> which contains information of 7 common fish species sold in Fish markets (Source: <a href="https://www.kaggle.com/aungpyaeap/fish-market" class="uri">https://www.kaggle.com/aungpyaeap/fish-market</a>).</p>
 <p>Download the file into your “Chapter_17-18” directory.</p>
+<div class="cell">
+<div class="cell-output-display">
 <a href="https://m-gemmell.github.io/R_for_everyone/downloads/Fish.csv">
 <button class="btn btn-danger"><i class="fa fa-save"></i> Download Fish.csv</button>
 </a>
+</div>
+</div>
 <p>The columns for the data are:</p>
 <ul>
-<li><strong>Species</strong>: Species of fish (“Bream,” “Roach,” “Whitefish,” “Parkki,” “Perch,” “Pike,” and “Smelt”).</li>
+<li><strong>Species</strong>: Species of fish (“Bream”, “Roach”, “Whitefish”, “Parkki”, “Perch”, “Pike”, and “Smelt”).</li>
 <li><strong>Weight</strong>: Weight of the fish in grams.</li>
 <li><strong>Length1</strong>: Vertical length of the fish in centimetres.</li>
 <li><strong>Length2</strong>: Diagonal length of the fish in centimetres.</li>
@@ -419,34 +433,64 @@ y = mx + c
 </ul>
 <p>The dataset is primarily interested in predicting the weight of a fish based on its length, height, or width.</p>
 <p>First step is to <strong>read</strong> in the data:</p>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="17-Basic_stats.html#cb165-1" aria-hidden="true" tabindex="-1"></a>fish_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Fish.csv&quot;</span>, <span class="at">check.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>fish_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Fish.csv"</span>, <span class="at">check.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Have a look at the <strong>data frame</strong> and you’ll see it looks pretty good with no <code>NA</code> values.</p>
 <p>For now we only want to look at the information for the species Bream. Let’s create a “bream_df”:</p>
-<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="17-Basic_stats.html#cb166-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Create the data frame</span></span>
-<span id="cb166-2"><a href="17-Basic_stats.html#cb166-2" aria-hidden="true" tabindex="-1"></a>bream_df <span class="ot">&lt;-</span> fish_df[fish_df<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">&quot;Bream&quot;</span>,]</span>
-<span id="cb166-3"><a href="17-Basic_stats.html#cb166-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Check how many rows it has</span></span>
-<span id="cb166-4"><a href="17-Basic_stats.html#cb166-4" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(bream_df)</span></code></pre></div>
-<p>We are left with 35 data points which should be plenty for our linear regression.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Create the data frame</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>bream_df <span class="ot">&lt;-</span> fish_df[fish_df<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">"Bream"</span>,]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Check how many rows it has</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(bream_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="scatterplot-1" class="section level3 hasAnchor" number="17.1.2">
-<h3><span class="header-section-number">17.1.2</span> Scatterplot<a href="17-Basic_stats.html#scatterplot-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figures/Scatterplot_2.png" width="20%" style="display: block; margin: auto;" /></p>
+<p>We are left with 35 data points which should be plenty for our linear regression.</p>
+</section>
+<section id="scatterplot" class="level3" data-number="17.1.2">
+<h3 data-number="17.1.2" class="anchored" data-anchor-id="scatterplot"><span class="header-section-number">17.1.2</span> Scatterplot</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/Scatterplot_2.png" class="img-fluid figure-img" style="width:20.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>Before we carry out the linear regression we’ll create a scatterplot of the two <strong>vectors</strong> we want to compare. For the first instance we will compare <strong>Height</strong> to <strong>Length1</strong> (vertical length).</p>
 <p>In fact before we do, let’s change the column name “Length1” to “v_length” so it is a bit more intuitive for us. Whilst we are at it we’ll change the other length column names.</p>
-<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="17-Basic_stats.html#cb167-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(bream_df)[<span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;v_length&quot;</span>, <span class="st">&quot;d_length&quot;</span>, <span class="st">&quot;c_length&quot;</span>)</span></code></pre></div>
-<p>Time to quickly plot “v_length” (x) against “Weight” (y):</p>
-<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="17-Basic_stats.html#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> bream_df<span class="sc">$</span>v_length, <span class="at">y =</span> bream_df<span class="sc">$</span>Weight)</span></code></pre></div>
-<p>Super! That looks like a decently linear plot with a positive trend. We will therefore fit the linear model.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(bream_df)[<span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"v_length"</span>, <span class="st">"d_length"</span>, <span class="st">"c_length"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="linear-model" class="section level3 hasAnchor" number="17.1.3">
-<h3><span class="header-section-number">17.1.3</span> Linear model<a href="17-Basic_stats.html#linear-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figures/lm.png" width="20%" style="display: block; margin: auto;" /></p>
+<p>Time to quickly plot “v_length” (x) against “Weight” (y):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> bream_df<span class="sc">$</span>v_length, <span class="at">y =</span> bream_df<span class="sc">$</span>Weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Super! That looks like a decently linear plot with a positive trend. We will therefore fit the linear model.</p>
+</section>
+<section id="linear-model" class="level3" data-number="17.1.3">
+<h3 data-number="17.1.3" class="anchored" data-anchor-id="linear-model"><span class="header-section-number">17.1.3</span> Linear model</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/lm.png" class="img-fluid figure-img" style="width:20.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>We can fit a linear model with the <strong>function</strong> <code>lm()</code>. We simply provide the column names as a formula ( <code>y_column_name ~ x_column_name</code> ) similar to the <code>boxplot()</code> <strong>function</strong>.</p>
-<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="17-Basic_stats.html#cb169-1" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(Weight<span class="sc">~</span>v_length, <span class="at">data=</span>bream_df)</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(Weight<span class="sc">~</span>v_length, <span class="at">data=</span>bream_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>We can now add the linear model as a line to our plot with the <strong>function</strong> <code>abline()</code></p>
-<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="17-Basic_stats.html#cb170-1" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(fit)</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>With the line added we also want to add the linear equation to the plot. To do this we need to check the contents of the “fit” <strong>variable</strong> first so we know what to add.</p>
-<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="17-Basic_stats.html#cb171-1" aria-hidden="true" tabindex="-1"></a>fit</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>You’ll see the following two sections:</p>
 <ul>
 <li><p><code>Call:</code> Shows the <strong>function</strong> with options you ran to create “fit”</p></li>
@@ -457,82 +501,140 @@ y = mx + c
 </ul></li>
 </ul>
 <p>Our next step is to create a <strong>string scalar</strong> containing the linear equation. To do this we can extract the coefficients from the “fit” <strong>object</strong> like below:</p>
-<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="17-Basic_stats.html#cb172-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> fit<span class="sc">$</span>coefficients[<span class="dv">2</span>]</span>
-<span id="cb172-2"><a href="17-Basic_stats.html#cb172-2" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> fit<span class="sc">$</span>coefficients[<span class="dv">1</span>]</span></code></pre></div>
-<p>If you print out “m” and “c” to the console you’ll notice they have a different number of decimal places than when displayed through printing “fit.” We will therefore change these to 2 decimal places with the <code>round()</code> <strong>function</strong>:</p>
-<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="17-Basic_stats.html#cb173-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">round</span>(m, <span class="at">digits =</span> <span class="dv">2</span>)</span>
-<span id="cb173-2"><a href="17-Basic_stats.html#cb173-2" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="fu">round</span>(c, <span class="at">digits =</span> <span class="dv">2</span>)</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> fit<span class="sc">$</span>coefficients[<span class="dv">2</span>]</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> fit<span class="sc">$</span>coefficients[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you print out “m” and “c” to the console you’ll notice they have a different number of decimal places than when displayed through printing “fit”. We will therefore change these to 2 decimal places with the <code>round()</code> <strong>function</strong>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">round</span>(m, <span class="at">digits =</span> <span class="dv">2</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="fu">round</span>(c, <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Now to use the <code>paste0()</code> <strong>function</strong> to create our linear equation as a <strong>string scalar</strong>:</p>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="17-Basic_stats.html#cb174-1" aria-hidden="true" tabindex="-1"></a>linear_equation <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;y = &quot;</span>, m , <span class="st">&quot;x + &quot;</span>, c)</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>linear_equation <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"y = "</span>, m , <span class="st">"x + "</span>, c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Finally we will recreate our plot, add the abline, and then add the linear equation. We will add the linear equation with the <strong>function</strong> <code>text()</code>:</p>
-<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="17-Basic_stats.html#cb175-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> bream_df<span class="sc">$</span>v_length, <span class="at">y =</span> bream_df<span class="sc">$</span>Weight)</span>
-<span id="cb175-2"><a href="17-Basic_stats.html#cb175-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(fit)</span>
-<span id="cb175-3"><a href="17-Basic_stats.html#cb175-3" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="at">x =</span> <span class="dv">30</span>, <span class="at">y =</span> <span class="dv">800</span>, <span class="at">labels =</span> linear_equation)</span></code></pre></div>
-<p>The <code>text()</code> options <code>x =</code> and <code>y =</code> normally require a bit of trial and error to set it in a nice location. This can be a bit fiddly but is made much easier by making the label smaller (e.g. making the numbers have a smaller amount of decimal places).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> bream_df<span class="sc">$</span>v_length, <span class="at">y =</span> bream_df<span class="sc">$</span>Weight)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(fit)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="at">x =</span> <span class="dv">30</span>, <span class="at">y =</span> <span class="dv">800</span>, <span class="at">labels =</span> linear_equation)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The <code>text()</code> options <code>x =</code> and <code>y =</code> normally require a bit of trial and error to set it in a nice location. This can be a bit fiddly but is made much easier by making the label smaller (e.g.&nbsp;making the numbers have a smaller amount of decimal places).</p>
+</section>
+</section>
+<section id="t-test" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="t-test"><span class="header-section-number">17.2</span> t-test</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/scale.png" class="img-fluid figure-img" style="width:20.0%"></p>
+</figure>
 </div>
 </div>
-<div id="t-test" class="section level2 hasAnchor" number="17.2">
-<h2><span class="header-section-number">17.2</span> t-test<a href="17-Basic_stats.html#t-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/scale.png" width="20%" style="display: block; margin: auto;" /></p>
+</div>
 <p>A t-test can be used to determine if there is a significant difference between the means of two groups.</p>
 <p>In this example we will compare the weights of the fish Bream, Parkki, and Roach. Therefore let’s subset our <strong>data frame</strong> so we have three <strong>data frames</strong>, one for each species.</p>
 <p>We already have a “bream_df” so we only need to make one for Parkki and one for Roach. Before we do we’ll change the column names for “fish_df” like we did for “bream_df”</p>
-<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="17-Basic_stats.html#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(fish_df)[<span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;v_length&quot;</span>, <span class="st">&quot;d_length&quot;</span>, <span class="st">&quot;c_length&quot;</span>)</span>
-<span id="cb176-2"><a href="17-Basic_stats.html#cb176-2" aria-hidden="true" tabindex="-1"></a>parkki_df <span class="ot">&lt;-</span> fish_df[fish_df<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">&quot;Parkki&quot;</span>,]</span>
-<span id="cb176-3"><a href="17-Basic_stats.html#cb176-3" aria-hidden="true" tabindex="-1"></a>roach_df <span class="ot">&lt;-</span> fish_df[fish_df<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">&quot;Roach&quot;</span>,]</span></code></pre></div>
-<div id="boxplot-1" class="section level3 hasAnchor" number="17.2.1">
-<h3><span class="header-section-number">17.2.1</span> Boxplot<a href="17-Basic_stats.html#boxplot-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figures/boxplot.png" width="20%" style="display: block; margin: auto;" /></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(fish_df)[<span class="dv">3</span><span class="sc">:</span><span class="dv">5</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"v_length"</span>, <span class="st">"d_length"</span>, <span class="st">"c_length"</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>parkki_df <span class="ot">&lt;-</span> fish_df[fish_df<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">"Parkki"</span>,]</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>roach_df <span class="ot">&lt;-</span> fish_df[fish_df<span class="sc">$</span>Species <span class="sc">==</span> <span class="st">"Roach"</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="boxplot" class="level3" data-number="17.2.1">
+<h3 data-number="17.2.1" class="anchored" data-anchor-id="boxplot"><span class="header-section-number">17.2.1</span> Boxplot</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/boxplot.png" class="img-fluid figure-img" style="width:20.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>Before carrying out a t-test it can be useful to visualise the difference between groups with a boxplot.</p>
 <p>Before we do this we need to combine the three <strong>data frames</strong> into one. This can be done by binding the rows with <code>rbind()</code>. This will combine two provided <strong>data frames</strong> which contain the same number of columns with the same column names.</p>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="17-Basic_stats.html#cb177-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Combine bream_df and parkki_df</span></span>
-<span id="cb177-2"><a href="17-Basic_stats.html#cb177-2" aria-hidden="true" tabindex="-1"></a>fish_subset_df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(bream_df, parkki_df)</span>
-<span id="cb177-3"><a href="17-Basic_stats.html#cb177-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Now rbind roach_df to our new df</span></span>
-<span id="cb177-4"><a href="17-Basic_stats.html#cb177-4" aria-hidden="true" tabindex="-1"></a>fish_subset_df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(fish_subset_df, roach_df)</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Combine bream_df and parkki_df</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>fish_subset_df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(bream_df, parkki_df)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Now rbind roach_df to our new df</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>fish_subset_df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(fish_subset_df, roach_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>There is also <code>cbind</code> to combine <strong>data frames</strong> by columns. In this case the <strong>data frames</strong> need to have the same number of rows with the same order and names.</p>
 <p>Time for a boxplot!</p>
-<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="17-Basic_stats.html#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Weight<span class="sc">~</span>Species, <span class="at">data =</span> fish_subset_df)</span></code></pre></div>
-<p>We can clearly see that the weights of Parkki and Roach are very similar to each other but very different to Bream’s weight.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Weight<span class="sc">~</span>Species, <span class="at">data =</span> fish_subset_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="t-test-comparison" class="section level3 hasAnchor" number="17.2.2">
-<h3><span class="header-section-number">17.2.2</span> t-test comparison<a href="17-Basic_stats.html#t-test-comparison" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figures/five_percent.png" width="15%" style="display: block; margin: auto;" /></p>
+<p>We can clearly see that the weights of Parkki and Roach are very similar to each other but very different to Bream’s weight.</p>
+</section>
+<section id="t-test-comparison" class="level3" data-number="17.2.2">
+<h3 data-number="17.2.2" class="anchored" data-anchor-id="t-test-comparison"><span class="header-section-number">17.2.2</span> t-test comparison</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/five_percent.png" class="img-fluid figure-img" style="width:15.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>Let us see if what we see visually is also visible statistically.</p>
 <p>We can carry out a t-test with the <strong>function</strong> <code>t.test()</code>. Simply provide the <strong>function</strong> with the two <strong>numerical vectors</strong> you would like to compare.</p>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="17-Basic_stats.html#cb179-1" aria-hidden="true" tabindex="-1"></a>bream_parkki_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(bream_df<span class="sc">$</span>Weight, parkki_df<span class="sc">$</span>Weight)</span>
-<span id="cb179-2"><a href="17-Basic_stats.html#cb179-2" aria-hidden="true" tabindex="-1"></a>bream_roach_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(bream_df<span class="sc">$</span>Weight, roach_df<span class="sc">$</span>Weight)</span>
-<span id="cb179-3"><a href="17-Basic_stats.html#cb179-3" aria-hidden="true" tabindex="-1"></a>parkki_roach_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(parkki_df<span class="sc">$</span>Weight, roach_df<span class="sc">$</span>Weight)</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>bream_parkki_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(bream_df<span class="sc">$</span>Weight, parkki_df<span class="sc">$</span>Weight)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>bream_roach_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(bream_df<span class="sc">$</span>Weight, roach_df<span class="sc">$</span>Weight)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>parkki_roach_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(parkki_df<span class="sc">$</span>Weight, roach_df<span class="sc">$</span>Weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Print the resulting <strong>variables</strong> to the console and you will see a lot of information. I am sure all these values can say a lot about the data but we are only interested in the p-values.</p>
 <p>In this case we can say the means between the two groups tested are significantly different if the p-value is less than 0.05 (1 in 20).</p>
 <p>It can be a bit annoying to have to look through the <code>t.test()</code> output for each result so we’ll create a <strong>vector</strong> to contain the p-values for comparisons against Bream.</p>
-<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="17-Basic_stats.html#cb180-1" aria-hidden="true" tabindex="-1"></a>fish_species_weight_ttests <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb180-2"><a href="17-Basic_stats.html#cb180-2" aria-hidden="true" tabindex="-1"></a>  bream_parkki_ttest<span class="sc">$</span>p.value,</span>
-<span id="cb180-3"><a href="17-Basic_stats.html#cb180-3" aria-hidden="true" tabindex="-1"></a>  bream_roach_ttest<span class="sc">$</span>p.value</span>
-<span id="cb180-4"><a href="17-Basic_stats.html#cb180-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>fish_species_weight_ttests <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  bream_parkki_ttest<span class="sc">$</span>p.value,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  bream_roach_ttest<span class="sc">$</span>p.value</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>This is pretty useful but we can’t immediately see which comparison each t-test is equal to. Thankfully just like <strong>data frames</strong> have row and column names, <strong>vectors</strong> can have names for each element.</p>
-<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="17-Basic_stats.html#cb181-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Add the vector names</span></span>
-<span id="cb181-2"><a href="17-Basic_stats.html#cb181-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(fish_species_weight_ttests) <span class="ot">&lt;-</span> </span>
-<span id="cb181-3"><a href="17-Basic_stats.html#cb181-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">&quot;bream_vs_parkki&quot;</span>,<span class="st">&quot;bream_vs_roach&quot;</span>)</span>
-<span id="cb181-4"><a href="17-Basic_stats.html#cb181-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Look at the vector with the added names</span></span>
-<span id="cb181-5"><a href="17-Basic_stats.html#cb181-5" aria-hidden="true" tabindex="-1"></a>fish_species_weight_ttests</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Add the vector names</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(fish_species_weight_ttests) <span class="ot">&lt;-</span> </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">"bream_vs_parkki"</span>,<span class="st">"bream_vs_roach"</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Look at the vector with the added names</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>fish_species_weight_ttests</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>We can then index the <strong>vector</strong> through the names.</p>
-<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="17-Basic_stats.html#cb182-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Access the p-value of Bream against Roach</span></span>
-<span id="cb182-2"><a href="17-Basic_stats.html#cb182-2" aria-hidden="true" tabindex="-1"></a>fish_species_weight_ttests[<span class="st">&quot;bream_vs_roach&quot;</span>]</span>
-<span id="cb182-3"><a href="17-Basic_stats.html#cb182-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Add the p-value of Parkki against Roach</span></span>
-<span id="cb182-4"><a href="17-Basic_stats.html#cb182-4" aria-hidden="true" tabindex="-1"></a>fish_species_weight_ttests[<span class="st">&quot;parkki_vs_roach&quot;</span>] <span class="ot">&lt;-</span> </span>
-<span id="cb182-5"><a href="17-Basic_stats.html#cb182-5" aria-hidden="true" tabindex="-1"></a>  parkki_roach_ttest<span class="sc">$</span>p.value</span></code></pre></div>
-<p>With our nice <strong>vector</strong> of p-values we can quickly see where the p-value is less than 0.05 (i.e. the means are significantly different) and where it is higher (i.e. the means aren’t significantly different).</p>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="17-Basic_stats.html#cb183-1" aria-hidden="true" tabindex="-1"></a>fish_species_weight_ttests <span class="sc">&lt;</span> <span class="fl">0.05</span></span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Access the p-value of Bream against Roach</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>fish_species_weight_ttests[<span class="st">"bream_vs_roach"</span>]</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Add the p-value of Parkki against Roach</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>fish_species_weight_ttests[<span class="st">"parkki_vs_roach"</span>] <span class="ot">&lt;-</span> </span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  parkki_roach_ttest<span class="sc">$</span>p.value</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>With our nice <strong>vector</strong> of p-values we can quickly see where the p-value is less than 0.05 (i.e.&nbsp;the means are significantly different) and where it is higher (i.e.&nbsp;the means aren’t significantly different).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>fish_species_weight_ttests <span class="sc">&lt;</span> <span class="fl">0.05</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Do these p-values match what you saw in the boxplot?</p>
+</section>
+</section>
+<section id="some-more-useful-functions" class="level2" data-number="17.3">
+<h2 data-number="17.3" class="anchored" data-anchor-id="some-more-useful-functions"><span class="header-section-number">17.3</span> Some more useful functions</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/r_toolbox.png" class="img-fluid figure-img" style="width:15.0%"></p>
+</figure>
 </div>
 </div>
-<div id="some-more-useful-functions" class="section level2 hasAnchor" number="17.3">
-<h2><span class="header-section-number">17.3</span> Some more useful functions<a href="17-Basic_stats.html#some-more-useful-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/r_toolbox.png" width="15%" style="display: block; margin: auto;" /></p>
-<div id="summary" class="section level3 hasAnchor" number="17.3.1">
-<h3><span class="header-section-number">17.3.1</span> Summary<a href="17-Basic_stats.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<section id="summary" class="level3" data-number="17.3.1">
+<h3 data-number="17.3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">17.3.1</span> Summary</h3>
 <p>The <strong>function</strong> <code>summary()</code> can give you some quick summary information for each column of a <strong>data frame</strong>.</p>
-<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="17-Basic_stats.html#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fish_df)</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fish_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>This gives you some nice information for your numerical columns:</p>
 <ul>
 <li><code>Min.</code>: The minimum number</li>
@@ -544,120 +646,192 @@ y = mx + c
 </ul>
 <p>You will notice the information given for the “Species” column is not very informative as it is a <strong>character</strong> column. However, this would be a lot more descriptive if it was a <strong>factor</strong>.</p>
 <p>Therefore we’ll change the “Species” column to a <strong>factor</strong> and run <code>summary()</code> again.</p>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="17-Basic_stats.html#cb185-1" aria-hidden="true" tabindex="-1"></a>fish_df<span class="sc">$</span>Species <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(fish_df<span class="sc">$</span>Species)</span>
-<span id="cb185-2"><a href="17-Basic_stats.html#cb185-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fish_df)</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>fish_df<span class="sc">$</span>Species <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(fish_df<span class="sc">$</span>Species)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(fish_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Now <code>summary()</code> shows how many instances of each species is present in the <strong>data frame</strong>.</p>
 <p>For future cases it may better to use <code>stringsAsFactors = TRUE</code> with the <code>read.csv()</code> <strong>function</strong> when we first read in the file.</p>
+</section>
+<section id="table" class="level3" data-number="17.3.2">
+<h3 data-number="17.3.2" class="anchored" data-anchor-id="table"><span class="header-section-number">17.3.2</span> Table</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/table_ikea.png" class="img-fluid figure-img" style="width:20.0%"></p>
+</figure>
 </div>
-<div id="table" class="section level3 hasAnchor" number="17.3.2">
-<h3><span class="header-section-number">17.3.2</span> Table<a href="17-Basic_stats.html#table" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="figures/table_ikea.png" width="20%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
 <p>The <code>table()</code> <strong>function</strong> will provide a <strong>vector</strong> containing the number of instances for each <strong>level</strong> in a <strong>factor</strong>. This is pretty much what <code>summary()</code> did to a <strong>factor</strong>.</p>
 <p>However, unlike <code>summary()</code> it will also do this for <strong>characters</strong> and <strong>numerics</strong>.</p>
 <p><strong>Note</strong>: Remember to use the <strong>“Help”</strong> pane if you are not sure what a <strong>function</strong> does.</p>
-<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="17-Basic_stats.html#cb186-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Table command for columns from fish_df</span></span>
-<span id="cb186-2"><a href="17-Basic_stats.html#cb186-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(fish_df<span class="sc">$</span>Species)</span>
-<span id="cb186-3"><a href="17-Basic_stats.html#cb186-3" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">as.character</span>(fish_df<span class="sc">$</span>Species))</span>
-<span id="cb186-4"><a href="17-Basic_stats.html#cb186-4" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(fish_df<span class="sc">$</span>Height)</span>
-<span id="cb186-5"><a href="17-Basic_stats.html#cb186-5" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">floor</span>(fish_df<span class="sc">$</span>Height))</span>
-<span id="cb186-6"><a href="17-Basic_stats.html#cb186-6" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">as.integer</span>(fish_df<span class="sc">$</span>Height))</span>
-<span id="cb186-7"><a href="17-Basic_stats.html#cb186-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Run table on various numeric vectors</span></span>
-<span id="cb186-8"><a href="17-Basic_stats.html#cb186-8" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb186-9"><a href="17-Basic_stats.html#cb186-9" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span> <span class="sc">*</span> <span class="dv">0</span>)</span>
-<span id="cb186-10"><a href="17-Basic_stats.html#cb186-10" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span> <span class="sc">%%</span> <span class="dv">2</span>)</span>
-<span id="cb186-11"><a href="17-Basic_stats.html#cb186-11" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">50</span>, <span class="at">by =</span> <span class="fl">0.5</span>) <span class="sc">%%</span> <span class="fl">7.5</span>)</span>
-<span id="cb186-12"><a href="17-Basic_stats.html#cb186-12" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,<span class="dv">1</span>))</span>
-<span id="cb186-13"><a href="17-Basic_stats.html#cb186-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Table will run on logicals too</span></span>
-<span id="cb186-14"><a href="17-Basic_stats.html#cb186-14" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span> <span class="sc">&gt;</span> <span class="dv">50</span>)</span>
-<span id="cb186-15"><a href="17-Basic_stats.html#cb186-15" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>) <span class="sc">==</span> <span class="st">&quot;a&quot;</span>)</span>
-<span id="cb186-16"><a href="17-Basic_stats.html#cb186-16" aria-hidden="true" tabindex="-1"></a><span class="co">#Create a vector of 20 random numbers between 0 and 10</span></span>
-<span id="cb186-17"><a href="17-Basic_stats.html#cb186-17" aria-hidden="true" tabindex="-1"></a>random_num_vec <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">size =</span> <span class="dv">20</span>, <span class="at">replace =</span> <span class="cn">TRUE</span> )</span>
-<span id="cb186-18"><a href="17-Basic_stats.html#cb186-18" aria-hidden="true" tabindex="-1"></a><span class="co">#table</span></span>
-<span id="cb186-19"><a href="17-Basic_stats.html#cb186-19" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(random_num_vec)</span>
-<span id="cb186-20"><a href="17-Basic_stats.html#cb186-20" aria-hidden="true" tabindex="-1"></a><span class="co">#Create a character vector randomly containing 1-10 of the strings</span></span>
-<span id="cb186-21"><a href="17-Basic_stats.html#cb186-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&quot;Book&quot;, &quot;TV&quot;, and &quot;Film&quot; each</span></span>
-<span id="cb186-22"><a href="17-Basic_stats.html#cb186-22" aria-hidden="true" tabindex="-1"></a>random_char_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb186-23"><a href="17-Basic_stats.html#cb186-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rep</span>(<span class="st">&quot;Book&quot;</span>, <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">size =</span> <span class="dv">1</span>)),</span>
-<span id="cb186-24"><a href="17-Basic_stats.html#cb186-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rep</span>(<span class="st">&quot;TV&quot;</span>, <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">size =</span> <span class="dv">1</span>)),</span>
-<span id="cb186-25"><a href="17-Basic_stats.html#cb186-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rep</span>(<span class="st">&quot;Film&quot;</span>, <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">size =</span> <span class="dv">1</span>))</span>
-<span id="cb186-26"><a href="17-Basic_stats.html#cb186-26" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb186-27"><a href="17-Basic_stats.html#cb186-27" aria-hidden="true" tabindex="-1"></a><span class="co">#Now for table()</span></span>
-<span id="cb186-28"><a href="17-Basic_stats.html#cb186-28" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(random_char_vec)</span>
-<span id="cb186-29"><a href="17-Basic_stats.html#cb186-29" aria-hidden="true" tabindex="-1"></a><span class="co">#Can create a quick bar plot with the output from table()</span></span>
-<span id="cb186-30"><a href="17-Basic_stats.html#cb186-30" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(random_char_vec))</span></code></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Table command for columns from fish_df</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(fish_df<span class="sc">$</span>Species)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">as.character</span>(fish_df<span class="sc">$</span>Species))</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(fish_df<span class="sc">$</span>Height)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">floor</span>(fish_df<span class="sc">$</span>Height))</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">as.integer</span>(fish_df<span class="sc">$</span>Height))</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Run table on various numeric vectors</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span> <span class="sc">*</span> <span class="dv">0</span>)</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span> <span class="sc">%%</span> <span class="dv">2</span>)</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">50</span>, <span class="at">by =</span> <span class="fl">0.5</span>) <span class="sc">%%</span> <span class="fl">7.5</span>)</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,<span class="dv">1</span>))</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Table will run on logicals too</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span> <span class="sc">&gt;</span> <span class="dv">50</span>)</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">c</span>(<span class="st">"a"</span>,<span class="st">"a"</span>,<span class="st">"b"</span>,<span class="st">"c"</span>) <span class="sc">==</span> <span class="st">"a"</span>)</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="co">#Create a vector of 20 random numbers between 0 and 10</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>random_num_vec <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">size =</span> <span class="dv">20</span>, <span class="at">replace =</span> <span class="cn">TRUE</span> )</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a><span class="co">#table</span></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(random_num_vec)</span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a><span class="co">#Create a character vector randomly containing 1-10 of the strings</span></span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a><span class="co">#"Book", "TV", and "Film" each</span></span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>random_char_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rep</span>(<span class="st">"Book"</span>, <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">size =</span> <span class="dv">1</span>)),</span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rep</span>(<span class="st">"TV"</span>, <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">size =</span> <span class="dv">1</span>)),</span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rep</span>(<span class="st">"Film"</span>, <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">size =</span> <span class="dv">1</span>))</span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a><span class="co">#Now for table()</span></span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(random_char_vec)</span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a><span class="co">#Can create a quick bar plot with the output from table()</span></span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(random_char_vec))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>A few more <strong>functions</strong> were introduced above. I will let you explore them yourself or you can ask me verbally.</p>
+</section>
+</section>
+<section id="further-resources" class="level2" data-number="17.4">
+<h2 data-number="17.4" class="anchored" data-anchor-id="further-resources"><span class="header-section-number">17.4</span> Further resources</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/resources.png" class="img-fluid figure-img" style="width:20.0%"></p>
+</figure>
 </div>
 </div>
-<div id="further-resources" class="section level2 hasAnchor" number="17.4">
-<h2><span class="header-section-number">17.4</span> Further resources<a href="17-Basic_stats.html#further-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/resources.png" width="20%" style="display: block; margin: auto;" /></p>
+</div>
 <p>Below are some further resources you can check that will help if you want to do some other plots and figures.</p>
 <p><strong>Quick-R</strong>: <a href="https://www.statmethods.net/index.html" class="uri">https://www.statmethods.net/index.html</a></p>
 <p><strong>R Cookbook</strong>: <a href="https://rc2e.com/" class="uri">https://rc2e.com/</a></p>
 
-</div>
-</div>
-            </section>
 
-          </div>
-        </div>
-      </div>
-<a href="16-Plots_solutions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="18-Stats_exercises.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation column-page-right">
+  <div class="nav-page nav-page-previous">
+      <a href="./16-Plots_solutions.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Plots solutions</span></span>
+      </a>          
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": null,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": null,
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
-});
-});
-</script>
+  <div class="nav-page nav-page-next">
+      <a href="./18-Stats_exercises.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Stats exercises</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-</body>
 
-</html>
+
+</body></html>

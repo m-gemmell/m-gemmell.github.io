@@ -1,73 +1,26 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 19 Stats solutions | R for everyone</title>
-  <meta name="description" content="Chapter 19 Stats solutions | R for everyone" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.35">
 
-  <meta property="og:title" content="Chapter 19 Stats solutions | R for everyone" />
-  <meta property="og:type" content="book" />
-  
-  
-  
-  
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 19 Stats solutions | R for everyone" />
-  
-  
-  
-
-<meta name="author" content="Matthew R. Gemmell" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<meta name="date" content="2022-03-14" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  <link rel="shortcut icon" href="figures/R.png" type="image/x-icon" />
-<link rel="prev" href="18-Stats_exercises.html"/>
-<link rel="next" href="20-Basic_programming.html"/>
-<script src="libs/header-attrs-2.13/header-attrs.js"></script>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<link href="libs/font-awesome-5.13.0/css/all.min.css" rel="stylesheet" />
-<link href="libs/font-awesome-5.13.0/css/v4-shims.min.css" rel="stylesheet" />
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
-
-
-<style type="text/css">
+<title>R for Everyone - 19&nbsp; Stats solutions</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -128,320 +81,350 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./20-Basic_programming.html" rel="next">
+<link href="./18-Stats_exercises.html" rel="prev">
+<link href="./figures/R.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
 </head>
 
-<body>
+<body class="nav-sidebar floating">
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a>R for everyone</a></li>
-
-<li class="divider"></li>
-<li class="part"><span><b>Start<span></span></b></span></li>
-<li class="chapter" data-level="1" data-path="01-Intro_to_R.html"><a href="01-Intro_to_R.html"><i class="fa fa-check"></i><b>1</b> Introduction<span></span></a></li>
-<li class="part"><span><b>Foundations &amp; Objects<span></span></b></span></li>
-<li class="chapter" data-level="2" data-path="02-Foundations.html"><a href="02-Foundations.html"><i class="fa fa-check"></i><b>2</b> Foundations of R<span></span></a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="02-Foundations.html"><a href="02-Foundations.html#operators"><i class="fa fa-check"></i><b>2.1</b> Operators<span></span></a></li>
-<li class="chapter" data-level="2.2" data-path="02-Foundations.html"><a href="02-Foundations.html#variables"><i class="fa fa-check"></i><b>2.2</b> Variables<span></span></a></li>
-<li class="chapter" data-level="2.3" data-path="02-Foundations.html"><a href="02-Foundations.html#functions"><i class="fa fa-check"></i><b>2.3</b> Functions<span></span></a></li>
-<li class="chapter" data-level="2.4" data-path="02-Foundations.html"><a href="02-Foundations.html#directories"><i class="fa fa-check"></i><b>2.4</b> Directories<span></span></a>
-<ul>
-<li class="chapter" data-level="2.4.1" data-path="02-Foundations.html"><a href="02-Foundations.html#commands"><i class="fa fa-check"></i><b>2.4.1</b> Commands<span></span></a></li>
-<li class="chapter" data-level="2.4.2" data-path="02-Foundations.html"><a href="02-Foundations.html#rstudio-interface"><i class="fa fa-check"></i><b>2.4.2</b> RStudio Interface<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="02-Foundations.html"><a href="02-Foundations.html#script-editor"><i class="fa fa-check"></i><b>2.5</b> Script editor<span></span></a>
-<ul>
-<li class="chapter" data-level="2.5.1" data-path="02-Foundations.html"><a href="02-Foundations.html#running-commands"><i class="fa fa-check"></i><b>2.5.1</b> Running commands<span></span></a></li>
-<li class="chapter" data-level="2.5.2" data-path="02-Foundations.html"><a href="02-Foundations.html#annotations"><i class="fa fa-check"></i><b>2.5.2</b> Annotations<span></span></a></li>
-<li class="chapter" data-level="2.5.3" data-path="02-Foundations.html"><a href="02-Foundations.html#saving-scripts"><i class="fa fa-check"></i><b>2.5.3</b> Saving scripts<span></span></a></li>
-<li class="chapter" data-level="2.5.4" data-path="02-Foundations.html"><a href="02-Foundations.html#open-a-saved-script"><i class="fa fa-check"></i><b>2.5.4</b> Open a saved script<span></span></a></li>
-<li class="chapter" data-level="2.5.5" data-path="02-Foundations.html"><a href="02-Foundations.html#new-script"><i class="fa fa-check"></i><b>2.5.5</b> New script<span></span></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="03-Foundations_exercises.html"><a href="03-Foundations_exercises.html"><i class="fa fa-check"></i><b>3</b> Foundations of R exercises<span></span></a></li>
-<li class="chapter" data-level="4" data-path="04-R_objects.html"><a href="04-R_objects.html"><i class="fa fa-check"></i><b>4</b> R objects<span></span></a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="04-R_objects.html"><a href="04-R_objects.html#code-sections"><i class="fa fa-check"></i><b>4.1</b> Code sections<span></span></a></li>
-<li class="chapter" data-level="4.2" data-path="04-R_objects.html"><a href="04-R_objects.html#classes"><i class="fa fa-check"></i><b>4.2</b> Classes<span></span></a>
-<ul>
-<li class="chapter" data-level="4.2.1" data-path="04-R_objects.html"><a href="04-R_objects.html#numeric"><i class="fa fa-check"></i><b>4.2.1</b> Numeric<span></span></a></li>
-<li class="chapter" data-level="4.2.2" data-path="04-R_objects.html"><a href="04-R_objects.html#logical"><i class="fa fa-check"></i><b>4.2.2</b> Logical<span></span></a></li>
-<li class="chapter" data-level="4.2.3" data-path="04-R_objects.html"><a href="04-R_objects.html#string"><i class="fa fa-check"></i><b>4.2.3</b> String<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="4.3" data-path="04-R_objects.html"><a href="04-R_objects.html#code-section-continued"><i class="fa fa-check"></i><b>4.3</b> Code section continued<span></span></a></li>
-<li class="chapter" data-level="4.4" data-path="04-R_objects.html"><a href="04-R_objects.html#data-structures"><i class="fa fa-check"></i><b>4.4</b> Data structures<span></span></a>
-<ul>
-<li class="chapter" data-level="4.4.1" data-path="04-R_objects.html"><a href="04-R_objects.html#scalar"><i class="fa fa-check"></i><b>4.4.1</b> Scalar<span></span></a></li>
-<li class="chapter" data-level="4.4.2" data-path="04-R_objects.html"><a href="04-R_objects.html#vectors-lists"><i class="fa fa-check"></i><b>4.4.2</b> Vectors &amp; Lists<span></span></a></li>
-<li class="chapter" data-level="4.4.3" data-path="04-R_objects.html"><a href="04-R_objects.html#data-frames-matrices"><i class="fa fa-check"></i><b>4.4.3</b> Data frames &amp; Matrices<span></span></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="05-R_objects_exercises.html"><a href="05-R_objects_exercises.html"><i class="fa fa-check"></i><b>5</b> R objects exercises<span></span></a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="05-R_objects_exercises.html"><a href="05-R_objects_exercises.html#df"><i class="fa fa-check"></i><b>5.1</b> df<span></span></a></li>
-<li class="chapter" data-level="5.2" data-path="05-R_objects_exercises.html"><a href="05-R_objects_exercises.html#beach_df_2"><i class="fa fa-check"></i><b>5.2</b> beach_df_2<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html"><i class="fa fa-check"></i><b>6</b> R objects solutions<span></span></a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#df-solution"><i class="fa fa-check"></i><b>6.1</b> df solution<span></span></a>
-<ul>
-<li class="chapter" data-level="6.1.1" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#step-1"><i class="fa fa-check"></i><b>6.1.1</b> Step 1<span></span></a></li>
-<li class="chapter" data-level="6.1.2" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#step-2a"><i class="fa fa-check"></i><b>6.1.2</b> Step 2a<span></span></a></li>
-<li class="chapter" data-level="6.1.3" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#step-2b"><i class="fa fa-check"></i><b>6.1.3</b> Step 2b<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="6.2" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#beach_df_2-solution"><i class="fa fa-check"></i><b>6.2</b> beach_df_2 solution<span></span></a>
-<ul>
-<li class="chapter" data-level="6.2.1" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#step-1-1"><i class="fa fa-check"></i><b>6.2.1</b> Step 1<span></span></a></li>
-<li class="chapter" data-level="6.2.2" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#step-2a-1"><i class="fa fa-check"></i><b>6.2.2</b> Step 2a<span></span></a></li>
-<li class="chapter" data-level="6.2.3" data-path="06-R_objects_solutions.html"><a href="06-R_objects_solutions.html#step-2b-1"><i class="fa fa-check"></i><b>6.2.3</b> Step 2b<span></span></a></li>
-</ul></li>
-</ul></li>
-<li class="part"><span><b>Files, Subsetting, &amp; Tips<span></span></b></span></li>
-<li class="chapter" data-level="7" data-path="07-Files_and_subsetting_data.html"><a href="07-Files_and_subsetting_data.html"><i class="fa fa-check"></i><b>7</b> Files and subsetting data<span></span></a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="07-Files_and_subsetting_data.html"><a href="07-Files_and_subsetting_data.html#reading-from-a-file"><i class="fa fa-check"></i><b>7.1</b> Reading from a file<span></span></a></li>
-<li class="chapter" data-level="7.2" data-path="07-Files_and_subsetting_data.html"><a href="07-Files_and_subsetting_data.html#subsetting-data"><i class="fa fa-check"></i><b>7.2</b> Subsetting data<span></span></a>
-<ul>
-<li class="chapter" data-level="7.2.1" data-path="07-Files_and_subsetting_data.html"><a href="07-Files_and_subsetting_data.html#vectors"><i class="fa fa-check"></i><b>7.2.1</b> Vectors<span></span></a></li>
-<li class="chapter" data-level="7.2.2" data-path="07-Files_and_subsetting_data.html"><a href="07-Files_and_subsetting_data.html#data-frames"><i class="fa fa-check"></i><b>7.2.2</b> Data frames<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="07-Files_and_subsetting_data.html"><a href="07-Files_and_subsetting_data.html#writing-to-a-file"><i class="fa fa-check"></i><b>7.3</b> Writing to a file<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="08-Files_exercises.html"><a href="08-Files_exercises.html"><i class="fa fa-check"></i><b>8</b> Files exercises<span></span></a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="08-Files_exercises.html"><a href="08-Files_exercises.html#bats"><i class="fa fa-check"></i><b>8.1</b> Bats<span></span></a></li>
-<li class="chapter" data-level="8.2" data-path="08-Files_exercises.html"><a href="08-Files_exercises.html#uk-retail"><i class="fa fa-check"></i><b>8.2</b> UK retail<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="09-Files_solutions.html"><a href="09-Files_solutions.html"><i class="fa fa-check"></i><b>9</b> Files solutions<span></span></a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="09-Files_solutions.html"><a href="09-Files_solutions.html#bats-solution"><i class="fa fa-check"></i><b>9.1</b> Bats solution<span></span></a></li>
-<li class="chapter" data-level="9.2" data-path="09-Files_solutions.html"><a href="09-Files_solutions.html#uk-retail-solution"><i class="fa fa-check"></i><b>9.2</b> UK retail solution<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html"><i class="fa fa-check"></i><b>10</b> Handy tips &amp; tricks<span></span></a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#r-conventions"><i class="fa fa-check"></i><b>10.1</b> R conventions<span></span></a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#variable-names"><i class="fa fa-check"></i><b>10.1.1</b> Variable names<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="10.2" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#rstudio"><i class="fa fa-check"></i><b>10.2</b> RStudio<span></span></a>
-<ul>
-<li class="chapter" data-level="10.2.1" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#global-options"><i class="fa fa-check"></i><b>10.2.1</b> Global options<span></span></a></li>
-<li class="chapter" data-level="10.2.2" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#sweep-buttons"><i class="fa fa-check"></i><b>10.2.2</b> Sweep buttons<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="10.3" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#multiplication-table"><i class="fa fa-check"></i><b>10.3</b> Multiplication table<span></span></a></li>
-<li class="chapter" data-level="10.4" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#tab-complete"><i class="fa fa-check"></i><b>10.4</b> Tab complete<span></span></a></li>
-<li class="chapter" data-level="10.5" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#tea"><i class="fa fa-check"></i><b>10.5</b> Tea<span></span></a></li>
-<li class="chapter" data-level="10.6" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#english-speakers-across-the-world"><i class="fa fa-check"></i><b>10.6</b> English speakers across the world<span></span></a></li>
-<li class="chapter" data-level="10.7" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#identical"><i class="fa fa-check"></i><b>10.7</b> Identical<span></span></a></li>
-<li class="chapter" data-level="10.8" data-path="10-Handy_tips_and_tricks.html"><a href="10-Handy_tips_and_tricks.html#shortcuts"><i class="fa fa-check"></i><b>10.8</b> Shortcuts<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="11-Tips_exercises.html"><a href="11-Tips_exercises.html"><i class="fa fa-check"></i><b>11</b> Handy exercises<span></span></a>
-<ul>
-<li class="chapter" data-level="11.1" data-path="11-Tips_exercises.html"><a href="11-Tips_exercises.html#tea-exercise"><i class="fa fa-check"></i><b>11.1</b> Tea exercise<span></span></a></li>
-<li class="chapter" data-level="11.2" data-path="11-Tips_exercises.html"><a href="11-Tips_exercises.html#english-speakers-across-the-world-exercise"><i class="fa fa-check"></i><b>11.2</b> English speakers across the world exercise<span></span></a></li>
-<li class="chapter" data-level="11.3" data-path="11-Tips_exercises.html"><a href="11-Tips_exercises.html#extra-exercise"><i class="fa fa-check"></i><b>11.3</b> Extra exercise<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="12-Tips_solutions.html"><a href="12-Tips_solutions.html"><i class="fa fa-check"></i><b>12</b> Handy Solutions<span></span></a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="12-Tips_solutions.html"><a href="12-Tips_solutions.html#tea-solution"><i class="fa fa-check"></i><b>12.1</b> Tea solution<span></span></a></li>
-<li class="chapter" data-level="12.2" data-path="12-Tips_solutions.html"><a href="12-Tips_solutions.html#english-speakers-across-the-world-solution"><i class="fa fa-check"></i><b>12.2</b> English speakers across the world solution<span></span></a></li>
-</ul></li>
-<li class="part"><span><b>Plots<span></span></b></span></li>
-<li class="chapter" data-level="13" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html"><i class="fa fa-check"></i><b>13</b> Histograms and Line graphs<span></span></a>
-<ul>
-<li class="chapter" data-level="13.1" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#histogram"><i class="fa fa-check"></i><b>13.1</b> Histogram<span></span></a></li>
-<li class="chapter" data-level="13.2" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#line-graphs"><i class="fa fa-check"></i><b>13.2</b> Line graphs<span></span></a>
-<ul>
-<li class="chapter" data-level="13.2.1" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#read-in-data"><i class="fa fa-check"></i><b>13.2.1</b> Read in data<span></span></a></li>
-<li class="chapter" data-level="13.2.2" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#plotting-a-line-graph"><i class="fa fa-check"></i><b>13.2.2</b> Plotting a line graph<span></span></a></li>
-<li class="chapter" data-level="13.2.3" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#adding-lines-to-a-plot"><i class="fa fa-check"></i><b>13.2.3</b> Adding lines to a plot<span></span></a></li>
-<li class="chapter" data-level="13.2.4" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#axis-limits"><i class="fa fa-check"></i><b>13.2.4</b> Axis limits<span></span></a></li>
-<li class="chapter" data-level="13.2.5" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#axis-labels"><i class="fa fa-check"></i><b>13.2.5</b> Axis labels<span></span></a></li>
-<li class="chapter" data-level="13.2.6" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#plot-titles"><i class="fa fa-check"></i><b>13.2.6</b> Plot titles<span></span></a></li>
-<li class="chapter" data-level="13.2.7" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#line-colours"><i class="fa fa-check"></i><b>13.2.7</b> Line colours<span></span></a></li>
-<li class="chapter" data-level="13.2.8" data-path="13-Plots_line_graphs_and_histograms.html"><a href="13-Plots_line_graphs_and_histograms.html#plot-legend"><i class="fa fa-check"></i><b>13.2.8</b> Plot legend<span></span></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="14-Plots_scatterplot_and_box_plots.html"><a href="14-Plots_scatterplot_and_box_plots.html"><i class="fa fa-check"></i><b>14</b> Scatter plots and Box plot<span></span></a>
-<ul>
-<li class="chapter" data-level="14.1" data-path="14-Plots_scatterplot_and_box_plots.html"><a href="14-Plots_scatterplot_and_box_plots.html#scatter-plot"><i class="fa fa-check"></i><b>14.1</b> Scatter plot<span></span></a>
-<ul>
-<li class="chapter" data-level="14.1.1" data-path="14-Plots_scatterplot_and_box_plots.html"><a href="14-Plots_scatterplot_and_box_plots.html#basic-examples"><i class="fa fa-check"></i><b>14.1.1</b> Basic examples<span></span></a></li>
-<li class="chapter" data-level="14.1.2" data-path="14-Plots_scatterplot_and_box_plots.html"><a href="14-Plots_scatterplot_and_box_plots.html#animal-sizes"><i class="fa fa-check"></i><b>14.1.2</b> Animal sizes<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="14.2" data-path="14-Plots_scatterplot_and_box_plots.html"><a href="14-Plots_scatterplot_and_box_plots.html#factors"><i class="fa fa-check"></i><b>14.2</b> Factors<span></span></a></li>
-<li class="chapter" data-level="14.3" data-path="14-Plots_scatterplot_and_box_plots.html"><a href="14-Plots_scatterplot_and_box_plots.html#box-plot"><i class="fa fa-check"></i><b>14.3</b> Box plot<span></span></a></li>
-<li class="chapter" data-level="14.4" data-path="14-Plots_scatterplot_and_box_plots.html"><a href="14-Plots_scatterplot_and_box_plots.html#saving-a-plot-to-a-file"><i class="fa fa-check"></i><b>14.4</b> Saving a plot to a file<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="15" data-path="15-Plots_exercises.html"><a href="15-Plots_exercises.html"><i class="fa fa-check"></i><b>15</b> Plots exercises<span></span></a>
-<ul>
-<li class="chapter" data-level="15.1" data-path="15-Plots_exercises.html"><a href="15-Plots_exercises.html#line-graph"><i class="fa fa-check"></i><b>15.1</b> Line graph<span></span></a></li>
-<li class="chapter" data-level="15.2" data-path="15-Plots_exercises.html"><a href="15-Plots_exercises.html#histogram-1"><i class="fa fa-check"></i><b>15.2</b> Histogram<span></span></a></li>
-<li class="chapter" data-level="15.3" data-path="15-Plots_exercises.html"><a href="15-Plots_exercises.html#scatterplot"><i class="fa fa-check"></i><b>15.3</b> Scatterplot<span></span></a></li>
-<li class="chapter" data-level="15.4" data-path="15-Plots_exercises.html"><a href="15-Plots_exercises.html#boxplot"><i class="fa fa-check"></i><b>15.4</b> Boxplot<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="16" data-path="16-Plots_solutions.html"><a href="16-Plots_solutions.html"><i class="fa fa-check"></i><b>16</b> Plots solutions<span></span></a>
-<ul>
-<li class="chapter" data-level="16.1" data-path="16-Plots_solutions.html"><a href="16-Plots_solutions.html#line-graph-solution"><i class="fa fa-check"></i><b>16.1</b> Line graph solution<span></span></a></li>
-<li class="chapter" data-level="16.2" data-path="16-Plots_solutions.html"><a href="16-Plots_solutions.html#histogram-solution"><i class="fa fa-check"></i><b>16.2</b> Histogram solution<span></span></a></li>
-<li class="chapter" data-level="16.3" data-path="16-Plots_solutions.html"><a href="16-Plots_solutions.html#scatterplot-solution"><i class="fa fa-check"></i><b>16.3</b> Scatterplot solution<span></span></a></li>
-<li class="chapter" data-level="16.4" data-path="16-Plots_solutions.html"><a href="16-Plots_solutions.html#boxplot-solutions"><i class="fa fa-check"></i><b>16.4</b> Boxplot solutions<span></span></a></li>
-</ul></li>
-<li class="part"><span><b>Stats &amp; Programming<span></span></b></span></li>
-<li class="chapter" data-level="17" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html"><i class="fa fa-check"></i><b>17</b> Basic stats<span></span></a>
-<ul>
-<li class="chapter" data-level="17.1" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#linear-regression"><i class="fa fa-check"></i><b>17.1</b> Linear regression<span></span></a>
-<ul>
-<li class="chapter" data-level="17.1.1" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#fish-market-dataset"><i class="fa fa-check"></i><b>17.1.1</b> Fish market dataset<span></span></a></li>
-<li class="chapter" data-level="17.1.2" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#scatterplot-1"><i class="fa fa-check"></i><b>17.1.2</b> Scatterplot<span></span></a></li>
-<li class="chapter" data-level="17.1.3" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#linear-model"><i class="fa fa-check"></i><b>17.1.3</b> Linear model<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="17.2" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#t-test"><i class="fa fa-check"></i><b>17.2</b> t-test<span></span></a>
-<ul>
-<li class="chapter" data-level="17.2.1" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#boxplot-1"><i class="fa fa-check"></i><b>17.2.1</b> Boxplot<span></span></a></li>
-<li class="chapter" data-level="17.2.2" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#t-test-comparison"><i class="fa fa-check"></i><b>17.2.2</b> t-test comparison<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="17.3" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#some-more-useful-functions"><i class="fa fa-check"></i><b>17.3</b> Some more useful functions<span></span></a>
-<ul>
-<li class="chapter" data-level="17.3.1" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#summary"><i class="fa fa-check"></i><b>17.3.1</b> Summary<span></span></a></li>
-<li class="chapter" data-level="17.3.2" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#table"><i class="fa fa-check"></i><b>17.3.2</b> Table<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="17.4" data-path="17-Basic_stats.html"><a href="17-Basic_stats.html#further-resources"><i class="fa fa-check"></i><b>17.4</b> Further resources<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="18" data-path="18-Stats_exercises.html"><a href="18-Stats_exercises.html"><i class="fa fa-check"></i><b>18</b> Stats exercises<span></span></a>
-<ul>
-<li class="chapter" data-level="18.1" data-path="18-Stats_exercises.html"><a href="18-Stats_exercises.html#world-happiness-report"><i class="fa fa-check"></i><b>18.1</b> World happiness report<span></span></a>
-<ul>
-<li class="chapter" data-level="18.1.1" data-path="18-Stats_exercises.html"><a href="18-Stats_exercises.html#data"><i class="fa fa-check"></i><b>18.1.1</b> Data<span></span></a></li>
-<li class="chapter" data-level="18.1.2" data-path="18-Stats_exercises.html"><a href="18-Stats_exercises.html#tasks-questions"><i class="fa fa-check"></i><b>18.1.2</b> Tasks &amp; questions<span></span></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="19" data-path="19-Stats_solutions.html"><a href="19-Stats_solutions.html"><i class="fa fa-check"></i><b>19</b> Stats solutions<span></span></a>
-<ul>
-<li class="chapter" data-level="19.1" data-path="19-Stats_solutions.html"><a href="19-Stats_solutions.html#world-happiness-report-solutions"><i class="fa fa-check"></i><b>19.1</b> World happiness report solutions<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="20" data-path="20-Basic_programming.html"><a href="20-Basic_programming.html"><i class="fa fa-check"></i><b>20</b> Basic programming<span></span></a>
-<ul>
-<li class="chapter" data-level="20.1" data-path="20-Basic_programming.html"><a href="20-Basic_programming.html#recycle-rule"><i class="fa fa-check"></i><b>20.1</b> Recycle rule<span></span></a></li>
-<li class="chapter" data-level="20.2" data-path="20-Basic_programming.html"><a href="20-Basic_programming.html#loops"><i class="fa fa-check"></i><b>20.2</b> Loops<span></span></a>
-<ul>
-<li class="chapter" data-level="20.2.1" data-path="20-Basic_programming.html"><a href="20-Basic_programming.html#for-loops"><i class="fa fa-check"></i><b>20.2.1</b> For loops<span></span></a></li>
-<li class="chapter" data-level="20.2.2" data-path="20-Basic_programming.html"><a href="20-Basic_programming.html#while-loops"><i class="fa fa-check"></i><b>20.2.2</b> While loops<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="20.3" data-path="20-Basic_programming.html"><a href="20-Basic_programming.html#if-statements"><i class="fa fa-check"></i><b>20.3</b> If statements<span></span></a></li>
-<li class="chapter" data-level="20.4" data-path="20-Basic_programming.html"><a href="20-Basic_programming.html#functions-1"><i class="fa fa-check"></i><b>20.4</b> Functions<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="21" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html"><i class="fa fa-check"></i><b>21</b> Student grades example<span></span></a>
-<ul>
-<li class="chapter" data-level="21.1" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#the-student-grades-data"><i class="fa fa-check"></i><b>21.1</b> The student grades data<span></span></a></li>
-<li class="chapter" data-level="21.2" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#analysis-script"><i class="fa fa-check"></i><b>21.2</b> Analysis script<span></span></a></li>
-<li class="chapter" data-level="21.3" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#reading-in-and-preprocessing-the-data"><i class="fa fa-check"></i><b>21.3</b> Reading in and preprocessing the data<span></span></a></li>
-<li class="chapter" data-level="21.4" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#combining-the-data-frames"><i class="fa fa-check"></i><b>21.4</b> Combining the data frames<span></span></a></li>
-<li class="chapter" data-level="21.5" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#saving-the-data-frame"><i class="fa fa-check"></i><b>21.5</b> Saving the data frame<span></span></a></li>
-<li class="chapter" data-level="21.6" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#scaling-grading"><i class="fa fa-check"></i><b>21.6</b> Scaling &amp; Grading<span></span></a></li>
-<li class="chapter" data-level="21.7" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#some-quick-plots"><i class="fa fa-check"></i><b>21.7</b> Some quick plots<span></span></a></li>
-<li class="chapter" data-level="21.8" data-path="21-Student_grades_example.html"><a href="21-Student_grades_example.html#tips-for-creating-your-own-loops-and-functions"><i class="fa fa-check"></i><b>21.8</b> Tips for creating your own loops and functions<span></span></a></li>
-</ul></li>
-<li class="appendix"><span><b>Appendix<span></span></b></span></li>
-<li class="chapter" data-level="A" data-path="22-Further_resources.html"><a href="22-Further_resources.html"><i class="fa fa-check"></i><b>A</b> R user groups and forums<span></span></a></li>
-<li class="chapter" data-level="B" data-path="22-Further_resources.html"><a href="22-Further_resources.html#workshopfiles"><i class="fa fa-check"></i><b>B</b> Workshop files<span></span></a>
-<ul>
-<li class="chapter" data-level="B.1" data-path="22-Further_resources.html"><a href="22-Further_resources.html#chapter-7-files"><i class="fa fa-check"></i><b>B.1</b> Chapter 7 files<span></span></a></li>
-<li class="chapter" data-level="B.2" data-path="22-Further_resources.html"><a href="22-Further_resources.html#chapter-8-files"><i class="fa fa-check"></i><b>B.2</b> Chapter 8 files<span></span></a></li>
-<li class="chapter" data-level="B.3" data-path="22-Further_resources.html"><a href="22-Further_resources.html#chapter-10-11-files"><i class="fa fa-check"></i><b>B.3</b> Chapter 10-11 files<span></span></a></li>
-<li class="chapter" data-level="B.4" data-path="22-Further_resources.html"><a href="22-Further_resources.html#chapter-13-16-files"><i class="fa fa-check"></i><b>B.4</b> Chapter 13-16 files<span></span></a></li>
-<li class="chapter" data-level="B.5" data-path="22-Further_resources.html"><a href="22-Further_resources.html#chapter-17-19"><i class="fa fa-check"></i><b>B.5</b> Chapter 17-19<span></span></a></li>
-<li class="chapter" data-level="B.6" data-path="22-Further_resources.html"><a href="22-Further_resources.html#chapter-20-21"><i class="fa fa-check"></i><b>B.6</b> Chapter 20-21<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="C" data-path="22-Further_resources.html"><a href="22-Further_resources.html#base-r-books-and-links"><i class="fa fa-check"></i><b>C</b> Base R books and links<span></span></a></li>
-<li class="chapter" data-level="D" data-path="22-Further_resources.html"><a href="22-Further_resources.html#r-cheat-sheets"><i class="fa fa-check"></i><b>D</b> R cheat sheets<span></span></a></li>
-<li class="chapter" data-level="E" data-path="22-Further_resources.html"><a href="22-Further_resources.html#advanced-r-topics"><i class="fa fa-check"></i><b>E</b> Advanced R topics<span></span></a></li>
-<li class="chapter" data-level="F" data-path="22-Further_resources.html"><a href="22-Further_resources.html#datasets"><i class="fa fa-check"></i><b>F</b> Datasets<span></span></a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
-</ul>
-
-      </nav>
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Stats solutions</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
     </div>
-
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R for everyone</a>
-          </h1>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">R for Everyone</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
         </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Start</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Foundations &amp; Objects</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-Foundations.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Foundations of R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-Foundations_exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Foundations of R exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-R_objects.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">R objects</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-R_objects_exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">R objects exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-R_objects_solutions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">R objects solutions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Files, Subsetting, &amp; Tips</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-Files_and_subsetting_data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Files and subsetting data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-Files_exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Files exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09-Files_solutions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Files solutions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10-Handy_tips_and_tricks.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Handy tips &amp; tricks</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11-Tips_exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Handy exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12-Tips_solutions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Handy Solutions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Plots</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13-Plots_line_graphs_and_histograms.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Histograms and Line graphs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./14-Plots_scatterplot_and_box_plots.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Scatter plots and Box plot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./15-Plots_exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Plots exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./16-Plots_solutions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Plots solutions</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Stats &amp; Programming</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./17-Basic_stats.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Basic stats</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./18-Stats_exercises.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Stats exercises</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./19-Stats_solutions.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Stats solutions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./20-Basic_programming.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Basic programming</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./21-Student_grades_example.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Student grades example</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Appendices</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./22-Further_resources.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Further resources</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">In this chapter</h2>
+   
+  <ul>
+  <li><a href="#world-happiness-report-solutions" id="toc-world-happiness-report-solutions" class="nav-link active" data-scroll-target="#world-happiness-report-solutions"> <span class="header-section-number">19.1</span> World happiness report solutions</a></li>
+  </ul>
+</nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content">
 
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Stats solutions</span></h1>
+</div>
 
-            <section class="normal" id="section-">
-<div id="stats-solutions" class="section level1 hasAnchor" number="19">
-<h1><span class="header-section-number">Chapter 19</span> Stats solutions<a href="19-Stats_solutions.html#stats-solutions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="world-happiness-report-solutions" class="section level2 hasAnchor" number="19.1">
-<h2><span class="header-section-number">19.1</span> World happiness report solutions<a href="19-Stats_solutions.html#world-happiness-report-solutions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/world_happiness_solutions.png" width="20%" style="display: block; margin: auto;" />
-1. Read in the file</p>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="19-Stats_solutions.html#cb188-1" aria-hidden="true" tabindex="-1"></a>happy_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;Chapter_17-18/world_happiness_report_2016.csv&quot;</span>, </span>
-<span id="cb188-2"><a href="19-Stats_solutions.html#cb188-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">check.names =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb188-3"><a href="19-Stats_solutions.html#cb188-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">stringsAsFactors =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb188-4"><a href="19-Stats_solutions.html#cb188-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">sep =</span> <span class="st">&quot;,&quot;</span></span>
-<span id="cb188-5"><a href="19-Stats_solutions.html#cb188-5" aria-hidden="true" tabindex="-1"></a>                      )</span></code></pre></div>
-<ol start="2" style="list-style-type: decimal">
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="world-happiness-report-solutions" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="world-happiness-report-solutions"><span class="header-section-number">19.1</span> World happiness report solutions</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/world_happiness_solutions.png" class="img-fluid figure-img" style="width:20.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Read in the file</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>happy_df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Chapter_17-18/world_happiness_report_2016.csv"</span>, </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">check.names =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">stringsAsFactors =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">sep =</span> <span class="st">","</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                      )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
 <li>Answer the following questions using the output from one <strong>function</strong>:</li>
 </ol>
-<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="19-Stats_solutions.html#cb189-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(happy_df)</span></code></pre></div>
-<pre><code>##         Country                                Region  
-##  Afghanistan:  1   Sub-Saharan Africa             :38  
-##  Albania    :  1   Central and Eastern Europe     :29  
-##  Algeria    :  1   Latin America and Caribbean    :24  
-##  Angola     :  1   Western Europe                 :21  
-##  Argentina  :  1   Middle East and Northern Africa:19  
-##  Armenia    :  1   Southeastern Asia              : 9  
-##  (Other)    :151   (Other)                        :17  
-##  Happiness Rank   Happiness Score Lower Confidence Interval
-##  Min.   :  1.00   Min.   :2.905   Min.   :2.732            
-##  1st Qu.: 40.00   1st Qu.:4.404   1st Qu.:4.327            
-##  Median : 79.00   Median :5.314   Median :5.237            
-##  Mean   : 78.98   Mean   :5.382   Mean   :5.282            
-##  3rd Qu.:118.00   3rd Qu.:6.269   3rd Qu.:6.154            
-##  Max.   :157.00   Max.   :7.526   Max.   :7.460            
-##                                                            
-##  Upper Confidence Interval Economy (GDP per Capita)     Family      
-##  Min.   :3.078             Min.   :0.0000           Min.   :0.0000  
-##  1st Qu.:4.465             1st Qu.:0.6702           1st Qu.:0.6418  
-##  Median :5.419             Median :1.0278           Median :0.8414  
-##  Mean   :5.482             Mean   :0.9539           Mean   :0.7936  
-##  3rd Qu.:6.434             3rd Qu.:1.2796           3rd Qu.:1.0215  
-##  Max.   :7.669             Max.   :1.8243           Max.   :1.1833  
-##                                                                     
-##  Health (Life Expectancy)    Freedom      
-##  Min.   :0.0000           Min.   :0.0000  
-##  1st Qu.:0.3829           1st Qu.:0.2575  
-##  Median :0.5966           Median :0.3975  
-##  Mean   :0.5576           Mean   :0.3710  
-##  3rd Qu.:0.7299           3rd Qu.:0.4845  
-##  Max.   :0.9528           Max.   :0.6085  
-##                                           
-##  Trust (Government Corruption)   Generosity     Dystopia Residual
-##  Min.   :0.00000               Min.   :0.0000   Min.   :0.8179   
-##  1st Qu.:0.06126               1st Qu.:0.1546   1st Qu.:2.0317   
-##  Median :0.10547               Median :0.2225   Median :2.2907   
-##  Mean   :0.13762               Mean   :0.2426   Mean   :2.3258   
-##  3rd Qu.:0.17554               3rd Qu.:0.3119   3rd Qu.:2.6646   
-##  Max.   :0.50521               Max.   :0.8197   Max.   :3.8377   
-## </code></pre>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(happy_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        Country                                Region   Happiness Rank  
+ Afghanistan:  1   Sub-Saharan Africa             :38   Min.   :  1.00  
+ Albania    :  1   Central and Eastern Europe     :29   1st Qu.: 40.00  
+ Algeria    :  1   Latin America and Caribbean    :24   Median : 79.00  
+ Angola     :  1   Western Europe                 :21   Mean   : 78.98  
+ Argentina  :  1   Middle East and Northern Africa:19   3rd Qu.:118.00  
+ Armenia    :  1   Southeastern Asia              : 9   Max.   :157.00  
+ (Other)    :151   (Other)                        :17                   
+ Happiness Score Lower Confidence Interval Upper Confidence Interval
+ Min.   :2.905   Min.   :2.732             Min.   :3.078            
+ 1st Qu.:4.404   1st Qu.:4.327             1st Qu.:4.465            
+ Median :5.314   Median :5.237             Median :5.419            
+ Mean   :5.382   Mean   :5.282             Mean   :5.482            
+ 3rd Qu.:6.269   3rd Qu.:6.154             3rd Qu.:6.434            
+ Max.   :7.526   Max.   :7.460             Max.   :7.669            
+                                                                    
+ Economy (GDP per Capita)     Family       Health (Life Expectancy)
+ Min.   :0.0000           Min.   :0.0000   Min.   :0.0000          
+ 1st Qu.:0.6702           1st Qu.:0.6418   1st Qu.:0.3829          
+ Median :1.0278           Median :0.8414   Median :0.5966          
+ Mean   :0.9539           Mean   :0.7936   Mean   :0.5576          
+ 3rd Qu.:1.2796           3rd Qu.:1.0215   3rd Qu.:0.7299          
+ Max.   :1.8243           Max.   :1.1833   Max.   :0.9528          
+                                                                   
+    Freedom       Trust (Government Corruption)   Generosity    
+ Min.   :0.0000   Min.   :0.00000               Min.   :0.0000  
+ 1st Qu.:0.2575   1st Qu.:0.06126               1st Qu.:0.1546  
+ Median :0.3975   Median :0.10547               Median :0.2225  
+ Mean   :0.3710   Mean   :0.13762               Mean   :0.2426  
+ 3rd Qu.:0.4845   3rd Qu.:0.17554               3rd Qu.:0.3119  
+ Max.   :0.6085   Max.   :0.50521               Max.   :0.8197  
+                                                                
+ Dystopia Residual
+ Min.   :0.8179   
+ 1st Qu.:2.0317   
+ Median :2.2907   
+ Mean   :2.3258   
+ 3rd Qu.:2.6646   
+ Max.   :3.8377   
+                  </code></pre>
+</div>
+</div>
 <ul>
-<li>How many countries are in the region “Western Europe?”
+<li>How many countries are in the region “Western Europe”?
 <ul>
 <li><strong>21</strong></li>
 </ul></li>
@@ -449,64 +432,70 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><strong>7.526</strong></li>
 </ul></li>
-<li>From the columns “Economy (GDP per Capital)” to “Dystopia Residual,” which has the highest mean and which has the lowest?
+<li>From the columns “Economy (GDP per Capital)” to “Dystopia Residual”, which has the highest mean and which has the lowest?
 <ul>
 <li><strong>Highest: “Dystopia Residual” with 2.3258</strong></li>
 <li><strong>Lowest: “Family” with 0.13762</strong></li>
 </ul></li>
 </ul>
 <p>3.Produce the plot</p>
-<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="19-Stats_solutions.html#cb191-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Fit linear model of Economy (x) against Family (y)</span></span>
-<span id="cb191-2"><a href="19-Stats_solutions.html#cb191-2" aria-hidden="true" tabindex="-1"></a>fit_economy_family <span class="ot">&lt;-</span> </span>
-<span id="cb191-3"><a href="19-Stats_solutions.html#cb191-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(Family<span class="sc">~</span><span class="st">`</span><span class="at">Economy (GDP per Capita)</span><span class="st">`</span>, <span class="at">data =</span> happy_df)</span>
-<span id="cb191-4"><a href="19-Stats_solutions.html#cb191-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Create string for linear equation</span></span>
-<span id="cb191-5"><a href="19-Stats_solutions.html#cb191-5" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="fu">round</span>(fit_economy_family<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">digits =</span> <span class="dv">4</span>)</span>
-<span id="cb191-6"><a href="19-Stats_solutions.html#cb191-6" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">round</span>(fit_economy_family<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">digits =</span> <span class="dv">4</span>)</span>
-<span id="cb191-7"><a href="19-Stats_solutions.html#cb191-7" aria-hidden="true" tabindex="-1"></a>lm_equation <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;y = &quot;</span>, m , <span class="st">&quot;x + &quot;</span>, c)</span>
-<span id="cb191-8"><a href="19-Stats_solutions.html#cb191-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Produce plot</span></span>
-<span id="cb191-9"><a href="19-Stats_solutions.html#cb191-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> happy_df<span class="sc">$</span><span class="st">`</span><span class="at">Economy (GDP per Capita)</span><span class="st">`</span>,</span>
-<span id="cb191-10"><a href="19-Stats_solutions.html#cb191-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> happy_df<span class="sc">$</span>Family,</span>
-<span id="cb191-11"><a href="19-Stats_solutions.html#cb191-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">&quot;Comparison of the effect of </span><span class="sc">\n</span><span class="st"> Economy and Family on happiness&quot;</span>,</span>
-<span id="cb191-12"><a href="19-Stats_solutions.html#cb191-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Economy (GDP per Capita)&quot;</span>,</span>
-<span id="cb191-13"><a href="19-Stats_solutions.html#cb191-13" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">&quot;Family&quot;</span>,</span>
-<span id="cb191-14"><a href="19-Stats_solutions.html#cb191-14" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="fu">as.numeric</span>(happy_df<span class="sc">$</span>Region),</span>
-<span id="cb191-15"><a href="19-Stats_solutions.html#cb191-15" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">1.5</span>),</span>
-<span id="cb191-16"><a href="19-Stats_solutions.html#cb191-16" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="dv">1</span>)</span>
-<span id="cb191-17"><a href="19-Stats_solutions.html#cb191-17" aria-hidden="true" tabindex="-1"></a><span class="co">#Add abline</span></span>
-<span id="cb191-18"><a href="19-Stats_solutions.html#cb191-18" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(fit_economy_family, <span class="at">col =</span> <span class="st">&quot;mediumslateblue&quot;</span>)</span>
-<span id="cb191-19"><a href="19-Stats_solutions.html#cb191-19" aria-hidden="true" tabindex="-1"></a><span class="co">#Add equation to top right</span></span>
-<span id="cb191-20"><a href="19-Stats_solutions.html#cb191-20" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="at">x =</span> <span class="fl">0.4</span>, <span class="at">y =</span> <span class="fl">1.1</span>, <span class="at">labels =</span> lm_equation)</span>
-<span id="cb191-21"><a href="19-Stats_solutions.html#cb191-21" aria-hidden="true" tabindex="-1"></a><span class="co">#Add the legend</span></span>
-<span id="cb191-22"><a href="19-Stats_solutions.html#cb191-22" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">&quot;bottomright&quot;</span>,</span>
-<span id="cb191-23"><a href="19-Stats_solutions.html#cb191-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nlevels</span>(happy_df<span class="sc">$</span>Region),</span>
-<span id="cb191-24"><a href="19-Stats_solutions.html#cb191-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">levels</span>(happy_df<span class="sc">$</span>Region))</span></code></pre></div>
-<p><img src="R-for-Everyone_files/figure-html/unnamed-chunk-295-1.png" width="768" /></p>
-<ol start="4" style="list-style-type: decimal">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Fit linear model of Economy (x) against Family (y)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>fit_economy_family <span class="ot">&lt;-</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(Family<span class="sc">~</span><span class="st">`</span><span class="at">Economy (GDP per Capita)</span><span class="st">`</span>, <span class="at">data =</span> happy_df)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Create string for linear equation</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="fu">round</span>(fit_economy_family<span class="sc">$</span>coefficients[<span class="dv">1</span>], <span class="at">digits =</span> <span class="dv">4</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">round</span>(fit_economy_family<span class="sc">$</span>coefficients[<span class="dv">2</span>], <span class="at">digits =</span> <span class="dv">4</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>lm_equation <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"y = "</span>, m , <span class="st">"x + "</span>, c)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Produce plot</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> happy_df<span class="sc">$</span><span class="st">`</span><span class="at">Economy (GDP per Capita)</span><span class="st">`</span>,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> happy_df<span class="sc">$</span>Family,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Comparison of the effect of </span><span class="sc">\n</span><span class="st"> Economy and Family on happiness"</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Economy (GDP per Capita)"</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Family"</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="fu">as.numeric</span>(happy_df<span class="sc">$</span>Region),</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">1.5</span>),</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="dv">1</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co">#Add abline</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(fit_economy_family, <span class="at">col =</span> <span class="st">"mediumslateblue"</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co">#Add equation to top right</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="at">x =</span> <span class="fl">0.4</span>, <span class="at">y =</span> <span class="fl">1.1</span>, <span class="at">labels =</span> lm_equation)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co">#Add the legend</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">"bottomright"</span>,</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nlevels</span>(happy_df<span class="sc">$</span>Region),</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">levels</span>(happy_df<span class="sc">$</span>Region))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="19-Stats_solutions_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+<ol start="4" type="1">
 <li>Save plot as png file</li>
 </ol>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="19-Stats_solutions.html#cb192-1" aria-hidden="true" tabindex="-1"></a><span class="co">#PNG command</span></span>
-<span id="cb192-2"><a href="19-Stats_solutions.html#cb192-2" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="st">&quot;Chapter_17-18/Economy_vs_family.png&quot;</span>, </span>
-<span id="cb192-3"><a href="19-Stats_solutions.html#cb192-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">units =</span> <span class="st">&quot;in&quot;</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">res =</span> <span class="dv">200</span>)</span>
-<span id="cb192-4"><a href="19-Stats_solutions.html#cb192-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Produce plot</span></span>
-<span id="cb192-5"><a href="19-Stats_solutions.html#cb192-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> happy_df<span class="sc">$</span><span class="st">`</span><span class="at">Economy (GDP per Capita)</span><span class="st">`</span>,</span>
-<span id="cb192-6"><a href="19-Stats_solutions.html#cb192-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> happy_df<span class="sc">$</span>Family,</span>
-<span id="cb192-7"><a href="19-Stats_solutions.html#cb192-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">&quot;Comparison of the effect of </span><span class="sc">\n</span><span class="st"> Economy and Family on happiness&quot;</span>,</span>
-<span id="cb192-8"><a href="19-Stats_solutions.html#cb192-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Economy (GDP per Capita)&quot;</span>,</span>
-<span id="cb192-9"><a href="19-Stats_solutions.html#cb192-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">&quot;Family&quot;</span>,</span>
-<span id="cb192-10"><a href="19-Stats_solutions.html#cb192-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="fu">as.numeric</span>(happy_df<span class="sc">$</span>Region),</span>
-<span id="cb192-11"><a href="19-Stats_solutions.html#cb192-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">1.5</span>),</span>
-<span id="cb192-12"><a href="19-Stats_solutions.html#cb192-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="dv">1</span>)</span>
-<span id="cb192-13"><a href="19-Stats_solutions.html#cb192-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Add abline</span></span>
-<span id="cb192-14"><a href="19-Stats_solutions.html#cb192-14" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(fit_economy_family, <span class="at">col =</span> <span class="st">&quot;mediumslateblue&quot;</span>)</span>
-<span id="cb192-15"><a href="19-Stats_solutions.html#cb192-15" aria-hidden="true" tabindex="-1"></a><span class="co">#Add equation to top right</span></span>
-<span id="cb192-16"><a href="19-Stats_solutions.html#cb192-16" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="at">x =</span> <span class="fl">0.4</span>, <span class="at">y =</span> <span class="fl">1.1</span>, <span class="at">labels =</span> lm_equation)</span>
-<span id="cb192-17"><a href="19-Stats_solutions.html#cb192-17" aria-hidden="true" tabindex="-1"></a><span class="co">#Add the legend</span></span>
-<span id="cb192-18"><a href="19-Stats_solutions.html#cb192-18" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">&quot;bottomright&quot;</span>,</span>
-<span id="cb192-19"><a href="19-Stats_solutions.html#cb192-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nlevels</span>(happy_df<span class="sc">$</span>Region),</span>
-<span id="cb192-20"><a href="19-Stats_solutions.html#cb192-20" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">levels</span>(happy_df<span class="sc">$</span>Region))</span>
-<span id="cb192-21"><a href="19-Stats_solutions.html#cb192-21" aria-hidden="true" tabindex="-1"></a><span class="co">#dev.off</span></span>
-<span id="cb192-22"><a href="19-Stats_solutions.html#cb192-22" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
-<ol start="5" style="list-style-type: decimal">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#PNG command</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> <span class="st">"Chapter_17-18/Economy_vs_family.png"</span>, </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">units =</span> <span class="st">"in"</span>, <span class="at">height =</span> <span class="dv">8</span>, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">res =</span> <span class="dv">200</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Produce plot</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> happy_df<span class="sc">$</span><span class="st">`</span><span class="at">Economy (GDP per Capita)</span><span class="st">`</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">y =</span> happy_df<span class="sc">$</span>Family,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Comparison of the effect of </span><span class="sc">\n</span><span class="st"> Economy and Family on happiness"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Economy (GDP per Capita)"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Family"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="fu">as.numeric</span>(happy_df<span class="sc">$</span>Region),</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">1.5</span>),</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="dv">1</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Add abline</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(fit_economy_family, <span class="at">col =</span> <span class="st">"mediumslateblue"</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co">#Add equation to top right</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="at">x =</span> <span class="fl">0.4</span>, <span class="at">y =</span> <span class="fl">1.1</span>, <span class="at">labels =</span> lm_equation)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co">#Add the legend</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">"bottomright"</span>,</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nlevels</span>(happy_df<span class="sc">$</span>Region),</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="fu">levels</span>(happy_df<span class="sc">$</span>Region))</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co">#dev.off</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="5" type="1">
 <li>Answers for the following questions:</li>
 </ol>
 <ul>
@@ -527,121 +516,183 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>Western Europe</strong></li>
 </ul></li>
 </ul>
-<ol start="6" style="list-style-type: decimal">
+<ol start="6" type="1">
 <li>Produce boxplot</li>
 </ol>
-<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="19-Stats_solutions.html#cb193-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Change level names</span></span>
-<span id="cb193-2"><a href="19-Stats_solutions.html#cb193-2" aria-hidden="true" tabindex="-1"></a>short_region_names <span class="ot">&lt;-</span> </span>
-<span id="cb193-3"><a href="19-Stats_solutions.html#cb193-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">&quot;OZ_n_NZ&quot;</span>, <span class="st">&quot;C_n_E_Europe&quot;</span>, <span class="st">&quot;E_Asia&quot;</span>, <span class="st">&quot;Latin_A_n_Carib&quot;</span>,</span>
-<span id="cb193-4"><a href="19-Stats_solutions.html#cb193-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;ME_n_N_Africa&quot;</span>, <span class="st">&quot;N_America&quot;</span>, <span class="st">&quot;SE_Asia&quot;</span>, <span class="st">&quot;S_Asia&quot;</span>,</span>
-<span id="cb193-5"><a href="19-Stats_solutions.html#cb193-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Sub_Saharan&quot;</span>, <span class="st">&quot;W_Europe&quot;</span>)</span>
-<span id="cb193-6"><a href="19-Stats_solutions.html#cb193-6" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(happy_df<span class="sc">$</span>Region) <span class="ot">&lt;-</span> short_region_names</span>
-<span id="cb193-7"><a href="19-Stats_solutions.html#cb193-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Create boxplot</span></span>
-<span id="cb193-8"><a href="19-Stats_solutions.html#cb193-8" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="st">`</span><span class="at">Happiness Score</span><span class="st">`</span><span class="sc">~</span>Region, <span class="at">data =</span> happy_df, </span>
-<span id="cb193-9"><a href="19-Stats_solutions.html#cb193-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10</span>),</span>
-<span id="cb193-10"><a href="19-Stats_solutions.html#cb193-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nlevels</span>(happy_df<span class="sc">$</span>Region),</span>
-<span id="cb193-11"><a href="19-Stats_solutions.html#cb193-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">&quot;Happiness scores across regions&quot;</span></span>
-<span id="cb193-12"><a href="19-Stats_solutions.html#cb193-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<p><img src="R-for-Everyone_files/figure-html/unnamed-chunk-297-1.png" width="1536" /></p>
-<ol start="7" style="list-style-type: decimal">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Change level names</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>short_region_names <span class="ot">&lt;-</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">"OZ_n_NZ"</span>, <span class="st">"C_n_E_Europe"</span>, <span class="st">"E_Asia"</span>, <span class="st">"Latin_A_n_Carib"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ME_n_N_Africa"</span>, <span class="st">"N_America"</span>, <span class="st">"SE_Asia"</span>, <span class="st">"S_Asia"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Sub_Saharan"</span>, <span class="st">"W_Europe"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(happy_df<span class="sc">$</span>Region) <span class="ot">&lt;-</span> short_region_names</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Create boxplot</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="st">`</span><span class="at">Happiness Score</span><span class="st">`</span><span class="sc">~</span>Region, <span class="at">data =</span> happy_df, </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10</span>),</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nlevels</span>(happy_df<span class="sc">$</span>Region),</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Happiness scores across regions"</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="19-Stats_solutions_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="1536"></p>
+</div>
+</div>
+<ol start="7" type="1">
 <li>Save as jpeg</li>
 </ol>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="19-Stats_solutions.html#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="co">#jpeg</span></span>
-<span id="cb194-2"><a href="19-Stats_solutions.html#cb194-2" aria-hidden="true" tabindex="-1"></a><span class="fu">jpeg</span>(<span class="at">filename =</span> <span class="st">&quot;Chapter_17-18/Region_happiness_boxplots.jpg&quot;</span>, <span class="at">units =</span> <span class="st">&quot;px&quot;</span>,</span>
-<span id="cb194-3"><a href="19-Stats_solutions.html#cb194-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">width =</span> <span class="dv">1500</span>, <span class="at">height =</span> <span class="dv">750</span> )</span>
-<span id="cb194-4"><a href="19-Stats_solutions.html#cb194-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Create boxplot</span></span>
-<span id="cb194-5"><a href="19-Stats_solutions.html#cb194-5" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="st">`</span><span class="at">Happiness Score</span><span class="st">`</span><span class="sc">~</span>Region, <span class="at">data =</span> happy_df, </span>
-<span id="cb194-6"><a href="19-Stats_solutions.html#cb194-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10</span>),</span>
-<span id="cb194-7"><a href="19-Stats_solutions.html#cb194-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nlevels</span>(happy_df<span class="sc">$</span>Region),</span>
-<span id="cb194-8"><a href="19-Stats_solutions.html#cb194-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">&quot;Happiness scores across regions&quot;</span></span>
-<span id="cb194-9"><a href="19-Stats_solutions.html#cb194-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb194-10"><a href="19-Stats_solutions.html#cb194-10" aria-hidden="true" tabindex="-1"></a><span class="co">#dev.off</span></span>
-<span id="cb194-11"><a href="19-Stats_solutions.html#cb194-11" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code></pre></div>
-<ol start="8" style="list-style-type: decimal">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#jpeg</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">jpeg</span>(<span class="at">filename =</span> <span class="st">"Chapter_17-18/Region_happiness_boxplots.jpg"</span>, <span class="at">units =</span> <span class="st">"px"</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">width =</span> <span class="dv">1500</span>, <span class="at">height =</span> <span class="dv">750</span> )</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Create boxplot</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(<span class="st">`</span><span class="at">Happiness Score</span><span class="st">`</span><span class="sc">~</span>Region, <span class="at">data =</span> happy_df, </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10</span>),</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nlevels</span>(happy_df<span class="sc">$</span>Region),</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Happiness scores across regions"</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">#dev.off</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="8" type="1">
 <li>T-tests</li>
 </ol>
-<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="19-Stats_solutions.html#cb195-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Subset the data frames to get vectors of our regions of interest</span></span>
-<span id="cb195-2"><a href="19-Stats_solutions.html#cb195-2" aria-hidden="true" tabindex="-1"></a>WE_happiness <span class="ot">&lt;-</span> happy_df[happy_df<span class="sc">$</span>Region <span class="sc">==</span> <span class="st">&quot;W_Europe&quot;</span>,<span class="st">&quot;Happiness Score&quot;</span>]</span>
-<span id="cb195-3"><a href="19-Stats_solutions.html#cb195-3" aria-hidden="true" tabindex="-1"></a>NA_happiness <span class="ot">&lt;-</span> happy_df[happy_df<span class="sc">$</span>Region <span class="sc">==</span> <span class="st">&quot;N_America&quot;</span>,<span class="st">&quot;Happiness Score&quot;</span>] </span>
-<span id="cb195-4"><a href="19-Stats_solutions.html#cb195-4" aria-hidden="true" tabindex="-1"></a>SA_happiness <span class="ot">&lt;-</span> happy_df[happy_df<span class="sc">$</span>Region <span class="sc">==</span> <span class="st">&quot;S_Asia&quot;</span>,<span class="st">&quot;Happiness Score&quot;</span>] </span>
-<span id="cb195-5"><a href="19-Stats_solutions.html#cb195-5" aria-hidden="true" tabindex="-1"></a>SEA_happiness <span class="ot">&lt;-</span> happy_df[happy_df<span class="sc">$</span>Region <span class="sc">==</span> <span class="st">&quot;SE_Asia&quot;</span>,<span class="st">&quot;Happiness Score&quot;</span>]</span>
-<span id="cb195-6"><a href="19-Stats_solutions.html#cb195-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Carry out t-tests</span></span>
-<span id="cb195-7"><a href="19-Stats_solutions.html#cb195-7" aria-hidden="true" tabindex="-1"></a>WE_NA_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(WE_happiness, NA_happiness)</span>
-<span id="cb195-8"><a href="19-Stats_solutions.html#cb195-8" aria-hidden="true" tabindex="-1"></a>WE_SA_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(WE_happiness, SA_happiness)</span>
-<span id="cb195-9"><a href="19-Stats_solutions.html#cb195-9" aria-hidden="true" tabindex="-1"></a>SA_SEA_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(SA_happiness, SEA_happiness)</span>
-<span id="cb195-10"><a href="19-Stats_solutions.html#cb195-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Extract p values into a new vector with element names</span></span>
-<span id="cb195-11"><a href="19-Stats_solutions.html#cb195-11" aria-hidden="true" tabindex="-1"></a>region_happiness_pvalues <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">WE_NA =</span> WE_NA_ttest<span class="sc">$</span>p.value,</span>
-<span id="cb195-12"><a href="19-Stats_solutions.html#cb195-12" aria-hidden="true" tabindex="-1"></a>                              <span class="at">WE_SA =</span> WE_SA_ttest<span class="sc">$</span>p.value,</span>
-<span id="cb195-13"><a href="19-Stats_solutions.html#cb195-13" aria-hidden="true" tabindex="-1"></a>                              <span class="at">SA_SEA =</span> SA_SEA_ttest<span class="sc">$</span>p.value)</span>
-<span id="cb195-14"><a href="19-Stats_solutions.html#cb195-14" aria-hidden="true" tabindex="-1"></a><span class="co">#Logical to determine if the p-value is less than 0.05</span></span>
-<span id="cb195-15"><a href="19-Stats_solutions.html#cb195-15" aria-hidden="true" tabindex="-1"></a><span class="co">#I.e. the means are significantly different</span></span>
-<span id="cb195-16"><a href="19-Stats_solutions.html#cb195-16" aria-hidden="true" tabindex="-1"></a>region_happiness_pvalues <span class="sc">&lt;</span> <span class="fl">0.05</span></span></code></pre></div>
-<pre><code>##  WE_NA  WE_SA SA_SEA 
-##  FALSE   TRUE  FALSE</code></pre>
-
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Subset the data frames to get vectors of our regions of interest</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>WE_happiness <span class="ot">&lt;-</span> happy_df[happy_df<span class="sc">$</span>Region <span class="sc">==</span> <span class="st">"W_Europe"</span>,<span class="st">"Happiness Score"</span>]</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>NA_happiness <span class="ot">&lt;-</span> happy_df[happy_df<span class="sc">$</span>Region <span class="sc">==</span> <span class="st">"N_America"</span>,<span class="st">"Happiness Score"</span>] </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>SA_happiness <span class="ot">&lt;-</span> happy_df[happy_df<span class="sc">$</span>Region <span class="sc">==</span> <span class="st">"S_Asia"</span>,<span class="st">"Happiness Score"</span>] </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>SEA_happiness <span class="ot">&lt;-</span> happy_df[happy_df<span class="sc">$</span>Region <span class="sc">==</span> <span class="st">"SE_Asia"</span>,<span class="st">"Happiness Score"</span>]</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Carry out t-tests</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>WE_NA_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(WE_happiness, NA_happiness)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>WE_SA_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(WE_happiness, SA_happiness)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>SA_SEA_ttest <span class="ot">&lt;-</span> <span class="fu">t.test</span>(SA_happiness, SEA_happiness)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Extract p values into a new vector with element names</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>region_happiness_pvalues <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">WE_NA =</span> WE_NA_ttest<span class="sc">$</span>p.value,</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>                              <span class="at">WE_SA =</span> WE_SA_ttest<span class="sc">$</span>p.value,</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>                              <span class="at">SA_SEA =</span> SA_SEA_ttest<span class="sc">$</span>p.value)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co">#Logical to determine if the p-value is less than 0.05</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">#I.e. the means are significantly different</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>region_happiness_pvalues <span class="sc">&lt;</span> <span class="fl">0.05</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> WE_NA  WE_SA SA_SEA 
+ FALSE   TRUE  FALSE </code></pre>
 </div>
 </div>
-            </section>
 
-          </div>
-        </div>
-      </div>
-<a href="18-Stats_exercises.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="20-Basic_programming.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation column-page-right">
+  <div class="nav-page nav-page-previous">
+      <a href="./18-Stats_exercises.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Stats exercises</span></span>
+      </a>          
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": null,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": null,
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
-});
-});
-</script>
+  <div class="nav-page nav-page-next">
+      <a href="./20-Basic_programming.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Basic programming</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-</body>
 
-</html>
+
+</body></html>
