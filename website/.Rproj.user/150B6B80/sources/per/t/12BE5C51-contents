@@ -1,0 +1,224 @@
+# ASV taxonomic assignment {#taxa}
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/classification.png", auto_pdf = TRUE)
+``` 
+
+Now that we have defined the sequence variants in the samples, we can assign taxonomic labels to them. Here, we use the `sk-learn` classifier to assign taxonomy based on the Greengenes database (DeSantis _et al_., 2006). 
+
+Greengenes is a database containing quality-controlled microbial sequence data. Greengenes 16S rDNA sequences come from a large number of species which have been formatted for use in QIIME, by clustering the sequences at a given level of similarity (here, 99%). As for OTU-picking, the more stringent the similarity threshold, the more fine-grained the taxonomic designation (i.e. there are more Greengenes OTUs defined to the species level at 99% than at 97% similarity). The classifier maps the variant sequences to OTU representative sequences from the Greengenes set.
+
+## Import taxonomy database
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/import.png", auto_pdf = TRUE)
+``` 
+
+First, we need to import the Greengenes data into QIIME2 artifacts. These steps will create two objects containing the sequences and their taxonomy, respectively.
+
+Import the Sequence data.
+```{bash, eval=FALSE}
+qiime tools import --input-path \
+/pub39/tea/nsc006/NEOF/16s_workshop/chapter_10/gg_13_8_otus/rep_set/99_otus.fasta \
+--output-path gg-13-8.99_otus.qza \
+--type 'FeatureData[Sequence]'
+```
+
+Import the Taxonomy data.
+```{bash, eval=FALSE}
+qiime tools import --input-path \
+/pub39/tea/nsc006/NEOF/16s_workshop/chapter_10/gg_13_8_otus/taxonomy/99_otu_taxonomy.txt \
+--output-path gg-13-8.99.taxa.qza \
+--input-format HeaderlessTSVTaxonomyFormat \
+--type 'FeatureData[Taxonomy]'
+```
+
+#### Parameters {-}
+```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
+knitr::include_graphics(path = "figures/parameter_green.png", auto_pdf = TRUE)
+``` 
+
+- __`--input-path`__: Input fasta sequence/taxonomy file.
+- __`--output-path`__: Output sequence/taxonomy artifact file.
+- __`--type`___: The type of data that is being imported.
+  - `FeatureData[Sequence]`: Sequence data for features (in this case OTUs).
+  - `FeatureData[Taxonomy]`: Taxonomy infomration for features (in this case OTUs).
+- __`--input-format`__: The format of the input. 
+  - This is only needed for the taxonomy import with the option of `HeaderlessTSVTaxonomyFormat` that indicates the input file is a headerless tab separated value (TSV) file with taxonomy information.
+
+[QIIME2 docs on importing data](https://docs.qiime2.org/2022.2/tutorials/importing/)
+
+[QIIME2 docs on classifiers](https://docs.qiime2.org/2022.2/data-resources/#taxonomy-classifiers-for-use-with-q2-feature-classifier)
+
+## Extract 16s region of interest
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/scissor_cut.png", auto_pdf = TRUE)
+``` 
+
+A classifier training step is required to reach optimum assignment performance.
+
+Prior to training we will extract our 16S region of interest. This is carried out by using the amplicon primer sequences. These are the same we used for [removing the PCR primer](#pcrtrim).
+
+__Note__: Do not run the below command for this tutorial, see `cp` command further down.
+
+```{bash, eval=FALSE}
+qiime feature-classifier extract-reads \
+--i-sequences gg-13-8.99_otus.qza \
+--p-f-primer NNNNNGTGCCAGCMGCCGCGGTAA \
+--p-r-primer GGACTACHVGGGTWTCTAAT \
+--p-trunc-len 250 \
+--o-reads gg-13-8.99.ref.seqs.qza
+```
+
+#### Parameters{-}
+```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
+knitr::include_graphics(path = "figures/parameter_red.png", auto_pdf = TRUE)
+```
+
+- __`--i-sequences`__: Input artifact containing the feature sequence data.
+- __`--p-front-f`__: Sequence for the forward primer (`f`). The sequence is ligated to the 5 prime end (`front`), this is the normal. 
+- __`--p-front-r`__: Sequence for the reverse primer (`r``). The sequence is ligated to the 5 prime end (`front`), this is the normal.
+- __`--p-trunc-len`__: This cuts the forward and left reads we are creating to the specified truncation length.
+  - We are using `250` as this was the initial length of our Illumina reads.
+- `--o-reads`: The output read artifact containing our extracted 16S region as paired reads. This is needed for classifier training.
+
+[QIIME2 docs on `qiime feature-classifier extract-reads`](https://docs.qiime2.org/2022.2/plugins/available/feature-classifier/extract-reads/)
+
+#### Copy premade results {-}
+
+Given that the above command may require more than 14h to finish, we won’t be able to run it on this occasion. Copy over the premade results with the following command:
+
+```{bash, eval=FALSE}
+cp /pub39/tea/nsc006/NEOF/16s_workshop/chapter_10/gg-13-8.99.ref.seqs.qza .
+```
+
+## Classifier training
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/train.png", auto_pdf = TRUE)
+``` 
+
+Now we train the classifier on this set of extracted reads (approx. 25 mins). 
+
+This uses Naive Bayes which is a very complicated algorithm. Thankfully we don't need to know how it works so we won't explain it here..
+
+```{bash, eval=FALSE}
+qiime feature-classifier fit-classifier-naive-bayes \
+--i-reference-reads gg-13-8.99.ref.seqs.qza \
+--i-reference-taxonomy gg-13-8.99.taxa.qza \
+--o-classifier classifier.trained.qza
+```
+
+#### Parameters{-}
+```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
+knitr::include_graphics(path = "figures/parameter_green.png", auto_pdf = TRUE)
+```
+
+- __`--i-reference-reads`__: Input artifact containing the extracted 16S region as paired reads.
+- __`--i-reference-taxonomy`__: Input artifact containing the taxonomy information of the features.
+- __`--o-classifier`__: Output artifact containing the trained classifier. This will be used for feature (ASV) taxonomy classification.
+
+[QIIME2 docs on `qiime feature-classifier fit-classifier-naive-bayes`](https://docs.qiime2.org/2022.2/plugins/available/feature-classifier/fit-classifier-naive-bayes/)
+
+## Taxonomy assignment
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/classification.png", auto_pdf = TRUE)
+``` 
+
+With our trained classifier we can assign taxonomic assignments to the ASV representative sequences.
+
+```{bash, eval=FALSE}
+qiime feature-classifier classify-sklearn \
+--i-classifier classifier.trained.qza \
+--p-confidence 0.7 \
+--i-reads rep-seqs-dada2.qza \
+--o-classification taxonomy.sklearn.qza
+```
+
+#### Parameters{-}
+```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
+knitr::include_graphics(path = "figures/parameter_orange.png", auto_pdf = TRUE)
+```
+
+- __`--i-classifier`__: Input artifact containing the trained classifier.
+- __`--p-confidence`__: Confidence threshold for limiting taxonomic depth.
+  - We are using 0.7 as it is the default.
+  - Each taxonomic level must reach a confidence level of <= 0.7 to be classified.
+  - This could cause an ASV to be classified to Genus level but not species level as the species level assignment had a confidence of <0.7 whilst the confidence of the genus and higher assignments was >=0.7.
+- __`--i-reads`__: Input artifact containing the representative sequences of the features (ASVs) to be classified.
+- __`--o-classification`__: Output artifact containing the taxonomic assignments of the features (ASVs).
+
+[QIIME2 docs on `qiime feature-classifier classify-sklearn`](https://docs.qiime2.org/2022.2/plugins/available/feature-classifier/classify-sklearn/)
+
+## Taxonomy bar chart production
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/bar_charts.png", auto_pdf = TRUE)
+``` 
+
+Create a taxonomy-abundance bar-chart visualisation artifact:
+
+```{bash, eval=FALSE}
+qiime taxa barplot \
+--i-table table-dada2.qza \
+--i-taxonomy taxonomy.sklearn.qza \
+--m-metadata-file metadata.file.txt \
+--o-visualization taxa-bar-plots.dada2.qzv
+```
+
+#### Parameters{-}
+```{r, fig.align = 'center',out.width= '10%', echo=FALSE }
+knitr::include_graphics(path = "figures/parameter_blue.png", auto_pdf = TRUE)
+```
+
+- __`--i-table`__: Input artifact containing the ASV abundance table.
+- __`--i-taxonomy`__: Input artifact containing the taxomomic classifications of the ASVs.
+- __`--m-metadata-file`__: [Metadata file](#metadata.file.txt) for our samples.
+- __`--o-visualization`__: Output visualisation file containing an interactive taxonomy-abundance bar-chart.
+
+The visualisation consists of an interactive taxonomy bar chart. You can specify the taxonomic level to look at, as well as a few sorting and colouring options. Experiment with it and then continue to the MCQ section.
+
+[QIIME2 docs on `qiime taxa barplot`](https://docs.qiime2.org/2022.2/plugins/available/taxa/barplot/)
+
+## Taxonomy: MCQs
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_blue.png", auto_pdf = TRUE)
+```
+
+Attempt the below MCQs.
+
+```{r, echo = FALSE}
+opts_p <- c("__Corynebacteriaceae__", answer="__Moraxellaceae__", "__Pseudomonadaceae__")
+```
+1. At taxonomic level 5, what is the taxon with the highest relative abundance across all the samples? (Note: taxa are ordered form most to least abundant in the legend) `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__Corynebacteriaceae__", "__Moraxellaceae__", "__Pseudomonadaceae__")
+```
+2. At taxonomic level 5, what is the most abundant taxon for sample 1TE?  `r longmcq(opts_p)`
+
+__Note__: The "Sort Samples By" drop down will be useful for the following questions. Additionally, switching the "Ascending" (low to high, left sample is highest relative abundance) drop down to "Descending" may be useful.
+
+```{r, echo = FALSE}
+opts_p <- c("__1K2E__", answer="__1TM__", "__3TM__")
+```
+3. Which sample has the highest relative abundance of the class Actinobacteria (Taxonomic level 3)? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__1K2E__", "__1TM__", "__3TM__")
+```
+4. Which sample has the lowest relative abundance of the genus Corynebacterium (Taxonomic level 6)? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__1K2E__", "__1TM__", answer="__3TM__")
+```
+5. Which sample has the third highest relative abundance of the phylum Bacteroidetes (Taxonomic level 2)? `r longmcq(opts_p)`
+
+## Taxonomy: summary
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/sum_blue.png", auto_pdf = TRUE)
+```
+
+We have trimmed and denoised our data, producing ASVs. This has been followed by assigning taxonomic classifications to the ASVs. 
+
+In your future analysis if you have sequenced any samples with known composition (e.g. mock community), now is the time to see if they behave as expected. Do they contain what you expect? You may want to change some steps and/or settings of what you have done so far if the composition does not match what you expect. For example, change the de-noising tool or apply more quality filters to further improve the quality of the sequence under examination.
+
+We are close to carrying out some biodiversity analysis. Before this we will produce a phylogenetic tree in the next chapter.
+
+[QIIME2 documents on training feature classifiers](https://docs.qiime2.org/2022.2/tutorials/feature-classifier/)
