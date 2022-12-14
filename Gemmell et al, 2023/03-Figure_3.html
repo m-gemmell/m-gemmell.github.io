@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Figure 3 | ANCOM project</title>
+  <meta name="description" content="Book to contain visualisation for the “ANCOM” project" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Figure 3 | ANCOM project" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Book to contain visualisation for the “ANCOM” project" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Figure 3 | ANCOM project" />
+  
+  <meta name="twitter:description" content="Book to contain visualisation for the “ANCOM” project" />
+  
+
+<meta name="author" content="Matthew R. Gemmell" />
+
+
+<meta name="date" content="2022-10-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="02-Phyloseqize.html"/>
+<link rel="next" href="04-Figure_4_biomarker.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.24/datatables.js"></script>
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a>ANCOM Project</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="01-Intro.html"><a href="01-Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="part"><span><b>16S data</b></span></li>
+<li class="chapter" data-level="2" data-path="02-Phyloseqize.html"><a href="02-Phyloseqize.html"><i class="fa fa-check"></i><b>2</b> Importing and preocessing data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="02-Phyloseqize.html"><a href="02-Phyloseqize.html#qiime2r-import"><i class="fa fa-check"></i><b>2.1</b> qiime2R import</a></li>
+<li class="chapter" data-level="2.2" data-path="02-Phyloseqize.html"><a href="02-Phyloseqize.html#preprocess-data"><i class="fa fa-check"></i><b>2.2</b> Preprocess data</a></li>
+<li class="chapter" data-level="2.3" data-path="02-Phyloseqize.html"><a href="02-Phyloseqize.html#lipid-data"><i class="fa fa-check"></i><b>2.3</b> Lipid data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="03-Figure_3.html"><a href="03-Figure_3.html"><i class="fa fa-check"></i><b>3</b> Figure 3</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="03-Figure_3.html"><a href="03-Figure_3.html#libraries"><i class="fa fa-check"></i><b>3.1</b> Libraries</a></li>
+<li class="chapter" data-level="3.2" data-path="03-Figure_3.html"><a href="03-Figure_3.html#figure-3a"><i class="fa fa-check"></i><b>3.2</b> Figure 3A</a></li>
+<li class="chapter" data-level="3.3" data-path="03-Figure_3.html"><a href="03-Figure_3.html#figure-3b"><i class="fa fa-check"></i><b>3.3</b> Figure 3B</a></li>
+<li class="chapter" data-level="3.4" data-path="03-Figure_3.html"><a href="03-Figure_3.html#figure-3c"><i class="fa fa-check"></i><b>3.4</b> Figure 3C</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="04-Figure_4_biomarker.html"><a href="04-Figure_4_biomarker.html"><i class="fa fa-check"></i><b>4</b> Figure 4</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="04-Figure_4_biomarker.html"><a href="04-Figure_4_biomarker.html#libraries-1"><i class="fa fa-check"></i><b>4.1</b> Libraries</a></li>
+<li class="chapter" data-level="4.2" data-path="04-Figure_4_biomarker.html"><a href="04-Figure_4_biomarker.html#genus"><i class="fa fa-check"></i><b>4.2</b> Genus</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="04-Figure_4_biomarker.html"><a href="04-Figure_4_biomarker.html#preprocess-table-and-convert-to-genus-table"><i class="fa fa-check"></i><b>4.2.1</b> Preprocess table and convert to genus table</a></li>
+<li class="chapter" data-level="4.2.2" data-path="04-Figure_4_biomarker.html"><a href="04-Figure_4_biomarker.html#maaslin2-on-genera"><i class="fa fa-check"></i><b>4.2.2</b> MaAsLin2 on genera</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="05-Figure_5.html"><a href="05-Figure_5.html"><i class="fa fa-check"></i><b>5</b> Figure 5</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="05-Figure_5.html"><a href="05-Figure_5.html#preprocess-data-1"><i class="fa fa-check"></i><b>5.1</b> Preprocess data</a></li>
+<li class="chapter" data-level="5.2" data-path="05-Figure_5.html"><a href="05-Figure_5.html#colour-blindy-friendly-palette"><i class="fa fa-check"></i><b>5.2</b> Colour blindy friendly palette</a></li>
+<li class="chapter" data-level="5.3" data-path="05-Figure_5.html"><a href="05-Figure_5.html#a-heatmap"><i class="fa fa-check"></i><b>5.3</b> A Heatmap</a></li>
+<li class="chapter" data-level="5.4" data-path="05-Figure_5.html"><a href="05-Figure_5.html#b-and-c-beta-diversity"><i class="fa fa-check"></i><b>5.4</b> B and C Beta diversity</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="06-Figure_6.html"><a href="06-Figure_6.html"><i class="fa fa-check"></i><b>6</b> Figure 6</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="06-Figure_6.html"><a href="06-Figure_6.html#libraries-2"><i class="fa fa-check"></i><b>6.1</b> Libraries</a></li>
+<li class="chapter" data-level="6.2" data-path="06-Figure_6.html"><a href="06-Figure_6.html#preprocess-genus-table"><i class="fa fa-check"></i><b>6.2</b> Preprocess genus table</a></li>
+<li class="chapter" data-level="6.3" data-path="06-Figure_6.html"><a href="06-Figure_6.html#all-buffers"><i class="fa fa-check"></i><b>6.3</b> All buffers</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="06-Figure_6.html"><a href="06-Figure_6.html#correlation"><i class="fa fa-check"></i><b>6.3.1</b> Correlation</a></li>
+<li class="chapter" data-level="6.3.2" data-path="06-Figure_6.html"><a href="06-Figure_6.html#heatmap"><i class="fa fa-check"></i><b>6.3.2</b> Heatmap</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="07-Supp_fig_1.html"><a href="07-Supp_fig_1.html"><i class="fa fa-check"></i><b>7</b> Supp figure 1</a></li>
+<li class="chapter" data-level="8" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html"><i class="fa fa-check"></i><b>8</b> Supp figure 2</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#libraries-3"><i class="fa fa-check"></i><b>8.1</b> Libraries</a></li>
+<li class="chapter" data-level="8.2" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#weighted-unifrac-plots-with-relative-abundance"><i class="fa fa-check"></i><b>8.2</b> Weighted unifrac plots with relative abundance</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-a-buffer-used-faceted-by-patient"><i class="fa fa-check"></i><b>8.2.1</b> Figure A: Buffer used faceted by patient</a></li>
+<li class="chapter" data-level="8.2.2" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-b-storage-conditions"><i class="fa fa-check"></i><b>8.2.2</b> Figure B: Storage conditions</a></li>
+<li class="chapter" data-level="8.2.3" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-c-storage-temperature"><i class="fa fa-check"></i><b>8.2.3</b> Figure C: Storage temperature</a></li>
+<li class="chapter" data-level="8.2.4" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-d-buffer-and-storage-condition-faceted-by-patient"><i class="fa fa-check"></i><b>8.2.4</b> Figure D: Buffer and storage condition faceted by patient</a></li>
+<li class="chapter" data-level="8.2.5" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#statistical-test"><i class="fa fa-check"></i><b>8.2.5</b> Statistical test</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#transform-samples-to-even-sampling-depth"><i class="fa fa-check"></i><b>8.3</b> Transform samples to even sampling depth</a></li>
+<li class="chapter" data-level="8.4" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#unweighted-unifrac-plots"><i class="fa fa-check"></i><b>8.4</b> Unweighted unifrac plots</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-a-buffer-used-faceted-by-patient-1"><i class="fa fa-check"></i><b>8.4.1</b> Figure A: Buffer used faceted by patient</a></li>
+<li class="chapter" data-level="8.4.2" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-b-storage-conditions-1"><i class="fa fa-check"></i><b>8.4.2</b> Figure B: Storage conditions</a></li>
+<li class="chapter" data-level="8.4.3" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-c-storage-temperature-1"><i class="fa fa-check"></i><b>8.4.3</b> Figure C: Storage temperature</a></li>
+<li class="chapter" data-level="8.4.4" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-d-buffer-and-storage-condition-faceted-by-patient-1"><i class="fa fa-check"></i><b>8.4.4</b> Figure D: Buffer and storage condition faceted by patient</a></li>
+<li class="chapter" data-level="8.4.5" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#statistical-test-1"><i class="fa fa-check"></i><b>8.4.5</b> Statistical test</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html"><i class="fa fa-check"></i><b>9</b> Supp figure 3</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#libraries-4"><i class="fa fa-check"></i><b>9.1</b> Libraries</a></li>
+<li class="chapter" data-level="9.2" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#alpha-diveristy-plots"><i class="fa fa-check"></i><b>9.2</b> Alpha diveristy plots</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#storage-conditions"><i class="fa fa-check"></i><b>9.2.1</b> Storage conditions</a></li>
+<li class="chapter" data-level="9.2.2" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#patient-number"><i class="fa fa-check"></i><b>9.2.2</b> Patient number</a></li>
+<li class="chapter" data-level="9.2.3" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#storage-temp"><i class="fa fa-check"></i><b>9.2.3</b> Storage temp</a></li>
+<li class="chapter" data-level="9.2.4" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#buffer-and-storage"><i class="fa fa-check"></i><b>9.2.4</b> Buffer and storage</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html"><i class="fa fa-check"></i><b>10</b> Supp figure 4</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#barchart-of-genera-biomarkers"><i class="fa fa-check"></i><b>10.1</b> Barchart of Genera biomarkers</a></li>
+<li class="chapter" data-level="10.2" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#maaslin2-on-genera-day-1-vs-day-3"><i class="fa fa-check"></i><b>10.2</b> MaAsLin2 on genera Day 1 vs Day 3</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11-Supp_fig_5.html"><a href="11-Supp_fig_5.html"><i class="fa fa-check"></i><b>11</b> Supp figure 5</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="11-Supp_fig_5.html"><a href="11-Supp_fig_5.html#intra-patient-variability"><i class="fa fa-check"></i><b>11.1</b> Intra patient variability</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ANCOM project</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="figure-3" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Figure 3<a href="03-Figure_3.html#figure-3" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="libraries" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Libraries<a href="03-Figure_3.html#libraries" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="03-Figure_3.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;phyloseq&quot;</span>)</span>
+<span id="cb4-2"><a href="03-Figure_3.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;microbiome&quot;</span>)</span>
+<span id="cb4-3"><a href="03-Figure_3.html#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb4-4"><a href="03-Figure_3.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;plotly&quot;</span>)</span>
+<span id="cb4-5"><a href="03-Figure_3.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb4-6"><a href="03-Figure_3.html#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggforce&quot;</span>)</span>
+<span id="cb4-7"><a href="03-Figure_3.html#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggh4x&quot;</span>)</span></code></pre></div>
+</div>
+<div id="figure-3a" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Figure 3A<a href="03-Figure_3.html#figure-3a" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="03-Figure_3.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Load in data</span></span>
+<span id="cb5-2"><a href="03-Figure_3.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;./data/physeq_relabund&quot;</span>)</span>
+<span id="cb5-3"><a href="03-Figure_3.html#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="03-Figure_3.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Produce Unweighted unifrac oridnation</span></span>
+<span id="cb5-5"><a href="03-Figure_3.html#cb5-5" aria-hidden="true" tabindex="-1"></a>ord <span class="ot">&lt;-</span> <span class="fu">ordinate</span>(physeq, <span class="st">&quot;PCoA&quot;</span>, <span class="st">&quot;wunifrac&quot;</span>)</span>
+<span id="cb5-6"><a href="03-Figure_3.html#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="03-Figure_3.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Create plot</span></span>
+<span id="cb5-8"><a href="03-Figure_3.html#cb5-8" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span>  <span class="fu">plot_ordination</span>(physeq, ord, </span>
+<span id="cb5-9"><a href="03-Figure_3.html#cb5-9" aria-hidden="true" tabindex="-1"></a>                      <span class="at">color=</span><span class="st">&quot;Patientnumber&quot;</span>)</span>
+<span id="cb5-10"><a href="03-Figure_3.html#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="03-Figure_3.html#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Save plot</span></span>
+<span id="cb5-12"><a href="03-Figure_3.html#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p,</span>
+<span id="cb5-13"><a href="03-Figure_3.html#cb5-13" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;./figures/weighted_unifrac_patient.png&quot;</span>,</span>
+<span id="cb5-14"><a href="03-Figure_3.html#cb5-14" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">80</span>, <span class="at">width =</span> <span class="dv">100</span>, </span>
+<span id="cb5-15"><a href="03-Figure_3.html#cb5-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">dpi =</span> <span class="dv">300</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="03-Figure_3.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Load in data</span></span>
+<span id="cb6-2"><a href="03-Figure_3.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;./data/preprocess_physeq&quot;</span>)</span>
+<span id="cb6-3"><a href="03-Figure_3.html#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="03-Figure_3.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Transform samples to even sampling depth</span></span>
+<span id="cb6-5"><a href="03-Figure_3.html#cb6-5" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">&lt;-</span> <span class="fu">transform_sample_counts</span>(physeq,</span>
+<span id="cb6-6"><a href="03-Figure_3.html#cb6-6" aria-hidden="true" tabindex="-1"></a>                                  <span class="cf">function</span>(x) <span class="dv">30000</span> <span class="sc">*</span> x<span class="sc">/</span><span class="fu">sum</span>(x))</span>
+<span id="cb6-7"><a href="03-Figure_3.html#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Save object</span></span>
+<span id="cb6-8"><a href="03-Figure_3.html#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(physeq, <span class="at">file =</span> <span class="st">&quot;./data/preproces_physeq_even_depth30k&quot;</span>)</span>
+<span id="cb6-9"><a href="03-Figure_3.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">#load in phyloseq object</span></span>
+<span id="cb6-10"><a href="03-Figure_3.html#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;./data/preproces_physeq_even_depth30k&quot;</span>)</span>
+<span id="cb6-11"><a href="03-Figure_3.html#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="03-Figure_3.html#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">#Produce Unweighted unifrac oridnation</span></span>
+<span id="cb6-13"><a href="03-Figure_3.html#cb6-13" aria-hidden="true" tabindex="-1"></a>ord <span class="ot">&lt;-</span> <span class="fu">ordinate</span>(physeq, <span class="st">&quot;PCoA&quot;</span>, <span class="st">&quot;unifrac&quot;</span>)</span>
+<span id="cb6-14"><a href="03-Figure_3.html#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="03-Figure_3.html#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co">#Create plot</span></span>
+<span id="cb6-16"><a href="03-Figure_3.html#cb6-16" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span>  <span class="fu">plot_ordination</span>(physeq, ord, </span>
+<span id="cb6-17"><a href="03-Figure_3.html#cb6-17" aria-hidden="true" tabindex="-1"></a>                      <span class="at">color=</span><span class="st">&quot;Patientnumber&quot;</span>)</span>
+<span id="cb6-18"><a href="03-Figure_3.html#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="03-Figure_3.html#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co">#Save plot</span></span>
+<span id="cb6-20"><a href="03-Figure_3.html#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p,</span>
+<span id="cb6-21"><a href="03-Figure_3.html#cb6-21" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;./figures/unweighted_unifrac_patient.png&quot;</span>,</span>
+<span id="cb6-22"><a href="03-Figure_3.html#cb6-22" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">80</span>, <span class="at">width =</span> <span class="dv">100</span>, </span>
+<span id="cb6-23"><a href="03-Figure_3.html#cb6-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">dpi =</span> <span class="dv">300</span>)</span></code></pre></div>
+<p><img src="figures/unweighted_unifrac_patient.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="figure-3b" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Figure 3B<a href="03-Figure_3.html#figure-3b" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="03-Figure_3.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Load in relative abundance phyloseq</span></span>
+<span id="cb7-2"><a href="03-Figure_3.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;./data/physeq_relabund&quot;</span>)</span>
+<span id="cb7-3"><a href="03-Figure_3.html#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="03-Figure_3.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Aggregate taxa to order</span></span>
+<span id="cb7-5"><a href="03-Figure_3.html#cb7-5" aria-hidden="true" tabindex="-1"></a>physeq_order_relabund <span class="ot">&lt;-</span> <span class="fu">aggregate_taxa</span>(physeq_relabund, <span class="st">&#39;Order&#39;</span>)</span>
+<span id="cb7-6"><a href="03-Figure_3.html#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove Appearing square brackets again</span></span>
+<span id="cb7-7"><a href="03-Figure_3.html#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq_order_relabund)[,] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">[&quot;</span> , <span class="at">replacement =</span> <span class="st">&quot;&quot;</span>, <span class="fu">tax_table</span>(physeq_order_relabund)[,])</span>
+<span id="cb7-8"><a href="03-Figure_3.html#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq_order_relabund)[,] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">]&quot;</span> , <span class="at">replacement =</span> <span class="st">&quot;&quot;</span>, <span class="fu">tax_table</span>(physeq_order_relabund)[,])</span>
+<span id="cb7-9"><a href="03-Figure_3.html#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(<span class="fu">tax_table</span>(physeq_order_relabund)) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">[&quot;</span> , <span class="at">replacement =</span> <span class="st">&quot;&quot;</span>, <span class="fu">row.names</span>(<span class="fu">tax_table</span>(physeq_order_relabund)))</span>
+<span id="cb7-10"><a href="03-Figure_3.html#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(<span class="fu">tax_table</span>(physeq_order_relabund)) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">]&quot;</span> , <span class="at">replacement =</span> <span class="st">&quot;&quot;</span>, <span class="fu">row.names</span>(<span class="fu">tax_table</span>(physeq_order_relabund)))</span>
+<span id="cb7-11"><a href="03-Figure_3.html#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="03-Figure_3.html#cb7-12" aria-hidden="true" tabindex="-1"></a>order_taxa_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">tax_table</span>(physeq_order_relabund))</span>
+<span id="cb7-13"><a href="03-Figure_3.html#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="03-Figure_3.html#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co">#Produce plot</span></span>
+<span id="cb7-15"><a href="03-Figure_3.html#cb7-15" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">plot_bar</span>(physeq_order_relabund, <span class="at">x =</span> <span class="st">&quot;Sample_name&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;Order&quot;</span>)<span class="sc">+</span></span>
+<span id="cb7-16"><a href="03-Figure_3.html#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">color=</span>Order, <span class="at">fill=</span>Order), <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;stack&quot;</span>) <span class="sc">+</span></span>
+<span id="cb7-17"><a href="03-Figure_3.html#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_nested_wrap</span>(<span class="sc">~</span>Patientnumber<span class="sc">+</span>Bufferused, <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">scales =</span> <span class="st">&quot;free_x&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb7-18"><a href="03-Figure_3.html#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>, </span>
+<span id="cb7-19"><a href="03-Figure_3.html#cb7-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(</span>
+<span id="cb7-20"><a href="03-Figure_3.html#cb7-20" aria-hidden="true" tabindex="-1"></a>          <span class="at">angle =</span> <span class="sc">-</span><span class="dv">45</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">hjust=</span><span class="fl">0.1</span>),</span>
+<span id="cb7-21"><a href="03-Figure_3.html#cb7-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">0</span>,<span class="dv">0</span>, <span class="st">&quot;mm&quot;</span>),</span>
+<span id="cb7-22"><a href="03-Figure_3.html#cb7-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.spacing.x=</span><span class="fu">unit</span>(<span class="fl">0.2</span>, <span class="st">&quot;lines&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb7-23"><a href="03-Figure_3.html#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span> <span class="st">&quot;Sample name&quot;</span>, <span class="at">y =</span> <span class="st">&quot;relative abundance&quot;</span>) <span class="sc">+</span></span>
+<span id="cb7-24"><a href="03-Figure_3.html#cb7-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill=</span><span class="fu">guide_legend</span>(<span class="at">ncol=</span><span class="dv">8</span>))</span>
+<span id="cb7-25"><a href="03-Figure_3.html#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="03-Figure_3.html#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="co">#Save plot</span></span>
+<span id="cb7-27"><a href="03-Figure_3.html#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p,<span class="at">filename =</span> <span class="st">&quot;./figures/order_relabund_facet_buffer.png&quot;</span>, </span>
+<span id="cb7-28"><a href="03-Figure_3.html#cb7-28" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">200</span>, <span class="at">width =</span> <span class="dv">300</span>, </span>
+<span id="cb7-29"><a href="03-Figure_3.html#cb7-29" aria-hidden="true" tabindex="-1"></a>       <span class="at">dpi=</span><span class="dv">300</span>)</span></code></pre></div>
+<p><img src="figures/order_relabund_facet_buffer.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="figure-3c" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Figure 3C<a href="03-Figure_3.html#figure-3c" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="03-Figure_3.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#load in phyloseq object</span></span>
+<span id="cb8-2"><a href="03-Figure_3.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;./data/preprocess_physeq&quot;</span>)</span>
+<span id="cb8-3"><a href="03-Figure_3.html#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="03-Figure_3.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Produce plot</span></span>
+<span id="cb8-5"><a href="03-Figure_3.html#cb8-5" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">plot_richness</span>(physeq, <span class="at">x =</span> <span class="st">&quot;Bufferused&quot;</span>, </span>
+<span id="cb8-6"><a href="03-Figure_3.html#cb8-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">measures =</span> <span class="fu">c</span>(<span class="st">&quot;Observed&quot;</span>,<span class="st">&quot;Chao1&quot;</span>,<span class="st">&quot;Shannon&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb8-7"><a href="03-Figure_3.html#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span> </span>
+<span id="cb8-8"><a href="03-Figure_3.html#cb8-8" aria-hidden="true" tabindex="-1"></a>  ggforce<span class="sc">::</span><span class="fu">geom_sina</span>(<span class="at">alpha=</span><span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb8-9"><a href="03-Figure_3.html#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>, </span>
+<span id="cb8-10"><a href="03-Figure_3.html#cb8-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(</span>
+<span id="cb8-11"><a href="03-Figure_3.html#cb8-11" aria-hidden="true" tabindex="-1"></a>          <span class="at">angle =</span> <span class="sc">-</span><span class="dv">45</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">hjust=</span><span class="fl">0.1</span>)) <span class="sc">+</span></span>
+<span id="cb8-12"><a href="03-Figure_3.html#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span> <span class="st">&quot;Buffer used&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Measure&quot;</span>)</span>
+<span id="cb8-13"><a href="03-Figure_3.html#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="03-Figure_3.html#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co">#Save plot</span></span>
+<span id="cb8-15"><a href="03-Figure_3.html#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p, </span>
+<span id="cb8-16"><a href="03-Figure_3.html#cb8-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;./figures/alpha_diversity_patient.png&quot;</span>,</span>
+<span id="cb8-17"><a href="03-Figure_3.html#cb8-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">80</span>, <span class="at">width =</span> <span class="dv">200</span>)</span></code></pre></div>
+<p><img src="figures/alpha_diversity_patient.png" width="100%" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="02-Phyloseqize.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="04-Figure_4_biomarker.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
