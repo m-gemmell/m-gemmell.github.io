@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2022-10-21" />
+<meta name="date" content="2022-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -100,7 +100,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -113,7 +113,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -251,113 +251,113 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 10</span> Supp figure 4<a href="10-Supp_fig_4.html#supp-figure-4" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="barchart-of-genera-biomarkers" class="section level2 hasAnchor" number="10.1">
 <h2><span class="header-section-number">10.1</span> Barchart of Genera biomarkers<a href="10-Supp_fig_4.html#barchart-of-genera-biomarkers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="10-Supp_fig_4.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Read in sig table (p-value &lt;0.05)</span></span>
-<span id="cb43-2"><a href="10-Supp_fig_4.html#cb43-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(</span>
-<span id="cb43-3"><a href="10-Supp_fig_4.html#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> <span class="st">&quot;./standard_maaslin2_genus/significant_results.tsv&quot;</span>,</span>
-<span id="cb43-4"><a href="10-Supp_fig_4.html#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">check.names=</span><span class="cn">FALSE</span>)</span>
-<span id="cb43-5"><a href="10-Supp_fig_4.html#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Get all unique genera</span></span>
-<span id="cb43-6"><a href="10-Supp_fig_4.html#cb43-6" aria-hidden="true" tabindex="-1"></a>genera_biomarkers <span class="ot">&lt;-</span> <span class="fu">unique</span>(df<span class="sc">$</span>feature)</span>
-<span id="cb43-7"><a href="10-Supp_fig_4.html#cb43-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-8"><a href="10-Supp_fig_4.html#cb43-8" aria-hidden="true" tabindex="-1"></a><span class="co">#load in phyloseq object</span></span>
-<span id="cb43-9"><a href="10-Supp_fig_4.html#cb43-9" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;./data/preprocess_physeq&quot;</span>)</span>
-<span id="cb43-10"><a href="10-Supp_fig_4.html#cb43-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Clostridium</span></span>
-<span id="cb43-11"><a href="10-Supp_fig_4.html#cb43-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Get logical vector to know which rows </span></span>
-<span id="cb43-12"><a href="10-Supp_fig_4.html#cb43-12" aria-hidden="true" tabindex="-1"></a>clos_subset_vector <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(<span class="fu">replace</span>((<span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Genus&quot;</span>] <span class="sc">==</span> <span class="st">&quot;Clostridium&quot;</span>), </span>
-<span id="cb43-13"><a href="10-Supp_fig_4.html#cb43-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">is.na</span>(<span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Genus&quot;</span>] <span class="sc">==</span> <span class="st">&quot;Clostridium&quot;</span>),</span>
-<span id="cb43-14"><a href="10-Supp_fig_4.html#cb43-14" aria-hidden="true" tabindex="-1"></a>        <span class="cn">FALSE</span>))</span>
-<span id="cb43-15"><a href="10-Supp_fig_4.html#cb43-15" aria-hidden="true" tabindex="-1"></a><span class="co">#Extract taxa names</span></span>
-<span id="cb43-16"><a href="10-Supp_fig_4.html#cb43-16" aria-hidden="true" tabindex="-1"></a>clos_taxa_names <span class="ot">&lt;-</span> <span class="fu">taxa_names</span>(physeq)[clos_subset_vector]</span>
-<span id="cb43-17"><a href="10-Supp_fig_4.html#cb43-17" aria-hidden="true" tabindex="-1"></a><span class="co">#Make new genus names for clositriudm</span></span>
-<span id="cb43-18"><a href="10-Supp_fig_4.html#cb43-18" aria-hidden="true" tabindex="-1"></a>clos_new_genus_name <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="fu">tax_table</span>(physeq)[clos_taxa_names,<span class="st">&quot;Family&quot;</span>], </span>
-<span id="cb43-19"><a href="10-Supp_fig_4.html#cb43-19" aria-hidden="true" tabindex="-1"></a>                             <span class="fu">tax_table</span>(physeq)[clos_taxa_names,<span class="st">&quot;Genus&quot;</span>], </span>
-<span id="cb43-20"><a href="10-Supp_fig_4.html#cb43-20" aria-hidden="true" tabindex="-1"></a>                             <span class="at">sep =</span> <span class="st">&quot;_&quot;</span>)</span>
-<span id="cb43-21"><a href="10-Supp_fig_4.html#cb43-21" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq)[clos_taxa_names,<span class="st">&quot;Genus&quot;</span>] <span class="ot">&lt;-</span> clos_new_genus_name</span>
-<span id="cb43-22"><a href="10-Supp_fig_4.html#cb43-22" aria-hidden="true" tabindex="-1"></a><span class="co">#Ruminococcus</span></span>
-<span id="cb43-23"><a href="10-Supp_fig_4.html#cb43-23" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove instances of square brackets</span></span>
-<span id="cb43-24"><a href="10-Supp_fig_4.html#cb43-24" aria-hidden="true" tabindex="-1"></a>clos_subset_vector <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(<span class="fu">replace</span>((<span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Genus&quot;</span>] <span class="sc">==</span> <span class="st">&quot;[Ruminococcus]&quot;</span>), </span>
-<span id="cb43-25"><a href="10-Supp_fig_4.html#cb43-25" aria-hidden="true" tabindex="-1"></a>        <span class="fu">is.na</span>(<span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Genus&quot;</span>] <span class="sc">==</span> <span class="st">&quot;[Ruminococcus]&quot;</span>),</span>
-<span id="cb43-26"><a href="10-Supp_fig_4.html#cb43-26" aria-hidden="true" tabindex="-1"></a>        <span class="cn">FALSE</span>))</span>
-<span id="cb43-27"><a href="10-Supp_fig_4.html#cb43-27" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove []</span></span>
-<span id="cb43-28"><a href="10-Supp_fig_4.html#cb43-28" aria-hidden="true" tabindex="-1"></a>clos_taxa_names <span class="ot">&lt;-</span> <span class="fu">taxa_names</span>(physeq)[clos_subset_vector]</span>
-<span id="cb43-29"><a href="10-Supp_fig_4.html#cb43-29" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq)[clos_taxa_names,<span class="st">&quot;Genus&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Ruminococcus&quot;</span></span>
-<span id="cb43-30"><a href="10-Supp_fig_4.html#cb43-30" aria-hidden="true" tabindex="-1"></a><span class="co">#Get logical vector to know which rows </span></span>
-<span id="cb43-31"><a href="10-Supp_fig_4.html#cb43-31" aria-hidden="true" tabindex="-1"></a>clos_subset_vector <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(<span class="fu">replace</span>((<span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Genus&quot;</span>] <span class="sc">==</span> <span class="st">&quot;Ruminococcus&quot;</span>), </span>
-<span id="cb43-32"><a href="10-Supp_fig_4.html#cb43-32" aria-hidden="true" tabindex="-1"></a>        <span class="fu">is.na</span>(<span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Genus&quot;</span>] <span class="sc">==</span> <span class="st">&quot;Ruminococcus&quot;</span>),</span>
-<span id="cb43-33"><a href="10-Supp_fig_4.html#cb43-33" aria-hidden="true" tabindex="-1"></a>        <span class="cn">FALSE</span>))</span>
-<span id="cb43-34"><a href="10-Supp_fig_4.html#cb43-34" aria-hidden="true" tabindex="-1"></a><span class="co">#Extract taxa names</span></span>
-<span id="cb43-35"><a href="10-Supp_fig_4.html#cb43-35" aria-hidden="true" tabindex="-1"></a>clos_taxa_names <span class="ot">&lt;-</span> <span class="fu">taxa_names</span>(physeq)[clos_subset_vector]</span>
-<span id="cb43-36"><a href="10-Supp_fig_4.html#cb43-36" aria-hidden="true" tabindex="-1"></a><span class="co">#Make new genus names for clositriudm</span></span>
-<span id="cb43-37"><a href="10-Supp_fig_4.html#cb43-37" aria-hidden="true" tabindex="-1"></a>clos_new_genus_name <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="fu">tax_table</span>(physeq)[clos_taxa_names,<span class="st">&quot;Family&quot;</span>], </span>
-<span id="cb43-38"><a href="10-Supp_fig_4.html#cb43-38" aria-hidden="true" tabindex="-1"></a>                             <span class="fu">tax_table</span>(physeq)[clos_taxa_names,<span class="st">&quot;Genus&quot;</span>], </span>
-<span id="cb43-39"><a href="10-Supp_fig_4.html#cb43-39" aria-hidden="true" tabindex="-1"></a>                             <span class="at">sep =</span> <span class="st">&quot;_&quot;</span>)</span>
-<span id="cb43-40"><a href="10-Supp_fig_4.html#cb43-40" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq)[clos_taxa_names,<span class="st">&quot;Genus&quot;</span>] <span class="ot">&lt;-</span> clos_new_genus_name</span>
-<span id="cb43-41"><a href="10-Supp_fig_4.html#cb43-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-42"><a href="10-Supp_fig_4.html#cb43-42" aria-hidden="true" tabindex="-1"></a><span class="co">#subset samples to remove rnalater unwashed samples</span></span>
-<span id="cb43-43"><a href="10-Supp_fig_4.html#cb43-43" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">&lt;-</span> <span class="fu">subset_samples</span>(physeq, <span class="sc">!</span>(RNAlater_washed_status <span class="sc">==</span> <span class="st">&quot;unwashed&quot;</span>))</span>
-<span id="cb43-44"><a href="10-Supp_fig_4.html#cb43-44" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove anything that is not bacteria</span></span>
-<span id="cb43-45"><a href="10-Supp_fig_4.html#cb43-45" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">&lt;-</span> <span class="fu">subset_taxa</span>(physeq, Phylum <span class="sc">!=</span> <span class="st">&quot;Bacteria&quot;</span>)</span>
-<span id="cb43-46"><a href="10-Supp_fig_4.html#cb43-46" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove unwanted [] in genus names</span></span>
-<span id="cb43-47"><a href="10-Supp_fig_4.html#cb43-47" aria-hidden="true" tabindex="-1"></a><span class="co">#tax_table(physeq)[,&quot;Genus&quot;] &lt;- gsub(pattern = &quot;\\[&quot; , replacement = &quot;&quot;, tax_table(physeq)[,&quot;Genus&quot;])</span></span>
-<span id="cb43-48"><a href="10-Supp_fig_4.html#cb43-48" aria-hidden="true" tabindex="-1"></a><span class="co">#tax_table(physeq)[,&quot;Genus&quot;] &lt;- gsub(pattern = &quot;\\]&quot; , replacement = &quot;&quot;, tax_table(physeq)[,&quot;Genus&quot;])</span></span>
-<span id="cb43-49"><a href="10-Supp_fig_4.html#cb43-49" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove all info above genus</span></span>
-<span id="cb43-50"><a href="10-Supp_fig_4.html#cb43-50" aria-hidden="true" tabindex="-1"></a><span class="co">#This is so the aggregate works below</span></span>
-<span id="cb43-51"><a href="10-Supp_fig_4.html#cb43-51" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Phylum&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb43-52"><a href="10-Supp_fig_4.html#cb43-52" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Class&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb43-53"><a href="10-Supp_fig_4.html#cb43-53" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Order&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb43-54"><a href="10-Supp_fig_4.html#cb43-54" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Family&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
-<span id="cb43-55"><a href="10-Supp_fig_4.html#cb43-55" aria-hidden="true" tabindex="-1"></a><span class="co">#Convert to genus table</span></span>
-<span id="cb43-56"><a href="10-Supp_fig_4.html#cb43-56" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">&lt;-</span> <span class="fu">aggregate_taxa</span>(physeq, <span class="st">&quot;Genus&quot;</span>)</span>
-<span id="cb43-57"><a href="10-Supp_fig_4.html#cb43-57" aria-hidden="true" tabindex="-1"></a><span class="co">#Convert taxa names (row names) to genus</span></span>
-<span id="cb43-58"><a href="10-Supp_fig_4.html#cb43-58" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(<span class="fu">tax_table</span>(physeq)) <span class="ot">&lt;-</span> <span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Genus&quot;</span>]</span>
-<span id="cb43-59"><a href="10-Supp_fig_4.html#cb43-59" aria-hidden="true" tabindex="-1"></a><span class="co">#transform to relabund</span></span>
-<span id="cb43-60"><a href="10-Supp_fig_4.html#cb43-60" aria-hidden="true" tabindex="-1"></a>physeq_relabund <span class="ot">&lt;-</span> microbiome<span class="sc">::</span><span class="fu">transform</span>(physeq, <span class="st">&quot;compositional&quot;</span>)</span>
-<span id="cb43-61"><a href="10-Supp_fig_4.html#cb43-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-62"><a href="10-Supp_fig_4.html#cb43-62" aria-hidden="true" tabindex="-1"></a><span class="co">#Filter physeq to only contain biomarker genera</span></span>
-<span id="cb43-63"><a href="10-Supp_fig_4.html#cb43-63" aria-hidden="true" tabindex="-1"></a><span class="co">#Select non biomarker genera</span></span>
-<span id="cb43-64"><a href="10-Supp_fig_4.html#cb43-64" aria-hidden="true" tabindex="-1"></a>biomarker_genera_physeq <span class="ot">&lt;-</span> </span>
-<span id="cb43-65"><a href="10-Supp_fig_4.html#cb43-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">prune_taxa</span>(<span class="fu">sort</span>(genera_biomarkers),physeq_relabund)</span>
-<span id="cb43-66"><a href="10-Supp_fig_4.html#cb43-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-67"><a href="10-Supp_fig_4.html#cb43-67" aria-hidden="true" tabindex="-1"></a><span class="co">#Attempt to create a better colour palette</span></span>
-<span id="cb43-68"><a href="10-Supp_fig_4.html#cb43-68" aria-hidden="true" tabindex="-1"></a><span class="co">#https://carbondesignsystem.com/data-visualization/color-palettes/</span></span>
-<span id="cb43-69"><a href="10-Supp_fig_4.html#cb43-69" aria-hidden="true" tabindex="-1"></a>col_pal <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#6929c4&quot;</span>, <span class="st">&quot;#1192e8&quot;</span>, <span class="st">&quot;#005d5d&quot;</span>, <span class="st">&quot;#9f1853&quot;</span>,<span class="st">&quot;#fa4d56&quot;</span>, <span class="st">&quot;#570408&quot;</span>,</span>
-<span id="cb43-70"><a href="10-Supp_fig_4.html#cb43-70" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;#198038&quot;</span>, <span class="st">&quot;#002d9c&quot;</span>, <span class="st">&quot;#ee538b&quot;</span>,<span class="st">&quot;#b28600&quot;</span>, <span class="st">&quot;#009d9a&quot;</span>, <span class="st">&quot;#012749&quot;</span>,</span>
-<span id="cb43-71"><a href="10-Supp_fig_4.html#cb43-71" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;#8a3800&quot;</span>, <span class="st">&quot;#a56eff&quot;</span>, <span class="st">&quot;#8a3ffc&quot;</span>, <span class="st">&quot;#33b1ff&quot;</span>, <span class="st">&quot;#007d79&quot;</span>, <span class="st">&quot;#ff7eb6&quot;</span>,</span>
-<span id="cb43-72"><a href="10-Supp_fig_4.html#cb43-72" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;#fa4d56&quot;</span>, <span class="st">&quot;#fff1f1&quot;</span>, <span class="st">&quot;#6fdc8c&quot;</span>, <span class="st">&quot;#4589ff&quot;</span>, <span class="st">&quot;#d12771&quot;</span>, <span class="st">&quot;#d2a106&quot;</span>,</span>
-<span id="cb43-73"><a href="10-Supp_fig_4.html#cb43-73" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;#08bdba&quot;</span>, <span class="st">&quot;#bae6ff&quot;</span>, <span class="st">&quot;#ba4e00&quot;</span>, <span class="st">&quot;#d4bbff&quot;</span>)</span>
-<span id="cb43-74"><a href="10-Supp_fig_4.html#cb43-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-75"><a href="10-Supp_fig_4.html#cb43-75" aria-hidden="true" tabindex="-1"></a><span class="co">#Bar plots</span></span>
-<span id="cb43-76"><a href="10-Supp_fig_4.html#cb43-76" aria-hidden="true" tabindex="-1"></a><span class="co">#Facet by Bufferused and storage condition</span></span>
-<span id="cb43-77"><a href="10-Supp_fig_4.html#cb43-77" aria-hidden="true" tabindex="-1"></a><span class="co"># p &lt;- plot_bar(biomarker_genera_physeq, x = &quot;Sample_name&quot;, fill = &quot;Genus&quot;)+</span></span>
-<span id="cb43-78"><a href="10-Supp_fig_4.html#cb43-78" aria-hidden="true" tabindex="-1"></a><span class="co">#   geom_bar(aes(color=Genus, fill=Genus), stat=&quot;identity&quot;, position=&quot;stack&quot;) +</span></span>
-<span id="cb43-79"><a href="10-Supp_fig_4.html#cb43-79" aria-hidden="true" tabindex="-1"></a><span class="co">#   facet_wrap(~Bufferused_and_Storageconditions, nrow = 2, scales = &quot;free&quot;) + </span></span>
-<span id="cb43-80"><a href="10-Supp_fig_4.html#cb43-80" aria-hidden="true" tabindex="-1"></a><span class="co">#   theme(legend.position=&quot;bottom&quot;)</span></span>
-<span id="cb43-81"><a href="10-Supp_fig_4.html#cb43-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-82"><a href="10-Supp_fig_4.html#cb43-82" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">plot_bar</span>(biomarker_genera_physeq, <span class="at">x =</span> <span class="st">&quot;Sample_name&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;Genus&quot;</span>)<span class="sc">+</span></span>
-<span id="cb43-83"><a href="10-Supp_fig_4.html#cb43-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">color=</span>Genus, <span class="at">fill=</span>Genus), <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;stack&quot;</span>, <span class="at">colour=</span><span class="st">&quot;grey&quot;</span>) <span class="sc">+</span></span>
-<span id="cb43-84"><a href="10-Supp_fig_4.html#cb43-84" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_nested_wrap</span>( <span class="sc">~</span> Bufferused <span class="sc">+</span> Storageconditions , <span class="at">scales =</span> <span class="st">&quot;free_x&quot;</span>, <span class="at">nrow =</span> <span class="dv">2</span> ) <span class="sc">+</span></span>
-<span id="cb43-85"><a href="10-Supp_fig_4.html#cb43-85" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> col_pal) <span class="sc">+</span></span>
-<span id="cb43-86"><a href="10-Supp_fig_4.html#cb43-86" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.spacing.x=</span><span class="fu">unit</span>(<span class="fl">0.1</span>, <span class="st">&quot;lines&quot;</span>)) <span class="sc">+</span> </span>
-<span id="cb43-87"><a href="10-Supp_fig_4.html#cb43-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span></span>
-<span id="cb43-88"><a href="10-Supp_fig_4.html#cb43-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill=</span><span class="fu">guide_legend</span>(<span class="at">nrow=</span><span class="dv">3</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>))</span>
-<span id="cb43-89"><a href="10-Supp_fig_4.html#cb43-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-90"><a href="10-Supp_fig_4.html#cb43-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-91"><a href="10-Supp_fig_4.html#cb43-91" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p, <span class="at">filename =</span> <span class="st">&quot;./figures/genus_biomarkers_relabund_facet_buffer_n_storage.png&quot;</span>,</span>
-<span id="cb43-92"><a href="10-Supp_fig_4.html#cb43-92" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>,</span>
-<span id="cb43-93"><a href="10-Supp_fig_4.html#cb43-93" aria-hidden="true" tabindex="-1"></a>       <span class="at">height =</span> <span class="dv">200</span>, <span class="at">width =</span> <span class="dv">400</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="10-Supp_fig_4.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Read in sig table (p-value &lt;0.05)</span></span>
+<span id="cb60-2"><a href="10-Supp_fig_4.html#cb60-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(</span>
+<span id="cb60-3"><a href="10-Supp_fig_4.html#cb60-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> <span class="st">&quot;./standard_maaslin2_genus/significant_results.tsv&quot;</span>,</span>
+<span id="cb60-4"><a href="10-Supp_fig_4.html#cb60-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">check.names=</span><span class="cn">FALSE</span>)</span>
+<span id="cb60-5"><a href="10-Supp_fig_4.html#cb60-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Get all unique genera</span></span>
+<span id="cb60-6"><a href="10-Supp_fig_4.html#cb60-6" aria-hidden="true" tabindex="-1"></a>genera_biomarkers <span class="ot">&lt;-</span> <span class="fu">unique</span>(df<span class="sc">$</span>feature)</span>
+<span id="cb60-7"><a href="10-Supp_fig_4.html#cb60-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-8"><a href="10-Supp_fig_4.html#cb60-8" aria-hidden="true" tabindex="-1"></a><span class="co">#load in phyloseq object</span></span>
+<span id="cb60-9"><a href="10-Supp_fig_4.html#cb60-9" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;./data/preprocess_physeq&quot;</span>)</span>
+<span id="cb60-10"><a href="10-Supp_fig_4.html#cb60-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Clostridium</span></span>
+<span id="cb60-11"><a href="10-Supp_fig_4.html#cb60-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Get logical vector to know which rows </span></span>
+<span id="cb60-12"><a href="10-Supp_fig_4.html#cb60-12" aria-hidden="true" tabindex="-1"></a>clos_subset_vector <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(<span class="fu">replace</span>((<span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Genus&quot;</span>] <span class="sc">==</span> <span class="st">&quot;Clostridium&quot;</span>), </span>
+<span id="cb60-13"><a href="10-Supp_fig_4.html#cb60-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">is.na</span>(<span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Genus&quot;</span>] <span class="sc">==</span> <span class="st">&quot;Clostridium&quot;</span>),</span>
+<span id="cb60-14"><a href="10-Supp_fig_4.html#cb60-14" aria-hidden="true" tabindex="-1"></a>        <span class="cn">FALSE</span>))</span>
+<span id="cb60-15"><a href="10-Supp_fig_4.html#cb60-15" aria-hidden="true" tabindex="-1"></a><span class="co">#Extract taxa names</span></span>
+<span id="cb60-16"><a href="10-Supp_fig_4.html#cb60-16" aria-hidden="true" tabindex="-1"></a>clos_taxa_names <span class="ot">&lt;-</span> <span class="fu">taxa_names</span>(physeq)[clos_subset_vector]</span>
+<span id="cb60-17"><a href="10-Supp_fig_4.html#cb60-17" aria-hidden="true" tabindex="-1"></a><span class="co">#Make new genus names for clositriudm</span></span>
+<span id="cb60-18"><a href="10-Supp_fig_4.html#cb60-18" aria-hidden="true" tabindex="-1"></a>clos_new_genus_name <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="fu">tax_table</span>(physeq)[clos_taxa_names,<span class="st">&quot;Family&quot;</span>], </span>
+<span id="cb60-19"><a href="10-Supp_fig_4.html#cb60-19" aria-hidden="true" tabindex="-1"></a>                             <span class="fu">tax_table</span>(physeq)[clos_taxa_names,<span class="st">&quot;Genus&quot;</span>], </span>
+<span id="cb60-20"><a href="10-Supp_fig_4.html#cb60-20" aria-hidden="true" tabindex="-1"></a>                             <span class="at">sep =</span> <span class="st">&quot;_&quot;</span>)</span>
+<span id="cb60-21"><a href="10-Supp_fig_4.html#cb60-21" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq)[clos_taxa_names,<span class="st">&quot;Genus&quot;</span>] <span class="ot">&lt;-</span> clos_new_genus_name</span>
+<span id="cb60-22"><a href="10-Supp_fig_4.html#cb60-22" aria-hidden="true" tabindex="-1"></a><span class="co">#Ruminococcus</span></span>
+<span id="cb60-23"><a href="10-Supp_fig_4.html#cb60-23" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove instances of square brackets</span></span>
+<span id="cb60-24"><a href="10-Supp_fig_4.html#cb60-24" aria-hidden="true" tabindex="-1"></a>clos_subset_vector <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(<span class="fu">replace</span>((<span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Genus&quot;</span>] <span class="sc">==</span> <span class="st">&quot;[Ruminococcus]&quot;</span>), </span>
+<span id="cb60-25"><a href="10-Supp_fig_4.html#cb60-25" aria-hidden="true" tabindex="-1"></a>        <span class="fu">is.na</span>(<span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Genus&quot;</span>] <span class="sc">==</span> <span class="st">&quot;[Ruminococcus]&quot;</span>),</span>
+<span id="cb60-26"><a href="10-Supp_fig_4.html#cb60-26" aria-hidden="true" tabindex="-1"></a>        <span class="cn">FALSE</span>))</span>
+<span id="cb60-27"><a href="10-Supp_fig_4.html#cb60-27" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove []</span></span>
+<span id="cb60-28"><a href="10-Supp_fig_4.html#cb60-28" aria-hidden="true" tabindex="-1"></a>clos_taxa_names <span class="ot">&lt;-</span> <span class="fu">taxa_names</span>(physeq)[clos_subset_vector]</span>
+<span id="cb60-29"><a href="10-Supp_fig_4.html#cb60-29" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq)[clos_taxa_names,<span class="st">&quot;Genus&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Ruminococcus&quot;</span></span>
+<span id="cb60-30"><a href="10-Supp_fig_4.html#cb60-30" aria-hidden="true" tabindex="-1"></a><span class="co">#Get logical vector to know which rows </span></span>
+<span id="cb60-31"><a href="10-Supp_fig_4.html#cb60-31" aria-hidden="true" tabindex="-1"></a>clos_subset_vector <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(<span class="fu">replace</span>((<span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Genus&quot;</span>] <span class="sc">==</span> <span class="st">&quot;Ruminococcus&quot;</span>), </span>
+<span id="cb60-32"><a href="10-Supp_fig_4.html#cb60-32" aria-hidden="true" tabindex="-1"></a>        <span class="fu">is.na</span>(<span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Genus&quot;</span>] <span class="sc">==</span> <span class="st">&quot;Ruminococcus&quot;</span>),</span>
+<span id="cb60-33"><a href="10-Supp_fig_4.html#cb60-33" aria-hidden="true" tabindex="-1"></a>        <span class="cn">FALSE</span>))</span>
+<span id="cb60-34"><a href="10-Supp_fig_4.html#cb60-34" aria-hidden="true" tabindex="-1"></a><span class="co">#Extract taxa names</span></span>
+<span id="cb60-35"><a href="10-Supp_fig_4.html#cb60-35" aria-hidden="true" tabindex="-1"></a>clos_taxa_names <span class="ot">&lt;-</span> <span class="fu">taxa_names</span>(physeq)[clos_subset_vector]</span>
+<span id="cb60-36"><a href="10-Supp_fig_4.html#cb60-36" aria-hidden="true" tabindex="-1"></a><span class="co">#Make new genus names for clositriudm</span></span>
+<span id="cb60-37"><a href="10-Supp_fig_4.html#cb60-37" aria-hidden="true" tabindex="-1"></a>clos_new_genus_name <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="fu">tax_table</span>(physeq)[clos_taxa_names,<span class="st">&quot;Family&quot;</span>], </span>
+<span id="cb60-38"><a href="10-Supp_fig_4.html#cb60-38" aria-hidden="true" tabindex="-1"></a>                             <span class="fu">tax_table</span>(physeq)[clos_taxa_names,<span class="st">&quot;Genus&quot;</span>], </span>
+<span id="cb60-39"><a href="10-Supp_fig_4.html#cb60-39" aria-hidden="true" tabindex="-1"></a>                             <span class="at">sep =</span> <span class="st">&quot;_&quot;</span>)</span>
+<span id="cb60-40"><a href="10-Supp_fig_4.html#cb60-40" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq)[clos_taxa_names,<span class="st">&quot;Genus&quot;</span>] <span class="ot">&lt;-</span> clos_new_genus_name</span>
+<span id="cb60-41"><a href="10-Supp_fig_4.html#cb60-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-42"><a href="10-Supp_fig_4.html#cb60-42" aria-hidden="true" tabindex="-1"></a><span class="co">#subset samples to remove rnalater unwashed samples</span></span>
+<span id="cb60-43"><a href="10-Supp_fig_4.html#cb60-43" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">&lt;-</span> <span class="fu">subset_samples</span>(physeq, <span class="sc">!</span>(RNAlater_washed_status <span class="sc">==</span> <span class="st">&quot;unwashed&quot;</span>))</span>
+<span id="cb60-44"><a href="10-Supp_fig_4.html#cb60-44" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove anything that is not bacteria</span></span>
+<span id="cb60-45"><a href="10-Supp_fig_4.html#cb60-45" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">&lt;-</span> <span class="fu">subset_taxa</span>(physeq, Phylum <span class="sc">!=</span> <span class="st">&quot;Bacteria&quot;</span>)</span>
+<span id="cb60-46"><a href="10-Supp_fig_4.html#cb60-46" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove unwanted [] in genus names</span></span>
+<span id="cb60-47"><a href="10-Supp_fig_4.html#cb60-47" aria-hidden="true" tabindex="-1"></a><span class="co">#tax_table(physeq)[,&quot;Genus&quot;] &lt;- gsub(pattern = &quot;\\[&quot; , replacement = &quot;&quot;, tax_table(physeq)[,&quot;Genus&quot;])</span></span>
+<span id="cb60-48"><a href="10-Supp_fig_4.html#cb60-48" aria-hidden="true" tabindex="-1"></a><span class="co">#tax_table(physeq)[,&quot;Genus&quot;] &lt;- gsub(pattern = &quot;\\]&quot; , replacement = &quot;&quot;, tax_table(physeq)[,&quot;Genus&quot;])</span></span>
+<span id="cb60-49"><a href="10-Supp_fig_4.html#cb60-49" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove all info above genus</span></span>
+<span id="cb60-50"><a href="10-Supp_fig_4.html#cb60-50" aria-hidden="true" tabindex="-1"></a><span class="co">#This is so the aggregate works below</span></span>
+<span id="cb60-51"><a href="10-Supp_fig_4.html#cb60-51" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Phylum&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb60-52"><a href="10-Supp_fig_4.html#cb60-52" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Class&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb60-53"><a href="10-Supp_fig_4.html#cb60-53" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Order&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb60-54"><a href="10-Supp_fig_4.html#cb60-54" aria-hidden="true" tabindex="-1"></a><span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Family&quot;</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb60-55"><a href="10-Supp_fig_4.html#cb60-55" aria-hidden="true" tabindex="-1"></a><span class="co">#Convert to genus table</span></span>
+<span id="cb60-56"><a href="10-Supp_fig_4.html#cb60-56" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">&lt;-</span> <span class="fu">aggregate_taxa</span>(physeq, <span class="st">&quot;Genus&quot;</span>)</span>
+<span id="cb60-57"><a href="10-Supp_fig_4.html#cb60-57" aria-hidden="true" tabindex="-1"></a><span class="co">#Convert taxa names (row names) to genus</span></span>
+<span id="cb60-58"><a href="10-Supp_fig_4.html#cb60-58" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(<span class="fu">tax_table</span>(physeq)) <span class="ot">&lt;-</span> <span class="fu">tax_table</span>(physeq)[,<span class="st">&quot;Genus&quot;</span>]</span>
+<span id="cb60-59"><a href="10-Supp_fig_4.html#cb60-59" aria-hidden="true" tabindex="-1"></a><span class="co">#transform to relabund</span></span>
+<span id="cb60-60"><a href="10-Supp_fig_4.html#cb60-60" aria-hidden="true" tabindex="-1"></a>physeq_relabund <span class="ot">&lt;-</span> microbiome<span class="sc">::</span><span class="fu">transform</span>(physeq, <span class="st">&quot;compositional&quot;</span>)</span>
+<span id="cb60-61"><a href="10-Supp_fig_4.html#cb60-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-62"><a href="10-Supp_fig_4.html#cb60-62" aria-hidden="true" tabindex="-1"></a><span class="co">#Filter physeq to only contain biomarker genera</span></span>
+<span id="cb60-63"><a href="10-Supp_fig_4.html#cb60-63" aria-hidden="true" tabindex="-1"></a><span class="co">#Select non biomarker genera</span></span>
+<span id="cb60-64"><a href="10-Supp_fig_4.html#cb60-64" aria-hidden="true" tabindex="-1"></a>biomarker_genera_physeq <span class="ot">&lt;-</span> </span>
+<span id="cb60-65"><a href="10-Supp_fig_4.html#cb60-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">prune_taxa</span>(<span class="fu">sort</span>(genera_biomarkers),physeq_relabund)</span>
+<span id="cb60-66"><a href="10-Supp_fig_4.html#cb60-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-67"><a href="10-Supp_fig_4.html#cb60-67" aria-hidden="true" tabindex="-1"></a><span class="co">#Attempt to create a better colour palette</span></span>
+<span id="cb60-68"><a href="10-Supp_fig_4.html#cb60-68" aria-hidden="true" tabindex="-1"></a><span class="co">#https://carbondesignsystem.com/data-visualization/color-palettes/</span></span>
+<span id="cb60-69"><a href="10-Supp_fig_4.html#cb60-69" aria-hidden="true" tabindex="-1"></a>col_pal <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#6929c4&quot;</span>, <span class="st">&quot;#1192e8&quot;</span>, <span class="st">&quot;#005d5d&quot;</span>, <span class="st">&quot;#9f1853&quot;</span>,<span class="st">&quot;#fa4d56&quot;</span>, <span class="st">&quot;#570408&quot;</span>,</span>
+<span id="cb60-70"><a href="10-Supp_fig_4.html#cb60-70" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;#198038&quot;</span>, <span class="st">&quot;#002d9c&quot;</span>, <span class="st">&quot;#ee538b&quot;</span>,<span class="st">&quot;#b28600&quot;</span>, <span class="st">&quot;#009d9a&quot;</span>, <span class="st">&quot;#012749&quot;</span>,</span>
+<span id="cb60-71"><a href="10-Supp_fig_4.html#cb60-71" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;#8a3800&quot;</span>, <span class="st">&quot;#a56eff&quot;</span>, <span class="st">&quot;#8a3ffc&quot;</span>, <span class="st">&quot;#33b1ff&quot;</span>, <span class="st">&quot;#007d79&quot;</span>, <span class="st">&quot;#ff7eb6&quot;</span>,</span>
+<span id="cb60-72"><a href="10-Supp_fig_4.html#cb60-72" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;#fa4d56&quot;</span>, <span class="st">&quot;#fff1f1&quot;</span>, <span class="st">&quot;#6fdc8c&quot;</span>, <span class="st">&quot;#4589ff&quot;</span>, <span class="st">&quot;#d12771&quot;</span>, <span class="st">&quot;#d2a106&quot;</span>,</span>
+<span id="cb60-73"><a href="10-Supp_fig_4.html#cb60-73" aria-hidden="true" tabindex="-1"></a>             <span class="st">&quot;#08bdba&quot;</span>, <span class="st">&quot;#bae6ff&quot;</span>, <span class="st">&quot;#ba4e00&quot;</span>, <span class="st">&quot;#d4bbff&quot;</span>)</span>
+<span id="cb60-74"><a href="10-Supp_fig_4.html#cb60-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-75"><a href="10-Supp_fig_4.html#cb60-75" aria-hidden="true" tabindex="-1"></a><span class="co">#Bar plots</span></span>
+<span id="cb60-76"><a href="10-Supp_fig_4.html#cb60-76" aria-hidden="true" tabindex="-1"></a><span class="co">#Facet by Bufferused and storage condition</span></span>
+<span id="cb60-77"><a href="10-Supp_fig_4.html#cb60-77" aria-hidden="true" tabindex="-1"></a><span class="co"># p &lt;- plot_bar(biomarker_genera_physeq, x = &quot;Sample_name&quot;, fill = &quot;Genus&quot;)+</span></span>
+<span id="cb60-78"><a href="10-Supp_fig_4.html#cb60-78" aria-hidden="true" tabindex="-1"></a><span class="co">#   geom_bar(aes(color=Genus, fill=Genus), stat=&quot;identity&quot;, position=&quot;stack&quot;) +</span></span>
+<span id="cb60-79"><a href="10-Supp_fig_4.html#cb60-79" aria-hidden="true" tabindex="-1"></a><span class="co">#   facet_wrap(~Bufferused_and_Storageconditions, nrow = 2, scales = &quot;free&quot;) + </span></span>
+<span id="cb60-80"><a href="10-Supp_fig_4.html#cb60-80" aria-hidden="true" tabindex="-1"></a><span class="co">#   theme(legend.position=&quot;bottom&quot;)</span></span>
+<span id="cb60-81"><a href="10-Supp_fig_4.html#cb60-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-82"><a href="10-Supp_fig_4.html#cb60-82" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">plot_bar</span>(biomarker_genera_physeq, <span class="at">x =</span> <span class="st">&quot;Sample_name&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;Genus&quot;</span>)<span class="sc">+</span></span>
+<span id="cb60-83"><a href="10-Supp_fig_4.html#cb60-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">color=</span>Genus, <span class="at">fill=</span>Genus), <span class="at">stat=</span><span class="st">&quot;identity&quot;</span>, <span class="at">position=</span><span class="st">&quot;stack&quot;</span>, <span class="at">colour=</span><span class="st">&quot;grey&quot;</span>) <span class="sc">+</span></span>
+<span id="cb60-84"><a href="10-Supp_fig_4.html#cb60-84" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_nested_wrap</span>( <span class="sc">~</span> Bufferused <span class="sc">+</span> Storageconditions , <span class="at">scales =</span> <span class="st">&quot;free_x&quot;</span>, <span class="at">nrow =</span> <span class="dv">2</span> ) <span class="sc">+</span></span>
+<span id="cb60-85"><a href="10-Supp_fig_4.html#cb60-85" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> col_pal) <span class="sc">+</span></span>
+<span id="cb60-86"><a href="10-Supp_fig_4.html#cb60-86" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.spacing.x=</span><span class="fu">unit</span>(<span class="fl">0.1</span>, <span class="st">&quot;lines&quot;</span>)) <span class="sc">+</span> </span>
+<span id="cb60-87"><a href="10-Supp_fig_4.html#cb60-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>) <span class="sc">+</span></span>
+<span id="cb60-88"><a href="10-Supp_fig_4.html#cb60-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill=</span><span class="fu">guide_legend</span>(<span class="at">nrow=</span><span class="dv">3</span>,<span class="at">byrow=</span><span class="cn">TRUE</span>))</span>
+<span id="cb60-89"><a href="10-Supp_fig_4.html#cb60-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-90"><a href="10-Supp_fig_4.html#cb60-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-91"><a href="10-Supp_fig_4.html#cb60-91" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p, <span class="at">filename =</span> <span class="st">&quot;./figures/genus_biomarkers_relabund_facet_buffer_n_storage.png&quot;</span>,</span>
+<span id="cb60-92"><a href="10-Supp_fig_4.html#cb60-92" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>,</span>
+<span id="cb60-93"><a href="10-Supp_fig_4.html#cb60-93" aria-hidden="true" tabindex="-1"></a>       <span class="at">height =</span> <span class="dv">200</span>, <span class="at">width =</span> <span class="dv">400</span>)</span></code></pre></div>
 <p><img src="figures/genus_biomarkers_relabund_facet_buffer_n_storage.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="maaslin2-on-genera-day-1-vs-day-3" class="section level2 hasAnchor" number="10.2">
 <h2><span class="header-section-number">10.2</span> MaAsLin2 on genera Day 1 vs Day 3<a href="10-Supp_fig_4.html#maaslin2-on-genera-day-1-vs-day-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="10-Supp_fig_4.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove Days stored info</span></span>
-<span id="cb44-2"><a href="10-Supp_fig_4.html#cb44-2" aria-hidden="true" tabindex="-1"></a>df_metadata <span class="ot">&lt;-</span> df_metadata[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)]</span>
-<span id="cb44-3"><a href="10-Supp_fig_4.html#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="co">#fit data</span></span>
-<span id="cb44-4"><a href="10-Supp_fig_4.html#cb44-4" aria-hidden="true" tabindex="-1"></a>fit_data <span class="ot">&lt;-</span> Maaslin2<span class="sc">::</span><span class="fu">Maaslin2</span>(<span class="at">input_data =</span> df_data,</span>
-<span id="cb44-5"><a href="10-Supp_fig_4.html#cb44-5" aria-hidden="true" tabindex="-1"></a>                     <span class="at">input_metadata =</span> df_metadata,</span>
-<span id="cb44-6"><a href="10-Supp_fig_4.html#cb44-6" aria-hidden="true" tabindex="-1"></a>                     <span class="at">output =</span> <span class="st">&quot;maaslin2_genus_days_stored&quot;</span>,</span>
-<span id="cb44-7"><a href="10-Supp_fig_4.html#cb44-7" aria-hidden="true" tabindex="-1"></a>                     <span class="co">#Random sample used for subject/patients</span></span>
-<span id="cb44-8"><a href="10-Supp_fig_4.html#cb44-8" aria-hidden="true" tabindex="-1"></a>                     <span class="at">random_effects =</span> <span class="st">&quot;Patientnumber&quot;</span>,</span>
-<span id="cb44-9"><a href="10-Supp_fig_4.html#cb44-9" aria-hidden="true" tabindex="-1"></a>                     <span class="at">reference =</span> <span class="fu">c</span>(<span class="st">&quot;DaysstoredpriortoDNAextraction&quot;</span>, <span class="st">&quot;1&quot;</span>)</span>
-<span id="cb44-10"><a href="10-Supp_fig_4.html#cb44-10" aria-hidden="true" tabindex="-1"></a>                     )</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="10-Supp_fig_4.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Remove Days stored info</span></span>
+<span id="cb61-2"><a href="10-Supp_fig_4.html#cb61-2" aria-hidden="true" tabindex="-1"></a>df_metadata <span class="ot">&lt;-</span> df_metadata[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)]</span>
+<span id="cb61-3"><a href="10-Supp_fig_4.html#cb61-3" aria-hidden="true" tabindex="-1"></a><span class="co">#fit data</span></span>
+<span id="cb61-4"><a href="10-Supp_fig_4.html#cb61-4" aria-hidden="true" tabindex="-1"></a>fit_data <span class="ot">&lt;-</span> Maaslin2<span class="sc">::</span><span class="fu">Maaslin2</span>(<span class="at">input_data =</span> df_data,</span>
+<span id="cb61-5"><a href="10-Supp_fig_4.html#cb61-5" aria-hidden="true" tabindex="-1"></a>                     <span class="at">input_metadata =</span> df_metadata,</span>
+<span id="cb61-6"><a href="10-Supp_fig_4.html#cb61-6" aria-hidden="true" tabindex="-1"></a>                     <span class="at">output =</span> <span class="st">&quot;maaslin2_genus_days_stored&quot;</span>,</span>
+<span id="cb61-7"><a href="10-Supp_fig_4.html#cb61-7" aria-hidden="true" tabindex="-1"></a>                     <span class="co">#Random sample used for subject/patients</span></span>
+<span id="cb61-8"><a href="10-Supp_fig_4.html#cb61-8" aria-hidden="true" tabindex="-1"></a>                     <span class="at">random_effects =</span> <span class="st">&quot;Patientnumber&quot;</span>,</span>
+<span id="cb61-9"><a href="10-Supp_fig_4.html#cb61-9" aria-hidden="true" tabindex="-1"></a>                     <span class="at">reference =</span> <span class="fu">c</span>(<span class="st">&quot;DaysstoredpriortoDNAextraction&quot;</span>, <span class="st">&quot;1&quot;</span>)</span>
+<span id="cb61-10"><a href="10-Supp_fig_4.html#cb61-10" aria-hidden="true" tabindex="-1"></a>                     )</span></code></pre></div>
 <p>No associations were detected</p>
 
 </div>

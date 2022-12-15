@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2022-10-21" />
+<meta name="date" content="2022-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -100,7 +100,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -113,7 +113,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -251,40 +251,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 11</span> Supp figure 5<a href="11-Supp_fig_5.html#supp-figure-5" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="intra-patient-variability" class="section level2 hasAnchor" number="11.1">
 <h2><span class="header-section-number">11.1</span> Intra patient variability<a href="11-Supp_fig_5.html#intra-patient-variability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="11-Supp_fig_5.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Packages</span></span>
-<span id="cb45-2"><a href="11-Supp_fig_5.html#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(microbiome)</span>
-<span id="cb45-3"><a href="11-Supp_fig_5.html#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb45-4"><a href="11-Supp_fig_5.html#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb45-5"><a href="11-Supp_fig_5.html#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Read in data</span></span>
-<span id="cb45-6"><a href="11-Supp_fig_5.html#cb45-6" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;./data/molecule_physeq_object&quot;</span>)</span>
-<span id="cb45-7"><a href="11-Supp_fig_5.html#cb45-7" aria-hidden="true" tabindex="-1"></a>physeq_no_etoh <span class="ot">&lt;-</span> <span class="fu">subset_samples</span>(physeq, Buffer.type <span class="sc">!=</span> <span class="st">&quot;70% EtOH&quot;</span>)</span>
-<span id="cb45-8"><a href="11-Supp_fig_5.html#cb45-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Set to even sampling depth (1000)</span></span>
-<span id="cb45-9"><a href="11-Supp_fig_5.html#cb45-9" aria-hidden="true" tabindex="-1"></a>physeq_1k <span class="ot">=</span> <span class="fu">transform_sample_counts</span>(physeq_no_etoh, <span class="cf">function</span>(x) <span class="dv">1000</span> <span class="sc">*</span> x<span class="sc">/</span><span class="fu">sum</span>(x))</span>
-<span id="cb45-10"><a href="11-Supp_fig_5.html#cb45-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-11"><a href="11-Supp_fig_5.html#cb45-11" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb45-12"><a href="11-Supp_fig_5.html#cb45-12" aria-hidden="true" tabindex="-1"></a>betas <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
-<span id="cb45-13"><a href="11-Supp_fig_5.html#cb45-13" aria-hidden="true" tabindex="-1"></a>groups <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="fu">unique</span>(<span class="fu">meta</span>(physeq_1k)<span class="sc">$</span>Sample.number))</span>
-<span id="cb45-14"><a href="11-Supp_fig_5.html#cb45-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (g <span class="cf">in</span> groups) {</span>
-<span id="cb45-15"><a href="11-Supp_fig_5.html#cb45-15" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Pick samples for this group</span></span>
-<span id="cb45-16"><a href="11-Supp_fig_5.html#cb45-16" aria-hidden="true" tabindex="-1"></a>  g_physeq <span class="ot">&lt;-</span> <span class="fu">subset_samples</span>(physeq_1k, Sample.number <span class="sc">==</span> g)</span>
-<span id="cb45-17"><a href="11-Supp_fig_5.html#cb45-17" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Get median abundances of the samples</span></span>
-<span id="cb45-18"><a href="11-Supp_fig_5.html#cb45-18" aria-hidden="true" tabindex="-1"></a>  reference <span class="ot">&lt;-</span> <span class="fu">apply</span>(<span class="fu">abundances</span>(g_physeq), <span class="dv">1</span>, median)</span>
-<span id="cb45-19"><a href="11-Supp_fig_5.html#cb45-19" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Divergence of samples</span></span>
-<span id="cb45-20"><a href="11-Supp_fig_5.html#cb45-20" aria-hidden="true" tabindex="-1"></a>  b <span class="ot">&lt;-</span> <span class="fu">divergence</span>(g_physeq, reference, <span class="at">method =</span> <span class="st">&quot;bray&quot;</span>)</span>
-<span id="cb45-21"><a href="11-Supp_fig_5.html#cb45-21" aria-hidden="true" tabindex="-1"></a>  betas[[g]] <span class="ot">&lt;-</span> b</span>
-<span id="cb45-22"><a href="11-Supp_fig_5.html#cb45-22" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb45-23"><a href="11-Supp_fig_5.html#cb45-23" aria-hidden="true" tabindex="-1"></a><span class="co"># boxplot</span></span>
-<span id="cb45-24"><a href="11-Supp_fig_5.html#cb45-24" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">unlist</span>(betas))</span>
-<span id="cb45-25"><a href="11-Supp_fig_5.html#cb45-25" aria-hidden="true" tabindex="-1"></a>s<span class="ot">&lt;-</span> <span class="fu">rownames</span>(df)</span>
-<span id="cb45-26"><a href="11-Supp_fig_5.html#cb45-26" aria-hidden="true" tabindex="-1"></a>si<span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(s)</span>
-<span id="cb45-27"><a href="11-Supp_fig_5.html#cb45-27" aria-hidden="true" tabindex="-1"></a>si<span class="ot">&lt;-</span> <span class="fu">separate</span>(si, s, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&#39;Patient&#39;</span>,<span class="st">&#39;sample&#39;</span>), <span class="at">sep =</span> <span class="st">&quot;.Sample&quot;</span>)</span>
-<span id="cb45-28"><a href="11-Supp_fig_5.html#cb45-28" aria-hidden="true" tabindex="-1"></a>df1<span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(df, si)</span>
-<span id="cb45-29"><a href="11-Supp_fig_5.html#cb45-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-30"><a href="11-Supp_fig_5.html#cb45-30" aria-hidden="true" tabindex="-1"></a>p<span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df1, <span class="fu">aes</span>(<span class="at">x =</span> Patient, <span class="at">y =</span> <span class="st">`</span><span class="at">unlist(betas)</span><span class="st">`</span>))<span class="sc">+</span> <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&#39;&#39;</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">&#39;&#39;</span>)</span>
-<span id="cb45-31"><a href="11-Supp_fig_5.html#cb45-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-32"><a href="11-Supp_fig_5.html#cb45-32" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p,</span>
-<span id="cb45-33"><a href="11-Supp_fig_5.html#cb45-33" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;./figures/lipid_intra_patient_variance.png&quot;</span>,</span>
-<span id="cb45-34"><a href="11-Supp_fig_5.html#cb45-34" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">150</span>, <span class="at">width =</span> <span class="dv">200</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="11-Supp_fig_5.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Packages</span></span>
+<span id="cb62-2"><a href="11-Supp_fig_5.html#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(microbiome)</span>
+<span id="cb62-3"><a href="11-Supp_fig_5.html#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb62-4"><a href="11-Supp_fig_5.html#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb62-5"><a href="11-Supp_fig_5.html#cb62-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Read in data</span></span>
+<span id="cb62-6"><a href="11-Supp_fig_5.html#cb62-6" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;./data/molecule_physeq_object&quot;</span>)</span>
+<span id="cb62-7"><a href="11-Supp_fig_5.html#cb62-7" aria-hidden="true" tabindex="-1"></a>physeq_no_etoh <span class="ot">&lt;-</span> <span class="fu">subset_samples</span>(physeq, Buffer.type <span class="sc">!=</span> <span class="st">&quot;70% EtOH&quot;</span>)</span>
+<span id="cb62-8"><a href="11-Supp_fig_5.html#cb62-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Set to even sampling depth (1000)</span></span>
+<span id="cb62-9"><a href="11-Supp_fig_5.html#cb62-9" aria-hidden="true" tabindex="-1"></a>physeq_1k <span class="ot">=</span> <span class="fu">transform_sample_counts</span>(physeq_no_etoh, <span class="cf">function</span>(x) <span class="dv">1000</span> <span class="sc">*</span> x<span class="sc">/</span><span class="fu">sum</span>(x))</span>
+<span id="cb62-10"><a href="11-Supp_fig_5.html#cb62-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-11"><a href="11-Supp_fig_5.html#cb62-11" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb62-12"><a href="11-Supp_fig_5.html#cb62-12" aria-hidden="true" tabindex="-1"></a>betas <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb62-13"><a href="11-Supp_fig_5.html#cb62-13" aria-hidden="true" tabindex="-1"></a>groups <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="fu">unique</span>(<span class="fu">meta</span>(physeq_1k)<span class="sc">$</span>Sample.number))</span>
+<span id="cb62-14"><a href="11-Supp_fig_5.html#cb62-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (g <span class="cf">in</span> groups) {</span>
+<span id="cb62-15"><a href="11-Supp_fig_5.html#cb62-15" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Pick samples for this group</span></span>
+<span id="cb62-16"><a href="11-Supp_fig_5.html#cb62-16" aria-hidden="true" tabindex="-1"></a>  g_physeq <span class="ot">&lt;-</span> <span class="fu">subset_samples</span>(physeq_1k, Sample.number <span class="sc">==</span> g)</span>
+<span id="cb62-17"><a href="11-Supp_fig_5.html#cb62-17" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Get median abundances of the samples</span></span>
+<span id="cb62-18"><a href="11-Supp_fig_5.html#cb62-18" aria-hidden="true" tabindex="-1"></a>  reference <span class="ot">&lt;-</span> <span class="fu">apply</span>(<span class="fu">abundances</span>(g_physeq), <span class="dv">1</span>, median)</span>
+<span id="cb62-19"><a href="11-Supp_fig_5.html#cb62-19" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Divergence of samples</span></span>
+<span id="cb62-20"><a href="11-Supp_fig_5.html#cb62-20" aria-hidden="true" tabindex="-1"></a>  b <span class="ot">&lt;-</span> <span class="fu">divergence</span>(g_physeq, reference, <span class="at">method =</span> <span class="st">&quot;bray&quot;</span>)</span>
+<span id="cb62-21"><a href="11-Supp_fig_5.html#cb62-21" aria-hidden="true" tabindex="-1"></a>  betas[[g]] <span class="ot">&lt;-</span> b</span>
+<span id="cb62-22"><a href="11-Supp_fig_5.html#cb62-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb62-23"><a href="11-Supp_fig_5.html#cb62-23" aria-hidden="true" tabindex="-1"></a><span class="co"># boxplot</span></span>
+<span id="cb62-24"><a href="11-Supp_fig_5.html#cb62-24" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">unlist</span>(betas))</span>
+<span id="cb62-25"><a href="11-Supp_fig_5.html#cb62-25" aria-hidden="true" tabindex="-1"></a>s<span class="ot">&lt;-</span> <span class="fu">rownames</span>(df)</span>
+<span id="cb62-26"><a href="11-Supp_fig_5.html#cb62-26" aria-hidden="true" tabindex="-1"></a>si<span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(s)</span>
+<span id="cb62-27"><a href="11-Supp_fig_5.html#cb62-27" aria-hidden="true" tabindex="-1"></a>si<span class="ot">&lt;-</span> <span class="fu">separate</span>(si, s, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&#39;Patient&#39;</span>,<span class="st">&#39;sample&#39;</span>), <span class="at">sep =</span> <span class="st">&quot;.Sample&quot;</span>)</span>
+<span id="cb62-28"><a href="11-Supp_fig_5.html#cb62-28" aria-hidden="true" tabindex="-1"></a>df1<span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(df, si)</span>
+<span id="cb62-29"><a href="11-Supp_fig_5.html#cb62-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-30"><a href="11-Supp_fig_5.html#cb62-30" aria-hidden="true" tabindex="-1"></a>p<span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df1, <span class="fu">aes</span>(<span class="at">x =</span> Patient, <span class="at">y =</span> <span class="st">`</span><span class="at">unlist(betas)</span><span class="st">`</span>))<span class="sc">+</span> <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&#39;&#39;</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">&#39;Participant&#39;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;Jaccard distance&quot;</span>)</span>
+<span id="cb62-31"><a href="11-Supp_fig_5.html#cb62-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-32"><a href="11-Supp_fig_5.html#cb62-32" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p,</span>
+<span id="cb62-33"><a href="11-Supp_fig_5.html#cb62-33" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;./figures/lipid_intra_patient_variance.png&quot;</span>,</span>
+<span id="cb62-34"><a href="11-Supp_fig_5.html#cb62-34" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">150</span>, <span class="at">width =</span> <span class="dv">200</span>)</span></code></pre></div>
 <p><img src="figures/lipid_intra_patient_variance.png" width="100%" style="display: block; margin: auto;" /></p>
 
 </div>
