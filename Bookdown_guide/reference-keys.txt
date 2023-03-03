@@ -9,6 +9,12 @@ mcq-example
 template
 expandable-help-box-example
 initalising
+icons
+fontawesome
+ionicons
+bioicons
+search-pages
+installing-icons
 embed-youtube-urls
 style.css-code-to-make-page-wider
 create-one-page-html-book
