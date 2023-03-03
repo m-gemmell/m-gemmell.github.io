@@ -1,6 +1,8 @@
 mg-bookdown-guide
 intro
 create-bookdown-html
+section-part
+appendix
 yaml-files
 web-exercises
 mcq-example

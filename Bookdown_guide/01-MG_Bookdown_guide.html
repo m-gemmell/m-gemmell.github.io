@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2023-03-01" />
+<meta name="date" content="2023-03-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -141,17 +141,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="1.1" data-path="01-MG_Bookdown_guide.html"><a href="#intro"><i class="fa fa-check"></i><b>1.1</b> Intro</a></li>
 <li class="chapter" data-level="1.2" data-path="01-MG_Bookdown_guide.html"><a href="#create-bookdown-html"><i class="fa fa-check"></i><b>1.2</b> Create bookdown html</a></li>
-<li class="chapter" data-level="1.3" data-path="01-MG_Bookdown_guide.html"><a href="#yaml-files"><i class="fa fa-check"></i><b>1.3</b> YAML files</a></li>
-<li class="chapter" data-level="1.4" data-path="01-MG_Bookdown_guide.html"><a href="#web-exercises"><i class="fa fa-check"></i><b>1.4</b> Web exercises</a>
+<li class="chapter" data-level="1.3" data-path="01-MG_Bookdown_guide.html"><a href="#section-part"><i class="fa fa-check"></i><b>1.3</b> Section part</a></li>
+<li class="chapter" data-level="1.4" data-path="01-MG_Bookdown_guide.html"><a href="#appendix"><i class="fa fa-check"></i><b>1.4</b> Appendix</a></li>
+<li class="chapter" data-level="1.5" data-path="01-MG_Bookdown_guide.html"><a href="#yaml-files"><i class="fa fa-check"></i><b>1.5</b> YAML files</a></li>
+<li class="chapter" data-level="1.6" data-path="01-MG_Bookdown_guide.html"><a href="#web-exercises"><i class="fa fa-check"></i><b>1.6</b> Web exercises</a>
 <ul>
-<li class="chapter" data-level="1.4.1" data-path="01-MG_Bookdown_guide.html"><a href="#mcq-example"><i class="fa fa-check"></i><b>1.4.1</b> MCQ example</a></li>
-<li class="chapter" data-level="1.4.2" data-path="01-MG_Bookdown_guide.html"><a href="#template"><i class="fa fa-check"></i><b>1.4.2</b> template</a></li>
-<li class="chapter" data-level="1.4.3" data-path="01-MG_Bookdown_guide.html"><a href="#expandable-help-box-example"><i class="fa fa-check"></i><b>1.4.3</b> Expandable help box example</a></li>
+<li class="chapter" data-level="1.6.1" data-path="01-MG_Bookdown_guide.html"><a href="#mcq-example"><i class="fa fa-check"></i><b>1.6.1</b> MCQ example</a></li>
+<li class="chapter" data-level="1.6.2" data-path="01-MG_Bookdown_guide.html"><a href="#template"><i class="fa fa-check"></i><b>1.6.2</b> template</a></li>
+<li class="chapter" data-level="1.6.3" data-path="01-MG_Bookdown_guide.html"><a href="#expandable-help-box-example"><i class="fa fa-check"></i><b>1.6.3</b> Expandable help box example</a></li>
+<li class="chapter" data-level="1.6.4" data-path="01-MG_Bookdown_guide.html"><a href="#initalising"><i class="fa fa-check"></i><b>1.6.4</b> Initalising</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path="01-MG_Bookdown_guide.html"><a href="#initalising"><i class="fa fa-check"></i><b>1.5</b> Initalising</a></li>
-<li class="chapter" data-level="1.6" data-path="01-MG_Bookdown_guide.html"><a href="#embed-youtube-urls"><i class="fa fa-check"></i><b>1.6</b> Embed YouTube URLS</a></li>
-<li class="chapter" data-level="1.7" data-path="01-MG_Bookdown_guide.html"><a href="#style.css-code-to-make-page-wider"><i class="fa fa-check"></i><b>1.7</b> style.css code to make page wider</a></li>
-<li class="chapter" data-level="1.8" data-path="01-MG_Bookdown_guide.html"><a href="#create-one-page-html-book"><i class="fa fa-check"></i><b>1.8</b> Create one page html book</a></li>
+<li class="chapter" data-level="1.7" data-path="01-MG_Bookdown_guide.html"><a href="#embed-youtube-urls"><i class="fa fa-check"></i><b>1.7</b> Embed YouTube URLS</a></li>
+<li class="chapter" data-level="1.8" data-path="01-MG_Bookdown_guide.html"><a href="#style.css-code-to-make-page-wider"><i class="fa fa-check"></i><b>1.8</b> style.css code to make page wider</a></li>
+<li class="chapter" data-level="1.9" data-path="01-MG_Bookdown_guide.html"><a href="#create-one-page-html-book"><i class="fa fa-check"></i><b>1.9</b> Create one page html book</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -176,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">MG Bookdown Guide</h1>
 <p class="author"><em>Matthew R. Gemmell</em></p>
-<p class="date"><em>2023-03-01</em></p>
+<p class="date"><em>2023-03-03</em></p>
 </div>
 <div id="mg-bookdown-guide" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> MG Bookdown Guide<a href="#mg-bookdown-guide" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -201,8 +203,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>HTMLS found in "_book" directory Need to run render_book command to update any changes</p>
 <p>Easiest way I find is to have 1 page per chapter File names need to start with a number to show order 01-, 02-, 03- etc</p>
 </div>
-<div id="yaml-files" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> YAML files<a href="#yaml-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="section-part" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Section part<a href="#section-part" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To create a section part you can add the following to the top of a page.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># (PART\*) Name {-}</span></span></code></pre></div>
+</div>
+<div id="appendix" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Appendix<a href="#appendix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You can create an appendix from one or multiple pages.</p>
+<p>Ensure the first page of your appendix has the following at the top:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># (APPENDIX) Appendix {-}</span></span></code></pre></div>
+</div>
+<div id="yaml-files" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> YAML files<a href="#yaml-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You will need to edit some YAML files</p>
 <ul>
 <li><code>_bookdown.yml</code> : Good to change the "book_filename:"</li>
@@ -221,36 +234,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://bookdown.org/yihui/rmarkdown/bookdown-output.html" class="uri">https://bookdown.org/yihui/rmarkdown/bookdown-output.html</a></li>
 </ul>
 </div>
-<div id="web-exercises" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> Web exercises<a href="#web-exercises" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="web-exercises" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> Web exercises<a href="#web-exercises" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The R package <a href="https://github.com/PsyTeachR/webexercises"><code>webexercises</code></a> is useful to include MCQs and other functions in your bookdown.</p>
 <p>You will need to initialise this which is below the MCQ and expand example. For more functions please see the following <a href="https://psyteachr.github.io/webexercises/">page</a>.</p>
-<div id="mcq-example" class="section level3 hasAnchor" number="1.4.1">
-<h3><span class="header-section-number">1.4.1</span> MCQ example<a href="#mcq-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="mcq-example" class="section level3 hasAnchor" number="1.6.1">
+<h3><span class="header-section-number">1.6.1</span> MCQ example<a href="#mcq-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Example code chunk:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>```{r, echo = FALSE}</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>opts_p &lt;- c(&quot;__A1__&quot;, &quot;__A2__&quot;, answer=&quot;__A3__&quot;)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>```</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>1. Question? `r longmcq(opts_p)`</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>```{r, echo = FALSE}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>opts_p &lt;- c(&quot;__A1__&quot;, &quot;__A2__&quot;, answer=&quot;__A3__&quot;)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>1. Question? `r longmcq(opts_p)`</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>Question?
-<div id="radio_IQJGOMNTEF" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_IQJGOMNTEF" value=""></input> <span><strong>A1</strong></span></label><label><input type="radio" autocomplete="off" name="radio_IQJGOMNTEF" value=""></input> <span><strong>A2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_IQJGOMNTEF" value="answer"></input> <span><strong>A3</strong></span></label>
+<div id="radio_MFSNNSSXBB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MFSNNSSXBB" value=""></input> <span><strong>A1</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MFSNNSSXBB" value=""></input> <span><strong>A2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MFSNNSSXBB" value="answer"></input> <span><strong>A3</strong></span></label>
 </div></li>
 </ol>
 </div>
-<div id="template" class="section level3 hasAnchor" number="1.4.2">
-<h3><span class="header-section-number">1.4.2</span> template<a href="#template" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>```{r, eval = FALSE}</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>opts_p &lt;- c(&quot;__ __&quot;, &quot;__ __&quot;, &quot;__ __&quot;)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>```</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>`r longmcq(opts_p)`</span></code></pre></div>
+<div id="template" class="section level3 hasAnchor" number="1.6.2">
+<h3><span class="header-section-number">1.6.2</span> template<a href="#template" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>```{r, eval = FALSE}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>opts_p &lt;- c(&quot;__ __&quot;, &quot;__ __&quot;, &quot;__ __&quot;)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>```</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>`r longmcq(opts_p)`</span></code></pre></div>
 </div>
-<div id="expandable-help-box-example" class="section level3 hasAnchor" number="1.4.3">
-<h3><span class="header-section-number">1.4.3</span> Expandable help box example<a href="#expandable-help-box-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r hide(&quot;Title&quot;)</span><span class="st">`</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Contents</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r unhide()</span><span class="st">`</span></span></code></pre></div>
+<div id="expandable-help-box-example" class="section level3 hasAnchor" number="1.6.3">
+<h3><span class="header-section-number">1.6.3</span> Expandable help box example<a href="#expandable-help-box-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r hide(&quot;Title&quot;)</span><span class="st">`</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>Contents</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="st">`</span><span class="at">r unhide()</span><span class="st">`</span></span></code></pre></div>
 <div class="webex-solution">
 <button>
 Title
@@ -258,57 +271,63 @@ Title
 <p>Contents</p>
 </div>
 </div>
-</div>
-<div id="initalising" class="section level2 hasAnchor" number="1.5">
-<h2><span class="header-section-number">1.5</span> Initalising<a href="#initalising" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="initalising" class="section level3 hasAnchor" number="1.6.4">
+<h3><span class="header-section-number">1.6.4</span> Initalising<a href="#initalising" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You first need to add web exerices to your bookdown (only needs doing once).</p>
 <p>Run below in your bookdown dir</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;webexercises&quot;</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_to_bookdown</span>(<span class="at">bookdown_dir =</span> <span class="st">&quot;.&quot;</span>,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">include_dir =</span> <span class="st">&quot;www&quot;</span>,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">script_dir =</span> <span class="st">&quot;scripts&quot;</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">output_format =</span> <span class="st">&quot;gitbook&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;webexercises&quot;</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">add_to_bookdown</span>(<span class="at">bookdown_dir =</span> <span class="st">&quot;.&quot;</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">include_dir =</span> <span class="st">&quot;www&quot;</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">script_dir =</span> <span class="st">&quot;scripts&quot;</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">output_format =</span> <span class="st">&quot;gitbook&quot;</span>)</span></code></pre></div>
 <p>If like me you don't use an index.rmd file and instead use your "01-XX.Rmd" as the first page you will need to delete the resulting "index.rmd" file. Then you need to add in the below to your "01-XX.RMD" file just below the block with the title, author etc.</p>
-<p><strong><code>{r cite-packages, include = FALSE} # automatically create a bib database for R packages # add any packages you want to cite here knitr::write_bib(c(   .packages(), 'bookdown', 'webexercises' ), 'packages.bib')</code></strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>```{r cite-packages, include = FALSE}</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a># automatically create a bib database for R packages</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a># add any packages you want to cite here</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>knitr::write_bib(c(</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  .packages(), &#39;bookdown&#39;, &#39;webexercises&#39;</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>), &#39;packages.bib&#39;)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>```</span></code></pre></div>
 <p>To make the MCQs have nice boxes around the text change the webex-radiogroup label to the below. This is found in ./www/webex.css</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.webex-radiogroup</span> label {</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*Text colour*/</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: : <span class="cn">#aaaaaa</span><span class="op">;</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-left</span>: <span class="dv">2</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-bottom</span>: <span class="dv">0.25</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">text-indent</span>: <span class="dv">-1</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding-left</span>: <span class="dv">0.5</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-weight</span>: <span class="dv">400</span><span class="op">;</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">block</span><span class="op">;</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*Set border of text to solid and dark grey*/</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span>: <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#1d1d1d</span><span class="op">;</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span>: <span class="dv">0.25</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*Set colour in box to white so works for every bookdown colour scheme*/</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="cn">white</span><span class="op">;</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.webex-radiogroup</span> label {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*Text colour*/</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: : <span class="cn">#aaaaaa</span><span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-left</span>: <span class="dv">2</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-bottom</span>: <span class="dv">0.25</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">text-indent</span>: <span class="dv">-1</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding-left</span>: <span class="dv">0.5</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-weight</span>: <span class="dv">400</span><span class="op">;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">block</span><span class="op">;</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*Set border of text to solid and dark grey*/</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span>: <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#1d1d1d</span><span class="op">;</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span>: <span class="dv">0.25</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="co">/*Set colour in box to white so works for every bookdown colour scheme*/</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
-<div id="embed-youtube-urls" class="section level2 hasAnchor" number="1.6">
-<h2><span class="header-section-number">1.6</span> Embed YouTube URLS<a href="#embed-youtube-urls" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="embed-youtube-urls" class="section level2 hasAnchor" number="1.7">
+<h2><span class="header-section-number">1.7</span> Embed YouTube URLS<a href="#embed-youtube-urls" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Handy guide: <a href="https://www.h3xed.com/web-development/how-to-make-a-responsive-100-width-youtube-iframe-embed" class="uri">https://www.h3xed.com/web-development/how-to-make-a-responsive-100-width-youtube-iframe-embed</a></p>
 <p>Add the following to your style.css</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.container</span> {</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">position</span>: <span class="dv">relative</span><span class="op">;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">height</span>: <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">padding-bottom</span>: <span class="dv">56.25</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.video</span> {</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">position</span>: <span class="dv">absolute</span><span class="op">;</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">top</span>: <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">left</span>: <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">height</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.container</span> {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">position</span>: <span class="dv">relative</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">height</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">padding-bottom</span>: <span class="dv">56.25</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.video</span> {</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">position</span>: <span class="dv">absolute</span><span class="op">;</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">top</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">left</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">height</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Add the following code to where you want the URL to be embedded. Change the link to the embed link of your video.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>&lt;div class=&quot;container&quot;<span class="op">&gt;</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>&lt;iframe src=&quot;https<span class="in">://www</span><span class="fu">.youtube.com</span>/embed/U_RkeDVU2cg&quot; </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>frameborder=&quot;0&quot; allowfullscreen class=&quot;video&quot;<span class="op">&gt;</span>&lt;/iframe<span class="op">&gt;</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>&lt;/div<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>&lt;div class=&quot;container&quot;<span class="op">&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>&lt;iframe src=&quot;https<span class="in">://www</span><span class="fu">.youtube.com</span>/embed/U_RkeDVU2cg&quot; </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>frameborder=&quot;0&quot; allowfullscreen class=&quot;video&quot;<span class="op">&gt;</span>&lt;/iframe<span class="op">&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>&lt;/div<span class="op">&gt;</span></span></code></pre></div>
 <style type="text/css">
 <div class="container">
 <iframe src="https://www.youtube.com/embed/U_RkeDVU2cg" 
@@ -320,22 +339,22 @@ frameborder="0" allowfullscreen class="video"></iframe>
 </iframe>
 </div>
 </div>
-<div id="style.css-code-to-make-page-wider" class="section level2 hasAnchor" number="1.7">
-<h2><span class="header-section-number">1.7</span> style.css code to make page wider<a href="#style.css-code-to-make-page-wider" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="style.css-code-to-make-page-wider" class="section level2 hasAnchor" number="1.8">
+<h2><span class="header-section-number">1.8</span> style.css code to make page wider<a href="#style.css-code-to-make-page-wider" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Add code to your bookdown's "style.css" file</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.book</span> <span class="fu">.book-body</span> <span class="fu">.page-wrapper</span> <span class="fu">.page-inner</span> {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">max-width</span>: <span class="dv">1000</span><span class="dt">px</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.book</span> <span class="fu">.book-body</span> <span class="fu">.page-wrapper</span> <span class="fu">.page-inner</span> {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">max-width</span>: <span class="dv">1000</span><span class="dt">px</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
-<div id="create-one-page-html-book" class="section level2 hasAnchor" number="1.8">
-<h2><span class="header-section-number">1.8</span> Create one page html book<a href="#create-one-page-html-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="create-one-page-html-book" class="section level2 hasAnchor" number="1.9">
+<h2><span class="header-section-number">1.9</span> Create one page html book<a href="#create-one-page-html-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Add the following to _output.yml</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>bookdown<span class="in">::html</span>_book<span class="in">:</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  split_by<span class="in">: none</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  css<span class="in">: style</span><span class="fu">.css</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  toc<span class="in">: false</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>bookdown<span class="in">::html</span>_book<span class="in">:</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  split_by<span class="in">: none</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  css<span class="in">: style</span><span class="fu">.css</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  toc<span class="in">: false</span></span></code></pre></div>
 <p>Run the following command in the book dir to render</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>(<span class="st">&quot;01-XX.Rmd&quot;</span>, <span class="st">&quot;bookdown::html_book&quot;</span>, <span class="at">output_dir =</span> <span class="st">&quot;one_file_book&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>(<span class="st">&quot;01-XX.Rmd&quot;</span>, <span class="st">&quot;bookdown::html_book&quot;</span>, <span class="at">output_dir =</span> <span class="st">&quot;one_file_book&quot;</span>)</span></code></pre></div>
 
 </div>
 </div>
