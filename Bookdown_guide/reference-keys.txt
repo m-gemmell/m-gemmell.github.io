@@ -1,6 +1,7 @@
 mg-bookdown-guide
 intro
 create-bookdown-html
+add-image
 section-part
 appendix
 yaml-files
@@ -13,7 +14,7 @@ icons
 fontawesome
 ionicons
 bioicons
-search-pages
+searching
 installing-icons
 embed-youtube-urls
 style.css-code-to-make-page-wider
