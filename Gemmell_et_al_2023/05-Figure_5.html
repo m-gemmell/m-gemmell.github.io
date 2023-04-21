@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Figure 5 | ANCOM project</title>
   <meta name="description" content="Book to contain visualisation for the “ANCOM” project" />
-  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Figure 5 | ANCOM project" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2022-12-14" />
+<meta name="date" content="2023-04-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,12 +52,12 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.24/datatables.js"></script>
-<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="libs/datatables-binding-0.27/datatables.js"></script>
+<link href="libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 
@@ -250,151 +250,151 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="figure-5" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Figure 5<a href="05-Figure_5.html#figure-5" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>##libraries</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="05-Figure_5.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
-<span id="cb21-2"><a href="05-Figure_5.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;phyloseq&quot;</span>)</span>
-<span id="cb21-3"><a href="05-Figure_5.html#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb21-4"><a href="05-Figure_5.html#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;dplyr&quot;</span>)</span>
-<span id="cb21-5"><a href="05-Figure_5.html#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;vegan&quot;</span>)</span>
-<span id="cb21-6"><a href="05-Figure_5.html#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;reshape2&quot;</span>)</span>
-<span id="cb21-7"><a href="05-Figure_5.html#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
-<span id="cb21-8"><a href="05-Figure_5.html#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggh4x&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="05-Figure_5.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb12-2"><a href="05-Figure_5.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;phyloseq&quot;</span>)</span>
+<span id="cb12-3"><a href="05-Figure_5.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb12-4"><a href="05-Figure_5.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;dplyr&quot;</span>)</span>
+<span id="cb12-5"><a href="05-Figure_5.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;vegan&quot;</span>)</span>
+<span id="cb12-6"><a href="05-Figure_5.html#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;reshape2&quot;</span>)</span>
+<span id="cb12-7"><a href="05-Figure_5.html#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb12-8"><a href="05-Figure_5.html#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggh4x&quot;</span>)</span></code></pre></div>
 <div id="preprocess-data-1" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Preprocess data<a href="05-Figure_5.html#preprocess-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="05-Figure_5.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Read in data</span></span>
-<span id="cb22-2"><a href="05-Figure_5.html#cb22-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;./data/Pilot SCFA data - MG.csv&quot;</span>, </span>
-<span id="cb22-3"><a href="05-Figure_5.html#cb22-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">check.names =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb22-4"><a href="05-Figure_5.html#cb22-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">row.names =</span> <span class="dv">1</span>)</span>
-<span id="cb22-5"><a href="05-Figure_5.html#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Sample names</span></span>
-<span id="cb22-6"><a href="05-Figure_5.html#cb22-6" aria-hidden="true" tabindex="-1"></a>sample_names <span class="ot">&lt;-</span> <span class="fu">colnames</span>(df)</span>
-<span id="cb22-7"><a href="05-Figure_5.html#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co">#compounds</span></span>
-<span id="cb22-8"><a href="05-Figure_5.html#cb22-8" aria-hidden="true" tabindex="-1"></a>compound_names <span class="ot">&lt;-</span> <span class="fu">row.names</span>(df[<span class="dv">6</span><span class="sc">:</span><span class="dv">14</span>,])</span>
-<span id="cb22-9"><a href="05-Figure_5.html#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-10"><a href="05-Figure_5.html#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="co">#First create OTU matrix</span></span>
-<span id="cb22-11"><a href="05-Figure_5.html#cb22-11" aria-hidden="true" tabindex="-1"></a>otu_df <span class="ot">&lt;-</span> df[<span class="dv">6</span><span class="sc">:</span><span class="dv">14</span>,]</span>
-<span id="cb22-12"><a href="05-Figure_5.html#cb22-12" aria-hidden="true" tabindex="-1"></a>num_otu_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">apply</span>(otu_df, <span class="dv">2</span>, <span class="cf">function</span>(x) <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(x))))</span>
-<span id="cb22-13"><a href="05-Figure_5.html#cb22-13" aria-hidden="true" tabindex="-1"></a>otu_mat <span class="ot">&lt;-</span> <span class="fu">data.matrix</span>(num_otu_df)</span>
-<span id="cb22-14"><a href="05-Figure_5.html#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(otu_mat) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;OTU&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(otu_mat))</span>
-<span id="cb22-15"><a href="05-Figure_5.html#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(otu_mat) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;Sample&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(otu_mat))</span>
-<span id="cb22-16"><a href="05-Figure_5.html#cb22-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-17"><a href="05-Figure_5.html#cb22-17" aria-hidden="true" tabindex="-1"></a><span class="co">#Tax matrix</span></span>
-<span id="cb22-18"><a href="05-Figure_5.html#cb22-18" aria-hidden="true" tabindex="-1"></a>tax_mat <span class="ot">&lt;-</span> otu_mat[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span>
-<span id="cb22-19"><a href="05-Figure_5.html#cb22-19" aria-hidden="true" tabindex="-1"></a>tax_mat[,<span class="dv">1</span>] <span class="ot">&lt;-</span> compound_names</span>
-<span id="cb22-20"><a href="05-Figure_5.html#cb22-20" aria-hidden="true" tabindex="-1"></a>tax_mat[,<span class="dv">2</span>] <span class="ot">&lt;-</span> compound_names</span>
-<span id="cb22-21"><a href="05-Figure_5.html#cb22-21" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tax_mat) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Compund&quot;</span>,<span class="st">&quot;X&quot;</span>)</span>
-<span id="cb22-22"><a href="05-Figure_5.html#cb22-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-23"><a href="05-Figure_5.html#cb22-23" aria-hidden="true" tabindex="-1"></a><span class="co">#Sample_data_frame</span></span>
-<span id="cb22-24"><a href="05-Figure_5.html#cb22-24" aria-hidden="true" tabindex="-1"></a>metadf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">lapply</span>(df[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,], as.character), <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>)</span>
-<span id="cb22-25"><a href="05-Figure_5.html#cb22-25" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(metadf) <span class="ot">&lt;-</span> <span class="fu">row.names</span>(df[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,])</span>
-<span id="cb22-26"><a href="05-Figure_5.html#cb22-26" aria-hidden="true" tabindex="-1"></a>metadf[<span class="st">&quot;Sample_name&quot;</span>,] <span class="ot">&lt;-</span> <span class="fu">colnames</span>(df)</span>
-<span id="cb22-27"><a href="05-Figure_5.html#cb22-27" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(metadf) <span class="ot">&lt;-</span> <span class="fu">colnames</span>(otu_mat)</span>
-<span id="cb22-28"><a href="05-Figure_5.html#cb22-28" aria-hidden="true" tabindex="-1"></a>t_metadf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">t</span>(metadf), <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>)</span>
-<span id="cb22-29"><a href="05-Figure_5.html#cb22-29" aria-hidden="true" tabindex="-1"></a>t_metadf[t_metadf<span class="sc">$</span>Storage.time <span class="sc">==</span> <span class="dv">0</span>,<span class="st">&quot;Temp&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Baseline&quot;</span></span>
-<span id="cb22-30"><a href="05-Figure_5.html#cb22-30" aria-hidden="true" tabindex="-1"></a>t_metadf[,<span class="st">&quot;Buffer.type.Temp&quot;</span>] <span class="ot">&lt;-</span> <span class="fu">paste</span>(t_metadf[,<span class="st">&quot;Buffer.type&quot;</span>],t_metadf[,<span class="st">&quot;Temp&quot;</span>],<span class="at">sep=</span><span class="st">&quot;|&quot;</span>)</span>
-<span id="cb22-31"><a href="05-Figure_5.html#cb22-31" aria-hidden="true" tabindex="-1"></a><span class="co">#Temp and time column</span></span>
-<span id="cb22-32"><a href="05-Figure_5.html#cb22-32" aria-hidden="true" tabindex="-1"></a>t_metadf[,<span class="st">&quot;Temp.Storage.time&quot;</span>] <span class="ot">&lt;-</span> </span>
-<span id="cb22-33"><a href="05-Figure_5.html#cb22-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste</span>(t_metadf[,<span class="st">&quot;Temp&quot;</span>],t_metadf[,<span class="st">&quot;Storage.time&quot;</span>],<span class="at">sep=</span><span class="st">&quot;|&quot;</span>)</span>
-<span id="cb22-34"><a href="05-Figure_5.html#cb22-34" aria-hidden="true" tabindex="-1"></a><span class="co">#Change Baseline|0 to Baseline</span></span>
-<span id="cb22-35"><a href="05-Figure_5.html#cb22-35" aria-hidden="true" tabindex="-1"></a>t_metadf[,<span class="st">&quot;Temp.Storage.time&quot;</span>] <span class="ot">&lt;-</span> </span>
-<span id="cb22-36"><a href="05-Figure_5.html#cb22-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gsub</span>(<span class="at">pattern =</span> <span class="st">&quot;Baseline</span><span class="sc">\\</span><span class="st">|0&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;Baseline&quot;</span>, </span>
-<span id="cb22-37"><a href="05-Figure_5.html#cb22-37" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> t_metadf[,<span class="st">&quot;Temp.Storage.time&quot;</span>])</span>
-<span id="cb22-38"><a href="05-Figure_5.html#cb22-38" aria-hidden="true" tabindex="-1"></a><span class="co">#Order of temp</span></span>
-<span id="cb22-39"><a href="05-Figure_5.html#cb22-39" aria-hidden="true" tabindex="-1"></a>t_metadf[,<span class="st">&quot;Temp&quot;</span>] <span class="ot">&lt;-</span> </span>
-<span id="cb22-40"><a href="05-Figure_5.html#cb22-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">factor</span>(t_metadf[,<span class="st">&quot;Temp&quot;</span>], <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;Baseline&quot;</span>, <span class="st">&quot;RT&quot;</span>, <span class="st">&quot;Fridge&quot;</span>))</span>
-<span id="cb22-41"><a href="05-Figure_5.html#cb22-41" aria-hidden="true" tabindex="-1"></a><span class="co">#Sample column</span></span>
-<span id="cb22-42"><a href="05-Figure_5.html#cb22-42" aria-hidden="true" tabindex="-1"></a>t_metadf<span class="sc">$</span><span class="st">`</span><span class="at">Sample name</span><span class="st">`</span> <span class="ot">&lt;-</span> t_metadf<span class="sc">$</span>Sample_name</span>
-<span id="cb22-43"><a href="05-Figure_5.html#cb22-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-44"><a href="05-Figure_5.html#cb22-44" aria-hidden="true" tabindex="-1"></a><span class="co">#Create phyloseq object</span></span>
-<span id="cb22-45"><a href="05-Figure_5.html#cb22-45" aria-hidden="true" tabindex="-1"></a>OTU <span class="ot">&lt;-</span> <span class="fu">otu_table</span>(otu_mat, <span class="at">taxa_are_rows =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb22-46"><a href="05-Figure_5.html#cb22-46" aria-hidden="true" tabindex="-1"></a>tax_mat <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(tax_mat[,<span class="dv">1</span>])</span>
-<span id="cb22-47"><a href="05-Figure_5.html#cb22-47" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tax_mat) <span class="ot">&lt;-</span> <span class="st">&quot;Compound&quot;</span></span>
-<span id="cb22-48"><a href="05-Figure_5.html#cb22-48" aria-hidden="true" tabindex="-1"></a>TAX <span class="ot">&lt;-</span> <span class="fu">tax_table</span>(tax_mat)</span>
-<span id="cb22-49"><a href="05-Figure_5.html#cb22-49" aria-hidden="true" tabindex="-1"></a>sampledata <span class="ot">&lt;-</span> <span class="fu">sample_data</span>(<span class="fu">data.frame</span>(t_metadf, <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>))</span>
-<span id="cb22-50"><a href="05-Figure_5.html#cb22-50" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">&lt;-</span> <span class="fu">phyloseq</span>(OTU,TAX,sampledata)</span>
-<span id="cb22-51"><a href="05-Figure_5.html#cb22-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-52"><a href="05-Figure_5.html#cb22-52" aria-hidden="true" tabindex="-1"></a><span class="co">#remove samples with no otu numbers</span></span>
-<span id="cb22-53"><a href="05-Figure_5.html#cb22-53" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">=</span> <span class="fu">subset_samples</span>(physeq, Sample_name <span class="sc">!=</span> <span class="st">&quot;6Q&quot;</span>)</span>
-<span id="cb22-54"><a href="05-Figure_5.html#cb22-54" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">=</span> <span class="fu">subset_samples</span>(physeq, Sample_name <span class="sc">!=</span> <span class="st">&quot;6R&quot;</span>)</span>
-<span id="cb22-55"><a href="05-Figure_5.html#cb22-55" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">=</span> <span class="fu">subset_samples</span>(physeq, Sample_name <span class="sc">!=</span> <span class="st">&quot;6S&quot;</span>)</span>
-<span id="cb22-56"><a href="05-Figure_5.html#cb22-56" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">=</span> <span class="fu">subset_samples</span>(physeq, Sample_name <span class="sc">!=</span> <span class="st">&quot;6T&quot;</span>)</span>
-<span id="cb22-57"><a href="05-Figure_5.html#cb22-57" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">=</span> <span class="fu">subset_samples</span>(physeq, Sample_name <span class="sc">!=</span> <span class="st">&quot;6P&quot;</span>)</span>
-<span id="cb22-58"><a href="05-Figure_5.html#cb22-58" aria-hidden="true" tabindex="-1"></a><span class="co">#save physeq object</span></span>
-<span id="cb22-59"><a href="05-Figure_5.html#cb22-59" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(physeq, <span class="at">file =</span> <span class="st">&quot;./data/lipid_physeq_object&quot;</span>)</span>
-<span id="cb22-60"><a href="05-Figure_5.html#cb22-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-61"><a href="05-Figure_5.html#cb22-61" aria-hidden="true" tabindex="-1"></a><span class="co">#Set to even sampling depth</span></span>
-<span id="cb22-62"><a href="05-Figure_5.html#cb22-62" aria-hidden="true" tabindex="-1"></a><span class="co">#Set to even sampling depth (1000)</span></span>
-<span id="cb22-63"><a href="05-Figure_5.html#cb22-63" aria-hidden="true" tabindex="-1"></a>physeq_1k <span class="ot">=</span> <span class="fu">transform_sample_counts</span>(physeq, </span>
-<span id="cb22-64"><a href="05-Figure_5.html#cb22-64" aria-hidden="true" tabindex="-1"></a>                                    <span class="cf">function</span>(x) <span class="dv">1000</span> <span class="sc">*</span> x<span class="sc">/</span><span class="fu">sum</span>(x))</span>
-<span id="cb22-65"><a href="05-Figure_5.html#cb22-65" aria-hidden="true" tabindex="-1"></a><span class="co">#save physeq object</span></span>
-<span id="cb22-66"><a href="05-Figure_5.html#cb22-66" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(physeq_1k, <span class="at">file =</span> <span class="st">&quot;./data/lipid_physeq_1k_object&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="05-Figure_5.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Read in data</span></span>
+<span id="cb13-2"><a href="05-Figure_5.html#cb13-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;./data/Pilot SCFA data - MG.csv&quot;</span>, </span>
+<span id="cb13-3"><a href="05-Figure_5.html#cb13-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">check.names =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb13-4"><a href="05-Figure_5.html#cb13-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">row.names =</span> <span class="dv">1</span>)</span>
+<span id="cb13-5"><a href="05-Figure_5.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Sample names</span></span>
+<span id="cb13-6"><a href="05-Figure_5.html#cb13-6" aria-hidden="true" tabindex="-1"></a>sample_names <span class="ot">&lt;-</span> <span class="fu">colnames</span>(df)</span>
+<span id="cb13-7"><a href="05-Figure_5.html#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co">#compounds</span></span>
+<span id="cb13-8"><a href="05-Figure_5.html#cb13-8" aria-hidden="true" tabindex="-1"></a>compound_names <span class="ot">&lt;-</span> <span class="fu">row.names</span>(df[<span class="dv">6</span><span class="sc">:</span><span class="dv">14</span>,])</span>
+<span id="cb13-9"><a href="05-Figure_5.html#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="05-Figure_5.html#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co">#First create OTU matrix</span></span>
+<span id="cb13-11"><a href="05-Figure_5.html#cb13-11" aria-hidden="true" tabindex="-1"></a>otu_df <span class="ot">&lt;-</span> df[<span class="dv">6</span><span class="sc">:</span><span class="dv">14</span>,]</span>
+<span id="cb13-12"><a href="05-Figure_5.html#cb13-12" aria-hidden="true" tabindex="-1"></a>num_otu_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">apply</span>(otu_df, <span class="dv">2</span>, <span class="cf">function</span>(x) <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(x))))</span>
+<span id="cb13-13"><a href="05-Figure_5.html#cb13-13" aria-hidden="true" tabindex="-1"></a>otu_mat <span class="ot">&lt;-</span> <span class="fu">data.matrix</span>(num_otu_df)</span>
+<span id="cb13-14"><a href="05-Figure_5.html#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(otu_mat) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;OTU&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(otu_mat))</span>
+<span id="cb13-15"><a href="05-Figure_5.html#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(otu_mat) <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;Sample&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(otu_mat))</span>
+<span id="cb13-16"><a href="05-Figure_5.html#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="05-Figure_5.html#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co">#Tax matrix</span></span>
+<span id="cb13-18"><a href="05-Figure_5.html#cb13-18" aria-hidden="true" tabindex="-1"></a>tax_mat <span class="ot">&lt;-</span> otu_mat[,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span>
+<span id="cb13-19"><a href="05-Figure_5.html#cb13-19" aria-hidden="true" tabindex="-1"></a>tax_mat[,<span class="dv">1</span>] <span class="ot">&lt;-</span> compound_names</span>
+<span id="cb13-20"><a href="05-Figure_5.html#cb13-20" aria-hidden="true" tabindex="-1"></a>tax_mat[,<span class="dv">2</span>] <span class="ot">&lt;-</span> compound_names</span>
+<span id="cb13-21"><a href="05-Figure_5.html#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tax_mat) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Compund&quot;</span>,<span class="st">&quot;X&quot;</span>)</span>
+<span id="cb13-22"><a href="05-Figure_5.html#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="05-Figure_5.html#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="co">#Sample_data_frame</span></span>
+<span id="cb13-24"><a href="05-Figure_5.html#cb13-24" aria-hidden="true" tabindex="-1"></a>metadf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">lapply</span>(df[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,], as.character), <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>)</span>
+<span id="cb13-25"><a href="05-Figure_5.html#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(metadf) <span class="ot">&lt;-</span> <span class="fu">row.names</span>(df[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,])</span>
+<span id="cb13-26"><a href="05-Figure_5.html#cb13-26" aria-hidden="true" tabindex="-1"></a>metadf[<span class="st">&quot;Sample_name&quot;</span>,] <span class="ot">&lt;-</span> <span class="fu">colnames</span>(df)</span>
+<span id="cb13-27"><a href="05-Figure_5.html#cb13-27" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(metadf) <span class="ot">&lt;-</span> <span class="fu">colnames</span>(otu_mat)</span>
+<span id="cb13-28"><a href="05-Figure_5.html#cb13-28" aria-hidden="true" tabindex="-1"></a>t_metadf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">t</span>(metadf), <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>)</span>
+<span id="cb13-29"><a href="05-Figure_5.html#cb13-29" aria-hidden="true" tabindex="-1"></a>t_metadf[t_metadf<span class="sc">$</span>Storage.time <span class="sc">==</span> <span class="dv">0</span>,<span class="st">&quot;Temp&quot;</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Baseline&quot;</span></span>
+<span id="cb13-30"><a href="05-Figure_5.html#cb13-30" aria-hidden="true" tabindex="-1"></a>t_metadf[,<span class="st">&quot;Buffer.type.Temp&quot;</span>] <span class="ot">&lt;-</span> <span class="fu">paste</span>(t_metadf[,<span class="st">&quot;Buffer.type&quot;</span>],t_metadf[,<span class="st">&quot;Temp&quot;</span>],<span class="at">sep=</span><span class="st">&quot;|&quot;</span>)</span>
+<span id="cb13-31"><a href="05-Figure_5.html#cb13-31" aria-hidden="true" tabindex="-1"></a><span class="co">#Temp and time column</span></span>
+<span id="cb13-32"><a href="05-Figure_5.html#cb13-32" aria-hidden="true" tabindex="-1"></a>t_metadf[,<span class="st">&quot;Temp.Storage.time&quot;</span>] <span class="ot">&lt;-</span> </span>
+<span id="cb13-33"><a href="05-Figure_5.html#cb13-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste</span>(t_metadf[,<span class="st">&quot;Temp&quot;</span>],t_metadf[,<span class="st">&quot;Storage.time&quot;</span>],<span class="at">sep=</span><span class="st">&quot;|&quot;</span>)</span>
+<span id="cb13-34"><a href="05-Figure_5.html#cb13-34" aria-hidden="true" tabindex="-1"></a><span class="co">#Change Baseline|0 to Baseline</span></span>
+<span id="cb13-35"><a href="05-Figure_5.html#cb13-35" aria-hidden="true" tabindex="-1"></a>t_metadf[,<span class="st">&quot;Temp.Storage.time&quot;</span>] <span class="ot">&lt;-</span> </span>
+<span id="cb13-36"><a href="05-Figure_5.html#cb13-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gsub</span>(<span class="at">pattern =</span> <span class="st">&quot;Baseline</span><span class="sc">\\</span><span class="st">|0&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;Baseline&quot;</span>, </span>
+<span id="cb13-37"><a href="05-Figure_5.html#cb13-37" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> t_metadf[,<span class="st">&quot;Temp.Storage.time&quot;</span>])</span>
+<span id="cb13-38"><a href="05-Figure_5.html#cb13-38" aria-hidden="true" tabindex="-1"></a><span class="co">#Order of temp</span></span>
+<span id="cb13-39"><a href="05-Figure_5.html#cb13-39" aria-hidden="true" tabindex="-1"></a>t_metadf[,<span class="st">&quot;Temp&quot;</span>] <span class="ot">&lt;-</span> </span>
+<span id="cb13-40"><a href="05-Figure_5.html#cb13-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">factor</span>(t_metadf[,<span class="st">&quot;Temp&quot;</span>], <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;Baseline&quot;</span>, <span class="st">&quot;RT&quot;</span>, <span class="st">&quot;Fridge&quot;</span>))</span>
+<span id="cb13-41"><a href="05-Figure_5.html#cb13-41" aria-hidden="true" tabindex="-1"></a><span class="co">#Sample column</span></span>
+<span id="cb13-42"><a href="05-Figure_5.html#cb13-42" aria-hidden="true" tabindex="-1"></a>t_metadf<span class="sc">$</span><span class="st">`</span><span class="at">Sample name</span><span class="st">`</span> <span class="ot">&lt;-</span> t_metadf<span class="sc">$</span>Sample_name</span>
+<span id="cb13-43"><a href="05-Figure_5.html#cb13-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-44"><a href="05-Figure_5.html#cb13-44" aria-hidden="true" tabindex="-1"></a><span class="co">#Create phyloseq object</span></span>
+<span id="cb13-45"><a href="05-Figure_5.html#cb13-45" aria-hidden="true" tabindex="-1"></a>OTU <span class="ot">&lt;-</span> <span class="fu">otu_table</span>(otu_mat, <span class="at">taxa_are_rows =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb13-46"><a href="05-Figure_5.html#cb13-46" aria-hidden="true" tabindex="-1"></a>tax_mat <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(tax_mat[,<span class="dv">1</span>])</span>
+<span id="cb13-47"><a href="05-Figure_5.html#cb13-47" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(tax_mat) <span class="ot">&lt;-</span> <span class="st">&quot;Compound&quot;</span></span>
+<span id="cb13-48"><a href="05-Figure_5.html#cb13-48" aria-hidden="true" tabindex="-1"></a>TAX <span class="ot">&lt;-</span> <span class="fu">tax_table</span>(tax_mat)</span>
+<span id="cb13-49"><a href="05-Figure_5.html#cb13-49" aria-hidden="true" tabindex="-1"></a>sampledata <span class="ot">&lt;-</span> <span class="fu">sample_data</span>(<span class="fu">data.frame</span>(t_metadf, <span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>))</span>
+<span id="cb13-50"><a href="05-Figure_5.html#cb13-50" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">&lt;-</span> <span class="fu">phyloseq</span>(OTU,TAX,sampledata)</span>
+<span id="cb13-51"><a href="05-Figure_5.html#cb13-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-52"><a href="05-Figure_5.html#cb13-52" aria-hidden="true" tabindex="-1"></a><span class="co">#remove samples with no otu numbers</span></span>
+<span id="cb13-53"><a href="05-Figure_5.html#cb13-53" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">=</span> <span class="fu">subset_samples</span>(physeq, Sample_name <span class="sc">!=</span> <span class="st">&quot;6Q&quot;</span>)</span>
+<span id="cb13-54"><a href="05-Figure_5.html#cb13-54" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">=</span> <span class="fu">subset_samples</span>(physeq, Sample_name <span class="sc">!=</span> <span class="st">&quot;6R&quot;</span>)</span>
+<span id="cb13-55"><a href="05-Figure_5.html#cb13-55" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">=</span> <span class="fu">subset_samples</span>(physeq, Sample_name <span class="sc">!=</span> <span class="st">&quot;6S&quot;</span>)</span>
+<span id="cb13-56"><a href="05-Figure_5.html#cb13-56" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">=</span> <span class="fu">subset_samples</span>(physeq, Sample_name <span class="sc">!=</span> <span class="st">&quot;6T&quot;</span>)</span>
+<span id="cb13-57"><a href="05-Figure_5.html#cb13-57" aria-hidden="true" tabindex="-1"></a>physeq <span class="ot">=</span> <span class="fu">subset_samples</span>(physeq, Sample_name <span class="sc">!=</span> <span class="st">&quot;6P&quot;</span>)</span>
+<span id="cb13-58"><a href="05-Figure_5.html#cb13-58" aria-hidden="true" tabindex="-1"></a><span class="co">#save physeq object</span></span>
+<span id="cb13-59"><a href="05-Figure_5.html#cb13-59" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(physeq, <span class="at">file =</span> <span class="st">&quot;./data/lipid_physeq_object&quot;</span>)</span>
+<span id="cb13-60"><a href="05-Figure_5.html#cb13-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-61"><a href="05-Figure_5.html#cb13-61" aria-hidden="true" tabindex="-1"></a><span class="co">#Set to even sampling depth</span></span>
+<span id="cb13-62"><a href="05-Figure_5.html#cb13-62" aria-hidden="true" tabindex="-1"></a><span class="co">#Set to even sampling depth (1000)</span></span>
+<span id="cb13-63"><a href="05-Figure_5.html#cb13-63" aria-hidden="true" tabindex="-1"></a>physeq_1k <span class="ot">=</span> <span class="fu">transform_sample_counts</span>(physeq, </span>
+<span id="cb13-64"><a href="05-Figure_5.html#cb13-64" aria-hidden="true" tabindex="-1"></a>                                    <span class="cf">function</span>(x) <span class="dv">1000</span> <span class="sc">*</span> x<span class="sc">/</span><span class="fu">sum</span>(x))</span>
+<span id="cb13-65"><a href="05-Figure_5.html#cb13-65" aria-hidden="true" tabindex="-1"></a><span class="co">#save physeq object</span></span>
+<span id="cb13-66"><a href="05-Figure_5.html#cb13-66" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(physeq_1k, <span class="at">file =</span> <span class="st">&quot;./data/lipid_physeq_1k_object&quot;</span>)</span></code></pre></div>
 </div>
 <div id="colour-blindy-friendly-palette" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Colour blindy friendly palette<a href="05-Figure_5.html#colour-blindy-friendly-palette" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="05-Figure_5.html#cb23-1" aria-hidden="true" tabindex="-1"></a>cbbPalette <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#000000&quot;</span>, <span class="st">&quot;#E69F00&quot;</span>, <span class="st">&quot;#56B4E9&quot;</span>, <span class="st">&quot;#009E73&quot;</span>, <span class="st">&quot;#F0E442&quot;</span>, <span class="st">&quot;#0072B2&quot;</span>, <span class="st">&quot;#D55E00&quot;</span>, <span class="st">&quot;#CC79A7&quot;</span>)</span>
-<span id="cb23-2"><a href="05-Figure_5.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>())</span>
-<span id="cb23-3"><a href="05-Figure_5.html#cb23-3" aria-hidden="true" tabindex="-1"></a>scale_colour_discrete <span class="ot">&lt;-</span>  <span class="cf">function</span>(<span class="at">palname=</span>cbbPalette){</span>
-<span id="cb23-4"><a href="05-Figure_5.html#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> palname)</span>
-<span id="cb23-5"><a href="05-Figure_5.html#cb23-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb23-6"><a href="05-Figure_5.html#cb23-6" aria-hidden="true" tabindex="-1"></a>scale_fill_discrete <span class="ot">&lt;-</span>  <span class="cf">function</span>(<span class="at">palname=</span>cbbPalette){</span>
-<span id="cb23-7"><a href="05-Figure_5.html#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span>palname)</span>
-<span id="cb23-8"><a href="05-Figure_5.html#cb23-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="05-Figure_5.html#cb14-1" aria-hidden="true" tabindex="-1"></a>cbbPalette <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;#000000&quot;</span>, <span class="st">&quot;#E69F00&quot;</span>, <span class="st">&quot;#56B4E9&quot;</span>, <span class="st">&quot;#009E73&quot;</span>, <span class="st">&quot;#F0E442&quot;</span>, <span class="st">&quot;#0072B2&quot;</span>, <span class="st">&quot;#D55E00&quot;</span>, <span class="st">&quot;#CC79A7&quot;</span>)</span>
+<span id="cb14-2"><a href="05-Figure_5.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>())</span>
+<span id="cb14-3"><a href="05-Figure_5.html#cb14-3" aria-hidden="true" tabindex="-1"></a>scale_colour_discrete <span class="ot">&lt;-</span>  <span class="cf">function</span>(<span class="at">palname=</span>cbbPalette){</span>
+<span id="cb14-4"><a href="05-Figure_5.html#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> palname)</span>
+<span id="cb14-5"><a href="05-Figure_5.html#cb14-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-6"><a href="05-Figure_5.html#cb14-6" aria-hidden="true" tabindex="-1"></a>scale_fill_discrete <span class="ot">&lt;-</span>  <span class="cf">function</span>(<span class="at">palname=</span>cbbPalette){</span>
+<span id="cb14-7"><a href="05-Figure_5.html#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span>palname)</span>
+<span id="cb14-8"><a href="05-Figure_5.html#cb14-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 <div id="a-heatmap" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> A Heatmap<a href="05-Figure_5.html#a-heatmap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="05-Figure_5.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># #Remove etoh samples</span></span>
-<span id="cb24-2"><a href="05-Figure_5.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co"># physeq_no_etoh &lt;- subset_samples(physeq, Buffer.type != &quot;70% EtOH&quot;)</span></span>
-<span id="cb24-3"><a href="05-Figure_5.html#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co"># sample_data(physeq_no_etoh)</span></span>
-<span id="cb24-4"><a href="05-Figure_5.html#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb24-5"><a href="05-Figure_5.html#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co"># #Set to even sampling depth (1000)</span></span>
-<span id="cb24-6"><a href="05-Figure_5.html#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co"># physeq_no_etoh_1k &lt;- </span></span>
-<span id="cb24-7"><a href="05-Figure_5.html#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   transform_sample_counts(</span></span>
-<span id="cb24-8"><a href="05-Figure_5.html#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     physeq_no_etoh, function(x) 1000 * x/sum(x))</span></span>
-<span id="cb24-9"><a href="05-Figure_5.html#cb24-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-10"><a href="05-Figure_5.html#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Choose order for temp</span></span>
-<span id="cb24-11"><a href="05-Figure_5.html#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="co">#sample_data(physeq_1k)[,&quot;Temp&quot;] &lt;- factor(sample_data(physeq_1k)[,&quot;Temp&quot;], levels = c(&quot;Baseline&quot;, &quot;RT&quot;, &quot;Fridge&quot;))</span></span>
-<span id="cb24-12"><a href="05-Figure_5.html#cb24-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-13"><a href="05-Figure_5.html#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Heatmap</span></span>
-<span id="cb24-14"><a href="05-Figure_5.html#cb24-14" aria-hidden="true" tabindex="-1"></a>heatmap_facet <span class="ot">&lt;-</span> </span>
-<span id="cb24-15"><a href="05-Figure_5.html#cb24-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_heatmap</span>(physeq_1k,</span>
-<span id="cb24-16"><a href="05-Figure_5.html#cb24-16" aria-hidden="true" tabindex="-1"></a>               <span class="at">sample.label =</span> <span class="st">&quot;Sample_name&quot;</span>, </span>
-<span id="cb24-17"><a href="05-Figure_5.html#cb24-17" aria-hidden="true" tabindex="-1"></a>               <span class="at">taxa.label =</span> <span class="st">&quot;Compound&quot;</span>) <span class="sc">+</span></span>
-<span id="cb24-18"><a href="05-Figure_5.html#cb24-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_nested</span>( <span class="sc">~</span> Buffer.type <span class="sc">+</span> Storage.time <span class="sc">+</span> Temp , <span class="at">scales =</span> <span class="st">&quot;free_x&quot;</span> ) <span class="sc">+</span></span>
-<span id="cb24-19"><a href="05-Figure_5.html#cb24-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.spacing.x=</span><span class="fu">unit</span>(<span class="dv">0</span>, <span class="st">&quot;lines&quot;</span>)) <span class="sc">+</span></span>
-<span id="cb24-20"><a href="05-Figure_5.html#cb24-20" aria-hidden="true" tabindex="-1"></a>   <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">6</span>))</span>
-<span id="cb24-21"><a href="05-Figure_5.html#cb24-21" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb24-22"><a href="05-Figure_5.html#cb24-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> heatmap_facet, </span>
-<span id="cb24-23"><a href="05-Figure_5.html#cb24-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;figures/lipid_heatmap.png&quot;</span>, </span>
-<span id="cb24-24"><a href="05-Figure_5.html#cb24-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">dpi =</span> <span class="dv">300</span>,</span>
-<span id="cb24-25"><a href="05-Figure_5.html#cb24-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">width =</span> <span class="dv">300</span>, <span class="at">height =</span> <span class="dv">100</span>)</span></code></pre></div>
-<p><img src="figures/molecule_no_etoh_heatmap.png" width="100%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="05-Figure_5.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># #Remove etoh samples</span></span>
+<span id="cb15-2"><a href="05-Figure_5.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># physeq_no_etoh &lt;- subset_samples(physeq, Buffer.type != &quot;70% EtOH&quot;)</span></span>
+<span id="cb15-3"><a href="05-Figure_5.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># sample_data(physeq_no_etoh)</span></span>
+<span id="cb15-4"><a href="05-Figure_5.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb15-5"><a href="05-Figure_5.html#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># #Set to even sampling depth (1000)</span></span>
+<span id="cb15-6"><a href="05-Figure_5.html#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># physeq_no_etoh_1k &lt;- </span></span>
+<span id="cb15-7"><a href="05-Figure_5.html#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   transform_sample_counts(</span></span>
+<span id="cb15-8"><a href="05-Figure_5.html#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co">#     physeq_no_etoh, function(x) 1000 * x/sum(x))</span></span>
+<span id="cb15-9"><a href="05-Figure_5.html#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="05-Figure_5.html#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Choose order for temp</span></span>
+<span id="cb15-11"><a href="05-Figure_5.html#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co">#sample_data(physeq_1k)[,&quot;Temp&quot;] &lt;- factor(sample_data(physeq_1k)[,&quot;Temp&quot;], levels = c(&quot;Baseline&quot;, &quot;RT&quot;, &quot;Fridge&quot;))</span></span>
+<span id="cb15-12"><a href="05-Figure_5.html#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="05-Figure_5.html#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Heatmap</span></span>
+<span id="cb15-14"><a href="05-Figure_5.html#cb15-14" aria-hidden="true" tabindex="-1"></a>heatmap_facet <span class="ot">&lt;-</span> </span>
+<span id="cb15-15"><a href="05-Figure_5.html#cb15-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_heatmap</span>(physeq_1k,</span>
+<span id="cb15-16"><a href="05-Figure_5.html#cb15-16" aria-hidden="true" tabindex="-1"></a>               <span class="at">sample.label =</span> <span class="st">&quot;Sample_name&quot;</span>, </span>
+<span id="cb15-17"><a href="05-Figure_5.html#cb15-17" aria-hidden="true" tabindex="-1"></a>               <span class="at">taxa.label =</span> <span class="st">&quot;Compound&quot;</span>) <span class="sc">+</span></span>
+<span id="cb15-18"><a href="05-Figure_5.html#cb15-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_nested</span>( <span class="sc">~</span> Buffer.type <span class="sc">+</span> Storage.time <span class="sc">+</span> Temp , <span class="at">scales =</span> <span class="st">&quot;free_x&quot;</span> ) <span class="sc">+</span></span>
+<span id="cb15-19"><a href="05-Figure_5.html#cb15-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.spacing.x=</span><span class="fu">unit</span>(<span class="dv">0</span>, <span class="st">&quot;lines&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb15-20"><a href="05-Figure_5.html#cb15-20" aria-hidden="true" tabindex="-1"></a>   <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">6</span>))</span>
+<span id="cb15-21"><a href="05-Figure_5.html#cb15-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb15-22"><a href="05-Figure_5.html#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> heatmap_facet, </span>
+<span id="cb15-23"><a href="05-Figure_5.html#cb15-23" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;figures/lipid_heatmap.png&quot;</span>, </span>
+<span id="cb15-24"><a href="05-Figure_5.html#cb15-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">dpi =</span> <span class="dv">300</span>,</span>
+<span id="cb15-25"><a href="05-Figure_5.html#cb15-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">width =</span> <span class="dv">300</span>, <span class="at">height =</span> <span class="dv">100</span>)</span></code></pre></div>
+<p><img src="figures/lipid_heatmap.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="b-and-c-beta-diversity" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> B and C Beta diversity<a href="05-Figure_5.html#b-and-c-beta-diversity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="05-Figure_5.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#NMDs bray curtis</span></span>
-<span id="cb25-2"><a href="05-Figure_5.html#cb25-2" aria-hidden="true" tabindex="-1"></a>physeq_1k_ord_nmds_bray <span class="ot">&lt;-</span> <span class="fu">ordinate</span>(physeq_1k, <span class="st">&quot;NMDS&quot;</span>, <span class="st">&quot;bray&quot;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="05-Figure_5.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#NMDS_bray facetted by Buffer.type.Temp, shape by sample</span></span>
-<span id="cb26-2"><a href="05-Figure_5.html#cb26-2" aria-hidden="true" tabindex="-1"></a>NMDS_bray_facet <span class="ot">&lt;-</span> </span>
-<span id="cb26-3"><a href="05-Figure_5.html#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_ordination</span>(physeq_1k, physeq_1k_ord_nmds_bray,</span>
-<span id="cb26-4"><a href="05-Figure_5.html#cb26-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">color =</span> <span class="st">&quot;Sample.number&quot;</span>, <span class="at">shape =</span> <span class="st">&quot;Temp&quot;</span>) <span class="sc">+</span></span>
-<span id="cb26-5"><a href="05-Figure_5.html#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb26-6"><a href="05-Figure_5.html#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>( <span class="sc">~</span> Buffer.type, <span class="at">nrow =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb26-7"><a href="05-Figure_5.html#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>)</span>
-<span id="cb26-8"><a href="05-Figure_5.html#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(NMDS_bray_facet,</span>
-<span id="cb26-9"><a href="05-Figure_5.html#cb26-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;./figures/Lipids_NMDs_bray_curtis_facet_colour_by_sample.png&quot;</span>,</span>
-<span id="cb26-10"><a href="05-Figure_5.html#cb26-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">dpi =</span> <span class="dv">300</span>,</span>
-<span id="cb26-11"><a href="05-Figure_5.html#cb26-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">width =</span> <span class="dv">300</span>, <span class="at">height =</span> <span class="dv">100</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="05-Figure_5.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#NMDs bray curtis</span></span>
+<span id="cb16-2"><a href="05-Figure_5.html#cb16-2" aria-hidden="true" tabindex="-1"></a>physeq_1k_ord_nmds_bray <span class="ot">&lt;-</span> <span class="fu">ordinate</span>(physeq_1k, <span class="st">&quot;NMDS&quot;</span>, <span class="st">&quot;bray&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="05-Figure_5.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#NMDS_bray facetted by Buffer.type.Temp, shape by sample</span></span>
+<span id="cb17-2"><a href="05-Figure_5.html#cb17-2" aria-hidden="true" tabindex="-1"></a>NMDS_bray_facet <span class="ot">&lt;-</span> </span>
+<span id="cb17-3"><a href="05-Figure_5.html#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_ordination</span>(physeq_1k, physeq_1k_ord_nmds_bray,</span>
+<span id="cb17-4"><a href="05-Figure_5.html#cb17-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">color =</span> <span class="st">&quot;Sample.number&quot;</span>, <span class="at">shape =</span> <span class="st">&quot;Temp&quot;</span>) <span class="sc">+</span></span>
+<span id="cb17-5"><a href="05-Figure_5.html#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb17-6"><a href="05-Figure_5.html#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>( <span class="sc">~</span> Buffer.type, <span class="at">nrow =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb17-7"><a href="05-Figure_5.html#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>)</span>
+<span id="cb17-8"><a href="05-Figure_5.html#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(NMDS_bray_facet,</span>
+<span id="cb17-9"><a href="05-Figure_5.html#cb17-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;./figures/Lipids_NMDs_bray_curtis_facet_colour_by_sample.png&quot;</span>,</span>
+<span id="cb17-10"><a href="05-Figure_5.html#cb17-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">dpi =</span> <span class="dv">300</span>,</span>
+<span id="cb17-11"><a href="05-Figure_5.html#cb17-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">width =</span> <span class="dv">300</span>, <span class="at">height =</span> <span class="dv">100</span>)</span></code></pre></div>
 <p><img src="figures/Lipids_NMDs_bray_curtis_facet_colour_by_sample.png" width="100%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="05-Figure_5.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#NMDS_bray facetted by Buffer.type.Temp</span></span>
-<span id="cb27-2"><a href="05-Figure_5.html#cb27-2" aria-hidden="true" tabindex="-1"></a>NMDS_bray_facet <span class="ot">&lt;-</span> </span>
-<span id="cb27-3"><a href="05-Figure_5.html#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_ordination</span>(physeq_1k,</span>
-<span id="cb27-4"><a href="05-Figure_5.html#cb27-4" aria-hidden="true" tabindex="-1"></a>                  physeq_1k_ord_nmds_bray, </span>
-<span id="cb27-5"><a href="05-Figure_5.html#cb27-5" aria-hidden="true" tabindex="-1"></a>                  <span class="at">color =</span> <span class="st">&quot;Storage.time&quot;</span>, <span class="at">shape =</span> <span class="st">&quot;Temp&quot;</span>) <span class="sc">+</span></span>
-<span id="cb27-6"><a href="05-Figure_5.html#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb27-7"><a href="05-Figure_5.html#cb27-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>( <span class="sc">~</span> Buffer.type, <span class="at">nrow =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb27-8"><a href="05-Figure_5.html#cb27-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>)</span>
-<span id="cb27-9"><a href="05-Figure_5.html#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(NMDS_bray_facet,</span>
-<span id="cb27-10"><a href="05-Figure_5.html#cb27-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;./figures/lipids_NMDs_bray_curtis_facet.png&quot;</span>,</span>
-<span id="cb27-11"><a href="05-Figure_5.html#cb27-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">dpi =</span> <span class="dv">300</span>,</span>
-<span id="cb27-12"><a href="05-Figure_5.html#cb27-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">width =</span> <span class="dv">300</span>, <span class="at">height =</span> <span class="dv">100</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="05-Figure_5.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#NMDS_bray facetted by Buffer.type.Temp</span></span>
+<span id="cb18-2"><a href="05-Figure_5.html#cb18-2" aria-hidden="true" tabindex="-1"></a>NMDS_bray_facet <span class="ot">&lt;-</span> </span>
+<span id="cb18-3"><a href="05-Figure_5.html#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_ordination</span>(physeq_1k,</span>
+<span id="cb18-4"><a href="05-Figure_5.html#cb18-4" aria-hidden="true" tabindex="-1"></a>                  physeq_1k_ord_nmds_bray, </span>
+<span id="cb18-5"><a href="05-Figure_5.html#cb18-5" aria-hidden="true" tabindex="-1"></a>                  <span class="at">color =</span> <span class="st">&quot;Storage.time&quot;</span>, <span class="at">shape =</span> <span class="st">&quot;Temp&quot;</span>) <span class="sc">+</span></span>
+<span id="cb18-6"><a href="05-Figure_5.html#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb18-7"><a href="05-Figure_5.html#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>( <span class="sc">~</span> Buffer.type, <span class="at">nrow =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb18-8"><a href="05-Figure_5.html#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;bottom&quot;</span>)</span>
+<span id="cb18-9"><a href="05-Figure_5.html#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(NMDS_bray_facet,</span>
+<span id="cb18-10"><a href="05-Figure_5.html#cb18-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;./figures/lipids_NMDs_bray_curtis_facet.png&quot;</span>,</span>
+<span id="cb18-11"><a href="05-Figure_5.html#cb18-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">dpi =</span> <span class="dv">300</span>,</span>
+<span id="cb18-12"><a href="05-Figure_5.html#cb18-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">width =</span> <span class="dv">300</span>, <span class="at">height =</span> <span class="dv">100</span>)</span></code></pre></div>
 <p><img src="figures/lipids_NMDs_bray_curtis_facet.png" width="100%" style="display: block; margin: auto;" /></p>
 
 </div>
