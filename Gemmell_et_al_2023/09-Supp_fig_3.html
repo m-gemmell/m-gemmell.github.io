@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 Supp figure 3 | ANCOM project</title>
+  <title>Chapter 9 Supp figure 3 | Optimised human stool sample collection for multi-omic microbiota analysis R code</title>
   <meta name="description" content="Book to contain visualisation for the “ANCOM” project" />
-  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 Supp figure 3 | ANCOM project" />
+  <meta property="og:title" content="Chapter 9 Supp figure 3 | Optimised human stool sample collection for multi-omic microbiota analysis R code" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Book to contain visualisation for the “ANCOM” project" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Supp figure 3 | ANCOM project" />
+  <meta name="twitter:title" content="Chapter 9 Supp figure 3 | Optimised human stool sample collection for multi-omic microbiota analysis R code" />
   
   <meta name="twitter:description" content="Book to contain visualisation for the “ANCOM” project" />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2023-04-21" />
+<meta name="date" content="2023-05-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,10 +54,10 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.27/datatables.js"></script>
-<link href="libs/dt-core-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.12.1/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="libs/datatables-binding-0.28/datatables.js"></script>
+<link href="libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
 <link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
 <script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 
@@ -127,6 +127,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -192,19 +196,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#weighted-unifrac-plots-with-relative-abundance"><i class="fa fa-check"></i><b>8.2</b> Weighted unifrac plots with relative abundance</a>
 <ul>
 <li class="chapter" data-level="8.2.1" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-a-buffer-used-faceted-by-patient"><i class="fa fa-check"></i><b>8.2.1</b> Figure A: Buffer used faceted by patient</a></li>
-<li class="chapter" data-level="8.2.2" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-b-storage-conditions"><i class="fa fa-check"></i><b>8.2.2</b> Figure B: Storage conditions</a></li>
-<li class="chapter" data-level="8.2.3" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-c-storage-temperature"><i class="fa fa-check"></i><b>8.2.3</b> Figure C: Storage temperature</a></li>
+<li class="chapter" data-level="8.2.2" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-b-storage-temperature"><i class="fa fa-check"></i><b>8.2.2</b> Figure B: Storage temperature</a></li>
+<li class="chapter" data-level="8.2.3" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-c-storage-conditions"><i class="fa fa-check"></i><b>8.2.3</b> Figure C: Storage conditions</a></li>
 <li class="chapter" data-level="8.2.4" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-d-buffer-and-storage-condition-faceted-by-patient"><i class="fa fa-check"></i><b>8.2.4</b> Figure D: Buffer and storage condition faceted by patient</a></li>
 <li class="chapter" data-level="8.2.5" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#statistical-test"><i class="fa fa-check"></i><b>8.2.5</b> Statistical test</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#transform-samples-to-even-sampling-depth"><i class="fa fa-check"></i><b>8.3</b> Transform samples to even sampling depth</a></li>
-<li class="chapter" data-level="8.4" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#unweighted-unifrac-plots"><i class="fa fa-check"></i><b>8.4</b> Unweighted unifrac plots</a>
-<ul>
-<li class="chapter" data-level="8.4.1" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-a-buffer-used-faceted-by-patient-1"><i class="fa fa-check"></i><b>8.4.1</b> Figure A: Buffer used faceted by patient</a></li>
-<li class="chapter" data-level="8.4.2" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-b-storage-conditions-1"><i class="fa fa-check"></i><b>8.4.2</b> Figure B: Storage conditions</a></li>
-<li class="chapter" data-level="8.4.3" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-c-storage-temperature-1"><i class="fa fa-check"></i><b>8.4.3</b> Figure C: Storage temperature</a></li>
-<li class="chapter" data-level="8.4.4" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-d-buffer-and-storage-condition-faceted-by-patient-1"><i class="fa fa-check"></i><b>8.4.4</b> Figure D: Buffer and storage condition faceted by patient</a></li>
-<li class="chapter" data-level="8.4.5" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#statistical-test-1"><i class="fa fa-check"></i><b>8.4.5</b> Statistical test</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html"><i class="fa fa-check"></i><b>9</b> Supp figure 3</a>
@@ -212,10 +207,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.1" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#libraries-4"><i class="fa fa-check"></i><b>9.1</b> Libraries</a></li>
 <li class="chapter" data-level="9.2" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#alpha-diveristy-plots"><i class="fa fa-check"></i><b>9.2</b> Alpha diveristy plots</a>
 <ul>
-<li class="chapter" data-level="9.2.1" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#storage-conditions"><i class="fa fa-check"></i><b>9.2.1</b> Storage conditions</a></li>
-<li class="chapter" data-level="9.2.2" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#patient-number"><i class="fa fa-check"></i><b>9.2.2</b> Patient number</a></li>
-<li class="chapter" data-level="9.2.3" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#storage-temp"><i class="fa fa-check"></i><b>9.2.3</b> Storage temp</a></li>
-<li class="chapter" data-level="9.2.4" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#buffer-and-storage"><i class="fa fa-check"></i><b>9.2.4</b> Buffer and storage</a></li>
+<li class="chapter" data-level="9.2.1" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#s3a-storage-conditions"><i class="fa fa-check"></i><b>9.2.1</b> S3A: Storage conditions</a></li>
+<li class="chapter" data-level="9.2.2" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#s3b-patient-number"><i class="fa fa-check"></i><b>9.2.2</b> S3B: Patient number</a></li>
+<li class="chapter" data-level="9.2.3" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#s3c-storage-temp"><i class="fa fa-check"></i><b>9.2.3</b> S3C: Storage temp</a></li>
+<li class="chapter" data-level="9.2.4" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#s3d-buffer-and-storage"><i class="fa fa-check"></i><b>9.2.4</b> S3D: Buffer and storage</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html"><i class="fa fa-check"></i><b>10</b> Supp figure 4</a>
@@ -239,7 +234,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ANCOM project</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Optimised human stool sample collection for multi-omic microbiota analysis R code</a>
           </h1>
         </div>
 
@@ -252,58 +247,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Alpha diversity plots of samples using the preprocessed unrarified abundance values.</p>
 <div id="libraries-4" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> Libraries<a href="09-Supp_fig_3.html#libraries-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="09-Supp_fig_3.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;phyloseq&quot;</span>)</span>
-<span id="cb38-2"><a href="09-Supp_fig_3.html#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;microbiome&quot;</span>)</span>
-<span id="cb38-3"><a href="09-Supp_fig_3.html#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
-<span id="cb38-4"><a href="09-Supp_fig_3.html#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggforce&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="09-Supp_fig_3.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;phyloseq&quot;</span>)</span>
+<span id="cb32-2"><a href="09-Supp_fig_3.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;microbiome&quot;</span>)</span>
+<span id="cb32-3"><a href="09-Supp_fig_3.html#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb32-4"><a href="09-Supp_fig_3.html#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggforce&quot;</span>)</span></code></pre></div>
 </div>
 <div id="alpha-diveristy-plots" class="section level2 hasAnchor" number="9.2">
 <h2><span class="header-section-number">9.2</span> Alpha diveristy plots<a href="09-Supp_fig_3.html#alpha-diveristy-plots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="storage-conditions" class="section level3 hasAnchor" number="9.2.1">
-<h3><span class="header-section-number">9.2.1</span> Storage conditions<a href="09-Supp_fig_3.html#storage-conditions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="09-Supp_fig_3.html#cb39-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">plot_richness</span>(physeq, <span class="at">x =</span> <span class="st">&quot;Storageconditions&quot;</span>, </span>
-<span id="cb39-2"><a href="09-Supp_fig_3.html#cb39-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">measures =</span> <span class="fu">c</span>(<span class="st">&quot;Observed&quot;</span>,<span class="st">&quot;Chao1&quot;</span>,<span class="st">&quot;Shannon&quot;</span>)) <span class="sc">+</span> </span>
-<span id="cb39-3"><a href="09-Supp_fig_3.html#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span> </span>
-<span id="cb39-4"><a href="09-Supp_fig_3.html#cb39-4" aria-hidden="true" tabindex="-1"></a>  ggforce<span class="sc">::</span><span class="fu">geom_sina</span>(<span class="at">alpha=</span><span class="fl">0.5</span>)</span>
-<span id="cb39-5"><a href="09-Supp_fig_3.html#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p,</span>
-<span id="cb39-6"><a href="09-Supp_fig_3.html#cb39-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;./figures/alpha_diversity_Storageconditions.png&quot;</span>,</span>
-<span id="cb39-7"><a href="09-Supp_fig_3.html#cb39-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">100</span>, <span class="at">width =</span> <span class="dv">150</span>)</span></code></pre></div>
+<div id="s3a-storage-conditions" class="section level3 hasAnchor" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> S3A: Storage conditions<a href="09-Supp_fig_3.html#s3a-storage-conditions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="09-Supp_fig_3.html#cb33-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">plot_richness</span>(physeq, <span class="at">x =</span> <span class="st">&quot;Storageconditions&quot;</span>, </span>
+<span id="cb33-2"><a href="09-Supp_fig_3.html#cb33-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">measures =</span> <span class="fu">c</span>(<span class="st">&quot;Observed&quot;</span>,<span class="st">&quot;Chao1&quot;</span>,<span class="st">&quot;Shannon&quot;</span>)) <span class="sc">+</span> </span>
+<span id="cb33-3"><a href="09-Supp_fig_3.html#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span> </span>
+<span id="cb33-4"><a href="09-Supp_fig_3.html#cb33-4" aria-hidden="true" tabindex="-1"></a>  ggforce<span class="sc">::</span><span class="fu">geom_sina</span>(<span class="at">alpha=</span><span class="fl">0.5</span>)</span>
+<span id="cb33-5"><a href="09-Supp_fig_3.html#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p,</span>
+<span id="cb33-6"><a href="09-Supp_fig_3.html#cb33-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;./figures/alpha_diversity_Storageconditions.png&quot;</span>,</span>
+<span id="cb33-7"><a href="09-Supp_fig_3.html#cb33-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">100</span>, <span class="at">width =</span> <span class="dv">150</span>)</span></code></pre></div>
 <p><img src="figures/alpha_diversity_Storageconditions.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="patient-number" class="section level3 hasAnchor" number="9.2.2">
-<h3><span class="header-section-number">9.2.2</span> Patient number<a href="09-Supp_fig_3.html#patient-number" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="09-Supp_fig_3.html#cb40-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">plot_richness</span>(physeq, <span class="at">x =</span> <span class="st">&quot;Patientnumber&quot;</span>, </span>
-<span id="cb40-2"><a href="09-Supp_fig_3.html#cb40-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">measures =</span> <span class="fu">c</span>(<span class="st">&quot;Observed&quot;</span>,<span class="st">&quot;Chao1&quot;</span>,<span class="st">&quot;Shannon&quot;</span>)) <span class="sc">+</span> </span>
-<span id="cb40-3"><a href="09-Supp_fig_3.html#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span> </span>
-<span id="cb40-4"><a href="09-Supp_fig_3.html#cb40-4" aria-hidden="true" tabindex="-1"></a>  ggforce<span class="sc">::</span><span class="fu">geom_sina</span>(<span class="at">alpha=</span><span class="fl">0.5</span>)</span>
-<span id="cb40-5"><a href="09-Supp_fig_3.html#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p, </span>
-<span id="cb40-6"><a href="09-Supp_fig_3.html#cb40-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;./figures/alpha_diversity_patient.png&quot;</span>,</span>
-<span id="cb40-7"><a href="09-Supp_fig_3.html#cb40-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">100</span>, <span class="at">width =</span> <span class="dv">150</span>)</span></code></pre></div>
+<div id="s3b-patient-number" class="section level3 hasAnchor" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> S3B: Patient number<a href="09-Supp_fig_3.html#s3b-patient-number" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="09-Supp_fig_3.html#cb34-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">plot_richness</span>(physeq, <span class="at">x =</span> <span class="st">&quot;Patientnumber&quot;</span>, </span>
+<span id="cb34-2"><a href="09-Supp_fig_3.html#cb34-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">measures =</span> <span class="fu">c</span>(<span class="st">&quot;Observed&quot;</span>,<span class="st">&quot;Chao1&quot;</span>,<span class="st">&quot;Shannon&quot;</span>)) <span class="sc">+</span> </span>
+<span id="cb34-3"><a href="09-Supp_fig_3.html#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span> </span>
+<span id="cb34-4"><a href="09-Supp_fig_3.html#cb34-4" aria-hidden="true" tabindex="-1"></a>  ggforce<span class="sc">::</span><span class="fu">geom_sina</span>(<span class="at">alpha=</span><span class="fl">0.5</span>)</span>
+<span id="cb34-5"><a href="09-Supp_fig_3.html#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p, </span>
+<span id="cb34-6"><a href="09-Supp_fig_3.html#cb34-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;./figures/alpha_diversity_patient.png&quot;</span>,</span>
+<span id="cb34-7"><a href="09-Supp_fig_3.html#cb34-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">100</span>, <span class="at">width =</span> <span class="dv">150</span>)</span></code></pre></div>
 <p><img src="figures/alpha_diversity_patient.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="storage-temp" class="section level3 hasAnchor" number="9.2.3">
-<h3><span class="header-section-number">9.2.3</span> Storage temp<a href="09-Supp_fig_3.html#storage-temp" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="09-Supp_fig_3.html#cb41-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">plot_richness</span>(physeq, <span class="at">x =</span> <span class="st">&quot;Storagetemp&quot;</span>, </span>
-<span id="cb41-2"><a href="09-Supp_fig_3.html#cb41-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">measures =</span> <span class="fu">c</span>(<span class="st">&quot;Observed&quot;</span>,<span class="st">&quot;Chao1&quot;</span>,<span class="st">&quot;Shannon&quot;</span>)) <span class="sc">+</span> </span>
-<span id="cb41-3"><a href="09-Supp_fig_3.html#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span> </span>
-<span id="cb41-4"><a href="09-Supp_fig_3.html#cb41-4" aria-hidden="true" tabindex="-1"></a>  ggforce<span class="sc">::</span><span class="fu">geom_sina</span>(<span class="at">alpha=</span><span class="fl">0.5</span>)</span>
-<span id="cb41-5"><a href="09-Supp_fig_3.html#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p,</span>
-<span id="cb41-6"><a href="09-Supp_fig_3.html#cb41-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;./figures/alpha_diversity_Storagetemp.png&quot;</span>,</span>
-<span id="cb41-7"><a href="09-Supp_fig_3.html#cb41-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">100</span>, <span class="at">width =</span> <span class="dv">150</span>)</span></code></pre></div>
+<div id="s3c-storage-temp" class="section level3 hasAnchor" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> S3C: Storage temp<a href="09-Supp_fig_3.html#s3c-storage-temp" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="09-Supp_fig_3.html#cb35-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">plot_richness</span>(physeq, <span class="at">x =</span> <span class="st">&quot;Storagetemp&quot;</span>, </span>
+<span id="cb35-2"><a href="09-Supp_fig_3.html#cb35-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">measures =</span> <span class="fu">c</span>(<span class="st">&quot;Observed&quot;</span>,<span class="st">&quot;Chao1&quot;</span>,<span class="st">&quot;Shannon&quot;</span>)) <span class="sc">+</span> </span>
+<span id="cb35-3"><a href="09-Supp_fig_3.html#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span> </span>
+<span id="cb35-4"><a href="09-Supp_fig_3.html#cb35-4" aria-hidden="true" tabindex="-1"></a>  ggforce<span class="sc">::</span><span class="fu">geom_sina</span>(<span class="at">alpha=</span><span class="fl">0.5</span>)</span>
+<span id="cb35-5"><a href="09-Supp_fig_3.html#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p,</span>
+<span id="cb35-6"><a href="09-Supp_fig_3.html#cb35-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;./figures/alpha_diversity_Storagetemp.png&quot;</span>,</span>
+<span id="cb35-7"><a href="09-Supp_fig_3.html#cb35-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">100</span>, <span class="at">width =</span> <span class="dv">150</span>)</span></code></pre></div>
 <p><img src="figures/alpha_diversity_Storagetemp.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="buffer-and-storage" class="section level3 hasAnchor" number="9.2.4">
-<h3><span class="header-section-number">9.2.4</span> Buffer and storage<a href="09-Supp_fig_3.html#buffer-and-storage" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="09-Supp_fig_3.html#cb42-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">plot_richness</span>(physeq, <span class="at">x =</span> <span class="st">&quot;Bufferused_and_Storageconditions&quot;</span>,</span>
-<span id="cb42-2"><a href="09-Supp_fig_3.html#cb42-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span><span class="st">&quot;Bufferused_and_Storageconditions&quot;</span>, </span>
-<span id="cb42-3"><a href="09-Supp_fig_3.html#cb42-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">measures =</span> <span class="fu">c</span>(<span class="st">&quot;Observed&quot;</span>,<span class="st">&quot;Chao1&quot;</span>,<span class="st">&quot;Shannon&quot;</span>)) <span class="sc">+</span> </span>
-<span id="cb42-4"><a href="09-Supp_fig_3.html#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span> </span>
-<span id="cb42-5"><a href="09-Supp_fig_3.html#cb42-5" aria-hidden="true" tabindex="-1"></a>  ggforce<span class="sc">::</span><span class="fu">geom_sina</span>(<span class="at">alpha=</span><span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb42-6"><a href="09-Supp_fig_3.html#cb42-6" aria-hidden="true" tabindex="-1"></a>   <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>)</span>
-<span id="cb42-7"><a href="09-Supp_fig_3.html#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="co">#  geom_point(size = 3)</span></span>
-<span id="cb42-8"><a href="09-Supp_fig_3.html#cb42-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p,</span>
-<span id="cb42-9"><a href="09-Supp_fig_3.html#cb42-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;./figures/alpha_diversity_Bufferused_and_Storageconditions.png&quot;</span>,</span>
-<span id="cb42-10"><a href="09-Supp_fig_3.html#cb42-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">150</span>, <span class="at">width =</span> <span class="dv">450</span>)</span></code></pre></div>
+<div id="s3d-buffer-and-storage" class="section level3 hasAnchor" number="9.2.4">
+<h3><span class="header-section-number">9.2.4</span> S3D: Buffer and storage<a href="09-Supp_fig_3.html#s3d-buffer-and-storage" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="09-Supp_fig_3.html#cb36-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">plot_richness</span>(physeq, <span class="at">x =</span> <span class="st">&quot;Bufferused_and_Storageconditions&quot;</span>,</span>
+<span id="cb36-2"><a href="09-Supp_fig_3.html#cb36-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">color=</span><span class="st">&quot;Bufferused_and_Storageconditions&quot;</span>, </span>
+<span id="cb36-3"><a href="09-Supp_fig_3.html#cb36-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">measures =</span> <span class="fu">c</span>(<span class="st">&quot;Observed&quot;</span>,<span class="st">&quot;Chao1&quot;</span>,<span class="st">&quot;Shannon&quot;</span>)) <span class="sc">+</span> </span>
+<span id="cb36-4"><a href="09-Supp_fig_3.html#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span> </span>
+<span id="cb36-5"><a href="09-Supp_fig_3.html#cb36-5" aria-hidden="true" tabindex="-1"></a>  ggforce<span class="sc">::</span><span class="fu">geom_sina</span>(<span class="at">alpha=</span><span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb36-6"><a href="09-Supp_fig_3.html#cb36-6" aria-hidden="true" tabindex="-1"></a>   <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">&quot;none&quot;</span>)</span>
+<span id="cb36-7"><a href="09-Supp_fig_3.html#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="co">#  geom_point(size = 3)</span></span>
+<span id="cb36-8"><a href="09-Supp_fig_3.html#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p,</span>
+<span id="cb36-9"><a href="09-Supp_fig_3.html#cb36-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">filename =</span> <span class="st">&quot;./figures/alpha_diversity_Bufferused_and_Storageconditions.png&quot;</span>,</span>
+<span id="cb36-10"><a href="09-Supp_fig_3.html#cb36-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">150</span>, <span class="at">width =</span> <span class="dv">450</span>)</span></code></pre></div>
 <p><img src="figures/alpha_diversity_Bufferused_and_Storageconditions.png" width="100%" style="display: block; margin: auto;" /></p>
 
 </div>
