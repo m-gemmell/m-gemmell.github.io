@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>MG Bookdown Guide</title>
   <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
 
   <meta property="og:title" content="MG Bookdown Guide" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2023-08-29" />
+<meta name="date" content="2023-10-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -168,6 +168,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.10" data-path="01-MG_Bookdown_guide.html"><a href="#style.css-code-to-make-page-wider"><i class="fa fa-check"></i><b>1.10</b> style.css code to make page wider</a></li>
 <li class="chapter" data-level="1.11" data-path="01-MG_Bookdown_guide.html"><a href="#add-borders-to-code-blocks"><i class="fa fa-check"></i><b>1.11</b> Add borders to code blocks</a></li>
 <li class="chapter" data-level="1.12" data-path="01-MG_Bookdown_guide.html"><a href="#create-one-page-html-book"><i class="fa fa-check"></i><b>1.12</b> Create one page html book</a></li>
+<li class="chapter" data-level="1.13" data-path="01-MG_Bookdown_guide.html"><a href="#font-family"><i class="fa fa-check"></i><b>1.13</b> Font family</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -192,11 +193,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">MG Bookdown Guide</h1>
 <p class="author"><em>Matthew R. Gemmell</em></p>
-<p class="date"><em>2023-08-29</em></p>
+<p class="date"><em>2023-10-23</em></p>
 </div>
 <div id="mg-bookdown-guide" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> MG Bookdown Guide<a href="#mg-bookdown-guide" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This is a quick and dirty guide on how I use bookdown. It is primarily for my use but if someone else finds it I hope it will also proof useful. Additionally, this was made with R Bookdown.</p>
+<p>Another useful resource is: <a href="https://rstudio4edu.github.io/rstudio4edu-book/intro-bookdown.html" class="uri">https://rstudio4edu.github.io/rstudio4edu-book/intro-bookdown.html</a></p>
 <div id="intro" class="section level2 hasAnchor" number="1.1">
 <h2><span class="header-section-number">1.1</span> Intro<a href="#intro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>R bookdown uses Rmarkdown. First learn some Rmarkdown then learn bookdown. Some useful links are below.</p>
@@ -268,8 +270,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>1. Question? `r longmcq(opts_p)`</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>Question?
-<div id="radio_NTMXBPVYGN" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_NTMXBPVYGN" value=""></input> <span><strong>A1</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NTMXBPVYGN" value=""></input> <span><strong>A2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NTMXBPVYGN" value="answer"></input> <span><strong>A3</strong></span></label>
+<div id="radio_LTJYSSOULW" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_LTJYSSOULW" value=""></input> <span><strong>A1</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LTJYSSOULW" value=""></input> <span><strong>A2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LTJYSSOULW" value="answer"></input> <span><strong>A3</strong></span></label>
 </div></li>
 </ol>
 </div>
@@ -474,6 +476,19 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <span id="cb22-4"><a href="#cb22-4" tabindex="-1"></a>  toc<span class="in">: false</span></span></code></pre></div>
 <p>Run the following command in the book dir to render</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r Rchunk"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a>bookdown<span class="sc">::</span><span class="fu">render_book</span>(<span class="st">&quot;01-XX.Rmd&quot;</span>, <span class="st">&quot;bookdown::html_book&quot;</span>, <span class="at">output_dir =</span> <span class="st">&quot;one_file_book&quot;</span>)</span></code></pre></div>
+</div>
+<div id="font-family" class="section level2 hasAnchor" number="1.13">
+<h2><span class="header-section-number">1.13</span> Font family<a href="#font-family" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You can change the font-family with the <code>style.css</code> file.</p>
+<p>I have used it to change the font-family of code. I am using the font-family "JetBrains Mono" from google fonts (<a href="https://fonts.google.com/specimen/JetBrains+Mono?preview.text=1%20l" class="uri">https://fonts.google.com/specimen/JetBrains+Mono?preview.text=1%20l</a>).</p>
+<p>I used the instructions from the following useful book: <a href="https://rstudio4edu.github.io/rstudio4edu-book/book-fancy.html#book-font" class="uri">https://rstudio4edu.github.io/rstudio4edu-book/book-fancy.html#book-font</a></p>
+<p>For this I add the following to the top of my <code>style.css</code> code:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode css Rchunk"><code class="sourceCode css"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">&#39;https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&amp;display=swap&#39;</span><span class="fu">)</span><span class="op">;</span></span></code></pre></div>
+<p>The I change the code bit in <code>stle.css</code> to:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode css Rchunk"><code class="sourceCode css"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a>code {</span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>  <span class="kw">white-space</span>: <span class="bu">inherit</span><span class="op">;</span></span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&#39;JetBrains Mono&#39;</span><span class="op">,</span> <span class="dv">monospace</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a>}</span></code></pre></div>
 
 </div>
 </div>
