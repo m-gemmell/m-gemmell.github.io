@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>MG Bookdown Guide</title>
   <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
 
   <meta property="og:title" content="MG Bookdown Guide" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2023-10-30" />
+<meta name="date" content="2023-11-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -193,7 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">MG Bookdown Guide</h1>
 <p class="author"><em>Matthew R. Gemmell</em></p>
-<p class="date"><em>2023-10-30</em></p>
+<p class="date"><em>2023-11-22</em></p>
 </div>
 <div id="mg-bookdown-guide" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> MG Bookdown Guide<a href="#mg-bookdown-guide" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -270,8 +270,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>1. Question? `r longmcq(opts_p)`</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>Question?
-<div id="radio_HHSUAULRQL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_HHSUAULRQL" value=""></input> <span><strong>A1</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HHSUAULRQL" value=""></input> <span><strong>A2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HHSUAULRQL" value="answer"></input> <span><strong>A3</strong></span></label>
+<div id="radio_UARMWLNWDI" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_UARMWLNWDI" value=""></input> <span><strong>A1</strong></span></label><label><input type="radio" autocomplete="off" name="radio_UARMWLNWDI" value=""></input> <span><strong>A2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_UARMWLNWDI" value="answer"></input> <span><strong>A3</strong></span></label>
 </div></li>
 </ol>
 </div>
@@ -483,7 +483,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <p>I have used it to change the font-family of text.</p>
 <ul>
 <li>Text: Using "Lexend" which was designed to be dyslexic friendly but also helps everyone with eye strain. <a href="https://fonts.google.com/specimen/Lexend" class="uri">https://fonts.google.com/specimen/Lexend</a></li>
-<li>Code: "JetBrains Mono" which can differentiat between <code>1, l, L, 0, o, and O</code>. (<a href="https://fonts.google.com/specimen/JetBrains+Mono?preview.text=1%20l" class="uri">https://fonts.google.com/specimen/JetBrains+Mono?preview.text=1%20l</a>).</li>
+<li>Code: "Fira Mono" which can differentiate between <code>1, l, L, 0, o, and O</code>. (<a href="https://fonts.google.com/specimen/Fira+Mono?query=Fira+mono" class="uri">https://fonts.google.com/specimen/Fira+Mono?query=Fira+mono</a>).</li>
 </ul>
 <p>I used the instructions from the following useful book: <a href="https://rstudio4edu.github.io/rstudio4edu-book/book-fancy.html#book-font" class="uri">https://rstudio4edu.github.io/rstudio4edu-book/book-fancy.html#book-font</a></p>
 <p>For this I add the following to the top of my <code>style.css</code> code. This:</p>
@@ -493,7 +493,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <li>CHange table of contents font (sidebar navigation)</li>
 <li>CHanges code font.</li>
 </ul>
-<div class="sourceCode" id="cb24"><pre class="sourceCode css Rchunk"><code class="sourceCode css"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">&#39;https://fonts.googleapis.com/css2?family=JetBrains+Mono&amp;family=Lexend&amp;display=swap&#39;</span><span class="fu">)</span><span class="op">;</span></span>
+<div class="sourceCode" id="cb24"><pre class="sourceCode css Rchunk"><code class="sourceCode css"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">&#39;https://fonts.googleapis.com/css2?family=Fira+Mono&amp;family=Lexend&amp;display=swap&#39;</span><span class="fu">)</span><span class="op">;</span></span>
 <span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a><span class="fu">.book.font-family-1</span> {</span>
 <span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&#39;Lexend&#39;</span><span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
 <span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a> }</span>
@@ -502,7 +502,7 @@ frameborder="0" allowfullscreen class="video"></iframe>
 <span id="cb24-7"><a href="#cb24-7" tabindex="-1"></a>}</span>
 <span id="cb24-8"><a href="#cb24-8" tabindex="-1"></a>code {</span>
 <span id="cb24-9"><a href="#cb24-9" tabindex="-1"></a>  <span class="kw">white-space</span>: <span class="bu">inherit</span><span class="op">;</span></span>
-<span id="cb24-10"><a href="#cb24-10" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&#39;JetBrains Mono&#39;</span><span class="op">,</span> <span class="dv">monospace</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb24-10"><a href="#cb24-10" tabindex="-1"></a>  <span class="kw">font-family</span>: <span class="st">&#39;Fira Mono&#39;</span><span class="op">,</span> <span class="dv">monospace</span> <span class="at">!important</span><span class="op">;</span></span>
 <span id="cb24-11"><a href="#cb24-11" tabindex="-1"></a>  <span class="kw">font-weight</span>: <span class="dv">bolder</span><span class="op">;</span></span>
 <span id="cb24-12"><a href="#cb24-12" tabindex="-1"></a>}</span></code></pre></div>
 
