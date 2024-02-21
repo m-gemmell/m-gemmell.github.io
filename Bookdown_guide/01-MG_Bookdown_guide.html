@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>MG Bookdown Guide</title>
   <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
 
   <meta property="og:title" content="MG Bookdown Guide" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2024-02-01" />
+<meta name="date" content="2024-02-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -193,7 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">MG Bookdown Guide</h1>
 <p class="author"><em>Matthew R. Gemmell</em></p>
-<p class="date"><em>2024-02-01</em></p>
+<p class="date"><em>2024-02-21</em></p>
 </div>
 <div id="mg-bookdown-guide" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> MG Bookdown Guide<a href="#mg-bookdown-guide" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -226,15 +226,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>knitr::include_graphics(path = &quot;figures/R_community.png&quot;, auto_pdf = TRUE)</span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>``` </span></code></pre></div>
 <p>Another option is with HTML code which allows you more options.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode default Rchunk"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>&lt;center&gt;![](figures/NEOF.png){style=&quot;max-width: 200px; border-radius: 15px; border: 5px solid #333333&quot;}&lt;/center&gt;</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode default Rchunk"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>&lt;center&gt;</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>![](figures/NEOF.png){style=&quot;width:200px; border-radius:15px; border:5px solid #333333; background:null&quot;}</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>&lt;/center&gt;</span></code></pre></div>
 <ul>
-<li>max-width: Setst the max width, the maximum width of the page of my bookdowns is 1000px.
+<li><centre> </centre>: set st the image to be aligned to the centre of the page.</li>
+<li>width: Sets the width, the maximum width of the page of my bookdowns is 1000px.
 <ul>
 <li>Use 200px for 20%, 300px for 30% etc</li>
 <li>Useful to do this way so images don't become tiny on a mobile phone.</li>
+<li>If the width of the page is smaller than the set width it will interactively set the image to 100%</li>
 </ul></li>
 <li>border-radius: Adds curved corners, good for images with cornered background. 15px is a good default but may need to be increased/decreased depending on your image.</li>
 <li>border: Adds a border around the image. Good for images with background.</li>
+<li>background-color: Set to null for none, can set to white for a white background</li>
 </ul>
 </div>
 <div id="section-part" class="section level2 hasAnchor" number="1.4">
@@ -281,8 +286,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>1. Question? `r longmcq(opts_p)`</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>Question?
-<div id="radio_YOHFFQZXJA" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_YOHFFQZXJA" value=""></input> <span><strong>A1</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YOHFFQZXJA" value=""></input> <span><strong>A2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YOHFFQZXJA" value="answer"></input> <span><strong>A3</strong></span></label>
+<div id="radio_WYIZMMDCVO" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_WYIZMMDCVO" value=""></input> <span><strong>A1</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WYIZMMDCVO" value=""></input> <span><strong>A2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WYIZMMDCVO" value="answer"></input> <span><strong>A3</strong></span></label>
 </div></li>
 </ol>
 </div>
