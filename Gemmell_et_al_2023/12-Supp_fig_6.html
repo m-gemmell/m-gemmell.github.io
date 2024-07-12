@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Optimised human stool sample collection for multi-omic microbiota analysis R code</title>
+  <title>Chapter 12 Supp figure 6 | Optimised human stool sample collection for multi-omic microbiota analysis R code</title>
   <meta name="description" content="Book to contain visualisation for the “ANCOM” project" />
   <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Optimised human stool sample collection for multi-omic microbiota analysis R code" />
+  <meta property="og:title" content="Chapter 12 Supp figure 6 | Optimised human stool sample collection for multi-omic microbiota analysis R code" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Book to contain visualisation for the “ANCOM” project" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Optimised human stool sample collection for multi-omic microbiota analysis R code" />
+  <meta name="twitter:title" content="Chapter 12 Supp figure 6 | Optimised human stool sample collection for multi-omic microbiota analysis R code" />
   
   <meta name="twitter:description" content="Book to contain visualisation for the “ANCOM” project" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="02-Phyloseqize.html"/>
+<link rel="prev" href="11-Supp_fig_5.html"/>
+<link rel="next" href="13-Supp_fig_7.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -329,40 +329,79 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Optimised human stool sample collection for multi-omic microbiota analysis R code</h1>
-<p class="author"><em>Matthew R. Gemmell</em></p>
-<p class="date"><em>2024-07-12</em></p>
-</div>
-<div id="intro" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="01-Intro.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>A project to analyse the 16S bacterial profiles and to help determine storage protocols.</p>
-<p>The dataset consist of <strong>74 samples</strong> (out of 174) left after removal of poor quality and low read samples, and rarefaction size of 20k.</p>
-<p>The samples were stored using different buffers. below is the number of samples by buffer method:</p>
-<ul>
-<li>Ethanol: 12</li>
-<li>No buffer: 16</li>
-<li>PSP buffer: 16</li>
-<li>RNAlater: 30</li>
-</ul>
-<p>Samples were extracted from 6 patients. These patients had the following number of samples:</p>
-<ul>
-<li>1 = 16</li>
-<li>2 = 17</li>
-<li>3 = 19</li>
-<li>4 = 4</li>
-<li>5 = 9</li>
-<li>6 = 9</li>
-</ul>
+<div id="supp-figure-6" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">Chapter 12</span> Supp figure 6<a href="12-Supp_fig_6.html#supp-figure-6" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Bar chart showing the divergence of samples within each participant for the SCFA relative abundance profiles. This is based on the Bray-Curtis dissimilarity metric.</p>
+<p><img src="figures/Supp_fig_6.png" width="100%" style="display: block; margin: auto;" /></p>
+<div id="intra-group-variability" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Intra group variability<a href="12-Supp_fig_6.html#intra-group-variability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="12-Supp_fig_6.html#cb50-1" tabindex="-1"></a><span class="co">#Packages</span></span>
+<span id="cb50-2"><a href="12-Supp_fig_6.html#cb50-2" tabindex="-1"></a><span class="fu">library</span>(microbiome)</span>
+<span id="cb50-3"><a href="12-Supp_fig_6.html#cb50-3" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb50-4"><a href="12-Supp_fig_6.html#cb50-4" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb50-5"><a href="12-Supp_fig_6.html#cb50-5" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb50-6"><a href="12-Supp_fig_6.html#cb50-6" tabindex="-1"></a><span class="co">#Load even sampling depth physeq produced for figure 4</span></span>
+<span id="cb50-7"><a href="12-Supp_fig_6.html#cb50-7" tabindex="-1"></a><span class="fu">load</span>(<span class="at">file =</span> <span class="st">&quot;./data/lipid_physeq_1k_object&quot;</span>)</span>
+<span id="cb50-8"><a href="12-Supp_fig_6.html#cb50-8" tabindex="-1"></a>physeq_no_etoh <span class="ot">&lt;-</span> <span class="fu">subset_samples</span>(physeq_1k, Buffer.type <span class="sc">!=</span> <span class="st">&quot;Ethanol&quot;</span>)</span>
+<span id="cb50-9"><a href="12-Supp_fig_6.html#cb50-9" tabindex="-1"></a></span>
+<span id="cb50-10"><a href="12-Supp_fig_6.html#cb50-10" tabindex="-1"></a></span>
+<span id="cb50-11"><a href="12-Supp_fig_6.html#cb50-11" tabindex="-1"></a><span class="co">#Intra participant</span></span>
+<span id="cb50-12"><a href="12-Supp_fig_6.html#cb50-12" tabindex="-1"></a>betas <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb50-13"><a href="12-Supp_fig_6.html#cb50-13" tabindex="-1"></a>groups <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="fu">unique</span>(<span class="fu">meta</span>(physeq_no_etoh)<span class="sc">$</span>Sample.number))</span>
+<span id="cb50-14"><a href="12-Supp_fig_6.html#cb50-14" tabindex="-1"></a><span class="cf">for</span> (g <span class="cf">in</span> groups) {</span>
+<span id="cb50-15"><a href="12-Supp_fig_6.html#cb50-15" tabindex="-1"></a>  <span class="co">#Pick samples for this group</span></span>
+<span id="cb50-16"><a href="12-Supp_fig_6.html#cb50-16" tabindex="-1"></a>  g_physeq <span class="ot">&lt;-</span> <span class="fu">subset_samples</span>(physeq_no_etoh, Sample.number <span class="sc">==</span> g)</span>
+<span id="cb50-17"><a href="12-Supp_fig_6.html#cb50-17" tabindex="-1"></a>  <span class="co">#Get median abundances of the samples</span></span>
+<span id="cb50-18"><a href="12-Supp_fig_6.html#cb50-18" tabindex="-1"></a>  reference <span class="ot">&lt;-</span> <span class="fu">apply</span>(<span class="fu">abundances</span>(g_physeq), <span class="dv">1</span>, median)</span>
+<span id="cb50-19"><a href="12-Supp_fig_6.html#cb50-19" tabindex="-1"></a>  <span class="co">#Divergence of samples</span></span>
+<span id="cb50-20"><a href="12-Supp_fig_6.html#cb50-20" tabindex="-1"></a>  b <span class="ot">&lt;-</span> <span class="fu">divergence</span>(g_physeq, reference, <span class="at">method =</span> <span class="st">&quot;bray&quot;</span>)</span>
+<span id="cb50-21"><a href="12-Supp_fig_6.html#cb50-21" tabindex="-1"></a>  betas[[g]] <span class="ot">&lt;-</span> b</span>
+<span id="cb50-22"><a href="12-Supp_fig_6.html#cb50-22" tabindex="-1"></a>}</span>
+<span id="cb50-23"><a href="12-Supp_fig_6.html#cb50-23" tabindex="-1"></a><span class="co"># boxplot</span></span>
+<span id="cb50-24"><a href="12-Supp_fig_6.html#cb50-24" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">unlist</span>(betas))</span>
+<span id="cb50-25"><a href="12-Supp_fig_6.html#cb50-25" tabindex="-1"></a>s<span class="ot">&lt;-</span> <span class="fu">rownames</span>(df)</span>
+<span id="cb50-26"><a href="12-Supp_fig_6.html#cb50-26" tabindex="-1"></a>si<span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(s)</span>
+<span id="cb50-27"><a href="12-Supp_fig_6.html#cb50-27" tabindex="-1"></a>si<span class="ot">&lt;-</span> <span class="fu">separate</span>(si, s, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&#39;Patient&#39;</span>,<span class="st">&#39;sample&#39;</span>), <span class="at">sep =</span> <span class="st">&quot;.Sample&quot;</span>)</span>
+<span id="cb50-28"><a href="12-Supp_fig_6.html#cb50-28" tabindex="-1"></a>df1<span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(df, si)</span>
+<span id="cb50-29"><a href="12-Supp_fig_6.html#cb50-29" tabindex="-1"></a></span>
+<span id="cb50-30"><a href="12-Supp_fig_6.html#cb50-30" tabindex="-1"></a>p<span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df1, <span class="fu">aes</span>(<span class="at">x =</span> Patient, <span class="at">y =</span> <span class="st">`</span><span class="at">unlist(betas)</span><span class="st">`</span>))<span class="sc">+</span> <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&#39;&#39;</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">&#39;Participant number&#39;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;Bray-Curtis distance&quot;</span>)</span>
+<span id="cb50-31"><a href="12-Supp_fig_6.html#cb50-31" tabindex="-1"></a></span>
+<span id="cb50-32"><a href="12-Supp_fig_6.html#cb50-32" tabindex="-1"></a><span class="co">#Intra buffer</span></span>
+<span id="cb50-33"><a href="12-Supp_fig_6.html#cb50-33" tabindex="-1"></a>betas <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb50-34"><a href="12-Supp_fig_6.html#cb50-34" tabindex="-1"></a>groups <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="fu">unique</span>(<span class="fu">meta</span>(physeq_1k)<span class="sc">$</span>Buffer.type))</span>
+<span id="cb50-35"><a href="12-Supp_fig_6.html#cb50-35" tabindex="-1"></a><span class="cf">for</span> (g <span class="cf">in</span> groups) {</span>
+<span id="cb50-36"><a href="12-Supp_fig_6.html#cb50-36" tabindex="-1"></a>  <span class="co">#Pick samples for this group</span></span>
+<span id="cb50-37"><a href="12-Supp_fig_6.html#cb50-37" tabindex="-1"></a>  g_physeq <span class="ot">&lt;-</span> <span class="fu">subset_samples</span>(physeq_1k, Buffer.type <span class="sc">==</span> g)</span>
+<span id="cb50-38"><a href="12-Supp_fig_6.html#cb50-38" tabindex="-1"></a>  <span class="co">#Get median abundances of the samples</span></span>
+<span id="cb50-39"><a href="12-Supp_fig_6.html#cb50-39" tabindex="-1"></a>  reference <span class="ot">&lt;-</span> <span class="fu">apply</span>(<span class="fu">abundances</span>(g_physeq), <span class="dv">1</span>, median)</span>
+<span id="cb50-40"><a href="12-Supp_fig_6.html#cb50-40" tabindex="-1"></a>  <span class="co">#Divergence of samples</span></span>
+<span id="cb50-41"><a href="12-Supp_fig_6.html#cb50-41" tabindex="-1"></a>  b <span class="ot">&lt;-</span> <span class="fu">divergence</span>(g_physeq, reference, <span class="at">method =</span> <span class="st">&quot;bray&quot;</span>)</span>
+<span id="cb50-42"><a href="12-Supp_fig_6.html#cb50-42" tabindex="-1"></a>  betas[[g]] <span class="ot">&lt;-</span> b</span>
+<span id="cb50-43"><a href="12-Supp_fig_6.html#cb50-43" tabindex="-1"></a>}</span>
+<span id="cb50-44"><a href="12-Supp_fig_6.html#cb50-44" tabindex="-1"></a><span class="co"># boxplot</span></span>
+<span id="cb50-45"><a href="12-Supp_fig_6.html#cb50-45" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">unlist</span>(betas))</span>
+<span id="cb50-46"><a href="12-Supp_fig_6.html#cb50-46" tabindex="-1"></a>s<span class="ot">&lt;-</span> <span class="fu">rownames</span>(df)</span>
+<span id="cb50-47"><a href="12-Supp_fig_6.html#cb50-47" tabindex="-1"></a>si<span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(s)</span>
+<span id="cb50-48"><a href="12-Supp_fig_6.html#cb50-48" tabindex="-1"></a>si<span class="ot">&lt;-</span> <span class="fu">separate</span>(si, s, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&#39;Patient&#39;</span>,<span class="st">&#39;sample&#39;</span>), <span class="at">sep =</span> <span class="st">&quot;.Sample&quot;</span>)</span>
+<span id="cb50-49"><a href="12-Supp_fig_6.html#cb50-49" tabindex="-1"></a>df1<span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(df, si)</span>
+<span id="cb50-50"><a href="12-Supp_fig_6.html#cb50-50" tabindex="-1"></a></span>
+<span id="cb50-51"><a href="12-Supp_fig_6.html#cb50-51" tabindex="-1"></a>b<span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df1, <span class="fu">aes</span>(<span class="at">x =</span> Patient, <span class="at">y =</span> <span class="st">`</span><span class="at">unlist(betas)</span><span class="st">`</span>))<span class="sc">+</span> <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&#39;&#39;</span>) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">&#39;Bufferused&#39;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;Bray-Curtis distance&quot;</span>)</span>
+<span id="cb50-52"><a href="12-Supp_fig_6.html#cb50-52" tabindex="-1"></a></span>
+<span id="cb50-53"><a href="12-Supp_fig_6.html#cb50-53" tabindex="-1"></a></span>
+<span id="cb50-54"><a href="12-Supp_fig_6.html#cb50-54" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">plot =</span> p,</span>
+<span id="cb50-55"><a href="12-Supp_fig_6.html#cb50-55" tabindex="-1"></a>       <span class="st">&quot;./figures/lipid_intra_patient_variance.png&quot;</span>,</span>
+<span id="cb50-56"><a href="12-Supp_fig_6.html#cb50-56" tabindex="-1"></a>       <span class="at">device =</span> <span class="st">&quot;png&quot;</span>, <span class="at">units =</span> <span class="st">&quot;mm&quot;</span>, <span class="at">height =</span> <span class="dv">150</span>, <span class="at">width =</span> <span class="dv">200</span>)</span></code></pre></div>
+<p><img src="figures/lipid_intra_patient_variance.png" width="100%" style="display: block; margin: auto;" /></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="02-Phyloseqize.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="11-Supp_fig_5.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="13-Supp_fig_7.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 17 Supp table 6 | Optimised human stool sample collection for multi-omic microbiota analysis R code</title>
+  <meta name="description" content="Book to contain visualisation for the “ANCOM” project" />
+  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 17 Supp table 6 | Optimised human stool sample collection for multi-omic microbiota analysis R code" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Book to contain visualisation for the “ANCOM” project" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 17 Supp table 6 | Optimised human stool sample collection for multi-omic microbiota analysis R code" />
+  
+  <meta name="twitter:description" content="Book to contain visualisation for the “ANCOM” project" />
+  
+
+<meta name="author" content="Matthew R. Gemmell" />
+
+
+<meta name="date" content="2024-07-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="16-Supp_table_4.html"/>
+<link rel="next" href="18-Supp_table_7.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.28/datatables.js"></script>
+<link href="libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a>Optimised human stool sample collection for multi-omic microbiota analysis R code</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="01-Intro.html"><a href="01-Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="02-Phyloseqize.html"><a href="02-Phyloseqize.html"><i class="fa fa-check"></i><b>2</b> Importing and preocessing data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="02-Phyloseqize.html"><a href="02-Phyloseqize.html#qiime2r-import"><i class="fa fa-check"></i><b>2.1</b> qiime2R import</a></li>
+<li class="chapter" data-level="2.2" data-path="02-Phyloseqize.html"><a href="02-Phyloseqize.html#preprocess-data"><i class="fa fa-check"></i><b>2.2</b> Preprocess data</a></li>
+<li class="chapter" data-level="2.3" data-path="02-Phyloseqize.html"><a href="02-Phyloseqize.html#lipid-data"><i class="fa fa-check"></i><b>2.3</b> Lipid data</a></li>
+</ul></li>
+<li class="part"><span><b>Main figures</b></span></li>
+<li class="chapter" data-level="3" data-path="03-Figure_3.html"><a href="03-Figure_3.html"><i class="fa fa-check"></i><b>3</b> Figure 3</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="03-Figure_3.html"><a href="03-Figure_3.html#libraries"><i class="fa fa-check"></i><b>3.1</b> Libraries</a></li>
+<li class="chapter" data-level="3.2" data-path="03-Figure_3.html"><a href="03-Figure_3.html#figure-3a"><i class="fa fa-check"></i><b>3.2</b> Figure 3A</a></li>
+<li class="chapter" data-level="3.3" data-path="03-Figure_3.html"><a href="03-Figure_3.html#figure-3b"><i class="fa fa-check"></i><b>3.3</b> Figure 3B</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="03-Figure_3.html"><a href="03-Figure_3.html#percentage-of-bacteroides-and-firmicutes"><i class="fa fa-check"></i><b>3.3.1</b> Percentage of Bacteroides and Firmicutes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="03-Figure_3.html"><a href="03-Figure_3.html#figure-3c"><i class="fa fa-check"></i><b>3.4</b> Figure 3C</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="04-Figure_4.html"><a href="04-Figure_4.html"><i class="fa fa-check"></i><b>4</b> Figure 4</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="04-Figure_4.html"><a href="04-Figure_4.html#libraries-1"><i class="fa fa-check"></i><b>4.1</b> Libraries</a></li>
+<li class="chapter" data-level="4.2" data-path="04-Figure_4.html"><a href="04-Figure_4.html#genus"><i class="fa fa-check"></i><b>4.2</b> Genus</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="04-Figure_4.html"><a href="04-Figure_4.html#preprocess-table-and-convert-to-genus-table"><i class="fa fa-check"></i><b>4.2.1</b> Preprocess table and convert to genus table</a></li>
+<li class="chapter" data-level="4.2.2" data-path="04-Figure_4.html"><a href="04-Figure_4.html#maaslin2-on-genera"><i class="fa fa-check"></i><b>4.2.2</b> MaAsLin2 on genera</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="05-Figure_5.html"><a href="05-Figure_5.html"><i class="fa fa-check"></i><b>5</b> Figure 5</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="05-Figure_5.html"><a href="05-Figure_5.html#libraries-2"><i class="fa fa-check"></i><b>5.1</b> libraries</a></li>
+<li class="chapter" data-level="5.2" data-path="05-Figure_5.html"><a href="05-Figure_5.html#preprocess-data-1"><i class="fa fa-check"></i><b>5.2</b> Preprocess data</a></li>
+<li class="chapter" data-level="5.3" data-path="05-Figure_5.html"><a href="05-Figure_5.html#colour-blindy-friendly-palettes"><i class="fa fa-check"></i><b>5.3</b> Colour blindy friendly palettes</a></li>
+<li class="chapter" data-level="5.4" data-path="05-Figure_5.html"><a href="05-Figure_5.html#a-heatmap"><i class="fa fa-check"></i><b>5.4</b> A Heatmap</a></li>
+<li class="chapter" data-level="5.5" data-path="05-Figure_5.html"><a href="05-Figure_5.html#b-c"><i class="fa fa-check"></i><b>5.5</b> B &amp; C</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="05-Figure_5.html"><a href="05-Figure_5.html#b-pcoa-plot"><i class="fa fa-check"></i><b>5.5.1</b> B PCoA plot</a></li>
+<li class="chapter" data-level="5.5.2" data-path="05-Figure_5.html"><a href="05-Figure_5.html#c-pcoa-plot"><i class="fa fa-check"></i><b>5.5.2</b> C PCoA plot</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="05-Figure_5.html"><a href="05-Figure_5.html#without-ethanol"><i class="fa fa-check"></i><b>5.6</b> Without ethanol</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="06-Figure_6.html"><a href="06-Figure_6.html"><i class="fa fa-check"></i><b>6</b> Figure 6</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="06-Figure_6.html"><a href="06-Figure_6.html#libraries-3"><i class="fa fa-check"></i><b>6.1</b> Libraries</a></li>
+<li class="chapter" data-level="6.2" data-path="06-Figure_6.html"><a href="06-Figure_6.html#preprocess-tables"><i class="fa fa-check"></i><b>6.2</b> Preprocess tables</a></li>
+<li class="chapter" data-level="6.3" data-path="06-Figure_6.html"><a href="06-Figure_6.html#all-buffers"><i class="fa fa-check"></i><b>6.3</b> All buffers</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="06-Figure_6.html"><a href="06-Figure_6.html#correlation"><i class="fa fa-check"></i><b>6.3.1</b> Correlation</a></li>
+<li class="chapter" data-level="6.3.2" data-path="06-Figure_6.html"><a href="06-Figure_6.html#heatmap"><i class="fa fa-check"></i><b>6.3.2</b> Heatmap</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Supplementary figures</b></span></li>
+<li class="chapter" data-level="7" data-path="07-Supp_fig_1.html"><a href="07-Supp_fig_1.html"><i class="fa fa-check"></i><b>7</b> Supp figure 1</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="07-Supp_fig_1.html"><a href="07-Supp_fig_1.html#libraries-4"><i class="fa fa-check"></i><b>7.1</b> Libraries</a></li>
+<li class="chapter" data-level="7.2" data-path="07-Supp_fig_1.html"><a href="07-Supp_fig_1.html#rarefactipon-plot"><i class="fa fa-check"></i><b>7.2</b> Rarefactipon plot</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html"><i class="fa fa-check"></i><b>8</b> Supp figure 2</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#libraries-5"><i class="fa fa-check"></i><b>8.1</b> Libraries</a></li>
+<li class="chapter" data-level="8.2" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#weighted-unifrac-plots-with-relative-abundance"><i class="fa fa-check"></i><b>8.2</b> Weighted unifrac plots with relative abundance</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-a-buffer-used-faceted-by-patient"><i class="fa fa-check"></i><b>8.2.1</b> Figure A: Buffer used faceted by patient</a></li>
+<li class="chapter" data-level="8.2.2" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-b-storage-temperature"><i class="fa fa-check"></i><b>8.2.2</b> Figure B: Storage temperature</a></li>
+<li class="chapter" data-level="8.2.3" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-c-storage-conditions"><i class="fa fa-check"></i><b>8.2.3</b> Figure C: Storage conditions</a></li>
+<li class="chapter" data-level="8.2.4" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-d-buffer-and-storage-condition-faceted-by-patient"><i class="fa fa-check"></i><b>8.2.4</b> Figure D: Buffer and storage condition faceted by patient</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html"><i class="fa fa-check"></i><b>9</b> Supp figure 3</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#libraries-6"><i class="fa fa-check"></i><b>9.1</b> Libraries</a></li>
+<li class="chapter" data-level="9.2" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#s-composition"><i class="fa fa-check"></i><b>9.2</b> 16S composition</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#table-of-all-paired-distances"><i class="fa fa-check"></i><b>9.2.1</b> Table of all paired distances</a></li>
+<li class="chapter" data-level="9.2.2" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#extract-the-paired-distances"><i class="fa fa-check"></i><b>9.2.2</b> Extract the paired distances</a></li>
+<li class="chapter" data-level="9.2.3" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#buffer-deep-dive"><i class="fa fa-check"></i><b>9.2.3</b> Buffer deep dive</a></li>
+<li class="chapter" data-level="9.2.4" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#combined-plot"><i class="fa fa-check"></i><b>9.2.4</b> Combined plot</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html"><i class="fa fa-check"></i><b>10</b> Supp figure 4</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#libraries-7"><i class="fa fa-check"></i><b>10.1</b> Libraries</a></li>
+<li class="chapter" data-level="10.2" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#alpha-diveristy-plots"><i class="fa fa-check"></i><b>10.2</b> Alpha diveristy plots</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#a-storage-conditions"><i class="fa fa-check"></i><b>10.2.1</b> A: Storage conditions</a></li>
+<li class="chapter" data-level="10.2.2" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#b-participant-number"><i class="fa fa-check"></i><b>10.2.2</b> B: Participant number</a></li>
+<li class="chapter" data-level="10.2.3" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#c-storage-temp"><i class="fa fa-check"></i><b>10.2.3</b> C: Storage temp</a></li>
+<li class="chapter" data-level="10.2.4" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#d-buffer-and-storage"><i class="fa fa-check"></i><b>10.2.4</b> D: Buffer and storage</a></li>
+<li class="chapter" data-level="10.2.5" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#e-buffer-and-participant"><i class="fa fa-check"></i><b>10.2.5</b> E: Buffer and participant</a></li>
+<li class="chapter" data-level="10.2.6" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#f-storage-condition-and-participant"><i class="fa fa-check"></i><b>10.2.6</b> F: storage condition and participant</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11-Supp_fig_5.html"><a href="11-Supp_fig_5.html"><i class="fa fa-check"></i><b>11</b> Supp figure 5</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="11-Supp_fig_5.html"><a href="11-Supp_fig_5.html#libraries-8"><i class="fa fa-check"></i><b>11.1</b> Libraries</a></li>
+<li class="chapter" data-level="11.2" data-path="11-Supp_fig_5.html"><a href="11-Supp_fig_5.html#barchart-of-genera-biomarkers"><i class="fa fa-check"></i><b>11.2</b> Barchart of Genera biomarkers</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="12-Supp_fig_6.html"><a href="12-Supp_fig_6.html"><i class="fa fa-check"></i><b>12</b> Supp figure 6</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="12-Supp_fig_6.html"><a href="12-Supp_fig_6.html#intra-group-variability"><i class="fa fa-check"></i><b>12.1</b> Intra group variability</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="13-Supp_fig_7.html"><a href="13-Supp_fig_7.html"><i class="fa fa-check"></i><b>13</b> Supp figure 7</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="13-Supp_fig_7.html"><a href="13-Supp_fig_7.html#libraries-9"><i class="fa fa-check"></i><b>13.1</b> Libraries</a></li>
+<li class="chapter" data-level="13.2" data-path="13-Supp_fig_7.html"><a href="13-Supp_fig_7.html#scfa-analysis"><i class="fa fa-check"></i><b>13.2</b> SCFA analysis</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="13-Supp_fig_7.html"><a href="13-Supp_fig_7.html#table-of-all-paired-distances-1"><i class="fa fa-check"></i><b>13.2.1</b> Table of all paired distances</a></li>
+<li class="chapter" data-level="13.2.2" data-path="13-Supp_fig_7.html"><a href="13-Supp_fig_7.html#extract-the-paired-distances-1"><i class="fa fa-check"></i><b>13.2.2</b> Extract the paired distances</a></li>
+<li class="chapter" data-level="13.2.3" data-path="13-Supp_fig_7.html"><a href="13-Supp_fig_7.html#buffer-deep-dive-1"><i class="fa fa-check"></i><b>13.2.3</b> Buffer deep dive</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="13-Supp_fig_7.html"><a href="13-Supp_fig_7.html#combine-plots"><i class="fa fa-check"></i><b>13.3</b> Combine plots</a></li>
+</ul></li>
+<li class="part"><span><b>Supplementary tables</b></span></li>
+<li class="chapter" data-level="14" data-path="14-Supp_table_2.html"><a href="14-Supp_table_2.html"><i class="fa fa-check"></i><b>14</b> Supp table 2</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="14-Supp_table_2.html"><a href="14-Supp_table_2.html#libraries-10"><i class="fa fa-check"></i><b>14.1</b> Libraries</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="14-Supp_table_2.html"><a href="14-Supp_table_2.html#statistical-test"><i class="fa fa-check"></i><b>14.1.1</b> Statistical test</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="15-Supp_table_3.html"><a href="15-Supp_table_3.html"><i class="fa fa-check"></i><b>15</b> Supp table 3</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="15-Supp_table_3.html"><a href="15-Supp_table_3.html#libraries-11"><i class="fa fa-check"></i><b>15.1</b> Libraries</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="15-Supp_table_3.html"><a href="15-Supp_table_3.html#paired-wilcox-tests"><i class="fa fa-check"></i><b>15.1.1</b> Paired wilcox tests</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="16-Supp_table_4.html"><a href="16-Supp_table_4.html"><i class="fa fa-check"></i><b>16</b> Supp table 4</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="16-Supp_table_4.html"><a href="16-Supp_table_4.html#libraries-12"><i class="fa fa-check"></i><b>16.1</b> Libraries</a></li>
+<li class="chapter" data-level="16.2" data-path="16-Supp_table_4.html"><a href="16-Supp_table_4.html#significant-results-table"><i class="fa fa-check"></i><b>16.2</b> Significant results table</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="17-Supp_table_6.html"><a href="17-Supp_table_6.html"><i class="fa fa-check"></i><b>17</b> Supp table 6</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="17-Supp_table_6.html"><a href="17-Supp_table_6.html#libraries-13"><i class="fa fa-check"></i><b>17.1</b> libraries</a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="17-Supp_table_6.html"><a href="17-Supp_table_6.html#statisitical-tests"><i class="fa fa-check"></i><b>17.1.1</b> Statisitical tests</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="18-Supp_table_7.html"><a href="18-Supp_table_7.html"><i class="fa fa-check"></i><b>18</b> Supp table 7</a></li>
+<li class="chapter" data-level="19" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html"><i class="fa fa-check"></i><b>19</b> Supp table 8</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#libraries-14"><i class="fa fa-check"></i><b>19.1</b> Libraries</a></li>
+<li class="chapter" data-level="19.2" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#preprocess-tables-1"><i class="fa fa-check"></i><b>19.2</b> Preprocess tables</a></li>
+<li class="chapter" data-level="19.3" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#no-buffer"><i class="fa fa-check"></i><b>19.3</b> No buffer</a>
+<ul>
+<li class="chapter" data-level="19.3.1" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#correlation-1"><i class="fa fa-check"></i><b>19.3.1</b> Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="19.4" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#rnalater"><i class="fa fa-check"></i><b>19.4</b> RNAlater</a>
+<ul>
+<li class="chapter" data-level="19.4.1" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#correlation-2"><i class="fa fa-check"></i><b>19.4.1</b> Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="19.5" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#ethanol"><i class="fa fa-check"></i><b>19.5</b> Ethanol</a>
+<ul>
+<li class="chapter" data-level="19.5.1" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#correlation-3"><i class="fa fa-check"></i><b>19.5.1</b> Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="19.6" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#psp"><i class="fa fa-check"></i><b>19.6</b> PSP</a>
+<ul>
+<li class="chapter" data-level="19.6.1" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#correlation-4"><i class="fa fa-check"></i><b>19.6.1</b> Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="19.7" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#compare-results"><i class="fa fa-check"></i><b>19.7</b> Compare results</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Optimised human stool sample collection for multi-omic microbiota analysis R code</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="supp-table-6" class="section level1 hasAnchor" number="17">
+<h1><span class="header-section-number">Chapter 17</span> Supp table 6<a href="17-Supp_table_6.html#supp-table-6" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>PERMANOVA statistical tests of different comparisons based on Bray-Curtis distances for the Lipid data. PERMANOVA results, 999 permutations, pairwise tests display holm adjusted p-values.</p>
+<div id="libraries-13" class="section level2 hasAnchor" number="17.1">
+<h2><span class="header-section-number">17.1</span> libraries<a href="17-Supp_table_6.html#libraries-13" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="17-Supp_table_6.html#cb63-1" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;phyloseq&quot;</span>)</span>
+<span id="cb63-2"><a href="17-Supp_table_6.html#cb63-2" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;vegan&quot;</span>)</span></code></pre></div>
+<div id="statisitical-tests" class="section level3 hasAnchor" number="17.1.1">
+<h3><span class="header-section-number">17.1.1</span> Statisitical tests<a href="17-Supp_table_6.html#statisitical-tests" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="17-Supp_table_6.html#cb64-1" tabindex="-1"></a><span class="co">#load phylosq object</span></span>
+<span id="cb64-2"><a href="17-Supp_table_6.html#cb64-2" tabindex="-1"></a><span class="fu">load</span>(<span class="at">file =</span> <span class="st">&quot;./data/lipid_physeq_object&quot;</span>)</span>
+<span id="cb64-3"><a href="17-Supp_table_6.html#cb64-3" tabindex="-1"></a><span class="fu">load</span>(<span class="at">file =</span> <span class="st">&quot;./data/lipid_physeq_1k_object&quot;</span>)</span>
+<span id="cb64-4"><a href="17-Supp_table_6.html#cb64-4" tabindex="-1"></a></span>
+<span id="cb64-5"><a href="17-Supp_table_6.html#cb64-5" tabindex="-1"></a><span class="co">#Extract metadata</span></span>
+<span id="cb64-6"><a href="17-Supp_table_6.html#cb64-6" tabindex="-1"></a>meta <span class="ot">&lt;-</span> <span class="fu">as</span>(<span class="fu">sample_data</span>(physeq_1k), <span class="st">&quot;data.frame&quot;</span>)</span>
+<span id="cb64-7"><a href="17-Supp_table_6.html#cb64-7" tabindex="-1"></a><span class="co">#Change Temp.Storage.time values</span></span>
+<span id="cb64-8"><a href="17-Supp_table_6.html#cb64-8" tabindex="-1"></a>meta<span class="sc">$</span>Temp.Storage.time <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">|&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;_&quot;</span>, meta<span class="sc">$</span>Temp.Storage.time)</span>
+<span id="cb64-9"><a href="17-Supp_table_6.html#cb64-9" tabindex="-1"></a>meta<span class="sc">$</span>Temp.Storage.time <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="at">pattern =</span> <span class="st">&quot; day&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;D&quot;</span>, meta<span class="sc">$</span>Temp.Storage.time)</span>
+<span id="cb64-10"><a href="17-Supp_table_6.html#cb64-10" tabindex="-1"></a><span class="co">#Update metadata with better names and column names</span></span>
+<span id="cb64-11"><a href="17-Supp_table_6.html#cb64-11" tabindex="-1"></a></span>
+<span id="cb64-12"><a href="17-Supp_table_6.html#cb64-12" tabindex="-1"></a></span>
+<span id="cb64-13"><a href="17-Supp_table_6.html#cb64-13" tabindex="-1"></a><span class="co">#Calculate bray distance</span></span>
+<span id="cb64-14"><a href="17-Supp_table_6.html#cb64-14" tabindex="-1"></a>bray.dist <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(phyloseq<span class="sc">::</span><span class="fu">distance</span>(physeq, <span class="at">method=</span><span class="st">&quot;bray&quot;</span>))</span>
+<span id="cb64-15"><a href="17-Supp_table_6.html#cb64-15" tabindex="-1"></a></span>
+<span id="cb64-16"><a href="17-Supp_table_6.html#cb64-16" tabindex="-1"></a><span class="co">#Pairwise comparison function</span></span>
+<span id="cb64-17"><a href="17-Supp_table_6.html#cb64-17" tabindex="-1"></a>paiwise_function <span class="ot">&lt;-</span> <span class="cf">function</span>(dist_df, meta_df, meta_column) {</span>
+<span id="cb64-18"><a href="17-Supp_table_6.html#cb64-18" tabindex="-1"></a>  <span class="co">#Combination</span></span>
+<span id="cb64-19"><a href="17-Supp_table_6.html#cb64-19" tabindex="-1"></a>  cbn <span class="ot">&lt;-</span> <span class="fu">combn</span>(<span class="at">x =</span> <span class="fu">unique</span>(meta_df[,meta_column]), <span class="at">m =</span> <span class="dv">2</span>)</span>
+<span id="cb64-20"><a href="17-Supp_table_6.html#cb64-20" tabindex="-1"></a>  <span class="co">#Create empty final data frame with 4 columns</span></span>
+<span id="cb64-21"><a href="17-Supp_table_6.html#cb64-21" tabindex="-1"></a>  <span class="co"># and a number of rows equal to the the number of combinations</span></span>
+<span id="cb64-22"><a href="17-Supp_table_6.html#cb64-22" tabindex="-1"></a>  pairwise_permanova_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">matrix</span>(<span class="at">data =</span> <span class="cn">NA</span>, <span class="at">nrow =</span> <span class="fu">ncol</span>(cbn), <span class="at">ncol =</span> <span class="dv">4</span>))</span>
+<span id="cb64-23"><a href="17-Supp_table_6.html#cb64-23" tabindex="-1"></a>  <span class="co">#Add column names</span></span>
+<span id="cb64-24"><a href="17-Supp_table_6.html#cb64-24" tabindex="-1"></a>  <span class="fu">colnames</span>(pairwise_permanova_df) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;X&quot;</span>,<span class="st">&quot;Y&quot;</span>,<span class="st">&quot;p&quot;</span>,<span class="st">&quot;p.adj&quot;</span>)</span>
+<span id="cb64-25"><a href="17-Supp_table_6.html#cb64-25" tabindex="-1"></a>  <span class="co">#Loop through the combinations</span></span>
+<span id="cb64-26"><a href="17-Supp_table_6.html#cb64-26" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(cbn)){</span>
+<span id="cb64-27"><a href="17-Supp_table_6.html#cb64-27" tabindex="-1"></a>    <span class="co">#Subset metadf to contain only our samples of interest</span></span>
+<span id="cb64-28"><a href="17-Supp_table_6.html#cb64-28" tabindex="-1"></a>    metadf_subset <span class="ot">&lt;-</span> meta[meta[,meta_column]<span class="sc">%in%</span> cbn[,i],]</span>
+<span id="cb64-29"><a href="17-Supp_table_6.html#cb64-29" tabindex="-1"></a>    <span class="co">#Subset distance matrix</span></span>
+<span id="cb64-30"><a href="17-Supp_table_6.html#cb64-30" tabindex="-1"></a>    samples_subset <span class="ot">&lt;-</span> <span class="fu">row.names</span>(metadf_subset)</span>
+<span id="cb64-31"><a href="17-Supp_table_6.html#cb64-31" tabindex="-1"></a>    dist.subset <span class="ot">&lt;-</span> dist_df[samples_subset,samples_subset]</span>
+<span id="cb64-32"><a href="17-Supp_table_6.html#cb64-32" tabindex="-1"></a>    <span class="co">#PERMANOVA/ADONIS</span></span>
+<span id="cb64-33"><a href="17-Supp_table_6.html#cb64-33" tabindex="-1"></a>    f <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;dist.subset~&quot;</span>,meta_column)</span>
+<span id="cb64-34"><a href="17-Supp_table_6.html#cb64-34" tabindex="-1"></a>    pairwise_adonis <span class="ot">&lt;-</span> vegan<span class="sc">::</span><span class="fu">adonis2</span>(<span class="at">formula =</span> <span class="fu">formula</span>(f), <span class="at">permutations =</span> <span class="dv">999</span>,</span>
+<span id="cb64-35"><a href="17-Supp_table_6.html#cb64-35" tabindex="-1"></a>                                               <span class="at">data =</span> metadf_subset, <span class="at">by =</span> <span class="st">&quot;margin&quot;</span>)</span>
+<span id="cb64-36"><a href="17-Supp_table_6.html#cb64-36" tabindex="-1"></a>    <span class="co">#Add the group names and p-value to the main data frame</span></span>
+<span id="cb64-37"><a href="17-Supp_table_6.html#cb64-37" tabindex="-1"></a>    pairwise_permanova_df[i,<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="ot">&lt;-</span> cbn[,i]</span>
+<span id="cb64-38"><a href="17-Supp_table_6.html#cb64-38" tabindex="-1"></a>    pairwise_permanova_df[i,<span class="dv">3</span>] <span class="ot">&lt;-</span> pairwise_adonis[<span class="dv">1</span>,<span class="st">&quot;Pr(&gt;F)&quot;</span>]</span>
+<span id="cb64-39"><a href="17-Supp_table_6.html#cb64-39" tabindex="-1"></a>  }</span>
+<span id="cb64-40"><a href="17-Supp_table_6.html#cb64-40" tabindex="-1"></a>  <span class="co">#Add adjusted P-values</span></span>
+<span id="cb64-41"><a href="17-Supp_table_6.html#cb64-41" tabindex="-1"></a>  pairwise_permanova_df<span class="sc">$</span>p.adj <span class="ot">&lt;-</span> <span class="fu">p.adjust</span>(pairwise_permanova_df<span class="sc">$</span>p, <span class="at">method =</span> <span class="st">&quot;BH&quot;</span>)</span>
+<span id="cb64-42"><a href="17-Supp_table_6.html#cb64-42" tabindex="-1"></a>  <span class="co">#Convert to wide table with adjusted p-values</span></span>
+<span id="cb64-43"><a href="17-Supp_table_6.html#cb64-43" tabindex="-1"></a>  p_adjust_long <span class="ot">&lt;-</span> pairwise_permanova_df[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>)]</span>
+<span id="cb64-44"><a href="17-Supp_table_6.html#cb64-44" tabindex="-1"></a>  p_adjust_wide <span class="ot">&lt;-</span> <span class="fu">spread</span>(<span class="at">data =</span> p_adjust_long, Y, p.adj, <span class="at">fill=</span><span class="cn">NA</span>)</span>
+<span id="cb64-45"><a href="17-Supp_table_6.html#cb64-45" tabindex="-1"></a>  <span class="co">#Reformat</span></span>
+<span id="cb64-46"><a href="17-Supp_table_6.html#cb64-46" tabindex="-1"></a>  <span class="fu">row.names</span>(p_adjust_wide) <span class="ot">&lt;-</span> p_adjust_wide[,<span class="dv">1</span>]</span>
+<span id="cb64-47"><a href="17-Supp_table_6.html#cb64-47" tabindex="-1"></a>  p_adjust_wide <span class="ot">&lt;-</span> p_adjust_wide[,<span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb64-48"><a href="17-Supp_table_6.html#cb64-48" tabindex="-1"></a>  <span class="fu">return</span>(p_adjust_wide)</span>
+<span id="cb64-49"><a href="17-Supp_table_6.html#cb64-49" tabindex="-1"></a>}</span>
+<span id="cb64-50"><a href="17-Supp_table_6.html#cb64-50" tabindex="-1"></a></span>
+<span id="cb64-51"><a href="17-Supp_table_6.html#cb64-51" tabindex="-1"></a><span class="co">#PERMANOVA tests</span></span>
+<span id="cb64-52"><a href="17-Supp_table_6.html#cb64-52" tabindex="-1"></a><span class="co">#Patient</span></span>
+<span id="cb64-53"><a href="17-Supp_table_6.html#cb64-53" tabindex="-1"></a>patient_permanova <span class="ot">&lt;-</span> </span>
+<span id="cb64-54"><a href="17-Supp_table_6.html#cb64-54" tabindex="-1"></a>  vegan<span class="sc">::</span><span class="fu">adonis2</span>(bray.dist <span class="sc">~</span> Sample.number,</span>
+<span id="cb64-55"><a href="17-Supp_table_6.html#cb64-55" tabindex="-1"></a>               <span class="at">data =</span> meta, <span class="at">permutations=</span><span class="dv">999</span>, <span class="at">by =</span> <span class="st">&quot;margin&quot;</span>)</span>
+<span id="cb64-56"><a href="17-Supp_table_6.html#cb64-56" tabindex="-1"></a><span class="co">#Change a row name</span></span>
+<span id="cb64-57"><a href="17-Supp_table_6.html#cb64-57" tabindex="-1"></a><span class="fu">row.names</span>(patient_permanova)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Participant number&quot;</span></span>
+<span id="cb64-58"><a href="17-Supp_table_6.html#cb64-58" tabindex="-1"></a><span class="co">#pairwise</span></span>
+<span id="cb64-59"><a href="17-Supp_table_6.html#cb64-59" tabindex="-1"></a>patient_pairwise <span class="ot">&lt;-</span> <span class="fu">paiwise_function</span>(bray.dist, meta, <span class="st">&quot;Sample.number&quot;</span>)</span>
+<span id="cb64-60"><a href="17-Supp_table_6.html#cb64-60" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb64-61"><a href="17-Supp_table_6.html#cb64-61" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Participant number&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-62"><a href="17-Supp_table_6.html#cb64-62" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-63"><a href="17-Supp_table_6.html#cb64-63" tabindex="-1"></a><span class="fu">write.table</span>(patient_permanova, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-64"><a href="17-Supp_table_6.html#cb64-64" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-65"><a href="17-Supp_table_6.html#cb64-65" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Pairwise&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-66"><a href="17-Supp_table_6.html#cb64-66" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-67"><a href="17-Supp_table_6.html#cb64-67" tabindex="-1"></a><span class="fu">write.table</span>(patient_pairwise, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-68"><a href="17-Supp_table_6.html#cb64-68" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-69"><a href="17-Supp_table_6.html#cb64-69" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-70"><a href="17-Supp_table_6.html#cb64-70" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-71"><a href="17-Supp_table_6.html#cb64-71" tabindex="-1"></a><span class="co">#Remove results</span></span>
+<span id="cb64-72"><a href="17-Supp_table_6.html#cb64-72" tabindex="-1"></a><span class="fu">remove</span>(patient_permanova, patient_pairwise)</span>
+<span id="cb64-73"><a href="17-Supp_table_6.html#cb64-73" tabindex="-1"></a></span>
+<span id="cb64-74"><a href="17-Supp_table_6.html#cb64-74" tabindex="-1"></a><span class="co">#buffer</span></span>
+<span id="cb64-75"><a href="17-Supp_table_6.html#cb64-75" tabindex="-1"></a>buffer_permanova <span class="ot">&lt;-</span> </span>
+<span id="cb64-76"><a href="17-Supp_table_6.html#cb64-76" tabindex="-1"></a>  vegan<span class="sc">::</span><span class="fu">adonis2</span>(bray.dist <span class="sc">~</span> Buffer.type ,</span>
+<span id="cb64-77"><a href="17-Supp_table_6.html#cb64-77" tabindex="-1"></a>               <span class="at">data =</span> meta, <span class="at">permutations=</span><span class="dv">999</span>, <span class="at">by =</span> <span class="st">&quot;margin&quot;</span>)</span>
+<span id="cb64-78"><a href="17-Supp_table_6.html#cb64-78" tabindex="-1"></a><span class="co">#Change a row name</span></span>
+<span id="cb64-79"><a href="17-Supp_table_6.html#cb64-79" tabindex="-1"></a><span class="fu">row.names</span>(buffer_permanova)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Bufferused&quot;</span></span>
+<span id="cb64-80"><a href="17-Supp_table_6.html#cb64-80" tabindex="-1"></a><span class="co">#pairwise</span></span>
+<span id="cb64-81"><a href="17-Supp_table_6.html#cb64-81" tabindex="-1"></a>buffer_pairwise <span class="ot">&lt;-</span> <span class="fu">paiwise_function</span>(bray.dist, meta, <span class="st">&quot;Buffer.type&quot;</span>)</span>
+<span id="cb64-82"><a href="17-Supp_table_6.html#cb64-82" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb64-83"><a href="17-Supp_table_6.html#cb64-83" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Bufferused&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-84"><a href="17-Supp_table_6.html#cb64-84" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append=</span><span class="cn">TRUE</span>,<span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-85"><a href="17-Supp_table_6.html#cb64-85" tabindex="-1"></a><span class="fu">write.table</span>(buffer_permanova, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-86"><a href="17-Supp_table_6.html#cb64-86" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-87"><a href="17-Supp_table_6.html#cb64-87" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Pairwise&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-88"><a href="17-Supp_table_6.html#cb64-88" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-89"><a href="17-Supp_table_6.html#cb64-89" tabindex="-1"></a><span class="fu">write.table</span>(buffer_pairwise, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-90"><a href="17-Supp_table_6.html#cb64-90" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-91"><a href="17-Supp_table_6.html#cb64-91" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-92"><a href="17-Supp_table_6.html#cb64-92" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-93"><a href="17-Supp_table_6.html#cb64-93" tabindex="-1"></a><span class="co">#Remove results</span></span>
+<span id="cb64-94"><a href="17-Supp_table_6.html#cb64-94" tabindex="-1"></a><span class="fu">remove</span>(buffer_permanova, buffer_pairwise)</span>
+<span id="cb64-95"><a href="17-Supp_table_6.html#cb64-95" tabindex="-1"></a></span>
+<span id="cb64-96"><a href="17-Supp_table_6.html#cb64-96" tabindex="-1"></a><span class="co">#temp</span></span>
+<span id="cb64-97"><a href="17-Supp_table_6.html#cb64-97" tabindex="-1"></a>temp_permanova <span class="ot">&lt;-</span> </span>
+<span id="cb64-98"><a href="17-Supp_table_6.html#cb64-98" tabindex="-1"></a>  vegan<span class="sc">::</span><span class="fu">adonis2</span>(bray.dist <span class="sc">~</span> Temp,</span>
+<span id="cb64-99"><a href="17-Supp_table_6.html#cb64-99" tabindex="-1"></a>               <span class="at">data =</span> meta, <span class="at">permutations=</span><span class="dv">999</span>, <span class="at">by =</span> <span class="st">&quot;margin&quot;</span>)</span>
+<span id="cb64-100"><a href="17-Supp_table_6.html#cb64-100" tabindex="-1"></a><span class="co">#pairwise</span></span>
+<span id="cb64-101"><a href="17-Supp_table_6.html#cb64-101" tabindex="-1"></a>temp_pairwise <span class="ot">&lt;-</span> <span class="fu">paiwise_function</span>(bray.dist, meta, <span class="st">&quot;Temp&quot;</span>)</span>
+<span id="cb64-102"><a href="17-Supp_table_6.html#cb64-102" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb64-103"><a href="17-Supp_table_6.html#cb64-103" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Temp&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-104"><a href="17-Supp_table_6.html#cb64-104" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append=</span><span class="cn">TRUE</span>,<span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-105"><a href="17-Supp_table_6.html#cb64-105" tabindex="-1"></a><span class="fu">write.table</span>(temp_permanova, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-106"><a href="17-Supp_table_6.html#cb64-106" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-107"><a href="17-Supp_table_6.html#cb64-107" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Pairwise&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-108"><a href="17-Supp_table_6.html#cb64-108" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-109"><a href="17-Supp_table_6.html#cb64-109" tabindex="-1"></a><span class="fu">write.table</span>(temp_pairwise, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-110"><a href="17-Supp_table_6.html#cb64-110" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-111"><a href="17-Supp_table_6.html#cb64-111" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-112"><a href="17-Supp_table_6.html#cb64-112" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-113"><a href="17-Supp_table_6.html#cb64-113" tabindex="-1"></a><span class="co">#Remove results</span></span>
+<span id="cb64-114"><a href="17-Supp_table_6.html#cb64-114" tabindex="-1"></a><span class="fu">remove</span>(temp_permanova, temp_pairwise)</span>
+<span id="cb64-115"><a href="17-Supp_table_6.html#cb64-115" tabindex="-1"></a></span>
+<span id="cb64-116"><a href="17-Supp_table_6.html#cb64-116" tabindex="-1"></a><span class="co">#Storage condition</span></span>
+<span id="cb64-117"><a href="17-Supp_table_6.html#cb64-117" tabindex="-1"></a>condition_permanova <span class="ot">&lt;-</span> </span>
+<span id="cb64-118"><a href="17-Supp_table_6.html#cb64-118" tabindex="-1"></a>  vegan<span class="sc">::</span><span class="fu">adonis2</span>(bray.dist <span class="sc">~</span> Temp.Storage.time,</span>
+<span id="cb64-119"><a href="17-Supp_table_6.html#cb64-119" tabindex="-1"></a>               <span class="at">data =</span> meta, <span class="at">permutations=</span><span class="dv">999</span>, <span class="at">by =</span> <span class="st">&quot;margin&quot;</span>)</span>
+<span id="cb64-120"><a href="17-Supp_table_6.html#cb64-120" tabindex="-1"></a><span class="co">#Change a row name</span></span>
+<span id="cb64-121"><a href="17-Supp_table_6.html#cb64-121" tabindex="-1"></a><span class="fu">row.names</span>(condition_permanova)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">&quot;Storageconditions&quot;</span></span>
+<span id="cb64-122"><a href="17-Supp_table_6.html#cb64-122" tabindex="-1"></a><span class="co">#pairwise</span></span>
+<span id="cb64-123"><a href="17-Supp_table_6.html#cb64-123" tabindex="-1"></a>condition_pairwise <span class="ot">&lt;-</span> <span class="fu">paiwise_function</span>(bray.dist, meta, <span class="st">&quot;Temp.Storage.time&quot;</span>)</span>
+<span id="cb64-124"><a href="17-Supp_table_6.html#cb64-124" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb64-125"><a href="17-Supp_table_6.html#cb64-125" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Storageconditions&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-126"><a href="17-Supp_table_6.html#cb64-126" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append=</span><span class="cn">TRUE</span>,<span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-127"><a href="17-Supp_table_6.html#cb64-127" tabindex="-1"></a><span class="fu">write.table</span>(condition_permanova, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-128"><a href="17-Supp_table_6.html#cb64-128" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-129"><a href="17-Supp_table_6.html#cb64-129" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Pairwise&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-130"><a href="17-Supp_table_6.html#cb64-130" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-131"><a href="17-Supp_table_6.html#cb64-131" tabindex="-1"></a><span class="fu">write.table</span>(condition_pairwise, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-132"><a href="17-Supp_table_6.html#cb64-132" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-133"><a href="17-Supp_table_6.html#cb64-133" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-134"><a href="17-Supp_table_6.html#cb64-134" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-135"><a href="17-Supp_table_6.html#cb64-135" tabindex="-1"></a><span class="co">#Remove results</span></span>
+<span id="cb64-136"><a href="17-Supp_table_6.html#cb64-136" tabindex="-1"></a><span class="fu">remove</span>(condition_permanova, condition_pairwise)</span>
+<span id="cb64-137"><a href="17-Supp_table_6.html#cb64-137" tabindex="-1"></a></span>
+<span id="cb64-138"><a href="17-Supp_table_6.html#cb64-138" tabindex="-1"></a><span class="co">#Buffer and participant</span></span>
+<span id="cb64-139"><a href="17-Supp_table_6.html#cb64-139" tabindex="-1"></a>buffer_patient_permanova <span class="ot">&lt;-</span> </span>
+<span id="cb64-140"><a href="17-Supp_table_6.html#cb64-140" tabindex="-1"></a>  vegan<span class="sc">::</span><span class="fu">adonis2</span>(bray.dist <span class="sc">~</span> Buffer.type <span class="sc">+</span> Sample.number,</span>
+<span id="cb64-141"><a href="17-Supp_table_6.html#cb64-141" tabindex="-1"></a>               <span class="at">data =</span> meta, <span class="at">permutations=</span><span class="dv">999</span>, <span class="at">by =</span> <span class="st">&quot;margin&quot;</span>)</span>
+<span id="cb64-142"><a href="17-Supp_table_6.html#cb64-142" tabindex="-1"></a><span class="co">#Change row names</span></span>
+<span id="cb64-143"><a href="17-Supp_table_6.html#cb64-143" tabindex="-1"></a><span class="fu">row.names</span>(buffer_patient_permanova)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Bufferused&quot;</span>,<span class="st">&quot;Participant number&quot;</span>)</span>
+<span id="cb64-144"><a href="17-Supp_table_6.html#cb64-144" tabindex="-1"></a><span class="co">#pairwise</span></span>
+<span id="cb64-145"><a href="17-Supp_table_6.html#cb64-145" tabindex="-1"></a><span class="co">#create new metadata column</span></span>
+<span id="cb64-146"><a href="17-Supp_table_6.html#cb64-146" tabindex="-1"></a>meta<span class="sc">$</span>Bufferused_and_Patientnumber <span class="ot">&lt;-</span> <span class="fu">paste0</span>(meta<span class="sc">$</span>Buffer.type,<span class="st">&quot;_&quot;</span>,meta<span class="sc">$</span>Sample.number)</span>
+<span id="cb64-147"><a href="17-Supp_table_6.html#cb64-147" tabindex="-1"></a>buffer_patient_pairwise <span class="ot">&lt;-</span> <span class="fu">paiwise_function</span>(bray.dist, meta, <span class="st">&quot;Bufferused_and_Patientnumber&quot;</span>)</span>
+<span id="cb64-148"><a href="17-Supp_table_6.html#cb64-148" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb64-149"><a href="17-Supp_table_6.html#cb64-149" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Bufferused and Participant number&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-150"><a href="17-Supp_table_6.html#cb64-150" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append=</span><span class="cn">TRUE</span>,<span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-151"><a href="17-Supp_table_6.html#cb64-151" tabindex="-1"></a><span class="fu">write.table</span>(buffer_patient_permanova, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-152"><a href="17-Supp_table_6.html#cb64-152" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-153"><a href="17-Supp_table_6.html#cb64-153" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Pairwise&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-154"><a href="17-Supp_table_6.html#cb64-154" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-155"><a href="17-Supp_table_6.html#cb64-155" tabindex="-1"></a><span class="fu">write.table</span>(buffer_patient_pairwise, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-156"><a href="17-Supp_table_6.html#cb64-156" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-157"><a href="17-Supp_table_6.html#cb64-157" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-158"><a href="17-Supp_table_6.html#cb64-158" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-159"><a href="17-Supp_table_6.html#cb64-159" tabindex="-1"></a><span class="co">#Remove results</span></span>
+<span id="cb64-160"><a href="17-Supp_table_6.html#cb64-160" tabindex="-1"></a><span class="fu">remove</span>(buffer_patient_permanova, buffer_patient_pairwise)</span>
+<span id="cb64-161"><a href="17-Supp_table_6.html#cb64-161" tabindex="-1"></a></span>
+<span id="cb64-162"><a href="17-Supp_table_6.html#cb64-162" tabindex="-1"></a><span class="co">#Buffer and temp</span></span>
+<span id="cb64-163"><a href="17-Supp_table_6.html#cb64-163" tabindex="-1"></a>buffer_temp_permanova <span class="ot">&lt;-</span> </span>
+<span id="cb64-164"><a href="17-Supp_table_6.html#cb64-164" tabindex="-1"></a>  vegan<span class="sc">::</span><span class="fu">adonis2</span>(bray.dist <span class="sc">~</span> Buffer.type <span class="sc">+</span> Temp,</span>
+<span id="cb64-165"><a href="17-Supp_table_6.html#cb64-165" tabindex="-1"></a>               <span class="at">data =</span> meta, <span class="at">permutations=</span><span class="dv">999</span>, <span class="at">by =</span> <span class="st">&quot;margin&quot;</span>)</span>
+<span id="cb64-166"><a href="17-Supp_table_6.html#cb64-166" tabindex="-1"></a><span class="co">#Change row names</span></span>
+<span id="cb64-167"><a href="17-Supp_table_6.html#cb64-167" tabindex="-1"></a><span class="fu">row.names</span>(buffer_temp_permanova)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Bufferused&quot;</span>)</span>
+<span id="cb64-168"><a href="17-Supp_table_6.html#cb64-168" tabindex="-1"></a><span class="co">#pairwise</span></span>
+<span id="cb64-169"><a href="17-Supp_table_6.html#cb64-169" tabindex="-1"></a><span class="co">#create new metadata column</span></span>
+<span id="cb64-170"><a href="17-Supp_table_6.html#cb64-170" tabindex="-1"></a>meta<span class="sc">$</span>Bufferused_and_Temp <span class="ot">&lt;-</span> <span class="fu">paste0</span>(meta<span class="sc">$</span>Buffer.type,<span class="st">&quot;_&quot;</span>,meta<span class="sc">$</span>Temp)</span>
+<span id="cb64-171"><a href="17-Supp_table_6.html#cb64-171" tabindex="-1"></a>buffer_temp_pairwise <span class="ot">&lt;-</span> <span class="fu">paiwise_function</span>(bray.dist, meta, <span class="st">&quot;Bufferused_and_Temp&quot;</span>)</span>
+<span id="cb64-172"><a href="17-Supp_table_6.html#cb64-172" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb64-173"><a href="17-Supp_table_6.html#cb64-173" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Bufferused and Temp&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-174"><a href="17-Supp_table_6.html#cb64-174" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append=</span><span class="cn">TRUE</span>,<span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-175"><a href="17-Supp_table_6.html#cb64-175" tabindex="-1"></a><span class="fu">write.table</span>(buffer_temp_permanova, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-176"><a href="17-Supp_table_6.html#cb64-176" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-177"><a href="17-Supp_table_6.html#cb64-177" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Pairwise&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-178"><a href="17-Supp_table_6.html#cb64-178" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-179"><a href="17-Supp_table_6.html#cb64-179" tabindex="-1"></a><span class="fu">write.table</span>(buffer_temp_pairwise, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-180"><a href="17-Supp_table_6.html#cb64-180" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-181"><a href="17-Supp_table_6.html#cb64-181" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-182"><a href="17-Supp_table_6.html#cb64-182" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-183"><a href="17-Supp_table_6.html#cb64-183" tabindex="-1"></a><span class="co">#Remove results</span></span>
+<span id="cb64-184"><a href="17-Supp_table_6.html#cb64-184" tabindex="-1"></a><span class="fu">remove</span>(buffer_temp_permanova, buffer_temp_pairwise)</span>
+<span id="cb64-185"><a href="17-Supp_table_6.html#cb64-185" tabindex="-1"></a></span>
+<span id="cb64-186"><a href="17-Supp_table_6.html#cb64-186" tabindex="-1"></a><span class="co">#Temp and Participant</span></span>
+<span id="cb64-187"><a href="17-Supp_table_6.html#cb64-187" tabindex="-1"></a>temp_participant_permanova <span class="ot">&lt;-</span> </span>
+<span id="cb64-188"><a href="17-Supp_table_6.html#cb64-188" tabindex="-1"></a>  vegan<span class="sc">::</span><span class="fu">adonis2</span>(bray.dist <span class="sc">~</span> Temp <span class="sc">+</span> Sample.number,</span>
+<span id="cb64-189"><a href="17-Supp_table_6.html#cb64-189" tabindex="-1"></a>               <span class="at">data =</span> meta, <span class="at">permutations=</span><span class="dv">999</span>, <span class="at">by =</span> <span class="st">&quot;margin&quot;</span>)</span>
+<span id="cb64-190"><a href="17-Supp_table_6.html#cb64-190" tabindex="-1"></a><span class="co">#Change row names</span></span>
+<span id="cb64-191"><a href="17-Supp_table_6.html#cb64-191" tabindex="-1"></a><span class="fu">row.names</span>(temp_participant_permanova)[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Participant number&quot;</span>)</span>
+<span id="cb64-192"><a href="17-Supp_table_6.html#cb64-192" tabindex="-1"></a><span class="co">#pairwise</span></span>
+<span id="cb64-193"><a href="17-Supp_table_6.html#cb64-193" tabindex="-1"></a><span class="co">#create new metadata column</span></span>
+<span id="cb64-194"><a href="17-Supp_table_6.html#cb64-194" tabindex="-1"></a>meta<span class="sc">$</span>Temp_and_participant <span class="ot">&lt;-</span> <span class="fu">paste0</span>(meta<span class="sc">$</span>Temp,<span class="st">&quot;_&quot;</span>,meta<span class="sc">$</span>Sample.number)</span>
+<span id="cb64-195"><a href="17-Supp_table_6.html#cb64-195" tabindex="-1"></a>temp_participant_pairwise <span class="ot">&lt;-</span> <span class="fu">paiwise_function</span>(bray.dist, meta, <span class="st">&quot;Temp_and_participant&quot;</span>)</span>
+<span id="cb64-196"><a href="17-Supp_table_6.html#cb64-196" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb64-197"><a href="17-Supp_table_6.html#cb64-197" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Temp and Participant number&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-198"><a href="17-Supp_table_6.html#cb64-198" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append=</span><span class="cn">TRUE</span>,<span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-199"><a href="17-Supp_table_6.html#cb64-199" tabindex="-1"></a><span class="fu">write.table</span>(temp_participant_permanova, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-200"><a href="17-Supp_table_6.html#cb64-200" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-201"><a href="17-Supp_table_6.html#cb64-201" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Pairwise&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-202"><a href="17-Supp_table_6.html#cb64-202" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-203"><a href="17-Supp_table_6.html#cb64-203" tabindex="-1"></a><span class="fu">write.table</span>(temp_participant_pairwise, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-204"><a href="17-Supp_table_6.html#cb64-204" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-205"><a href="17-Supp_table_6.html#cb64-205" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-206"><a href="17-Supp_table_6.html#cb64-206" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-207"><a href="17-Supp_table_6.html#cb64-207" tabindex="-1"></a><span class="co">#Remove results</span></span>
+<span id="cb64-208"><a href="17-Supp_table_6.html#cb64-208" tabindex="-1"></a><span class="fu">remove</span>(temp_participant_permanova, temp_participant_pairwise)</span>
+<span id="cb64-209"><a href="17-Supp_table_6.html#cb64-209" tabindex="-1"></a></span>
+<span id="cb64-210"><a href="17-Supp_table_6.html#cb64-210" tabindex="-1"></a><span class="co">#Storage condition and participant</span></span>
+<span id="cb64-211"><a href="17-Supp_table_6.html#cb64-211" tabindex="-1"></a>condition_patient_permanova <span class="ot">&lt;-</span> </span>
+<span id="cb64-212"><a href="17-Supp_table_6.html#cb64-212" tabindex="-1"></a>  vegan<span class="sc">::</span><span class="fu">adonis2</span>(bray.dist <span class="sc">~</span> Temp.Storage.time <span class="sc">+</span> Sample.number,</span>
+<span id="cb64-213"><a href="17-Supp_table_6.html#cb64-213" tabindex="-1"></a>               <span class="at">data =</span> meta, <span class="at">permutations=</span><span class="dv">999</span>, <span class="at">by =</span> <span class="st">&quot;margin&quot;</span>)</span>
+<span id="cb64-214"><a href="17-Supp_table_6.html#cb64-214" tabindex="-1"></a><span class="co">#Change row names</span></span>
+<span id="cb64-215"><a href="17-Supp_table_6.html#cb64-215" tabindex="-1"></a><span class="fu">row.names</span>(condition_patient_permanova)[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Storageconditions&quot;</span>,<span class="st">&quot;Participant number&quot;</span>)</span>
+<span id="cb64-216"><a href="17-Supp_table_6.html#cb64-216" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb64-217"><a href="17-Supp_table_6.html#cb64-217" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Storageconditions and Participant number&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-218"><a href="17-Supp_table_6.html#cb64-218" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append=</span><span class="cn">TRUE</span>,<span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-219"><a href="17-Supp_table_6.html#cb64-219" tabindex="-1"></a><span class="fu">write.table</span>(condition_patient_permanova, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-220"><a href="17-Supp_table_6.html#cb64-220" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-221"><a href="17-Supp_table_6.html#cb64-221" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Pairwise PERMANOVA skipped as there would be too few samples per grouping&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-222"><a href="17-Supp_table_6.html#cb64-222" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-223"><a href="17-Supp_table_6.html#cb64-223" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-224"><a href="17-Supp_table_6.html#cb64-224" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-225"><a href="17-Supp_table_6.html#cb64-225" tabindex="-1"></a><span class="co">#Remove results</span></span>
+<span id="cb64-226"><a href="17-Supp_table_6.html#cb64-226" tabindex="-1"></a><span class="fu">remove</span>(condition_patient_permanova)</span>
+<span id="cb64-227"><a href="17-Supp_table_6.html#cb64-227" tabindex="-1"></a></span>
+<span id="cb64-228"><a href="17-Supp_table_6.html#cb64-228" tabindex="-1"></a><span class="co">#Buffer, Storage condition and participant</span></span>
+<span id="cb64-229"><a href="17-Supp_table_6.html#cb64-229" tabindex="-1"></a>buffer_condition_patient_permanova <span class="ot">&lt;-</span> </span>
+<span id="cb64-230"><a href="17-Supp_table_6.html#cb64-230" tabindex="-1"></a>  vegan<span class="sc">::</span><span class="fu">adonis2</span>(bray.dist <span class="sc">~</span> Buffer.type <span class="sc">+</span> Temp.Storage.time <span class="sc">+</span> Sample.number,</span>
+<span id="cb64-231"><a href="17-Supp_table_6.html#cb64-231" tabindex="-1"></a>               <span class="at">data =</span> meta, <span class="at">permutations=</span><span class="dv">999</span>, <span class="at">by =</span> <span class="st">&quot;margin&quot;</span>)</span>
+<span id="cb64-232"><a href="17-Supp_table_6.html#cb64-232" tabindex="-1"></a><span class="co">#Change row names</span></span>
+<span id="cb64-233"><a href="17-Supp_table_6.html#cb64-233" tabindex="-1"></a><span class="fu">row.names</span>(buffer_condition_patient_permanova)[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>] <span class="ot">&lt;-</span> </span>
+<span id="cb64-234"><a href="17-Supp_table_6.html#cb64-234" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">&quot;Bufferused&quot;</span>, <span class="st">&quot;Storageconditions&quot;</span>,<span class="st">&quot;Participant number&quot;</span>)</span>
+<span id="cb64-235"><a href="17-Supp_table_6.html#cb64-235" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb64-236"><a href="17-Supp_table_6.html#cb64-236" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Bufferused, Storageconditions and Participant number&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-237"><a href="17-Supp_table_6.html#cb64-237" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append=</span><span class="cn">TRUE</span>,<span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-238"><a href="17-Supp_table_6.html#cb64-238" tabindex="-1"></a><span class="fu">write.table</span>(buffer_condition_patient_permanova, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-239"><a href="17-Supp_table_6.html#cb64-239" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb64-240"><a href="17-Supp_table_6.html#cb64-240" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Pairwise PERMANOVA skipped as there would be too few samples per grouping&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-241"><a href="17-Supp_table_6.html#cb64-241" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-242"><a href="17-Supp_table_6.html#cb64-242" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/permanova_lipid.tsv&quot;</span>, </span>
+<span id="cb64-243"><a href="17-Supp_table_6.html#cb64-243" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb64-244"><a href="17-Supp_table_6.html#cb64-244" tabindex="-1"></a><span class="co">#Remove results</span></span>
+<span id="cb64-245"><a href="17-Supp_table_6.html#cb64-245" tabindex="-1"></a><span class="fu">remove</span>(buffer_condition_patient_permanova)</span></code></pre></div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="16-Supp_table_4.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="18-Supp_table_7.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

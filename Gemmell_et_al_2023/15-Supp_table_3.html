@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 15 Supp table 3 | Optimised human stool sample collection for multi-omic microbiota analysis R code</title>
+  <meta name="description" content="Book to contain visualisation for the “ANCOM” project" />
+  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 15 Supp table 3 | Optimised human stool sample collection for multi-omic microbiota analysis R code" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Book to contain visualisation for the “ANCOM” project" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 15 Supp table 3 | Optimised human stool sample collection for multi-omic microbiota analysis R code" />
+  
+  <meta name="twitter:description" content="Book to contain visualisation for the “ANCOM” project" />
+  
+
+<meta name="author" content="Matthew R. Gemmell" />
+
+
+<meta name="date" content="2024-07-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="14-Supp_table_2.html"/>
+<link rel="next" href="16-Supp_table_4.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.28/datatables.js"></script>
+<link href="libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a>Optimised human stool sample collection for multi-omic microbiota analysis R code</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="01-Intro.html"><a href="01-Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="02-Phyloseqize.html"><a href="02-Phyloseqize.html"><i class="fa fa-check"></i><b>2</b> Importing and preocessing data</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="02-Phyloseqize.html"><a href="02-Phyloseqize.html#qiime2r-import"><i class="fa fa-check"></i><b>2.1</b> qiime2R import</a></li>
+<li class="chapter" data-level="2.2" data-path="02-Phyloseqize.html"><a href="02-Phyloseqize.html#preprocess-data"><i class="fa fa-check"></i><b>2.2</b> Preprocess data</a></li>
+<li class="chapter" data-level="2.3" data-path="02-Phyloseqize.html"><a href="02-Phyloseqize.html#lipid-data"><i class="fa fa-check"></i><b>2.3</b> Lipid data</a></li>
+</ul></li>
+<li class="part"><span><b>Main figures</b></span></li>
+<li class="chapter" data-level="3" data-path="03-Figure_3.html"><a href="03-Figure_3.html"><i class="fa fa-check"></i><b>3</b> Figure 3</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="03-Figure_3.html"><a href="03-Figure_3.html#libraries"><i class="fa fa-check"></i><b>3.1</b> Libraries</a></li>
+<li class="chapter" data-level="3.2" data-path="03-Figure_3.html"><a href="03-Figure_3.html#figure-3a"><i class="fa fa-check"></i><b>3.2</b> Figure 3A</a></li>
+<li class="chapter" data-level="3.3" data-path="03-Figure_3.html"><a href="03-Figure_3.html#figure-3b"><i class="fa fa-check"></i><b>3.3</b> Figure 3B</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="03-Figure_3.html"><a href="03-Figure_3.html#percentage-of-bacteroides-and-firmicutes"><i class="fa fa-check"></i><b>3.3.1</b> Percentage of Bacteroides and Firmicutes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="03-Figure_3.html"><a href="03-Figure_3.html#figure-3c"><i class="fa fa-check"></i><b>3.4</b> Figure 3C</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="04-Figure_4.html"><a href="04-Figure_4.html"><i class="fa fa-check"></i><b>4</b> Figure 4</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="04-Figure_4.html"><a href="04-Figure_4.html#libraries-1"><i class="fa fa-check"></i><b>4.1</b> Libraries</a></li>
+<li class="chapter" data-level="4.2" data-path="04-Figure_4.html"><a href="04-Figure_4.html#genus"><i class="fa fa-check"></i><b>4.2</b> Genus</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="04-Figure_4.html"><a href="04-Figure_4.html#preprocess-table-and-convert-to-genus-table"><i class="fa fa-check"></i><b>4.2.1</b> Preprocess table and convert to genus table</a></li>
+<li class="chapter" data-level="4.2.2" data-path="04-Figure_4.html"><a href="04-Figure_4.html#maaslin2-on-genera"><i class="fa fa-check"></i><b>4.2.2</b> MaAsLin2 on genera</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="05-Figure_5.html"><a href="05-Figure_5.html"><i class="fa fa-check"></i><b>5</b> Figure 5</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="05-Figure_5.html"><a href="05-Figure_5.html#libraries-2"><i class="fa fa-check"></i><b>5.1</b> libraries</a></li>
+<li class="chapter" data-level="5.2" data-path="05-Figure_5.html"><a href="05-Figure_5.html#preprocess-data-1"><i class="fa fa-check"></i><b>5.2</b> Preprocess data</a></li>
+<li class="chapter" data-level="5.3" data-path="05-Figure_5.html"><a href="05-Figure_5.html#colour-blindy-friendly-palettes"><i class="fa fa-check"></i><b>5.3</b> Colour blindy friendly palettes</a></li>
+<li class="chapter" data-level="5.4" data-path="05-Figure_5.html"><a href="05-Figure_5.html#a-heatmap"><i class="fa fa-check"></i><b>5.4</b> A Heatmap</a></li>
+<li class="chapter" data-level="5.5" data-path="05-Figure_5.html"><a href="05-Figure_5.html#b-c"><i class="fa fa-check"></i><b>5.5</b> B &amp; C</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="05-Figure_5.html"><a href="05-Figure_5.html#b-pcoa-plot"><i class="fa fa-check"></i><b>5.5.1</b> B PCoA plot</a></li>
+<li class="chapter" data-level="5.5.2" data-path="05-Figure_5.html"><a href="05-Figure_5.html#c-pcoa-plot"><i class="fa fa-check"></i><b>5.5.2</b> C PCoA plot</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="05-Figure_5.html"><a href="05-Figure_5.html#without-ethanol"><i class="fa fa-check"></i><b>5.6</b> Without ethanol</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="06-Figure_6.html"><a href="06-Figure_6.html"><i class="fa fa-check"></i><b>6</b> Figure 6</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="06-Figure_6.html"><a href="06-Figure_6.html#libraries-3"><i class="fa fa-check"></i><b>6.1</b> Libraries</a></li>
+<li class="chapter" data-level="6.2" data-path="06-Figure_6.html"><a href="06-Figure_6.html#preprocess-tables"><i class="fa fa-check"></i><b>6.2</b> Preprocess tables</a></li>
+<li class="chapter" data-level="6.3" data-path="06-Figure_6.html"><a href="06-Figure_6.html#all-buffers"><i class="fa fa-check"></i><b>6.3</b> All buffers</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="06-Figure_6.html"><a href="06-Figure_6.html#correlation"><i class="fa fa-check"></i><b>6.3.1</b> Correlation</a></li>
+<li class="chapter" data-level="6.3.2" data-path="06-Figure_6.html"><a href="06-Figure_6.html#heatmap"><i class="fa fa-check"></i><b>6.3.2</b> Heatmap</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Supplementary figures</b></span></li>
+<li class="chapter" data-level="7" data-path="07-Supp_fig_1.html"><a href="07-Supp_fig_1.html"><i class="fa fa-check"></i><b>7</b> Supp figure 1</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="07-Supp_fig_1.html"><a href="07-Supp_fig_1.html#libraries-4"><i class="fa fa-check"></i><b>7.1</b> Libraries</a></li>
+<li class="chapter" data-level="7.2" data-path="07-Supp_fig_1.html"><a href="07-Supp_fig_1.html#rarefactipon-plot"><i class="fa fa-check"></i><b>7.2</b> Rarefactipon plot</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html"><i class="fa fa-check"></i><b>8</b> Supp figure 2</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#libraries-5"><i class="fa fa-check"></i><b>8.1</b> Libraries</a></li>
+<li class="chapter" data-level="8.2" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#weighted-unifrac-plots-with-relative-abundance"><i class="fa fa-check"></i><b>8.2</b> Weighted unifrac plots with relative abundance</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-a-buffer-used-faceted-by-patient"><i class="fa fa-check"></i><b>8.2.1</b> Figure A: Buffer used faceted by patient</a></li>
+<li class="chapter" data-level="8.2.2" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-b-storage-temperature"><i class="fa fa-check"></i><b>8.2.2</b> Figure B: Storage temperature</a></li>
+<li class="chapter" data-level="8.2.3" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-c-storage-conditions"><i class="fa fa-check"></i><b>8.2.3</b> Figure C: Storage conditions</a></li>
+<li class="chapter" data-level="8.2.4" data-path="08-Supp_fig_2.html"><a href="08-Supp_fig_2.html#figure-d-buffer-and-storage-condition-faceted-by-patient"><i class="fa fa-check"></i><b>8.2.4</b> Figure D: Buffer and storage condition faceted by patient</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html"><i class="fa fa-check"></i><b>9</b> Supp figure 3</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#libraries-6"><i class="fa fa-check"></i><b>9.1</b> Libraries</a></li>
+<li class="chapter" data-level="9.2" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#s-composition"><i class="fa fa-check"></i><b>9.2</b> 16S composition</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#table-of-all-paired-distances"><i class="fa fa-check"></i><b>9.2.1</b> Table of all paired distances</a></li>
+<li class="chapter" data-level="9.2.2" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#extract-the-paired-distances"><i class="fa fa-check"></i><b>9.2.2</b> Extract the paired distances</a></li>
+<li class="chapter" data-level="9.2.3" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#buffer-deep-dive"><i class="fa fa-check"></i><b>9.2.3</b> Buffer deep dive</a></li>
+<li class="chapter" data-level="9.2.4" data-path="09-Supp_fig_3.html"><a href="09-Supp_fig_3.html#combined-plot"><i class="fa fa-check"></i><b>9.2.4</b> Combined plot</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html"><i class="fa fa-check"></i><b>10</b> Supp figure 4</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#libraries-7"><i class="fa fa-check"></i><b>10.1</b> Libraries</a></li>
+<li class="chapter" data-level="10.2" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#alpha-diveristy-plots"><i class="fa fa-check"></i><b>10.2</b> Alpha diveristy plots</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#a-storage-conditions"><i class="fa fa-check"></i><b>10.2.1</b> A: Storage conditions</a></li>
+<li class="chapter" data-level="10.2.2" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#b-participant-number"><i class="fa fa-check"></i><b>10.2.2</b> B: Participant number</a></li>
+<li class="chapter" data-level="10.2.3" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#c-storage-temp"><i class="fa fa-check"></i><b>10.2.3</b> C: Storage temp</a></li>
+<li class="chapter" data-level="10.2.4" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#d-buffer-and-storage"><i class="fa fa-check"></i><b>10.2.4</b> D: Buffer and storage</a></li>
+<li class="chapter" data-level="10.2.5" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#e-buffer-and-participant"><i class="fa fa-check"></i><b>10.2.5</b> E: Buffer and participant</a></li>
+<li class="chapter" data-level="10.2.6" data-path="10-Supp_fig_4.html"><a href="10-Supp_fig_4.html#f-storage-condition-and-participant"><i class="fa fa-check"></i><b>10.2.6</b> F: storage condition and participant</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11-Supp_fig_5.html"><a href="11-Supp_fig_5.html"><i class="fa fa-check"></i><b>11</b> Supp figure 5</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="11-Supp_fig_5.html"><a href="11-Supp_fig_5.html#libraries-8"><i class="fa fa-check"></i><b>11.1</b> Libraries</a></li>
+<li class="chapter" data-level="11.2" data-path="11-Supp_fig_5.html"><a href="11-Supp_fig_5.html#barchart-of-genera-biomarkers"><i class="fa fa-check"></i><b>11.2</b> Barchart of Genera biomarkers</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="12-Supp_fig_6.html"><a href="12-Supp_fig_6.html"><i class="fa fa-check"></i><b>12</b> Supp figure 6</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="12-Supp_fig_6.html"><a href="12-Supp_fig_6.html#intra-group-variability"><i class="fa fa-check"></i><b>12.1</b> Intra group variability</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="13-Supp_fig_7.html"><a href="13-Supp_fig_7.html"><i class="fa fa-check"></i><b>13</b> Supp figure 7</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="13-Supp_fig_7.html"><a href="13-Supp_fig_7.html#libraries-9"><i class="fa fa-check"></i><b>13.1</b> Libraries</a></li>
+<li class="chapter" data-level="13.2" data-path="13-Supp_fig_7.html"><a href="13-Supp_fig_7.html#scfa-analysis"><i class="fa fa-check"></i><b>13.2</b> SCFA analysis</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="13-Supp_fig_7.html"><a href="13-Supp_fig_7.html#table-of-all-paired-distances-1"><i class="fa fa-check"></i><b>13.2.1</b> Table of all paired distances</a></li>
+<li class="chapter" data-level="13.2.2" data-path="13-Supp_fig_7.html"><a href="13-Supp_fig_7.html#extract-the-paired-distances-1"><i class="fa fa-check"></i><b>13.2.2</b> Extract the paired distances</a></li>
+<li class="chapter" data-level="13.2.3" data-path="13-Supp_fig_7.html"><a href="13-Supp_fig_7.html#buffer-deep-dive-1"><i class="fa fa-check"></i><b>13.2.3</b> Buffer deep dive</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="13-Supp_fig_7.html"><a href="13-Supp_fig_7.html#combine-plots"><i class="fa fa-check"></i><b>13.3</b> Combine plots</a></li>
+</ul></li>
+<li class="part"><span><b>Supplementary tables</b></span></li>
+<li class="chapter" data-level="14" data-path="14-Supp_table_2.html"><a href="14-Supp_table_2.html"><i class="fa fa-check"></i><b>14</b> Supp table 2</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="14-Supp_table_2.html"><a href="14-Supp_table_2.html#libraries-10"><i class="fa fa-check"></i><b>14.1</b> Libraries</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="14-Supp_table_2.html"><a href="14-Supp_table_2.html#statistical-test"><i class="fa fa-check"></i><b>14.1.1</b> Statistical test</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="15-Supp_table_3.html"><a href="15-Supp_table_3.html"><i class="fa fa-check"></i><b>15</b> Supp table 3</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="15-Supp_table_3.html"><a href="15-Supp_table_3.html#libraries-11"><i class="fa fa-check"></i><b>15.1</b> Libraries</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="15-Supp_table_3.html"><a href="15-Supp_table_3.html#paired-wilcox-tests"><i class="fa fa-check"></i><b>15.1.1</b> Paired wilcox tests</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="16-Supp_table_4.html"><a href="16-Supp_table_4.html"><i class="fa fa-check"></i><b>16</b> Supp table 4</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="16-Supp_table_4.html"><a href="16-Supp_table_4.html#libraries-12"><i class="fa fa-check"></i><b>16.1</b> Libraries</a></li>
+<li class="chapter" data-level="16.2" data-path="16-Supp_table_4.html"><a href="16-Supp_table_4.html#significant-results-table"><i class="fa fa-check"></i><b>16.2</b> Significant results table</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="17-Supp_table_6.html"><a href="17-Supp_table_6.html"><i class="fa fa-check"></i><b>17</b> Supp table 6</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="17-Supp_table_6.html"><a href="17-Supp_table_6.html#libraries-13"><i class="fa fa-check"></i><b>17.1</b> libraries</a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="17-Supp_table_6.html"><a href="17-Supp_table_6.html#statisitical-tests"><i class="fa fa-check"></i><b>17.1.1</b> Statisitical tests</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="18-Supp_table_7.html"><a href="18-Supp_table_7.html"><i class="fa fa-check"></i><b>18</b> Supp table 7</a></li>
+<li class="chapter" data-level="19" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html"><i class="fa fa-check"></i><b>19</b> Supp table 8</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#libraries-14"><i class="fa fa-check"></i><b>19.1</b> Libraries</a></li>
+<li class="chapter" data-level="19.2" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#preprocess-tables-1"><i class="fa fa-check"></i><b>19.2</b> Preprocess tables</a></li>
+<li class="chapter" data-level="19.3" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#no-buffer"><i class="fa fa-check"></i><b>19.3</b> No buffer</a>
+<ul>
+<li class="chapter" data-level="19.3.1" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#correlation-1"><i class="fa fa-check"></i><b>19.3.1</b> Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="19.4" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#rnalater"><i class="fa fa-check"></i><b>19.4</b> RNAlater</a>
+<ul>
+<li class="chapter" data-level="19.4.1" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#correlation-2"><i class="fa fa-check"></i><b>19.4.1</b> Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="19.5" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#ethanol"><i class="fa fa-check"></i><b>19.5</b> Ethanol</a>
+<ul>
+<li class="chapter" data-level="19.5.1" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#correlation-3"><i class="fa fa-check"></i><b>19.5.1</b> Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="19.6" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#psp"><i class="fa fa-check"></i><b>19.6</b> PSP</a>
+<ul>
+<li class="chapter" data-level="19.6.1" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#correlation-4"><i class="fa fa-check"></i><b>19.6.1</b> Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="19.7" data-path="19-Supp_table_8.html"><a href="19-Supp_table_8.html#compare-results"><i class="fa fa-check"></i><b>19.7</b> Compare results</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Optimised human stool sample collection for multi-omic microbiota analysis R code</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="supp-table-3" class="section level1 hasAnchor" number="15">
+<h1><span class="header-section-number">Chapter 15</span> Supp table 3<a href="15-Supp_table_3.html#supp-table-3" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Paired Wilcoxon statistical tests of different comparisons based on the observed ASVs, Chao1 (Estimated total number of ASVs), and Shannon metrics of the 16S data based on ASVs. Within each test P-values were adjusted by the Holm-Bonferroni method.</p>
+<div id="libraries-11" class="section level2 hasAnchor" number="15.1">
+<h2><span class="header-section-number">15.1</span> Libraries<a href="15-Supp_table_3.html#libraries-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="15-Supp_table_3.html#cb59-1" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;phyloseq&quot;</span>)</span>
+<span id="cb59-2"><a href="15-Supp_table_3.html#cb59-2" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;microbiome&quot;</span>)</span></code></pre></div>
+<p>Change some metadata categories</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="15-Supp_table_3.html#cb60-1" tabindex="-1"></a><span class="co">#Change -80 to baseline in storage conditions</span></span>
+<span id="cb60-2"><a href="15-Supp_table_3.html#cb60-2" tabindex="-1"></a><span class="fu">sample_data</span>(physeq)[,<span class="st">&quot;Storageconditions&quot;</span>] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(</span>
+<span id="cb60-3"><a href="15-Supp_table_3.html#cb60-3" tabindex="-1"></a>  <span class="at">pattern =</span> <span class="st">&quot;-80&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;Baseline&quot;</span>,</span>
+<span id="cb60-4"><a href="15-Supp_table_3.html#cb60-4" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">as.vector</span>(<span class="fu">unlist</span>(<span class="fu">sample_data</span>(physeq)[,<span class="st">&quot;Storageconditions&quot;</span>]))</span>
+<span id="cb60-5"><a href="15-Supp_table_3.html#cb60-5" tabindex="-1"></a>)</span>
+<span id="cb60-6"><a href="15-Supp_table_3.html#cb60-6" tabindex="-1"></a><span class="co">#Storage temp change to categorical names</span></span>
+<span id="cb60-7"><a href="15-Supp_table_3.html#cb60-7" tabindex="-1"></a><span class="fu">sample_data</span>(physeq)[,<span class="st">&quot;Storagetemp&quot;</span>] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(</span>
+<span id="cb60-8"><a href="15-Supp_table_3.html#cb60-8" tabindex="-1"></a>  <span class="at">pattern =</span> <span class="st">&quot;-80&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;Baseline&quot;</span>,</span>
+<span id="cb60-9"><a href="15-Supp_table_3.html#cb60-9" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">as.vector</span>(<span class="fu">unlist</span>(<span class="fu">sample_data</span>(physeq)[,<span class="st">&quot;Storagetemp&quot;</span>]))</span>
+<span id="cb60-10"><a href="15-Supp_table_3.html#cb60-10" tabindex="-1"></a>)</span>
+<span id="cb60-11"><a href="15-Supp_table_3.html#cb60-11" tabindex="-1"></a><span class="fu">sample_data</span>(physeq)[,<span class="st">&quot;Storagetemp&quot;</span>] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(</span>
+<span id="cb60-12"><a href="15-Supp_table_3.html#cb60-12" tabindex="-1"></a>  <span class="at">pattern =</span> <span class="st">&quot;4&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;Fridge&quot;</span>,</span>
+<span id="cb60-13"><a href="15-Supp_table_3.html#cb60-13" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">as.vector</span>(<span class="fu">unlist</span>(<span class="fu">sample_data</span>(physeq)[,<span class="st">&quot;Storagetemp&quot;</span>]))</span>
+<span id="cb60-14"><a href="15-Supp_table_3.html#cb60-14" tabindex="-1"></a>)</span>
+<span id="cb60-15"><a href="15-Supp_table_3.html#cb60-15" tabindex="-1"></a><span class="fu">sample_data</span>(physeq)[,<span class="st">&quot;Storagetemp&quot;</span>] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(</span>
+<span id="cb60-16"><a href="15-Supp_table_3.html#cb60-16" tabindex="-1"></a>  <span class="at">pattern =</span> <span class="st">&quot;20&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;RT&quot;</span>,</span>
+<span id="cb60-17"><a href="15-Supp_table_3.html#cb60-17" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">as.vector</span>(<span class="fu">unlist</span>(<span class="fu">sample_data</span>(physeq)[,<span class="st">&quot;Storagetemp&quot;</span>]))</span>
+<span id="cb60-18"><a href="15-Supp_table_3.html#cb60-18" tabindex="-1"></a>)</span>
+<span id="cb60-19"><a href="15-Supp_table_3.html#cb60-19" tabindex="-1"></a><span class="co">#Bufferused_and_Storageconditions change to categorical names</span></span>
+<span id="cb60-20"><a href="15-Supp_table_3.html#cb60-20" tabindex="-1"></a><span class="fu">sample_data</span>(physeq)[,<span class="st">&quot;Bufferused_and_Storageconditions&quot;</span>] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(</span>
+<span id="cb60-21"><a href="15-Supp_table_3.html#cb60-21" tabindex="-1"></a>  <span class="at">pattern =</span> <span class="st">&quot;-80&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;Baseline&quot;</span>,</span>
+<span id="cb60-22"><a href="15-Supp_table_3.html#cb60-22" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">as.vector</span>(<span class="fu">unlist</span>(<span class="fu">sample_data</span>(physeq)[,<span class="st">&quot;Bufferused_and_Storageconditions&quot;</span>]))</span>
+<span id="cb60-23"><a href="15-Supp_table_3.html#cb60-23" tabindex="-1"></a>)</span>
+<span id="cb60-24"><a href="15-Supp_table_3.html#cb60-24" tabindex="-1"></a><span class="fu">sample_data</span>(physeq)[,<span class="st">&quot;Bufferused_and_Storageconditions&quot;</span>] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(</span>
+<span id="cb60-25"><a href="15-Supp_table_3.html#cb60-25" tabindex="-1"></a>  <span class="at">pattern =</span> <span class="st">&quot;4&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;Fridge&quot;</span>,</span>
+<span id="cb60-26"><a href="15-Supp_table_3.html#cb60-26" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">as.vector</span>(<span class="fu">unlist</span>(<span class="fu">sample_data</span>(physeq)[,<span class="st">&quot;Bufferused_and_Storageconditions&quot;</span>]))</span>
+<span id="cb60-27"><a href="15-Supp_table_3.html#cb60-27" tabindex="-1"></a>)</span>
+<span id="cb60-28"><a href="15-Supp_table_3.html#cb60-28" tabindex="-1"></a><span class="fu">sample_data</span>(physeq)[,<span class="st">&quot;Bufferused_and_Storageconditions&quot;</span>] <span class="ot">&lt;-</span> <span class="fu">gsub</span>(</span>
+<span id="cb60-29"><a href="15-Supp_table_3.html#cb60-29" tabindex="-1"></a>  <span class="at">pattern =</span> <span class="st">&quot;20&quot;</span>, <span class="at">replacement =</span> <span class="st">&quot;RT&quot;</span>,</span>
+<span id="cb60-30"><a href="15-Supp_table_3.html#cb60-30" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">as.vector</span>(<span class="fu">unlist</span>(<span class="fu">sample_data</span>(physeq)[,<span class="st">&quot;Bufferused_and_Storageconditions&quot;</span>]))</span>
+<span id="cb60-31"><a href="15-Supp_table_3.html#cb60-31" tabindex="-1"></a>)</span></code></pre></div>
+<div id="paired-wilcox-tests" class="section level3 hasAnchor" number="15.1.1">
+<h3><span class="header-section-number">15.1.1</span> Paired wilcox tests<a href="15-Supp_table_3.html#paired-wilcox-tests" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="15-Supp_table_3.html#cb61-1" tabindex="-1"></a><span class="co">#Calculate alpha stats</span></span>
+<span id="cb61-2"><a href="15-Supp_table_3.html#cb61-2" tabindex="-1"></a><span class="co">#Produce data frame of all alpha diversity values</span></span>
+<span id="cb61-3"><a href="15-Supp_table_3.html#cb61-3" tabindex="-1"></a>alpha_df <span class="ot">&lt;-</span> phyloseq<span class="sc">::</span><span class="fu">estimate_richness</span>(<span class="at">physeq =</span> physeq, <span class="at">measures =</span> <span class="fu">c</span>(<span class="st">&quot;Observed&quot;</span>,<span class="st">&quot;Chao1&quot;</span>,<span class="st">&quot;Shannon&quot;</span>))</span>
+<span id="cb61-4"><a href="15-Supp_table_3.html#cb61-4" tabindex="-1"></a></span>
+<span id="cb61-5"><a href="15-Supp_table_3.html#cb61-5" tabindex="-1"></a><span class="co">#Bufferused</span></span>
+<span id="cb61-6"><a href="15-Supp_table_3.html#cb61-6" tabindex="-1"></a><span class="co">#Using default P value adjusment method of holm (Holm-Bonferroni method)</span></span>
+<span id="cb61-7"><a href="15-Supp_table_3.html#cb61-7" tabindex="-1"></a>observed_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Observed, phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Bufferused)</span>
+<span id="cb61-8"><a href="15-Supp_table_3.html#cb61-8" tabindex="-1"></a>chao_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Chao1, phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Bufferused)</span>
+<span id="cb61-9"><a href="15-Supp_table_3.html#cb61-9" tabindex="-1"></a>shannon_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Shannon, phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Bufferused)</span>
+<span id="cb61-10"><a href="15-Supp_table_3.html#cb61-10" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb61-11"><a href="15-Supp_table_3.html#cb61-11" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Bufferused&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-12"><a href="15-Supp_table_3.html#cb61-12" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-13"><a href="15-Supp_table_3.html#cb61-13" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Observed&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-14"><a href="15-Supp_table_3.html#cb61-14" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-15"><a href="15-Supp_table_3.html#cb61-15" tabindex="-1"></a><span class="fu">write.table</span>(observed_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-16"><a href="15-Supp_table_3.html#cb61-16" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-17"><a href="15-Supp_table_3.html#cb61-17" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Chao1&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-18"><a href="15-Supp_table_3.html#cb61-18" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-19"><a href="15-Supp_table_3.html#cb61-19" tabindex="-1"></a><span class="fu">write.table</span>(chao_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-20"><a href="15-Supp_table_3.html#cb61-20" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-21"><a href="15-Supp_table_3.html#cb61-21" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Shannon&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-22"><a href="15-Supp_table_3.html#cb61-22" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-23"><a href="15-Supp_table_3.html#cb61-23" tabindex="-1"></a><span class="fu">write.table</span>(shannon_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-24"><a href="15-Supp_table_3.html#cb61-24" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-25"><a href="15-Supp_table_3.html#cb61-25" tabindex="-1"></a></span>
+<span id="cb61-26"><a href="15-Supp_table_3.html#cb61-26" tabindex="-1"></a><span class="co">#Storageconditions</span></span>
+<span id="cb61-27"><a href="15-Supp_table_3.html#cb61-27" tabindex="-1"></a>observed_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Observed, </span>
+<span id="cb61-28"><a href="15-Supp_table_3.html#cb61-28" tabindex="-1"></a>                                       phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Storageconditions)</span>
+<span id="cb61-29"><a href="15-Supp_table_3.html#cb61-29" tabindex="-1"></a>chao_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Chao1, </span>
+<span id="cb61-30"><a href="15-Supp_table_3.html#cb61-30" tabindex="-1"></a>                                   phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Storageconditions)</span>
+<span id="cb61-31"><a href="15-Supp_table_3.html#cb61-31" tabindex="-1"></a>shannon_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Shannon, </span>
+<span id="cb61-32"><a href="15-Supp_table_3.html#cb61-32" tabindex="-1"></a>                                      phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Storageconditions)</span>
+<span id="cb61-33"><a href="15-Supp_table_3.html#cb61-33" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb61-34"><a href="15-Supp_table_3.html#cb61-34" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Storageconditions&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-35"><a href="15-Supp_table_3.html#cb61-35" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-36"><a href="15-Supp_table_3.html#cb61-36" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Observed&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-37"><a href="15-Supp_table_3.html#cb61-37" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-38"><a href="15-Supp_table_3.html#cb61-38" tabindex="-1"></a><span class="fu">write.table</span>(observed_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-39"><a href="15-Supp_table_3.html#cb61-39" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-40"><a href="15-Supp_table_3.html#cb61-40" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Chao1&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-41"><a href="15-Supp_table_3.html#cb61-41" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-42"><a href="15-Supp_table_3.html#cb61-42" tabindex="-1"></a><span class="fu">write.table</span>(chao_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-43"><a href="15-Supp_table_3.html#cb61-43" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-44"><a href="15-Supp_table_3.html#cb61-44" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Shannon&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-45"><a href="15-Supp_table_3.html#cb61-45" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-46"><a href="15-Supp_table_3.html#cb61-46" tabindex="-1"></a><span class="fu">write.table</span>(shannon_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-47"><a href="15-Supp_table_3.html#cb61-47" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-48"><a href="15-Supp_table_3.html#cb61-48" tabindex="-1"></a></span>
+<span id="cb61-49"><a href="15-Supp_table_3.html#cb61-49" tabindex="-1"></a><span class="co">#Participant number</span></span>
+<span id="cb61-50"><a href="15-Supp_table_3.html#cb61-50" tabindex="-1"></a>observed_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Observed, </span>
+<span id="cb61-51"><a href="15-Supp_table_3.html#cb61-51" tabindex="-1"></a>                                       phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Patientnumber)</span>
+<span id="cb61-52"><a href="15-Supp_table_3.html#cb61-52" tabindex="-1"></a>chao_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Chao1, </span>
+<span id="cb61-53"><a href="15-Supp_table_3.html#cb61-53" tabindex="-1"></a>                                   phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Patientnumber)</span>
+<span id="cb61-54"><a href="15-Supp_table_3.html#cb61-54" tabindex="-1"></a>shannon_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Shannon, </span>
+<span id="cb61-55"><a href="15-Supp_table_3.html#cb61-55" tabindex="-1"></a>                                      phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Patientnumber)</span>
+<span id="cb61-56"><a href="15-Supp_table_3.html#cb61-56" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb61-57"><a href="15-Supp_table_3.html#cb61-57" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Participant number&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-58"><a href="15-Supp_table_3.html#cb61-58" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-59"><a href="15-Supp_table_3.html#cb61-59" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Observed&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-60"><a href="15-Supp_table_3.html#cb61-60" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-61"><a href="15-Supp_table_3.html#cb61-61" tabindex="-1"></a><span class="fu">write.table</span>(observed_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-62"><a href="15-Supp_table_3.html#cb61-62" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-63"><a href="15-Supp_table_3.html#cb61-63" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Chao1&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-64"><a href="15-Supp_table_3.html#cb61-64" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-65"><a href="15-Supp_table_3.html#cb61-65" tabindex="-1"></a><span class="fu">write.table</span>(chao_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-66"><a href="15-Supp_table_3.html#cb61-66" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-67"><a href="15-Supp_table_3.html#cb61-67" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Shannon&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-68"><a href="15-Supp_table_3.html#cb61-68" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-69"><a href="15-Supp_table_3.html#cb61-69" tabindex="-1"></a><span class="fu">write.table</span>(shannon_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-70"><a href="15-Supp_table_3.html#cb61-70" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-71"><a href="15-Supp_table_3.html#cb61-71" tabindex="-1"></a></span>
+<span id="cb61-72"><a href="15-Supp_table_3.html#cb61-72" tabindex="-1"></a><span class="co">#Storagetemp</span></span>
+<span id="cb61-73"><a href="15-Supp_table_3.html#cb61-73" tabindex="-1"></a>observed_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Observed, </span>
+<span id="cb61-74"><a href="15-Supp_table_3.html#cb61-74" tabindex="-1"></a>                                       phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Storagetemp)</span>
+<span id="cb61-75"><a href="15-Supp_table_3.html#cb61-75" tabindex="-1"></a>chao_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Chao1, </span>
+<span id="cb61-76"><a href="15-Supp_table_3.html#cb61-76" tabindex="-1"></a>                                   phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Storagetemp)</span>
+<span id="cb61-77"><a href="15-Supp_table_3.html#cb61-77" tabindex="-1"></a>shannon_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Shannon, </span>
+<span id="cb61-78"><a href="15-Supp_table_3.html#cb61-78" tabindex="-1"></a>                                      phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Storagetemp)</span>
+<span id="cb61-79"><a href="15-Supp_table_3.html#cb61-79" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb61-80"><a href="15-Supp_table_3.html#cb61-80" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Storagetemp&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-81"><a href="15-Supp_table_3.html#cb61-81" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-82"><a href="15-Supp_table_3.html#cb61-82" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Observed&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-83"><a href="15-Supp_table_3.html#cb61-83" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-84"><a href="15-Supp_table_3.html#cb61-84" tabindex="-1"></a><span class="fu">write.table</span>(observed_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-85"><a href="15-Supp_table_3.html#cb61-85" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-86"><a href="15-Supp_table_3.html#cb61-86" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Chao1&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-87"><a href="15-Supp_table_3.html#cb61-87" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-88"><a href="15-Supp_table_3.html#cb61-88" tabindex="-1"></a><span class="fu">write.table</span>(chao_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-89"><a href="15-Supp_table_3.html#cb61-89" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-90"><a href="15-Supp_table_3.html#cb61-90" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Shannon&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-91"><a href="15-Supp_table_3.html#cb61-91" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-92"><a href="15-Supp_table_3.html#cb61-92" tabindex="-1"></a><span class="fu">write.table</span>(shannon_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-93"><a href="15-Supp_table_3.html#cb61-93" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-94"><a href="15-Supp_table_3.html#cb61-94" tabindex="-1"></a></span>
+<span id="cb61-95"><a href="15-Supp_table_3.html#cb61-95" tabindex="-1"></a><span class="co">#Bufferused_and_Storageconditions</span></span>
+<span id="cb61-96"><a href="15-Supp_table_3.html#cb61-96" tabindex="-1"></a>observed_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Observed, </span>
+<span id="cb61-97"><a href="15-Supp_table_3.html#cb61-97" tabindex="-1"></a>                                       phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Bufferused_and_Storageconditions)</span>
+<span id="cb61-98"><a href="15-Supp_table_3.html#cb61-98" tabindex="-1"></a>chao_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Chao1, </span>
+<span id="cb61-99"><a href="15-Supp_table_3.html#cb61-99" tabindex="-1"></a>                                   phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Bufferused_and_Storageconditions)</span>
+<span id="cb61-100"><a href="15-Supp_table_3.html#cb61-100" tabindex="-1"></a>shannon_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Shannon, </span>
+<span id="cb61-101"><a href="15-Supp_table_3.html#cb61-101" tabindex="-1"></a>                                      phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Bufferused_and_Storageconditions)</span>
+<span id="cb61-102"><a href="15-Supp_table_3.html#cb61-102" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb61-103"><a href="15-Supp_table_3.html#cb61-103" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Bufferused and Storageconditions&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-104"><a href="15-Supp_table_3.html#cb61-104" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-105"><a href="15-Supp_table_3.html#cb61-105" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Observed&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-106"><a href="15-Supp_table_3.html#cb61-106" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-107"><a href="15-Supp_table_3.html#cb61-107" tabindex="-1"></a><span class="fu">write.table</span>(observed_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-108"><a href="15-Supp_table_3.html#cb61-108" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-109"><a href="15-Supp_table_3.html#cb61-109" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Chao1&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-110"><a href="15-Supp_table_3.html#cb61-110" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-111"><a href="15-Supp_table_3.html#cb61-111" tabindex="-1"></a><span class="fu">write.table</span>(chao_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-112"><a href="15-Supp_table_3.html#cb61-112" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-113"><a href="15-Supp_table_3.html#cb61-113" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Shannon&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-114"><a href="15-Supp_table_3.html#cb61-114" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-115"><a href="15-Supp_table_3.html#cb61-115" tabindex="-1"></a><span class="fu">write.table</span>(shannon_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-116"><a href="15-Supp_table_3.html#cb61-116" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-117"><a href="15-Supp_table_3.html#cb61-117" tabindex="-1"></a></span>
+<span id="cb61-118"><a href="15-Supp_table_3.html#cb61-118" tabindex="-1"></a><span class="co">#Bufferused_and_Storageconditions</span></span>
+<span id="cb61-119"><a href="15-Supp_table_3.html#cb61-119" tabindex="-1"></a>observed_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Observed, </span>
+<span id="cb61-120"><a href="15-Supp_table_3.html#cb61-120" tabindex="-1"></a>                                       phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Bufferused_and_Storageconditions)</span>
+<span id="cb61-121"><a href="15-Supp_table_3.html#cb61-121" tabindex="-1"></a>chao_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Chao1, </span>
+<span id="cb61-122"><a href="15-Supp_table_3.html#cb61-122" tabindex="-1"></a>                                   phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Bufferused_and_Storageconditions)</span>
+<span id="cb61-123"><a href="15-Supp_table_3.html#cb61-123" tabindex="-1"></a>shannon_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Shannon, </span>
+<span id="cb61-124"><a href="15-Supp_table_3.html#cb61-124" tabindex="-1"></a>                                      phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Bufferused_and_Storageconditions)</span>
+<span id="cb61-125"><a href="15-Supp_table_3.html#cb61-125" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb61-126"><a href="15-Supp_table_3.html#cb61-126" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Bufferused and Storageconditions&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-127"><a href="15-Supp_table_3.html#cb61-127" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-128"><a href="15-Supp_table_3.html#cb61-128" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Observed&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-129"><a href="15-Supp_table_3.html#cb61-129" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-130"><a href="15-Supp_table_3.html#cb61-130" tabindex="-1"></a><span class="fu">write.table</span>(observed_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-131"><a href="15-Supp_table_3.html#cb61-131" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-132"><a href="15-Supp_table_3.html#cb61-132" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Chao1&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-133"><a href="15-Supp_table_3.html#cb61-133" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-134"><a href="15-Supp_table_3.html#cb61-134" tabindex="-1"></a><span class="fu">write.table</span>(chao_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-135"><a href="15-Supp_table_3.html#cb61-135" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-136"><a href="15-Supp_table_3.html#cb61-136" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Shannon&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-137"><a href="15-Supp_table_3.html#cb61-137" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-138"><a href="15-Supp_table_3.html#cb61-138" tabindex="-1"></a><span class="fu">write.table</span>(shannon_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-139"><a href="15-Supp_table_3.html#cb61-139" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-140"><a href="15-Supp_table_3.html#cb61-140" tabindex="-1"></a></span>
+<span id="cb61-141"><a href="15-Supp_table_3.html#cb61-141" tabindex="-1"></a><span class="co">#Participant number and Bufferused</span></span>
+<span id="cb61-142"><a href="15-Supp_table_3.html#cb61-142" tabindex="-1"></a>observed_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Observed, </span>
+<span id="cb61-143"><a href="15-Supp_table_3.html#cb61-143" tabindex="-1"></a>                                       phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Patientnumber_and_Bufferused)</span>
+<span id="cb61-144"><a href="15-Supp_table_3.html#cb61-144" tabindex="-1"></a>chao_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Chao1, </span>
+<span id="cb61-145"><a href="15-Supp_table_3.html#cb61-145" tabindex="-1"></a>                                   phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Patientnumber_and_Bufferused)</span>
+<span id="cb61-146"><a href="15-Supp_table_3.html#cb61-146" tabindex="-1"></a>shannon_stats <span class="ot">&lt;-</span> <span class="fu">pairwise.wilcox.test</span>(alpha_df<span class="sc">$</span>Shannon, </span>
+<span id="cb61-147"><a href="15-Supp_table_3.html#cb61-147" tabindex="-1"></a>                                      phyloseq<span class="sc">::</span><span class="fu">sample_data</span>(physeq)<span class="sc">$</span>Patientnumber_and_Bufferused)</span>
+<span id="cb61-148"><a href="15-Supp_table_3.html#cb61-148" tabindex="-1"></a><span class="co">#Write out data</span></span>
+<span id="cb61-149"><a href="15-Supp_table_3.html#cb61-149" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Participant number and Bufferused&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-150"><a href="15-Supp_table_3.html#cb61-150" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-151"><a href="15-Supp_table_3.html#cb61-151" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Observed&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-152"><a href="15-Supp_table_3.html#cb61-152" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-153"><a href="15-Supp_table_3.html#cb61-153" tabindex="-1"></a><span class="fu">write.table</span>(observed_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-154"><a href="15-Supp_table_3.html#cb61-154" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-155"><a href="15-Supp_table_3.html#cb61-155" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Chao1&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-156"><a href="15-Supp_table_3.html#cb61-156" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-157"><a href="15-Supp_table_3.html#cb61-157" tabindex="-1"></a><span class="fu">write.table</span>(chao_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-158"><a href="15-Supp_table_3.html#cb61-158" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span>
+<span id="cb61-159"><a href="15-Supp_table_3.html#cb61-159" tabindex="-1"></a><span class="fu">write.table</span>(<span class="st">&quot;Shannon&quot;</span>, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-160"><a href="15-Supp_table_3.html#cb61-160" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">FALSE</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-161"><a href="15-Supp_table_3.html#cb61-161" tabindex="-1"></a><span class="fu">write.table</span>(shannon_stats<span class="sc">$</span>p.value, <span class="at">file =</span> <span class="st">&quot;./data/wilcox_16s.tsv&quot;</span>, </span>
+<span id="cb61-162"><a href="15-Supp_table_3.html#cb61-162" tabindex="-1"></a>            <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">quote=</span><span class="cn">FALSE</span>, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">col.names =</span> <span class="cn">NA</span>)</span></code></pre></div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="14-Supp_table_2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="16-Supp_table_4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

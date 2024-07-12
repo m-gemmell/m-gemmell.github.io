@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Optimised human stool sample collection for multi-omic microbiota analysis R code</title>
+  <title>Chapter 18 Supp table 7 | Optimised human stool sample collection for multi-omic microbiota analysis R code</title>
   <meta name="description" content="Book to contain visualisation for the “ANCOM” project" />
   <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Optimised human stool sample collection for multi-omic microbiota analysis R code" />
+  <meta property="og:title" content="Chapter 18 Supp table 7 | Optimised human stool sample collection for multi-omic microbiota analysis R code" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Book to contain visualisation for the “ANCOM” project" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Optimised human stool sample collection for multi-omic microbiota analysis R code" />
+  <meta name="twitter:title" content="Chapter 18 Supp table 7 | Optimised human stool sample collection for multi-omic microbiota analysis R code" />
   
   <meta name="twitter:description" content="Book to contain visualisation for the “ANCOM” project" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="02-Phyloseqize.html"/>
+<link rel="prev" href="17-Supp_table_6.html"/>
+<link rel="next" href="19-Supp_table_8.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -329,31 +329,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Optimised human stool sample collection for multi-omic microbiota analysis R code</h1>
-<p class="author"><em>Matthew R. Gemmell</em></p>
-<p class="date"><em>2024-07-12</em></p>
-</div>
-<div id="intro" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="01-Intro.html#intro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>A project to analyse the 16S bacterial profiles and to help determine storage protocols.</p>
-<p>The dataset consist of <strong>74 samples</strong> (out of 174) left after removal of poor quality and low read samples, and rarefaction size of 20k.</p>
-<p>The samples were stored using different buffers. below is the number of samples by buffer method:</p>
-<ul>
-<li>Ethanol: 12</li>
-<li>No buffer: 16</li>
-<li>PSP buffer: 16</li>
-<li>RNAlater: 30</li>
-</ul>
-<p>Samples were extracted from 6 patients. These patients had the following number of samples:</p>
-<ul>
-<li>1 = 16</li>
-<li>2 = 17</li>
-<li>3 = 19</li>
-<li>4 = 4</li>
-<li>5 = 9</li>
-<li>6 = 9</li>
-</ul>
+<div id="supp-table-7" class="section level1 hasAnchor" number="18">
+<h1><span class="header-section-number">Chapter 18</span> Supp table 7<a href="18-Supp_table_7.html#supp-table-7" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Spearman correlation values of 16S genera and SCFA abundance profiles.</p>
+<p>Analysis carried out in <a href="06-Figure_6.html#fig6">Figure 6 chapter</a></p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="18-Supp_table_7.html#cb65-1" tabindex="-1"></a><span class="co">#Load data frame library</span></span>
+<span id="cb65-2"><a href="18-Supp_table_7.html#cb65-2" tabindex="-1"></a><span class="fu">library</span>(DT)</span>
+<span id="cb65-3"><a href="18-Supp_table_7.html#cb65-3" tabindex="-1"></a><span class="co">#Load data</span></span>
+<span id="cb65-4"><a href="18-Supp_table_7.html#cb65-4" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;./data/correlation_table.RData&quot;</span>)</span>
+<span id="cb65-5"><a href="18-Supp_table_7.html#cb65-5" tabindex="-1"></a><span class="co">#Display table with significant hits below</span></span>
+<span id="cb65-6"><a href="18-Supp_table_7.html#cb65-6" tabindex="-1"></a><span class="fu">datatable</span>(correlation.table[correlation.table<span class="sc">$</span>p.adj <span class="sc">&lt;</span> <span class="fl">0.05</span>,],</span>
+<span id="cb65-7"><a href="18-Supp_table_7.html#cb65-7" tabindex="-1"></a>          <span class="at">options =</span> <span class="fu">list</span>(<span class="at">pageLength =</span> <span class="dv">50</span>) )</span></code></pre></div>
 
 </div>
             </section>
@@ -361,8 +347,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="02-Phyloseqize.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="17-Supp_table_6.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="19-Supp_table_8.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
