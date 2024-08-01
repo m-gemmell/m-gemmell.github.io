@@ -1,0 +1,254 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Overview",
+    "section": "",
+    "text": "This is a website to host information of the BEAD PROJECT and the various dimensions it visits. It is built for the FIST RPG. It is a work in progress. Text and images created by Matthew R. Gemmell except for for some FIST content.\nThe BEAD is a massive bead shaped structure powered by the 4 Primeval Deities to explore other dimensions. Jaws of TARTARUS as a threshold to safely separate worlds whilst a tree of GAIA unites them. An eye of NYXMERA to power the craft whilst the water of PROTEUS prevents death by this same power.\nPlease use these materials as you would like."
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Overview",
+    "section": "Contact",
+    "text": "Contact\nIf you would like to contact me you can donate and private message me on my Ko-fi with your contact details (you can donate a min of £1):"
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "Overview",
+    "section": "License",
+    "text": "License\nCreated for the FIST rpg by CLAYMORE - https://claymorerpgs.itch.io/\nFIST and these materials are licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)\nThis online work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International. Visit here for more information about the license."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/CATALOG.html",
+    "href": "THE_RUSTLANDS/CATALOG.html",
+    "title": "CATALOG",
+    "section": "",
+    "text": "Links to various different places, fauna, and miscellaneous.\n\nFOODCHAIN\n\nFLYTOPLANKTON\nBURNACLES\n\nRUSTPLAINS\n\nLEECH WORMS\nWEATHER\nEVENTS\n\nLEMAN GROVE\n\nLEMAN SERPENTS\nLEMAN WOODPECKERS\nNOSEY MONKEYS\n\nWHALEFALL\n\nOCTONUT CRABS\nJUVENILE OCTONUT CRAB\nADULT OCTONUT CRAB\nRUSTY HORSEHOSE CRABS\n\nTHE GARDEN\n\nOBSIDIAN LAVA TALOES\nABYSSAL BUTTERCUPS\n\nSKYSLIP\n\nCORAL MOAT\nICEFISH\nSKYSLIP YARD\nICEFISH SPHERE\nARMOURED ICEFISH"
+  },
+  {
+    "objectID": "THE_RUSTLANDS/FOODCHAIN.html",
+    "href": "THE_RUSTLANDS/FOODCHAIN.html",
+    "title": "FOOD CHAIN",
+    "section": "",
+    "text": "A lot of the food chain of the RUSTLANDS is interconnected. Below is a quick description of some of the key players of the food chain and where they are situated. There is more information about these creatures and others in later sections."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/FOODCHAIN.html#first-level",
+    "href": "THE_RUSTLANDS/FOODCHAIN.html#first-level",
+    "title": "FOOD CHAIN",
+    "section": "First level",
+    "text": "First level\nThe LEMAN TREE and the LEMAN GROVE photosynthesise and produce fruit & foliage that creatures of the LEMAN GROVE consume.\nThe food chain of the RUSTLANDS is reliant on the FLYTOPLANKTON. They photosynthesise and so produce energy many of the other creatures utilise."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/FOODCHAIN.html#second-level",
+    "href": "THE_RUSTLANDS/FOODCHAIN.html#second-level",
+    "title": "FOOD CHAIN",
+    "section": "Second level",
+    "text": "Second level\nThe LEECH WORMS live within the sands of the RUSTPLAINS. They feed on the excretions of animals, including the FLYTOPLANKTON, and the minerals in the sand including the rust. They may also prey on creatures that descend into quick sand. Churning the sand is important for the nutrient uptake of the LEMAN TREE.\nThe BURNACLES live on hard surfaces across the RUSTLANDS. They feed on the FLYTOPLANKTON"
+  },
+  {
+    "objectID": "THE_RUSTLANDS/FOODCHAIN.html#third-level",
+    "href": "THE_RUSTLANDS/FOODCHAIN.html#third-level",
+    "title": "FOOD CHAIN",
+    "section": "Third level",
+    "text": "Third level\nThe RUSTY HORSEHOSE CRABS roam the RUSTPLAINS. Their diet consists mainly of the LEECH WORMS but they will also eat carrion if found.\nThe ABYSSAL BUTTERCUPS live on hard surfaces near BURNACLES They are like deep sea anemones found near hydrothermal vents, resistant to high temperatures. They can move slowly and primarily hunt BURNACLES"
+  },
+  {
+    "objectID": "THE_RUSTLANDS/FOODCHAIN.html#fourth-level",
+    "href": "THE_RUSTLANDS/FOODCHAIN.html#fourth-level",
+    "title": "FOOD CHAIN",
+    "section": "Fourth level",
+    "text": "Fourth level\nThe OCTONUT CRABS herd the RUSTY HORSEHOSE CRABS and use them as their primary food source. They will also eat carrion, BURNACLES, and ABYSSAL BUTTERCUPS."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/FOODCHAIN.html#flytoplankton",
+    "href": "THE_RUSTLANDS/FOODCHAIN.html#flytoplankton",
+    "title": "FOOD CHAIN",
+    "section": "FLYTOPLANKTON",
+    "text": "FLYTOPLANKTON\n\n\n\nSwarms of FLYTOPLANKTON look like a haze in the air and mats on surfaces. These swarms have a gradient of colours from green to yellow to red. They are actually a form of phytoplankton, acting as the lowest level of the food chain. They are harmless but irritating.\nThey regularly fly about during the day. They will land on sun drenched surfaces (including creatures, ground, skeletons, rocks etc) to feed on the light. During the night or during rain they try to hide in safe shelters to stay dry.\n\nFLYTOPLANKTON\n3HP | 0 ARMOR | TAC:-1 | FRC:-2 | RFX:2 | CRE:-2\n\nSwarm of microscopic flying phytoplankton\nColours of green to yellow to red for photosynthesis\n\nCANOPY: FLYTOPLANKTON are flying phytoplankton. To conserve energy they land on and blanket physical surfaces. Due to their small size but large numbers conventional melee weapons and firearms have next to no effect. Fire, explosives, and chemicals are effective."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/FOODCHAIN.html#burnacles",
+    "href": "THE_RUSTLANDS/FOODCHAIN.html#burnacles",
+    "title": "FOOD CHAIN",
+    "section": "BURNACLES",
+    "text": "BURNACLES\n\n\n\nThese barnacles can unleash heat. They produce warmth to lure FLYTOPLANKTON, their primary food source. They use their long sticky cirri (like tongues) to capture their prey.\nIf heavily disturbed they can shoot flames from exhausts on their sides. This is primarily used as a predator deterrent. They don’t tend to mind being walked on as their hard shells and tight colony densities normally cause little harm to come to them.\nThey are found in small tight colonies on hard solid surfaces. Many of their hosts and neighbours like them as it keeps surfaces clean of the FLYTOPLANKTON Surfaces they are found on include:\n\nThe exposed bark and roots of the LEMAN TREE\nRock surfaces including the hydrothermal vents of THE GARDEN\nBones including the Whale skeleton of WHALEFALL\nMetals including the wrecks of SKYSLIP and the suits of the ICEFISH\n\n\nCOLONY OF BURNACLES\n3HP | 2 ARMOR | TAC:-2 | FRC:-1 | RFX:-1 | CRE:-2\n\nTight packed colony of pint sized barnacles\nFire exhaust (1D3 DAMAGE)\nAsh covered shells (2 ARMOR)\n\nKILN: These colonies do not move instead waiting for their prey to come within reach. They can emit heat to attract FLYTOPLANKTON and release fire from exhausts on the side of their shells to deter predators."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/LEMAN_GROVE.html",
+    "href": "THE_RUSTLANDS/LEMAN_GROVE.html",
+    "title": "LEMAN GROVE",
+    "section": "",
+    "text": "A 300 metre, 20 metre diameter tree of pure black back bark with branches bearing yellow leaves and orange lemons (LEMANS) stands in the centre of the LEMAN GROVE. The LEMAN TREE’S trunk descends into a mangrove forest spreading out 300 metres in all directions. What looks like mangrove trees are actually the roots of the LEMAN TREE. Each of these ersatz trees formed by many roots erratically emerging and joining into a tree above the water line. The roots then separate higher up into branches with the same yellow leaves and orange lemons as the main tree.\nAt the outskirts of the LEMAN GROVE are thick barbed roots that line the perimeter. This is the BRAMBLE BARRIER that is near impossible to travel through.\nThe saltwaters and air of the LEMAN GROVE are bursting with life. Fish, birds, insects etc. are thriving, for now. Their existence is tied to the LEMAN TREE which is withering, many of the branches bereft of leaves.\nAlthough there is a hive of activity the LEMAN SERPENTS, LEMAN WOODPECKERS, and NOSEY MONKEYS are the most important for the player characters."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/LEMAN_GROVE.html#lemanserpent",
+    "href": "THE_RUSTLANDS/LEMAN_GROVE.html#lemanserpent",
+    "title": "LEMAN GROVE",
+    "section": "LEMAN SERPENTS",
+    "text": "LEMAN SERPENTS\n\n\n\nThese black and yellow sea snakes are the caretakers of the grove and its inhabitants. They manage all the creatures except the rambunctious NOSEY MONKEYS.\nBeing sentient, they will offer the player characters one LEMAN each so they may communicate with them and the other sentient creatures of the RUSTLANDS. They will ask the player characters to bring harmony to their safe zone. They will suggest an all out war in the RUSTPLAINS between the three factions of WHALEFALL, SKYSLIP, and THE GARDEN. This will feed the land and slow down exploitation. They will be happy with other methods but they at least want some intrigue for they are followers of NYXMERA, the sky deity who loves comedy and drama.\n\nLEMAN SERPENT\n2HP | 0 ARMOR | TAC:+1 | FRC:-2 | RFX:0 | CRE:+1\n\nBlack and yellow sea snake\nVenomous bite (1D6 DAMAGE)\nCunning intelligence\n\nARMLESS-MANIPULATORS: These serpents want to feed the LEMAN TREE in an interesting way. If there is not enough intrigue occurring they may hypnotise someone, giving them a vague 3 word command that they must fulfil once."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/LEMAN_GROVE.html#lemanwoodpecker",
+    "href": "THE_RUSTLANDS/LEMAN_GROVE.html#lemanwoodpecker",
+    "title": "LEMAN GROVE",
+    "section": "LEMAN WOODPECKERS",
+    "text": "LEMAN WOODPECKERS\n\n\n\nThe LEMAN WOODPECKERS take care of the tree. In exchange they are permitted to create hollows to live within.\nThey periodically patrol around the BRAMBLE BARRIER to attack and scare off the CRABS, TALOES, and ICEFISH.\nThey are not sentient and can’t be communicated with by the players. However, the LEMAN SERPENTS are able to communicate with them by the exchange of emotions and images. They are allies. The LEMAN WOODPECKERS act as the eyes and air force, whilst the LEMAN SERPENTS act as the brains.\nThe LEMAN WOODPECKERS will initially try to lead the player characters to the LEMAN SERPENTS, the birds being able to part the BRAMBLE BARRIER. How they subsequently act towards the player characters is to be decided by the LEMAN SERPENTS.\n\nLEMAN WOODPECKER\n2HP 0 ARMOR TAC:+1 | FRC:0 | RFX:+1 | CRE:-1\n\nAkin to Acorn Woodpeckers\nEat insects and the fruit and seeds of the LEMAN TREE\nIron-tipped beak (3 DAMAGE)\nGroups of up to 12 cooperatively breed and raise young\nLive in tree hollows in the LEMAN TREE\n\nABORIST: Although they may appear destructive the LEMAN WOODPECKERS diligently prune the tree and rid it of parasites. In exchange the roots of the LEMAN TREE will move to protect them as the birds protect them from the crabs with their shell breaking beaks."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/LEMAN_GROVE.html#noseymonkeys",
+    "href": "THE_RUSTLANDS/LEMAN_GROVE.html#noseymonkeys",
+    "title": "LEMAN GROVE",
+    "section": "NOSEY MONKEYS",
+    "text": "NOSEY MONKEYS\n\n\n\nSentient Probosics monkeys who like to watch from their Mangrove trees.\nThey consume the dark black flesh and juices of the LEMANS and share its iron preserving properties through their urinations.\nAlthough they bother the LEMAN SERPENTS with their incessant questions and noise, they are vital to the local ecosystem.\n\nNOSEY MONKEY\n4HP | 0 | ARMOR TAC:+2 | FRC:-1 | RFX:+2 | CRE:0\n\nProboscis monkeys\nYell at each other across the trees\nPublic urinators\nBraided LEMON flowers in fur\n\nINQUISITIVE: These monkeys are very curious about the world outside the LEMAN GROVE. Unfortunately they cannot leave it due to their reliance on the LEMANS. They will trade LEMANS for answers about the rest of the RUSTLANDS."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/RUSTLANDS.html",
+    "href": "THE_RUSTLANDS/RUSTLANDS.html",
+    "title": "THE RUSTLANDS",
+    "section": "",
+    "text": "Enter a world ravaged by the war of TARTARUS and PROTEUS, the Primeval deities of earth and water. The water has been consumed by the earth and the iron of the world rapidly rusts. Few places are safe from the globe encompassing storms of ice, rocks, and lightning. These large circles, eyes of the storm, are protected by large Orange Lemon Trees called LEMAN TREES. GAIA and NYXMERA teaming up to try to preserve some life.\nThe team will enter one of these safe zones to find an enclosing circle. What was once a 100 mile radius zone is only 10. Its inhabitants of once aquatic life have become greedy and wary of each other. If they collaborated they could yet save the zone. Instead the pressure leads them to compete and steal from one another. The LEMAN SERPENTS want a war to feed the LEMAN TREE and NYXMERA. Will this only become a destructive cycle? Doesn’t life consist of cycles? Won’t it make good drama for the ever watchful eye of NYXMERA?"
+  },
+  {
+    "objectID": "THE_RUSTLANDS/RUSTLANDS.html#the-rusting",
+    "href": "THE_RUSTLANDS/RUSTLANDS.html#the-rusting",
+    "title": "THE RUSTLANDS",
+    "section": "THE RUSTING",
+    "text": "THE RUSTING\nDue to the effect of PROTEUS, iron rapidly rusts in the RUSTLANDS (including haemoglobin). This has caused many creatures to go extinct but some are able to survive by various means.\nAll the living creatures outside of the LEMAN GROVE do not use haemoglobin in their blood or they don’t need blood.\nMany arthropods, including Crustaceans (OCTONUT CRABS, RUSTY HORSEHOSE CRABS, and BURNACLES) use hemocyanin, a copper based molecule, for oxygen transport. This gives them blue oxygenated blood and clear deoxygenated blood.\nThe ICEFISH although fish have no haemoglobin, instead transporting blood in their plasma. This requires very high blood pressure.\nMany of the creatures of the LEMAN GROVE and most likely the player characters will require haemoglobin. Thankfully the presence of the LEMANS from the LEMAN TREE protects the consumers’ haemoglobin. A normal sized human needs to consume 1 LEMAN each day for this protective effect."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/RUSTLANDS.html#jusant",
+    "href": "THE_RUSTLANDS/RUSTLANDS.html#jusant",
+    "title": "THE RUSTLANDS",
+    "section": "JUSANT",
+    "text": "JUSANT\nIn this world most of the waters have been drained into the land or escaped as storms in the sky. The LEMAN TREE prevents drain at the LEMAN GROVE. The ICEFISH try to maintain the water levels in their CORAL MOAT."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/RUSTLANDS.html#tempest",
+    "href": "THE_RUSTLANDS/RUSTLANDS.html#tempest",
+    "title": "THE RUSTLANDS",
+    "section": "TEMPEST",
+    "text": "TEMPEST\nStorms of ice, rocks, and lightning surround the globe, only abated by the presence of LEMAN GROVE scattered around the planet. Entering the storms means certain death."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/RUSTLANDS.html#sentient-creatures",
+    "href": "THE_RUSTLANDS/RUSTLANDS.html#sentient-creatures",
+    "title": "THE RUSTLANDS",
+    "section": "SENTIENT CREATURES",
+    "text": "SENTIENT CREATURES\nMany of the creatures, but not all, are SENTIENT and can be communicated with. However, verbal communication is impossible and instead the characters may gain the ability to telepathically communicate with the SENTIENT creatures. To gain this ability they will need to consume a LEMAN from the LEMAN TREE at the LEMAN GROVE. The first will most likely be offered by the LEMAN SERPENTS.\nSENTIENT creatures include:\n\nLEMAN SERPENTS\nNOSEY MONKEYS\nOCTONUT CRABS (JUVENILE & ADULT)\nICEFISH\nOBSIDIAN LAVA TALOES"
+  },
+  {
+    "objectID": "THE_RUSTLANDS/RUSTLANDS.html#conflicts",
+    "href": "THE_RUSTLANDS/RUSTLANDS.html#conflicts",
+    "title": "THE RUSTLANDS",
+    "section": "CONFLICTS",
+    "text": "CONFLICTS\nThere are three competing factions who dislike each other for the following reasons.\n\nThe ICEFISH steal the eggs of the RUSTY HORSEHOSE CRABS and the OCTONUT CRABS.\nThe OCTONUT CRABS steal aluminium from the ICEFISH to use as struts for their high mounted dwellings.\nThe OBSIDIAN LAVA TALOES are angered by the high presence of BURNACLES on the giant whale skeleton WHALEFALL, the OCTONUT CRABS’ home.\nThe OBSIDIAN LAVA TALOES hunt JUVENILE OCTONUT CRAB as a source of food for their garden.\nThe ICEFISH kidnap OBSIDIAN LAVA TALOES. They encage them and force them to heat their kilns used to melt and reuse aluminium and other metals.\nThe CORAL MOAT of the ICEFISH has become infested by ABYSSAL BUTTERCUPS. They blame the OBSIDIAN LAVA TALOES."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/RUSTLANDS.html#map-of-rustlands",
+    "href": "THE_RUSTLANDS/RUSTLANDS.html#map-of-rustlands",
+    "title": "THE RUSTLANDS",
+    "section": "MAP OF RUSTLANDS",
+    "text": "MAP OF RUSTLANDS"
+  },
+  {
+    "objectID": "THE_RUSTLANDS/RUSTPLAINS.html",
+    "href": "THE_RUSTLANDS/RUSTPLAINS.html",
+    "title": "RUSTPLAINS",
+    "section": "",
+    "text": "The Rustplains is a desert of sand and rust. It is a flat and featureless ground due to the churning of the LEECH WORMS. It acts as the transitonary zone between the four main settlements of the LEMAN GROVE, WHALEFALL, THE GARDENS, and SKYSLIP."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/RUSTPLAINS.html#leechworms",
+    "href": "THE_RUSTLANDS/RUSTPLAINS.html#leechworms",
+    "title": "RUSTPLAINS",
+    "section": "LEECH WORMS",
+    "text": "LEECH WORMS\n\n\n\nLEECH WORMS feed on rust, carrion, and the excretions of creatures including FLYTOPLANKTON.\nCreatures are normally safe from them unless a swarm of LEECH WORMS are near the surface causing moving patches of quick sand. This allows them to suck in tracks, rocks, and human sized creatures into the rust sands where they may be consumed. This maintains the flat surface of the RUSTPLAINS.\n\nSWARM OF LEECH WORMS\n3HP | 0 ARMOR | TAC:-1 | FRC:+1 | RFX:+1 | CRE:-1\n\nLeech like worms\nBite (1 DAMAGE, continues every turn until 3 DAMAGE total or removed)\nCan sense vibrations in the sand\nMove through the sand via vibration, causing quick sand and a levelling effect\nProcess the rust sands allowing to LEMAN TREE to absorb nutrients with its roots\n\nREDUCTIVE-GIZZARD: The LEECH WORMS hunger for iron. Thankfully they can use their specialised gizzards to convert rust to iron. However, if they can they will partake in opportunistic blood meals."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/RUSTPLAINS.html#weather",
+    "href": "THE_RUSTLANDS/RUSTPLAINS.html#weather",
+    "title": "RUSTPLAINS",
+    "section": "WEATHER",
+    "text": "WEATHER\nThey day and night have similar weather with the only difference being the presence or absence of the sun.\nYou can roll on the below weather table to determine the weather during travel in the RUSTPLAINS.\n\n\n\n2D6\nWeather\n\n\n2\nRock fall. Rocks from the surrounding tempest fall onto the RUSTPLAINS. The characters better take cover.\n\n\n3\nRust winds. The winds become powerful blowing the rust. This makes travel difficult if going against the wind. Roll a D6 to determine direction (1 = North, 2 = East, 3 = South east, 4 = South, 5 = South west, 6 = West). \n\n\n4 - 5\nGaze of NYXMERA. The visible eyes of NYXMERA (sun/moon/stars) are staring at the players. This is a sign of something interesting happening soon.\n\n\n6 - 8\nClear skies with passing swarms of FLYTOPLANKTON.\n\n\n9 - 10\nRain with no clouds. FLYTOPLANKTON are hiding in any covered and dry surfaces they can find.\n\n\n11\nFLYTOPLANKTON fog. The players are surrounded by a massive swarm of migrating FLYTOPLANKTON. Not harmful but makes navigation next to impossible.\n\n\n12\nLEECH WORM SWARMS. The area is less flat than normal. This will soon attract many SWARMS OF LEECH WORMS to the surface. The characters will need to escape or involuntarily donate blood."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/RUSTPLAINS.html#events",
+    "href": "THE_RUSTLANDS/RUSTPLAINS.html#events",
+    "title": "RUSTPLAINS",
+    "section": "EVENTS",
+    "text": "EVENTS\nPossible interesting events in the RUSTPLAINS include:\n\nLEMAN WOODPECKERS are harassing a flock of RUSTY HORSEHOSE CRABS\nAn ARMOURED ICEFISH is collecting rust from the sand with a sort of magnetic gathering device\nWhat seems like dandelion seeds are falling from the sky. These are actually ABYSSAL BUTTERCUPS eggs blown up by the hydrothermal vents in THE GARDEN\nAn OBSIDIAN LAVA TALOS is hunting JUVENILE OCTONUT CRAB\nDiscover the desiccated remains of a NOSEY MONKEYS.\nA long forgotten research base called ATE-R. Kept frozen are brown six legged starfish. They will try to enter orifices of creatures to take over their mind and form a hivemind. If the Starfish are unleashed the lab will lockdown into quarantine till there are no more active starfish."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/SKYSLIP.html",
+    "href": "THE_RUSTLANDS/SKYSLIP.html",
+    "title": "SKYSLIP",
+    "section": "",
+    "text": "SKYSLIP is a graveyard of ancient aircrafts surrounded by the CORAL MOAT, a ring of coral filled waters. This is the domain of the ICEFISH."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/SKYSLIP.html#coral-moat",
+    "href": "THE_RUSTLANDS/SKYSLIP.html#coral-moat",
+    "title": "SKYSLIP",
+    "section": "CORAL MOAT",
+    "text": "CORAL MOAT\nThe CORAL MOAT contains a reef of life.\nThe CORAL produces toxins that harm or kill other organisms not adapted to the CORAL MOAT. This is mainly a defence mechanism against the CRABS. However, this will harm other creatures such as humans.\nThe top of the food chain are the sentient ICEFISH, who mainly live in the CORAL MOAT as normal fish would.\nRecently the CORAL MOAT has been infested with ABYSSAL BUTTERCUPS. Although there are no BURNACLES in the water the ABYSSAL BUTTERCUPS eat the Krill in the moat. This is a nuisance to the ICEFISH who need the krill as their primary food source. They blame the TALOES for this infestation.\n\nICEFISH\n\n\n\n2HP | 0 ARMOR | TAC:0 | FRC:-1 | RFX:2 | CRE:0\n\nIcefish\nBite (1 DAMAGE)\nSentient\nFast swimmer\nImmune to the coral toxins\nStressed\n\nHYPERTENSION: Icefish do not have haemoglobin, instead their plasm transports oxygen. This requires high pressures and causes all the Icefish to seem extremely stressed and short tempered at all times. They can exude their pressure to control the movement of water near them."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/SKYSLIP.html#skyslip-yard",
+    "href": "THE_RUSTLANDS/SKYSLIP.html#skyslip-yard",
+    "title": "SKYSLIP",
+    "section": "SKYSLIP YARD",
+    "text": "SKYSLIP YARD\n\n\n\nWith the metals of the graveyard the ICEFISH build and create many useful inventions.\nThe ICEFISH build reverse diving suits (water on the inside) with the aluminium in the graveyard. When a suit is made available the smartest ICEFISH of the CORAL MOAT is chosen to inhabit it. There are only a few suits and so only a few ARMOURED ICEFISH exist.\nCompared to the past the ARMOURED ICEFISH spend more time and resources making thundersticks to keep the TALOES and CRABS away. To create thermite they use the aluminium of their aircrafts with the rust found in the RUSTPLAINS.\nThey steal RUSTY HORSEHOSE CRAB eggs to use as the magnets of devices to gather rust from the RUSTPLAINS. Whilst gathering these eggs they inadvertently gather OCTONUT CRAB eggs which they eat as snacks.\nThe ARMOURED ICEFISH maintain metal pumps that pump water to the surface, maintaining the CORAL MOAT. Unfortunately they are now being ignored. The water is now low enough that dead coral can be seen pointing above the waterline. Only the ICEFISH in the moat with their water manipulation are keeping it afloat for now.\nIn the heart of the graveyard are the kilns. Here the ARMOURED ICEFISH use kidnapped and encaged OBSIDIAN LAVA TALOES to melt down aluminium and other metals.\n\nICEFISH SPHERE\n3HP | 1 ARMOR | TAC:0 | FRC:-1 | RFX:1 | CRE:0\n\nIcefish in a glass sphere filled with water\n1 metre diamter glass sphere made of gunzhip gunner dock (1 ARMOR)\nRoll attack (1D6 DAMAGE)\nWater cannon (1 DAMAGE, 1D6+2 DAMAGE against lava and fire creatures)\n\nBALLER: The fish use their waterkinesis abilities to roll the sphere and they can cover allies with the sphere. If the target of their roll attack tries to evade the evader gains advantage as the momentum of the sphere makes it difficult for the Icefish to change course.\n\n\nARMOURED ICEFISH\n12HP | 2 ARMOR | TAC:1 | FRC:1 | RFX:0 | CRE:0\n\nIcefish in a 2.5 metre tall human shaped reverse diving suit it controls through manipulating the water inside it\nAluminum diving suit (2 ARMOR)\nAnchor (1D6+1 DAMAGE, GIGANTIC)\n5 Thundersticks, thermite based spear (1D6+2 DAMAGE, ANTI-MATERIAL, 1 use)\n\nMETAL-FABRICATOR: Only Icefish with a mind for metal crafting are chosen to inhabit a suit. Given the tools, materials, and motivation they can build anything they can imagine. Unfortunately their world is very small with little fuel and so they are not highly imaginative."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/THE_GARDEN.html",
+    "href": "THE_RUSTLANDS/THE_GARDEN.html",
+    "title": "THE GARDEN",
+    "section": "",
+    "text": "THE GRADEN is in a dried up deep sea oceanic trench. The way down is steep and dangerous.\nThe bottom is even more dangerous. The air is thick with toxic particulates and the ground is crisscrossed with thin streams of lava. These both come from the plethora of obsidian covered hydrothermal vents.\nLife does exist down here. The long tapered chimney like vents are covered in the heat tolerant BURNACLES and ABYSSAL BUTTERCUPS. Additionally, FLYTOPLANKTON are so hungry for light on the planet that some migrate above THE GARDEN when light is available. Many of these die showering a food source for the BURNACLES. However, the conditions would be too lethal if not for the OBSIDIAN LAVA TALOES."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/THE_GARDEN.html#OBSIDANLAVATALOES",
+    "href": "THE_RUSTLANDS/THE_GARDEN.html#OBSIDANLAVATALOES",
+    "title": "THE GARDEN",
+    "section": "OBSIDIAN LAVA TALOES",
+    "text": "OBSIDIAN LAVA TALOES\n\n\n\nTaloes (singular = talos) of Tartarus are animated beings made from the bounties of Tartarus. They generally consist of local resources.\nOBSIDIAN LAVA TALOES are sentient beings made of lava and obsidian.\nThey are each born from different hydrothermal vents. They use their birth vent to grow and breed the most beautiful collection of ABYSSAL BUTTERCUPS.\nTo maintain life in THE GARDEN the TALOES stimmy the flow of lava by slightly blocking them with obsidian. It is a fine balance so pressure does not build up and cause an explosive eruption.\nIf the ABYSSAL BUTTERCUPS of a TALOS is not well fed the TALOS will hunt JUVENILE OCTONUT CRABS as a source of nutrition.\n\nOBSIDIAN LAVA TALOS\n6HP | 1 ARMOR | TAC:-1 | FRC:+1 | RFX:+1 | CRE:-1\n\nObsidian arm blades (1D6 DAMAGE)\nObsidian lava spear (1D6+2 DAMAGE, talos takes one damage when it creates one, 1 use)\nObsidian scales (1 ARMOR)\nFast, and ruthless\n\nGLASSBLOWER: The true form of this talos is lava. The talos can change any lava that is part of it or touches it to obsidian of any shape. With this ability it creates an obsidian based skeleton, armor, and weapons. Additionally, it can change obsidian back into lava."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/THE_GARDEN.html#abyssalbuttercup",
+    "href": "THE_RUSTLANDS/THE_GARDEN.html#abyssalbuttercup",
+    "title": "THE GARDEN",
+    "section": "ABYSSAL BUTTERCUPS",
+    "text": "ABYSSAL BUTTERCUPS\n\n\n\nThese are a form of land based deep sea anemone. They come in a variety of shapes, sizes, and colours. Each of their tentacles looks like a flower giving the appearance of a garland of swaying flowers.\nAlthough they are plant-like in appearance they are actually solitary carnivores. They move slowly, hunting BURNACLES. Their ancestors would live by deep sea hydrothermal vents giving them resistance to high temperatures. They originate from THE GARDEN and are found in high concentrations there. However, they can now also be found anywhere that BURNACLES can be found.\n\nABYSSAL BUTTERCUP\n2HP | 0 ARMOR | TAC:0 | FRC:-1 | RFX:0 | CRE:-2\n\nLand bound sea anemone\nSimilar in size and shape of a fez\nFound in a variety of different colours shapes, sizes, and colours\nFlower like stinging tentacles (1 DAMAGE)\nFertilised eggs look and act like dandelion seeds\nSoft but fire resistant\n\nDEADLY-GARLAND: The diversity of the flowery shaped tentacles of one ABYSSAL BUTTERCUP is mesmerising. If a person stares at one they will become bonded to it, a person can only be bonded to one at a time. Whilst bonded the person will keep the ABYSSAL BUTTERCUP attached to the top of their head, unable to wear head gear. They will be attracted towards places with the ABYSSAL BUTTERCUP’S prey. If a suitable place is found the ABYSSAL BUTTERCUP will leave the host."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/WHALEFALL.html",
+    "href": "THE_RUSTLANDS/WHALEFALL.html",
+    "title": "WHALEFALL",
+    "section": "",
+    "text": "The bleached skeleton of a great whale 1.5 kilometres long and 300 metres tall lies atop an outcropping of hexagonal basalt. The OCTONUT CRABS use this as their city. Building their homes on the ribs and spine.\nThe skeleton is infested with BURNACLES. They consume a lot of FLYTOPLANKTON, the OCTONUT CRABS like these creatures as they are not harmful to them and they keep other creatures away from the skeleton. The TALOES of THE GARDEN dislike this as it majorly decreases the amount of FLYTOPLANKTON to feed their ABYSSAL BUTTERCUPS."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/WHALEFALL.html#octonutcrabs",
+    "href": "THE_RUSTLANDS/WHALEFALL.html#octonutcrabs",
+    "title": "WHALEFALL",
+    "section": "OCTONUT CRABS",
+    "text": "OCTONUT CRABS\n\n\n\nThe OCTONUT CRABS are SENTIENT creatures. They are the combination of Coconut crabs and Coconut octopuses. The 2 organisms are completely fused.\nThey live in huts built upon the great whale’s skeleton. These huts are made of:\n\nShells of the RUSTY HORSEHOSE CRABS.\nAluminium struts stolen from SKYSLIP.\n\nThe JUVENILE OCTONUT CRABS herd the RUSTY HORSEHOSE CRABS in the RUSTPLAINS.\nThe OCTONUT CRABS lay their eggs with the eggs of the RUSTY HORSEHOSE CRABS. For spawning the RUSTY HORSEHOSE CRABS go to the base of the rock outcropping at WHALEFALL. The surrounding ground consists of black basalt based sands. This keeps the eggs safe from the LEECH WORMS. However, the ICEFISH have started stealing these clutches of eggs for their own purposes.\n\nJUVENILE OCTONUT CRAB\n3HP | 0 ARMOR | TAC:+1 | FRC:0 | RFX:-1 | CRE:+1\n\n0.5m tall & 2 m wide (leg tip to leg tip) Coconut crab\nFusion of Coconut crab & Coconut octopus (physiologically & mentally)\nEyes of Octopus\nMouth area is the tentacle and beak of Octopus\nClaw strike (1D6 DAMAGE)\nSoft exoskeleton\nInquisitive & curious mind\nExcellent climber\nKeen sense of smell\n\nHERDERS: Once old enough juveniles are put to work by their bullying seniors. They herd flocks of RUSTY HORSEHOSE CRABS. Juveniles can communicate with their flock, an ability they lose as they age into an adult.\n\n\nADULT OCTONUT CRAB\n6HP | 2 ARMOR | TAC:+1 | FRC:+2 | RFX:0 | CRE:+2\n\n1m tall & 4 m wide (leg tip to leg tip) Coconut crab\nFusion of Coconut crab & Coconut octopus (physiologically & mentally)\nEyes of Octopus\nMouth area is the tentacle and beak of Octopus\nClaw strike (1D6+1 DAMAGE)\nHard exoskeleton adorned with a backward facing shell of a RUSTY HORSESHOE CRAB (2 ARMOR)\nPhilosophical & slow decision makers\nExcellent climber\nKeen sense of smell\n\nDEVOURERS: The combination of crab and octopus hungers for food of the mind and gut. They will primarily eat their RUSTY HORSEHOSE CRABS. They are surprisingly stealthy, able to burrow and live under the surface for days at a time."
+  },
+  {
+    "objectID": "THE_RUSTLANDS/WHALEFALL.html#rustyhorseshoecrabs",
+    "href": "THE_RUSTLANDS/WHALEFALL.html#rustyhorseshoecrabs",
+    "title": "WHALEFALL",
+    "section": "RUSTY HORSEHOSE CRABS",
+    "text": "RUSTY HORSEHOSE CRABS\n\n\n\nThese large horseshoe crabs flock in the RUSTPLAINS eating the LEECH WORMS WORMS within the soils.\nThey are herded by the JUVENILE OCTONUT CRAB. Due to the keen smell, intelligence, and hunger of their herders the population of the RUSTY HORSESHOE CRABS has become unsustainable.\n\nRUSTY HORSESHOE CRAB\n5HP | 1 ARMOR | TAC:-3 | FRC:+2 | RFX:-1 | CRE:-3\n\n1m wide & 3m long Horseshoe crab\nCovered in a film of rust\nPrimitive eyes on back to sense airborne predators\nHard shell (1 ARMOR)\n\nMAGNETIC DIET: They eat the LEECH WORMS in the soils of the rustlands. Their diet causes their shells, flesh, and eggs to produce a bioelectromagnetic field. This field disrupts electronics within a 10m radius and ferromagnetic metals (iron, cobalt, steel, nickel, manganese, etc.) stick to their shells if they get very near."
+  },
+  {
+    "objectID": "index.html#settings",
+    "href": "index.html#settings",
+    "title": "Overview",
+    "section": "Settings",
+    "text": "Settings\n\nTHE RUSTLANDS: A dried out world of rust, sentient creatures fight and struggle to survive."
+  }
+]
