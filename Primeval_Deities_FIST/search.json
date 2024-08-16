@@ -1183,32 +1183,74 @@
     "text": "Camera Obscura are a bounty hunter company that deal in “Captures” & “Negatives” for private clients. “Captures” involve kidnapping the target and “Negatives” are assassinations. Agents of Camera Obscura are known as shutterbugs.\nThe company has 3 major rules:\nThese rules lead to team ups and rivalries aplenty."
   },
   {
+    "objectID": "Nyxmera/Camera_Obscura.html#organ_grinder",
+    "href": "Nyxmera/Camera_Obscura.html#organ_grinder",
+    "title": "Camera Obscura",
+    "section": "ORGAN GRINDER",
+    "text": "ORGAN GRINDER\n9 HP | 1 ARMOR | TAC:+1 | FRC:0 | RFX:-1 | CRE:+1\nCHOKE 4: Escape with their jetpack\n\nSpecial organ grinder containing below secret weapons (accessory)\n\nHand cranked chain gun (1D6+1 DAMAGE)\nKnock out gas hose (1 use)\nNet gun (1 use)\n\nHidden bullet proof vest (1 armor)\nTacky outfit to hide amongst other street performers (cowboy, cyberpunk, presidents etc.)\n\nINSTRUMENTAL: This kidnappers secret weapon is their box organ grinder with an assortment of secret devices. They aim to avoid combat instead using social stealth to knock out, capture, and fly off with their target.\nCACOPHONOUS DISCORDANCE (BOSS MOVE): ORGAN GRINDER plays a horrible cacophony on their organ grinder. Players gain disadvantage on all their actions. In combat this time equates to a round (an offense and defence phase)."
+  },
+  {
     "objectID": "Nyxmera/Camera_Obscura.html#the_antidoter",
     "href": "Nyxmera/Camera_Obscura.html#the_antidoter",
     "title": "Camera Obscura",
     "section": "THE ANTIDOTER",
-    "text": "THE ANTIDOTER\n(4 HP, CHOKE 4: ingest a fake cyanide pill which mimics a state of death for 12 hours)\n\nSteak knife (3 DAMAGE)\nDisguised as waiting staff or caterers\nOfficial work documents\nFog machine with airborne antidote\nAntidote\n\nCONTAMINATOR: Poisoning a target’s food is difficult, suspicious, and error prone. Poisoning everyone’s food is a cinch. The ANTIDOTER uses a special 2 part poison they have an antidote for. One part is harmless. Consuming both parts within four hours of each other causes a deadly heart attack within a few minutes. The poisons are undetectable but a special antidote administered after the first or second part will prevent death.\nPSIONIC PIPES (BOSS MOVE): Only works on individuals who have consumed at least one part of the poison. Attracts non-targets and repels target/s. This requires a lot of concentration whilst they are maintaining this effect. Trained individuals may be able to notice this effect. Once everyone is in place they will use their fog machine to spread the antidote to non targets."
+    "text": "THE ANTIDOTER\n4 HP | TAC:+1 | FRC:-1 | RFX:0 | CRE:+1\nCHOKE 4: ingest a fake cyanide pill which mimics a state of death for 12 hours\n\nSteak knife (3 DAMAGE)\nDisguised as waiting staff or caterers\nOfficial work documents\nFog machine with airborne antidote\nAntidote\n\nCONTAMINATOR: Poisoning a target’s food is difficult, suspicious, and error prone. Poisoning everyone’s food is a cinch. The ANTIDOTER uses a special 2 part poison they have an antidote for. One part is harmless. Consuming both parts within four hours of each other causes a deadly heart attack within a few minutes. The poisons are undetectable but a special antidote administered after the first or second part will prevent death.\nPSIONIC PIPES (BOSS MOVE): Only works on individuals who have consumed at least one part of the poison. Attracts non-targets and repels target/s. This requires a lot of concentration whilst they are maintaining this effect. Trained individuals may be able to notice this effect. Once everyone is in place they will use their fog machine to spread the antidote to non targets."
   },
   {
     "objectID": "Nyxmera/Camera_Obscura.html#the_king",
     "href": "Nyxmera/Camera_Obscura.html#the_king",
     "title": "Camera Obscura",
     "section": "THE KING",
-    "text": "THE KING\n(4 HP, CHOKE 2: Lifts midas touch curse and barters for mercy with pilfered goods)\n\nDeck of cards\nLock picking tools\nGreat sleight of hand and distraction skills\nCovered in pilfered jewellery\nWill not wear gold\nSimple but stylish dress\n\nCONCEITED: Their real identity is Queen Hermodike II/Damodice, the wife of King Midas. Turned into gold by her husband she was changed back by Nyxmera in the modern day. Their rage towards their late husband means they only target the rich and greedy. They are vain, prideful, and beautiful. Using a portfolio of personaes they have infiltrated into various upper social circles. They can’t help themselves from stealing jewellery and immediately wearing it. Their overbearing charisma stops the vast majority from questioning or confronting THE KING about this.\nMIDAS TOUCH (BOSS MOVE): They can imbue one gold item and one person with the Midas curse. THE KING must touch the gold and person at the same time to cast the curse. If and when the cursed person willingly touches the cursed gold the victim will permanently turn into solid gold. Any other person touching the cursed gold and/or person during the transformation will also turn to gold. After transformation is complete the curse is complete and the gold will not convert anymore people."
+    "text": "THE KING\n4 HP | TAC:+1 | FRC:-1 | RFX:-1 | CRE:+2\nCHOKE 2: Lifts midas touch curse and barters for mercy with pilfered goods\n\nDeck of cards\nLock picking tools\nGreat sleight of hand and distraction skills\nCovered in pilfered jewellery\nWill not wear gold\nSimple but stylish dress\n\nCONCEITED: Their real identity is Queen Hermodike II/Damodice, the wife of King Midas. Turned into gold by her husband she was changed back by Nyxmera in the modern day. Their rage towards their late husband means they only target the rich and greedy. They are vain, prideful, and beautiful. Using a portfolio of personaes they have infiltrated into various upper social circles. They can’t help themselves from stealing jewellery and immediately wearing it. Their overbearing charisma stops the vast majority from questioning or confronting THE KING about this.\nMIDAS TOUCH (BOSS MOVE): They can imbue one gold item and one person with the Midas curse. THE KING must touch the gold and person at the same time to cast the curse. If and when the cursed person willingly touches the cursed gold the victim will permanently turn into solid gold. Any other person touching the cursed gold and/or person during the transformation will also turn to gold. After transformation is complete the curse is complete and the gold will not convert anymore people."
   },
   {
     "objectID": "Nyxmera/Camera_Obscura.html#the_silhouette",
     "href": "Nyxmera/Camera_Obscura.html#the_silhouette",
     "title": "Camera Obscura",
     "section": "THE SILHOUETTE",
-    "text": "THE SILHOUETTE\n(6 HP)\n\nFAMAS assault rifle (1D6+1 DAMAGE, COLLAPSIBLE)\nTrucker gear\nHidden bulletproof vest (1 ARMOR)\nDisguised truck with gear for shadow clones in hold\nNo visible shadow\n\nSHADOW-PLAY: This shutterbug is cautious and never gets their own hands dirty. Instead, they always leave Captures and Negatives to their SILHOUETTE SHADOW CLONES. They park a good distance away orchestrating the clones via their truck’s radio system, speaking in trucker terminology as code. If the missions goes south they will calmly retreat.\nSHADOW CAST (BOSS MOVE): Creates 2D6 SILHOUETTE SHADOW CLONES. They have the memories and skill of the caster and will follows its commands. Unfortunately, shadow clones appear with no clothes and gear. For full effect they need to be used in advance to gear up. The clones can only be summoned and maintained on moonlit nights.\nCOLLAPSIBLE weapon tag: Easily concealed, no matter the size; will never be detected during pat-downs. (F:UE)"
+    "text": "THE SILHOUETTE\n6 HP | TAC:+1 | FRC:-1 | RFX:-1 | CRE:-1\n\nFAMAS assault rifle (1D6+1 DAMAGE, COLLAPSIBLE)\nTrucker gear\nHidden bulletproof vest (1 ARMOR)\nDisguised truck with gear for shadow clones in hold\nNo visible shadow\n\nSHADOW-PLAY: This shutterbug is cautious and never gets their own hands dirty. Instead, they always leave Captures and Negatives to their SILHOUETTE SHADOW CLONES. They park a good distance away orchestrating the clones via their truck’s radio system, speaking in trucker terminology as code. If the missions goes south they will calmly retreat.\nSHADOW CAST (BOSS MOVE): Creates 2D6 SILHOUETTE SHADOW CLONES. They have the memories and skill of the caster and will follows its commands. Unfortunately, shadow clones appear with no clothes and gear. For full effect they need to be used in advance to gear up. The clones can only be summoned and maintained on moonlit nights.\nCOLLAPSIBLE weapon tag: Easily concealed, no matter the size; will never be detected during pat-downs. (F:UE)"
   },
   {
     "objectID": "Nyxmera/Camera_Obscura.html#silhouette_shadow_clone",
     "href": "Nyxmera/Camera_Obscura.html#silhouette_shadow_clone",
     "title": "Camera Obscura",
     "section": "SILHOUETTE SHADOW CLONE",
-    "text": "SILHOUETTE SHADOW CLONE\n(1 HP)\n\nFAMAS assault rifle (1D6+1 DAMAGE)\nHeavy riot shield (2 ARMOR, equip as weapon)\nDeep black tactical gear (1 ARMOR)\nRadio headset\n\nIMMATERIAL: These beings are shadows given life. Their only desire is to complete their mission and become one with the darkness again. When they die they leave only their gear behind. They can die at will so will never be captured."
+    "text": "SILHOUETTE SHADOW CLONE\n1 HP | TAC:+1 | FRC:-1 | RFX:-1 | CRE:-1\n\nFAMAS assault rifle (1D6+1 DAMAGE)\nHeavy riot shield (2 ARMOR, equip as weapon)\nDeep black tactical gear (1 ARMOR)\nRadio headset\n\nIMMATERIAL: These beings are shadows given life. Their only desire is to complete their mission and become one with the darkness again. When they die they leave only their gear behind. They can die at will so will never be captured."
+  },
+  {
+    "objectID": "Nyxmera/Doppelganger_Dunes.html",
+    "href": "Nyxmera/Doppelganger_Dunes.html",
+    "title": "Doppelgänger Dunes",
+    "section": "",
+    "text": "A Nyxmera company that lives and works in deserts. They love temperature extremes of day & night. Additionally, they adore the clearness of the air so they can observe the day and night skies.\nThe company and its employees carry out various jobs in deserts including:\nApart from work they also partake in the following past times:\nSuggested names of Doppelgänger Dunes employees in the area include:"
+  },
+  {
+    "objectID": "Nyxmera/Doppelganger_Dunes.html#skybound_doppelganger",
+    "href": "Nyxmera/Doppelganger_Dunes.html#skybound_doppelganger",
+    "title": "Doppelgänger Dunes",
+    "section": "SKYBOUND DOPPELGANGER",
+    "text": "SKYBOUND DOPPELGANGER\n3 HP | 0 ARMOR | TAC:+2 | FRC:0 | RFX:+1 | CRE:-1\n\nLaser pistol (1D6 DAMAGE)\nAeolian whistle\nWater cooled/heated pilot jumpsuit and pilot’s helmet with full face visor\nPilots an Armored powered parachute\nEyesight of an eagle\nThink themselves superior to the SANDBOUND DOPPELGANGERS\nListless on the ground only feeling truly at home in the skies above deserts\n\nAEOLIAN CHARMER: They are masters at taming and herding flying desert creatures. To carry this out they carve aeolian whistles, whistles played by the wind. These can be attached to their powered parachutes for constant noise or spun around on a piece of string for better control."
+  },
+  {
+    "objectID": "Nyxmera/Doppelganger_Dunes.html#armored-powered-parachute",
+    "href": "Nyxmera/Doppelganger_Dunes.html#armored-powered-parachute",
+    "title": "Doppelgänger Dunes",
+    "section": "Armored powered parachute",
+    "text": "Armored powered parachute\n\n\n\n6 HP, 1 ARMOR with mounted laser gun (1D6+1 DAMAGE)\nA powered parachute is an aircraft with a parafoil with motor and wheels.\nThe Armored powered parachutes holds one pilot and no passengers. It is has a reinforced bottom where a compact mounted laser gun is also situated. This gun is designed to take out ground based targets and is controlled by the pilot through a controls alongside the vehicle controls."
+  },
+  {
+    "objectID": "Nyxmera/Doppelganger_Dunes.html#sandbound-doppelganger",
+    "href": "Nyxmera/Doppelganger_Dunes.html#sandbound-doppelganger",
+    "title": "Doppelgänger Dunes",
+    "section": "SANDBOUND DOPPELGANGER",
+    "text": "SANDBOUND DOPPELGANGER\n4 HP | 1 ARMOR | TAC:+1 | FRC:+1 | RFX:0 | CRE:-1\n\nLaser rifle (1D6+1 DAMAGE)\nCombat shovel (3 DAMAGE)\nNight vision capable monocular\nHelmet with full face an scalp reflective visor\nSpecial glass plated armor that can reflect and absorb infra-red for heat modulation (1 ARMOR)\nEnvy the SKYBOUND DOPPELGANGERS\nReadily willing to gamble over a game of Mancala\n\nSAND PERMEATION: These sand troopers are able to dive feet first into sand as if it was air. This effect only lasts a couple seconds after which they will rise back to the surface in an arc motion. This allows them to easily outmanoeuvre foes during close range combats."
+  },
+  {
+    "objectID": "Nyxmera/Doppelganger_Dunes.html#sol-doppelganger-of-deserts",
+    "href": "Nyxmera/Doppelganger_Dunes.html#sol-doppelganger-of-deserts",
+    "title": "Doppelgänger Dunes",
+    "section": "SOL: DOPPELGANGER OF DESERTS",
+    "text": "SOL: DOPPELGANGER OF DESERTS\n9 HP | 1 ARMOR | TAC:+2 | FRC:+1 | RFX:0 | CRE:0\n\nLaser cannon (1D6+2 DAMAGE)\nNight blade (1D6 DAMAGE, SHREDDER)\nA Sol Doppelganger (they/them)\nSpecial glass plated armor that can reflect and absorb infra-red for heat modulation (1 ARMOR)\nCollapsible full head metal plate helmet (accessory)\nOne eye of blue and yellow, the other of black, grey, and purple\nA warm inviting presence\nEasily offended and cold to those who offend them\nDoes not like being misgendered or people mentioning their eyes\n\nSHREDDER weapon tag: Deals double DAMAGE to exposed flesh. On critical hits, decreases the target’s ARMOR by 1. (F:UE)"
   },
   {
     "objectID": "Nyxmera/Mooners.html",
@@ -1313,7 +1355,7 @@
     "href": "nyxmera.html#sub-factions",
     "title": "Nyxmera",
     "section": "Sub Factions",
-    "text": "Sub Factions\nThere are many sub factions of Suns. The following pages are brief descriptions of various sub factions with stat blocks for different non player characters.\n\nSuns of Nyxmera: Typical followers of Nyxmera.\nNyxmera Troops: Units used for a variety of combat based tasks in Nyxmera based companies.\nCamera Obscura: An organisation of “bounty hunters”, called shutterbugs, that specialise in kidnappings and assassinations.\nStarvatars: Physical embodiments of the eyes of Nyxmera (stars, moons, and planets)."
+    "text": "Sub Factions\nThere are many sub factions of Suns. The following pages are brief descriptions of various sub factions with stat blocks for different non player characters.\n\nSuns of Nyxmera: Typical followers of Nyxmera.\nNyxmera Troops: Units used for a variety of combat based tasks in Nyxmera based companies.\nDoppelgänger Dunes: A company that lives within deserts. They love the clear skies and the extreme dilineation of day and night.\nCamera Obscura: An organisation of “bounty hunters”, called shutterbugs, that specialise in kidnappings and assassinations.\nStarvatars: Physical embodiments of the eyes of Nyxmera (stars, moons, and planets)."
   },
   {
     "objectID": "PRIMEVAL_DEITIES/Tartarus/DOT_Raiders.html",
@@ -1558,7 +1600,7 @@
     "href": "proteus.html#sub-factions",
     "title": "Proteus",
     "section": "Sub Factions",
-    "text": "Sub Factions\nThere are many Protean sub factions, many of them being a combination with one of the other three.\n\nProteans: Typical Proteans.\nTriton & Delta: A large pharmaceutical company with Gaians. They sell both licit and illicit drugs, including being the number one supplier of Holy water.\nRefraction Sports: A sports company specialising in snow and water sports. Suns of Nyxmera are involved.\nPumice construction Ltd.: A Protean and Dotters of Nyxmera construction company. Their revolutionary concrete technology has allowed the post modern brutalism boom.\nWater bodies: Physical manifestations of earthly water bodies (rivers, lakes, seas, oceans, etc.).\nPoutine the Hyperborean: One of the chief lieutenants of Dr. Petra Pufferfish. He aids her plans of world domination with his mind controlled animals and icy weather technologies."
+    "text": "Sub Factions\nThere are many Protean sub factions, many of them being a combination with one of the other three.\n\nProteans: Typical Proteans.\nTriton & Delta: A large pharmaceutical company with Gaians. They sell both licit and illicit drugs, including being the number one supplier of Holy water.\nRefraction Sports: A sports company specialising in snow and water sports. Suns of Nyxmera are involved.\nPumice construction Ltd.: A Protean and Dotters of Nyxmera construction company. Their revolutionary concrete technology has allowed the post modern brutalism boom.\nWater bodies: Physical manifestations of earthly water bodies (rivers, lakes, seas, oceans, etc.).\nBlanchard the Hyperborean: One of the chief lieutenants of Dr. Petra Pufferfish. He aids her plans of world domination with his mind controlled animals and icy weather technologies."
   },
   {
     "objectID": "Tartarus/Dotters.html",
@@ -1747,55 +1789,34 @@
     "href": "tartarus.html#sub-factions",
     "title": "Tartarus",
     "section": "Sub Factions",
-    "text": "Sub Factions\nThere are many sub factions of Dotters. The following pages are brief descriptions of various sub factions with stat blocks for different non player characters.\n\nDotters of Tartarus: Typical followers of Tartarus.\nDOT raiders: Groups who live in the DOT and need to raid the surface for food and supplies.\nKraken: A large company with an almost world wide monopoly on mining and energy.\nTaloes: Animated beings made from the will and bounties of Taratrus."
+    "text": "Sub Factions\nThere are many sub factions of Dotters. The following pages are brief descriptions of various sub factions with stat blocks for different non player characters.\n\nDotters of Tartarus: Typical followers of Tartarus.\nDOT raiders: Groups who live in the DOT and need to raid the surface for food and supplies.\nKraken: A large company with an almost world wide monopoly on mining and energy.\nTaloes: Animated beings made from the will and bounties of Taratrus.\nKaiju: Massive creatures of the DOT."
   },
   {
-    "objectID": "Nyxmera/Doppelganger_Dunes.html",
-    "href": "Nyxmera/Doppelganger_Dunes.html",
-    "title": "Doppelgänger Dunes",
-    "section": "",
-    "text": "A Nyxmera company that lives and works in deserts. They love temperature extremes of day & night. Additionally, they adore the clearness of the air so they can observe the day and night skies.\nThe company and its employees carry out various jobs in deserts including:\nApart from work they also partake in the following past times:\nSuggested names of Doppelgänger Dunes employees in the area include:"
+    "objectID": "nyxmera.html#tenents",
+    "href": "nyxmera.html#tenents",
+    "title": "Nyxmera",
+    "section": "Tenents",
+    "text": "Tenents\n\nObserve and sow intrigue\nBalance through duality\nManipulate and utilise others as you see fit\nEternal beauty is preferred to the ethereal"
   },
   {
-    "objectID": "Nyxmera/Doppelganger_Dunes.html#skybound-doppelganger",
-    "href": "Nyxmera/Doppelganger_Dunes.html#skybound-doppelganger",
-    "title": "Doppelgänger Dunes",
-    "section": "SKYBOUND DOPPELGANGER",
-    "text": "SKYBOUND DOPPELGANGER"
+    "objectID": "tartarus.html#tenents",
+    "href": "tartarus.html#tenents",
+    "title": "Tartarus",
+    "section": "Tenents",
+    "text": "Tenents\n\nUnleash your power to create your own domain\nImprisonment is never permitted\nMake good the bounties of Tartarus\nDestruction allows creation and creation allows destruction"
   },
   {
-    "objectID": "Nyxmera/Doppelganger_Dunes.html#powered-parachute",
-    "href": "Nyxmera/Doppelganger_Dunes.html#powered-parachute",
-    "title": "Doppelgänger Dunes",
-    "section": "Powered parachute",
-    "text": "Powered parachute"
+    "objectID": "proteus.html#tenents",
+    "href": "proteus.html#tenents",
+    "title": "Proteus",
+    "section": "Tenents",
+    "text": "Tenents\n\nFlow like water and you can adapt to all situations\nAbove all respect the autonomy of others\nAllow others to shape you and you will surely shape them in turn\nPatience allows for great deeds"
   },
   {
-    "objectID": "Nyxmera/Doppelganger_Dunes.html#sandbound-doppelganger",
-    "href": "Nyxmera/Doppelganger_Dunes.html#sandbound-doppelganger",
-    "title": "Doppelgänger Dunes",
-    "section": "SANDBOUND DOPPELGANGER",
-    "text": "SANDBOUND DOPPELGANGER\n4 HP | 1 ARMOR | TAC:+1 | FRC:+1 | RFX:0 | CRE:-1\n\nLaser rifle (1D6+1 DAMAGE)\nCombat shovel (3 DAMAGE)\nNight vision capable monocular\nHelmet with full face an scalp reflective visor\nSpecial glass plated armor that can reflect and absorb infra-red for heat modulation (1 ARMOR)\nEnvy the SKYBOUND DOPPELGANGERS\nReadily willing to gamble over a game of Mancala\n\nSAND PERMEATION: These sand troopers are able to dive feet first into sand as if it was air. This effect only lasts a couple seconds after which they will rise back to the surface in an arc motion. This allows them to easily outmaneuvre foes during close range combats."
-  },
-  {
-    "objectID": "Nyxmera/Doppelganger_Dunes.html#armored-powered-parachute",
-    "href": "Nyxmera/Doppelganger_Dunes.html#armored-powered-parachute",
-    "title": "Doppelgänger Dunes",
-    "section": "Armored powered parachute",
-    "text": "Armored powered parachute\n\n\n\n6 HP, 1 ARMOR with mounted laser gun (1D6+1 DAMAGE)\nA powered parachute is an aircraft with a parafoil with motor and wheels.\nThe Armored powered parachutes holds one pilot and no passengers. It is has a reinforced bottom where a compact mounted laser gun is also situated. This gun is designed to take out ground based targets and is controlled by the pilot through a controls alongside the vehicle controls."
-  },
-  {
-    "objectID": "Nyxmera/Doppelganger_Dunes.html#sol-doppelganger-of-deserts",
-    "href": "Nyxmera/Doppelganger_Dunes.html#sol-doppelganger-of-deserts",
-    "title": "Doppelgänger Dunes",
-    "section": "SOL: DOPPELGANGER OF DESERTS",
-    "text": "SOL: DOPPELGANGER OF DESERTS\n9 HP | 1 ARMOR | TAC:+2 | FRC:+1 | RFX:0 | CRE:0\n\nLaser cannon (1D6+2 DAMAGE)\nNight blade (1D6 DAMAGE, SHREDDER)\nA Sol Doppelganger (they/them)\nSpecial glass plated armor that can reflect and absorb infra-red for heat modulation (1 ARMOR)\nCollapsible full head metal plate helmet (accessory)\nOne eye of blue and yellow, the other of black, grey, and purple\nA warm inviting presence\nEasily offended and cold to those who offend them\nDoes not like being misgendered or people mentioning their eyes\n\nSHREDDER weapon tag: Deals double DAMAGE to exposed flesh. On critical hits, decreases the target’s ARMOR by 1. (F:UE)"
-  },
-  {
-    "objectID": "Nyxmera/Doppelganger_Dunes.html#skybound_doppelganger",
-    "href": "Nyxmera/Doppelganger_Dunes.html#skybound_doppelganger",
-    "title": "Doppelgänger Dunes",
-    "section": "SKYBOUND DOPPELGANGER",
-    "text": "SKYBOUND DOPPELGANGER\n3 HP | 0 ARMOR | TAC:+2 | FRC:0 | RFX:+1 | CRE:-1\n\nLaser pistol (1D6 DAMAGE)\nAeolian whistle\nWater cooled/heated pilot jumpsuit and pilot’s helmet with full face visor\nPilots an Armored powered parachute\nEyesight of an eagle\nThink themselves superior to the SANDBOUND DOPPELGANGERS\nListless on the ground only feeling truly at home in the skies above deserts\n\nAEOLIAN CHARMER: They are masters at taming and herding flying desert creatures. To carry this out they carve aeolian whistles, whistles played by the wind. These can be attached to their powered parachutes for constant noise or spun around on a piece of string for better control."
+    "objectID": "gaia.html#tenents",
+    "href": "gaia.html#tenents",
+    "title": "Gaia",
+    "section": "Tenents",
+    "text": "Tenents\n\nStrive for unification\nLife is not chaos but a complex web of rules\nUse the emotions within you and others as a strength\nLead and they will follow, rule and they will obey"
   }
 ]
