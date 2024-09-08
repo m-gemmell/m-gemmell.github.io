@@ -371,6 +371,13 @@
     "text": "Life was created by the combination of light, earth, and water. Gaia is life and yearns for unity. Its followers, Gaians, interpret this in many ways. As always unity generates division.\nMost followers cherish life. They farm, heal others, protect the environment, etc. Some think death is the great unifier and praise the degraders and carrion feeders. An even smaller subset hold hard to the wheel of life.\nGaia is frustrated by how easily others mix with the brownian chaos of Proteus."
   },
   {
+    "objectID": "gaia.html#tenents",
+    "href": "gaia.html#tenents",
+    "title": "Gaia",
+    "section": "Tenents",
+    "text": "Tenents\n\nStrive for unification\nLife is not chaos but a complex web of rules\nUse the emotions within you and others as a strength\nLead and they will follow, rule and they will obey"
+  },
+  {
     "objectID": "gaia.html#blessings-of-cognition",
     "href": "gaia.html#blessings-of-cognition",
     "title": "Gaia",
@@ -1344,6 +1351,13 @@
     "text": "Nyxmera is the light. All the celestial bodies are known as the eyes of Nyxmera, the sun, the grey moon, the purple moon, the gas planets, and the stars. With these Nyxmera watches, it wants to be intrigued. Something its followers, Suns of Nyxmera, are more than happy to facilitate.\nNyxmera is everything but Earth. It craves what it can’t take. There is so much of interest on such tiny orbs or dirt, so Nyxmera is stuck in a perpetual gaze at the planets of Tartarus.\nIts logo represents the duality of the sky and Nyxmera’s eyes. On one side the blue sky and sun. On the other, the night sky with the Grey Moon and Purple Moon. Nyxmera loves extremes; good and evil, comedy and drama, love and war."
   },
   {
+    "objectID": "nyxmera.html#tenents",
+    "href": "nyxmera.html#tenents",
+    "title": "Nyxmera",
+    "section": "Tenents",
+    "text": "Tenents\n\nObserve and sow intrigue\nBalance through duality\nManipulate and utilise others as you see fit\nEternal beauty is preferred to the transient"
+  },
+  {
     "objectID": "nyxmera.html#the-eyes-of-nyxmera",
     "href": "nyxmera.html#the-eyes-of-nyxmera",
     "title": "Nyxmera",
@@ -1582,6 +1596,13 @@
     "text": "The elusive ever adaptable deity of water. Proteus goes with the flow, loathing stagnation and overworking. Proteus is ever changing, and agreeable, happy to be manipulated by others. Whether forming into cloud by the sun, falling down a mountain, or becoming steam by lava this occurs to water.\nWhen it is affected by others it will also leave its own mark. Beaches formed by the interaction of the moon, water, and land. Clouds blocking the sun. The formation of Islands with magma. In this changing way, Proteus brings life but it can take it away. However Proteus requires balance, it is frozen in the absence of heat and evaporates with too much."
   },
   {
+    "objectID": "proteus.html#tenents",
+    "href": "proteus.html#tenents",
+    "title": "Proteus",
+    "section": "Tenents",
+    "text": "Tenents\n\nFlow like water and you can adapt to all situations\nAbove all respect the autonomy of others\nAllow others to shape you and you will surely shape them in turn\nPatience allows for great deeds"
+  },
+  {
     "objectID": "proteus.html#holy-water",
     "href": "proteus.html#holy-water",
     "title": "Proteus",
@@ -1635,35 +1656,35 @@
     "href": "Tartarus/DOT_raiders.html#raider",
     "title": "DOT raiders",
     "section": "TARTARUS RAIDER",
-    "text": "TARTARUS RAIDER\n(3 HP, 2D6 appear)\n\nM1911 pistol (1D6 DAMAGE)\nObsidian blade (1D6 DAMAGE)\nThunderstick, explosive throwing spear (1D6 + 2 DAMAGE, ANTI-MATERIAL, 1 use)\nScrap armor (1 ARMOR)\nScrap armored school bus (12 HP, 2 ARMOR)\n\nHIT-AND-RUN: Raider war cries act as a harbinger of destruction. After a rapid pillage they scarper off leaving any wounded behind. They never abduct living things. The literal definition of scrappy, they like to bicker between themselves over loot. TARTARUS RAIDERS are good drivers and only use their thundersticks on pursuing vehicles, not wanting to destroy any possible loot.\nANTI-MATERIAL weapon tag: Deals double DAMAGE to vehicles and structures; cumbersome to carry around. (F:UE)"
+    "text": "TARTARUS RAIDER\n3 HP | 2D6 appear | 1 ARMOR | TAC:-1 | FRC:+1 | RFX:+1 | CRE:0\n\nM1911 pistol (1D6 DAMAGE)\nObsidian blade (1D6 DAMAGE)\nThunderstick, explosive throwing spear (1D6 + 2 DAMAGE, ANTI-MATERIAL, 1 use)\nScrap armor (1 ARMOR)\nScrap armored school bus (12 HP, 2 ARMOR)\n\nHIT-AND-RUN: Raider war cries act as a harbinger of destruction. After a rapid pillage they scarper off leaving any wounded behind. They never abduct living things. The literal definition of scrappy, they like to bicker between themselves over loot. TARTARUS RAIDERS are good drivers and only use their thundersticks on pursuing vehicles, not wanting to destroy any possible loot.\nANTI-MATERIAL weapon tag: Deals double DAMAGE to vehicles and structures; cumbersome to carry around. (F:UE)"
   },
   {
     "objectID": "Tartarus/DOT_raiders.html#tartarus_mutant",
     "href": "Tartarus/DOT_raiders.html#tartarus_mutant",
     "title": "DOT raiders",
     "section": "TARTARUS MUTANT",
-    "text": "TARTARUS MUTANT\n(5 HP)\n\nMAS-36 bolt-action rifle (1D6+1 DAMAGE)\nTattered clothing barely covering their portfolio of scars\nFaint blue/green glow from their veins\nNo two mutants are the same, the below mutations are left vague for the referee’s and/or players’ imagination to fill\n\nADAPTED: These were once normal humans who lived in the settlements of the DOT. They have survived longer than most and so have been mutated from the pervasive chemicals and radiation. When one appears, roll 2D6 to determine which of the two following mutations they have (reroll duplicates).\n\nExoskeleton (2 ARMOR)\nLethal arms (1D6 + 1 DAMAGE)\nPowerful strides and jumps\nEnhanced sense\nExtra appendage\nTARTARUS MUTANT gets a total of 3 of the other options\n\nMELTDOWN (BOSS MOVE): As a last resort and with a well choreographed lead up the TARTARUS MUTANT can cause itself to explode. It dies whilst dealing 2D6 DAMAGE to everything within 20 feet."
+    "text": "TARTARUS MUTANT\n5 HP | TAC:-1 | FRC:+1 | RFX:+1 | CRE:+1\n\nMAS-36 bolt-action rifle (1D6+1 DAMAGE)\nTattered clothing barely covering their portfolio of scars\nFaint blue/green glow from their veins\nNo two mutants are the same, the below mutations are left vague for the referee’s and/or players’ imagination to fill\n\nADAPTED: These were once normal humans who lived in the settlements of the DOT. They have survived longer than most and so have been mutated from the pervasive chemicals and radiation. When one appears, roll 2D6 to determine which of the two following mutations they have (reroll duplicates).\n\nExoskeleton (2 ARMOR)\nLethal arms (1D6 + 1 DAMAGE)\nPowerful strides and jumps\nEnhanced sense\nExtra appendage\nTARTARUS MUTANT gets a total of 3 of the other options\n\nMELTDOWN (BOSS MOVE): As a last resort and with a well choreographed lead up the TARTARUS MUTANT can cause itself to explode. It dies whilst dealing 2D6 DAMAGE to everything within 20 feet."
   },
   {
     "objectID": "Tartarus/DOT_raiders.html#fire_warrior",
     "href": "Tartarus/DOT_raiders.html#fire_warrior",
     "title": "DOT raiders",
     "section": "TARTARUS FIRE WARRIOR",
-    "text": "TARTARUS FIRE WARRIOR\n(6 HP)\n\nFlame thrower (1D6 + 1 DAMAGE, INCENDIARY)\nNapalm grenade (1D6 + 2 DAMAGE, 1 use)\nPyrogen fire suppression grenade. Can douse fire in a medium enclosed area such as a skip or caravan (1 use)\nReinforced silver fire suit (1 ARMOR)\nBottled fire spirit, 1 DAMAGE to user, heals target +1D6 HP (1 use)\nInhibited movement and vision\n\nBURNT: These warriors have been wronged and fight for justice. They have little self preservation thinking their suits will prevent any dangerous burns. They are fiercely defensive of their allies and will attract aggro. Whilst a TARTARUS FIRE WARRIOR is alive and in combat, attacks to non TARTARUS FIRE WARRIORS have -1 DAMAGE.\nINCENDIARY weapon tag: When damage is dealt, this weapon also deals 2 DAMAGE to anything within firespreading range. Deals double DAMAGE to plants.(F:UE)"
+    "text": "TARTARUS FIRE WARRIOR\n6 HP | 1 ARMOR | TAC:+1 | FRC:+1 | RFX:0 | CRE:0\n\nFlame thrower (1D6 + 1 DAMAGE, INCENDIARY)\nNapalm grenade (1D6 + 2 DAMAGE, 1 use)\nPyrogen fire suppression grenade. Can douse fire in a medium enclosed area such as a skip or caravan (1 use)\nReinforced silver fire suit (1 ARMOR)\nBottled fire spirit, 1 DAMAGE to user, heals target +1D6 HP (1 use)\nInhibited movement and vision\n\nBURNT: These warriors have been wronged and fight for justice. They have little self preservation thinking their suits will prevent any dangerous burns. They are fiercely defensive of their allies and will attract aggro. Whilst a TARTARUS FIRE WARRIOR is alive and in combat, attacks to non TARTARUS FIRE WARRIORS have -1 DAMAGE.\nINCENDIARY weapon tag: When damage is dealt, this weapon also deals 2 DAMAGE to anything within firespreading range. Deals double DAMAGE to plants.(F:UE)"
   },
   {
     "objectID": "Tartarus/DOT_raiders.html#magnetic_slinger",
     "href": "Tartarus/DOT_raiders.html#magnetic_slinger",
     "title": "DOT raiders",
     "section": "TARTARUS MAGNETIC SLINGER",
-    "text": "TARTARUS MAGNETIC SLINGER\n(4 HP)\n\nLong range gauss rifle, requires a bright and loud charge up time (1D6+2 DAMAGE, ARMOR PIERCING)\nTripwire grenade (1D6 + 1 DAMAGE, 1 use)\nSmoke grenade (1 use)\nFlare gun (3 uses)\nGhillie suit\nSluggish and cramped legs.\n\nVOLCANIC: Like a volcano this slinger is patient and difficult to detect whilst dormant. However their weapon provides an obvious signal to their target a few seconds before they can fire. Will use their flare gun to call for backup or attract prey.\nARMOR-PIERCING weapon tag: Attacks with this weapon ignore ARMOR bonuses granted by physical means. (F:UE)"
+    "text": "TARTARUS MAGNETIC SLINGER\n4 HP | TAC:+2 | FRC:0 | RFX:0 | CRE:0\n\nLong range gauss rifle, requires a bright and loud charge up time (1D6+2 DAMAGE, ARMOR PIERCING)\nTripwire grenade (1D6 + 1 DAMAGE, 1 use)\nSmoke grenade (1 use)\nFlare gun (3 uses)\nGhillie suit\nSluggish and cramped legs\n\nVOLCANIC: Like a volcano this slinger is patient and difficult to detect whilst dormant. However their weapon provides an obvious signal to their target a few seconds before they can fire. Will use their flare gun to call for backup or attract prey.\nARMOR-PIERCING weapon tag: Attacks with this weapon ignore ARMOR bonuses granted by physical means. (F:UE)"
   },
   {
     "objectID": "Tartarus/DOT_raiders.html#scrapper",
     "href": "Tartarus/DOT_raiders.html#scrapper",
     "title": "DOT raiders",
     "section": "SCRAPPER",
-    "text": "SCRAPPER\n(3 HP)\n\nOversized wrench (1D6 DAMAGE, PERCUSSIVE-MAINTENANCE)\nScrap cannon (1D6 DAMAGE)\nPipe bomb (1D6+2 DAMAGE, one use)\nScrap armor (1 ARMOR)\nRusted toolbox full of immaculately tended tools\n\nHANDY: One’s trash is another’s treasure. The SCRAPPER scraps, builds, and maintains the devices used by the DOT raiders. To become a SCRAPPER one must replace their own arm with their own custom bionic arm. When one appears, roll 2D6 to determine which of the two following bionic arm features they have (reroll duplicates).\n\nGrapple hand\nMed injector (+1D6 HP, one use)\nBuckler (1 ARMOR against melee attacks)\nStone containing an aspect of Tartarus able to guide them to treasure\nRocket fist (1D6+2 DAMAGE, arm is unusable till replacement hand attached)\nSCRAPPER gets a total of 3 of the other options\n\nPERCUSSIVE-MAINTENANCE weapon tag: Once per mission this weapon can be used to fix a malfunctioning device. This includes, but is not limited to, jammed or overheated weapons, stuck elevators, stalled vehicles, and a fuzzy television."
+    "text": "SCRAPPER\n3 HP | 1 ARMOR | TAC:+2 | FRC:+1 | RFX:-1 | CRE:+1\n\nOversized wrench (1D6 DAMAGE, PERCUSSIVE-MAINTENANCE)\nScrap cannon (1D6 DAMAGE)\nPipe bomb (1D6+2 DAMAGE, one use)\nScrap armor (1 ARMOR)\nRusted toolbox full of immaculately tended tools\n\nHANDY: One’s trash is another’s treasure. The SCRAPPER scraps, builds, and maintains the devices used by the DOT raiders. To become a SCRAPPER one must replace their own arm with their own custom bionic arm. When one appears, roll 2D6 to determine which of the two following bionic arm features they have (reroll duplicates).\n\nGrapple hand\nMed injector (+1D6 HP, one use)\nBuckler (1 ARMOR against melee attacks)\nStone containing an aspect of Tartarus able to guide them to treasure\nRocket fist (1D6+2 DAMAGE, arm is unusable till replacement hand attached)\nSCRAPPER gets a total of 3 of the other options\n\nPERCUSSIVE-MAINTENANCE weapon tag: Once per mission this weapon can be used to fix a malfunctioning device. This includes, but is not limited to, jammed or overheated weapons, stuck elevators, stalled vehicles, and a fuzzy television."
   },
   {
     "objectID": "Tartarus/Kaiju.html",
@@ -1778,6 +1799,13 @@
     "text": "Tartarus is the ground we live on. It is the rocks, dirt, metal, and oil. Once free with explosive energy it now lays dormant, en-caged by the sky, trapped by Nyxmera. Tartarus loathes Nyxmera. Whilst Nyxmera only shows apathy towards its prisoner, fueling Tartarus’ bottled rage further.\nTartarus’ logo represents Taratrus’ power cracking through the scorched earth. It wants to unleash its power with no concern for others."
   },
   {
+    "objectID": "tartarus.html#tenents",
+    "href": "tartarus.html#tenents",
+    "title": "Tartarus",
+    "section": "Tenents",
+    "text": "Tenents\n\nUnleash your power to create your own domain\nImprisonment is never permitted\nMake good the bounties of Tartarus\nDestruction allows creation and creation allows destruction"
+  },
+  {
     "objectID": "tartarus.html#the-dot",
     "href": "tartarus.html#the-dot",
     "title": "Tartarus",
@@ -1792,31 +1820,45 @@
     "text": "Sub Factions\nThere are many sub factions of Dotters. The following pages are brief descriptions of various sub factions with stat blocks for different non player characters.\n\nDotters of Tartarus: Typical followers of Tartarus.\nDOT raiders: Groups who live in the DOT and need to raid the surface for food and supplies.\nKraken: A large company with an almost world wide monopoly on mining and energy.\nTaloes: Animated beings made from the will and bounties of Taratrus.\nKaiju: Massive creatures of the DOT."
   },
   {
-    "objectID": "nyxmera.html#tenents",
-    "href": "nyxmera.html#tenents",
-    "title": "Nyxmera",
-    "section": "Tenents",
-    "text": "Tenents\n\nObserve and sow intrigue\nBalance through duality\nManipulate and utilise others as you see fit\nEternal beauty is preferred to the ethereal"
+    "objectID": "Tartarus/Vampore.html",
+    "href": "Tartarus/Vampore.html",
+    "title": "Vampore",
+    "section": "",
+    "text": "Kaiju are the massive creatures monsters created by Tartarus whilst Demons are the more human variety. These Demons are some of the creatures of folklore and myths that have been twisted by Tartarus into his own design.\nOne such Demon is the Vampore. In extremely rare cases a lump of iron that has tasted blood will hunger for more. The ore will attempt to bond with a sentient creature (with blood) that touches it. If successful the creature will become its Renfield. Although the Vampore can drink any blood, it can only give power to its Renfield if it consumes blood from the same species as the Renfield."
   },
   {
-    "objectID": "tartarus.html#tenents",
-    "href": "tartarus.html#tenents",
-    "title": "Tartarus",
-    "section": "Tenents",
-    "text": "Tenents\n\nUnleash your power to create your own domain\nImprisonment is never permitted\nMake good the bounties of Tartarus\nDestruction allows creation and creation allows destruction"
+    "objectID": "Tartarus/Vampore.html#renfield",
+    "href": "Tartarus/Vampore.html#renfield",
+    "title": "Vampore",
+    "section": "RENFIELD",
+    "text": "RENFIELD\n4 HP | TAC:0 | FRC:+1 | RFX:0 | CRE:+1\n\nFlunitrazepam powder, can be added to a beverage to knock-out the consumer (1 use)\nA large syringe with dual function\n\nFirst sedates the target\nExtracts large quantities of blood\n\n10 pint iron cannister connected to syringe, contains Vampore\nAttractive and physically fit due to the power of the Vampore\nCharming and cunning\n\nThrall: The RENFIELD follows the orders of the Vampore with the promise of power. They use their new physical and social charms to lure victims to quiet and unseen places. When they have fed the Vampore 10 pints of blood from ten adults (same species as the RENFIELD) the RENFIELD can fuse with the Vampore to become a Vampire."
   },
   {
-    "objectID": "proteus.html#tenents",
-    "href": "proteus.html#tenents",
-    "title": "Proteus",
-    "section": "Tenents",
-    "text": "Tenents\n\nFlow like water and you can adapt to all situations\nAbove all respect the autonomy of others\nAllow others to shape you and you will surely shape them in turn\nPatience allows for great deeds"
+    "objectID": "Tartarus/Vampore.html#vampire",
+    "href": "Tartarus/Vampore.html#vampire",
+    "title": "Vampore",
+    "section": "VAMPIRE",
+    "text": "VAMPIRE\n12 HP | 2 ARMOR | TAC:-1 | FRC:+1 | RFX:+1 | CRE:0\n\nGoldschmidt’s fervour (Sword, 1D6+1 DAMAGE, INCENDIARY)\nRenfield’s lullaby (Scalpel, 3 DAMAGE, STUN)\nIron skin (2 ARMOR, accessory)\nMagnetic manipulation powers (only works on iron and iron alloys)\nLevitation abilities\nThirsty and power hungry\n\nIRONHEART: When a RENFIELD fuses with a Vampore its heart is replaced with the Vampore. This new heart of Iron ore beats and hungers for more blood. The VAMPIRE gladly drinks more blood to retain their power. If the VAMPIRE is brought to 0HP they will rise again. This can be prevented by removing their ore heart or destroying their body so no living flesh is left around the ore heart.\nASTROPHOBIA: The light from the sun and moons weaken the VAMPIRE. These are The Eyes of Nyxmera, sworn enemy of Tartarus. Whilst exposed to this light the VAMPIRE has the HP and stats of a RENFIELD and they cannot use their BOSS MOVES. However, they still retain their IRONHEART skill. Due to this they commonly descend into the DOT either joining and/or feeding off DOT raiders.\nDISARM (BOOS MOVE): The VAMPIRE disarms all iron-based weapons. This involves disassembling guns and creating a magntised ball containing all the weapons. This ball dissipates when the VAMPIRE reaches 0HP or releases this ability.\nINCENDIARY weapon tag: When damage is dealt, this weapon also deals 2 DAMAGE to anything within firespreading range. Deals double DAMAGE to plants. (F:UE)\nSTUN weapon tag: Those damaged by this weapon cannot move or act until their current HP changes. (F:UE)"
   },
   {
-    "objectID": "gaia.html#tenents",
-    "href": "gaia.html#tenents",
-    "title": "Gaia",
-    "section": "Tenents",
-    "text": "Tenents\n\nStrive for unification\nLife is not chaos but a complex web of rules\nUse the emotions within you and others as a strength\nLead and they will follow, rule and they will obey"
+    "objectID": "Tartarus/Vampore.html#vampore-blade",
+    "href": "Tartarus/Vampore.html#vampore-blade",
+    "title": "Vampore",
+    "section": "VAMPORE BLADE",
+    "text": "VAMPORE BLADE\nIf the VAMPORE is used to forge a bladed weapon the weapon will gain the following tag.\nBLOODDRINKER weapon tag: If you have blood, after landing a successful attack on a creature with blood you can allow the blade to drink the enemies blood. You gain 1D3 HP, keep track of how much HP you gain this way during a mission. Each time you heal you have a X-in-1D6 chance of gaining the VAMPIRE trait, the weapon forming into an iron heart and replacing your heart. X equals the amount of HP you have gained in the current mission -4."
+  },
+  {
+    "objectID": "Catalog/traits.html#tartarus-tartarus_traits",
+    "href": "Catalog/traits.html#tartarus-tartarus_traits",
+    "title": "Traits",
+    "section": "Tartarus [#tartarus_traits]",
+    "text": "Tartarus [#tartarus_traits]\nGRAVITY LIFT: You can create 1 gravity lift per mission. These cylinders of reverse gravity can be up to the diameter of a normal bicycle wheel. The cylinder extends straight up from the centre of the celestial body you are on. The reverse gravity has the same force as the normal gravity from the celestial body. The gravity lift lasts till you dismiss it or till the end of the mission.\n\nStabilise and thrust boots (1 use, prevents fall damage)\n+1 TACTICAL\n\nKAIJU: You can transform into a kaiju no larger than a cargo container. When you choose this trait, also choose the form of your kaiju. You get the following when in your kaiju form:\n\nYour total FORCEFUL score is +4 and your total REFLEXIVE score is -1. Your TACTICAL and CREATIVE are unchanged\nYou have a total HP of 20 and natural armor of 3\nYour natural melee weapons deal 2D6 DAMAGE\n\nAll your gear is absorbed into your kaiju form so it cannot be used. When you return to normal you are wearing and wielding your gear normally. Your form lasts till you release it, you fail a skill check, your kaiju form reaches 0HP, or till the end of the mission. Any excess damage you take is suffered by your normal form.\nWhen you return to normal, reduce your FORCEFUL score by 1. You regain 1 FORCEFUL at the end of a mission. You cannot transform into your kaiju form if your current FORCEFUL score is -1 or less.\nInstead of another level up reward you can choose one of the following kaiju upgrades. Each can only be chosen once.\n\nGain a ranged attack that deals 1D6+3 DAMAGE\nYour natural melee weapons deal 4D6 DAMAGE\nYour kaiju form size increases to that of a 3 bedroom house and you gain +10 HP\n\n\nLife preserving airbag suit (accessory)\n-2 TACTICAL\n\nMETAL EATER: You have extremely strong teeth and jaws. You are able to bite through small rocks & thin metal, such as wire metal fences, with no issue. If you attempt to bite or chew something larger or tougher your referee may ask you to roll a number of D6s equal to the amount of teeth you may lose. Each 1 or 2 rolled is a tooth that falls out. If you currently don’t have enough teeth you cannot make the attempt. At the end of a mission you regrow 1D6 missing teeth.\n\nA full set of 36 of your fallen out teeth\n+1 FORCEFUL\n\nPERCUSSIVE MAINTENANCE: You are an easily frustrated fixer. You can attempt to fix, unlock, hack etc., any mechanical or electronic device that is the size of a personal computer or smaller with percussive maintenance. If so, roll a TACTICAL roll and a FORCEFUL roll. Resolve the higher of the 2 rolls. If the EYES is higher and successful you carry out the task based on the intention and the roll’s outcome. If the percussive maintenance roll (FORCEFUL) is higher you smash the device into pieces, a failed roll results in 1D6 DAMAGE to you.\n\nLarge wrench (1D6 DAMAGE)\n+1 FORCEFUL\n\nPINBALL-WIZARD:\nYou have complete control of up to 13 pinball sized metal ball bearings. You can make them fly or roll at high speeds.\n\nBag of pinballs\n+2 CREATIVE\n\nSTURDY: You can take more damage than the normal human. Your baseline HP is 8. If you have chosen HP upgrades in the past, reroll them using a D8 rather than the usual D6. Use D8 for all future HP gains.\n\nHeavy riot shield (2 ARMOR, equip as weapon)\n-1 CREATIVE\n\nVAMPIRE:"
+  },
+  {
+    "objectID": "Catalog/traits.html#tartarus_traits",
+    "href": "Catalog/traits.html#tartarus_traits",
+    "title": "Traits",
+    "section": "Tartarus",
+    "text": "Tartarus\nGRAVITY LIFT: You can create 1 gravity lift per mission. These cylinders of reverse gravity can be up to the diameter of a normal bicycle wheel. The cylinder extends straight up from the centre of the celestial body you are on. The reverse gravity has the same force as the normal gravity from the celestial body. The gravity lift lasts till you dismiss it or till the end of the mission.\n\nStabilise and thrust boots (1 use, prevents fall damage)\n+1 TACTICAL\n\nKAIJU: Once per mission, you can transform into a kaiju no larger than a cargo container. When you choose this trait, also choose the form of your kaiju. You get the following when in your kaiju form:\n\nYour total FORCEFUL score is +4 and your total REFLEXIVE score is -1. Your TACTICAL and CREATIVE are unchanged\nYou have a total HP of 20 and natural armor of 3\nYour natural melee weapons deal 2D6 DAMAGE\n\nAll your gear is absorbed into your kaiju form so it cannot be used. When you return to normal you are wearing and wielding your gear normally. Your form lasts till you release it, you fail a skill check, your kaiju form reaches 0HP, or till the end of the mission. Any excess damage you take is suffered by your normal form.\nWhen you return to normal, reduce your FORCEFUL score by 1. You regain the 1 FORCEFUL at the end of a mission.\nInstead of another level up reward you can choose one of the following kaiju upgrades. Each can only be chosen once.\n\nGain a ranged attack that deals 1D6+3 DAMAGE\nYour natural melee weapons deal 4D6 DAMAGE\nYour kaiju form size increases to that of a 3 bedroom house and you gain +10 HP\n\n\nLife preserving airbag suit (accessory)\n-2 TACTICAL\n\nMETAL EATER: You have extremely strong teeth and jaws. You are able to bite through small rocks & thin metal, such as wire metal fences, with no issue. If you attempt to bite or chew something larger or tougher your referee may ask you to roll a number of D6s equal to the amount of teeth you may lose. Each 1 or 2 rolled is a tooth that falls out. If you currently don’t have enough teeth you cannot make the attempt. At the end of a mission you regrow 1D6 missing teeth.\n\nA full set of 36 of your fallen out teeth\n+1 FORCEFUL\n\nPERCUSSIVE MAINTENANCE: You are an easily frustrated fixer. You can attempt to fix, unlock, hack etc., any mechanical or electronic device that is the size of a personal computer or smaller with percussive maintenance. If so, roll a TACTICAL roll and a FORCEFUL roll. Resolve the higher of the 2 rolls. If the EYES is higher and successful you carry out the task based on the intention and the roll’s outcome. If the percussive maintenance roll (FORCEFUL) is higher you smash the device into pieces, a failed roll results in 1D6 DAMAGE to you.\n\nLarge wrench (1D6 DAMAGE)\n+1 FORCEFUL\n\nPINBALL-WIZARD:\nYou have complete control of up to 13 pinball sized metal ball bearings. You can make them fly or roll at high speeds.\n\nBag of pinballs\n+2 CREATIVE\n\nSTURDY: You can take more damage than the normal human. Your baseline HP is 8. If you have chosen HP upgrades in the past, reroll them using a D8 rather than the usual D6. Use D8 for all future HP gains.\n\nHeavy riot shield (2 ARMOR, equip as weapon)\n-1 CREATIVE\n\nVAMPIRE:"
   }
 ]
