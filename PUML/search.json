@@ -11,7 +11,7 @@
     "href": "BELIEFS/APATHEIST.html#tenets",
     "title": "APATHEIST",
     "section": "TENETS",
-    "text": "TENETS\n\nStrive for unification\nObserve and sow intrigue\nUnleash your power!\nFlow like water to adapt"
+    "text": "TENETS\n\nYou have one life and body, cherish it\nOnly take from others what they can afford to lose or take for granted\nLove your friends, hate your enemies\nHedonism is encouraged"
   },
   {
     "objectID": "BELIEFS/AQUEOUS_ELIXIRS.html",
@@ -53,7 +53,7 @@
     "href": "BELIEFS/BELIEFS.html",
     "title": "BELIEFS",
     "section": "",
-    "text": "Beliefs are akin to classes in other TTRPGs. Six are included in these materials:\n\nSUN OF NYXMERA: Observation, duality, & manipulation.\nDOTTER OF TARTARUS: Power, destruction, and liberation.\nPROTEAN: Flow, flexibility, and perseverance.\nGAIAN: Unify, lead, and emotive."
+    "text": "Beliefs are akin to classes in other TTRPGs. Six are included in these materials:\n\nSUN OF NYXMERA: Observation, duality, & manipulation.\nDOTTER OF TARTARUS: Power, destruction, and liberation.\nPROTEAN: Flow, flexibility, and perseverance.\nGAIAN: Unify, lead, and emotive.\nPOLYTHEIST: Follower and chosen by the four Primeval deities.\nAPATHEIST: Find meaning in youreslf."
   },
   {
     "objectID": "BELIEFS/CELESTIAL_PRIVILEGES.html",
@@ -620,7 +620,7 @@
     "href": "CHARACTER/CREATION.html#belief",
     "title": "CREATION",
     "section": "BELIEF",
-    "text": "BELIEF\nChoose a BELIEF.\n\nSUN OF NYXMERA\nDOTTER OF TARTARUS"
+    "text": "BELIEF\nChoose a BELIEF.\nBelow are the beliefs available in these materials:\n\nSUN OF NYXMERA\nDOTTER OF TARTARUS\nPROTEAN\nGAIAN\nPOLYTHEIST\nAPATHEIST"
   },
   {
     "objectID": "CHARACTER/CREATION.html#day-job",
@@ -704,7 +704,7 @@
     "href": "index.html",
     "title": "INTRO",
     "section": "",
-    "text": "PUML is a homebrewed variant of the FIST RPG. Whereas FIST is a high lethality system, PUML attempts to be less lethal allowing characters to more easily survive through a campaign.\nThis website mainly contains the mechanics for play and how to create characters. There is little about the theory of play or best practices. I recommend reading FIST ULTRA EDITION for more theory.\nThis rule set is built with my setting in mind. This is an alternative 1980s Earth where the Primeval deities influence its inhabitants. Most worship these deities and the world is divided into 6 superpowers and the Moon. The setting can be found at my Primeval Deities itch.io or website.\nUltimately how you use this RPG is up to you. You can use it along with its setting. You can take rules and traits from it for your FIST game. You can make your own homebrew and/or setting with the PUML rules.\nI hope you enjoy it!"
+    "text": "PUML is a homebrewed variant of the FIST RPG. Whereas FIST is a high lethality system, PUML attempts to be less lethal allowing characters to more easily survive through a campaign.\nThis website mainly contains the mechanics for play and how to create characters. There is little about the theory of play or best practices. I recommend reading FIST ULTRA EDITION for more theory.\nThis rule set is built with my setting in mind. This is an alternative 1980s Earth where the Primeval deities influence its inhabitants. Most worship these deities and the world is divided into 6 superpowers and the Moon. The setting can be found at my Primeval Deities itch.io or website. It contains:\nUltimately how you use this RPG is up to you. You can use it along with its setting. You can take rules and traits from it for your FIST game. You can make your own homebrew and/or setting with the PUML rules.\nI hope you enjoy it!"
   },
   {
     "objectID": "index.html#contact",
@@ -816,7 +816,14 @@
     "href": "REFEREE/CHARACTER_STAT_BLOCKS.html",
     "title": "CHARACTER STAT BLOCKS",
     "section": "",
-    "text": "You can use the Enemy attributes table to help create your own stat blocks. There is a lot of guidance on creating stat blocks in the intelligence matrix of FIST Ultra edition.\n\n\n\n\n\n\n\n\n\n\n\n\nRepresentative being\nEYES\nJAWS\nLIMBS\nNERVES\n\n\n-3\nIncompetent human\nIntoxicated person\nHunger striker\nStickler\nHermit\n\n\n-2\nUnskilled human\nDay dreamer\nCouch potato\nButterfingers\nHomebody\n\n\n-1\nNormal human\nOffice worker\nFactory worker\nFreelancer\nEvent coordinator\n\n\n0\nParanormal mercenary\nRifleman\nAthlete\nGymnast\nActor\n\n\n1\nSpecialised human\nSniper\nStrongman\nContortionist\nDoctor\n\n\n2\nS tier animal\nEagle\nElephant\nOctopus\nAnt/Bee queen\n\n\n3\nForce of nature\nInternet wide Artificial Super Intelligence\nSkyscraper sized Mecha or Kaiju\nShapeshifter\nHive mind\n\n\n4\nDeity\nNyxmera\nTartarus\nProteus\nGaia"
+    "text": "You can use the Enemy attributes table to help create your own stat blocks. There is a lot of guidance on creating stat blocks in the intelligence matrix of FIST Ultra edition.\nThere are many examples of stat blocks on the PRIMEVAL DEITIES website\n\n\n\n\n\n\n\n\n\n\n\n\nRepresentative being\nEYES\nJAWS\nLIMBS\nNERVES\n\n\n-3\nIncompetent human\nIntoxicated person\nHunger striker\nStickler\nHermit\n\n\n-2\nUnskilled human\nDay dreamer\nCouch potato\nButterfingers\nHomebody\n\n\n-1\nNormal human\nOffice worker\nFactory worker\nFreelancer\nEvent coordinator\n\n\n0\nParanormal mercenary\nRifleman\nAthlete\nGymnast\nActor\n\n\n1\nSpecialised human\nSniper\nStrongman\nContortionist\nDoctor\n\n\n2\nS tier animal\nEagle\nElephant\nOctopus\nAnt/Bee queen\n\n\n3\nForce of nature\nInternet wide Artificial Super Intelligence\nSkyscraper sized Mecha or Kaiju\nShapeshifter\nHive mind\n\n\n4\nDeity\nNyxmera\nTartarus\nProteus\nGaia"
+  },
+  {
+    "objectID": "REFEREE/PANIC.html",
+    "href": "REFEREE/PANIC.html",
+    "title": "PANIC",
+    "section": "",
+    "text": "Some NPCs have a PANIC score. An NPC may PANIC when in a stressful situation.\nIf appropriately stressed roll a D6 for an NPC. If the roll is equal to or higher than their PANIC score they will PANIC. The NPC then carries out the PANIC text.\nPANIC scores range from 1 to 6. A PANIC score of 1 means they will always PANIC when they make a PANIC roll. A PANIC score of 6 means they have a 1 in 6 chance of panicking.\nNOTE: The PANIC score is a renamed version of the CHOKE score from the FIST RPG."
   },
   {
     "objectID": "REFEREE/REFEREE.html",
@@ -838,6 +845,13 @@
     "title": "RESOURCES",
     "section": "",
     "text": "CHARACTER SHEET\nCOMBAT TRACKER"
+  },
+  {
+    "objectID": "RESOURCES/RESOURCES.html#websites",
+    "href": "RESOURCES/RESOURCES.html#websites",
+    "title": "RESOURCES",
+    "section": "WEBSITES",
+    "text": "WEBSITES\n\nPRIMEVAL DEITIES: Faction information of the Primeval deities for the PUML RPG."
   },
   {
     "objectID": "RULES/ATTRIBUTES.html",
