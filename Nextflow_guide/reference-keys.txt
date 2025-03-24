@@ -23,7 +23,7 @@ script
 workflow-1
 channels-tuples-lists
 channels-1
-creating-channels
+creating_channels
 text
 data-file
 csv-of-files
@@ -49,3 +49,8 @@ other-languages
 modules
 workflow-2
 params-and-config
+params-1
+params-to-channel
+section
+config
+params-in-config
