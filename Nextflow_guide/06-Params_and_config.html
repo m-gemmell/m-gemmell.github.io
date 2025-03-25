@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2025-03-24" />
+<meta name="date" content="2025-03-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -191,7 +191,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="04-Processes.html"><a href="04-Processes.html"><i class="fa fa-check"></i><b>5</b> Processes</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="04-Processes.html"><a href="04-Processes.html#directives"><i class="fa fa-check"></i><b>5.1</b> Directives</a>
+<li class="chapter" data-level="5.1" data-path="04-Processes.html"><a href="04-Processes.html#process_directives"><i class="fa fa-check"></i><b>5.1</b> Directives</a>
 <ul>
 <li class="chapter" data-level="5.1.1" data-path="04-Processes.html"><a href="04-Processes.html#cpus"><i class="fa fa-check"></i><b>5.1.1</b> cpus</a></li>
 <li class="chapter" data-level="5.1.2" data-path="04-Processes.html"><a href="04-Processes.html#publishdir"><i class="fa fa-check"></i><b>5.1.2</b> publishDir</a></li>
@@ -210,11 +210,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#params-1"><i class="fa fa-check"></i><b>7.1</b> Params</a>
 <ul>
 <li class="chapter" data-level="7.1.1" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#params-to-channel"><i class="fa fa-check"></i><b>7.1.1</b> Params to channel</a></li>
-<li class="chapter" data-level="7.1.2" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#section"><i class="fa fa-check"></i><b>7.1.2</b> </a></li>
 </ul></li>
 <li class="chapter" data-level="7.2" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#config"><i class="fa fa-check"></i><b>7.2</b> Config</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#params-in-config"><i class="fa fa-check"></i><b>7.2.1</b> Params in config</a></li>
+<li class="chapter" data-level="7.2.1" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#process-directives"><i class="fa fa-check"></i><b>7.2.1</b> Process directives</a></li>
+<li class="chapter" data-level="7.2.2" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#params-in-config"><i class="fa fa-check"></i><b>7.2.2</b> Params in config</a></li>
+<li class="chapter" data-level="7.2.3" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#conda-1"><i class="fa fa-check"></i><b>7.2.3</b> Conda</a></li>
+<li class="chapter" data-level="7.2.4" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#container-program"><i class="fa fa-check"></i><b>7.2.4</b> Container program</a></li>
+<li class="chapter" data-level="7.2.5" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#config-profiles"><i class="fa fa-check"></i><b>7.2.5</b> Config profiles</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -244,26 +247,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="params-1" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> Params<a href="06-Params_and_config.html#params-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Workflow parameters can be set at the top of the primary <code>main.nf</code> file.</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb29-1"><a href="06-Params_and_config.html#cb29-1" tabindex="-1"></a><span class="ex">/*</span></span>
-<span id="cb29-2"><a href="06-Params_and_config.html#cb29-2" tabindex="-1"></a> <span class="ex">*</span> Params</span>
-<span id="cb29-3"><a href="06-Params_and_config.html#cb29-3" tabindex="-1"></a><span class="ex">*/</span></span>
-<span id="cb29-4"><a href="06-Params_and_config.html#cb29-4" tabindex="-1"></a><span class="ex">params.dir</span> = <span class="st">&quot;.&quot;</span></span>
-<span id="cb29-5"><a href="06-Params_and_config.html#cb29-5" tabindex="-1"></a><span class="ex">params.outdir</span> = <span class="st">&quot;./results&quot;</span></span>
-<span id="cb29-6"><a href="06-Params_and_config.html#cb29-6" tabindex="-1"></a><span class="ex">params.sample_name</span> = <span class="st">&quot;Sample_1&quot;</span></span>
-<span id="cb29-7"><a href="06-Params_and_config.html#cb29-7" tabindex="-1"></a><span class="ex">params.fastqs</span> = <span class="st">&quot;/home/data/project123/raw_fastqs&quot;</span></span>
-<span id="cb29-8"><a href="06-Params_and_config.html#cb29-8" tabindex="-1"></a><span class="ex">params.database</span> = <span class="st">&quot;/home/dbs/db123/db123.fastq&quot;</span></span>
-<span id="cb29-9"><a href="06-Params_and_config.html#cb29-9" tabindex="-1"></a><span class="ex">params.conda_env</span> = <span class="st">&quot;/home/conda/envs/example_env&quot;</span></span>
-<span id="cb29-10"><a href="06-Params_and_config.html#cb29-10" tabindex="-1"></a><span class="ex">params.rscript</span> = <span class="st">&quot;./rscripts/summary.rscript&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb31-1"><a href="06-Params_and_config.html#cb31-1" tabindex="-1"></a><span class="ex">/*</span></span>
+<span id="cb31-2"><a href="06-Params_and_config.html#cb31-2" tabindex="-1"></a> <span class="ex">*</span> Params</span>
+<span id="cb31-3"><a href="06-Params_and_config.html#cb31-3" tabindex="-1"></a><span class="ex">*/</span></span>
+<span id="cb31-4"><a href="06-Params_and_config.html#cb31-4" tabindex="-1"></a><span class="ex">params.dir</span> = <span class="st">&quot;.&quot;</span></span>
+<span id="cb31-5"><a href="06-Params_and_config.html#cb31-5" tabindex="-1"></a><span class="ex">params.outdir</span> = <span class="st">&quot;./results&quot;</span></span>
+<span id="cb31-6"><a href="06-Params_and_config.html#cb31-6" tabindex="-1"></a><span class="ex">params.sample_name</span> = <span class="st">&quot;Sample_1&quot;</span></span>
+<span id="cb31-7"><a href="06-Params_and_config.html#cb31-7" tabindex="-1"></a><span class="ex">params.fastqs</span> = <span class="st">&quot;/home/data/project123/raw_fastqs&quot;</span></span>
+<span id="cb31-8"><a href="06-Params_and_config.html#cb31-8" tabindex="-1"></a><span class="ex">params.database</span> = <span class="st">&quot;/home/dbs/db123/db123.fastq&quot;</span></span>
+<span id="cb31-9"><a href="06-Params_and_config.html#cb31-9" tabindex="-1"></a><span class="ex">params.conda_env</span> = <span class="st">&quot;/home/conda/envs/example_env&quot;</span></span>
+<span id="cb31-10"><a href="06-Params_and_config.html#cb31-10" tabindex="-1"></a><span class="ex">params.rscript</span> = <span class="st">&quot;./rscripts/summary.rscript&quot;</span></span></code></pre></div>
 <div id="params-to-channel" class="section level3 hasAnchor" number="7.1.1">
 <h3><span class="header-section-number">7.1.1</span> Params to channel<a href="06-Params_and_config.html#params-to-channel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When using params containing a file in the workflow it is common practice to convert them to a channel.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb30-1"><a href="06-Params_and_config.html#cb30-1" tabindex="-1"></a><span class="ex">workflow</span> {</span>
-<span id="cb30-2"><a href="06-Params_and_config.html#cb30-2" tabindex="-1"></a>  <span class="ex">database_ch</span> = file<span class="er">(</span><span class="ex">params.database</span><span class="kw">)</span></span>
-<span id="cb30-3"><a href="06-Params_and_config.html#cb30-3" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
-<p>More info/examples in <span id="creating_channels">Creating channels</span></p>
-</div>
-<div id="section" class="section level3" number="7.1.2">
-<h3><span class="header-section-number">7.1.2</span> </h3>
+<div class="sourceCode" id="cb32"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb32-1"><a href="06-Params_and_config.html#cb32-1" tabindex="-1"></a><span class="ex">workflow</span> {</span>
+<span id="cb32-2"><a href="06-Params_and_config.html#cb32-2" tabindex="-1"></a>  <span class="ex">database_ch</span> = file<span class="er">(</span><span class="ex">params.database</span><span class="kw">)</span></span>
+<span id="cb32-3"><a href="06-Params_and_config.html#cb32-3" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<p>More info/examples in <a href="03-Channels_tuples_lists.html#creating_channels">Creating channels</a></p>
 </div>
 </div>
 <div id="config" class="section level2 hasAnchor" number="7.2">
@@ -271,19 +271,69 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>You can contain a lot of info in a config file.</p>
 <p>Your primary config file should be in the same directory as your primary <code>main.nf</code> file and should be named <code>nextflow.config</code>.
 This will cause it to be used when you <code>nextflow run main.nf -resume</code>.</p>
-<div id="params-in-config" class="section level3 hasAnchor" number="7.2.1">
-<h3><span class="header-section-number">7.2.1</span> Params in config<a href="06-Params_and_config.html#params-in-config" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><a href="https://www.nextflow.io/docs/latest/config.html">Link to nextflow configuration doc</a></p>
+<div id="process-directives" class="section level3 hasAnchor" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Process directives<a href="06-Params_and_config.html#process-directives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For <a href="04-Processes.html#process_directives">Process directives</a> you want to be the default of all processes in your workflow you can include them in your <code>nextflow.config</code>.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb33-1"><a href="06-Params_and_config.html#cb33-1" tabindex="-1"></a><span class="ex">process</span> {</span>
+<span id="cb33-2"><a href="06-Params_and_config.html#cb33-2" tabindex="-1"></a>  <span class="ex">memory</span> = 100.00GB</span>
+<span id="cb33-3"><a href="06-Params_and_config.html#cb33-3" tabindex="-1"></a>  <span class="ex">cups</span> = 8</span>
+<span id="cb33-4"><a href="06-Params_and_config.html#cb33-4" tabindex="-1"></a>  <span class="bu">time</span> = 30.d</span>
+<span id="cb33-5"><a href="06-Params_and_config.html#cb33-5" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+</div>
+<div id="params-in-config" class="section level3 hasAnchor" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> Params in config<a href="06-Params_and_config.html#params-in-config" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You can include your <code>params</code> in your config file.</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb31-1"><a href="06-Params_and_config.html#cb31-1" tabindex="-1"></a><span class="ex">params</span> {</span>
-<span id="cb31-2"><a href="06-Params_and_config.html#cb31-2" tabindex="-1"></a>  <span class="fu">dir</span> = <span class="st">&quot;.&quot;</span></span>
-<span id="cb31-3"><a href="06-Params_and_config.html#cb31-3" tabindex="-1"></a>  <span class="ex">outdir</span> = <span class="st">&quot;./results&quot;</span></span>
-<span id="cb31-4"><a href="06-Params_and_config.html#cb31-4" tabindex="-1"></a>  <span class="ex">sample_name</span> = <span class="st">&quot;Sample_1&quot;</span></span>
-<span id="cb31-5"><a href="06-Params_and_config.html#cb31-5" tabindex="-1"></a>  <span class="ex">fastqs</span> = <span class="st">&quot;/home/data/project123/raw_fastqs&quot;</span></span>
-<span id="cb31-6"><a href="06-Params_and_config.html#cb31-6" tabindex="-1"></a>  <span class="ex">database</span> = <span class="st">&quot;/home/dbs/db123/db123.fastq&quot;</span></span>
-<span id="cb31-7"><a href="06-Params_and_config.html#cb31-7" tabindex="-1"></a>  <span class="ex">conda_env</span> = <span class="st">&quot;/home/conda/envs/example_env&quot;</span></span>
-<span id="cb31-8"><a href="06-Params_and_config.html#cb31-8" tabindex="-1"></a>  <span class="ex">rscript</span> = <span class="st">&quot;./rscripts/summary.rscript&quot;</span></span>
-<span id="cb31-9"><a href="06-Params_and_config.html#cb31-9" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
-<p>Ensure you still use <code>params.</code> as a prefux in the various <code>.nf</code> files.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb34-1"><a href="06-Params_and_config.html#cb34-1" tabindex="-1"></a><span class="ex">params</span> {</span>
+<span id="cb34-2"><a href="06-Params_and_config.html#cb34-2" tabindex="-1"></a>  <span class="fu">dir</span> = <span class="st">&quot;.&quot;</span></span>
+<span id="cb34-3"><a href="06-Params_and_config.html#cb34-3" tabindex="-1"></a>  <span class="ex">outdir</span> = <span class="st">&quot;./results&quot;</span></span>
+<span id="cb34-4"><a href="06-Params_and_config.html#cb34-4" tabindex="-1"></a>  <span class="ex">sample_name</span> = <span class="st">&quot;Sample_1&quot;</span></span>
+<span id="cb34-5"><a href="06-Params_and_config.html#cb34-5" tabindex="-1"></a>  <span class="ex">fastqs</span> = <span class="st">&quot;/home/data/project123/raw_fastqs&quot;</span></span>
+<span id="cb34-6"><a href="06-Params_and_config.html#cb34-6" tabindex="-1"></a>  <span class="ex">database</span> = <span class="st">&quot;/home/dbs/db123/db123.fastq&quot;</span></span>
+<span id="cb34-7"><a href="06-Params_and_config.html#cb34-7" tabindex="-1"></a>  <span class="ex">conda_env</span> = <span class="st">&quot;/home/conda/envs/example_env&quot;</span></span>
+<span id="cb34-8"><a href="06-Params_and_config.html#cb34-8" tabindex="-1"></a>  <span class="ex">rscript</span> = <span class="st">&quot;./rscripts/summary.rscript&quot;</span></span>
+<span id="cb34-9"><a href="06-Params_and_config.html#cb34-9" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<p>Ensure you still use <code>params.</code> as a prefix in the various <code>.nf</code> files.</p>
+</div>
+<div id="conda-1" class="section level3 hasAnchor" number="7.2.3">
+<h3><span class="header-section-number">7.2.3</span> Conda<a href="06-Params_and_config.html#conda-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Rather than needing to include <code>-use-conda</code> in your command line you can add the below to your <code>nextflow.config</code> to make your workflow use conda.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb35-1"><a href="06-Params_and_config.html#cb35-1" tabindex="-1"></a><span class="ex">conda.enabled</span> = true</span></code></pre></div>
+</div>
+<div id="container-program" class="section level3 hasAnchor" number="7.2.4">
+<h3><span class="header-section-number">7.2.4</span> Container program<a href="06-Params_and_config.html#container-program" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There are many different container programs. Below are what you can add to the <code>nextflow.config</code> to get the different ones to work.</p>
+<p>This includes setting the path to the image (if using one) and enabling the specific container program.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb36-1"><a href="06-Params_and_config.html#cb36-1" tabindex="-1"></a><span class="ex">///</span> Docker</span>
+<span id="cb36-2"><a href="06-Params_and_config.html#cb36-2" tabindex="-1"></a><span class="ex">process.container</span> = <span class="st">&#39;nextflow/examples:latest&#39;</span></span>
+<span id="cb36-3"><a href="06-Params_and_config.html#cb36-3" tabindex="-1"></a><span class="ex">docker.enabled</span> = true</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb37-1"><a href="06-Params_and_config.html#cb37-1" tabindex="-1"></a><span class="ex">///</span> Singularity</span>
+<span id="cb37-2"><a href="06-Params_and_config.html#cb37-2" tabindex="-1"></a><span class="ex">process.container</span> = <span class="st">&#39;/path/to/singularity.img&#39;</span></span>
+<span id="cb37-3"><a href="06-Params_and_config.html#cb37-3" tabindex="-1"></a><span class="ex">singularity.enabled</span> = true</span></code></pre></div>
+<p>If using one of them ensure you specify the containers in the variosu processes.</p>
+<p><a href="https://www.nextflow.io/docs/latest/container.html">Link to container nextflow docs</a></p>
+</div>
+<div id="config-profiles" class="section level3 hasAnchor" number="7.2.5">
+<h3><span class="header-section-number">7.2.5</span> Config profiles<a href="06-Params_and_config.html#config-profiles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can have multiple profiles in a <code>nextflow.config</code> file.</p>
+<p>To use a profile you would run:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb38-1"><a href="06-Params_and_config.html#cb38-1" tabindex="-1"></a><span class="ex">nextflow</span> run main.nf <span class="at">-profile</span> laptop</span></code></pre></div>
+<p>To make different profiles you could include the below in your <code>nextflow.config</code>.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb39-1"><a href="06-Params_and_config.html#cb39-1" tabindex="-1"></a><span class="ex">profiles</span> {</span>
+<span id="cb39-2"><a href="06-Params_and_config.html#cb39-2" tabindex="-1"></a>    <span class="ex">laptop</span> {</span>
+<span id="cb39-3"><a href="06-Params_and_config.html#cb39-3" tabindex="-1"></a>        <span class="ex">process.executor</span> = <span class="st">&#39;local&#39;</span></span>
+<span id="cb39-4"><a href="06-Params_and_config.html#cb39-4" tabindex="-1"></a>        <span class="ex">docker.enabled</span> = true</span>
+<span id="cb39-5"><a href="06-Params_and_config.html#cb39-5" tabindex="-1"></a>    <span class="er">}</span></span>
+<span id="cb39-6"><a href="06-Params_and_config.html#cb39-6" tabindex="-1"></a>    <span class="ex">hpc</span> {</span>
+<span id="cb39-7"><a href="06-Params_and_config.html#cb39-7" tabindex="-1"></a>        <span class="ex">process.executor</span> = <span class="st">&#39;slurm&#39;</span></span>
+<span id="cb39-8"><a href="06-Params_and_config.html#cb39-8" tabindex="-1"></a>        <span class="ex">conda.enabled</span> = true</span>
+<span id="cb39-9"><a href="06-Params_and_config.html#cb39-9" tabindex="-1"></a>        <span class="ex">process.resourceLimits</span> = [</span>
+<span id="cb39-10"><a href="06-Params_and_config.html#cb39-10" tabindex="-1"></a>            <span class="ex">memory:</span> 750.GB,</span>
+<span id="cb39-11"><a href="06-Params_and_config.html#cb39-11" tabindex="-1"></a>            <span class="ex">cpus:</span> 200,</span>
+<span id="cb39-12"><a href="06-Params_and_config.html#cb39-12" tabindex="-1"></a>            <span class="ex">time:</span> 30.d</span>
+<span id="cb39-13"><a href="06-Params_and_config.html#cb39-13" tabindex="-1"></a>        <span class="ex">]</span></span>
+<span id="cb39-14"><a href="06-Params_and_config.html#cb39-14" tabindex="-1"></a>    <span class="er">}</span></span>
+<span id="cb39-15"><a href="06-Params_and_config.html#cb39-15" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
 
 </div>
 </div>

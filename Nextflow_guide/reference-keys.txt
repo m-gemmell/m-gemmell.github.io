@@ -28,6 +28,7 @@ text
 data-file
 csv-of-files
 fofn
+paired-files
 extracting-channels-from-process
 tuples-1
 input-output-tuples
@@ -36,7 +37,7 @@ list
 channel-values-to-one-list
 parameter-in-front-of-each-list-value
 processes-1
-directives
+process_directives
 cpus
 publishdir
 conda
@@ -51,6 +52,9 @@ workflow-2
 params-and-config
 params-1
 params-to-channel
-section
 config
+process-directives
 params-in-config
+conda-1
+container-program
+config-profiles
