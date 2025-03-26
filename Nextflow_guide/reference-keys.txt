@@ -30,6 +30,7 @@ csv-of-files
 fofn
 paired-files
 extracting-channels-from-process
+view
 tuples-1
 input-output-tuples
 transpose
@@ -58,3 +59,12 @@ params-in-config
 conda-1
 container-program
 config-profiles
+illumina-qc-example
+main.nf-1
+nextflow.config
+modules-1
+fastqc_raw
+multiqc_raw
+trimmomatic
+fastqc_trim
+multiqc_trim

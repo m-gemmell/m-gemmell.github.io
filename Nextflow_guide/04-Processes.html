@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2025-03-25" />
+<meta name="date" content="2025-03-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -157,6 +157,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.2" data-path="01-Concepts.html"><a href="01-Concepts.html#tuples-lists"><i class="fa fa-check"></i><b>2.3.2</b> Tuples &amp; Lists</a></li>
 </ul></li>
 </ul></li>
+<li class="part"><span><b>Components</b></span></li>
 <li class="chapter" data-level="3" data-path="02-Basic_layout.html"><a href="02-Basic_layout.html"><i class="fa fa-check"></i><b>3</b> Basic layout</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="02-Basic_layout.html"><a href="02-Basic_layout.html#main.nf"><i class="fa fa-check"></i><b>3.1</b> <code>main.nf</code></a></li>
@@ -177,6 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="4.1.1" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html#creating_channels"><i class="fa fa-check"></i><b>4.1.1</b> Creating channels</a></li>
 <li class="chapter" data-level="4.1.2" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html#extracting-channels-from-process"><i class="fa fa-check"></i><b>4.1.2</b> Extracting channels from process</a></li>
+<li class="chapter" data-level="4.1.3" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html#view"><i class="fa fa-check"></i><b>4.1.3</b> View</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html#tuples-1"><i class="fa fa-check"></i><b>4.2</b> Tuples</a>
 <ul>
@@ -220,6 +222,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.2.5" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#config-profiles"><i class="fa fa-check"></i><b>7.2.5</b> Config profiles</a></li>
 </ul></li>
 </ul></li>
+<li class="part"><span><b>Example workflows</b></span></li>
+<li class="chapter" data-level="8" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html"><i class="fa fa-check"></i><b>8</b> Illumina QC example</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#main.nf-1"><i class="fa fa-check"></i><b>8.1</b> main.nf</a></li>
+<li class="chapter" data-level="8.2" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#nextflow.config"><i class="fa fa-check"></i><b>8.2</b> nextflow.config</a></li>
+<li class="chapter" data-level="8.3" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#modules-1"><i class="fa fa-check"></i><b>8.3</b> Modules</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#fastqc_raw"><i class="fa fa-check"></i><b>8.3.1</b> FASTQC_RAW</a></li>
+<li class="chapter" data-level="8.3.2" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#multiqc_raw"><i class="fa fa-check"></i><b>8.3.2</b> MULTIQC_RAW</a></li>
+<li class="chapter" data-level="8.3.3" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#trimmomatic"><i class="fa fa-check"></i><b>8.3.3</b> TRIMMOMATIC</a></li>
+<li class="chapter" data-level="8.3.4" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#fastqc_trim"><i class="fa fa-check"></i><b>8.3.4</b> FASTQC_TRIM</a></li>
+<li class="chapter" data-level="8.3.5" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#multiqc_trim"><i class="fa fa-check"></i><b>8.3.5</b> MULTIQC_TRIM</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -251,36 +267,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="cpus" class="section level3 hasAnchor" number="5.1.1">
 <h3><span class="header-section-number">5.1.1</span> cpus<a href="04-Processes.html#cpus" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>One example is that you can use <code>cpus</code> to specify the number of cpus to be used by a process.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb20-1"><a href="04-Processes.html#cb20-1" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
-<span id="cb20-2"><a href="04-Processes.html#cb20-2" tabindex="-1"></a>  <span class="ex">cpus</span> 2</span>
-<span id="cb20-3"><a href="04-Processes.html#cb20-3" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb21-1"><a href="04-Processes.html#cb21-1" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
+<span id="cb21-2"><a href="04-Processes.html#cb21-2" tabindex="-1"></a>  <span class="ex">cpus</span> 2</span>
+<span id="cb21-3"><a href="04-Processes.html#cb21-3" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
 </div>
 <div id="publishdir" class="section level3 hasAnchor" number="5.1.2">
 <h3><span class="header-section-number">5.1.2</span> publishDir<a href="04-Processes.html#publishdir" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The basics of <a href="02-Basic_layout.html#basic_publishdir">pblishDir</a></p>
 <p>My preferred method is to assign an overall output/results directory as a params.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb21-1"><a href="04-Processes.html#cb21-1" tabindex="-1"></a><span class="ex">params.outdir=</span><span class="st">&quot;./results&quot;</span></span>
-<span id="cb21-2"><a href="04-Processes.html#cb21-2" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="04-Processes.html#cb21-3" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
-<span id="cb21-4"><a href="04-Processes.html#cb21-4" tabindex="-1"></a>  <span class="ex">publishDir</span> params.outdir, mode: <span class="st">&#39;copy&#39;</span></span>
-<span id="cb21-5"><a href="04-Processes.html#cb21-5" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
-<p>You can also set a subdiretcory of the output directory in the process.</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb22-1"><a href="04-Processes.html#cb22-1" tabindex="-1"></a><span class="ex">params.outdir=</span><span class="st">&quot;./results&quot;</span></span>
 <span id="cb22-2"><a href="04-Processes.html#cb22-2" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="04-Processes.html#cb22-3" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
-<span id="cb22-4"><a href="04-Processes.html#cb22-4" tabindex="-1"></a>  <span class="ex">publishDir</span> {</span>
-<span id="cb22-5"><a href="04-Processes.html#cb22-5" tabindex="-1"></a>    <span class="st">&quot;</span><span class="va">${params</span><span class="er">.outdir</span><span class="va">}</span><span class="st">/stage_1&quot;</span></span>
-<span id="cb22-6"><a href="04-Processes.html#cb22-6" tabindex="-1"></a>    <span class="er">}</span><span class="ex">,</span> mode: <span class="st">&#39;copy&#39;</span></span>
-<span id="cb22-7"><a href="04-Processes.html#cb22-7" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
-<p>You can even do this with input variables.</p>
+<span id="cb22-4"><a href="04-Processes.html#cb22-4" tabindex="-1"></a>  <span class="ex">publishDir</span> params.outdir, mode: <span class="st">&#39;copy&#39;</span></span>
+<span id="cb22-5"><a href="04-Processes.html#cb22-5" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<p>You can also set a subdiretcory of the output directory in the process.</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb23-1"><a href="04-Processes.html#cb23-1" tabindex="-1"></a><span class="ex">params.outdir=</span><span class="st">&quot;./results&quot;</span></span>
-<span id="cb23-2"><a href="04-Processes.html#cb23-2" tabindex="-1"></a><span class="ex">input:</span></span>
-<span id="cb23-3"><a href="04-Processes.html#cb23-3" tabindex="-1"></a>  <span class="ex">val</span> sample_id</span>
-<span id="cb23-4"><a href="04-Processes.html#cb23-4" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
-<span id="cb23-5"><a href="04-Processes.html#cb23-5" tabindex="-1"></a>  <span class="ex">publishDir</span> {</span>
-<span id="cb23-6"><a href="04-Processes.html#cb23-6" tabindex="-1"></a>    <span class="st">&quot;</span><span class="va">${params</span><span class="er">.outdir</span><span class="va">}</span><span class="st">/stage_1/</span><span class="va">${sample_id}</span><span class="st">&quot;</span></span>
-<span id="cb23-7"><a href="04-Processes.html#cb23-7" tabindex="-1"></a>    <span class="er">}</span><span class="ex">,</span> mode: <span class="st">&#39;copy&#39;</span></span>
-<span id="cb23-8"><a href="04-Processes.html#cb23-8" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<span id="cb23-2"><a href="04-Processes.html#cb23-2" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="04-Processes.html#cb23-3" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
+<span id="cb23-4"><a href="04-Processes.html#cb23-4" tabindex="-1"></a>  <span class="ex">publishDir</span> {</span>
+<span id="cb23-5"><a href="04-Processes.html#cb23-5" tabindex="-1"></a>    <span class="st">&quot;</span><span class="va">${params</span><span class="er">.outdir</span><span class="va">}</span><span class="st">/stage_1&quot;</span></span>
+<span id="cb23-6"><a href="04-Processes.html#cb23-6" tabindex="-1"></a>    <span class="er">}</span><span class="ex">,</span> mode: <span class="st">&#39;copy&#39;</span></span>
+<span id="cb23-7"><a href="04-Processes.html#cb23-7" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<p>You can even do this with input variables.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb24-1"><a href="04-Processes.html#cb24-1" tabindex="-1"></a><span class="ex">params.outdir=</span><span class="st">&quot;./results&quot;</span></span>
+<span id="cb24-2"><a href="04-Processes.html#cb24-2" tabindex="-1"></a><span class="ex">input:</span></span>
+<span id="cb24-3"><a href="04-Processes.html#cb24-3" tabindex="-1"></a>  <span class="ex">val</span> sample_id</span>
+<span id="cb24-4"><a href="04-Processes.html#cb24-4" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
+<span id="cb24-5"><a href="04-Processes.html#cb24-5" tabindex="-1"></a>  <span class="ex">publishDir</span> {</span>
+<span id="cb24-6"><a href="04-Processes.html#cb24-6" tabindex="-1"></a>    <span class="st">&quot;</span><span class="va">${params</span><span class="er">.outdir</span><span class="va">}</span><span class="st">/stage_1/</span><span class="va">${sample_id}</span><span class="st">&quot;</span></span>
+<span id="cb24-7"><a href="04-Processes.html#cb24-7" tabindex="-1"></a>    <span class="er">}</span><span class="ex">,</span> mode: <span class="st">&#39;copy&#39;</span></span>
+<span id="cb24-8"><a href="04-Processes.html#cb24-8" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
 </div>
 <div id="conda" class="section level3 hasAnchor" number="5.1.3">
 <h3><span class="header-section-number">5.1.3</span> conda<a href="04-Processes.html#conda" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -289,22 +305,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="local-environment" class="section level4 hasAnchor" number="5.1.3.1">
 <h4><span class="header-section-number">5.1.3.1</span> Local environment<a href="04-Processes.html#local-environment" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>You can specify a conda environment you have locally created.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb24-1"><a href="04-Processes.html#cb24-1" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
-<span id="cb24-2"><a href="04-Processes.html#cb24-2" tabindex="-1"></a>  <span class="ex">conda</span> <span class="st">&quot;/home/minforge3/envs/run_env&quot;</span></span>
-<span id="cb24-3"><a href="04-Processes.html#cb24-3" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
-<p>If using a locally installed env it is best to specify it as a params to make it quicker to add.edit for multiple processes.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb25-1"><a href="04-Processes.html#cb25-1" tabindex="-1"></a><span class="ex">params.conda_env=</span><span class="st">&quot;/home/minforge3/envs/run_env&quot;</span></span>
-<span id="cb25-2"><a href="04-Processes.html#cb25-2" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="04-Processes.html#cb25-3" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
-<span id="cb25-4"><a href="04-Processes.html#cb25-4" tabindex="-1"></a>  <span class="ex">conda</span> params.conda_env</span>
-<span id="cb25-5"><a href="04-Processes.html#cb25-5" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb25-1"><a href="04-Processes.html#cb25-1" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
+<span id="cb25-2"><a href="04-Processes.html#cb25-2" tabindex="-1"></a>  <span class="ex">conda</span> <span class="st">&quot;/home/minforge3/envs/run_env&quot;</span></span>
+<span id="cb25-3"><a href="04-Processes.html#cb25-3" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<p>If using a locally installed env it is best to specify it as a params to make it quicker to add/edit for multiple processes.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb26-1"><a href="04-Processes.html#cb26-1" tabindex="-1"></a><span class="ex">params.conda_env=</span><span class="st">&quot;/home/minforge3/envs/run_env&quot;</span></span>
+<span id="cb26-2"><a href="04-Processes.html#cb26-2" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="04-Processes.html#cb26-3" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
+<span id="cb26-4"><a href="04-Processes.html#cb26-4" tabindex="-1"></a>  <span class="ex">conda</span> params.conda_env</span>
+<span id="cb26-5"><a href="04-Processes.html#cb26-5" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
 </div>
 <div id="uri-based-environment" class="section level4 hasAnchor" number="5.1.3.2">
 <h4><span class="header-section-number">5.1.3.2</span> URI based environment<a href="04-Processes.html#uri-based-environment" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>You can have nextflow install a conda packages for specific process.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb26-1"><a href="04-Processes.html#cb26-1" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
-<span id="cb26-2"><a href="04-Processes.html#cb26-2" tabindex="-1"></a>  <span class="ex">conda</span> <span class="st">&quot;bioconda::samtools=1.20&quot;</span></span>
-<span id="cb26-3"><a href="04-Processes.html#cb26-3" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb27-1"><a href="04-Processes.html#cb27-1" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
+<span id="cb27-2"><a href="04-Processes.html#cb27-2" tabindex="-1"></a>  <span class="ex">conda</span> <span class="st">&quot;bioconda::samtools=1.20&quot;</span></span>
+<span id="cb27-3"><a href="04-Processes.html#cb27-3" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
 <p>You can find what packages can be downloaded this way through <a href="https://seqera.io/containers/">sequera containers</a>.</p>
 <p>For an easy example search for <code>bioconda::samtools</code> on the above link.</p>
 </div>
@@ -328,10 +344,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">5.2.2</span> Other languages<a href="04-Processes.html#other-languages" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Other languages can be used within the nextflow script section.</p>
 <p>For example python:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb27-1"><a href="04-Processes.html#cb27-1" tabindex="-1"></a><span class="ex">script</span></span>
-<span id="cb27-2"><a href="04-Processes.html#cb27-2" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb27-3"><a href="04-Processes.html#cb27-3" tabindex="-1"></a><span class="st">#!/usr/bin/env python</span></span>
-<span id="cb27-4"><a href="04-Processes.html#cb27-4" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb28-1"><a href="04-Processes.html#cb28-1" tabindex="-1"></a><span class="ex">script</span></span>
+<span id="cb28-2"><a href="04-Processes.html#cb28-2" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb28-3"><a href="04-Processes.html#cb28-3" tabindex="-1"></a><span class="st">#!/usr/bin/env python</span></span>
+<span id="cb28-4"><a href="04-Processes.html#cb28-4" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span></code></pre></div>
 </div>
 </div>
 <div id="modules" class="section level2 hasAnchor" number="5.3">
@@ -341,19 +357,19 @@ To counteract this each process can be stored in a separate <code>main.nf</code>
 <p>The recommendation is to store them in a directory called <code>modules/local</code> within the main workflow directory.
 Then each process would be within a <code>main.nf</code> file within various directories.</p>
 <p>A module <code>main.nf</code> would be as so:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb28-1"><a href="04-Processes.html#cb28-1" tabindex="-1"></a><span class="co">#!/usr/bin/env nextflow</span></span>
-<span id="cb28-2"><a href="04-Processes.html#cb28-2" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
-<span id="cb28-3"><a href="04-Processes.html#cb28-3" tabindex="-1"></a>  <span class="ex">/</span> proces contents</span>
-<span id="cb28-4"><a href="04-Processes.html#cb28-4" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb29-1"><a href="04-Processes.html#cb29-1" tabindex="-1"></a><span class="co">#!/usr/bin/env nextflow</span></span>
+<span id="cb29-2"><a href="04-Processes.html#cb29-2" tabindex="-1"></a><span class="ex">process</span> RUN {</span>
+<span id="cb29-3"><a href="04-Processes.html#cb29-3" tabindex="-1"></a>  <span class="ex">/</span> process contents</span>
+<span id="cb29-4"><a href="04-Processes.html#cb29-4" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
 <p>Modules are imported as a process as so:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb29-1"><a href="04-Processes.html#cb29-1" tabindex="-1"></a><span class="ex">/*</span></span>
-<span id="cb29-2"><a href="04-Processes.html#cb29-2" tabindex="-1"></a> <span class="ex">*</span> Processes</span>
-<span id="cb29-3"><a href="04-Processes.html#cb29-3" tabindex="-1"></a><span class="ex">*/</span></span>
-<span id="cb29-4"><a href="04-Processes.html#cb29-4" tabindex="-1"></a><span class="ex">include</span> { FASTQC_RAW } from <span class="st">&#39;./modules/local/run/main.nf`</span></span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb30-1"><a href="04-Processes.html#cb30-1" tabindex="-1"></a><span class="ex">/*</span></span>
+<span id="cb30-2"><a href="04-Processes.html#cb30-2" tabindex="-1"></a> <span class="ex">*</span> Processes</span>
+<span id="cb30-3"><a href="04-Processes.html#cb30-3" tabindex="-1"></a><span class="ex">*/</span></span>
+<span id="cb30-4"><a href="04-Processes.html#cb30-4" tabindex="-1"></a><span class="ex">include</span> { FASTQC_RAW } from <span class="st">&#39;./modules/local/run/main.nf&#39;</span></span></code></pre></div>
 <p>It is common to have subdirectories within <code>modules/local</code> grouped by tools. For example if you were performing 16S analysis with qiime2 you may have some of the following modules:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb30-1"><a href="04-Processes.html#cb30-1" tabindex="-1"></a><span class="ex">include</span> { IMPORT } from <span class="st">&#39;./modules/local/qiime2/import_data/main.nf&#39;</span></span>
-<span id="cb30-2"><a href="04-Processes.html#cb30-2" tabindex="-1"></a><span class="ex">include</span> { CUTADAPT } from <span class="st">&#39;./modules/local/qiime2/cutadpat/main.nf&#39;</span></span>
-<span id="cb30-3"><a href="04-Processes.html#cb30-3" tabindex="-1"></a><span class="ex">include</span> { DADA2 } from <span class="st">&#39;./modules/local/qiime2/dada2/main.nf&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb31-1"><a href="04-Processes.html#cb31-1" tabindex="-1"></a><span class="ex">include</span> { IMPORT } from <span class="st">&#39;./modules/local/qiime2/import_data/main.nf&#39;</span></span>
+<span id="cb31-2"><a href="04-Processes.html#cb31-2" tabindex="-1"></a><span class="ex">include</span> { CUTADAPT } from <span class="st">&#39;./modules/local/qiime2/cutadpat/main.nf&#39;</span></span>
+<span id="cb31-3"><a href="04-Processes.html#cb31-3" tabindex="-1"></a><span class="ex">include</span> { DADA2 } from <span class="st">&#39;./modules/local/qiime2/dada2/main.nf&#39;</span></span></code></pre></div>
 
 </div>
 </div>

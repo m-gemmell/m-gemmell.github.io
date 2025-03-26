@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 8 Illumina QC example | MG Nextflow Guide</title>
+  <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 8 Illumina QC example | MG Nextflow Guide" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/figures/nextflow_favicon.png" />
+  <meta property="og:description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 Illumina QC example | MG Nextflow Guide" />
+  
+  <meta name="twitter:description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
+  <meta name="twitter:image" content="/figures/nextflow_favicon.png" />
+
+<meta name="author" content="Matthew R. Gemmell" />
+
+
+<meta name="date" content="2025-03-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="figures/nextflow_favicon.png" type="image/x-icon" />
+<link rel="prev" href="06-Params_and_config.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="www/webex.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a>MG Nextflow Guide</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Intro</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#running-nextflow"><i class="fa fa-check"></i><b>1.1</b> Running nextflow</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#contents"><i class="fa fa-check"></i><b>1.2</b> Contents</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#links"><i class="fa fa-check"></i><b>1.3</b> Links</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="01-Concepts.html"><a href="01-Concepts.html"><i class="fa fa-check"></i><b>2</b> Concepts</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="01-Concepts.html"><a href="01-Concepts.html#workflow"><i class="fa fa-check"></i><b>2.1</b> Workflow</a></li>
+<li class="chapter" data-level="2.2" data-path="01-Concepts.html"><a href="01-Concepts.html#variables"><i class="fa fa-check"></i><b>2.2</b> Variables</a></li>
+<li class="chapter" data-level="2.3" data-path="01-Concepts.html"><a href="01-Concepts.html#channels_tuples_lists_concept"><i class="fa fa-check"></i><b>2.3</b> Channels, tuples, &amp; lists</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="01-Concepts.html"><a href="01-Concepts.html#channels"><i class="fa fa-check"></i><b>2.3.1</b> Channels</a></li>
+<li class="chapter" data-level="2.3.2" data-path="01-Concepts.html"><a href="01-Concepts.html#tuples-lists"><i class="fa fa-check"></i><b>2.3.2</b> Tuples &amp; Lists</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Components</b></span></li>
+<li class="chapter" data-level="3" data-path="02-Basic_layout.html"><a href="02-Basic_layout.html"><i class="fa fa-check"></i><b>3</b> Basic layout</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="02-Basic_layout.html"><a href="02-Basic_layout.html#main.nf"><i class="fa fa-check"></i><b>3.1</b> <code>main.nf</code></a></li>
+<li class="chapter" data-level="3.2" data-path="02-Basic_layout.html"><a href="02-Basic_layout.html#params"><i class="fa fa-check"></i><b>3.2</b> Params</a></li>
+<li class="chapter" data-level="3.3" data-path="02-Basic_layout.html"><a href="02-Basic_layout.html#processes"><i class="fa fa-check"></i><b>3.3</b> Processes</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="02-Basic_layout.html"><a href="02-Basic_layout.html#initialistion"><i class="fa fa-check"></i><b>3.3.1</b> Initialistion</a></li>
+<li class="chapter" data-level="3.3.2" data-path="02-Basic_layout.html"><a href="02-Basic_layout.html#basic_publishdir"><i class="fa fa-check"></i><b>3.3.2</b> publishDir</a></li>
+<li class="chapter" data-level="3.3.3" data-path="02-Basic_layout.html"><a href="02-Basic_layout.html#input"><i class="fa fa-check"></i><b>3.3.3</b> input</a></li>
+<li class="chapter" data-level="3.3.4" data-path="02-Basic_layout.html"><a href="02-Basic_layout.html#output"><i class="fa fa-check"></i><b>3.3.4</b> output</a></li>
+<li class="chapter" data-level="3.3.5" data-path="02-Basic_layout.html"><a href="02-Basic_layout.html#script"><i class="fa fa-check"></i><b>3.3.5</b> script</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="02-Basic_layout.html"><a href="02-Basic_layout.html#workflow-1"><i class="fa fa-check"></i><b>3.4</b> workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html"><i class="fa fa-check"></i><b>4</b> Channels, tuples, &amp; lists</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html#channels-1"><i class="fa fa-check"></i><b>4.1</b> Channels</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html#creating_channels"><i class="fa fa-check"></i><b>4.1.1</b> Creating channels</a></li>
+<li class="chapter" data-level="4.1.2" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html#extracting-channels-from-process"><i class="fa fa-check"></i><b>4.1.2</b> Extracting channels from process</a></li>
+<li class="chapter" data-level="4.1.3" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html#view"><i class="fa fa-check"></i><b>4.1.3</b> View</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html#tuples-1"><i class="fa fa-check"></i><b>4.2</b> Tuples</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html#input-output-tuples"><i class="fa fa-check"></i><b>4.2.1</b> Input &amp; Output tuples</a></li>
+<li class="chapter" data-level="4.2.2" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html#transpose"><i class="fa fa-check"></i><b>4.2.2</b> Transpose</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html#list"><i class="fa fa-check"></i><b>4.3</b> List</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html#channel-values-to-one-list"><i class="fa fa-check"></i><b>4.3.1</b> Channel values to one list</a></li>
+<li class="chapter" data-level="4.3.2" data-path="03-Channels_tuples_lists.html"><a href="03-Channels_tuples_lists.html#parameter-in-front-of-each-list-value"><i class="fa fa-check"></i><b>4.3.2</b> Parameter in front of each list value</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="04-Processes.html"><a href="04-Processes.html"><i class="fa fa-check"></i><b>5</b> Processes</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="04-Processes.html"><a href="04-Processes.html#process_directives"><i class="fa fa-check"></i><b>5.1</b> Directives</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="04-Processes.html"><a href="04-Processes.html#cpus"><i class="fa fa-check"></i><b>5.1.1</b> cpus</a></li>
+<li class="chapter" data-level="5.1.2" data-path="04-Processes.html"><a href="04-Processes.html#publishdir"><i class="fa fa-check"></i><b>5.1.2</b> publishDir</a></li>
+<li class="chapter" data-level="5.1.3" data-path="04-Processes.html"><a href="04-Processes.html#conda"><i class="fa fa-check"></i><b>5.1.3</b> conda</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="04-Processes.html"><a href="04-Processes.html#script-1"><i class="fa fa-check"></i><b>5.2</b> Script</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="04-Processes.html"><a href="04-Processes.html#variables-1"><i class="fa fa-check"></i><b>5.2.1</b> Variables</a></li>
+<li class="chapter" data-level="5.2.2" data-path="04-Processes.html"><a href="04-Processes.html#other-languages"><i class="fa fa-check"></i><b>5.2.2</b> Other languages</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="04-Processes.html"><a href="04-Processes.html#modules"><i class="fa fa-check"></i><b>5.3</b> Modules</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="05-Workflow.html"><a href="05-Workflow.html"><i class="fa fa-check"></i><b>6</b> Workflow</a></li>
+<li class="chapter" data-level="7" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html"><i class="fa fa-check"></i><b>7</b> Params and config</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#params-1"><i class="fa fa-check"></i><b>7.1</b> Params</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#params-to-channel"><i class="fa fa-check"></i><b>7.1.1</b> Params to channel</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#config"><i class="fa fa-check"></i><b>7.2</b> Config</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#process-directives"><i class="fa fa-check"></i><b>7.2.1</b> Process directives</a></li>
+<li class="chapter" data-level="7.2.2" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#params-in-config"><i class="fa fa-check"></i><b>7.2.2</b> Params in config</a></li>
+<li class="chapter" data-level="7.2.3" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#conda-1"><i class="fa fa-check"></i><b>7.2.3</b> Conda</a></li>
+<li class="chapter" data-level="7.2.4" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#container-program"><i class="fa fa-check"></i><b>7.2.4</b> Container program</a></li>
+<li class="chapter" data-level="7.2.5" data-path="06-Params_and_config.html"><a href="06-Params_and_config.html#config-profiles"><i class="fa fa-check"></i><b>7.2.5</b> Config profiles</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Example workflows</b></span></li>
+<li class="chapter" data-level="8" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html"><i class="fa fa-check"></i><b>8</b> Illumina QC example</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#main.nf-1"><i class="fa fa-check"></i><b>8.1</b> main.nf</a></li>
+<li class="chapter" data-level="8.2" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#nextflow.config"><i class="fa fa-check"></i><b>8.2</b> nextflow.config</a></li>
+<li class="chapter" data-level="8.3" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#modules-1"><i class="fa fa-check"></i><b>8.3</b> Modules</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#fastqc_raw"><i class="fa fa-check"></i><b>8.3.1</b> FASTQC_RAW</a></li>
+<li class="chapter" data-level="8.3.2" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#multiqc_raw"><i class="fa fa-check"></i><b>8.3.2</b> MULTIQC_RAW</a></li>
+<li class="chapter" data-level="8.3.3" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#trimmomatic"><i class="fa fa-check"></i><b>8.3.3</b> TRIMMOMATIC</a></li>
+<li class="chapter" data-level="8.3.4" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#fastqc_trim"><i class="fa fa-check"></i><b>8.3.4</b> FASTQC_TRIM</a></li>
+<li class="chapter" data-level="8.3.5" data-path="07-Illumina_QC_example.html"><a href="07-Illumina_QC_example.html#multiqc_trim"><i class="fa fa-check"></i><b>8.3.5</b> MULTIQC_TRIM</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MG Nextflow Guide</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="illumina-qc-example" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Illumina QC example<a href="07-Illumina_QC_example.html#illumina-qc-example" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This chapter contains an example nextflow wrokflow for a simple QC of paired Illumina data.</p>
+<p>In this example <code>./</code> represents the main project/workflow directory.</p>
+<p>It will use a locally installed conda env.</p>
+<div id="main.nf-1" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> main.nf<a href="07-Illumina_QC_example.html#main.nf-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The main nextflow file.</p>
+<p>Path: <code>./main.nf</code></p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb41-1"><a href="07-Illumina_QC_example.html#cb41-1" tabindex="-1"></a><span class="co">#!/usr/bin/env nextflow</span></span>
+<span id="cb41-2"><a href="07-Illumina_QC_example.html#cb41-2" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="07-Illumina_QC_example.html#cb41-3" tabindex="-1"></a><span class="ex">/*</span></span>
+<span id="cb41-4"><a href="07-Illumina_QC_example.html#cb41-4" tabindex="-1"></a> <span class="ex">*</span> Workflow for basic Paired end Illumina QC</span>
+<span id="cb41-5"><a href="07-Illumina_QC_example.html#cb41-5" tabindex="-1"></a><span class="ex">*/</span></span>
+<span id="cb41-6"><a href="07-Illumina_QC_example.html#cb41-6" tabindex="-1"></a></span>
+<span id="cb41-7"><a href="07-Illumina_QC_example.html#cb41-7" tabindex="-1"></a><span class="ex">/</span> Params in nextflow.config</span>
+<span id="cb41-8"><a href="07-Illumina_QC_example.html#cb41-8" tabindex="-1"></a></span>
+<span id="cb41-9"><a href="07-Illumina_QC_example.html#cb41-9" tabindex="-1"></a><span class="ex">/Text</span> that will be printed at start of work flow to terminal</span>
+<span id="cb41-10"><a href="07-Illumina_QC_example.html#cb41-10" tabindex="-1"></a><span class="ex">log.info</span> <span class="st">&quot;&quot;&quot;</span><span class="dt">\</span></span>
+<span id="cb41-11"><a href="07-Illumina_QC_example.html#cb41-11" tabindex="-1"></a><span class="st">  ILLUMINA QC</span></span>
+<span id="cb41-12"><a href="07-Illumina_QC_example.html#cb41-12" tabindex="-1"></a><span class="st">  ===========</span></span>
+<span id="cb41-13"><a href="07-Illumina_QC_example.html#cb41-13" tabindex="-1"></a><span class="st">  raw reads: </span><span class="va">${params</span><span class="er">.reads</span><span class="va">}</span></span>
+<span id="cb41-14"><a href="07-Illumina_QC_example.html#cb41-14" tabindex="-1"></a><span class="st">  out_dir: </span><span class="va">${params</span><span class="er">.outdir</span><span class="va">}</span></span>
+<span id="cb41-15"><a href="07-Illumina_QC_example.html#cb41-15" tabindex="-1"></a><span class="st">  &quot;&quot;&quot;</span></span>
+<span id="cb41-16"><a href="07-Illumina_QC_example.html#cb41-16" tabindex="-1"></a>  <span class="fu">.stripIndent()</span></span>
+<span id="cb41-17"><a href="07-Illumina_QC_example.html#cb41-17" tabindex="-1"></a>  </span>
+<span id="cb41-18"><a href="07-Illumina_QC_example.html#cb41-18" tabindex="-1"></a><span class="ex">/*</span></span>
+<span id="cb41-19"><a href="07-Illumina_QC_example.html#cb41-19" tabindex="-1"></a><span class="ex">*</span> Processes</span>
+<span id="cb41-20"><a href="07-Illumina_QC_example.html#cb41-20" tabindex="-1"></a><span class="ex">*</span> All within module files</span>
+<span id="cb41-21"><a href="07-Illumina_QC_example.html#cb41-21" tabindex="-1"></a><span class="ex">*/</span></span>
+<span id="cb41-22"><a href="07-Illumina_QC_example.html#cb41-22" tabindex="-1"></a></span>
+<span id="cb41-23"><a href="07-Illumina_QC_example.html#cb41-23" tabindex="-1"></a><span class="ex">include</span> { FASTQC_RAW } from <span class="st">&#39;./modules/local/fastqc/raw/main.nf&#39;</span></span>
+<span id="cb41-24"><a href="07-Illumina_QC_example.html#cb41-24" tabindex="-1"></a><span class="ex">include</span> { MULTIQC_RAW } from <span class="st">&#39;./modules/local/multiqc/raw/main.nf&#39;</span> </span>
+<span id="cb41-25"><a href="07-Illumina_QC_example.html#cb41-25" tabindex="-1"></a><span class="ex">include</span> { TRIMMOMATIC } from <span class="st">&#39;./modules/local/trimmomatic/main.nf&#39;</span> </span>
+<span id="cb41-26"><a href="07-Illumina_QC_example.html#cb41-26" tabindex="-1"></a><span class="ex">include</span> { FASTQC_TRIM } from <span class="st">&#39;./modules/local/fastqc/trim/main.nf&#39;</span></span>
+<span id="cb41-27"><a href="07-Illumina_QC_example.html#cb41-27" tabindex="-1"></a><span class="ex">include</span> { MULTIQC_TRIM } from <span class="st">&#39;./modules/local/multiqc/trim/main.nf&#39;</span></span>
+<span id="cb41-28"><a href="07-Illumina_QC_example.html#cb41-28" tabindex="-1"></a></span>
+<span id="cb41-29"><a href="07-Illumina_QC_example.html#cb41-29" tabindex="-1"></a><span class="ex">/*</span></span>
+<span id="cb41-30"><a href="07-Illumina_QC_example.html#cb41-30" tabindex="-1"></a><span class="ex">*</span> Workflow</span>
+<span id="cb41-31"><a href="07-Illumina_QC_example.html#cb41-31" tabindex="-1"></a><span class="ex">*/</span></span>
+<span id="cb41-32"><a href="07-Illumina_QC_example.html#cb41-32" tabindex="-1"></a>  <span class="ex">///</span> Read in fastq data into channel</span>
+<span id="cb41-33"><a href="07-Illumina_QC_example.html#cb41-33" tabindex="-1"></a>  <span class="ex">Channel</span></span>
+<span id="cb41-34"><a href="07-Illumina_QC_example.html#cb41-34" tabindex="-1"></a>    <span class="ex">.fromFilePairs</span><span class="er">(</span><span class="ex">params.reads,</span> checkIfExists: true<span class="kw">)</span></span>
+<span id="cb41-35"><a href="07-Illumina_QC_example.html#cb41-35" tabindex="-1"></a>    <span class="ex">.set</span> {read_pairs_ch}</span>
+<span id="cb41-36"><a href="07-Illumina_QC_example.html#cb41-36" tabindex="-1"></a>  <span class="ex">///</span> raw fastqc</span>
+<span id="cb41-37"><a href="07-Illumina_QC_example.html#cb41-37" tabindex="-1"></a>  <span class="ex">FASTQC_RAW</span><span class="er">(</span><span class="ex">read_pairs_ch</span><span class="kw">)</span></span>
+<span id="cb41-38"><a href="07-Illumina_QC_example.html#cb41-38" tabindex="-1"></a>  <span class="ex">///</span> raw fastqc zip output</span>
+<span id="cb41-39"><a href="07-Illumina_QC_example.html#cb41-39" tabindex="-1"></a>  <span class="va">raw_fastqc_zip_ch</span><span class="op">=</span>FASTQC_RAW.out.zip</span>
+<span id="cb41-40"><a href="07-Illumina_QC_example.html#cb41-40" tabindex="-1"></a>  <span class="ex">///</span> Transform so channel of 1 value which is a tuple</span>
+<span id="cb41-41"><a href="07-Illumina_QC_example.html#cb41-41" tabindex="-1"></a>  <span class="ex">///</span> all R1 in one list and all R2 in one list</span>
+<span id="cb41-42"><a href="07-Illumina_QC_example.html#cb41-42" tabindex="-1"></a>  <span class="ex">raw_fastqc_zip_split_by_r1r2_ch</span> = raw_fastqc_zip_ch.collect<span class="er">(</span><span class="ex">flat:false</span><span class="kw">)</span></span>
+<span id="cb41-43"><a href="07-Illumina_QC_example.html#cb41-43" tabindex="-1"></a>                                                      <span class="ex">.map{it.transpose</span><span class="er">(</span><span class="kw">)</span><span class="er">}</span></span>
+<span id="cb41-44"><a href="07-Illumina_QC_example.html#cb41-44" tabindex="-1"></a>  <span class="ex">///</span> raw multiqc of fastqc</span>
+<span id="cb41-45"><a href="07-Illumina_QC_example.html#cb41-45" tabindex="-1"></a>  <span class="ex">MULTIQC_RAW</span><span class="er">(</span><span class="ex">raw_fastqc_zip_split_by_r1r2_ch</span><span class="kw">)</span></span>
+<span id="cb41-46"><a href="07-Illumina_QC_example.html#cb41-46" tabindex="-1"></a>  <span class="ex">///</span> trimmomatic</span>
+<span id="cb41-47"><a href="07-Illumina_QC_example.html#cb41-47" tabindex="-1"></a>  <span class="ex">TRIMMOMATIC</span><span class="er">(</span><span class="ex">read_pairs_ch</span><span class="kw">)</span></span>
+<span id="cb41-48"><a href="07-Illumina_QC_example.html#cb41-48" tabindex="-1"></a>  <span class="ex">///</span> trimmomatic fastqc</span>
+<span id="cb41-49"><a href="07-Illumina_QC_example.html#cb41-49" tabindex="-1"></a>  <span class="ex">FASTQC_TRIM</span><span class="er">(</span><span class="ex">TRIMMOMATIC.out</span><span class="kw">)</span></span>
+<span id="cb41-50"><a href="07-Illumina_QC_example.html#cb41-50" tabindex="-1"></a>  <span class="ex">///</span> trim fastqc zip output</span>
+<span id="cb41-51"><a href="07-Illumina_QC_example.html#cb41-51" tabindex="-1"></a>  <span class="va">trim_fastqc_zip_ch</span><span class="op">=</span>FASTQC_RAW.out.zip</span>
+<span id="cb41-52"><a href="07-Illumina_QC_example.html#cb41-52" tabindex="-1"></a>  <span class="ex">///</span> Transform so channel of 1 value which is a tuple</span>
+<span id="cb41-53"><a href="07-Illumina_QC_example.html#cb41-53" tabindex="-1"></a>  <span class="ex">///</span> all R1 in one list and all R2 in one list</span>
+<span id="cb41-54"><a href="07-Illumina_QC_example.html#cb41-54" tabindex="-1"></a>  <span class="ex">trim_fastqc_zip_split_by_r1r2_ch</span> = trim_fastqc_zip_ch.collect<span class="er">(</span><span class="ex">flat:false</span><span class="kw">)</span></span>
+<span id="cb41-55"><a href="07-Illumina_QC_example.html#cb41-55" tabindex="-1"></a>                                                      <span class="ex">.map{it.transpose</span><span class="er">(</span><span class="kw">)</span><span class="er">}</span></span>
+<span id="cb41-56"><a href="07-Illumina_QC_example.html#cb41-56" tabindex="-1"></a>  <span class="ex">///</span> trimmomatic_multiqc</span>
+<span id="cb41-57"><a href="07-Illumina_QC_example.html#cb41-57" tabindex="-1"></a>  <span class="ex">MULTIQC_TRIM</span><span class="er">(</span><span class="ex">trim_fastqc_zip_split_by_r1r2_ch</span><span class="kw">)</span></span></code></pre></div>
+</div>
+<div id="nextflow.config" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> nextflow.config<a href="07-Illumina_QC_example.html#nextflow.config" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The main confg file.</p>
+<p>Path: <code>./nextflow.config</code></p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb42-1"><a href="07-Illumina_QC_example.html#cb42-1" tabindex="-1"></a><span class="ex">conda.enabled</span> = true</span>
+<span id="cb42-2"><a href="07-Illumina_QC_example.html#cb42-2" tabindex="-1"></a></span>
+<span id="cb42-3"><a href="07-Illumina_QC_example.html#cb42-3" tabindex="-1"></a><span class="ex">params</span> {</span>
+<span id="cb42-4"><a href="07-Illumina_QC_example.html#cb42-4" tabindex="-1"></a>  <span class="fu">dir</span> = <span class="st">&quot;.&quot;</span></span>
+<span id="cb42-5"><a href="07-Illumina_QC_example.html#cb42-5" tabindex="-1"></a>  <span class="ex">outdir</span> = <span class="st">&quot;./results&quot;</span></span>
+<span id="cb42-6"><a href="07-Illumina_QC_example.html#cb42-6" tabindex="-1"></a>  <span class="ex">reads</span> = <span class="st">&quot;/home/data/project123/fastqs/*_R{1,2}.fastq&quot;</span></span>
+<span id="cb42-7"><a href="07-Illumina_QC_example.html#cb42-7" tabindex="-1"></a>  <span class="ex">conda_env</span> = <span class="st">&quot;/home/conda/envs/example_env&quot;</span></span>
+<span id="cb42-8"><a href="07-Illumina_QC_example.html#cb42-8" tabindex="-1"></a><span class="er">}</span></span>
+<span id="cb42-9"><a href="07-Illumina_QC_example.html#cb42-9" tabindex="-1"></a></span>
+<span id="cb42-10"><a href="07-Illumina_QC_example.html#cb42-10" tabindex="-1"></a><span class="ex">process</span> {</span>
+<span id="cb42-11"><a href="07-Illumina_QC_example.html#cb42-11" tabindex="-1"></a>  <span class="ex">memory</span> = 100.00GB</span>
+<span id="cb42-12"><a href="07-Illumina_QC_example.html#cb42-12" tabindex="-1"></a>  <span class="ex">cups</span> = 8</span>
+<span id="cb42-13"><a href="07-Illumina_QC_example.html#cb42-13" tabindex="-1"></a>  <span class="bu">time</span> = 30.d</span>
+<span id="cb42-14"><a href="07-Illumina_QC_example.html#cb42-14" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+</div>
+<div id="modules-1" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Modules<a href="07-Illumina_QC_example.html#modules-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The processes are each in their own separate files/modules.</p>
+<div id="fastqc_raw" class="section level3 hasAnchor" number="8.3.1">
+<h3><span class="header-section-number">8.3.1</span> FASTQC_RAW<a href="07-Illumina_QC_example.html#fastqc_raw" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Path: <code>./modules/local/fastqc/raw/main.nf</code></p>
+<p><strong>Note:</strong> how in this case the <code>publishDir</code> directive is used to create the output directory where the fastqc files will be located.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb43-1"><a href="07-Illumina_QC_example.html#cb43-1" tabindex="-1"></a><span class="co">#!/usr/bin/env nextflow</span></span>
+<span id="cb43-2"><a href="07-Illumina_QC_example.html#cb43-2" tabindex="-1"></a><span class="ex">process</span> FASTQC_RAW {</span>
+<span id="cb43-3"><a href="07-Illumina_QC_example.html#cb43-3" tabindex="-1"></a>  <span class="ex">conda</span> params.conda_env</span>
+<span id="cb43-4"><a href="07-Illumina_QC_example.html#cb43-4" tabindex="-1"></a>  </span>
+<span id="cb43-5"><a href="07-Illumina_QC_example.html#cb43-5" tabindex="-1"></a>  <span class="ex">publishDir</span> {</span>
+<span id="cb43-6"><a href="07-Illumina_QC_example.html#cb43-6" tabindex="-1"></a>    <span class="st">&quot;</span><span class="va">${params</span><span class="er">.outdir</span><span class="va">}</span><span class="st">/raw_fastqc_output&quot;</span></span>
+<span id="cb43-7"><a href="07-Illumina_QC_example.html#cb43-7" tabindex="-1"></a>    <span class="er">}</span><span class="ex">,</span> mode:<span class="st">&#39;copy&#39;</span></span>
+<span id="cb43-8"><a href="07-Illumina_QC_example.html#cb43-8" tabindex="-1"></a>  </span>
+<span id="cb43-9"><a href="07-Illumina_QC_example.html#cb43-9" tabindex="-1"></a>  <span class="ex">input:</span></span>
+<span id="cb43-10"><a href="07-Illumina_QC_example.html#cb43-10" tabindex="-1"></a>    <span class="ex">tuple</span> val<span class="er">(</span><span class="ex">sample_id</span><span class="kw">)</span><span class="ex">,</span> path<span class="er">(</span><span class="ex">reads</span><span class="kw">)</span></span>
+<span id="cb43-11"><a href="07-Illumina_QC_example.html#cb43-11" tabindex="-1"></a>    </span>
+<span id="cb43-12"><a href="07-Illumina_QC_example.html#cb43-12" tabindex="-1"></a>  <span class="ex">output:</span></span>
+<span id="cb43-13"><a href="07-Illumina_QC_example.html#cb43-13" tabindex="-1"></a>    <span class="ex">tuple</span> path<span class="er">(</span><span class="st">&quot;./</span><span class="va">${sample_id}</span><span class="st">_R1_fastqc.html&quot;</span><span class="kw">)</span><span class="ex">,</span></span>
+<span id="cb43-14"><a href="07-Illumina_QC_example.html#cb43-14" tabindex="-1"></a>      <span class="ex">path</span><span class="er">(</span><span class="st">&quot;./</span><span class="va">${sample_id}</span><span class="st">_R2_fastqc.html&quot;</span><span class="kw">)</span><span class="ex">,</span> emit: html</span>
+<span id="cb43-15"><a href="07-Illumina_QC_example.html#cb43-15" tabindex="-1"></a>    <span class="ex">tuple</span> path<span class="er">(</span><span class="st">&quot;./</span><span class="va">${sample_id}</span><span class="st">_R1_fastqc.zip&quot;</span><span class="kw">)</span><span class="ex">,</span></span>
+<span id="cb43-16"><a href="07-Illumina_QC_example.html#cb43-16" tabindex="-1"></a>      <span class="ex">path</span><span class="er">(</span><span class="st">&quot;./</span><span class="va">${sample_id}</span><span class="st">_R2_fastqc.zip&quot;</span><span class="kw">)</span><span class="ex">,</span> emit: zip</span>
+<span id="cb43-17"><a href="07-Illumina_QC_example.html#cb43-17" tabindex="-1"></a>  <span class="ex">script:</span></span>
+<span id="cb43-18"><a href="07-Illumina_QC_example.html#cb43-18" tabindex="-1"></a>  <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb43-19"><a href="07-Illumina_QC_example.html#cb43-19" tabindex="-1"></a><span class="st">  fastqc -o ./ </span><span class="va">${reads</span><span class="op">[</span><span class="dv">0</span><span class="op">]</span><span class="va">}</span><span class="st"> </span><span class="va">${reads</span><span class="op">[</span><span class="dv">1</span><span class="op">]</span><span class="va">}</span></span>
+<span id="cb43-20"><a href="07-Illumina_QC_example.html#cb43-20" tabindex="-1"></a><span class="st">  &quot;&quot;&quot;</span></span>
+<span id="cb43-21"><a href="07-Illumina_QC_example.html#cb43-21" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+</div>
+<div id="multiqc_raw" class="section level3 hasAnchor" number="8.3.2">
+<h3><span class="header-section-number">8.3.2</span> MULTIQC_RAW<a href="07-Illumina_QC_example.html#multiqc_raw" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Path: <code>./modules/local/multiqc/raw/main.nf</code></p>
+<p>Output is simple as we don't need to use it in the workflow as it is part of the final output.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb44-1"><a href="07-Illumina_QC_example.html#cb44-1" tabindex="-1"></a><span class="co">#!/usr/bin/env nextflow</span></span>
+<span id="cb44-2"><a href="07-Illumina_QC_example.html#cb44-2" tabindex="-1"></a><span class="ex">process</span> MULTIQC_RAW {</span>
+<span id="cb44-3"><a href="07-Illumina_QC_example.html#cb44-3" tabindex="-1"></a>  <span class="ex">conda</span> params.conda_env</span>
+<span id="cb44-4"><a href="07-Illumina_QC_example.html#cb44-4" tabindex="-1"></a>  </span>
+<span id="cb44-5"><a href="07-Illumina_QC_example.html#cb44-5" tabindex="-1"></a>  <span class="ex">publishDir</span> {</span>
+<span id="cb44-6"><a href="07-Illumina_QC_example.html#cb44-6" tabindex="-1"></a>    <span class="st">&quot;</span><span class="va">${params</span><span class="er">.outdir</span><span class="va">}</span><span class="st">/raw_multiqc_output&quot;</span></span>
+<span id="cb44-7"><a href="07-Illumina_QC_example.html#cb44-7" tabindex="-1"></a>    <span class="er">}</span><span class="ex">,</span> mode:<span class="st">&#39;copy&#39;</span></span>
+<span id="cb44-8"><a href="07-Illumina_QC_example.html#cb44-8" tabindex="-1"></a>  </span>
+<span id="cb44-9"><a href="07-Illumina_QC_example.html#cb44-9" tabindex="-1"></a>  <span class="ex">input:</span></span>
+<span id="cb44-10"><a href="07-Illumina_QC_example.html#cb44-10" tabindex="-1"></a>    <span class="ex">tuple</span> path<span class="er">(</span><span class="ex">r1_zip</span><span class="kw">)</span><span class="ex">,</span> path<span class="er">(</span><span class="ex">r2_zip</span><span class="kw">)</span></span>
+<span id="cb44-11"><a href="07-Illumina_QC_example.html#cb44-11" tabindex="-1"></a>    </span>
+<span id="cb44-12"><a href="07-Illumina_QC_example.html#cb44-12" tabindex="-1"></a>  <span class="ex">output:</span></span>
+<span id="cb44-13"><a href="07-Illumina_QC_example.html#cb44-13" tabindex="-1"></a>    <span class="ex">path</span> <span class="st">&quot;./r{1,2}/multiqc_report.html&quot;</span></span>
+<span id="cb44-14"><a href="07-Illumina_QC_example.html#cb44-14" tabindex="-1"></a>  </span>
+<span id="cb44-15"><a href="07-Illumina_QC_example.html#cb44-15" tabindex="-1"></a>  <span class="ex">script:</span></span>
+<span id="cb44-16"><a href="07-Illumina_QC_example.html#cb44-16" tabindex="-1"></a>  <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb44-17"><a href="07-Illumina_QC_example.html#cb44-17" tabindex="-1"></a><span class="st">  #R1</span></span>
+<span id="cb44-18"><a href="07-Illumina_QC_example.html#cb44-18" tabindex="-1"></a><span class="st">  mkdir r1</span></span>
+<span id="cb44-19"><a href="07-Illumina_QC_example.html#cb44-19" tabindex="-1"></a><span class="st">  multiqc -o r1 </span><span class="va">$r1_zip</span></span>
+<span id="cb44-20"><a href="07-Illumina_QC_example.html#cb44-20" tabindex="-1"></a><span class="st">  #R2</span></span>
+<span id="cb44-21"><a href="07-Illumina_QC_example.html#cb44-21" tabindex="-1"></a><span class="st">  mkdir r2</span></span>
+<span id="cb44-22"><a href="07-Illumina_QC_example.html#cb44-22" tabindex="-1"></a><span class="st">  multiqc -o r2 </span><span class="va">$r2_zip</span></span>
+<span id="cb44-23"><a href="07-Illumina_QC_example.html#cb44-23" tabindex="-1"></a><span class="st">  &quot;&quot;&quot;</span></span>
+<span id="cb44-24"><a href="07-Illumina_QC_example.html#cb44-24" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+</div>
+<div id="trimmomatic" class="section level3 hasAnchor" number="8.3.3">
+<h3><span class="header-section-number">8.3.3</span> TRIMMOMATIC<a href="07-Illumina_QC_example.html#trimmomatic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Path: <code>./modules/local/trimmomatic/main.nf</code></p>
+<p>Trimmomatic creates:</p>
+<ul>
+<li><strong>P files:</strong> Paired reads that retained both pairs.</li>
+<li><strong>U files:</strong> Reads that are unpaired as their paired read was removed by the filtering. These are generally not used for most processes.</li>
+</ul>
+<div class="sourceCode" id="cb45"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb45-1"><a href="07-Illumina_QC_example.html#cb45-1" tabindex="-1"></a><span class="co">#!/usr/bin/env nextflow</span></span>
+<span id="cb45-2"><a href="07-Illumina_QC_example.html#cb45-2" tabindex="-1"></a><span class="ex">process</span> TRIMMOMATIC {</span>
+<span id="cb45-3"><a href="07-Illumina_QC_example.html#cb45-3" tabindex="-1"></a>  <span class="ex">conda</span> params.conda_env</span>
+<span id="cb45-4"><a href="07-Illumina_QC_example.html#cb45-4" tabindex="-1"></a>  </span>
+<span id="cb45-5"><a href="07-Illumina_QC_example.html#cb45-5" tabindex="-1"></a>  <span class="ex">publishDir</span> params.outdir, mode:<span class="st">&#39;copy&#39;</span></span>
+<span id="cb45-6"><a href="07-Illumina_QC_example.html#cb45-6" tabindex="-1"></a>  </span>
+<span id="cb45-7"><a href="07-Illumina_QC_example.html#cb45-7" tabindex="-1"></a>  <span class="ex">input:</span></span>
+<span id="cb45-8"><a href="07-Illumina_QC_example.html#cb45-8" tabindex="-1"></a>    <span class="ex">tuple</span> path<span class="er">(</span><span class="ex">sample_id</span><span class="kw">)</span><span class="ex">,</span> path<span class="er">(</span><span class="ex">reads</span><span class="kw">)</span></span>
+<span id="cb45-9"><a href="07-Illumina_QC_example.html#cb45-9" tabindex="-1"></a>    </span>
+<span id="cb45-10"><a href="07-Illumina_QC_example.html#cb45-10" tabindex="-1"></a>  <span class="ex">output:</span></span>
+<span id="cb45-11"><a href="07-Illumina_QC_example.html#cb45-11" tabindex="-1"></a>    <span class="ex">tuple</span> val<span class="er">(</span><span class="ex">sample_id</span><span class="kw">)</span><span class="ex">,</span> path<span class="er">(</span><span class="st">&quot;</span><span class="va">${sample_id}</span><span class="st">_{1,2}P.fastq&quot;</span><span class="kw">)</span><span class="ex">,</span> path<span class="er">(</span><span class="st">&quot;</span><span class="va">${sample_id}</span><span class="st">_{1,2}U.fastq&quot;</span><span class="kw">)</span></span>
+<span id="cb45-12"><a href="07-Illumina_QC_example.html#cb45-12" tabindex="-1"></a>  </span>
+<span id="cb45-13"><a href="07-Illumina_QC_example.html#cb45-13" tabindex="-1"></a>  <span class="ex">script:</span></span>
+<span id="cb45-14"><a href="07-Illumina_QC_example.html#cb45-14" tabindex="-1"></a>  <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb45-15"><a href="07-Illumina_QC_example.html#cb45-15" tabindex="-1"></a><span class="st">  trimmomatic PE -phred33 </span><span class="dt">\</span></span>
+<span id="cb45-16"><a href="07-Illumina_QC_example.html#cb45-16" tabindex="-1"></a><span class="st">  </span><span class="va">${reads</span><span class="op">[</span><span class="dv">0</span><span class="op">]</span><span class="va">}</span><span class="st"> </span><span class="va">${reads</span><span class="op">[</span><span class="dv">1</span><span class="op">]</span><span class="va">}</span><span class="st"> </span><span class="dt">\</span></span>
+<span id="cb45-17"><a href="07-Illumina_QC_example.html#cb45-17" tabindex="-1"></a><span class="st">  -baseout </span><span class="va">${sample_id}</span><span class="st">.fastq </span><span class="dt">\</span></span>
+<span id="cb45-18"><a href="07-Illumina_QC_example.html#cb45-18" tabindex="-1"></a><span class="st">  SLIDINGWINDOW:4:20 MINLEN:50</span></span>
+<span id="cb45-19"><a href="07-Illumina_QC_example.html#cb45-19" tabindex="-1"></a><span class="st">  &quot;&quot;&quot;</span></span>
+<span id="cb45-20"><a href="07-Illumina_QC_example.html#cb45-20" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+</div>
+<div id="fastqc_trim" class="section level3 hasAnchor" number="8.3.4">
+<h3><span class="header-section-number">8.3.4</span> FASTQC_TRIM<a href="07-Illumina_QC_example.html#fastqc_trim" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Path: <code>./modules/local/fastqc/trim/main.nf</code></p>
+<p>Only using fastqc on the <strong>P</strong> files as we are not interested in the <strong>U</strong> files.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb46-1"><a href="07-Illumina_QC_example.html#cb46-1" tabindex="-1"></a><span class="co">#!/usr/bin/env nextflow</span></span>
+<span id="cb46-2"><a href="07-Illumina_QC_example.html#cb46-2" tabindex="-1"></a><span class="ex">process</span> FASTQC_TRIM {</span>
+<span id="cb46-3"><a href="07-Illumina_QC_example.html#cb46-3" tabindex="-1"></a>  <span class="ex">conda</span> params.conda_env</span>
+<span id="cb46-4"><a href="07-Illumina_QC_example.html#cb46-4" tabindex="-1"></a>  </span>
+<span id="cb46-5"><a href="07-Illumina_QC_example.html#cb46-5" tabindex="-1"></a>  <span class="ex">publishDir</span> {</span>
+<span id="cb46-6"><a href="07-Illumina_QC_example.html#cb46-6" tabindex="-1"></a>    <span class="st">&quot;</span><span class="va">${params</span><span class="er">.outdir</span><span class="va">}</span><span class="st">/trim_fastqc_output&quot;</span></span>
+<span id="cb46-7"><a href="07-Illumina_QC_example.html#cb46-7" tabindex="-1"></a>    <span class="er">}</span><span class="ex">,</span> mode:<span class="st">&#39;copy&#39;</span></span>
+<span id="cb46-8"><a href="07-Illumina_QC_example.html#cb46-8" tabindex="-1"></a>  </span>
+<span id="cb46-9"><a href="07-Illumina_QC_example.html#cb46-9" tabindex="-1"></a>  <span class="ex">input:</span></span>
+<span id="cb46-10"><a href="07-Illumina_QC_example.html#cb46-10" tabindex="-1"></a>    <span class="ex">tuple</span> val<span class="er">(</span><span class="ex">sample_id</span><span class="kw">)</span><span class="ex">,</span> path<span class="er">(</span><span class="ex">trim_p_reads</span><span class="kw">)</span><span class="ex">,</span> path<span class="er">(</span><span class="ex">trim_u_reads</span><span class="kw">)</span></span>
+<span id="cb46-11"><a href="07-Illumina_QC_example.html#cb46-11" tabindex="-1"></a>    </span>
+<span id="cb46-12"><a href="07-Illumina_QC_example.html#cb46-12" tabindex="-1"></a>  <span class="ex">output:</span></span>
+<span id="cb46-13"><a href="07-Illumina_QC_example.html#cb46-13" tabindex="-1"></a>    <span class="ex">tuple</span> path<span class="er">(</span><span class="st">&quot;./</span><span class="va">${sample_id}</span><span class="st">_1P_fastqc.html&quot;</span><span class="kw">)</span><span class="ex">,</span></span>
+<span id="cb46-14"><a href="07-Illumina_QC_example.html#cb46-14" tabindex="-1"></a>      <span class="ex">path</span><span class="er">(</span><span class="st">&quot;./</span><span class="va">${sample_id}</span><span class="st">_2P_fastqc.html&quot;</span><span class="kw">)</span><span class="ex">,</span> emit: html</span>
+<span id="cb46-15"><a href="07-Illumina_QC_example.html#cb46-15" tabindex="-1"></a>    <span class="ex">tuple</span> path<span class="er">(</span><span class="st">&quot;./</span><span class="va">${sample_id}</span><span class="st">_2P_fastqc.zip&quot;</span><span class="kw">)</span><span class="ex">,</span></span>
+<span id="cb46-16"><a href="07-Illumina_QC_example.html#cb46-16" tabindex="-1"></a>      <span class="ex">path</span><span class="er">(</span><span class="st">&quot;./</span><span class="va">${sample_id}</span><span class="st">_2P_fastqc.zip&quot;</span><span class="kw">)</span><span class="ex">,</span> emit: html</span>
+<span id="cb46-17"><a href="07-Illumina_QC_example.html#cb46-17" tabindex="-1"></a>  <span class="ex">script:</span></span>
+<span id="cb46-18"><a href="07-Illumina_QC_example.html#cb46-18" tabindex="-1"></a>  <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb46-19"><a href="07-Illumina_QC_example.html#cb46-19" tabindex="-1"></a><span class="st">  fastqc -o ./ </span><span class="va">${trim_p_reads</span><span class="op">[</span><span class="dv">0</span><span class="op">]</span><span class="va">}</span><span class="st"> </span><span class="va">${trim_p_reads</span><span class="op">[</span><span class="dv">1</span><span class="op">]</span><span class="va">}</span></span>
+<span id="cb46-20"><a href="07-Illumina_QC_example.html#cb46-20" tabindex="-1"></a><span class="st">  &quot;&quot;&quot;</span></span>
+<span id="cb46-21"><a href="07-Illumina_QC_example.html#cb46-21" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+</div>
+<div id="multiqc_trim" class="section level3 hasAnchor" number="8.3.5">
+<h3><span class="header-section-number">8.3.5</span> MULTIQC_TRIM<a href="07-Illumina_QC_example.html#multiqc_trim" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Path: <code>./modules/local/multiqc/trim/main.nf</code></p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode bash Rchunk"><code class="sourceCode bash"><span id="cb47-1"><a href="07-Illumina_QC_example.html#cb47-1" tabindex="-1"></a><span class="co">#!/usr/bin/env nextflow</span></span>
+<span id="cb47-2"><a href="07-Illumina_QC_example.html#cb47-2" tabindex="-1"></a><span class="ex">process</span> MULTIQC_TRIM {</span>
+<span id="cb47-3"><a href="07-Illumina_QC_example.html#cb47-3" tabindex="-1"></a>  <span class="ex">conda</span> params.conda_env</span>
+<span id="cb47-4"><a href="07-Illumina_QC_example.html#cb47-4" tabindex="-1"></a>  </span>
+<span id="cb47-5"><a href="07-Illumina_QC_example.html#cb47-5" tabindex="-1"></a>  <span class="ex">publishDir</span> {</span>
+<span id="cb47-6"><a href="07-Illumina_QC_example.html#cb47-6" tabindex="-1"></a>    <span class="st">&quot;</span><span class="va">${params</span><span class="er">.outdir</span><span class="va">}</span><span class="st">/trim_multiqc_output&quot;</span></span>
+<span id="cb47-7"><a href="07-Illumina_QC_example.html#cb47-7" tabindex="-1"></a>    <span class="er">}</span><span class="ex">,</span> mode:<span class="st">&#39;copy&#39;</span></span>
+<span id="cb47-8"><a href="07-Illumina_QC_example.html#cb47-8" tabindex="-1"></a>  </span>
+<span id="cb47-9"><a href="07-Illumina_QC_example.html#cb47-9" tabindex="-1"></a>  <span class="ex">input:</span></span>
+<span id="cb47-10"><a href="07-Illumina_QC_example.html#cb47-10" tabindex="-1"></a>    <span class="ex">tuple</span> path<span class="er">(</span><span class="ex">r1_zip</span><span class="kw">)</span><span class="ex">,</span> path<span class="er">(</span><span class="ex">r2_zip</span><span class="kw">)</span></span>
+<span id="cb47-11"><a href="07-Illumina_QC_example.html#cb47-11" tabindex="-1"></a>    </span>
+<span id="cb47-12"><a href="07-Illumina_QC_example.html#cb47-12" tabindex="-1"></a>  <span class="ex">output:</span></span>
+<span id="cb47-13"><a href="07-Illumina_QC_example.html#cb47-13" tabindex="-1"></a>    <span class="ex">path</span> <span class="st">&quot;./r{1,2}/multiqc_report.html&quot;</span></span>
+<span id="cb47-14"><a href="07-Illumina_QC_example.html#cb47-14" tabindex="-1"></a>  </span>
+<span id="cb47-15"><a href="07-Illumina_QC_example.html#cb47-15" tabindex="-1"></a>  <span class="ex">script:</span></span>
+<span id="cb47-16"><a href="07-Illumina_QC_example.html#cb47-16" tabindex="-1"></a>  <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb47-17"><a href="07-Illumina_QC_example.html#cb47-17" tabindex="-1"></a><span class="st">  #R1</span></span>
+<span id="cb47-18"><a href="07-Illumina_QC_example.html#cb47-18" tabindex="-1"></a><span class="st">  mkdir r1</span></span>
+<span id="cb47-19"><a href="07-Illumina_QC_example.html#cb47-19" tabindex="-1"></a><span class="st">  multiqc -o r1 </span><span class="va">$r1_zip</span></span>
+<span id="cb47-20"><a href="07-Illumina_QC_example.html#cb47-20" tabindex="-1"></a><span class="st">  #R2</span></span>
+<span id="cb47-21"><a href="07-Illumina_QC_example.html#cb47-21" tabindex="-1"></a><span class="st">  mkdir r2</span></span>
+<span id="cb47-22"><a href="07-Illumina_QC_example.html#cb47-22" tabindex="-1"></a><span class="st">  multiqc -o r2 </span><span class="va">$r2_zip</span></span>
+<span id="cb47-23"><a href="07-Illumina_QC_example.html#cb47-23" tabindex="-1"></a><span class="st">  &quot;&quot;&quot;</span></span>
+<span id="cb47-24"><a href="07-Illumina_QC_example.html#cb47-24" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+
+</div>
+</div>
+</div>
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  var t = document.getElementsByClassName("webex-total_correct");
+  for (var i = 0; i < t.length; i++) {
+    p = t[i].parentElement;
+    var correct = p.getElementsByClassName("webex-correct").length;
+    var solvemes = p.getElementsByClassName("webex-solveme").length;
+    var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
+    var selects = p.getElementsByClassName("webex-select").length;
+
+    t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* check answers */
+check_func = function() {
+  console.log("webex: check answers");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('unchecked')) {
+    cl.remove("unchecked");
+    this.innerHTML = "Hide Answers";
+  } else {
+    cl.add("unchecked");
+    this.innerHTML = "Show Answers";
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+
+  var cl = this.classList
+
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("webex onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  var check_sections = document.getElementsByClassName("webex-check");
+  console.log("check:", check_sections.length);
+  for (var i = 0; i < check_sections.length; i++) {
+    check_sections[i].classList.add("unchecked");
+
+    let btn = document.createElement("button");
+    btn.innerHTML = "Show Answers";
+    btn.classList.add("webex-check-button");
+    btn.onclick = check_func;
+    check_sections[i].appendChild(btn);
+
+    let spn = document.createElement("span");
+    spn.classList.add("webex-total_correct");
+    check_sections[i].appendChild(spn);
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+
+    solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+    selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  update_total_correct();
+}
+
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="06-Params_and_config.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
