@@ -1,0 +1,1045 @@
+[
+  {
+    "objectID": "FELLWOODS/FELLWOODS.html",
+    "href": "FELLWOODS/FELLWOODS.html",
+    "title": "FELLWOODS",
+    "section": "",
+    "text": "A wall of fallen tree\nDefence used by Amazonia to stop entry or exit from the redwoods"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Intro",
+    "section": "",
+    "text": "UNDER CONSTRUCTION\nThis is a world of forests. It is unfortunately in turmoil as the AI Amazonia has invaded using Cyborg Abyssal Buttercups to mind control many of the local denizens. She uses drones that must be nearby to relay orders to the mind controlled employees. Cryborg abyssal buttercups only work in moist locations\n\nRedwoods: Fog and mist\nSeawoods: Water\nFellwoods: Fog & mist\nShorewoods: Water\n\nThe team will have to make there way through different forests to weaken and eventual stop Amazonia’s stranglehold on the area.\nRules for creator Aim for each main place to have:\n\n3 flora/fauna\n\n1 beneficial\n1 neutral\n1 detrimental\n\n\nThe main places occupied by Amazonia and her forces (SANDWOODS, LAVAWOODS, WATERWOODS, & REDWOODS) should have\n\nBases\n\n1 Major base that increases defence of the REDWOODS. Try to make proper base map.\n3 minor bases that increase defence of the zone’s major base. Can also be used to get info on major base."
+  },
+  {
+    "objectID": "LAVAWOODS/LAVAWOODS.html",
+    "href": "LAVAWOODS/LAVAWOODS.html",
+    "title": "LAVAWOODS",
+    "section": "",
+    "text": "LArge volcano in the centre\nVolcanic area mainly solidified by being next to the WATERWOODS\nCovered in lava cactuses\nWhen players enter area they will see a large Kaiju emerge from a DOT, then a gargantuan Obsidian lava talos will emerge from the volcano to vanquish it. IT will go back into the lava when done but can be called upon by the Kraken forces that occupy the area.\nToo hot for Cyborg abyssal buttercups to work\n\n“The sheer mass of the gargantuan Talos causes its stumped legs to crack and shatter with a volcanic explosion with every step. However, as it lifts its legs it brings lava up with it, its large and long strides allowing the leg to fully reassemble before it crashes down once more”\n\nThe main source of power for Amazonia’s forces by the volcano."
+  },
+  {
+    "objectID": "REDWOODS/AMAZONIA.html",
+    "href": "REDWOODS/AMAZONIA.html",
+    "title": "Amazonia",
+    "section": "",
+    "text": "A super intelligent AI. It runs the company Amazonia which sells goods across the multiverse. For maximum efficiency it has replaced all human employees with drones and other forms of automation. It is colonising the Dendrosphaera due to its wealth of pristine resources and the relatively low technological development of its denizens.\nAlthough its drones, cyborgs, and various other robots have their own local hardware, Amazonia can see through all their eyes. It is constantly monitoring. It once employed humans but these humans have either been converted into Cyborgs or been made redundant for Amazonia’s strive for efficiency.\nAmazonia is mainly working in the Redwoods with its drones. Its forces are limited and have difficulty working in windy and/or wet environments and so Amazonia has enlisted other organisations."
+  },
+  {
+    "objectID": "REDWOODS/AMAZONIA.html#amazonia-drone",
+    "href": "REDWOODS/AMAZONIA.html#amazonia-drone",
+    "title": "Amazonia",
+    "section": "AMAZONIA DRONE",
+    "text": "AMAZONIA DRONE\n3 HP | 1 ARMOR | EYES : +1 | JAWS : -1 | LIMBS : +1 | NERVES : -2\n\nA quad copter delivery drone plastered with Amazonia labels\nA large staring camera\nMounted pistol (1D6 DAMAGE)\nSlight armour upgrade (1 ARMOR)\n\nHOME-IN-CRASHERS: These drones make their initial presence known with a high pitched whir. If shot down at close range with a combat complication they will attempt to crash into the destroyer, dealing 3 DAMAGE."
+  },
+  {
+    "objectID": "REDWOODS/AMAZONIA.html#amazonia-cyborg",
+    "href": "REDWOODS/AMAZONIA.html#amazonia-cyborg",
+    "title": "Amazonia",
+    "section": "AMAZONIA CYBORG",
+    "text": "AMAZONIA CYBORG\n5 HP | 1 ARMOR | EYES : +1 | JAWS : 0 | LIMBS : +1 | NERVES : -1\n\nAmazonia employees turned mind controlled cyborg\nHead covered in intercom that looks like AMAZONIA logo\nCyborg body (1 armor)\nLaser hand cannon (1D6+1 DAMAGE)\nLarge back cargo rig (mainly useless consumer items)\nAMAZONIA SENTRY TURRETS\n\nCOURIER: These humans have been converted into cyborg cargo transporters. During battle they will attempt to set up AMAZONIA SENTRY TURRETS."
+  },
+  {
+    "objectID": "REDWOODS/AMAZONIA.html#amazonia-sentry-turret",
+    "href": "REDWOODS/AMAZONIA.html#amazonia-sentry-turret",
+    "title": "Amazonia",
+    "section": "AMAZONIA SENTRY TURRET",
+    "text": "AMAZONIA SENTRY TURRET\n4 HP | 2 ARMOR | EYES : +1 | JAWS : 0 | LIMBS : -2 | NERVES : -2\n\nDisguised as an AMAZONIA package\nHeavy laser machine gun (1D6+2 DAMAGE)\n\nTAMPER-RESISTANT: The security protocols of the AMAZONIA SENTRY TURRET are incredibly strong. When attempting to take over their control only a success is successful. A partial success leads to the turret being momentarily stunned/inconvenienced. A failure leads to damage to the hacker/tamperer."
+  },
+  {
+    "objectID": "REDWOODS/AMAZONIA.html#amazonia-orb-drone",
+    "href": "REDWOODS/AMAZONIA.html#amazonia-orb-drone",
+    "title": "Amazonia",
+    "section": "AMAZONIA ORB DRONE",
+    "text": "AMAZONIA ORB DRONE\n24 HP | 3 ARMOR | EYES : +2 | JAWS : +2 | LIMBS : 0 | NERVES : -1\n\nLarge spherical robot (3 metre diameter)\nTitanium damascus body (3 ARMOR, non-magnetic, emp-resistant, rainbow iridescent pattern)\nSplit second force field (accessory)\nSensor array\n6 tentacle like arms (6HP & 3 ARMOR each)\n\n2 Crab claws (2D6 DAMAGE and/or grapple)\n2 Plasma cannons (1D6 DAMAGE, ARMOR-PIERCING and/or EROSION)\n2 Thermite miniguns (1D6+3 DAMAGE, INCENDIARY and/or SHREDDER)\n\n6 crab like legs\n\nRAM: This spherical rolls around for locomotion, crushing a path for it and its allies. It rapidly deploys its retractable limbs, and sensor array for combat. It quickly learns during combat but due to limited RAM can only retain one counter measure at a time.\nWhen the ORB DRONE is damaged, record the attribute used for the attack, changing this every time it is damaged. Attacks against the ORB DRONE using the recorded attribute are rolled with disadvantage.\nDUAL-PURPOSE-WEAPONS: Each weapon of the ORB DRONE is DUAL-PURPOSE.When a PC defends an attack they suffer:\n\nBoth effects on a FAILURE\nOne effect on a PARTIAL SUCCESS.\n\nSELF-DESTRUCT (Boss move): When the ORB DRONE reaches 0HP it explodes dealing 3D6 DAMAGE all nearby objects and entities.\nARMOR-PIERCING weapon tag: Attacks with this weapon ignore ARMOR bonuses granted by physical means. (F:UE)\nEROSION weapon tag: Reduce the durability of one of target’s ARMOR equipment.\nINCENDIARY weapon tag: When damage is dealt, this weapon also deals 2 DAMAGE to anything within fire spreading range. Deals double DAMAGE to plants.(F:UE)\nSHREDDER: Deals double DAMAGE to exposed flesh. On critical hits, it decreases the target’s ARMOR by 1. (F:UE)"
+  },
+  {
+    "objectID": "REDWOODS/FAUNA_AND_FLORA.html",
+    "href": "REDWOODS/FAUNA_AND_FLORA.html",
+    "title": "Fauna and flora",
+    "section": "",
+    "text": "6 HP | 0 ARMOR | EYES : 0 | JAWS : +2 | LIMBS : -1 | NERVES : 0\n\nGigantophicus, an ancient grizzly bear sized Orangutan-like ape\nFists (3 DAMAGE)\nBite (1D6 DAMAGE)\n\nGRAPPLERS: These massive red haired apes use their long and muscly limbs to grapple their targets. Whether by their hands or their hand-like feet it is incredibly difficult to escape once in their grasp."
+  },
+  {
+    "objectID": "REDWOODS/FAUNA_AND_FLORA.html#gigantopithicus",
+    "href": "REDWOODS/FAUNA_AND_FLORA.html#gigantopithicus",
+    "title": "Fauna and flora",
+    "section": "",
+    "text": "6 HP | 0 ARMOR | EYES : 0 | JAWS : +2 | LIMBS : -1 | NERVES : 0\n\nGigantophicus, an ancient grizzly bear sized Orangutan-like ape\nFists (3 DAMAGE)\nBite (1D6 DAMAGE)\n\nGRAPPLERS: These massive red haired apes use their long and muscly limbs to grapple their targets. Whether by their hands or their hand-like feet it is incredibly difficult to escape once in their grasp."
+  },
+  {
+    "objectID": "REDWOODS/REDWOODS.html",
+    "href": "REDWOODS/REDWOODS.html",
+    "title": "Redwoods",
+    "section": "",
+    "text": "Forest of red woods\nWhere the Redwoods spirit lives\nIt wants its heart back, combined with a human by the machinations of Amazonia\nHigh elevation, covered in mist\nConsists of a range of mesas as the mountain tips are missing, now in the SKYWOODS.\nUsed by Amazonia for logging. Takes wood to make books to sell across the multiverse.\nUsed to be inhabited by many Gigantopithecus"
+  },
+  {
+    "objectID": "RESOURCES/AUTONOMOUS_TRAITS.html",
+    "href": "RESOURCES/AUTONOMOUS_TRAITS.html",
+    "title": "Autonomous traits",
+    "section": "",
+    "text": "A failed/discarded android. You were rescued/repurposed. Maybe you could once have passed as human but the facade/cracks are showing.\nOutside of combat you can fuse a weapon into one of your arms.\n\nThe weapon is concealable and can be brought forth at will\nThe weapon deals +1 DAMAGE\nYou can only have one fused weapon at a time\n\nOnce per mission you can bring out and use a hidden disposable non-violent device from your body. Use your imagination but the Referee has final say if the device is feasible. Examples include a copter, skis, or a lighter.\nBlaster (1D6+1 DAMAGE) & -1 NERVES"
+  },
+  {
+    "objectID": "RESOURCES/AUTONOMOUS_TRAITS.html#android",
+    "href": "RESOURCES/AUTONOMOUS_TRAITS.html#android",
+    "title": "Autonomous traits",
+    "section": "",
+    "text": "A failed/discarded android. You were rescued/repurposed. Maybe you could once have passed as human but the facade/cracks are showing.\nOutside of combat you can fuse a weapon into one of your arms.\n\nThe weapon is concealable and can be brought forth at will\nThe weapon deals +1 DAMAGE\nYou can only have one fused weapon at a time\n\nOnce per mission you can bring out and use a hidden disposable non-violent device from your body. Use your imagination but the Referee has final say if the device is feasible. Examples include a copter, skis, or a lighter.\nBlaster (1D6+1 DAMAGE) & -1 NERVES"
+  },
+  {
+    "objectID": "RESOURCES/AUTONOMOUS_TRAITS.html#drone",
+    "href": "RESOURCES/AUTONOMOUS_TRAITS.html#drone",
+    "title": "Autonomous traits",
+    "section": "DRONE",
+    "text": "DRONE\nYou are an advanced flying drone and the approximate mass of a motorbike (but not necessarily the shape).\nYou can attach all of your traits and gear pack equipment to your body. You can have 2 weapons equipped at once. Unequipped equipment is stored inside your body and can be easily swapped.\nYou can only equip 2 extra pieces of equipment.\nYou have one arm for complex but lightweight tasks.\nHeavy machine gun (1D6+2 DAMAGE) & -1 NERVES"
+  },
+  {
+    "objectID": "RESOURCES/AUTONOMOUS_TRAITS.html#gas-concentrator",
+    "href": "RESOURCES/AUTONOMOUS_TRAITS.html#gas-concentrator",
+    "title": "Autonomous traits",
+    "section": "GAS-CONCENTRATOR",
+    "text": "GAS-CONCENTRATOR\nYou are a master at manipulating elemental gases. You can sense the gas composition of the air you are touching.\nAt any one time you can alter the flow of one elemental gas in air to change its concentrations in nearby connected areas. Normal air is 78% nitrogen, 21% oxygen, and 1% other gases.\nLighter & -1 JAWS"
+  },
+  {
+    "objectID": "RESOURCES/AUTONOMOUS_TRAITS.html#gun-tinkerer",
+    "href": "RESOURCES/AUTONOMOUS_TRAITS.html#gun-tinkerer",
+    "title": "Autonomous traits",
+    "section": "GUN-TINKERER",
+    "text": "GUN-TINKERER\nYou are an expert in modding guns.\nOnce a mission, you can remove a weapon tag from a gun. The Weapon tag is stored in a gun mod module.\nYou can attach this gun mod module to any gun that does not have a Weapon tag.\nHand cannon (1D6+1 DAMAGE, ACCURATE), & +2 EYES"
+  },
+  {
+    "objectID": "RESOURCES/AUTONOMOUS_TRAITS.html#gear-mule",
+    "href": "RESOURCES/AUTONOMOUS_TRAITS.html#gear-mule",
+    "title": "Autonomous traits",
+    "section": "GEAR-MULE:",
+    "text": "GEAR-MULE:\nYou have a supernatural skill to pack, load, and carry items. Your maximum extra equipment load is 20 rather than 10.\nChoose another belief, you have access to their gear packs when choosing pack/s at the start of a mission.\nLarge backpack & +2 JAWS"
+  },
+  {
+    "objectID": "RESOURCES/AUTONOMOUS_TRAITS.html#skill-monkey",
+    "href": "RESOURCES/AUTONOMOUS_TRAITS.html#skill-monkey",
+    "title": "Autonomous traits",
+    "section": "SKILL-MONKEY",
+    "text": "SKILL-MONKEY\nYou always have an ace up your sleeve.\nDuring missions you can instantly learn teachable skills. Examples include kung-fu, hacking, a language, and animal husbandry. You lose these skills at mission end.\nYou must use a certain number of skill pills to acquire a skill. The more powerful and broad the skill the more skill points it costs. An average skill costs 3 skill pills.\n6 skill pills & +1 LIMBS\nACCURATE weapon tag: Scoped, sighted, or well-balanced; this weapon grants one automatic success when attacking per mission. (F:UE)"
+  },
+  {
+    "objectID": "RESOURCES/DENDROSPHAERAN.html",
+    "href": "RESOURCES/DENDROSPHAERAN.html",
+    "title": "Dendrosphaeran",
+    "section": "",
+    "text": "You live on the planet of forests, The Dendrosphaera. It is a planet of nature and peace where humanoid species coexist with each other. Life flourishes and it has been an excellent target for Amazonia to colonise and exploit.\nDendrosphaerans believe in peace but are slowly learning that fighting is sometimes required."
+  },
+  {
+    "objectID": "RESOURCES/DENDROSPHAERAN.html#tenets",
+    "href": "RESOURCES/DENDROSPHAERAN.html#tenets",
+    "title": "Dendrosphaeran",
+    "section": "TENETS",
+    "text": "TENETS\n\nSave the people of the Dendrosphaera\nThe spirits of the Redwoods are sacrosanct\nAvoid damaging nature\nLive in harmony with the land"
+  },
+  {
+    "objectID": "RESOURCES/DENDROSPHAERAN.html#redwoods",
+    "href": "RESOURCES/DENDROSPHAERAN.html#redwoods",
+    "title": "Dendrosphaeran",
+    "section": "Redwoods",
+    "text": "Redwoods\nTheir are many competing Redwoods in the Dendrosphaera. Each has a spirit that is seen as the gods of this world. Although these forest spirits are supernatural they still follow the rule of evolution, survival of the fittest.\nEach Redwood spirit feeds the land surrounding its forest with life giving power. This it what causes the land surrounding each Redwood to be so lush and dense. These other forests then act as a barriers preventing the Redwoods from encroaching into each others territories.\nThis verdant land allowed the world’s denizens to exist with plenty of food in nature punk low-tech socities. Of course this balance has collapsed since Amazonia has arrived and decimated many of the forests. She has set up strong bases at the hearts of the Redwoods. What is she doing to your gods and can she be stopped?"
+  },
+  {
+    "objectID": "RESOURCES/FOREST_TRAITS.html",
+    "href": "RESOURCES/FOREST_TRAITS.html",
+    "title": "Forest traits",
+    "section": "",
+    "text": "Once a normal resident of the Dendrosphaera you were submerged in the red sap of one of the Great Redwoods, possibly through happenstance, tribute, or your culture’s funeral rites. Through its will you were resurrected as a wooden humanoid with blood of red sap destined to protect the forests.\nWhen you are struck with a melee attack the assailant is sprayed with your internal sap. It is very sticky and viscous, as well as being caustic to living animal matter dealing 3 DAMAGE.\nOnce a mission you can harvest a jars worth of your own sap, dealing 3 DAMAGE to yourself. The jar of amber heals plant based entities for +1D6+NERVES HP but deals the same DAMAGE to animals.\nJar, +1 NERVES & -1 LIMBS"
+  },
+  {
+    "objectID": "RESOURCES/FOREST_TRAITS.html#amber-born",
+    "href": "RESOURCES/FOREST_TRAITS.html#amber-born",
+    "title": "Forest traits",
+    "section": "",
+    "text": "Once a normal resident of the Dendrosphaera you were submerged in the red sap of one of the Great Redwoods, possibly through happenstance, tribute, or your culture’s funeral rites. Through its will you were resurrected as a wooden humanoid with blood of red sap destined to protect the forests.\nWhen you are struck with a melee attack the assailant is sprayed with your internal sap. It is very sticky and viscous, as well as being caustic to living animal matter dealing 3 DAMAGE.\nOnce a mission you can harvest a jars worth of your own sap, dealing 3 DAMAGE to yourself. The jar of amber heals plant based entities for +1D6+NERVES HP but deals the same DAMAGE to animals.\nJar, +1 NERVES & -1 LIMBS"
+  },
+  {
+    "objectID": "RESOURCES/FOREST_TRAITS.html#amphibious",
+    "href": "RESOURCES/FOREST_TRAITS.html#amphibious",
+    "title": "Forest traits",
+    "section": "AMPHIBIOUS",
+    "text": "AMPHIBIOUS\nMuch of the Dendrosphaera is covered in mist and fog, a perfect world for amphibians. You are a large sentient amphibian. Choose one of the below options:\n\nAnura (Frogs & Toads): You are a great jumper with a long sticky tongue.\nUrodela (Salamanders): At mission end you regenerate any lost body parts. Once per mission You can use a limb as an accessory.\nGymnophiona (Caecilians): Long slender body with no legs. You can fit through tight squeezes and are an excellent digger. You have a strong oddly shaped head, you cannot wear headgear but your natural head counts as +1 ARMOR.\n\nSpear (1D6+1 DAMAGE), +2 LIMBS & -1 EYES"
+  },
+  {
+    "objectID": "RESOURCES/FOREST_TRAITS.html#gigantopithecus",
+    "href": "RESOURCES/FOREST_TRAITS.html#gigantopithecus",
+    "title": "Forest traits",
+    "section": "GIGANTOPITHECUS",
+    "text": "GIGANTOPITHECUS\nYou are a large sentient Orangutan like species. Around 2.5 metres tall, standing upright, and weighing ~250kg you are similar in height and weight to a Male grizzly bear.\nYour unarmed attacks deal 1D6 DAMAGE. Additionally, deal +1 DAMAGE when attacking with melee weapons and -1 DAMAGE when attacking with ranged weapons.\nOrganic flamethrower (1D6 DAMAGE), +1 JAWS & -1 LIMBS"
+  },
+  {
+    "objectID": "RESOURCES/FOREST_TRAITS.html#lich-kin",
+    "href": "RESOURCES/FOREST_TRAITS.html#lich-kin",
+    "title": "Forest traits",
+    "section": "LICH-KIN",
+    "text": "LICH-KIN\nYou are a sentient fusion of Lichen and tree. Your ancestors were Lichen growing on trees but now you are autonomous beings with flesh of Lichen and bones of wood. What was once 2 symbiotic life forms are now three. Although your kind has many sizes and forms you have taken on a vaguely humanoid form.\nYou can change colour to match the local lichen and/or fauna and you can photosynthesise. Once per mission you can grow a thin layer of lichen over all your Equipment and are indecipherable to a lichen covered rock or log. It is brittle and breaks off when you move.\nRetractable wooden claws (1D6+1 DAMAGE), +1 EYES & -1 NERVES"
+  },
+  {
+    "objectID": "RESOURCES/FOREST_TRAITS.html#meep-meep",
+    "href": "RESOURCES/FOREST_TRAITS.html#meep-meep",
+    "title": "Forest traits",
+    "section": "MEEP-MEEP",
+    "text": "MEEP-MEEP\nYou are a sentient humanoid Roadrunner. You are a bit smaller than the average human. Rather than wings you have arms, hands, and fingers. However, what you lack in height and flight you more than make up for in your running speed of up to 20 mph.\nOnce per mission you and your team can traverse/escape in some seemingly impossible manner. A few examples include creating a temporary tunnel through rock, running on air, or the cell doors open. Any pursuers are highly inconvenienced.\n1 Medkit (+1D6+TAC HP), +1 LIMBS & -1 JAWS"
+  },
+  {
+    "objectID": "RESOURCES/FOREST_TRAITS.html#horseshoe-scion",
+    "href": "RESOURCES/FOREST_TRAITS.html#horseshoe-scion",
+    "title": "Forest traits",
+    "section": "HORSESHOE SCION",
+    "text": "HORSESHOE SCION\nYou are a humanoid shaped Horseshoe Crab mutant and a child of Farrier, the Brooding horseshoe crab mutant. She forms a hivemind with her children. However, some of its female children, Scions, are granted self sufficient sentience so they may travel the multiverse.\nYou may form a close range (1 mile) hive mind with up to 10 creatures from the Cheilicerata subphylum. This includes sea spiders, horseshoe crabs, and arachnids.\nYour arms end in retractable blades that deal 1D6 DAMAGE rather than hands.\n2 Horseshoe crabs (Size and functionality of walking ten fingered hand), +1 NERVES & -1 EYES"
+  },
+  {
+    "objectID": "RESOURCES/REDWOOD_SYRUP.html",
+    "href": "RESOURCES/REDWOOD_SYRUP.html",
+    "title": "Redwood syrup",
+    "section": "",
+    "text": "When you choose the Dendrosphaeran belief gain the following benefits:\nGain the below Gear packs"
+  },
+  {
+    "objectID": "RESOURCES/REDWOOD_SYRUP.html#lava",
+    "href": "RESOURCES/REDWOOD_SYRUP.html#lava",
+    "title": "Redwood syrup",
+    "section": "Lava",
+    "text": "Lava\nVolcanic ventures\n\nObsidian blade (1D6+2 DAMAGE, BRITTLE)\nObsidian pebble necklace\nObsidian wand, turns lava/magma into obsidian (1 use)"
+  },
+  {
+    "objectID": "RESOURCES/REDWOOD_SYRUP.html#sand",
+    "href": "RESOURCES/REDWOOD_SYRUP.html#sand",
+    "title": "Redwood syrup",
+    "section": "Sand",
+    "text": "Sand\nDesert destinations\n\nGlass shield (0 ARMOR, accessory)\nGlass marbles\nGlass wand, turns sand into glass (1 use)"
+  },
+  {
+    "objectID": "RESOURCES/REDWOOD_SYRUP.html#water",
+    "href": "RESOURCES/REDWOOD_SYRUP.html#water",
+    "title": "Redwood syrup",
+    "section": "Water",
+    "text": "Water\nAquatic adventures\n\nTrident (1D6+1 DAMAGE)\nDriftwood flute\nDriftwood shield (0 ARMOR, accessory)"
+  },
+  {
+    "objectID": "RESOURCES/REDWOOD_SYRUP.html#wind",
+    "href": "RESOURCES/REDWOOD_SYRUP.html#wind",
+    "title": "Redwood syrup",
+    "section": "Wind",
+    "text": "Wind\nTempest travels\n\n2 Ice/climbing axes (1D6 DAMAGE)\nAeolian whistle\nGlide leaf (BRITTLE)\n\nBRITTLE (weapon tag): Only has 2 Durability states, Good and Broken."
+  },
+  {
+    "objectID": "RESOURCES/RESOURCES.html",
+    "href": "RESOURCES/RESOURCES.html",
+    "title": "Resources",
+    "section": "",
+    "text": "This section contains referee and player resources for this setting. These include:\n\nNew PUML beliefs with accompanying traits.\nSuggestion for campaign specific allies & nemeses."
+  },
+  {
+    "objectID": "RESOURCES/SEVERANCE.html",
+    "href": "RESOURCES/SEVERANCE.html",
+    "title": "Severance",
+    "section": "",
+    "text": "When you choose the Tech colatteral belief gain the following benefits:\nGain the below Gear packs"
+  },
+  {
+    "objectID": "RESOURCES/SEVERANCE.html#arms",
+    "href": "RESOURCES/SEVERANCE.html#arms",
+    "title": "Severance",
+    "section": "Arms",
+    "text": "Arms\nAttack and protect\n\nLarge hammer (1D6+1 DAMAGE)\n1 Floppy disk (1 use, hack with one of the following keywords: Ransomware, Decrypt, Virus, Login, or Loop)\nRiot shield (1 ARMOR, equip as weapon)"
+  },
+  {
+    "objectID": "RESOURCES/SEVERANCE.html#body",
+    "href": "RESOURCES/SEVERANCE.html#body",
+    "title": "Severance",
+    "section": "Body",
+    "text": "Body\nBuilt like a tank\n\nLarge bomb (2D6 DAMAGE, 1 use)\nEMP grenade (1 use)\nCeramic plate (2 ARMOR)"
+  },
+  {
+    "objectID": "RESOURCES/SEVERANCE.html#head",
+    "href": "RESOURCES/SEVERANCE.html#head",
+    "title": "Severance",
+    "section": "Head",
+    "text": "Head\nBrain oxygenation\n\nToxin & Water-breathing mask\nTelescopic camera\nHelmet (1 ARMOR, accessory)"
+  },
+  {
+    "objectID": "RESOURCES/SEVERANCE.html#legs",
+    "href": "RESOURCES/SEVERANCE.html#legs",
+    "title": "Severance",
+    "section": "Legs",
+    "text": "Legs\nQuick & safe traversals\n\n20m range handheld detector (motion, radiation, & metal)\nTelescopic ladder (9m, i.e. a 3 story building)\nRocket skates"
+  },
+  {
+    "objectID": "RESOURCES/TECH_COLLATERAL.html",
+    "href": "RESOURCES/TECH_COLLATERAL.html",
+    "title": "Tech collateral",
+    "section": "",
+    "text": "You worked for Amazonia. It was a brutal workplace, you had no time for friends, and you were just a cog in the machine. But now the machine has moved to digital. The AI foretold to bring a bright future instead took everything from humans in your dimension. You must stop her from doing that at any cost. Maybe you can even reclaim your world.\nYou believe living life is sacrosanct. Machines have no heart and should only be used as tools to improve or protect life, even if that means you."
+  },
+  {
+    "objectID": "RESOURCES/TECH_COLLATERAL.html#tenets",
+    "href": "RESOURCES/TECH_COLLATERAL.html#tenets",
+    "title": "Tech collateral",
+    "section": "TENETS",
+    "text": "TENETS\n\nRage against the machine\nThose who happily serve AI are enemies\nFree the indentured servants\nWhat use is a strong economy when the people suffer?"
+  },
+  {
+    "objectID": "SANDWOODS/BONEHEAD_HATCHERY.html",
+    "href": "SANDWOODS/BONEHEAD_HATCHERY.html",
+    "title": "Bonehead hatchery",
+    "section": "",
+    "text": "Boneheads are Pachycephalosaurus. They feed on the cactus throughout the desert and lay their eggs at the hatchery.\nThe Doppelganger Dunes have set up defences to protect the hatchery from predators and their enemies, these include patrolling air forces. In exchange they take eggs for nutrition, ensuring they leave enough for a healthy population.\nThe Boneheads were created by the CGC in the Waterwoods. Their introduction has decimated the once desert encompassing cactus forest into many small forests."
+  },
+  {
+    "objectID": "SANDWOODS/BONEHEAD_HATCHERY.html#labyrinth",
+    "href": "SANDWOODS/BONEHEAD_HATCHERY.html#labyrinth",
+    "title": "Bonehead hatchery",
+    "section": "Labyrinth",
+    "text": "Labyrinth\nThe Bonehead Hatchery is in the centre of a labyrinth atop a massive sandstone outcropping that rises 50 metres above the sand waves. One large ramp allows access to the labyrinth via the sands of the desert. This location was chosen as the Boneheads hatchery by the CGC due to its stability and natural defences.\nThe Labyrinth consists of a 5 metre deep maze-like recess covering the top of the sandstone outcropping. Some say it was formed by the roots of a massive tree whilst others say the sandstone pillar was once a massive Talos cut down by the winds of [Nyxmera](https://m-gemmell.github.io/PRIMEVAL_DEITIES/Nyxmera/nyxmera.html.\nThe most likely approach the PC team will take will be:\nDunes -&gt; Entrance ramp -&gt; Labyrinth -&gt; Hatchery"
+  },
+  {
+    "objectID": "SANDWOODS/BONEHEAD_HATCHERY.html#intel",
+    "href": "SANDWOODS/BONEHEAD_HATCHERY.html#intel",
+    "title": "Bonehead hatchery",
+    "section": "Intel",
+    "text": "Intel\nPossible intel the team may gather about this location before the mission is below. Either give these out base on a D6 in or order from 1 to 6.\n\nThe hatchery is on top of a massive sandstone outcropping.\nThere is only one known entrance to the site, a guarded ramp.\nThe Sol guarding the hatchery has set up explosives to blow up the hatchery. This is to act as collateral in case Amazonia ever turns against them.\nA labyrinth surrounds the hatchery. Skybound doppelgangers patrol the skies so it is not advised to walk along the top of the labyrinth walls.\nRorschach tuataras rule the labyrinth. They prey on the Boneheads.\nFor some reason the Boneheads don’t seem to attack the guard towers at the ramp entrance."
+  },
+  {
+    "objectID": "SANDWOODS/DOPPELGANGER_DUNES.html",
+    "href": "SANDWOODS/DOPPELGANGER_DUNES.html",
+    "title": "Doppelganger dunes",
+    "section": "",
+    "text": "Doppelganger dunes occupy the Sandwoods for Amazonia. They are a Nyxmera faction that lives and works in deserts. They adore the temperature extremes of day & night, and the clearness of the air so they can observe the skies.\nMore information with their stats can be found in the following webpage: https://m-gemmell.github.io/PRIMEVAL_DEITIES/Nyxmera/Doppelganger_Dunes.html"
+  },
+  {
+    "objectID": "SANDWOODS/DOPPELGANGER_DUNES.html#forces",
+    "href": "SANDWOODS/DOPPELGANGER_DUNES.html#forces",
+    "title": "Doppelganger dunes",
+    "section": "Forces",
+    "text": "Forces\nThe mercenaries consist of two main forces:\n\nSkybound\n\nSkybound doppelgangers fly in their armored powered parachutes and are sharp eyed terrors in the sky\nGiant adult antlions are tamed by the Skybound doppelgangers and are used as massive beasts of burden\n\nSandbound\n\nSandbound doppelgangers are the foot soldiers moving around in caravans and occupying their various bases\nBoneheads are used as steeds by the Sandbound doppelgangers, they are tamed through the use of special cactus fruit found in the Sandwoods"
+  },
+  {
+    "objectID": "SANDWOODS/DOPPELGANGER_DUNES.html#sol-the-ablated",
+    "href": "SANDWOODS/DOPPELGANGER_DUNES.html#sol-the-ablated",
+    "title": "Doppelganger dunes",
+    "section": "Sol the ablated",
+    "text": "Sol the ablated\n\n\n\nThe leader of the Doppelganger dunes forces is Sol: Doppelganger of deserts.\nThe true Sol the Ablated is a lieutenant of Dr. Petra Pufferfish. Sol is able to implant their will into another human by replacing the victim’s eyes with their own. One eye has blue sclera with a yellow iris whilst the other has black sclera with a purple and grey iris. This human is then known as a Sol Doppelganger.\nThe Doppelganger still retains a lot of its personality but works wholeheartedly to benefit Sol and will be called Sol. They also gains powers related to the given title by Sol. The true Sol converted the original leader of the Doppelganger Dunes forces, Mahabala. They are now Sol: Doppelganger of deserts leader of the Doppelganger dunes.\nAdditionally, the leader has made three new Sol: Doppelganger of deserts so there is one at each base. They each have a quirk and certain fashion sense.\nSand extraction site: The leader once called Mahabala (having great power). They are ruthless but they do care for their mercenary crew. Bonehead hatchery: Tends to be inebriated drinking Marsala constantly. They wear a poncho made of the blue and yellow feathers of the BONEHEADS. Desalination plant: Solar tower:"
+  },
+  {
+    "objectID": "SANDWOODS/ENCOUNTERS.html",
+    "href": "SANDWOODS/ENCOUNTERS.html",
+    "title": "Travel and encounters",
+    "section": "",
+    "text": "When the characters travel through the Sandwoods roll for an encounter.\nFirst roll a D6"
+  },
+  {
+    "objectID": "SANDWOODS/ENCOUNTERS.html#encounter-table",
+    "href": "SANDWOODS/ENCOUNTERS.html#encounter-table",
+    "title": "Travel and encounters",
+    "section": "Encounter table",
+    "text": "Encounter table\n\nGroup of 1D6+1 Gigantopiticus trying to escape to the Windwoods\nA forest of cactuses. Destruction by Boneheads will be apparent around the edges.\n1D6 Skybound doppelgangers escorting a Giant adult antlion\n2D6 Sandbound doppelgangers\n3D6 Boneheads\nHidden Giant larval antlion"
+  },
+  {
+    "objectID": "SANDWOODS/ENTRANCE_RAMP.html",
+    "href": "SANDWOODS/ENTRANCE_RAMP.html",
+    "title": "Entrance ramp",
+    "section": "",
+    "text": "Two guard towers sit atop the rock outcropping flanking the labyrinth entrance at the top of the dunes.\n\nA total of 6 *Sandbound doppelgangers man the towers.\nA bridge connects the two towers\nAttached to the top of the towers are speakers that let out an ultrasonic sound that repels the Rorschach tuataras"
+  },
+  {
+    "objectID": "SANDWOODS/FAUNA_AND_FLORA.html",
+    "href": "SANDWOODS/FAUNA_AND_FLORA.html",
+    "title": "Fauna and flora",
+    "section": "",
+    "text": "The three major fauna and flora of the Sandwoods are cactuses, Boneheads, and Giant Antlions (Giant larval antlions and Giant adult antlions).\nThe Sandwoods was once covered in a forest of cactuses. Now there is only a scattering of smaller forests. This decimation was caused by the introduction of the Boneheads. The Boneheads eat the entire cactus but are especially fond of the special rare fruit of the cactuses. This fruit can be used to easily tame and ride the Boneheads."
+  },
+  {
+    "objectID": "SANDWOODS/FAUNA_AND_FLORA.html#boneheads",
+    "href": "SANDWOODS/FAUNA_AND_FLORA.html#boneheads",
+    "title": "Fauna and flora",
+    "section": "Boneheads",
+    "text": "Boneheads\n\n\n\nBoneheads are Pachycephalosaurus that were created by the CGC scientists that occupy the Waterwoods. As herbivores they generally gather in roaming flocks.\n\nBONEHEAD\n5 HP | 1 ARMOR | EYES : -1 | JAWS : +1 | LIMBS : 0 | NERVES : -1\n\nPachycephalosaurus\nThick bared skull (1D6+1 DAMAGE)\nTough skin (1 ARMOR)\nHerbivorous dinosaur\nMales have blue and yellow feathers\nFemales have sand coloured feathers\n\nTHICK-SKULLED: These creatures are dumb and skittish but they thrive in deserts. When threatened they have a 4 in 1D6 chance of fleeing. If they don’t flee they will instead fight to the death."
+  },
+  {
+    "objectID": "SANDWOODS/FAUNA_AND_FLORA.html#giant-antlions",
+    "href": "SANDWOODS/FAUNA_AND_FLORA.html#giant-antlions",
+    "title": "Fauna and flora",
+    "section": "Giant antlions",
+    "text": "Giant antlions\nAs the population of Boneheads has increased so has the population of Giant Antlions. The larvae bury into the sand around the cactuses and ambush the Boneheads. This has greatly increased the survival rates of the Gitant larval antlions which are also able to eat humans. This in turn has increased the amount of Giant adult antlions.\nDoppelganger Dunes use the Giant adult antlions as massive air-based beasts of burden. The Skybound doppelgangers are able to tame and escort them with their aeolian whistles. They are easy to maintain only needing to feed on airborne pollen that is blown in by the winds of the Windwoods. These strong winds also allow the adults to easily fly despite their size.\n\nGIANT LARVAL ANTLION\n4 HP | 0 ARMOR | EYES : -1 | JAWS : +1 | LIMBS : +1 | NERVES : -2\n\nLarval Antlion the size of a rhino\nMassive sickle-like jaws (1D6+2 DAMAGE)\n\nAVALANCHER: This creature burrows into the sand creating an area around it that will avalanche into its mouth with the weight of a human. As the creatures are large the avalanche area is wide and deep. Quick reactions and/or help from their team-mates may prevent being caught in the jaws of this deadly predator.\n\n\nGIANT ADULT ANTLION\n15 HP | 0 ARMOR |EYES : 0 | JAWS : 0 | LIMBS : +1 | NERVES : -1\n\nAdult antlion with the wingspan of a Boeing 757 (38m)\nLook similar to dragonflies\n\nWIND-POWERED: These massive creatures can only survive in high wind deserts. The wind keeps their massive size afloat and brings them the airborne pollen they need to survive."
+  },
+  {
+    "objectID": "SANDWOODS/HATCHERY.html",
+    "href": "SANDWOODS/HATCHERY.html",
+    "title": "Hatchery",
+    "section": "",
+    "text": "In the centre of the Labyrinth is the Hatchery. Surrounding the eggs are 4 guard towers situated within the recessed opening. Each contains 3 Sandbound doppelgangers.\nWithin the centre of the eggs is a base for the Doppelganger Dunes that acts as living quarters and a command base for the local forces. It contains living quarters for off duty Sandbound doppelgangers. 18 of them will be eating, sleeping, and entertaining themselves. Most importantly the local Sol has their base of operations here."
+  },
+  {
+    "objectID": "SANDWOODS/HATCHERY.html#sol",
+    "href": "SANDWOODS/HATCHERY.html#sol",
+    "title": "Hatchery",
+    "section": "SOL",
+    "text": "SOL\nThe Sol that leads the hatchery forces tends to be inebriated drinking Marsala constantly. This is their way of striving off the boredom as there are very few resistance attacks. They wear a poncho made of the blue and yellow feathers of the Boneheads.\nIn their operations room they have a secret hatch that leads into the caverns below the hatchery. These caverns are massive, and appear to be the empty space left by the roots of a massive tree. Sol has the detonator for explosives strategically planted in the caverns. If these are successfully set off it will collapse the hatchery but not the entire outcropping."
+  },
+  {
+    "objectID": "SANDWOODS/LABYRINTH.html",
+    "href": "SANDWOODS/LABYRINTH.html",
+    "title": "Labyrinth",
+    "section": "",
+    "text": "A deep and dark recess in sandstone outcropping. The relief from the blazing sun is short lived as body heat seeps into the moving shadows.\nWhen the PCs travel through the labyrinth make a clock/tracker with 8 spaces. Once the clock tracker is full the team have reached the hatchery or labyrinth entrance depending on which they were aiming to find.\nEach hour of travel the team decides a method to traverse the labyrinth. They then make an action roll. The possible results are below:"
+  },
+  {
+    "objectID": "SANDWOODS/LABYRINTH.html#encounters",
+    "href": "SANDWOODS/LABYRINTH.html#encounters",
+    "title": "Labyrinth",
+    "section": "Encounters",
+    "text": "Encounters\nWhen the characters travel through the Labyrinth roll for an encounter.\nFirst roll a D6\n\nOn a 1-4 roll once on the encounter table. The players encounter that one group.\nOn a 5-6 roll twice (rerolling any duplicates). Both groups are meeting and the players are there whilst it happens.\n\n\nEncounter table\n\nNo encounter\nDead Bonehead (prey of the Rorschach tuataras)\n2D6 Boneheads quickly traversing the labyrinth (1-3 heading to entrance, 4-6 heading to hatchery)\n1D6 pack of Rorschach tuataras\n1D6+1 Sandbound doppelgangers\n1D6 Skybound doppelgangers and a Giant adult antlions"
+  },
+  {
+    "objectID": "SANDWOODS/LABYRINTH.html#rorschach-tuataras",
+    "href": "SANDWOODS/LABYRINTH.html#rorschach-tuataras",
+    "title": "Labyrinth",
+    "section": "RORSCHACH TUATARAS",
+    "text": "RORSCHACH TUATARAS\n4 HP | EYES : +2 | JAWS : 0 | LIMBS : +1 | NERVES : -1\n\nLarge dog sized tuataras\nDragon like wings capable of flight\nCarnivorous with teeth and claws (1D6 DAMAGE)\nThree eyes of yellow (forehead), purple (right), and grey (left)\nScales of black and white\n\nCHROMOGENIC: The scales of the RORSCHACH TUATARA switches from black to white in response to heat and light. This gives them the look of flowing Rorschach patterns as they bask in the sun. Whilst in shaded areas they go all black to retain heat, making them very difficult to spot in shadows."
+  },
+  {
+    "objectID": "SANDWOODS/MINOR_BASES.html",
+    "href": "SANDWOODS/MINOR_BASES.html",
+    "title": "Minor bases",
+    "section": "",
+    "text": "Prior to taking on the Main base the team can and are suggested to destroy the three minor bases in the area. This will decrease the power of the Doppelganger Dunes in the Sandwoods and make the assault on the main base easier."
+  },
+  {
+    "objectID": "SANDWOODS/MINOR_BASES.html#bases",
+    "href": "SANDWOODS/MINOR_BASES.html#bases",
+    "title": "Minor bases",
+    "section": "Bases",
+    "text": "Bases\nBelow gives a brief description of the bases with detailed descriptions further on.\n\nWHAT describes the base.\nWHY describes the benefit to preventing the bases’ function.\nHOW describes ways to prevent the bases’ function, note this does not limit other plans the players may make that the referee thinks is possible.\n\n\nBonehead hatchery\n\nWHAT: A hatchery for the Boneheads within a labyrinth on top of a high sandstone outcropping.\nWHY: The Doppelganger Dunes rely on the eggs and meat of the Boneheads as a food source. Reducing their food supply will cause much of the forces to have to leave the Dendrosphaera completely. There will be fewer aerial patrols of Skybound doppelgangers and their Giant adult antlions patrolling around the main base.\nHOW: The Sol leading the forces in the Hatchery has planted explosives in caverns below it. The team can use these explosives to destroy the hatchery.\n\n\n\nDeslination plant\n\nWHAT: This desalination base takes water from the ocean and removes salt and other impurities.\nWHY: The water is used in the sand processing within the major base. Without this water X amount of the factories will be closed down leaving only security to infrequently patrol them.\nHOW:\n\n\n\nSolar tower\n\nWHAT: A tower surrounded by mirrors, these mirrors reflect light to the absorber at the top of the tower which produces electricity. Electricity is stored in massive batteries that are transported to the Major base by Giant adult antlions.\nWHY: Stopping electricity production will strain the energy usage of the mercenaries. They will only have enough batteries to activate one of the top laser towers in the Major base.\nHOW: Either permanently stop the 4 devices that keep the area safe from the sand waves or destroy the sun absorber at the top of the tower."
+  },
+  {
+    "objectID": "SANDWOODS/MINOR_BASES.html#intel-gathering",
+    "href": "SANDWOODS/MINOR_BASES.html#intel-gathering",
+    "title": "Minor bases",
+    "section": "Intel gathering",
+    "text": "Intel gathering\nEach base has 6 pieces of intel the team can gather prior to the main part of the mission. The team can think of ways to gather intel or use one of the below side mission suggestions. These can be suggested by Patty & Paddy or another ally.\n\nA Sandbound doppelganger caravan is traversing the Sandwoods\nAn Amazonia Cyborg is delivering vital intel\nThere is a minor Doppelganger base on a small rock outcropping\nA crashed Amazonia satelitte in the desert is being unearthed by Doppelganger forces\nResistance prisoner with intel is being transported to the CGC facility in the Waterwoods via a Giant Adult Antlion\nA cargo container has fallen in the Windwoods\n\nThe side mission suggestions count as part of the minor base mission but can also be used as Partisan mission, where the players take on the roles of a partisan team. Due to the lack of man power the Resistance will only authorise one partisan side-quest per minor base mission."
+  },
+  {
+    "objectID": "SANDWOODS/MINOR_BASES.html#infiltration",
+    "href": "SANDWOODS/MINOR_BASES.html#infiltration",
+    "title": "Minor bases",
+    "section": "Infiltration",
+    "text": "Infiltration\nIf you are using the PUML infiltration rules I suggest using the below number of spaces for the alertness trackers of the minor bases:\n\nUnaware = 6 - (2 X number of successful minor bases sabotaged in this region)\nSuspicious = 3 - (1 X number of successful minor bases sabotaged in this region)"
+  },
+  {
+    "objectID": "SANDWOODS/SANDWOODS.html",
+    "href": "SANDWOODS/SANDWOODS.html",
+    "title": "Sandwoods",
+    "section": "",
+    "text": "The Sandwoods is a desert of massive tsunami sized dunes constantly in flow from the gales from the Windwoods. It was once covered in forests of cactuses but an invasive species has decimated the vegetation.\nThe area is controlled by the Doppelganger Dunes, a mercenary crew specialised in desert biomes, who are hired by Amazonia. They control four main bases:\n\nBonehead hatchery: A natural location guarded by the mercenaries. The mercenaries use the Boneheads as steeds and as a food source.\nDesalination plant: Sea water is desalinated to make it potable.\nSolar tower: Charges batteries used for the other bases’ energy needs.\nSand extraction site: Sand is harvested from the deserts and brought to their main base for processing. It is located upon the floating island stolen from the Windwoods."
+  },
+  {
+    "objectID": "SANDWOODS/SOLAR_TOWER.html",
+    "href": "SANDWOODS/SOLAR_TOWER.html",
+    "title": "Solar tower",
+    "section": "",
+    "text": "Solar power energy produced by mirrors focussing sun on a large tower. Charges up batteries. These batteries are transported to the other bases by the Skybound doppelgangers and their tamed Giant adult antlions."
+  },
+  {
+    "objectID": "SANDWOODS/SOLAR_TOWER.html#intel",
+    "href": "SANDWOODS/SOLAR_TOWER.html#intel",
+    "title": "Solar tower",
+    "section": "Intel",
+    "text": "Intel\nPossible intel the team may gather about this location before the mission is below. Either give these out base on a D6 in or order from 1 to 6.\n\nGiant adult antlions are seen transporting large battery containers from and to the Solar tower to the other minor bases and the major base.\nFour Wave breaker stations lay at the perimeter of the base.\nThe Wave breakers cause the sand within the perimeter to attract and solidify whilst causing sand outside the perimeter to"
+  },
+  {
+    "objectID": "SHOREWOODS/SHOREWOODS.html",
+    "href": "SHOREWOODS/SHOREWOODS.html",
+    "title": "SHOREWOODS",
+    "section": "",
+    "text": "Mangrove forest acts as tidal defence\nIncredibly hard to go through"
+  },
+  {
+    "objectID": "SKYWOODS/BAB_AND_YAGA.html",
+    "href": "SKYWOODS/BAB_AND_YAGA.html",
+    "title": "Bab & Yaga",
+    "section": "",
+    "text": "Possibly the most important community members of Summitville are Bab, Grandma of Yaga, and Yaga, Grandson of Bab."
+  },
+  {
+    "objectID": "SKYWOODS/BAB_AND_YAGA.html#yaga",
+    "href": "SKYWOODS/BAB_AND_YAGA.html#yaga",
+    "title": "Bab & Yaga",
+    "section": "Yaga",
+    "text": "Yaga\nYaga is a ginger young man. Built like a log he always has his furry torso on display through thick suspenders that keep his tool belt and hemp trousers aloft. He quite likely has a handsome face but it is obscured with thick finely braided hair. Even through all this his bright eyes show through. Its easy to see he is always smiling whilst building houses or having tea with his grandma.\n\nYAGA\n10 HP | 2 ARMOR | EYES : +1 | JAWS : +2 | LIMBS : +1 | NERVES : 0\n\nWoodpecker axe (1D6+1 DAMAGE, BAD VIBRATIONS)\nWooden shield (0 ARMOR, accessory)\nWood and bird fused combat armor (2 ARMOR, wings capable of flight)\nTool belt full of carpentry tools\nBuilt like a log\nDressed like a lumberjack\n\nWOOD-WHISPERER: Yaga’s woodworking abilities are supernatural. He once died but was brought back to life by BAB bargaining with the spirit of the Redwoods. Submerged into the Redwoods’ amber he came back stronger, with blood made of amber, and the ability to bend wood to his word. He can sense through any wood, living or dead, that he touches.\nBAD VIBRATIONS weapon tag: This weapons’ damage dice explodes. Whenever the highest number on the damage dice is rolled, roll the damage dice again and sum the total of all dice rolls. Dice can explode multiple times."
+  },
+  {
+    "objectID": "SKYWOODS/BAB_AND_YAGA.html#bab",
+    "href": "SKYWOODS/BAB_AND_YAGA.html#bab",
+    "title": "Bab & Yaga",
+    "section": "Bab",
+    "text": "Bab\nMany will see a hag, a crone, and a witch when their eyes feast upon the folkloric Bab. This impression will not be softened by her manic enthusiasm for combining birds with all manner of inanimate objects. Once you get past your preconceptions you will behold a wise kind woman gone childish with age. She is most at peace when enthralled in her work, listening to the music from her lyrebird based gramophone, or sharing tea with her grandson.\n\nBAB\n5 HP | 0 ARMOR | EYES : 0 | JAWS : -1 | LIMBS : +2 | NERVES : +2\n\nA tall spindly hunched figure\nBeaked nose\nShe is dressed up like a Russian Babushka\nHer heavy clothes cover a feathered humanoid but bird like body\n\nBIRD-ALCHEMIST: BAB is a loving mother and grandmother. Due to a horrible incident her whole family was almost destroyed. With a bargain she was able to save her grandson YAGA. With this bargain she was turned into a human bird chimera. She is able to magically fuse birds with inanimate objects, the resulting device gaining an ability based on the bird used."
+  },
+  {
+    "objectID": "SKYWOODS/BIRDHOUSE.html#bird-house",
+    "href": "SKYWOODS/BIRDHOUSE.html#bird-house",
+    "title": "Bird house",
+    "section": "BIRD HOUSE",
+    "text": "BIRD HOUSE\n14HP | 1 ARMOR | EYES:0 | JAWS:+2 | LIMBS:+2 | NERVES:0\n\nStrong log cabin (1 ARMOR)\nMassive wings a vulture capable of flight (as fast as a small propeller plane)\nLegs of an Elephant bird large & strong enough for locomotion (can sprint at speed of a Jeep)\nHead is of sentient Lyrebird that sticks out as the horn of a gramophone in the main room\nAble to fully heal itself after a mission\n\nFOWL’S MOVING CASTLE: Created by the woodwork of Bab and the Witchcraft of Yaga this Bird based house is sentient. It is able to understand basic commands. It will not tolerate any abuse and demands a lot of affection. Although it can speak a little it much prefers to make pitch perfect sound effects with its Lyrebird vocal organ (syrinx) to communicate."
+  },
+  {
+    "objectID": "SKYWOODS/CENTRAL_ISLAND.html",
+    "href": "SKYWOODS/CENTRAL_ISLAND.html",
+    "title": "Central Island",
+    "section": "",
+    "text": "The central floating of the Skywoods is inhabited by humanoid villagers who have engineered the land. A flat central village, Summitville, is surrounded by stepped hills used as multiple levels of farmland.\nThe villagers worship Nyxmera who keeps the winds strong in the Windwoods and allows the Skywoods to keep aloft. There are 2 main types of villages, the farmers and the merchants.\nThe village is also hosting many refugees that have been displaced by Amazonia. This includes humans, and various sentient anthropomorphic animals such as the Gigantopithecuses from the Redwoods."
+  },
+  {
+    "objectID": "SKYWOODS/CONCLUSION.html",
+    "href": "SKYWOODS/CONCLUSION.html",
+    "title": "Conclusion",
+    "section": "",
+    "text": "The DOPPELGANGER DUNES’ forces are too great. They will steal the island and possibly kill some FARMERS and MERCHANTS. Hopefully the players will have grown to like the denizens of Summitville. If so, this will act as an effective inciting incident for the players to despise AMAZONIA and want to stop her.\nOnce the team have attempted to save the FARMERS they can escape the island on their new BIRD HOUSE. Most likely BAB will accompany the team to help keep the BIRD HOUSE functioning. She can act as the team’s driver. Additionally, she can upgrade the TREE HOUSE and create magic devices if given birds and wood.\nYAGA will join the MERCHANTS and FARMERS to keep them safe. He will relocate to the WINDWOODS and join the RESISTANCE as a Partisan Leader. He may then be encountered throughout the team’s missions and possibly be called upon as an ally if a PC gained him as an ally."
+  },
+  {
+    "objectID": "SKYWOODS/DOPPELGANGERS_ATTACK.html",
+    "href": "SKYWOODS/DOPPELGANGERS_ATTACK.html",
+    "title": "Doppelgangers attack",
+    "section": "",
+    "text": "After the PCs return with the last bird for Bab & Yaga the Doppelganger Dunes mercenaries will attack. They will subsequently occupy and steal the Central Island and transport it to the Sandwoods. The attack is way too large for the PCs and villagers to handle, they must evacuate. The PCs will be tasked with helping get Farmers back to the village so everyone can evacuate by the Bird houses. Bab and Yaga will frantically complete the Bird house as the villagers (including Merchants) try to stave off the attack whilst trying to evacuate."
+  },
+  {
+    "objectID": "SKYWOODS/DOWNTIME.html",
+    "href": "SKYWOODS/DOWNTIME.html",
+    "title": "Downtime",
+    "section": "",
+    "text": "Between quests the players can relax in the village, make friends with Bab, Yaga, and the other villagers. The PCs can also help out the villagers, including Bab and Yaga. If they help, their final Bird House could have some upgrades.\nThe referee is encouraged referee to give a minimum of 1 and a maximum of 4 upgrades. Additionally, it is encouraged to collaborate with the players on the shape and utility of these upgrades. Some suggestions are:\n\nHardened wood: Increase ARMOR from 1 to 2\nSpecialised work stations: This could be for chemistry, tinkering, medicine, weaponsmithing etc.\nMounted harpoon gun: 1D6 DAMAGE, can hook onto vehicles and other objects\nParagliders: Allows for aerial drops"
+  },
+  {
+    "objectID": "SKYWOODS/ENDEMIC_LIFE.html",
+    "href": "SKYWOODS/ENDEMIC_LIFE.html",
+    "title": "Endemic life",
+    "section": "",
+    "text": "Life struggles at the high altitudes of the Skywoods. But where many struggle, few thrive. These survivors have adapted in specific ways, giving rise to unique species on the different islands."
+  },
+  {
+    "objectID": "SKYWOODS/ENDEMIC_LIFE.html#giant-groundsels",
+    "href": "SKYWOODS/ENDEMIC_LIFE.html#giant-groundsels",
+    "title": "Endemic life",
+    "section": "Giant groundsels",
+    "text": "Giant groundsels\n\n\n\n\nSenecio kilimanjari\n\n\n\nThe islands are littered with various species of Giant groundsels. These large flowering plants are easily mistaken for small trees. The top is adorned with a radial pattern of thick elliptical leaves curving up to the skies. Below this is a black/brown mass of these leaves, dead. This mass growing larger the closer to the top as the leaves layer on top of each other."
+  },
+  {
+    "objectID": "SKYWOODS/ENDEMIC_LIFE.html#birds",
+    "href": "SKYWOODS/ENDEMIC_LIFE.html#birds",
+    "title": "Endemic life",
+    "section": "Birds",
+    "text": "Birds\n\n\n\nThe main animal life, aside from insects, comes in the form of birds. Other animals were unable to colonise the Skywoods and so various birds settled and adapted to the floating islands. Some birds became flightless whilst others retained their flight.\nThese birds eat:\n\nThe fruit and leaves of the Giant groundsels\nInsects that depend on the Giant groundsels\nPlants and creatures from the lands below\nOther birds in and around the Skywoods"
+  },
+  {
+    "objectID": "SKYWOODS/FARMERS.html",
+    "href": "SKYWOODS/FARMERS.html",
+    "title": "Farmers",
+    "section": "",
+    "text": "Pisac Terrassen medium\n\n\n\nThe farmers tend the terraced hills growing crops and livestock that are suited to high altitudes. They all share the land, helping each other but also specialising in a specific crop/livestock. They are hard workers but love to unwind with food, drink, and entertainment they perform for each other.\n\n\n\nD6\nName\nCrops/Livestock\nAppearence\nEntertainment\n\n\n\n\n1\nAnglin\nCoffee\nWears beautiful multicoloured ponchos stained with coffee\nPart of a troupe of acrobatic dancers\n\n\n2\nEarthstar\nOnions, Garlic, and Leeks\nIncredibly tall with a long nose and chin that run parallel to each other\nPuppetry\n\n\n3\nIcarus\nYak\nA relaxed GOAT TROLL covered in Yak furs\nStory teller with a preference of tales of the Primeval Deities\n\n\n4\nMagni\nHerbs, Beans, Kale, Cabbage, and Bok Choy\nLong spider leg like fingers\nPart of a play troupe\n\n\n5\nPiaggio\nTomatoes, Melons, Berries, and Rhubarb\nThree eyes coloured yellow, grey, and purple\nAeromancy. Able to devine the past, present, and future by reading the sky.\n\n\n6\nZeppelin\nBeets, Potatoes, Carrots, and Parsnips\nBroad torso and large chubby cheeks\nPlays a large array of strange woodwind instruments"
+  },
+  {
+    "objectID": "SKYWOODS/FARMER_RESCUE.html",
+    "href": "SKYWOODS/FARMER_RESCUE.html",
+    "title": "Farmer rescue",
+    "section": "",
+    "text": "There are three groups of farmers who are tending the lands. Determine the groups as follows:\nAll the Farmershave the following stats (except Icarus who has the stats of a GOAT TROLL):"
+  },
+  {
+    "objectID": "SKYWOODS/FARMER_RESCUE.html#rescuing",
+    "href": "SKYWOODS/FARMER_RESCUE.html#rescuing",
+    "title": "Farmer rescue",
+    "section": "RESCUING",
+    "text": "RESCUING\nEach Farmer group is in a different location. Roll a farmland location for each group, rerolling any duplicates. The PCs will be informed of the Farmer group locations by Bab or another villager.\nRoll an obstacle every time a team moves from one location to another. This includes moving from the village to any of the farmland locations and vice versa.\n\n\n\nD6\nFarmland location\nObstacles\n\n\n1\nCoffee plantation (tall and dense)\nClear skies (no obstacle)\n\n\n2\nSmoke houses\nOvergrown vegetation\n\n\n3\nYak grazing plains (likely devoid of Yaks)\nA stampede of Yaks\n\n\n4\nCrop silos\n2D6 SANDBOUND DOPPELGANGERS\n\n\n5\nCrop fields\n1D6 SKYBOUND DOPPELGANGERS and a GIANT ANTLION\n\n\n6\nWater reservoir\nA GOAT TROLL and TROLL VULTURE wanting to join in the fighting."
+  },
+  {
+    "objectID": "SKYWOODS/FARMER_RESCUE.html#central-island-map",
+    "href": "SKYWOODS/FARMER_RESCUE.html#central-island-map",
+    "title": "Farmer rescue",
+    "section": "Central island map",
+    "text": "Central island map"
+  },
+  {
+    "objectID": "SKYWOODS/FARMER_RESCUE.html#merchant-farmer-death",
+    "href": "SKYWOODS/FARMER_RESCUE.html#merchant-farmer-death",
+    "title": "Farmer rescue",
+    "section": "Merchant & farmer death",
+    "text": "Merchant & farmer death\nTime is of the essence when evacuating. During this section keep a clock/tracker of 8 spaces. Fill in a space with every partial success and 2 spaces with every failure. This represents the extra time the PCs are taking. When a clock/tracker is completely full a random Merchant dies, then start a new clock/tracker with one less space.\nFarmers may die during combat whilst they are being escorted. Suggestion: when escorting the farmers and a PC fails a defense roll ask the player if they want to take the damage or do they want a farmer to take the damage."
+  },
+  {
+    "objectID": "SKYWOODS/FORK_ISLAND.html",
+    "href": "SKYWOODS/FORK_ISLAND.html",
+    "title": "Fork island",
+    "section": "",
+    "text": "Two main features are apparent when entering this island. The first is the thin and tall bifurcated groundsels with their forked leaves. The second is the cacophony of noises. The buzzing of insects, the winds rustling the leaves, and most importantly the Lyre birds.\nThe Lyre birds sing their songs, attempting and succeeding in being the lead vocals. They yell their sharp pitches for a variety of reasons. They concuss any predatory birds foolhardy enough to hunt them. They make beautiful melodies to attract mates and use their volume to scare off the competition. But possibly most important of all, through their mastery of pitch and recreating any sound imaginable they can play the key song of the leaves of the forked groundsels.\n\nThe leaves of the forked groundsels act as super precise tuning forks. Each leaf has a specific tone, pitch, and decibel that will activate it. Once activated the leaf will frantically vibrate and eventually fall off the tree. These forked leaves are a major source of nutrition for the forked lyrebirds."
+  },
+  {
+    "objectID": "SKYWOODS/GOURD_ISLAND.html",
+    "href": "SKYWOODS/GOURD_ISLAND.html",
+    "title": "Gourd island",
+    "section": "",
+    "text": "An Island inhabited by GOAT TROLLS, TROLL VULTURES, and the Gourd Groundsels. Aside from these the only other life includes flying bugs too small to be noticed by these massive inhabitants.\nWhen the GOAT TROLLS lived in the WINDWOODS they would regularly play fight with members of their community. Of course when you can perfectly regenerate (as long as there is no fire or acid involved) this leads to many lost limbs. The largest and bravest vultures capitalised on these opportunities.\nBy consuming the flesh of GOAT TROLLS the vultures rapidly mutated into TROLL VULTURES. Massive regenerating vultures able to carry the weight of a GOAT TROLL due to the high winds of the WINDWOODS. The 2 species partnered together making their new home on Gourd Island and hunting and scavenging the surrounding lands.\nGourd Island was not just useful due to its elevation but also due to its flora. The Gourd Groundsels are engorged with all the water they can capture on the island, leaving none for any other creatures, except the GOAT TROLLS and their animal companions. You will never see a GOAT TROLLS without the gourd they strap to their backs. Used to quench the thirst of themselves and their vultures.\nThey occasionally trade one of their TROLL VULTURES to other humanoids. This may be in exchange for a quest or for an amazing hunting weapon.\nLink to GOAT TROLLS and VULTURE TROLLS"
+  },
+  {
+    "objectID": "SKYWOODS/JUNGLE_ISLAND.html",
+    "href": "SKYWOODS/JUNGLE_ISLAND.html",
+    "title": "Jungle island",
+    "section": "",
+    "text": "As the name suggests this island is covered in thick vegetation made of a variety of Giant groundsels. It is the largest island and about the size and .\nWithin the jungle Mountain fowl eat bugs and vegetation. The Mountain Fowl are in turn ate by the Tall Pelicans. The Tall Pelicans keep their prey in their leathery throat pouches till they return to their nests on various small floating islands.\nThe reason for this is simple, they use their prey as an offering to the massive predatory HORROR BIRDS of the jungle. Unable to fly whilst in the thick jungle they found the best defence was to appease their predators. Better to live and starve than to die satiated.\nWithin the jungle there are small lakes with aggressive Geese even the HORROR BIRDS stay away from.\nThrough not as noisy as Fork island their are many Macaws within the tree tops. They mimic the voices of creatures and humans that have traversed the jungle. This can include the PCs, Mountain fowl, Tall Pelicans, and, Elephant birds."
+  },
+  {
+    "objectID": "SKYWOODS/JUNGLE_ISLAND.html#horror-bird",
+    "href": "SKYWOODS/JUNGLE_ISLAND.html#horror-bird",
+    "title": "Jungle island",
+    "section": "HORROR BIRD",
+    "text": "HORROR BIRD\n20HP | 0 ARMOR | EYES:+1 | JAWS:+2 | LIMBS:-1 | NERVES:-1\n\nAkin to a Terror bird but larger\nCarnivorous\nLarge claws and beak (1D6+3 DAMAGE)\nSolitary hunters\n\nVENAL: The HORROR BIRD is a massive creature that seems terrifying and they are. However, they primarily use their size and power to bully others. They fight members of their own species for territory. They intentionally seek other creatures who have captured prey to intimidate and steal their kill. They tend to let down their guard around creatures they appear to have successfully intimidated."
+  },
+  {
+    "objectID": "SKYWOODS/MERCHANTS.html",
+    "href": "SKYWOODS/MERCHANTS.html",
+    "title": "Merchants",
+    "section": "",
+    "text": "Many merchants live in Summitville. They travel the lands trading the goods created by them and the farmers. They each have their own Bird house they use as their house and travelling shop. Rather than bartering in currency most bartering in this world is done through goods, services, and entertainment. Merchants prefer to offer specialised services rather than entertainment.\nAt the start of each new day roll 2 D6s to determine which merchants are currently in the Village (do not reroll duplicates). They are very busy trading and helping refugees escape Amazonia.\n\n\n\n\n\n\n\n\n\n\nD6\nName\nService\nAppearance\nPreferred goods to acquire and sell\n\n\n\n\n1\nChu\nCobbler\nPale and gangly they always sport a sleepy expression\nMusical instruments\n\n\n2\nDoak\nKnitter\nMessy red hair frames a face covered by large shaded specs\nFurniture\n\n\n3\nFlettner\nMasseur\nA Gigantopithecus from the REDWOODS. The hair on their head is braided with flowers.\nFruit, jam, and honey\n\n\n4\nIrkut\nMedicine\nBald with botanical stains over their hands and the crown of their head\nHerbs & poultices\n\n\n5\nTrendak\nCeramics repair (similar to Kintsugi)\nHunched figure with arms made of the night sky containing bones of gold\nPrecious gems, metals, and jewellery\n\n\n6\nVortech\nTransport & Delivery\nQuiet and short they always wear a captains hat\nBooks and specimens on the plants and insects of the world"
+  },
+  {
+    "objectID": "SKYWOODS/MINOR_ISLANDS.html",
+    "href": "SKYWOODS/MINOR_ISLANDS.html",
+    "title": "Minor islands",
+    "section": "",
+    "text": "Floating around the Central island are the minor islands. They are constantly moving making it impossible to travel by foot.\n\nTo travel to an Island the PCs either need a method to travel a few miles through the sky in incredibly windy conditions or ask a MERCHANT for transport. A MERCHANT will help the PCs to get to the island and back via their BIRD HOUSE every other day. In other words the PCs have a rest day after coming back from one island."
+  },
+  {
+    "objectID": "SKYWOODS/QUESTS.html",
+    "href": "SKYWOODS/QUESTS.html",
+    "title": "Quests",
+    "section": "",
+    "text": "Bab and Yaga will help the players by building a Bird house for them. They want Amazonia stopped and see potential in the PCs.\nThe Bird house is a chimera of birds and house. Being able to travel by leg and wings they are invaluable to the traders and will be invaluable to the PCs.\nHowever, Bab needs the birds and will therefore set the players to gather one at a time, the PCs choosing which one to go on. These quests are:\n\nGet a TROLL VULTURES from Gourd Island for its large wings\nGet a Lyrebird from Fork Island to be able to communicate with the house\nGet a White Stork from Tryp Island for it ability to rebuild itself\nGet an Elephant bird from Jungle Island for its large and strong legs"
+  },
+  {
+    "objectID": "SKYWOODS/SKYWOODS.html",
+    "href": "SKYWOODS/SKYWOODS.html",
+    "title": "Skywoods",
+    "section": "",
+    "text": "The Skywoods is an archipelago of sky bound islands high above the Windwoods. Their unnaturally flat tops bely their true origin, upside down mountain tips. They come from the mountains of the Redwoods, now a range of mesas. The floating Islands’ previous lives are evident by their foundations, rough and tapering to the once mountain tip."
+  },
+  {
+    "objectID": "SKYWOODS/SKYWOODS.html#summary",
+    "href": "SKYWOODS/SKYWOODS.html#summary",
+    "title": "Skywoods",
+    "section": "Summary",
+    "text": "Summary\nThis area is a mini-sandbox and sets up the rest of the Dendrosphaera. The start and end are planned with a large amount of freedom for the players and PCs in the middle. \nThe team needs to traverse the Dendrosphaera to stop Amazonia. However, they need a travelling base to do this. They have come to the Skywoods to get a Bird house built by Bab and Yaga. \nThe team will need to capture birds from the various floating islands to allow Bab to combine birds with the house that Yaga builds. Between excursions the team are encouraged to get to know the denizens of Summitville. This may provide them upgrades to their Bird house.\nAfter the team has captured all the birds required, but just before the Bird house is finished. The Doppelganger Dunes mercenary force will attack the Central Island. They will force the villagers to evacuate and they will steal the Island, bringing it to the Sandwoods.\nThe team should help during the evacuation and eventually be able to escape with their completed Bird house. Their next port of call will be the area directly below the Skywoods, the Windwoods."
+  },
+  {
+    "objectID": "SKYWOODS/SKYWOODS.html#protection-from-amazonia",
+    "href": "SKYWOODS/SKYWOODS.html#protection-from-amazonia",
+    "title": "Skywoods",
+    "section": "Protection from Amazonia",
+    "text": "Protection from Amazonia\n\n\n\nOne solace the inhabitants of these sky Islands have is the high winds. Although inconvenient in many ways, it has kept AMAZONIA away as her drones cannot fly in the high winds. However, there are rumours of mercenaries descending on this world who are more than happy to obey AMAZONIA commands with monetary payment."
+  },
+  {
+    "objectID": "SKYWOODS/SKYWOODS.html#map",
+    "href": "SKYWOODS/SKYWOODS.html#map",
+    "title": "Skywoods",
+    "section": "Map",
+    "text": "Map"
+  },
+  {
+    "objectID": "SKYWOODS/TRYP_ISLAND.html",
+    "href": "SKYWOODS/TRYP_ISLAND.html",
+    "title": "Tryp island",
+    "section": "",
+    "text": "The island’s surface is littered with large holes. These lead to one large hole found at the very bottom. These tunnels act as a wind funnel, air sucked from the bottom and blown out the surface.\nThe strong upward winds cause many rocks and clods of dirt to float up in the air.\nWhite storks are able to construct strong nests of rocks, dirt, & wood. These houses are tied to the incredibly tall giant groundsels that wave erratically in the wind.\n\nThe White storks feed on bugs that are sucked up by the massive hole at the bottom of the island. They also eat voles and frogs found on the surface of the Island as well as hunting on the surrounding islands."
+  },
+  {
+    "objectID": "WATERWOODS/CGC.html",
+    "href": "WATERWOODS/CGC.html",
+    "title": "CGC",
+    "section": "",
+    "text": "The Waterwoods facility is run by Dr. Rangi Doshi of the CGC. He and his team created the Horseshoe Crab Mutants for research purposes. However, he would also torture the creatures.\nPUML helped Farrier (the BROODING HORSESHOE CRAB) and killed Dr. Rangi Doshi. However, he was resurrected through an experimental procedure where his DNA was combined with the last sample Farrier’s blood the CGC had. He is now part human and part Horseshoe crab.\nHe wants to capture Farrier for her restorative blood and to study her to see if he can make himself more human.\nIn his new form he is able to give psychic commands and has engineered the CYBORG ABYSSAL BUTTERCUPS so he directly communicates with them. Additionally, he has a variety of other genetically manipulated creatures.\nHe captures and mind controls individuals with his CYBORG ABYSSAL BUTTERCUP. He then uses these for a variety of purposes including:"
+  },
+  {
+    "objectID": "WATERWOODS/CGC.html#cgc-forces",
+    "href": "WATERWOODS/CGC.html#cgc-forces",
+    "title": "CGC",
+    "section": "CGC forces",
+    "text": "CGC forces\nOther stats of CGC forces can be found on the Primeval deities website:\n\nCGC SCIENTIST\nCGC SECURITY"
+  },
+  {
+    "objectID": "WATERWOODS/CGC.html#mosquito-woodpecker-swarm",
+    "href": "WATERWOODS/CGC.html#mosquito-woodpecker-swarm",
+    "title": "CGC",
+    "section": "MOSQUITO WOODPECKER SWARM",
+    "text": "MOSQUITO WOODPECKER SWARM\n3 HP | 0 ARMOR | EYES : -1 | JAWS : +1 | LIMBS : +1 | NERVES : 0\n\n5-10 Incredibly small woodpeckers the size of small Hummingbirds\nDiamond tipped beaks\nMarrow peck (1D6 DAMAGE)\n\nMARROW-DRINKERS: MOSQUITO WOODPECKERS were bioengineered to feed on the bone marrow of animals. They swarm over their victim’s limbs, piercing skin, flesh, and bone with their hammering beaks to extract the marrow. Only body armour reduces their damage.\nWhen using their marrow peck:\n\nThey lose 1HP if they roll a 1 for DAMAGE\nThey reduce the target’s body armour durability by 1 when they roll a 6 for DAMAGE. If the target has no body armour they lose marrow and gain disadvantage on all JAWS checks till mission end."
+  },
+  {
+    "objectID": "WATERWOODS/CGC.html#dr.-rangi-doshi",
+    "href": "WATERWOODS/CGC.html#dr.-rangi-doshi",
+    "title": "CGC",
+    "section": "DR. RANGI DOSHI",
+    "text": "DR. RANGI DOSHI\n10 HP | 2 ARMOR | EYES : +2 | JAWS : 0 | LIMBS : -1 | NERVES : +2\n\nHumanoid Human Horseshoe crab chimera\nHard exoskeleton (2 ARMOR)\n6 long Horseshoe crab like limbs stick out his back\n2 Blade arms (1D6+1 DAMAGE)\n4 used as legs, human legs lighted off the ground\nBioresonance stun rifle (NON-LETHAL)\nContainer of CYBORG ABYSSAL BUTTERCUPS\n\nDOCTOR-HORSESHOE-CRAB: A sadistic scientist morphed by his experiments, now part Horseshoe crab after his first death. He loves nothing more than to bring other creatures under his control. When within touch of an unconscious creature he can apply one of his CYBORG ABYSSAL BUTTERCUPS to their head. These creatures are then under the mind control of Dr. Rangi Doshi through his telepathy.\nNON-LETHAL weapon tag: Does not deal DAMAGE; has a 3-in-1D6 chance to knock unconscious on a success. (F:UE)"
+  },
+  {
+    "objectID": "WATERWOODS/CGC.html#cyborg-abyssal-buttercup",
+    "href": "WATERWOODS/CGC.html#cyborg-abyssal-buttercup",
+    "title": "CGC",
+    "section": "CYBORG ABYSSAL BUTTERCUP",
+    "text": "CYBORG ABYSSAL BUTTERCUP\n2 HP | 0 ARMOR | EYES : 0 | JAWS : -1 | LIMBS : 0 | NERVES : -2\n\nLand bound sea anemone\nSimilar in size and shape of a small drinking glass\nFound in a variety of different colours shapes, sizes, and colours\nFlower like stinging tentacles (1 DAMAGE)\nSurface covered in circuit board like pattern\n\nMINDJACKER: These miniaturised ABYSSAL BUTTERCUPS have been infused with cybernetics. Once applied to an organism it is under the control of the CYBORG ABYSSAL BUTTERCUPS who is in turn controlled by its user. Over time the CYBORG ABYSSAL BUTTERCUP will meld into its host leaving what appears to be an elevated flower garland tattoo with a circuit board like pattern.\nThe one fatal flaw is that CYBORG ABYSSAL BUTTERCUPS easily dry out outside of wet and humid conditions, whether melded or not."
+  },
+  {
+    "objectID": "WATERWOODS/WATERWOODS.html",
+    "href": "WATERWOODS/WATERWOODS.html",
+    "title": "Waterwoods",
+    "section": "",
+    "text": "A sea full of sea weed\nMain base is the CGC’s underwater research station where they grow and make more cyborg abyssal buttercups\nWaters fill with Horseshoe crab mutants mind controlled by the CGC, even includes a BROODING HORSESHOE CRAB MUTANT\nOther bases include:\n\nOil rig (Kraken run)\nShore based fish farm\n\nTo make their bird house able to swim they will need to capture a rockhopper penguin like creature on a stony island"
+  },
+  {
+    "objectID": "WINDWOODS/AMBROSIAS_AXOLOTLS.html",
+    "href": "WINDWOODS/AMBROSIAS_AXOLOTLS.html",
+    "title": "Ambrosia’s Axolotls",
+    "section": "",
+    "text": "AMBROSIA is an aggressive Axolotl-like humanoid. She takes advantage of her and her team’s regenerative ability by acting as close combat shock troops. What they lack in strength they make up for in power armor."
+  },
+  {
+    "objectID": "WINDWOODS/AMBROSIAS_AXOLOTLS.html#axolotl-partisan",
+    "href": "WINDWOODS/AMBROSIAS_AXOLOTLS.html#axolotl-partisan",
+    "title": "Ambrosia’s Axolotls",
+    "section": "AXOLOTL PARTISAN",
+    "text": "AXOLOTL PARTISAN\n3 HP | 2 ARMOR | EYES : -2 | JAWS : 0 | LIMBS : -1 | NERVES : +1\n\nDual gauntlet machine guns (1D6+1 DAMAGE)\nLarge axe (1D6+1 DAMAGE)\nPower armor (2 ARMOR)\nTail (accessory)\nAxolotl like humanoid\nFearless and feels no pain\nLike puns related to limbs, tails, and heads\nNames: Charlie, Flamel, Galahad, & Lazarus\n\nLIVING ARMOR: Although they love to fight their first priority is to look after their allies. First they try to violently pull aggro from the enemies. If that fails they will shield their allies with their own bodies.\nAllies fighting with one or more AXOLOTL PARTISANS gain 1 ARMOR.\nAn AXOLOTL PARTISAN does not die at 0HP. They die if they take damage at 0 HP or if they sustain enough DAMAGE to go to -3 HP. They regain all lost body parts at the end of a mission."
+  },
+  {
+    "objectID": "WINDWOODS/AMBROSIAS_AXOLOTLS.html#ambrosia",
+    "href": "WINDWOODS/AMBROSIAS_AXOLOTLS.html#ambrosia",
+    "title": "Ambrosia’s Axolotls",
+    "section": "AMBROSIA",
+    "text": "AMBROSIA\n6 HP | 3 ARMOR | EYES : -1 | JAWS : +1 | LIMBS : 0 | NERVES : +1\n\nGauntlet ultra-shotgun (2D6 DAMAGE)\nEnergy axe (1D6+2 DAMAGE)\nSeeker missile back back (deals 1D6 DAMAGE to 1D6 different flying targets, 1 use)\nHead covered in a black metal helmet with holes for their feathery red gills (1 ARMOR, accessory)\nTail (accessory)\nPower armor (2 ARMOR)\nAxolotl like humanoid\nFearless and feels no pain\nCatchphrase of aggression: “Shove it up your gills!”\n\nLIVING TANK: AMBROSIA is a self healing murder machine. She never wavers and never stops killing. Although she can be brought down she always gets back up.\nEnemies fighting against AMBROSIA and her allies are dealt +1 DAMAGE on attacks.\nAMBROSIA does not die at 0 HP. She dies if she sustains enough DAMAGE to go to -6 HP. She regains all lost body parts at the end of a mission."
+  },
+  {
+    "objectID": "WINDWOODS/CHAPPIES_CUCKOOS.html",
+    "href": "WINDWOODS/CHAPPIES_CUCKOOS.html",
+    "title": "Chappie’s Cuckoos",
+    "section": "",
+    "text": "Chappie and his Cuckoo partisans act as an infiltration and sabotage team. Chappie is the leader and brains of the team whilst the Cuckoo partisans go undercover within the enemy ranks. If intel gathering is all that is needed then Chappie won’t be required. However if destruction is required Chappie will use his explosives. With his explosives and driving skills he can also rescue any of his Cuckoo partisans that may be captured.\nWhen the whole team of 5 are in Chappie’s All terrain armored pickup truck they make a deadly unit on roads and open ground of all terrain."
+  },
+  {
+    "objectID": "WINDWOODS/CHAPPIES_CUCKOOS.html#cuckoo-partisan",
+    "href": "WINDWOODS/CHAPPIES_CUCKOOS.html#cuckoo-partisan",
+    "title": "Chappie’s Cuckoos",
+    "section": "CUCKOO PARTISAN",
+    "text": "CUCKOO PARTISAN\n4 HP | 1 ARMOR | EYES : 0 | JAWS : -2 | LIMBS : +1 | NERVES : +1\n\nSubmachine gun (1D6 DAMAGE)\nCrowbar (1D6 DAMAGE)\nTactical clothing (1 ARMOR)\nKnock-out injection (1 use)\nCuckoo like humanoid\nCommunicate to each other in a secret language based on whistles, flutes, and hiccups\nNames: Malkoha, Koel, Anni, &  Turaco\n\nSELF-SABOTAGE: An expert in mimicry they could be excellent spies. Unfortunately they are prone to rely on their ability and can be lazy when it comes to learning new skills and knowledge for a role. They like to take direct approaches if possible, moving into loud and violent action when caught.\nLOUD-MIMIC (Boss move): The CUCKOO PARTISAN can take on the appearance and speech of an individual they are touching. Their disguise is near perfect but may be noticed by the fact they tend to be slightly louder and larger than the individual they are mimicking."
+  },
+  {
+    "objectID": "WINDWOODS/CHAPPIES_CUCKOOS.html#chappie",
+    "href": "WINDWOODS/CHAPPIES_CUCKOOS.html#chappie",
+    "title": "Chappie’s Cuckoos",
+    "section": "CHAPPIE",
+    "text": "CHAPPIE\n8 HP | 1 ARMOR | EYES : +1 | JAWS : -1 | LIMBS : +1 | NERVES : 0\n\nHand cannon (1D6+1 DAMAGE)\nBandolier of dynamite sticks (5 dynamite sticks, 2D6 DAMAGE)\nBag of caltrop tire spikes (1 use)\nBulletproof vest (1 ARMOR)\nRacing helmet (accessory)\nWeathered yellow jacket adorned with patches depicting explosions\nRoadrunner like humanoid\nExcellent driver, drives the ALL TERRAIN ARMORED PICKUP TRUCK\nWearing purple and blue slap bracelets\nCatchphrase of enthusiasm: “Slap slap, boom boom!”\n\nROAD-WORKER: CHAPPIE is a master driver of all terrains. However, he has a supernatural trick up his sleeves if his natural skills cannot overcome an obstacle.\nROAD-WORKER (Boss move): CHAPPIE can cause the terrain in front of his vehicle to form into a wide road. Whether over dirt, sand, lava or water, or even through a mountain this ability is invaluable. This lasts up to 1 minute with the terrain behind him quickly returning to its original state as he goes."
+  },
+  {
+    "objectID": "WINDWOODS/CHAPPIES_CUCKOOS.html#all-terrain-armored-pickup-truck",
+    "href": "WINDWOODS/CHAPPIES_CUCKOOS.html#all-terrain-armored-pickup-truck",
+    "title": "Chappie’s Cuckoos",
+    "section": "ALL TERRAIN ARMORED PICKUP TRUCK",
+    "text": "ALL TERRAIN ARMORED PICKUP TRUCK\n10 HP | 3 ARMOR with 2 mounted heavy guns in the bed (1D6+2 DAMAGE)"
+  },
+  {
+    "objectID": "WINDWOODS/ELEKTRAS_EVERGREENS.html",
+    "href": "WINDWOODS/ELEKTRAS_EVERGREENS.html",
+    "title": "Elektra’s Evergreens",
+    "section": "",
+    "text": "Elektra is an Amberborn. Once a human, she died fighting off Amazonia’s forces. Her body was brought to the Great Redwood where she was resurrected from a cocoon of its red amber. She is now made of red wood and sap.\nShe is a very curt and calm person preferring to keep her energy for the fight. However, she cannot bear to see the trees be harmed and lets her emotions cloud her reasoning when she witnesses their harm.\nElektra and her snakey Evergreens act as a quick and fast recon team. Outside of recon they are skilled medics and rescuers, Elektra able to quickly get a single person out of harm whilst her Partisans have shamanic powers."
+  },
+  {
+    "objectID": "WINDWOODS/ELEKTRAS_EVERGREENS.html#evergreen-partisan",
+    "href": "WINDWOODS/ELEKTRAS_EVERGREENS.html#evergreen-partisan",
+    "title": "Elektra’s Evergreens",
+    "section": "EVERGREEN PARTISAN",
+    "text": "EVERGREEN PARTISAN\n3 HP | 1 ARMOR | EYES : +1 | JAWS : -1 | LIMBS : 0 | NERVES : +1\n\nBow (1D6 DAMAGE)\nCaduceus spear (1D6+1 DAMAGE, MEDICAL)\nScales adorned helmet (1 ARMOR, accessory)\nLithe venom-less snake like humanoid with arms but no legs\nColouration of a Kingsnake (red, black, yellow, black, red….) which is similar to deadly coral snake\n\n“Red on yellow, kill a fellow, red on black, friend of jack”\n\nExcellent tree climbers\nCamouflage cloak made from their moulted skin\nNames: Greer, Mole, Ruthven, & Speckles\n\nREMEDY: These scouts have studied the ways of shamanism. Although they will fight when needed they prefer to be pacifists.\nWhen the PCs use their rendezvous point each EVERGREEN PARTISAN present can heal 1 present person for +1D6 HP. A person can only be healed once per rendezvous point in this manner.\nMEDICAL weapon tag: Once per mission, you may use this weapon to deal negative DAMAGE, healing the target."
+  },
+  {
+    "objectID": "WINDWOODS/ELEKTRAS_EVERGREENS.html#elektra",
+    "href": "WINDWOODS/ELEKTRAS_EVERGREENS.html#elektra",
+    "title": "Elektra’s Evergreens",
+    "section": "ELEKTRA",
+    "text": "ELEKTRA\n6 HP | 1 ARMOR | EYES : +1  | JAWS : 0 | LIMBS : +2 | NERVES : +1\n\nRedwood bolt-action rifle (1D6+1 DAMAGE, SEED BULLET)\nBayonet (1D6 DAMAGE)\nFoliage covered helmet (1 ARMOR, accessory)\nOnce human now a humanoid made of the wood and sap of a Great redwood\nWears a red poncho with a tree ring pattern.\nCatchphrase of acknowledgement: “Oakie sequoia”\n\nTREE-WALKER: An Amberborn who is particularly in tune with nature. She is able to walk into large vegetation such as trees. She is able to move to different parts of the vegetation, easily allowing her to gain a vantage point on a tree. Additionally she can travel from vegetation to vegetation via their roots.\nSEED BULLET weapon tag: Once per mission shoot vegetation to make it immediately & rapidly grow."
+  },
+  {
+    "objectID": "WINDWOODS/FOSSIL_REEF_DENIZENS.html#robbert",
+    "href": "WINDWOODS/FOSSIL_REEF_DENIZENS.html#robbert",
+    "title": "Fossil reef denizens",
+    "section": "Robbert",
+    "text": "Robbert\n\n\n\nRobbert is an Elder octonut crab situated in the CRAB location.\n\nELDER OCTONUT CRAB\n12 HP | 2 ARMOR | EYES : 1 | JAWS : 2 | LIMBS : 0 | BRAINS : 2\n\n2m tall & 8 m wide (leg tip to leg tip) Coconut crab\nFusion of Coconut crab & Coconut octopus (physiologically & mentally)\nEyes of Octopus\nMouth area is the tentacle and beak of Octopus\nClaw strike (1D6+2 DAMAGE)\nHard exoskeleton adorned with a backward facing shell of a Rusty horseshoe crab (2 ARMOR)\nPhilosophical & slow decision makers\nExcellent climber\nKeen sense of smell\n\nLETHARGIC: The combination of crab and octopus used to hunger for food. Now it is old and fasting, no longer needing to grow. Now it wishes to feed wisdom to others. They are surprisingly stealthy, able to burrow and live under the surface for days at a time.\n\n\nPuzzle\nThe players must figure out the 4 groups of 4 connected words. They have a total of 8 guesses.\n\n\n\nFLOAT\nCANCERISATION\nTENTACLE\nMILK\n\n\nHORSESHOE\nSPIDER\nTREE\nLOBSTER\n\n\nMOLLUSC\nBLUE RING\nCANCER\nTHREE HEARTS\n\n\nFIDDLER\nPALM\nGHOST\nHERMIT\n\n\n\nThe groups are:\n\nCrabs: FIDDLER, SPIDER, GHOST, CANCER\nNot true crabs: HORSESHOE, CARCINISATION, HERMIT, LOBSTER\nOctopuses: BLUE RING, TENTACLE, THREE HEARTS, MOLLUSC\nCoconut: PALM, MILK, FLOAT, TREE\n\nAfter each mistake Robbert gives a clue:\n\nOne group may look like the other but truly they are not\nOf the groups I am 2 and eat one\nI am not a true crab and neither is that which I adorn"
+  },
+  {
+    "objectID": "WINDWOODS/GEOLOGY_AND_LIFE.html",
+    "href": "WINDWOODS/GEOLOGY_AND_LIFE.html",
+    "title": "Geology and life",
+    "section": "",
+    "text": "There is little cover from the gales of the plains; the only respite are fossilised coral. Fossil reefs of massive dead coral act as cover but also as natural barriers for land travel. Once devoid of colour now full of cover due to the Flytoplankton that cover them."
+  },
+  {
+    "objectID": "WINDWOODS/GEOLOGY_AND_LIFE.html#fossil-reefs",
+    "href": "WINDWOODS/GEOLOGY_AND_LIFE.html#fossil-reefs",
+    "title": "Geology and life",
+    "section": "",
+    "text": "There is little cover from the gales of the plains; the only respite are fossilised coral. Fossil reefs of massive dead coral act as cover but also as natural barriers for land travel. Once devoid of colour now full of cover due to the Flytoplankton that cover them."
+  },
+  {
+    "objectID": "WINDWOODS/GEOLOGY_AND_LIFE.html#flytoplankton",
+    "href": "WINDWOODS/GEOLOGY_AND_LIFE.html#flytoplankton",
+    "title": "Geology and life",
+    "section": "Flytoplankton",
+    "text": "Flytoplankton\n\n\n\nSwarms of Flytoplankton are carried in the winds amongst the dust, sand, and other detritus. When in sufficient concentrations they can be seen as a green, yellow, and red haze. They are a form of photosynthesising phytoplankton, harmless but irritating.\nThese are a new addition to the lands, accidently brought in by Amazonia’s forces. This is causing the increased populations of other local lifeforms."
+  },
+  {
+    "objectID": "WINDWOODS/GEOLOGY_AND_LIFE.html#piddocks",
+    "href": "WINDWOODS/GEOLOGY_AND_LIFE.html#piddocks",
+    "title": "Geology and life",
+    "section": "Piddocks",
+    "text": "Piddocks\n\n\n\nPiddocks, clam like creatures, drill into holes in rocks. From here they use their tongues to collect any windborne food, such as Flytoplankton.\nThey are immune to the stings of the travelling Tumble jellies and so release their eggs and sperm on them. The eggs are fertilised and grow on the Tumble jellies, the resulting Piddocks jumping off when they detect an appropriate rock."
+  },
+  {
+    "objectID": "WINDWOODS/GEOLOGY_AND_LIFE.html#flying-raccoons",
+    "href": "WINDWOODS/GEOLOGY_AND_LIFE.html#flying-raccoons",
+    "title": "Geology and life",
+    "section": "Flying raccoons",
+    "text": "Flying raccoons\n\n\n\nFlying raccoons are raccoons able to glide in the same way as Flying squirrels, with their patagium. They primarily eat Piddocks but have found easier food by raiding the stores of the Resistance. They are slippery creatures able to quickly escape in the high winds and retreat to their homes in the Fossil reefs."
+  },
+  {
+    "objectID": "WINDWOODS/GEOLOGY_AND_LIFE.html#tumble-jellies",
+    "href": "WINDWOODS/GEOLOGY_AND_LIFE.html#tumble-jellies",
+    "title": "Geology and life",
+    "section": "Tumble jellies",
+    "text": "Tumble jellies\n\n\n\nTumble jellies are desiccated jellyfish that look and act like tennis ball sized tumbleweeds when dry, small enough to blow through the air, over the plains, and through the Fossil reefs. However, they are deadly.\nOnce they touch moisture they hydrate. Any water based creature who is touched by a dry Tumble jelly for a few seconds will be stung and made numb. The Tumble jelly quickly sticks onto its prey and will eventually consume it if not removed.\nAlthough one Tumble jelly is not enough to threaten a human they tend to be blown around in smacks (a group of jellyfish). They can exist in their petrified form for years and prey on the Flying raccoons as well as other soft skinned animals."
+  },
+  {
+    "objectID": "WINDWOODS/LIMMYS_LIKEMINDED.html",
+    "href": "WINDWOODS/LIMMYS_LIKEMINDED.html",
+    "title": "Limmy’s Like-minded",
+    "section": "",
+    "text": "Limmy is a daughter and Horseshoe crab scion of Farrier the BROODING HORSESHOE CRAB MUTANT. Unlike her most of her kin LIMMY was granted separation from the hivemind but given the ability to form a hivemind with ten other Horseshoe crabs.\nHer human Like-minded partisans are outfitted with a symbiotic Horseshoe crab that gives them a powerful exoskeleton. Additionally, it allows the team to communicate telepathically.\nShe utilises 4 other Horseshoe crabs as extensions of her body. Each one controls captured drones, their computer replaced with an analog system able to be controlled with ten legs. They are her Kelpies.\nHer team makes an excellent land and sea squad."
+  },
+  {
+    "objectID": "WINDWOODS/LIMMYS_LIKEMINDED.html#like-minded-partisan",
+    "href": "WINDWOODS/LIMMYS_LIKEMINDED.html#like-minded-partisan",
+    "title": "Limmy’s Like-minded",
+    "section": "LIKE-MINDED PARTISAN",
+    "text": "LIKE-MINDED PARTISAN\n4 HP | 2 ARMOR | EYES : -2 | JAWS : -1 | LIMBS : +1 | NERVES : +1\n\nNeedlegun, flechette based assault rifle that works in air or water (1D6+1 DAMAGE)\nRetractable claws (1D6+1 DAMAGE)\nRetractable Horseshoe crab exoskeleton (2 ARMOR)\nBack thruster for quick aquatic movement\nHuman with a symbiotic horseshoe crab grafted into their back\nNames: Dannie, Teddie, Jaimie, & Eddie\n\nSHOD: These humans have fused with a MUTANT HORSESHOE CRAB in a form of symbiosis. Their ability to breathe air or water makes them highly suited to land and sea combat. Additionally, they are able to telepathically communicate to each other and their leader (LIMMY)."
+  },
+  {
+    "objectID": "WINDWOODS/LIMMYS_LIKEMINDED.html#limmy",
+    "href": "WINDWOODS/LIMMYS_LIKEMINDED.html#limmy",
+    "title": "Limmy’s Like-minded",
+    "section": "LIMMY",
+    "text": "LIMMY\n6 HP | 1 ARMOR | EYES : +2 | JAWS : 0 | LIMBS : +1 | NERVES : +1\n\nBlade arms (1D6 DAMAGE)\nCarapace (1 ARMOR)\nA 1.8 metre tall horseshoe crab in a humanoid shape\nWears a necklace made of AMAZONIA drone parts\nIn control of 4 KELPIES\nCatchphrase of annoyance: Crabsticks!\n\nDECAKRANIO: LIMMY is a Horseshoe crab scion, daughter of Farrier a hivemind forming HORSESHOE CRAB MUTANT. However Scions are given independence and have the ability to mind link with up to 10 other Horseshoe crabs.\nShe uses this to telepathically communicate with her LIKE-MINDED PARTISANS. \nShe uses her KELPIES as remote extensions of herself."
+  },
+  {
+    "objectID": "WINDWOODS/LIMMYS_LIKEMINDED.html#kelpies",
+    "href": "WINDWOODS/LIMMYS_LIKEMINDED.html#kelpies",
+    "title": "Limmy’s Like-minded",
+    "section": "KELPIES",
+    "text": "KELPIES\n3 HP | EYES : -2 | JAWS : 0 | LIMBS : -2 | NERVES : -3\n\nNeedlegun, flechette based assault rifle that works in air or water (1D6+1 DAMAGE)\nManipulator arm\nDrone piloted by a small Horseshoe crab, each of its 10 legs being utilised\nAquatic and aerial functionality\n\nREIGNED-IN: The Horseshoe crabs are unintelligent beings and will instantly crash if left to their own devices. Instead they are used as remote extra appendages to control the drone by an intelligent telepathic being."
+  },
+  {
+    "objectID": "WINDWOODS/PARTISAN_GROUPS.html",
+    "href": "WINDWOODS/PARTISAN_GROUPS.html",
+    "title": "Partisan groups",
+    "section": "",
+    "text": "Partisans are the military fighters of the Resistance. They are organised into groups of 4 Partisans and one Partisan leader.\nPartisans are normal denizens of this world that have been enlisted into the Resistance.\nPartisan leaders are special and have possibly travelled to other worlds in the multiverse. They would make for a good starting ally to a PC created for a Dendrosphaera campaign or otherwise."
+  },
+  {
+    "objectID": "WINDWOODS/RESCUE_MISSION.html",
+    "href": "WINDWOODS/RESCUE_MISSION.html",
+    "title": "Resuce mission",
+    "section": "",
+    "text": "Yaga and his group of Yeti partisans went to explore a nearby Fossil reef. Something crash landed in the reef a while ago, just before the Flytoplankton appeared. Yaga’s group was sent to investigate.\nThe object that crashed was a Rustlands research container that contained:\n\nRobbert the Elder octonut crab\nThe Obsidian lava talos\nThe Abyssal buttercups\n\nA group of Sandbound doppelgangers were sent by Amazonia to retrieve any live Abyssal buttercups within the Fossil reefs. They arrived after Yaga’s group and have so far been thwarted by the Obsidian lava talos and Abyssal buttercup bound Yeti partisans."
+  },
+  {
+    "objectID": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html",
+    "href": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html",
+    "title": "Locations & map",
+    "section": "",
+    "text": "Large windy alcove\nBlocked by a large smack of Tumble jellies that are being blown into the reef"
+  },
+  {
+    "objectID": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#arch",
+    "href": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#arch",
+    "title": "Locations & map",
+    "section": "",
+    "text": "Large windy alcove\nBlocked by a large smack of Tumble jellies that are being blown into the reef"
+  },
+  {
+    "objectID": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#crab",
+    "href": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#crab",
+    "title": "Locations & map",
+    "section": "CRAB",
+    "text": "CRAB\n\nRobbert the Elder octonut crab blocks the path to the GARDEN\nHe will pose a connection puzzle to the group. If they get it correct he will move out of the way."
+  },
+  {
+    "objectID": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#burnacles",
+    "href": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#burnacles",
+    "title": "Locations & map",
+    "section": "BURNACLES",
+    "text": "BURNACLES\n\nAn opening in the reef\nPoor visibility due to a large swarm of Flytoplankton landing in the area.\nTop and bottom of the area is split in half by a large rocky ridge covered in"
+  },
+  {
+    "objectID": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#burnacles.",
+    "href": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#burnacles.",
+    "title": "Locations & map",
+    "section": "BURNACLES.",
+    "text": "BURNACLES.\n\nBurnacles shoot fire onto those that disturb them. Individuals haphazardly traversing the Rocky ridge suffer 1D6 DAMAGE.\nAbyssal buttercups can be seen preying on Burnacles by observant individuals"
+  },
+  {
+    "objectID": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#nest-1",
+    "href": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#nest-1",
+    "title": "Locations & map",
+    "section": "NEST 1",
+    "text": "NEST 1\n\nA nest of Flying raccoons\nThe creatures are fairly intelligent and will trade their treasures (listed below) for food and other items they deem to have to have similar or higher value of similar value.\nLaser pistol (1D6 DAMAGE, LUCKY)\n\nLUCKY weapon tag: Rolling an ultra success while attacking with this weapon grants the user one PRIMAL DIE. (F:UE)\n\nMedkit (+1D6+TAC HP)\nDynamite stick (2D6 DAMAGE)"
+  },
+  {
+    "objectID": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#camp",
+    "href": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#camp",
+    "title": "Locations & map",
+    "section": "CAMP",
+    "text": "CAMP\n\nOpening containing a makeshift camp of 1D6+1 Sandbound Doppelganger who are waiting for backup\n2 smaller tents flanking a larger tent\nA captured and bound Yeti partisan is within the larger tent along with\nBurnt and injured Sandbound Doppelganger within small tents\nThe path to the GARDEN has been barricaded with a dirt and fossilised coral structure"
+  },
+  {
+    "objectID": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#garden",
+    "href": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#garden",
+    "title": "Locations & map",
+    "section": "GARDEN",
+    "text": "GARDEN\n\nThe crash site where a Rustlands research container was accidentally dropped from a CGC vessel\nHot and hazy\nA mini volcano formed due to the presence of the Obsidian lava talos\nAbyssal buttercups grow on the mini volcano that the Talos and Yeti partisans take care of and protect\n3 Yeti partisans are bound to Abyssal buttercups"
+  },
+  {
+    "objectID": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#nest-2",
+    "href": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#nest-2",
+    "title": "Locations & map",
+    "section": "NEST 2",
+    "text": "NEST 2\n\nA second nest of Flying racoons\nA heavily injured Yaga has befriended the Flying racoons who have been bringing him supplies"
+  },
+  {
+    "objectID": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#paths",
+    "href": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#paths",
+    "title": "Locations & map",
+    "section": "PATHS",
+    "text": "PATHS\n\nThe paths from and to the nests are small tunnels that are difficult to spot. They can be crawled through by human sized creatures.\nOther paths are large and obvious"
+  },
+  {
+    "objectID": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#map",
+    "href": "WINDWOODS/RESCUE_MISSION_LOCATIONS.html#map",
+    "title": "Locations & map",
+    "section": "Map",
+    "text": "Map"
+  },
+  {
+    "objectID": "WINDWOODS/SYMINS_SQUATTERS.html",
+    "href": "WINDWOODS/SYMINS_SQUATTERS.html",
+    "title": "Symin’s Squatters",
+    "section": "",
+    "text": "The ever dour Symin is constantly exasperated by the adoration of their human Squatter partisans. Symin is a Lick-kin, a sentient being grown from Lichen and a tree. The Lichen makes the “flesh” whilst the living wood acts as bones. Lich-kin take on many forms some similar to animals and plants whilst others may be abstract. Symin takes on a vaguely humanoid shape.\nThe Squatter partisans adore andemulate Lich-kin. They grow lichen on their skin and have formed a symbiotic relationship with their colony. They have highly honed abilities in camouflage & patience. They make a brilliant, if contrasting, group of snipers."
+  },
+  {
+    "objectID": "WINDWOODS/SYMINS_SQUATTERS.html#squatter-partisan",
+    "href": "WINDWOODS/SYMINS_SQUATTERS.html#squatter-partisan",
+    "title": "Symin’s Squatters",
+    "section": "SQUATTER PARTISAN",
+    "text": "SQUATTER PARTISAN\n3 HP | 0 ARMOR | EYES : +1  | JAWS : 0 | LIMBS : -1 | NERVES : 0\n\nSniper rifle (1D6+2 DAMAGE)\nGrenade tripwire trap (1 use, 1D6+1 DAMAGE)\nRecon thermal binocular\nA human whose skin looks like and is part lichen\nOnly wears minimal clothing\nNames: Bark, Rock, Tombstone, & Tree\n\nLICH-SKIN: The SQUATTER PARTISANS combine their skin with the best Lichen colony they can find. This lichen acts as camouflage and produces energy via photosynthesis. The Lichen gains resources and a suitable substrate to live upon.\nSQUATTER PARTISANS can change the colour of their lich-skin to match the local flora. They are indistinguishable from lichen in sight (visible & thermal) and smell when they lay still."
+  },
+  {
+    "objectID": "WINDWOODS/SYMINS_SQUATTERS.html#symin",
+    "href": "WINDWOODS/SYMINS_SQUATTERS.html#symin",
+    "title": "Symin’s Squatters",
+    "section": "SYMIN",
+    "text": "SYMIN\n6 HP | 0 ARMOR | EYES : +3  | JAWS : +1  | LIMBS : -1 | NERVES : -1\n\nAnti-material rifle (1D6+2 DAMAGE, ANTI-MATERIEL)\nHand cannon (1D6+1 DAMAGE)\nAnti-drone homing missile pack (4 uses, 1D6+2 DAMAGE)\nSmoke grenade (1 use)\nRecon thermal binocular\nA humanoid Lich-kin made of lichen and wood\nWears nothing but an expensive broken watch with a leather strap\nCatchphrase of despair: “Division destroys all”\n\nOMNIPRESENT: SYMIN is a master of camouflage. As a Lich-kin made of Lichen and wood they easily blend into any areas with vegetation, able to change their appearance in colour and texture.\nConsisting of tree, fungi, and algae they can sense the world through these organisms. Whilst touching a tree, fungi, or algae it can sense the world through their networks up to a distance of 100m.\nANTI-MATERIEL weapon tag: Deals double DAMAGE to vehicles and structures; cumbersome to carry around. (F:UE)"
+  },
+  {
+    "objectID": "WINDWOODS/THE_RESISTANCE.html",
+    "href": "WINDWOODS/THE_RESISTANCE.html",
+    "title": "The Resistance",
+    "section": "",
+    "text": "The Resistance aims to stop the exploitation and colonisation of the Dendrosphaera by Amazonia. This is an incredibly difficult task due to the technological divide. Thankfully the Dendrosphaera is infused with blessings of the Primeval Deities, especially Gaia’s.\nThe Resistance have hired many mercenary teams from PUML. PUML are an interdimensional mercenary group that try to keep balance across the multiverse. The PCs’ team is either part of PUML are have been hired by PUML.\nThe Resistance have many fires to fight including:"
+  },
+  {
+    "objectID": "WINDWOODS/THE_RESISTANCE.html#high-command",
+    "href": "WINDWOODS/THE_RESISTANCE.html#high-command",
+    "title": "The Resistance",
+    "section": "HIGH COMMAND",
+    "text": "HIGH COMMAND\nThe Resistance’s high command is found in the DOT (the Domain of Tartarus). The Primeval deity of Earth, Tartarus, has granted them a special area of the DOT that is devoid of any danger and in complete control by the Resistance. Only one permanent opening, a Jaw of Tartarus, is present in the Windwoods.\nThe area within the DOT is a large open cavern with dripping stalagmites. The area is constantly filled with the sound of music and the smell of cooking. Many Bird houses can be seen leaving and returning through various cave mouths. These mouths are guarded by Resistance Partisans. All that are capable are helping the Resistance now. Any thought that Amazonia may spare their way of living has been dashed by the stealing of the Central island in the Skywoods, if that wasn’t safe then no one is.\nAside from the Bird houses many tents are set up. They serve the dual purpose of living arrangements and water collection from the dripping cave ceiling. Children run and play, the elderly share stories of their homes, and the injured are treated and fed."
+  },
+  {
+    "objectID": "WINDWOODS/THE_RESISTANCE.html#paddy-patty",
+    "href": "WINDWOODS/THE_RESISTANCE.html#paddy-patty",
+    "title": "The Resistance",
+    "section": "PADDY & PATTY",
+    "text": "PADDY & PATTY\nIn a larger than normal Bird house the 2 leaders organise the Resistance. They are the father and daughter duo of Paddy and Patty, both Gigantopithicus. They truly care for this world and each other."
+  },
+  {
+    "objectID": "WINDWOODS/THE_RESISTANCE.html#fossil-reef-rescue-mission",
+    "href": "WINDWOODS/THE_RESISTANCE.html#fossil-reef-rescue-mission",
+    "title": "The Resistance",
+    "section": "FOSSIL REEF RESCUE MISSION",
+    "text": "FOSSIL REEF RESCUE MISSION\nYaga and his Yeti’s were sent on a mission but have not returned. Paddy & Patty will task the PC team to go and rescue them.\n\nJAWS OF VICTORY\nThe Jaws of victory is a device given to the Partisan leaders. Once a mission it can open a Jaw of Tartarus, a hole in the ground, that leads to High command. It takes time to open the Jaw of Tartarus and therefore can only be used in a safe location.\nThe Jaws of victory can also be used to travel from high command to any above ground location where a Jaw of Tartarus was created by any other Jaws of victory in the last 2 days.\nA Jaws of victory will be installed into the PC’s Bird house if they successfully save the Partisan group lost in the Fossil reef complete the mission given to them by Paddy & Patty."
+  },
+  {
+    "objectID": "WINDWOODS/TRAVEL_AND_ENCOUNTERS.html",
+    "href": "WINDWOODS/TRAVEL_AND_ENCOUNTERS.html",
+    "title": "Travel and Encounters",
+    "section": "",
+    "text": "The team will arrive in the Windwoods by plummeting down in their Bird house with Bab. This will leave the Bird house damaged and require the team to find the Resistance’s HQ on foot. Bab will be able to arrive at the Resistance in the Bird House later."
+  },
+  {
+    "objectID": "WINDWOODS/TRAVEL_AND_ENCOUNTERS.html#foot-travel",
+    "href": "WINDWOODS/TRAVEL_AND_ENCOUNTERS.html#foot-travel",
+    "title": "Travel and Encounters",
+    "section": "Foot travel",
+    "text": "Foot travel\nWhen the PCs travel from any one location to another by foot create a clock/tracker of 6 spaces.\nThe team must make a plan to try to find and move to their destination. Once they have a plan one player makes an appropriate action roll (or a tag team action) for the plan. This determines their success, outcomes are below:\n\nFailure: One encounter.\nPartial success: One encounter & mark one space on the clock/tracker.\nSuccess: One encounter & mark two spaces on the clock/tracker.\nUltra Success: Mark two spaces on the clock/tracker.\n\nAfter the last space is marked on the clock/tracker the team has reached their destination.\nNote: Each travel plan needs to be unique in one journey."
+  },
+  {
+    "objectID": "WINDWOODS/TRAVEL_AND_ENCOUNTERS.html#bird-house-travel",
+    "href": "WINDWOODS/TRAVEL_AND_ENCOUNTERS.html#bird-house-travel",
+    "title": "Travel and Encounters",
+    "section": "Bird house travel",
+    "text": "Bird house travel\nTravel in the Windwoods is much easier by Bird house. When travelling from one location they have only one encounter before reaching their destination."
+  },
+  {
+    "objectID": "WINDWOODS/TRAVEL_AND_ENCOUNTERS.html#encounters",
+    "href": "WINDWOODS/TRAVEL_AND_ENCOUNTERS.html#encounters",
+    "title": "Travel and Encounters",
+    "section": "Encounters",
+    "text": "Encounters\nWhen the characters travel through the Windwoods roll for an encounter.\nFirst roll a D6\n\nOn a 1-4 roll once on the encounter table. The players encounter that one group.\nOn a 5-6 roll twice (rerolling any duplicates). Both groups are meeting and the players are there whilst it happens.\n\nEncounter table:\n\nMeet a random living Merchant originally from Summitville\nA group of refugees trying to find the Resistance\nA large Fossil reef blocks the way\nA swarm of Flytoplankton are blown through in a gale making vision and hearing difficult\nFlying raccon tries to sneakily steal food\nDust devil containing a Smack of Tumble jellies"
+  },
+  {
+    "objectID": "WINDWOODS/WINDWOODS.html",
+    "href": "WINDWOODS/WINDWOODS.html",
+    "title": "Windwoods",
+    "section": "",
+    "text": "Once covered in this water this place has been stripped due to the constant storms. A cacophony of whistles are made by smooth cavity covered rocks.\nDue to the winds and bareness of the land little life used to live here. It is where the Resistance have set up base, Amazonia’s drones unable to enter the area due to the tempest. Recent changes have also made it slightly more hospitable.\nWhen the PCs enter the Windwoods their best course of action is to find the Resistance."
+  },
+  {
+    "objectID": "WINDWOODS/YAGAS_YETIS.html",
+    "href": "WINDWOODS/YAGAS_YETIS.html",
+    "title": "Yaga’s Yetis",
+    "section": "",
+    "text": "Yaga’s Yeti’s were formed quickly after the theft of the Central Island in the Skywoods. Yaga was asked to lead the Yeti partisans many times by Patty & Paddy but he wanted to work with and protect his Grandma Bab. With the theft of his home and Bab helping the PCs team Yaga knew he had to fight back too.\nHowever, although Yaga is strong he has not been a leader before and has a lot to learn. His first mission to investigate the Fossil reef goes wrong (see YAGA RESCUE MISSION). Depending on how the mission goes Yaga may become a true leader with a Flying racoon he named Missile as a team mascot.\nAlthough the Yeti partisans like and respect Yaga they start off not obeying his orders well. This is not out of malice but instead their tendency to rush into fights, guns blazing and axes swinging. They may learn the importance of teamwork and tactics whilst they are bound to the Abyssal buttercups."
+  },
+  {
+    "objectID": "WINDWOODS/YAGAS_YETIS.html#yeti-partisan",
+    "href": "WINDWOODS/YAGAS_YETIS.html#yeti-partisan",
+    "title": "Yaga’s Yetis",
+    "section": "YETI PARTISAN",
+    "text": "YETI PARTISAN\n6 HP | 1 ARMOR | EYES : 0  | JAWS : +2  | LIMBS : -1 | NERVES : -1\n\n2 Light machine guns (1D6+1 DAMAGE)\n2 Hand axes (1D6 DAMAGE)\nBulletproof vest (1 ARMOR)\nAlbino Gigantopithecus\nSiblings meatheads who like to workout together in an encouraging manner\nNames: Limbo, Maximus, Ray, & Zaius\n\nQUADRUMANIA: These grizzly bear sized Orangutan-like apes are loud, brash, and clumsy.  They can easily use 2 weapons at once. When they use 2 weapons they combine the damage of the 2 weapons. However, they can deal only a maximum of 2 DAMAGE to each enemy they hit due to their haphazard approach to aiming whilst dual wielding. The number of enemies they hit is dependent on the weapons they use and the battle situation."
+  },
+  {
+    "objectID": "WINDWOODS/YAGAS_YETIS.html#yaga-partisan-leader",
+    "href": "WINDWOODS/YAGAS_YETIS.html#yaga-partisan-leader",
+    "title": "Yaga’s Yetis",
+    "section": "YAGA (PARTISAN LEADER)",
+    "text": "YAGA (PARTISAN LEADER)\n12 HP | 2 ARMOR | EYES : +1 | JAWS : +2 | LIMBS : +1 | NERVES : 0\n\nBolt-action rifle (1D6+1 DAMAGE)\nWoodpecker axe (1D6+1 DAMAGE, BAD VIBRATIONS)\nWooden shield (0 ARMOR, accessory)\nWood and bird fused combat armor (2 ARMOR, wings capable of flight) \nTool belt full of carpentry tools\nBuilt like a log\nDressed like a lumberjack but clean shaven\n\nWOOD-WHISPERER: YAGA’s woodworking abilities are supernatural. He once died but was brought back to life by Bab bargaining with the spirit of the Redwood. Submerged into the Redwood’s sap he came back stronger, with blood made of amber, and the ability to bend wood to his word. He can sense through any wood, living or dead, that he touches.\nBAD VIBRATIONS weapon tag: This weapons’ damage dice explodes. Whenever the highest number on the damage dice is rolled, roll the damage dice again and sum the total of all dice rolls. Dice can explode multiple times."
+  }
+]
