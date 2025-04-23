@@ -1,26 +1,26 @@
 {
-    "id": "655E9F5E",
-    "path": "~/Git/NEOF_16S_workshop/16s_workshop/08-Trim_PCR_sequences.Rmd",
+    "id": "12BE5C51",
+    "path": "~/Git/NEOF_16S_workshop/16s_workshop/10-Taxonomic_assignment.Rmd",
     "project_path": null,
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "1975944845",
     "contents": "",
     "dirty": false,
-    "created": 1660740034264.0,
+    "created": 1660738942579.0,
     "source_on_save": false,
-    "relative_order": 5,
+    "relative_order": 2,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "67,0",
-        "scrollLine": "0"
+        "cursorPosition": "89,20",
+        "scrollLine": "57"
     },
     "folds": "",
-    "lastKnownWriteTime": 1660738898,
+    "lastKnownWriteTime": 1740396650,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1660738898,
+    "last_content_update": 1740396650,
     "read_only": false,
     "read_only_alternatives": []
 }
