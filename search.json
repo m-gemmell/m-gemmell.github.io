@@ -105,6 +105,27 @@
     "text": "MG Nextflow guide\n\n\n\n A quick and dirty guide on how I use Nextflow It is primarily for my use but if someone else finds it I hope it will also proof useful. Additionally, this was made with R Bookdown.\nLink: https://m-gemmell.github.io/Nextflow_guide/"
   },
   {
+    "objectID": "handy_links.html",
+    "href": "handy_links.html",
+    "title": "Handy links",
+    "section": "",
+    "text": "A place for links I find useful"
+  },
+  {
+    "objectID": "handy_links.html#r-quarto",
+    "href": "handy_links.html#r-quarto",
+    "title": "Handy links",
+    "section": "R & quarto",
+    "text": "R & quarto\n\nTidyverse homepage\nPosit cheatsheets\nrstudio4edu"
+  },
+  {
+    "objectID": "handy_links.html#images",
+    "href": "handy_links.html#images",
+    "title": "Handy links",
+    "section": "Images",
+    "text": "Images\n\nNoun project\nPhylopic"
+  },
+  {
     "objectID": "hobbies.html",
     "href": "hobbies.html",
     "title": "Hobbies",
@@ -187,5 +208,19 @@
     "title": "Overview",
     "section": "License",
     "text": "License\nThis website and its materials are licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)\nThis online work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International. Visit here for more information about the license."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "A space for various projects I have created."
+  },
+  {
+    "objectID": "projects.html#mgrtibbles",
+    "href": "projects.html#mgrtibbles",
+    "title": "Projects",
+    "section": "mgrtibbles",
+    "text": "mgrtibbles\nR tibbles containing various data curated by m-gemmell\nGithub repo link"
   }
 ]
