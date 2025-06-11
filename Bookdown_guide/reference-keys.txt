@@ -11,6 +11,9 @@ mcq-example
 template
 expandable-help-box-example
 initalising
+tippy-tooltips
+css
+multilpe-instances
 icons
 fontawesome
 ionicons
