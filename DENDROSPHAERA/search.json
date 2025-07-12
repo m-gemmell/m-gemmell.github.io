@@ -53,7 +53,7 @@
     "href": "REDWOODS/AMAZONIA.html#amazonia-orb-drone",
     "title": "Amazonia",
     "section": "AMAZONIA ORB DRONE",
-    "text": "AMAZONIA ORB DRONE\n24 HP | 3 ARMOR | EYES : +2 | JAWS : +2 | LIMBS : 0 | NERVES : -1\n\nLarge spherical robot (3 metre diameter)\nTitanium damascus body (3 ARMOR, non-magnetic, emp-resistant, rainbow iridescent pattern)\nSplit second force field (accessory)\nSensor array\n6 tentacle like arms (6HP & 3 ARMOR each)\n\n2 Crab claws (2D6 DAMAGE and/or grapple)\n2 Plasma cannons (1D6 DAMAGE, ARMOR-PIERCING and/or EROSION)\n2 Thermite miniguns (1D6+3 DAMAGE, INCENDIARY and/or SHREDDER)\n\n6 crab like legs\n\nRAM: This spherical rolls around for locomotion, crushing a path for it and its allies. It rapidly deploys its retractable limbs, and sensor array for combat. It quickly learns during combat but due to limited RAM can only retain one counter measure at a time.\nWhen the ORB DRONE is damaged, record the attribute used for the attack, changing this every time it is damaged. Attacks against the ORB DRONE using the recorded attribute are rolled with disadvantage.\nDUAL-PURPOSE-WEAPONS: Each weapon of the ORB DRONE is DUAL-PURPOSE.When a PC defends an attack they suffer:\n\nBoth effects on a FAILURE\nOne effect on a PARTIAL SUCCESS.\n\nSELF-DESTRUCT (Boss move): When the ORB DRONE reaches 0HP it explodes dealing 3D6 DAMAGE all nearby objects and entities.\nARMOR-PIERCING weapon tag: Attacks with this weapon ignore ARMOR bonuses granted by physical means. (F:UE)\nEROSION weapon tag: Reduce the durability of one of target’s ARMOR equipment.\nINCENDIARY weapon tag: When damage is dealt, this weapon also deals 2 DAMAGE to anything within fire spreading range. Deals double DAMAGE to plants.(F:UE)\nSHREDDER: Deals double DAMAGE to exposed flesh. On critical hits, it decreases the target’s ARMOR by 1. (F:UE)"
+    "text": "AMAZONIA ORB DRONE\n24 HP | 3 ARMOR | EYES : +2 | JAWS : +2 | LIMBS : 0 | NERVES : -1\n\nLarge spherical robot (3 metre diameter)\nTitanium damascus body (3 ARMOR, non-magnetic, emp-resistant, rainbow iridescent pattern)\nSplit second force field (accessory)\nSensor array\n6 tentacle like arms (6HP & 3 ARMOR each)\n\n2 Crab claws (2D6 DAMAGE and/or grapple)\n2 Plasma cannons (1D6 DAMAGE, ARMOR-PIERCING and/or EROSION)\n2 Thermite miniguns (1D6+3 DAMAGE, INCENDIARY and/or SHREDDER)\n\n6 crab like legs\n\nRAM: This spherical rolls around for locomotion, crushing a path for it and its allies. It rapidly deploys its retractable limbs, and sensor array for combat. It quickly learns during combat but due to limited RAM can only retain one counter measure at a time.\nWhen the ORB DRONE is damaged, record the attribute used for the attack, changing this every time it is damaged. Attacks against the ORB DRONE using the recorded attribute are rolled with disadvantage.\nDUAL-PURPOSE-WEAPONS: Each weapon of the ORB DRONE is DUAL-PURPOSE. When a PC defends an attack they suffer:\n\nBoth effects on a FAILURE\nOne effect on a PARTIAL SUCCESS.\n\nSELF-DESTRUCT (Boss move): When the ORB DRONE reaches 0HP it explodes dealing 3D6 DAMAGE to all nearby objects and entities.\nARMOR-PIERCING weapon tag: Attacks with this weapon ignore ARMOR bonuses granted by physical means. (F:UE)\nEROSION weapon tag: Reduce the durability of one of the target’s ARMOR equipment.\nINCENDIARY weapon tag: When damage is dealt, this weapon also deals 2 DAMAGE to anything within fire spreading range. Deals double DAMAGE to plants. (F:UE)\nSHREDDER: Deals double DAMAGE to exposed flesh. On critical hits, it decreases the target’s ARMOR by 1. (F:UE)"
   },
   {
     "objectID": "REDWOODS/FAUNA_AND_FLORA.html",
@@ -434,25 +434,81 @@
     "text": "Infiltration\nIf you are using the PUML infiltration rules I suggest using the below number of spaces for the alertness trackers of the minor bases:\n\nUnaware = 6 - (2 X number of successful minor bases sabotaged in this region)\nSuspicious = 3 - (1 X number of successful minor bases sabotaged in this region)"
   },
   {
+    "objectID": "SANDWOODS/MIRROR_FIELD.html#perimeter",
+    "href": "SANDWOODS/MIRROR_FIELD.html#perimeter",
+    "title": "Mirror field",
+    "section": "Perimeter",
+    "text": "Perimeter\nSix wave breaker towers have been set out on the perimeter of the Mirror field in a hexagonal pattern. The two faces pointing away from the base liquefy sand whilst the corner facing into the base solidifies sand. The fourth face points downwards ensuring the wave breaker and its tower does not sink.\nNormal wave breakers are stacked high up around the perimeter between the towers. They are hit by waves of the blue sand, moved by the harsh winds. The sand turns red as it moves between the sand altering forces and cakes the wave breakers."
+  },
+  {
     "objectID": "SANDWOODS/SANDWOODS.html",
     "href": "SANDWOODS/SANDWOODS.html",
     "title": "Sandwoods",
     "section": "",
-    "text": "The Sandwoods is a desert of massive tsunami sized dunes constantly in flow from the gales from the Windwoods. It was once covered in forests of cactuses but an invasive species has decimated the vegetation.\nThe area is controlled by the Doppelganger Dunes, a mercenary crew specialised in desert biomes, who are hired by Amazonia. They control four main bases:\n\nBonehead hatchery: A natural location guarded by the mercenaries. The mercenaries use the Boneheads as steeds and as a food source.\nDesalination plant: Sea water is desalinated to make it potable.\nSolar tower: Charges batteries used for the other bases’ energy needs.\nSand extraction site: Sand is harvested from the deserts and brought to their main base for processing. It is located upon the floating island stolen from the Windwoods."
+    "text": "The Sandwoods is a desert of massive tsunami sized dunes (dunamis) constantly in flow due to the gales from the Windwoods. It was once covered in forests of cactuses but an invasive species has decimated the vegetation.\nThe area is controlled by the Doppelganger Dunes, a mercenary crew specialised in desert biomes, who are hired by Amazonia. They control four main bases:\n\nBonehead hatchery: A natural location guarded by the mercenaries. The mercenaries use the Boneheads as steeds and as a food source.\nDesalination plant: Sea water is desalinated to make it potable.\nSolar tower: Charges batteries used for the other bases’ energy needs.\nSand extraction site: Sand is harvested from the deserts and brought to their main base for processing. It is located upon the floating island stolen from the Windwoods."
   },
   {
     "objectID": "SANDWOODS/SOLAR_TOWER.html",
     "href": "SANDWOODS/SOLAR_TOWER.html",
     "title": "Solar tower",
     "section": "",
-    "text": "Solar power energy produced by mirrors focussing sun on a large tower. Charges up batteries. These batteries are transported to the other bases by the Skybound doppelgangers and their tamed Giant adult antlions."
+    "text": "The main source of energy for the Doppelganger Dunes is their solar tower. It utilises mirrors to focus the sun’s power on a beam catcher perched on the tower. The structure charges up batteries which are transported to the other bases by the Skybound doppelgangers and their tamed Giant adult antlions.\nThe structures are made of a white and black concrete with honeycomb patterns in a post modern brutalism fashion. These were made my Pumice construction Ltd who also provided the wavebreakers. These wave breakers cause the surrounding sand to turn blue and “liquefy” protecting the area from the massive dunamis (dune tsuanmi). Additionally, the wave breakers causes the sand of the base to turn red and “solidfy” giving a strong foundation for the tower and mirror field."
   },
   {
     "objectID": "SANDWOODS/SOLAR_TOWER.html#intel",
     "href": "SANDWOODS/SOLAR_TOWER.html#intel",
     "title": "Solar tower",
     "section": "Intel",
-    "text": "Intel\nPossible intel the team may gather about this location before the mission is below. Either give these out base on a D6 in or order from 1 to 6.\n\nGiant adult antlions are seen transporting large battery containers from and to the Solar tower to the other minor bases and the major base.\nFour Wave breaker stations lay at the perimeter of the base.\nThe Wave breakers cause the sand within the perimeter to attract and solidify whilst causing sand outside the perimeter to"
+    "text": "Intel\nPossible intel the team may gather about this location before the mission is below. Either give these out based on a D6 in or order from 1 to 6.\n\nGiant adult antlions are seen transporting large battery containers from and to the Solar tower to the other minor bases and the major base.\nSix Wave breaker stations lay at the perimeter of the base.\nThe Wave breakers cause the sand within the perimeter to attract and solidify whilst causing sand outside the perimeter to liquefy.\nAt the top of the Sun tower is an extremely efficient beam catcher that would be nigh impossible to replace.\nThe tower itself is incredibly strong and highly defended, It would be be incredibly difficult to infiltrate.\nThe wave breakers are set out in a hexagonal pattern. A wave breaker’s effects pointing towards the tower will be cancelled out by its neighbours if they are opposite."
+  },
+  {
+    "objectID": "SANDWOODS/TOWER.html",
+    "href": "SANDWOODS/TOWER.html",
+    "title": "Tower",
+    "section": "",
+    "text": "The tower is a wide concrete hexagonal tower. The concrete’s surface is textured and coloured to look like a black and white honey comb.\nThe tower has four floors and is highly defended. Attacking the tower to destroy the beam catcher is most likely going to be a combat heavy methods."
+  },
+  {
+    "objectID": "SANDWOODS/TOWER.html#entrance",
+    "href": "SANDWOODS/TOWER.html#entrance",
+    "title": "Tower",
+    "section": "Entrance",
+    "text": "Entrance\nTheir is one heavily defended entrance from the outside into the ground floor.\n2d6 Sandbound doppelgangers guard the ground whilst further patrol the platform on the 1st floor."
+  },
+  {
+    "objectID": "SANDWOODS/TOWER.html#ground-floor",
+    "href": "SANDWOODS/TOWER.html#ground-floor",
+    "title": "Tower",
+    "section": "Ground floor",
+    "text": "Ground floor\nThe ground floor is the living quarters for the mercenaries and workers of the Solar Tower.\n\nFloor features\nIt is a large modular area with the following features:\n\nThe floor consists of 2 metre sided hexagonal glass panels\nBetween the panels (the sides of the hexagons) 2 metre high walls can be raised and lowered\nPerched on top of the wall panels is one large transparent glass panel\nThe true ceiling is 3 metres high and plastered with cameras controlled by the security on the 2nd floor\n\nThe characteristics of the glass panels includes:\n\nVery tough and 1 inch thick\nOpaque with white and black marbling\n\nThe area is normally divided into rooms of various sizes. These rooms including:\n\nDormitories\nRecreational areas\nOffices\nAmenities (cafeteria, washing rooms etc.)\n\n\n\nDefenses\nThe cameras and floor panels are controlled by security on the second floor. They use this to their advantage to keep an eye out for intruders. If they detect intruders they will alert the base. To confuse and tire out the intruders they will lower and raise the walls to try to force them to go in disorientating circles and to separate the team of intruders. the base’s Sol will also mock the intruders.\nOnce tired or if the intruders figure out the trick an ambush will be setup of 3d6 Sandbound doppelgangers flanking the team from lowered walls.\nIf all other plans fail security may attempt to trap and crush the intruders under the massive glass panel atop the hexagonal walls.\n\n\nElevator\nThere are 2 large elevators that give access to the first floor located on the far wall from the entrance. The have no buttons instead be controlled by security who use cameras to determine who can go to which floors.\nBeside the elevators are emergency ladders that give access to the first floor."
+  },
+  {
+    "objectID": "SANDWOODS/TOWER.html#st-floor",
+    "href": "SANDWOODS/TOWER.html#st-floor",
+    "title": "Tower",
+    "section": "1st floor",
+    "text": "1st floor\n\n1st floor: transport and storage.\n\nRoom full of cargo containers. Large conveyor belts like the luggage moving of an airport fill the area.\nIn the centre large electrical cables descend from the ceiling to charge the large box batteries that weigh a tonne.\nThree fingered articulated tentacle like arms move the batteries onto, between and off the conveyor belts.\nAround the outside is a platform that surrounds the entire cylindrical tower. Cargo crates are offloaded and picked up by the Giant Adult antlions via cargo hooks."
+  },
+  {
+    "objectID": "SANDWOODS/TOWER.html#rd-floor",
+    "href": "SANDWOODS/TOWER.html#rd-floor",
+    "title": "Tower",
+    "section": "3rd floor",
+    "text": "3rd floor\nThe beam catchers and the associated engineering machines"
+  },
+  {
+    "objectID": "SANDWOODS/WAVE_BREAKER.html",
+    "href": "SANDWOODS/WAVE_BREAKER.html",
+    "title": "Wave breakers",
+    "section": "",
+    "text": "The wave breakers are concrete tetrapods created by Pumice construction Ltd.. Imbued with powers of Tartarus & Proteus they are able to liquefy or solidify sand.\nThe wave breakers have 4 faces, the centre of a face where 3 of the pods/limbs meet. Each face projects a sand altering force in the shape of a triangle based pyramid with mile long sides. There are 2 types of faces:\n\nBlue coloured side: Changes the colour of sand to blue whilst making it “liquefy”, acting like deadly quick sand.\nRed coloured side: Changes the colour of sand to red whilst making it “solidify”, acting like hard concrete.\n\nTwo overlapping opposite forces will cancel each other, making normal sand. The active force of overlapping forces is based on the majority.\nThese special wave breakers have 15 HP and 5 ARMOR\n\n\nEach wave breaker is secured within a triangle based tower with its operator. A few guards Sandbound doppelgangers lookout for intruders on a flat roof covered by a sun sail. They primarily keep an eye away from the base but are generally lax thinking the liquefied sand will deter most land attacks whilst the Skybound doppelgangers and their tamed Giant adult antlions keep care of the skies.\nWithin each tower is a different method to change the orientation of the wave breaker along with 1D6 of its specialised Wave Breaker Technicians. The room with the wave breaker is high up from the ground so it can solidify the entire foundation of the tower. An outside staircase goes up to the tower room’s door and continues up to the roof.\n\n\n8 HP | 1 ARMOR | EYES : 0 | JAWS : +1 | LIMBS : +1 | NERVES : -1\n\nLong range water jet cutter (1D6+1 DAMAGE)\nWarhammer of concrete and rebar (1D6+2 DAMAGE)\nReactive concrete armour (liquefies and solidifies in response to damage) (1 ARMOR)\nPumice Construction Ltd. employee\nSunburnt red skin covered in thick blue sun screen\nThey enjoy co-op board games\n\nSPECIALISED: See the below table to randomly determine its ability.\n\n\n\nWhen randomly determining the ability and method ensure you:\n\nKeep the ability and method matched as the technician’s ability is a clue to the method.\nAll the technicians of one tower have the same ability.\nUse each ability & method pair once (i.e. each wave breaker tower has a different one).\n\n\nAwakened strength\n\nAbility: When they die they return to life after one turn with 1 HP and an additional +1 JAWS (max +3 JAWS) and -1 LIMBS (min -3 LIMBS). After an hour they return to their normal ability scores.\nMethod: Brute strength, a character with +3 JAWS or 2 characters with +2 JAWS can move and or flip the wave breaker. If not available then some other form of leverage may be used.\n\nAquarium\n\nAbility: With webbed digits and gills they are natural swimmers.\nMethod: The tower is filled with water, the entrance being an airlock. Although the wave breaker is not difficult to move, due to buoyancy, those who can’t breath underwater would have a very difficult time in the tower.\n\nMimics\n\nAbility: They can communicate and control one Cement Talos each.\nMethod: In the room are 6 wave breakers, however 5 of them are actually Cement taloes in disguise. The actual wave breaker can be easily moved but if even one Cement talos is touched they will all attack.\n\nCharcoal lubrication\n\nAbility: They enjoy nothing more than creating charcoal drawings. The inside and outside of the white concrete tower is covered with charcoal art.\nMethod: The wave breaker is fastened to a massive mechanical object. The controls can only be activated by turning a large key into a large lock. However, the lock is horribly jammed and requires a lubricant applied, such as charcoal, to turn the key.\n\nIce and fire\n\nAbility: They can create ice and fire, able to create damaging attacks (1D6+2 DAMAGE) and other environmental effects.\nMethod: The wave breaker is encased in a large block of ice lying atop a bowled floor. To adjust it the technicians melt the ice into a sphere so they can rotate it in the convex ground. The ice has 20 HP and 2 ARMOR but takes double damage to heat based attacks.\n\nConcrete\n\nAbility: Their weapons are replaced with a Combat jackhammer (1D6+3 DAMAGE, ANTI-MATERIEL: Deals double DAMAGE to vehicles and structures; cumbersome to carry around (F:UE)).\nMethod: The wave breaker is within a block of cement. The non-wave breaker cement has 25 HP and 3 ARMOR. When destroyed the excess damage is suffered by the wave breaker.\n\n\n\n\n\n5 HP | 1 ARMOR | EYES : -2 | JAWS : +2 | LIMBS : +2 | NERVES : -2\n\nConcrete punch (1D6 DAMAGE)\nConcrete chunks on its surface (1 ARMOR)\n\nLIVING CEMENT: Can freely change the shape of its body and switch its cement to concrete and vice versa.\nENGULF (BOSS MOVE): If the Cement talos deals damage with concrete punch and the defender’s defence roll was a fail the Cement talos can engulf the character. Whilst engulfed the character can only attempt to escape the talos, failed escapes cause the escaping character to suffer 1D6 damage."
+  },
+  {
+    "objectID": "SANDWOODS/WAVE_BREAKER.html#wave-breaker-towers",
+    "href": "SANDWOODS/WAVE_BREAKER.html#wave-breaker-towers",
+    "title": "Wave breakers",
+    "section": "",
+    "text": "Each wave breaker is secured within a triangle based tower with its operator. A few guards Sandbound doppelgangers lookout for intruders on a flat roof covered by a sun sail. They primarily keep an eye away from the base but are generally lax thinking the liquefied sand will deter most land attacks whilst the Skybound doppelgangers and their tamed Giant adult antlions keep care of the skies.\nWithin each tower is a different method to change the orientation of the wave breaker along with 1D6 of its specialised Wave Breaker Technicians. The room with the wave breaker is high up from the ground so it can solidify the entire foundation of the tower. An outside staircase goes up to the tower room’s door and continues up to the roof.\n\n\n8 HP | 1 ARMOR | EYES : 0 | JAWS : +1 | LIMBS : +1 | NERVES : -1\n\nLong range water jet cutter (1D6+1 DAMAGE)\nWarhammer of concrete and rebar (1D6+2 DAMAGE)\nReactive concrete armour (liquefies and solidifies in response to damage) (1 ARMOR)\nPumice Construction Ltd. employee\nSunburnt red skin covered in thick blue sun screen\nThey enjoy co-op board games\n\nSPECIALISED: See the below table to randomly determine its ability.\n\n\n\nWhen randomly determining the ability and method ensure you:\n\nKeep the ability and method matched as the technician’s ability is a clue to the method.\nAll the technicians of one tower have the same ability.\nUse each ability & method pair once (i.e. each wave breaker tower has a different one).\n\n\nAwakened strength\n\nAbility: When they die they return to life after one turn with 1 HP and an additional +1 JAWS (max +3 JAWS) and -1 LIMBS (min -3 LIMBS). After an hour they return to their normal ability scores.\nMethod: Brute strength, a character with +3 JAWS or 2 characters with +2 JAWS can move and or flip the wave breaker. If not available then some other form of leverage may be used.\n\nAquarium\n\nAbility: With webbed digits and gills they are natural swimmers.\nMethod: The tower is filled with water, the entrance being an airlock. Although the wave breaker is not difficult to move, due to buoyancy, those who can’t breath underwater would have a very difficult time in the tower.\n\nMimics\n\nAbility: They can communicate and control one Cement Talos each.\nMethod: In the room are 6 wave breakers, however 5 of them are actually Cement taloes in disguise. The actual wave breaker can be easily moved but if even one Cement talos is touched they will all attack.\n\nCharcoal lubrication\n\nAbility: They enjoy nothing more than creating charcoal drawings. The inside and outside of the white concrete tower is covered with charcoal art.\nMethod: The wave breaker is fastened to a massive mechanical object. The controls can only be activated by turning a large key into a large lock. However, the lock is horribly jammed and requires a lubricant applied, such as charcoal, to turn the key.\n\nIce and fire\n\nAbility: They can create ice and fire, able to create damaging attacks (1D6+2 DAMAGE) and other environmental effects.\nMethod: The wave breaker is encased in a large block of ice lying atop a bowled floor. To adjust it the technicians melt the ice into a sphere so they can rotate it in the convex ground. The ice has 20 HP and 2 ARMOR but takes double damage to heat based attacks.\n\nConcrete\n\nAbility: Their weapons are replaced with a Combat jackhammer (1D6+3 DAMAGE, ANTI-MATERIEL: Deals double DAMAGE to vehicles and structures; cumbersome to carry around (F:UE)).\nMethod: The wave breaker is within a block of cement. The non-wave breaker cement has 25 HP and 3 ARMOR. When destroyed the excess damage is suffered by the wave breaker.\n\n\n\n\n\n5 HP | 1 ARMOR | EYES : -2 | JAWS : +2 | LIMBS : +2 | NERVES : -2\n\nConcrete punch (1D6 DAMAGE)\nConcrete chunks on its surface (1 ARMOR)\n\nLIVING CEMENT: Can freely change the shape of its body and switch its cement to concrete and vice versa.\nENGULF (BOSS MOVE): If the Cement talos deals damage with concrete punch and the defender’s defence roll was a fail the Cement talos can engulf the character. Whilst engulfed the character can only attempt to escape the talos, failed escapes cause the escaping character to suffer 1D6 damage."
   },
   {
     "objectID": "SHOREWOODS/SHOREWOODS.html",
@@ -1041,5 +1097,40 @@
     "title": "Yaga’s Yetis",
     "section": "YAGA (PARTISAN LEADER)",
     "text": "YAGA (PARTISAN LEADER)\n12 HP | 2 ARMOR | EYES : +1 | JAWS : +2 | LIMBS : +1 | NERVES : 0\n\nBolt-action rifle (1D6+1 DAMAGE)\nWoodpecker axe (1D6+1 DAMAGE, BAD VIBRATIONS)\nWooden shield (0 ARMOR, accessory)\nWood and bird fused combat armor (2 ARMOR, wings capable of flight) \nTool belt full of carpentry tools\nBuilt like a log\nDressed like a lumberjack but clean shaven\n\nWOOD-WHISPERER: YAGA’s woodworking abilities are supernatural. He once died but was brought back to life by Bab bargaining with the spirit of the Redwood. Submerged into the Redwood’s sap he came back stronger, with blood made of amber, and the ability to bend wood to his word. He can sense through any wood, living or dead, that he touches.\nBAD VIBRATIONS weapon tag: This weapons’ damage dice explodes. Whenever the highest number on the damage dice is rolled, roll the damage dice again and sum the total of all dice rolls. Dice can explode multiple times."
+  },
+  {
+    "objectID": "SANDWOODS/MIRROR_FIELD.html",
+    "href": "SANDWOODS/MIRROR_FIELD.html",
+    "title": "Mirror field",
+    "section": "",
+    "text": "The mirror field contains a many large hexagonal solar mirrors. They are raised high off the ground giving the various workers and patrolling mercs shade from the intense desert sun. The sand is a volcanic red colour and as hard as solid concrete due to the effect of the wave breaker towers."
+  },
+  {
+    "objectID": "SANDWOODS/MIRROR_FIELD.html#mirror-field",
+    "href": "SANDWOODS/MIRROR_FIELD.html#mirror-field",
+    "title": "Mirror field",
+    "section": "",
+    "text": "The mirror field contains a many large hexagonal solar mirrors. They are raised high off the ground giving the various workers and patrolling mercs shade from the intense desert sun. The sand is a volcanic red colour and as hard as solid concrete due to the effect of the wave breaker towers."
+  },
+  {
+    "objectID": "SANDWOODS/MIRROR_FIELD.html#map",
+    "href": "SANDWOODS/MIRROR_FIELD.html#map",
+    "title": "Mirror field",
+    "section": "Map",
+    "text": "Map"
+  },
+  {
+    "objectID": "SANDWOODS/MIRROR_FIELD.html#movement",
+    "href": "SANDWOODS/MIRROR_FIELD.html#movement",
+    "title": "Mirror field",
+    "section": "Movement",
+    "text": "Movement\nWhen a team of player controlled characters moves form one hex to another roll a D6 to determine which of the below encounters occurs.\n\nNo encounter\nA Wave breaker technician, from a random tower, is going for a stroll.\nAn Amazonia cyborg is cleaning and maintaining a mirror, their sentry is on the ground in its disguised form but scanning the areas for intruders.\nA runway lays ahead causing a break in the cover of the mirrors. Currently a Giant adult antlion is resting with 1D6 Skybound doppelgangers staying cool in the shadow of its wings.\n1D6 Sandbound doppelgangers each riding a Boneheads patrolling the area.\nThe base’s Sol inspecting the area with 2D6 Sandbound doppelgangers"
+  },
+  {
+    "objectID": "SANDWOODS/TOWER.html#nd-floor",
+    "href": "SANDWOODS/TOWER.html#nd-floor",
+    "title": "Tower",
+    "section": "2nd floor",
+    "text": "2nd floor\nl station and security."
   }
 ]
