@@ -826,6 +826,27 @@
     "text": "You can use the Enemy attributes table to help create your own stat blocks. There is a lot of guidance on creating stat blocks in the intelligence matrix of FIST Ultra edition.\nThere are many examples of stat blocks on the Primeval deities website\n\n\n\n\n\n\n\n\n\n\n\n\nRepresentative being\nEYES\nJAWS\nLIMBS\nNERVES\n\n\n-3\nIncompetent human\nIntoxicated person\nHunger striker\nStickler\nHermit\n\n\n-2\nUnskilled human\nDay dreamer\nCouch potato\nButterfingers\nHomebody\n\n\n-1\nNormal human\nOffice worker\nFactory worker\nFreelancer\nEvent coordinator\n\n\n0\nParanormal mercenary\nRifleman\nAthlete\nGymnast\nActor\n\n\n1\nSpecialised human\nSniper\nStrongman\nContortionist\nDoctor\n\n\n2\nS tier animal\nEagle\nElephant\nOctopus\nAnt/Bee queen\n\n\n3\nForce of nature\nInternet wide Artificial Super Intelligence\nSkyscraper sized Mecha or Kaiju\nShapeshifter\nHive mind\n\n\n4\nDeity\nNyxmera\nTartarus\nProteus\nGaia"
   },
   {
+    "objectID": "REFEREE/COMPLICATIONS.html",
+    "href": "REFEREE/COMPLICATIONS.html",
+    "title": "Complications",
+    "section": "",
+    "text": "Complications\nComplications are negative affects that occurs along with a success when a player rolls a Partial success. They are unfortunately more complicated to implement than a binary success and failure mechanic but they can lead to more interesting outcomes. This section gives guidance and examples on how to utilise complications.\nAn important aspect of a partial success is that it is a success. It can be frustrating as a player to not accomplish the task and then have to repeat the roll to accomplish it. It is generally more interesting if the complication comes in the form of a downside, a new challenge, or a choice.\nOf course sometimes you may think a challenge may require more than one success. In that case you can use tracker/progress clocks which are also covered.\nThis section includes:\n\nTrolley problem: Giving the player the choice of 2 complications.\nTwo truths and a lie: When gathering intel the PC finds two truths and a lie, not knowing what are the truths and which is the lie."
+  },
+  {
+    "objectID": "REFEREE/COMPLICATIONS.html#trolley-problem",
+    "href": "REFEREE/COMPLICATIONS.html#trolley-problem",
+    "title": "Complications",
+    "section": "",
+    "text": "A fun way to implement a complication is to create two downsides and allow the player to choice which one they want. One of the best ways is to have one complication affect the PC and one complication affect the progress of their mission. Example are below.\n\n\nThe PC is escorting a NPC when enemies open fire. The PC makes an action roll to escape the area. With a partial success they flee to the next area but someone is going to suffer damage from the enemy gunfire.\nComplication choice:\n\nThe PC suffers the damage.\nThe hostage suffers the damage\n\n\n\n\nDuring a heist the PC is swiping all the valuable goods they can as fast as they can. The PC makes an action roll to hurriedly collect goods before security/cops arrives. With a partial success they manage to gather loot but how much?\nComplication choice:\n\nThe PC drops their best weapon to maximise room on their body to carry as much loot as possible.\nThe PC keeps their weapon but leaves some loot behind displeasing their employer.\n\n\n\n\nThe PC is trying to covertly get information through hacking, spy craft, or social engineering. They acquire information but how risky were they being?\nComplication choice:\n\nThe PC can play it safe and get one piece of intel.\nthey PC can be risky, blowing their cover, but they extract 2 pieces of intel"
+  },
+  {
+    "objectID": "REFEREE/COMPLICATIONS.html#two-truths-and-a-lie",
+    "href": "REFEREE/COMPLICATIONS.html#two-truths-and-a-lie",
+    "title": "Complications",
+    "section": "",
+    "text": "When a PC gathers information/intel a great way to implement an implication is to provide them with true facts and false information. The classic is two truths and a lie but equally you can give other combinations such as one truth and one lie or one truth and two lies based on the situation and what you can think of.\nDo not say which facts are true and false, instead saying how many truths and lies you are giving. This represents the PCs knowing how reliable the intel they have gathered is. If you don’t give exact numbers it is still good practice to say there may be lies in the intel.\nGenerally I try not to have a truth directly counteract a lie in the one set of intel. In other words try not to have a truth of “Turkeys are weak against acid” and a lie of “Turkeys are strong against acid”. Instead set the truths and lies so the PCs can out the lie/s to determine the truths with further investigation and exploration.\nExamples of two truths and a lie are below.\n\n\nThe PCs know they are up against a Vampire. A PC goes to a library to research myths them on. Of course there are many falsehoods in myths so they find 2 truths and a lie.\n\nTrue: Vampires come about from the fusion of a Vampore, a blood thirsty lump of iron ore, and a power hungry human\nTrue: Vampires are weak against the light of the sun and moons.\nFalse: Vampires are weak to magnets due to their iron heart (The truth is they have magnetic powers them selves)"
+  },
+  {
     "objectID": "REFEREE/INFILTRATION.html",
     "href": "REFEREE/INFILTRATION.html",
     "title": "Infilitration",
@@ -928,7 +949,7 @@
     "href": "RULES/COMBAT.html",
     "title": "Combat",
     "section": "",
-    "text": "Combat occurs when 2 or more forces are trying to harm each other. PCs only are in Combat and can take combat actions if they fulfill the two conditions:\nCombat normally ends by defeating all enemy forces or retreating/escaping. Escaping/retreating may require non-combat action turns."
+    "text": "Combat occurs when 2 or more forces are trying to harm each other. PCs only are in Combat and can take combat actions if they fulfil the two conditions:\nCombat normally ends by defeating all enemy forces or retreating/escaping. Escaping/retreating may require non-combat action turns."
   },
   {
     "objectID": "RULES/COMBAT.html#phases",
@@ -991,14 +1012,14 @@
     "href": "RULES/EQUIPMENT.html",
     "title": "Equipment",
     "section": "",
-    "text": "Weapons can be used to hurt and Damage other characters and objects. Action rolls are always required to deal Damage. When dealing Damage roll the specified Damage Dice and add any base Damage.\nRolling a 4 for the Dice of a Hand cannon (1D6+1 DAMAGE) would deal 5 DAMAGE.\nDamage Dice are always D6s and some weapons only deal base Damage or none at all.\nWeapons can also be used creatively, limited by the type of weapon it is. A light machine gun could be used to suppress fire whilst a blade could be used to cut a rope or cable."
+    "text": "Weapons can be used to hurt and Damage other characters and objects. Action rolls are always required to deal Damage. When dealing Damage roll the specified Damage Dice and add any base Damage.\nRolling a 4 for the Dice of a Hand cannon (1D6+1 DAMAGE) would deal 5 DAMAGE.\nDamage Dice are always D6s and some weapons only deal base Damage or none at all.\nWeapons can also be used creatively, limited by the type of weapon it is. A light machine gun could be used to suppress fire whilst a blade could be used to cut a rope or cable.\nDuring combat a PC can only swap and/or equip different Weapons between combat rounds (a combat round = the two combat phases)."
   },
   {
     "objectID": "RULES/EQUIPMENT.html#weapons",
     "href": "RULES/EQUIPMENT.html#weapons",
     "title": "Equipment",
     "section": "",
-    "text": "Weapons can be used to hurt and Damage other characters and objects. Action rolls are always required to deal Damage. When dealing Damage roll the specified Damage Dice and add any base Damage.\nRolling a 4 for the Dice of a Hand cannon (1D6+1 DAMAGE) would deal 5 DAMAGE.\nDamage Dice are always D6s and some weapons only deal base Damage or none at all.\nWeapons can also be used creatively, limited by the type of weapon it is. A light machine gun could be used to suppress fire whilst a blade could be used to cut a rope or cable."
+    "text": "Weapons can be used to hurt and Damage other characters and objects. Action rolls are always required to deal Damage. When dealing Damage roll the specified Damage Dice and add any base Damage.\nRolling a 4 for the Dice of a Hand cannon (1D6+1 DAMAGE) would deal 5 DAMAGE.\nDamage Dice are always D6s and some weapons only deal base Damage or none at all.\nWeapons can also be used creatively, limited by the type of weapon it is. A light machine gun could be used to suppress fire whilst a blade could be used to cut a rope or cable.\nDuring combat a PC can only swap and/or equip different Weapons between combat rounds (a combat round = the two combat phases)."
   },
   {
     "objectID": "RULES/EQUIPMENT.html#armor",
@@ -1040,7 +1061,7 @@
     "href": "RULES/EQUIPMENT.html#equipment-tables",
     "title": "Equipment",
     "section": "Equipment tables",
-    "text": "Equipment tables\nThe Below equipment tables are from the FIST ULTRA EDITION\n\nWeapons\n\n\n\n\n\n\n\n\n\n\n\n11.\nSmall blunt \n3 DAMAGE\n41.\nPump-action shotgun\n1D6+1 DAMAGE\n\n\n12.\nLarge blunt \n1D6 DAMAGE\n42.\nLight machine gun\n1D6+1 DAMAGE\n\n\n13.\nSmall blade\n3 DAMAGE\n43.\nSword\n1D6+1 DAMAGE\n\n\n14.\nLarge blade\n1D6 DAMAGE\n44.\nSpear\n1D6+1 DAMAGE\n\n\n15.\nLight hand\n3 DAMAGE\n45.\nLarge Axe\n1D6+1 DAMAGE\n\n\n16.\nHeavy hand\n1D6 DAMAGE\n46.\nLarge hammer\n1D6+1 DAMAGE\n\n\n21.\nSmall ranged\n3 DAMAGE\n51.\nSniper rifle\n1D6+2 DAMAGE\n\n\n22.\nWhip\n1D6 DAMAGE\n52.\nRocket launcher\n1D6+2 DAMAGE\n\n\n23.\nBow\n1D6 DAMAGE\n53.\nHeavy machine gun\n1D6+2 DAMAGE\n\n\n24.\nPistol\n1D6 DAMAGE\n54.\nHeavy misc.\n1D6+2 DAMAGE\n\n\n25.\nMachine pistol\n1D6 DAMAGE\n55.\nEnergy blade\n1D6+2 DAMAGE\n\n\n26.\nSubmachine gun\n1D6 DAMAGE\n56.\nConcussion grenade\n1D6 DAMAGE\n\n\n31.\nCarbine\n1D6 DAMAGE\n61.\nFrag grenade\n1D6+1 DAMAGE\n\n\n32.\nHand cannon\n1D6+1 DAMAGE\n62.\nSmall bomb\n1D6+2 DAMAGE\n\n\n33.\nBolt-action rifle\n1D6+1 DAMAGE\n63.\nLarge bomb\n2D6 DAMAGE\n\n\n34.\nSemi-automatic rifle\n1D6+1 DAMAGE\n64.\nAnomalous weapon\n2D6 DAMAGE\n\n\n35.\nAssault rifle\n1D6+1 DAMAGE\n65.\nUltra-shotgun\n2D6 DAMAGE\n\n\n36.\nBreak-action shotgun\n1D6+1 DAMAGE\n66.\nFUBAR blaster\n3D6 DAMAGE\n\n\n\n\n\nArmor\n\n\n\n\n\n\n\n\n\n\n\n1.\nCivilian clothing\n0 ARMOR\n7.\nStandard fatigues\n0 ARMOR\n\n\n2.\nCombat shield\n0 ARMOR (accessory)\n8.\nTactical clothing\n1 ARMOR\n\n\n3.\nRiot shield\n1 ARMOR\n(equip as weapon)\n9.\nBulletproof vest\n1 ARMOR\n\n\n4.\nHeavy riot shield\n2 ARMOR\n(equip as weapon)\n10.\nExoskeleton frame\n1 ARMOR\n\n\n5.\nHelmet\n(accessory)\n11.\nCeramic plate\n2 ARMOR\n\n\n6.\nCivilian clothing\n0 ARMOR\n12.\nPower armor\n2 ARMOR\n\n\n\n\n\nVehicles\n\n\n\n\n\n\n\n\n\n\n\n11.\nBike\n3 HP, 0 ARMOR\n41.\nGun truck\n12 HP, 3 ARMOR\n\n\n12.\nHang glider\n3 HP, 0 ARMOR\n42.\nFighter aircraft\n12 HP, 1 ARMOR\n\n\n13.\nJet ski\n3 HP, 1 ARMOR\n43.\nHelicopter\n16 HP, 1 ARMOR\n\n\n14.\nATV/snowmobile\n3 HP, 2 ARMOR\n44.\nWork vehicle\n16 HP, 2 ARMOR\n\n\n15.\nSmall boat\n6 HP, 1 ARMOR\n45.\nLarge boat\n16 HP, 2 ARMOR\n\n\n16.\nMotorcycle\n6 HP, 1 ARMOR\n46.\nSelf-propelled artillery\n16 HP, 3 ARMOR\n\n\n21.\nDirtbike\n6 HP, 2 ARMOR\n51.\nHeavy aircraft\n18 HP, 2 ARMOR\n\n\n22.\nSandrail\n8 HP, 0 ARMOR\n52.\nMech frame\n18 HP, 2 ARMOR\n\n\n23.\nCivilian car\n8 HP, 1 ARMOR\n53.\nStarfighter\n18 HP, 2 ARMOR\n\n\n24.\nCivilian truck/technical\n8 HP, 2 ARMOR\n54.\nSubmarine\n18 HP, 3 ARMOR\n\n\n25.\nArmored car\n8 HP, 3 ARMOR\n55.\nAircraft carrier\n18 HP, 3 ARMOR\n\n\n26.\nRace car\n10 HP, 0 ARMOR\n56.\nAirship\n20 HP, 0 ARMOR\n\n\n31.\nCivilian plane\n10 HP, 0 ARMOR\n61.\nCommercial jet\n20 HP, 2 ARMOR\n\n\n32.\nCivilian van\n10 HP, 1 ARMOR\n62.\nTank\n20 HP, 4 ARMOR\n\n\n33.\nCovered truck\n10 HP, 2 ARMOR\n63.\nBattleship\n30 HP, 3 ARMOR\n\n\n34.\nAmphibious vehicle\n10 HP, 2 ARMOR\n64.\nNuclear icebreaker\n30 HP, 4 ARMOR\n\n\n35.\nLight util. vehicle\n12 HP, 1 ARMOR\n65.\nSpaceship\n40 HP, 3 ARMOR\n\n\n36.\nCivilian carrier\n12 HP, 1 ARMOR\n66.\nBattle mech\n40 HP, 4 ARMOR\n\n\n\n\n\nVehicle weapons\n\n\n\n\n\n\n\n\n\n\n\n1.\nNone\nNA\n7.\nFront-mounted ram\nNo crash self-damage\n\n\n2.\nAuto-targeting prototype cannon\n2D6 DAMAGE\n8.\nMounted heavy weapon\n1D6+2 DAMAGE\n\n\n3.\nSide hazards\n3 DAMAGE\n9.\nIntegrated weapons\n1D6 DAMAGE,\n1D6 weapons\n\n\n4.\nHoming missiles\n1D6+2 DAMAGE, 1D6 missiles\n10.\nMounted grenade launcher\n1D6 DAMAGE\n\n\n5.\nMounted gun\n1D6+1 DAMAGE\n11.\nMine dropper\n2D6 DAMAGE,\n1D6 mines\n\n\n6.\nGunner seats\n0 DAMAGE,\n1D6 seats\n12.\nChemical weapon system\n2D6 DAMAGE to area"
+    "text": "Equipment tables\nThe Below equipment tables are from the FIST ULTRA EDITION\n\nArmor\n\n\n\n\n\n\n\n\n\n\n\n1.\nCivilian clothing\n0 ARMOR\n7.\nStandard fatigues\n0 ARMOR\n\n\n2.\nCombat shield\n0 ARMOR (accessory)\n8.\nTactical clothing\n1 ARMOR\n\n\n3.\nRiot shield\n1 ARMOR\n(equip as weapon)\n9.\nBulletproof vest\n1 ARMOR\n\n\n4.\nHeavy riot shield\n2 ARMOR\n(equip as weapon)\n10.\nExoskeleton frame\n1 ARMOR\n\n\n5.\nHelmet\n(accessory)\n11.\nCeramic plate\n2 ARMOR\n\n\n6.\nCivilian clothing\n0 ARMOR\n12.\nPower armor\n2 ARMOR\n\n\n\n\n\nVehicles\n\n\n\n\n\n\n\n\n\n\n\n11.\nBike\n3 HP, 0 ARMOR\n41.\nGun truck\n12 HP, 3 ARMOR\n\n\n12.\nHang glider\n3 HP, 0 ARMOR\n42.\nFighter aircraft\n12 HP, 1 ARMOR\n\n\n13.\nJet ski\n3 HP, 1 ARMOR\n43.\nHelicopter\n16 HP, 1 ARMOR\n\n\n14.\nATV/snowmobile\n3 HP, 2 ARMOR\n44.\nWork vehicle\n16 HP, 2 ARMOR\n\n\n15.\nSmall boat\n6 HP, 1 ARMOR\n45.\nLarge boat\n16 HP, 2 ARMOR\n\n\n16.\nMotorcycle\n6 HP, 1 ARMOR\n46.\nSelf-propelled artillery\n16 HP, 3 ARMOR\n\n\n21.\nDirtbike\n6 HP, 2 ARMOR\n51.\nHeavy aircraft\n18 HP, 2 ARMOR\n\n\n22.\nSandrail\n8 HP, 0 ARMOR\n52.\nMech frame\n18 HP, 2 ARMOR\n\n\n23.\nCivilian car\n8 HP, 1 ARMOR\n53.\nStarfighter\n18 HP, 2 ARMOR\n\n\n24.\nCivilian truck/technical\n8 HP, 2 ARMOR\n54.\nSubmarine\n18 HP, 3 ARMOR\n\n\n25.\nArmored car\n8 HP, 3 ARMOR\n55.\nAircraft carrier\n18 HP, 3 ARMOR\n\n\n26.\nRace car\n10 HP, 0 ARMOR\n56.\nAirship\n20 HP, 0 ARMOR\n\n\n31.\nCivilian plane\n10 HP, 0 ARMOR\n61.\nCommercial jet\n20 HP, 2 ARMOR\n\n\n32.\nCivilian van\n10 HP, 1 ARMOR\n62.\nTank\n20 HP, 4 ARMOR\n\n\n33.\nCovered truck\n10 HP, 2 ARMOR\n63.\nBattleship\n30 HP, 3 ARMOR\n\n\n34.\nAmphibious vehicle\n10 HP, 2 ARMOR\n64.\nNuclear icebreaker\n30 HP, 4 ARMOR\n\n\n35.\nLight util. vehicle\n12 HP, 1 ARMOR\n65.\nSpaceship\n40 HP, 3 ARMOR\n\n\n36.\nCivilian carrier\n12 HP, 1 ARMOR\n66.\nBattle mech\n40 HP, 4 ARMOR\n\n\n\n\n\nVehicle weapons\n\n\n\n\n\n\n\n\n\n\n\n1.\nNone\nNA\n7.\nFront-mounted ram\nNo crash self-damage\n\n\n2.\nAuto-targeting prototype cannon\n2D6 DAMAGE\n8.\nMounted heavy weapon\n1D6+2 DAMAGE\n\n\n3.\nSide hazards\n3 DAMAGE\n9.\nIntegrated weapons\n1D6 DAMAGE,\n1D6 weapons\n\n\n4.\nHoming missiles\n1D6+2 DAMAGE, 1D6 missiles\n10.\nMounted grenade launcher\n1D6 DAMAGE\n\n\n5.\nMounted gun\n1D6+1 DAMAGE\n11.\nMine dropper\n2D6 DAMAGE,\n1D6 mines\n\n\n6.\nGunner seats\n0 DAMAGE,\n1D6 seats\n12.\nChemical weapon system\n2D6 DAMAGE to area"
   },
   {
     "objectID": "RULES/MISSION_END.html",
@@ -1167,5 +1188,159 @@
     "title": "Rest, Death, and Freedom",
     "section": "Creative freedom",
     "text": "Creative freedom\nAs a Player you are encouraged to make creative plays. However, there are times when your Referee is worried a tactic may be repeated and abused.\nTo facilitate creative role-playing and problem solving the Referee may give you creative freedom. If this is the case your idea will work, possibly needing a successful roll.\nHowever, the same idea will either not work a second time or will work in the future with a much lower efficiency. If you use the same idea twice and the Referee doesn’t remember the first time, then it may have been a big enough gap to use successfully again."
+  },
+  {
+    "objectID": "REFEREE/TROLLEY_PROBLEM.html",
+    "href": "REFEREE/TROLLEY_PROBLEM.html",
+    "title": "Trolley problem",
+    "section": "",
+    "text": "A fun way to implement a complication is to create two downsides and allow the player to choice which one they want. One of the best ways is to have one complication affect the PC and one complication affect the progress of their mission. Example are below.\n\n\nThe PC is escorting a NPC when enemies open fire. The PC makes an action roll to escape the area. With a partial success they flee to the next area but someone is going to suffer damage from the enemy gunfire.\nComplication choice:\n\nThe PC suffers the damage.\nThe hostage suffers the damage\n\n\n\n\nDuring a heist the PC is swiping all the valuable goods they can attempt to act as fast as they can. The PC makes an action roll to hurriedly collect goods before security/cops arrives. With a partial success they manage to gather loot but how much?\nComplication choice:\n\nThe PC drops their best weapon to maximise room on their body to carry as much loot as possible.\nThe PC keeps their weapon but leaves some loot behind displeasing their employer.\n\n\n\n\nThe PC is trying to covertly get information through hacking, spy craft, or social engineering. They acquire information but how risky were they being?\nComplication choice:\n\nThe PC can play it safe and get one piece of intel.\nthey PC can be risky, blowing their cover, but they extract 2 pieces of intel"
+  },
+  {
+    "objectID": "REFEREE/TROLLEY_PROBLEM.html#escort-mission",
+    "href": "REFEREE/TROLLEY_PROBLEM.html#escort-mission",
+    "title": "Trolley problem",
+    "section": "",
+    "text": "The PC is escorting a NPC when enemies open fire. The PC makes an action roll to escape the area. With a partial success they flee to the next area but someone is going to suffer damage from the enemy gunfire.\nComplication choice:\n\nThe PC suffers the damage.\nThe hostage suffers the damage"
+  },
+  {
+    "objectID": "REFEREE/TROLLEY_PROBLEM.html#looting",
+    "href": "REFEREE/TROLLEY_PROBLEM.html#looting",
+    "title": "Trolley problem",
+    "section": "",
+    "text": "During a heist the PC is swiping all the valuable goods they can attempt to act as fast as they can. The PC makes an action roll to hurriedly collect goods before security/cops arrives. With a partial success they manage to gather loot but how much?\nComplication choice:\n\nThe PC drops their best weapon to maximise room on their body to carry as much loot as possible.\nThe PC keeps their weapon but leaves some loot behind displeasing their employer."
+  },
+  {
+    "objectID": "REFEREE/TROLLEY_PROBLEM.html#covert-activities",
+    "href": "REFEREE/TROLLEY_PROBLEM.html#covert-activities",
+    "title": "Trolley problem",
+    "section": "",
+    "text": "The PC is trying to covertly get information through hacking, spy craft, or social engineering. They acquire information but how risky were they being?\nComplication choice:\n\nThe PC can play it safe and get one piece of intel.\nthey PC can be risky, blowing their cover, but they extract 2 pieces of intel"
+  },
+  {
+    "objectID": "REFEREE/TWO_TRUTHS_AND_A_LIE.html",
+    "href": "REFEREE/TWO_TRUTHS_AND_A_LIE.html",
+    "title": "Two truths and a lie",
+    "section": "",
+    "text": "When a PC gathers information/intel a great way to implement an implication is to provide them with true facts and false information. The classic is two truths and a lie but equally you can give other combinations such as one truth and one lie or one truth and two lies based on the situation and what you can think of.\nMost of the time you will let the players know how many truths and lies you are giving. This represents the PCs knowing how reliable the intel they have gathered is. However, if the situation calls for it you do not need to say if their are truths and lies.\nA truth should not directly counteract a lie in the one set of intel. In other words try not to have a truth of “Turkeys are weak against acid” and a lie of “Turkeys are strong against acid”. Instead set the truths and lies so the PCs can determine the truths with further investigation and exploration.\nExamples of two truths and a lie are below.\n\n\nThe PCs know they are up against a Vampire. A PC uses an Action turn to goes to a library to research myths them on. With a partial success they are able to gather fairly reliable intel knowing they were given 2 truths and a lie.\n\nTrue: Vampires come about from the fusion of a Vampore, a blood thirsty lump of iron ore, and a power hungry human.\nTrue: Vampires are weak against the light of the sun and moons.\nFalse: Vampires are weak to magnets due to their iron heart (The truth is they have magnetic powers).\n\n\n\n\nThe PCs are going to infiltrate a base and want to know more about its security systems. They use an action turn to call in a favour from an ally who sends them three pieces of intel. However, with a partial success one of the PC’s nemesis intercepted the request and was able to change one of truths to a lie. In this case the referee does not tell the Players their are any truths and lies.\n\nTrue: The Kraken security guards patrol in pairs. Each member of a pair has half a key card, with both halves required to get past security doors.\nTrue: The security cameras are based on infrared vision.\nFalse: The password to the security system is “taratrusiscool123” . This is false and if entered will cause a base lockdown."
+  },
+  {
+    "objectID": "REFEREE/TWO_TRUTHS_AND_A_LIE.html#enemy-research",
+    "href": "REFEREE/TWO_TRUTHS_AND_A_LIE.html#enemy-research",
+    "title": "Two truths and a lie",
+    "section": "",
+    "text": "The PCs know they are up against a Vampire. A PC uses an Action turn to goes to a library to research myths them on. With a partial success they are able to gather fairly reliable intel with 2 truths and a lie.\n\nTrue: Vampires come about from the fusion of a Vampore, a blood thirsty lump of iron ore, and a power hungry human\nTrue: Vampires are weak against the light of the sun and moons.\nFalse: Vampires are weak to magnets due to their iron heart (The truth is they have magnetic powers them selves)"
+  },
+  {
+    "objectID": "REFEREE/TWO_TRUTHS_AND_A_LIE.html#creature-research",
+    "href": "REFEREE/TWO_TRUTHS_AND_A_LIE.html#creature-research",
+    "title": "Two truths and a lie",
+    "section": "",
+    "text": "The PCs know they are up against a Vampire. A PC uses an Action turn to goes to a library to research myths them on. With a partial success they are able to gather fairly reliable intel knowing they were given 2 truths and a lie.\n\nTrue: Vampires come about from the fusion of a Vampore, a blood thirsty lump of iron ore, and a power hungry human.\nTrue: Vampires are weak against the light of the sun and moons.\nFalse: Vampires are weak to magnets due to their iron heart (The truth is they have magnetic powers)."
+  },
+  {
+    "objectID": "REFEREE/TWO_TRUTHS_AND_A_LIE.html#base-intel",
+    "href": "REFEREE/TWO_TRUTHS_AND_A_LIE.html#base-intel",
+    "title": "Two truths and a lie",
+    "section": "",
+    "text": "The PCs are going to infiltrate a base and want to know more about its security systems. They use an action turn to call in a favour from an ally who sends them three pieces of intel. However, with a partial success one of the PC’s nemesis intercepted the request and was able to change one of truths to a lie. In this case the referee does not tell the Players their are any truths and lies.\n\nTrue: The Kraken security guards patrol in pairs. Each member of a pair has half a key card, with both halves required to get past security doors.\nTrue: The security cameras are based on infrared vision.\nFalse: The password to the security system is “taratrusiscool123” . This is false and if entered will cause a base lockdown."
+  },
+  {
+    "objectID": "REFEREE/FIST_PARTIAL_SUCCESSES.html",
+    "href": "REFEREE/FIST_PARTIAL_SUCCESSES.html",
+    "title": "FIST Partial successes",
+    "section": "",
+    "text": "Below are random tables for partial successes based on the table from the Fist: Ultra Edition page 148.\n\n\n\nYou can’t move right now\nYou cannot finish it alone\nYou deplete a resource\nYou ignore something else\nYou need more time\nYou’ll need to rest a moment\n\n\n\n\n\nApproximate calculations only\nMore research is required\nSome information is lost\nYou can’t remember exactly\nYou don’t know why you’re right\nYou failed to account for…\n\n\n\n\n\nYou drop an important item\nYou go partially off-course\nYou hurt yourself a little\nYou must take a longer route\nYou’re now in harm’s way\nYou’re stopped halfway\n\n\n\n\n\nDisarm yourself immediately\nThat won’t work again\nYou must prove yourself\nYou must provide compensation\nYou need to make a hard sell\nSOCIAL You’ll be watched constantly\n\n\n\n\n\nA trait behaves erratically\nTurn on your teammates\nYou begin losing your grip\nYou get a bad nosebleed\nYou slowly develop a new trait\nYou’re struck by lightning"
+  },
+  {
+    "objectID": "REFEREE/FIST_PARTIAL_SUCCESSES.html#general",
+    "href": "REFEREE/FIST_PARTIAL_SUCCESSES.html#general",
+    "title": "FIST Partial successes",
+    "section": "",
+    "text": "You can’t move right now\nYou cannot finish it alone\nYou deplete a resource\nYou ignore something else\nYou need more time\nYou’ll need to rest a moment"
+  },
+  {
+    "objectID": "REFEREE/FIST_PARTIAL_SUCCESSES.html#mental",
+    "href": "REFEREE/FIST_PARTIAL_SUCCESSES.html#mental",
+    "title": "FIST Partial successes",
+    "section": "",
+    "text": "Approximate calculations only\nMore research is required\nSome information is lost\nYou can’t remember exactly\nYou don’t know why you’re right\nYou failed to account for…"
+  },
+  {
+    "objectID": "REFEREE/FIST_PARTIAL_SUCCESSES.html#movement",
+    "href": "REFEREE/FIST_PARTIAL_SUCCESSES.html#movement",
+    "title": "FIST Partial successes",
+    "section": "",
+    "text": "You drop an important item\nYou go partially off-course\nYou hurt yourself a little\nYou must take a longer route\nYou’re now in harm’s way\nYou’re stopped halfway"
+  },
+  {
+    "objectID": "REFEREE/FIST_PARTIAL_SUCCESSES.html#social",
+    "href": "REFEREE/FIST_PARTIAL_SUCCESSES.html#social",
+    "title": "FIST Partial successes",
+    "section": "",
+    "text": "Disarm yourself immediately\nThat won’t work again\nYou must prove yourself\nYou must provide compensation\nYou need to make a hard sell\nSOCIAL You’ll be watched constantly"
+  },
+  {
+    "objectID": "REFEREE/FIST_PARTIAL_SUCCESSES.html#weird",
+    "href": "REFEREE/FIST_PARTIAL_SUCCESSES.html#weird",
+    "title": "FIST Partial successes",
+    "section": "",
+    "text": "A trait behaves erratically\nTurn on your teammates\nYou begin losing your grip\nYou get a bad nosebleed\nYou slowly develop a new trait\nYou’re struck by lightning"
+  },
+  {
+    "objectID": "ITEMS/ITEMS.html",
+    "href": "ITEMS/ITEMS.html",
+    "title": "Items",
+    "section": "",
+    "text": "Items\nOn top of the items gained from traits and gear packs the PCs may find various items in the world. This section contains information on these various items.\n\nFIST intelligence: Tables from the FIST: Ultra Edition Intelligence matrix."
+  },
+  {
+    "objectID": "ITEMS/FIST_WEAPONS.html",
+    "href": "ITEMS/FIST_WEAPONS.html",
+    "title": "FIST Weapons",
+    "section": "",
+    "text": "FIST Weapons\nD66 table of weapons\n\n\n\n\n\n\n\n\n\n\n\n11.\nSmall blunt \n3 DAMAGE\n41.\nPump-action shotgun\n1D6+1 DAMAGE\n\n\n12.\nLarge blunt \n1D6 DAMAGE\n42.\nLight machine gun\n1D6+1 DAMAGE\n\n\n13.\nSmall blade\n3 DAMAGE\n43.\nSword\n1D6+1 DAMAGE\n\n\n14.\nLarge blade\n1D6 DAMAGE\n44.\nSpear\n1D6+1 DAMAGE\n\n\n15.\nLight hand\n3 DAMAGE\n45.\nLarge Axe\n1D6+1 DAMAGE\n\n\n16.\nHeavy hand\n1D6 DAMAGE\n46.\nLarge hammer\n1D6+1 DAMAGE\n\n\n21.\nSmall ranged\n3 DAMAGE\n51.\nSniper rifle\n1D6+2 DAMAGE\n\n\n22.\nWhip\n1D6 DAMAGE\n52.\nRocket launcher\n1D6+2 DAMAGE\n\n\n23.\nBow\n1D6 DAMAGE\n53.\nHeavy machine gun\n1D6+2 DAMAGE\n\n\n24.\nPistol\n1D6 DAMAGE\n54.\nHeavy misc.\n1D6+2 DAMAGE\n\n\n25.\nMachine pistol\n1D6 DAMAGE\n55.\nEnergy blade\n1D6+2 DAMAGE\n\n\n26.\nSubmachine gun\n1D6 DAMAGE\n56.\nConcussion grenade\n1D6 DAMAGE\n\n\n31.\nCarbine\n1D6 DAMAGE\n61.\nFrag grenade\n1D6+1 DAMAGE\n\n\n32.\nHand cannon\n1D6+1 DAMAGE\n62.\nSmall bomb\n1D6+2 DAMAGE\n\n\n33.\nBolt-action rifle\n1D6+1 DAMAGE\n63.\nLarge bomb\n2D6 DAMAGE\n\n\n34.\nSemi-automatic rifle\n1D6+1 DAMAGE\n64.\nAnomalous weapon\n2D6 DAMAGE\n\n\n35.\nAssault rifle\n1D6+1 DAMAGE\n65.\nUltra-shotgun\n2D6 DAMAGE\n\n\n36.\nBreak-action shotgun\n1D6+1 DAMAGE\n66.\nFUBAR blaster\n3D6 DAMAGE"
+  },
+  {
+    "objectID": "ITEMS/FIST_ARMOR.html",
+    "href": "ITEMS/FIST_ARMOR.html",
+    "title": "FIST Armor",
+    "section": "",
+    "text": "FIST Armor\nD12 table of armor\n\n\n\n\n\n\n\n\n\n\n\n1.\nCivilian clothing\n0 ARMOR\n7.\nStandard fatigues\n0 ARMOR\n\n\n2.\nCombat shield\n0 ARMOR (accessory)\n8.\nTactical clothing\n1 ARMOR\n\n\n3.\nRiot shield\n1 ARMOR (equip as weapon)\n9.\nBulletproof vest\n1 ARMOR\n\n\n4.\nHeavy riot shield\n2 ARMOR (equip as weapon)\n10.\nExoskeleton frame\n1 ARMOR\n\n\n5.\nHelmet\n(accessory)\n11.\nCeramic plate\n2 ARMOR\n\n\n6.\nCivilian clothing\n0 ARMOR\n12.\nPower armor\n2 ARMOR"
+  },
+  {
+    "objectID": "ITEMS/FIST_VEHICLES.html",
+    "href": "ITEMS/FIST_VEHICLES.html",
+    "title": "FIST Vehicles",
+    "section": "",
+    "text": "FIST Vehicles\nD66 table of vehicles\n\n\n\n\n\n\n\n\n\n\n\n11.\nBike\n3 HP, 0 ARMOR\n41.\nGun truck\n12 HP, 3 ARMOR\n\n\n12.\nHang glider\n3 HP, 0 ARMOR\n42.\nFighter aircraft\n12 HP, 1 ARMOR\n\n\n13.\nJet ski\n3 HP, 1 ARMOR\n43.\nHelicopter\n16 HP, 1 ARMOR\n\n\n14.\nATV/snowmobile\n3 HP, 2 ARMOR\n44.\nWork vehicle\n16 HP, 2 ARMOR\n\n\n15.\nSmall boat\n6 HP, 1 ARMOR\n45.\nLarge boat\n16 HP, 2 ARMOR\n\n\n16.\nMotorcycle\n6 HP, 1 ARMOR\n46.\nSelf-propelled artillery\n16 HP, 3 ARMOR\n\n\n21.\nDirtbike\n6 HP, 2 ARMOR\n51.\nHeavy aircraft\n18 HP, 2 ARMOR\n\n\n22.\nSandrail\n8 HP, 0 ARMOR\n52.\nMech frame\n18 HP, 2 ARMOR\n\n\n23.\nCivilian car\n8 HP, 1 ARMOR\n53.\nStarfighter\n18 HP, 2 ARMOR\n\n\n24.\nCivilian truck/technical\n8 HP, 2 ARMOR\n54.\nSubmarine\n18 HP, 3 ARMOR\n\n\n25.\nArmored car\n8 HP, 3 ARMOR\n55.\nAircraft carrier\n18 HP, 3 ARMOR\n\n\n26.\nRace car\n10 HP, 0 ARMOR\n56.\nAirship\n20 HP, 0 ARMOR\n\n\n31.\nCivilian plane\n10 HP, 0 ARMOR\n61.\nCommercial jet\n20 HP, 2 ARMOR\n\n\n32.\nCivilian van\n10 HP, 1 ARMOR\n62.\nTank\n20 HP, 4 ARMOR\n\n\n33.\nCovered truck\n10 HP, 2 ARMOR\n63.\nBattleship\n30 HP, 3 ARMOR\n\n\n34.\nAmphibious vehicle\n10 HP, 2 ARMOR\n64.\nNuclear icebreaker\n30 HP, 4 ARMOR\n\n\n35.\nLight util. vehicle\n12 HP, 1 ARMOR\n65.\nSpaceship\n40 HP, 3 ARMOR\n\n\n36.\nCivilian carrier\n12 HP, 1 ARMOR\n66.\nBattle mech\n40 HP, 4 ARMOR"
+  },
+  {
+    "objectID": "ITEMS/FIST_VEHICLE_WEAPONS.html",
+    "href": "ITEMS/FIST_VEHICLE_WEAPONS.html",
+    "title": "FIST Vehicle weapons",
+    "section": "",
+    "text": "FIST Vehicle weapons\nD12 vehicle weapons\n\n\n\n\n\n\n\n\n\n\n\n1.\nNone\nNA\n7.\nFront-mounted ram\nNo crash self-damage\n\n\n2.\nAuto-targeting prototype cannon\n2D6 DAMAGE\n8.\nMounted heavy weapon\n1D6+2 DAMAGE\n\n\n3.\nSide hazards\n3 DAMAGE\n9.\nIntegrated weapons\n1D6 DAMAGE, 1D6 weapons\n\n\n4.\nHoming missiles\n1D6+2 DAMAGE, 1D6 missiles\n10.\nMounted grenade launcher\n1D6 DAMAGE\n\n\n5.\nMounted gun\n1D6+1 DAMAGE\n11.\nMine dropper\n2D6 DAMAGE, 1D6 mines\n\n\n6.\nGunner seats\n0 DAMAGE, 1D6 seats\n12.\nChemical weapon system\n2D6 DAMAGE to area"
+  },
+  {
+    "objectID": "ITEMS/FIST_WEAPON_TAGS.html",
+    "href": "ITEMS/FIST_WEAPON_TAGS.html",
+    "title": "FIST Weapon tags",
+    "section": "",
+    "text": "FIST Weapon tags\nD66 weapon tags\n11. ACCURATE: Scoped, sighted, or well-balanced; this weapon grants one automatic success when attacking per mission.\n12. ANTI-MATERIEL: Deals double DAMAGE to vehicles and structures; cumbersome to carry around.\n13. ALT-FIRE: This weapon has a secondary component or form which also deals damage, (e.g. bayonet, launcher attachment, sword that becomes a whip).\n14. ARMOR-PIERCING: Attacks with this weapon ignore ARMOR bonuses granted by physical means.\n15. BANE: Forged from (or fires) a magically useful material of your choice (silver, salt, etc.) Deals double DAMAGE to those affected.\n16. COLLAPSIBLE: Easily concealed, no matter the size; will never be detected during pat-downs.\n21. CURSED: Requires powerful magic to remove once equipped. The wielder may permanently spend 1D6 MAX HP to guarantee a successful attack.\n22. CUSTOMIZED: Deals an additional 1 DAMAGE and has a weapon skin; coveted by enemies.\n23. DUMMY: Appears to be a weapon, but is actually another mundane item of your choice (e.g. gun lighter, fake sword with a hidden compartment).\n24. ELECTRIFIED: Deals double DAMAGE to robots and other complex machines. Shorts out running electronics and briefly electrifies bodies of water.\n25. EXPERIMENTAL: When each mission begins, roll D66 on this table for the weapon’s effect (if you get EXPERIMENTAL, create a new one with the ref).\n26. FLASHY: If you describe a unique and bombastic attack with this weapon, you can roll +NERVES to hit.\n31. GRIP: Custom materials and ergonomic design; the referee can never state that you drop this weapon.\n32. HEAVY: This thing is too big to be called a weapon. Once per mission, take +3 on a JAWS roll that involves this weapon.\n33. HUD: Scans hostiles. When you kill something new, the referee will tell you a useful fact about it.\n34. ICE: Makes surfaces slick and deals double DAMAGE to anything that requires warmth to function.\n35. INCENDIARY: When damage is dealt, this weapon also deals 2 DAMAGE to anything within firespreading range. Deals double DAMAGE to plants.\n36. INDESTRUCTIBLE: Impervious to everything; can withstand any amount of pressure or corrosion.\n41. LIGHT: Weighs almost nothing. Grants +1 on LIMBS rolls that involve this weapon.\n42. LOUD: Attacks with this weapon draw the undivided attention of enemies within earshot (and instantly reveal your position).\n43. LUCKY: Rolling an ultra success while attacking with this weapon grants the user one PRIMAL DIE.\n44. MEDICAL: Once per mission, you may use this weapon to deal negative DAMAGE, healing the target.\n45. MESSY: Enemies explode into gore/goo/scrap etc. on ultra successes (in addition to the usual bonus). No identifiers will remain—not even teeth.\n46. MENACING: Enemies who see a comrade slain by this weapon have a 1-in-1D6 chance to flee.\n51. NON-LETHAL: Does not deal DAMAGE; has a 3-in-1D6 chance to knock unconscious on a success.\n52. POISONED: When you would roll for damage for this weapon, wait and mark your target as poisoned instead. Next time they’re hurt, roll your DAMAGE and add it to the total amount they take.\n53. PROTOTYPE: Wielding this next-generation weapon grants +1 EYES; roll +EYES to attack with it.\n54. QUICK-DRAW: Attacks that target enemies drawing their weapons will always succeed.\n55. REMOTE: Projectiles (or the weapon itself) can be remotely steered through chutes and around walls.\n56. RITUAL: Shatters to protect you from death once, negating lethal damage. Disintegrates afterward.\n61. SAPIENT: Communicates with its wielder by thought; roll 1D6 for disposition: bloodthirsty, caring, craven, excitable, morose, stoic.\n62. SHREDDER: Deals double DAMAGE to exposed flesh. On critical hits, decreases the target’s ARMOR by 1.\n63. STUN: Those damaged by this weapon cannot move or act until their current HP changes.\n64. TRANQUILIZER: As NON-LETHAL, but chance is increased to 5-in-1D6 if a vulnerable area is specifically targeted (e.g. head, neck, exposed membrane, etc.)\n65. UNSTABLE: Can be set to overload to deal triple DAMAGE once; explodes for 3D6 damage to everyone nearby seconds later.\n66. VALUABLE: Utterly unique in history or make. Can be used as a bargaining chip in almost any situation."
+  },
+  {
+    "objectID": "RULES/ATTRIBUTES.html#nerves",
+    "href": "RULES/ATTRIBUTES.html#nerves",
+    "title": "Attributes",
+    "section": "NERVES",
+    "text": "NERVES\n\n\n\nGaia is the deity of life. Its nerves connect all living creatures, the cells, to it, the brain. In this way all life is a hyperorganism. It is social and mystical.\nYou can roll +NERVES for human and paranormal interactions.\nThese include:\n\nCharisma-based tasks\nHumanities and arts\nDiplomatic manoeuvres\nUnique and creative ideas\nLeadership and persuasion\nLife and mind powers"
+  },
+  {
+    "objectID": "ITEMS/FIST_CRATE_CONTENTS.html",
+    "href": "ITEMS/FIST_CRATE_CONTENTS.html",
+    "title": "FIST Crate contents",
+    "section": "",
+    "text": "FIST Crate contents\n2D6 table\n\nArtifacts (1D6 pieces)\nChemicals (1D6 types, e.g. tear gas, cleaner, etc.)\nArmor (1D6 pieces, roll on Armor)\nUniforms (Standard, or 1-in-1D6: High-ranking)\nRations (2D6 MREs, +1D6 HP)\nAmmunition (1D6 types, e.g. bullets, rockets, etc.)\nMedical supplies (1D6 medkits, +1D6+TAC HP)\nWeapons (1D6 weapons, roll on Weapons, p. 83)\nMachine parts (2D6 usable parts)\nExplosives (2D6 small or 1D6 large)\nDocuments (classified, answer 1D6 questions)"
   }
 ]

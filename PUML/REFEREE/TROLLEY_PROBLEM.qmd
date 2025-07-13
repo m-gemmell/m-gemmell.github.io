@@ -1,0 +1,32 @@
+# Trolley problem
+
+A fun way to implement a complication is to create two downsides and allow the player to choice which one they want.
+One of the best ways is to have one complication affect the PC and one complication affect the progress of their mission.
+Example are below.
+
+## Escort mission
+
+The PC is escorting a NPC when enemies open fire. The PC makes an __action roll__ to escape the area. With a partial success they flee to the next area but someone is going to suffer damage from the enemy gunfire.
+
+Complication choice:
+
+- The PC suffers the damage.
+- The hostage suffers the damage
+
+## Looting
+
+During a heist the PC is swiping all the valuable goods they can as fast as they can. The PC makes an __action roll__ to hurriedly collect goods before security/cops arrives. With a partial success they manage to gather loot but how much?
+
+Complication choice:
+
+- The PC drops their best weapon to maximise room on their body to carry as much loot as possible.
+- The PC keeps their weapon but leaves some loot behind displeasing their employer. 
+
+## Covert activities
+
+The PC is trying to covertly get information through hacking, spy craft, or social engineering. They acquire information but how risky were they being?
+
+Complication choice:
+
+- The PC can play it safe and get one piece of intel.
+- they PC can be risky, blowing their cover, but they extract 2 pieces of intel

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>PUML - Panic</title>
+<title>PUML – trolley_problem</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../REFEREE/BOSSES.html" rel="prev">
+<link href="../REFEREE/TWO_TRUTHS_AND_A_LIE.html" rel="next">
+<link href="../REFEREE/COMPLICATIONS.html" rel="prev">
 <link href="..//images/Gaia_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -134,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../REFEREE/CHARACTER_STAT_BLOCKS.html">NPCs</a></li><li class="breadcrumb-item"><a href="../REFEREE/PANIC.html">Panic</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../REFEREE/COMPLICATIONS.html">Complications</a></li><li class="breadcrumb-item"><a href="../REFEREE/TROLLEY_PROBLEM.html">Trolley problem</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -152,12 +153,35 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Referee</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Complications</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../REFEREE/COMPLICATIONS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Complications</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../REFEREE/TROLLEY_PROBLEM.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Trolley problem</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../REFEREE/TWO_TRUTHS_AND_A_LIE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Two truths and a lie</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../REFEREE/INFILTRATION.html" class="sidebar-item-text sidebar-link">
@@ -172,13 +196,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">NPCs</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../REFEREE/CHARACTER_STAT_BLOCKS.html" class="sidebar-item-text sidebar-link">
@@ -193,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../REFEREE/PANIC.html" class="sidebar-item-text sidebar-link active">
+  <a href="../REFEREE/PANIC.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Panic</span></a>
   </div>
 </li>
@@ -205,34 +229,57 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#trolley-problem" id="toc-trolley-problem" class="nav-link active" data-scroll-target="#trolley-problem">Trolley problem</a>
+  <ul class="collapse">
+  <li><a href="#escort-mission" id="toc-escort-mission" class="nav-link" data-scroll-target="#escort-mission">Escort mission</a></li>
+  <li><a href="#looting" id="toc-looting" class="nav-link" data-scroll-target="#looting">Looting</a></li>
+  <li><a href="#covert-activities" id="toc-covert-activities" class="nav-link" data-scroll-target="#covert-activities">Covert activities</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Panic</h1>
-</div>
 
 
+<section id="trolley-problem" class="level1">
+<h1>Trolley problem</h1>
+<p>A fun way to implement a complication is to create two downsides and allow the player to choice which one they want. One of the best ways is to have one complication affect the PC and one complication affect the progress of their mission. Example are below.</p>
+<section id="escort-mission" class="level2">
+<h2 class="anchored" data-anchor-id="escort-mission">Escort mission</h2>
+<p>The PC is escorting a NPC when enemies open fire. The PC makes an <strong>action roll</strong> to escape the area. With a partial success they flee to the next area but someone is going to suffer damage from the enemy gunfire.</p>
+<p>Complication choice:</p>
+<ul>
+<li>The PC suffers the damage.</li>
+<li>The hostage suffers the damage</li>
+</ul>
+</section>
+<section id="looting" class="level2">
+<h2 class="anchored" data-anchor-id="looting">Looting</h2>
+<p>During a heist the PC is swiping all the valuable goods they can attempt to act as fast as they can. The PC makes an <strong>action roll</strong> to hurriedly collect goods before security/cops arrives. With a partial success they manage to gather loot but how much?</p>
+<p>Complication choice:</p>
+<ul>
+<li>The PC drops their best weapon to maximise room on their body to carry as much loot as possible.</li>
+<li>The PC keeps their weapon but leaves some loot behind displeasing their employer.</li>
+</ul>
+</section>
+<section id="covert-activities" class="level2">
+<h2 class="anchored" data-anchor-id="covert-activities">Covert activities</h2>
+<p>The PC is trying to covertly get information through hacking, spy craft, or social engineering. They acquire information but how risky were they being?</p>
+<p>Complication choice:</p>
+<ul>
+<li>The PC can play it safe and get one piece of intel.</li>
+<li>they PC can be risky, blowing their cover, but they extract 2 pieces of intel</li>
+</ul>
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<p>Some NPCs have a <strong>PANIC</strong> score. An NPC may PANIC when in a stressful situation.</p>
-<p>If appropriately stressed roll a D6 for an NPC. If the roll is equal to or higher than their <strong>PANIC</strong> score they will <strong>PANIC</strong>. The NPC then carries out the <strong>PANIC</strong> text.</p>
-<p><strong>PANIC</strong> scores range from 1 to 6. A <strong>PANIC</strong> score of 1 means they will always PANIC when they make a <strong>PANIC</strong> roll. A <strong>PANIC</strong> score of 6 means they have a 1 in 6 chance of panicking.</p>
-<p><strong>Note:</strong> The <strong>PANIC</strong> score is a renamed version of the CHOKE score from the FIST RPG.</p>
-
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -585,11 +632,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../REFEREE/BOSSES.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Bosses</span>
+      <a href="../REFEREE/COMPLICATIONS.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Complications</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../REFEREE/TWO_TRUTHS_AND_A_LIE.html" class="pagination-link">
+        <span class="nav-page-text">Two truths and a lie</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
