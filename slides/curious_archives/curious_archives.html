@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="curious_archives_files/libs/clipboard/clipboard.min.js"></script>
+<script src="curious_archives_files/libs/quarto-html/tabby.min.js"></script>
+<script src="curious_archives_files/libs/quarto-html/popper.min.js"></script>
+<script src="curious_archives_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="curious_archives_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="curious_archives_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="curious_archives_files/libs/quarto-html/quarto-syntax-highlighting-b7eb3ced35dd28f0c673f192a36525f2.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.28">
+
+  <title>curious_archives</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="curious_archives_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="curious_archives_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="curious_archives_files/libs/revealjs/dist/theme/quarto-c8f7813f90785b23cf3ce6bab3fe64e6.css">
+  <link rel="stylesheet" href="include/webex.css">
+  <link href="curious_archives_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="curious_archives_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="curious_archives_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="curious_archives_files/libs/revealjs/plugin/reveal-quiz/quiz.css" rel="stylesheet">
+  <link href="curious_archives_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link rel="shortcut icon" href="./figures/question_book.png">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="section" class="slide level2" data-background-color="black" data-background-image="./figures/NEOF_blue_bg_180_degrees.png">
+<h2></h2>
+<p><span class="title-slide-text">Curious Archives</span></p>
+<p>or: Books that question you</p>
+<center>
+<img data-src="./figures/question_book.png" style="width:40.0%">
+</center>
+</section>
+<section id="intro" class="slide level2">
+<h2>Intro</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Matthew Gemmell (he/him)</li>
+<li>Microbiology background</li>
+<li>CGR (UoL) &amp; NEOF</li>
+<li>ELIXIR-UK Training club committee</li>
+<li>Bioinformatics trainer
+<ul>
+<li>Since 2015</li>
+<li>10-15 workshop p/a</li>
+<li>&gt; 70 workshops</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<center>
+<img data-src="./figures/mg_headshot.png" style="max-width:40%; border-radius: 10px; border: 5px solid #0082c8">
+</center>
+<center>
+<img data-src="./figures/NEOF.png" style="max-width:100%; border-radius: 10px; border: 5px solid #0082c8">
+</center>
+<center>
+<img data-src="./figures/Full%20colour%20logo.png" style="max-width:100%; border-radius: 10px; border: 5px solid #0082c8; background-color: white">
+</center>
+</div></div>
+</section>
+<section id="contents" class="slide level2">
+<h2>Contents</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li><p>Formative assessment</p></li>
+<li><p>MCQs</p>
+<ul>
+<li><p>Good practices</p></li>
+<li><p>Benefits</p></li>
+<li><p>Different uses</p></li>
+</ul></li>
+<li><p>Based on my <a href="https://m-gemmell.github.io/PGCAP/portfolio/06-Patch_3a.html">PGCAP findings</a></p></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<center>
+<img data-src="./figures/introduction.png" style="width:100.0%">
+</center>
+</div></div>
+</section>
+<section id="section-1" class="slide level2" data-background-color="black" data-background-image="./figures/NEOF_blue_bg_180_degrees.png">
+<h2></h2>
+<div class="absolute" style="top: 100px; width: 100%; ">
+<center>
+<span class="title-slide-text">Formative Assessment</span>
+</center>
+<center>
+<img data-src="./figures/formative_assessment.png" style="width:40.0%">
+</center>
+</div>
+</section>
+<section id="formative-assessment" class="slide level2">
+<h2>Formative assessment</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Continuous checks and balances during learning</li>
+<li>Teacher checks:
+<ul>
+<li>Learner’s progress</li>
+<li>Effectiveness of teaching practice</li>
+</ul></li>
+<li>Self assessment of learners</li>
+<li>Very different to Summative assessment (e.g.&nbsp;exams)</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<center>
+<img data-src="./figures/formative_assessment.png" style="width:100.0%">
+</center>
+</div></div>
+</section>
+<section id="benefits" class="slide level2">
+<h2>Benefits</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:75%;">
+<ul>
+<li>Beneficial and enjoyable for students (Adkins, 2018)</li>
+<li>Help students monitor their progress and encourage further study (McCallum &amp; Milner, 2021)</li>
+<li>Incorporate aspects of a flipped classroom
+<ul>
+<li>Self paced</li>
+<li>Decrease cognitive load</li>
+<li>Support a diverse group of students in their learning</li>
+<li>(Cortese et al., 2022)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:25%;">
+<center>
+<img data-src="./figures/benefit.png" style="width:100.0%">
+</center>
+</div></div>
+</section>
+<section id="variety" class="slide level2">
+<h2>Variety</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ul>
+<li>Formative assessment gives variety</li>
+<li>Pause reading, start applying</li>
+<li>Exercises
+<ul>
+<li>Include an answer chapter</li>
+</ul></li>
+<li>Verbally ask learners their progress and understanding</li>
+<li>MCQs (Multiple Choice Questions)</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<center>
+<img data-src="./figures/spices.png" style="width:100.0%">
+</center>
+</div></div>
+</section>
+<section id="section-2" class="slide level2" data-background-color="black" data-background-image="./figures/NEOF_blue_bg_180_degrees.png">
+<h2></h2>
+<div class="absolute" style="top: 100px; width: 100%; ">
+<center>
+<span class="title-slide-text">MCQs</span>
+</center>
+<center>
+<img data-src="./figures/quiz.png" style="width:40.0%">
+</center>
+</div>
+</section>
+<section id="mcqs" class="slide level2">
+<h2>MCQs</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Multiple Choice Question</li>
+<li>Webexercises R package</li>
+<li>Bookdown/Quarto</li>
+<li>Examples
+<ul>
+<li>Quiz Extension For Quarto</li>
+<li>Works with revealjs</li>
+<li>Github parmsam/quarto-quiz</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<center>
+<img data-src="./figures/quiz.png" style="width:100.0%">
+</center>
+</div></div>
+</section>
+<section id="example-mcq" class="slide level2 quiz-question">
+<h2>Example MCQ</h2>
+<hr>
+<ul>
+<li>I’m incorrect</li>
+<li>I’m also incorrect</li>
+<li><span class="correct">I’m correct</span></li>
+</ul>
+</section>
+<section id="mcq-design" class="slide level2">
+<h2>MCQ design</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ul>
+<li>Three choices
+<ul>
+<li>Optimal amount (Rodriguez, 2005)</li>
+</ul></li>
+<li>Macro design strategies
+<ul>
+<li>Interspersed answers</li>
+<li>(Söbke &amp; Mosebach, 2020)</li>
+</ul></li>
+<li>Sets of 3 questions with the same three choices</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<center>
+<img data-src="./figures/triforce_2.png" style="width:100.0%">
+</center>
+</div></div>
+</section>
+<section id="number-of-metres-in-a-mile" class="slide level2 quiz-question">
+<h2>Number of metres in a mile</h2>
+<hr>
+<ul>
+<li>1000</li>
+<li><span class="correct">1609</span></li>
+<li>1825</li>
+</ul>
+</section>
+<section id="number-of-metres-in-a-kilometre" class="slide level2 quiz-question">
+<h2>Number of metres in a kilometre</h2>
+<hr>
+<ul>
+<li><span class="correct">1000</span></li>
+<li>1609</li>
+<li>1825</li>
+</ul>
+</section>
+<section id="number-of-metres-in-a-nautical-mile" class="slide level2 quiz-question">
+<h2>Number of metres in a nautical mile</h2>
+<hr>
+<ul>
+<li>1000</li>
+<li>1609</li>
+<li><span class="correct">1825</span></li>
+</ul>
+</section>
+<section id="mcq-benefits" class="slide level2">
+<h2>MCQ benefits</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ul>
+<li>Practically feasible</li>
+<li>Intuitive for learners</li>
+<li>Instant feedback
+<ul>
+<li>(Snekalatha et al., 2021).</li>
+</ul></li>
+<li>Reattempting questions is allowed and is beneficial to learning
+<ul>
+<li>(Zhang et al., 2021).</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<center>
+<img data-src="./figures/correct.png" style="width:100.0%">
+</center>
+</div></div>
+<ul>
+<li>Guide learners helping their progress (Kojo et al., 2018)</li>
+</ul>
+</section>
+<section id="mcq-uses" class="slide level2">
+<h2>MCQ uses</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ul>
+<li>Reinforcing definitions &amp; theory</li>
+<li>Recap questions at end of sections
+<ul>
+<li>Promote recall (Yang, 2019)</li>
+</ul></li>
+<li>Interrogate output
+<ul>
+<li>Vital skill to learn in data science (Via, 2022)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<center>
+<img data-src="./figures/r_toolbox.png" style="width:100.0%">
+</center>
+</div></div>
+</section>
+<section id="what-is-an-mcq" class="slide level2 quiz-question">
+<h2>What is an MCQ?</h2>
+<hr>
+<ul>
+<li>Recall</li>
+<li>During learning</li>
+<li><span class="correct">Multiple choice question</span></li>
+</ul>
+</section>
+<section id="when-is-formative-assessment-carried-out" class="slide level2 quiz-question">
+<h2>When is formative assessment carried out?</h2>
+<hr>
+<ul>
+<li>Recall</li>
+<li><span class="correct">During learning</span></li>
+<li>Multiple choice question</li>
+</ul>
+</section>
+<section id="what-do-recap-mcqs-promote" class="slide level2 quiz-question">
+<h2>What do recap MCQs promote?</h2>
+<hr>
+<ul>
+<li><span class="correct">Recall</span></li>
+<li>During learning</li>
+<li>Multiple choice question</li>
+</ul>
+</section>
+<section id="interrogate-output" class="slide level2">
+<h2>Interrogate output</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ul>
+<li>MCQs to help guide interpretation</li>
+<li>Students know what to look at</li>
+<li>MCQs inform them if they are looking in wrong/right location</li>
+<li>We’ll look at some alpha diversity box plots
+<ul>
+<li>16S bacterial community</li>
+<li>Measure of diversity</li>
+<li>Alpha i.e.&nbsp;value calculated for each sample</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<center>
+<img data-src="./figures/interrogate.png" style="width:100.0%">
+</center>
+</div></div>
+</section>
+<section id="which-site-has-the-lowest-diversity" class="slide level2 quiz-question">
+<h2>Which site has the lowest diversity?</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:80%;">
+<center>
+<img data-src="./figures/alpha2.png" style="width:100.0%">
+</center>
+</div><div class="column" style="width:20%;">
+<ul>
+<li><span class="correct">Aquarium</span></li>
+<li>Site 2</li>
+<li>Site 10</li>
+</ul>
+</div></div>
+</section>
+<section id="which-site-of-the-options-provided-has-the-highest-diversity" class="slide level2 quiz-question">
+<h2>Which site, of the options provided, has the highest diversity?</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:80%;">
+<center>
+<img data-src="./figures/alpha2.png" style="width:100.0%">
+</center>
+</div><div class="column" style="width:20%;">
+<ul>
+<li>Aquarium</li>
+<li>Site 2</li>
+<li><span class="correct">Site 10</span></li>
+</ul>
+</div></div>
+</section>
+<section id="which-site-has-the-greatest-range-of-shannon-values" class="slide level2 quiz-question">
+<h2>Which site has the greatest range of Shannon values?</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:80%;">
+<center>
+<img data-src="./figures/alpha2.png" style="width:100.0%">
+</center>
+</div><div class="column" style="width:20%;">
+<ul>
+<li>Aquarium</li>
+<li><span class="correct">Site 2</span></li>
+<li>Site 10</li>
+</ul>
+</div></div>
+</section>
+<section id="how-many-sites-have-a-median-shannon-value-greater-than-2.0" class="slide level2 quiz-question">
+<h2>How many sites have a median Shannon value greater than 2.0?</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:80%;">
+<center>
+<img data-src="./figures/alpha2.png" style="width:100.0%">
+</center>
+</div><div class="column" style="width:20%;">
+<ul>
+<li>2</li>
+<li>3</li>
+<li><span class="correct">4</span></li>
+</ul>
+</div></div>
+</section>
+<section id="how-many-sites-have-a-median-simpson-value-less-than-0.6" class="slide level2 quiz-question">
+<h2>How many sites have a median Simpson value less than 0.6?</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:80%;">
+<center>
+<img data-src="./figures/alpha2.png" style="width:100.0%">
+</center>
+</div><div class="column" style="width:20%;">
+<ul>
+<li><span class="correct">2</span></li>
+<li>3</li>
+<li>4</li>
+</ul>
+</div></div>
+</section>
+<section id="outro" class="slide level2">
+<h2>Outro</h2>
+<hr>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li><p>Formative assessment &amp; MCQs</p></li>
+<li><p>Design practices</p>
+<ul>
+<li>3 questions with the same 3 choices</li>
+</ul></li>
+<li><p>MCQs uses</p>
+<ul>
+<li>Definitions and theory</li>
+<li>Recap questions</li>
+<li>Interrogate output</li>
+</ul></li>
+<li><p>Thanks for listening</p></li>
+<li><p>Questions?</p></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<center>
+<img data-src="./figures/finish_flag.png" style="width:100.0%">
+</center>
+</div></div>
+</section>
+<section id="citations" class="slide level2 scrollable">
+<h2>Citations</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><ol type="1">
+<li><p>Adkins, J. K. (2018). Active learning and formative assessment in a user-centered design course. Information Systems Education Journal, 16(4), 34.</p></li>
+<li><p>Cortese, G., Greif, R., &amp; Mora, P. C. (2022). Flipped classroom and a new hybrid “Teach the Airway Teacher” course: an innovative development in airway teaching?. Trends in Anaesthesia &amp; Critical Care, 42, 1.</p></li>
+<li><p>Foley, D. (2020). Teachable Teachers: Using Circumspect Feedback to Improve Teaching and Learning.</p></li>
+<li><p>Kojo, A., Laine, A., &amp; Näveri, L. (2018). How did you solve it?– Teachers’ approaches to guiding mathematics problem solving. LUMAT: International Journal on Math, Science and Technology Education, 6(1), 22-40.</p></li>
+<li><p>McCallum, S., &amp; Milner, M. M. (2021). The effectiveness of formative assessment: student views and staff reflections. Assessment &amp; Evaluation in Higher Education, 46(1), 1-16.</p></li>
+<li><p>McClatchy, S., Bass, K. M., Gatti, D. M., Moylan, A., &amp; Churchill, G. (2020). Nine quick tips for efficient bioinformatics curriculum development and training. PLoS Computational Biology, 16(7), e1008007.</p></li>
+<li><p>Rodriguez, M. C. (2005). Three options are optimal for multiple‐choice items: A meta‐analysis of 80 years of research. Educational measurement: issues and practice, 24(2), 3-13.</p></li>
+<li><p>Snekalatha, S., Marzuk, S. M., Meshram, S. A., Maheswari, K. U., Sugapriya, G., &amp; Sivasharan, K. (2021). Medical students’ perception of the reliability, usefulness and feasibility of unproctored online formative assessment tests. Advances in physiology education, 45(1), 84-88.</p></li>
+<li><p>Söbke, H., &amp; Mosebach, J. (2020, October). Macro Design of Multiple-Choice Questions for Learning. In European Conference on e-Learning (pp.&nbsp;476-XX). Academic Conferences International Limited.</p></li>
+<li><p>Via, A., Palagi, P. M., Lindvall, J. M., &amp; Attwood, T. K. (2022). Introducing the The Mastery Rubric for Bioinformatics–a Professional Guide. F1000Research, 11(735), 735.</p></li>
+<li><p>Yang, B. W., Razo, J., &amp; Persky, A. M. (2019). Using testing as a learning tool. American journal of pharmaceutical education, 83(9).</p></li>
+<li><p>Zhang, S., Bergner, Y., DiTrapani, J., &amp; Jeon, M. (2021). Modeling the interaction between resilience and ability in assessments with allowances for multiple attempts. Computers in Human Behavior, 122, 106847.</p></li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="figures/question_book.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="curious_archives_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="curious_archives_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="curious_archives_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="curious_archives_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="curious_archives_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="curious_archives_files/libs/revealjs/plugin/reveal-quiz/quiz.js"></script>
+  <script src="curious_archives_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="curious_archives_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="curious_archives_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="curious_archives_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="curious_archives_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'quiz': {"checkKey":"c","resetKey":"q","shuffleKey":"t","allowNumberKeys":true,"disableOnCheck":false,"shuffleOptions":false,"defaultCorrect":"","defaultIncorrect":"","includeScore":false,"disableReset":false},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealQuiz, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script>
+
+    /* update total correct if #webex-total_correct exists */
+    update_total_correct = function() {
+      console.log("webex: update total_correct");
+
+      var t = document.getElementsByClassName("webex-total_correct");
+      for (var i = 0; i < t.length; i++) {
+        p = t[i].parentElement;
+        var correct = p.getElementsByClassName("webex-correct").length;
+        var solvemes = p.getElementsByClassName("webex-solveme").length;
+        var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
+        var selects = p.getElementsByClassName("webex-select").length;
+
+        t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+      }
+    }
+
+    /* webex-solution button toggling function */
+    b_func = function() {
+      console.log("webex: toggle hide");
+
+      var cl = this.parentElement.classList;
+      if (cl.contains('open')) {
+        cl.remove("open");
+      } else {
+        cl.add("open");
+      }
+    }
+
+    /* check answers */
+    check_func = function() {
+      console.log("webex: check answers");
+
+      var cl = this.parentElement.classList;
+      if (cl.contains('unchecked')) {
+        cl.remove("unchecked");
+        this.innerHTML = "Hide Answers";
+      } else {
+        cl.add("unchecked");
+        this.innerHTML = "Show Answers";
+      }
+    }
+
+    /* function for checking solveme answers */
+    solveme_func = function(e) {
+      console.log("webex: check solveme");
+
+      var real_answers = JSON.parse(this.dataset.answer);
+      var my_answer = this.value;
+      var cl = this.classList;
+      if (cl.contains("ignorecase")) {
+        my_answer = my_answer.toLowerCase();
+      }
+      if (cl.contains("nospaces")) {
+        my_answer = my_answer.replace(/ /g, "")
+      }
+
+      if (my_answer == "") {
+        cl.remove("webex-correct");
+        cl.remove("webex-incorrect");
+      } else if (real_answers.includes(my_answer)) {
+        cl.add("webex-correct");
+        cl.remove("webex-incorrect");
+      } else {
+        cl.add("webex-incorrect");
+        cl.remove("webex-correct");
+      }
+
+      // match numeric answers within a specified tolerance
+      if(this.dataset.tol > 0){
+        var tol = JSON.parse(this.dataset.tol);
+        var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+        if (matches.reduce((a, b) => a + b, 0) > 0) {
+          cl.add("webex-correct");
+        } else {
+          cl.remove("webex-correct");
+        }
+      }
+
+      // added regex bit
+      if (cl.contains("regex")){
+        answer_regex = RegExp(real_answers.join("|"))
+        if (answer_regex.test(my_answer)) {
+          cl.add("webex-correct");
+        }
+      }
+
+      update_total_correct();
+    }
+
+    /* function for checking select answers */
+    select_func = function(e) {
+      console.log("webex: check select");
+
+      var cl = this.classList
+
+      /* add style */
+      cl.remove("webex-incorrect");
+      cl.remove("webex-correct");
+      if (this.value == "answer") {
+        cl.add("webex-correct");
+      } else if (this.value != "blank") {
+        cl.add("webex-incorrect");
+      }
+
+      update_total_correct();
+    }
+
+    /* function for checking radiogroups answers */
+    radiogroups_func = function(e) {
+      console.log("webex: check radiogroups");
+
+      var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+      var cl = checked_button.parentElement.classList;
+      var labels = checked_button.parentElement.parentElement.children;
+
+      /* get rid of styles */
+      for (i = 0; i < labels.length; i++) {
+        labels[i].classList.remove("webex-incorrect");
+        labels[i].classList.remove("webex-correct");
+      }
+
+      /* add style */
+      if (checked_button.value == "answer") {
+        cl.add("webex-correct");
+      } else {
+        cl.add("webex-incorrect");
+      }
+
+      update_total_correct();
+    }
+
+    window.onload = function() {
+      console.log("webex onload");
+      /* set up solution buttons */
+      var buttons = document.getElementsByTagName("button");
+
+      for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].parentElement.classList.contains('webex-solution')) {
+          buttons[i].onclick = b_func;
+        }
+      }
+
+      var check_sections = document.getElementsByClassName("webex-check");
+      console.log("check:", check_sections.length);
+      for (var i = 0; i < check_sections.length; i++) {
+        check_sections[i].classList.add("unchecked");
+
+        let btn = document.createElement("button");
+        btn.innerHTML = "Show Answers";
+        btn.classList.add("webex-check-button");
+        btn.onclick = check_func;
+        check_sections[i].appendChild(btn);
+
+        let spn = document.createElement("span");
+        spn.classList.add("webex-total_correct");
+        check_sections[i].appendChild(spn);
+      }
+
+      /* set up webex-solveme inputs */
+      var solveme = document.getElementsByClassName("webex-solveme");
+
+      for (var i = 0; i < solveme.length; i++) {
+        /* make sure input boxes don't auto-anything */
+        solveme[i].setAttribute("autocomplete","off");
+        solveme[i].setAttribute("autocorrect", "off");
+        solveme[i].setAttribute("autocapitalize", "off");
+        solveme[i].setAttribute("spellcheck", "false");
+        solveme[i].value = "";
+
+        /* adjust answer for ignorecase or nospaces */
+        var cl = solveme[i].classList;
+        var real_answer = solveme[i].dataset.answer;
+        if (cl.contains("ignorecase")) {
+          real_answer = real_answer.toLowerCase();
+        }
+        if (cl.contains("nospaces")) {
+          real_answer = real_answer.replace(/ /g, "");
+        }
+        solveme[i].dataset.answer = real_answer;
+
+        /* attach checking function */
+        solveme[i].onkeyup = solveme_func;
+        solveme[i].onchange = solveme_func;
+
+        solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+      }
+
+      /* set up radiogroups */
+      var radiogroups = document.getElementsByClassName("webex-radiogroup");
+      for (var i = 0; i < radiogroups.length; i++) {
+        radiogroups[i].onchange = radiogroups_func;
+      }
+
+      /* set up selects */
+      var selects = document.getElementsByClassName("webex-select");
+      for (var i = 0; i < selects.length; i++) {
+        selects[i].onchange = select_func;
+        selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+      }
+
+      update_total_correct();
+    }
+
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
