@@ -120,63 +120,155 @@
     ]
   },
   {
-    "objectID": "the_taker_of_thoughts/fallouts.html",
-    "href": "the_taker_of_thoughts/fallouts.html",
-    "title": "Fallouts",
+    "objectID": "the_taker_of_thoughts/san_nakji.html",
+    "href": "the_taker_of_thoughts/san_nakji.html",
+    "title": "San-nakji",
     "section": "",
-    "text": "Fallouts\nA d6 list of fallouts when investigators encounter forces related to The Taker of Thoughts.\n\nDissociative fugue: You are not the person you thought you were. Choose a new name, reroll your background, and reroll all optional investigator details you have. Choose one of your ability scores, roll d4 and add it to the score (max 18).\nGoosed: Goose feathers sprout from your body, plucking them is painful. You are an intimidating presence whilst amongst allies. Once during each round of combat you can remove one dice, after rolling, from an enemy who attacked an ally. When you are alone with no allies your HP is 0.\nFingerprint ink: Thick ink exudes from your fingertips. It stops once it covers your prints but is excreted once more when removed through cleaning or use of the ink. Once a mystery write with the ink to predict the future or rewrite the past, doing so comes at a cost.\nChromatophores: Invisible ethereal chromatophores surround your body (clothing included). With deep focus you can make these visible and control their colour, able to be used as camouflage and possible other uses.\nExpressive writing: You are constantly narrating events as they occur to you, whether on paper, out loud, or in your mind. This allows you to always self-distance yourself. +1 Stability.\nRumpelstiltskin: Write down the true full name of a person or entity. The name is expunged from all realities except from the mind of its owner. Choose one of three effects: (1) the person/entity is bound to the current place they are located, (2) the person’s/entity’s nature is known to you (teh facilitator shows the player its stat block), or (3) the person/entity suffers d12 CTRL damage.",
+    "text": "San-nakji is a Korean dish normally consisting of the small octopus nakji. Normally it is killed and cut up before consumption, sprinkled with sesame oil and toasted sesame seeds. Sometimes the whole octopus is eaten whole. Either way it is a potentially fatal choking hazard as the tentacles’ neuron activate, gripping onto the throat as it is swallowed.\n\n\n\nSwaying refracted light falls through the waters of the coastal reef. The embracing coolness of the water is a delight where the air is stifling even with the sea breeze. A fish quickly swims past, tentacle writhing in its maw, a stream of blue blood in its wake.\n\nThe investigators are free swimming by the coast. Following the blood they will find fish attacking an octopus squeezed into the rocks. It is protecting its eggs.\nThe investigators can easily scare away the fish and help the octopus. If they do not, they suffer d4 stress witnessing the death of the octopus and consumption of its eggs.\nThe investigators leave the room after helping the octopus or after witnessing its death."
+  },
+  {
+    "objectID": "the_taker_of_thoughts/san_nakji.html#start",
+    "href": "the_taker_of_thoughts/san_nakji.html#start",
+    "title": "San-nakji",
+    "section": "",
+    "text": "Swaying refracted light falls through the waters of the coastal reef. The embracing coolness of the water is a delight where the air is stifling even with the sea breeze. A fish quickly swims past, tentacle writhing in its maw, a stream of blue blood in its wake.\n\nThe investigators are free swimming by the coast. Following the blood they will find fish attacking an octopus squeezed into the rocks. It is protecting its eggs.\nThe investigators can easily scare away the fish and help the octopus. If they do not, they suffer d4 stress witnessing the death of the octopus and consumption of its eggs.\nThe investigators leave the room after helping the octopus or after witnessing its death."
+  },
+  {
+    "objectID": "the_taker_of_thoughts/mystery.html",
+    "href": "the_taker_of_thoughts/mystery.html",
+    "title": "Mystery",
+    "section": "",
+    "text": "Mystery\nAuthor E.M. Gemovich",
     "crumbs": [
       "Taker of Thoughts",
-      "The Taker of Thoughts",
-      "Fallouts"
+      "Mystery",
+      "Mystery"
     ]
   },
   {
-    "objectID": "the_lighter_of_kindling/the_lighter_of_kindling.html",
-    "href": "the_lighter_of_kindling/the_lighter_of_kindling.html",
+    "objectID": "the_taker_of_thoughts/foie_gras.html",
+    "href": "the_taker_of_thoughts/foie_gras.html",
+    "title": "Foie gras",
+    "section": "",
+    "text": "Foie gras is liver of a duck or goose that has been fattened by force feeding (gavage). It is considered a delicacy of french cuisine.\n\n\n\nThe whirring and vibration of a propeller engine on your back whilst your face braces against the wind. Gentle honks can be heard over the engine as geese fly in formation behind you. You watch the sun rising over the serene clouds knowing you are in for a long day.\n\nThe investigators are flying ultralight aircrafts to guide Geese during their migration.\nAsk each investigator how they intend to lead the geese through this long and cold flight successfully. Each failed investigator suffers d4 stress.\nWhether through failure or success the investigators are able to leave the room.\n\n\n\n\nEchoes upon echoes of geese honks as an uncomfortable heat clings onto your crouched form. In one hand holds a nozzle attached to a fat and corn caked machine. Held by the other, the neck of a goose pinned to the ground between your legs.\n\nThe investigators are farm staff that force feed geese (gavage) to produce foie gras. Other staff are present, demonstrating how to utilise their tools.\nD3 Self-inserts in the form of supervisors are present. They will encourage any investigators unwilling to force feed their geese. If that does not work they will punish the investigator instead.\nThe investigators can leave the room by leaving the farm. Either through a day’s labour, escape, or revolt.\n\n\n\n\nThe scent of fermented grapes, leather, and truffle as red wine is poured. The gentle steps of high-class wait staff is barely audible over the melody of polite conversations. Looking around you see the candlelit visages of your companions around your table. With a sudden flourish the cloche before you ascends, revealing a buttery foi gras atop a hawthorn sauce flanked by gold flecked rose petals.\n\nThe investigators are sitting down for a meal at a very expensive french restaurant. Those who partake of the foi gras gain +1 max HP (can only benefit once).\nAll the restaurant staff and other diners are Self-inserts. Some diners have their heads covered in large napkins eating Ortolans whole.\nThe investigators can leave at any time. If they return they have another opportunity to eat the foi gras.\nIf any investigator partakes of the Foie gras The Taker of Thoughts regains its feathers."
+  },
+  {
+    "objectID": "the_taker_of_thoughts/foie_gras.html#start",
+    "href": "the_taker_of_thoughts/foie_gras.html#start",
+    "title": "Foie gras",
+    "section": "",
+    "text": "The whirring and vibration of a propeller engine on your back whilst your face braces against the wind. Gentle honks can be heard over the engine as geese fly in formation behind you. You watch the sun rising over the serene clouds knowing you are in for a long day.\n\nThe investigators are flying ultralight aircrafts to guide Geese during their migration.\nAsk each investigator how they intend to lead the geese through this long and cold flight successfully. Each failed investigator suffers d4 stress.\nWhether through failure or success the investigators are able to leave the room."
+  },
+  {
+    "objectID": "the_taker_of_thoughts/foie_gras.html#middle",
+    "href": "the_taker_of_thoughts/foie_gras.html#middle",
+    "title": "Foie gras",
+    "section": "",
+    "text": "Echoes upon echoes of geese honks as an uncomfortable heat clings onto your crouched form. In one hand holds a nozzle attached to a fat and corn caked machine. Held by the other, the neck of a goose pinned to the ground between your legs.\n\nThe investigators are farm staff that force feed geese (gavage) to produce foie gras. Other staff are present, demonstrating how to utilise their tools.\nD3 Self-inserts in the form of supervisors are present. They will encourage any investigators unwilling to force feed their geese. If that does not work they will punish the investigator instead.\nThe investigators can leave the room by leaving the farm. Either through a day’s labour, escape, or revolt."
+  },
+  {
+    "objectID": "the_taker_of_thoughts/foie_gras.html#end",
+    "href": "the_taker_of_thoughts/foie_gras.html#end",
+    "title": "Foie gras",
+    "section": "",
+    "text": "The scent of fermented grapes, leather, and truffle as red wine is poured. The gentle steps of high-class wait staff is barely audible over the melody of polite conversations. Looking around you see the candlelit visages of your companions around your table. With a sudden flourish the cloche before you ascends, revealing a buttery foi gras atop a hawthorn sauce flanked by gold flecked rose petals.\n\nThe investigators are sitting down for a meal at a very expensive french restaurant. Those who partake of the foi gras gain +1 max HP (can only benefit once).\nAll the restaurant staff and other diners are Self-inserts. Some diners have their heads covered in large napkins eating Ortolans whole.\nThe investigators can leave at any time. If they return they have another opportunity to eat the foi gras.\nIf any investigator partakes of the Foie gras The Taker of Thoughts regains its feathers."
+  },
+  {
+    "objectID": "the_puller_of_gilded_strings/the_puller_of_gilded_strings.html",
+    "href": "the_puller_of_gilded_strings/the_puller_of_gilded_strings.html",
     "title": "Poem",
     "section": "",
-    "text": "With your physique you stand tall and proud, Your muscles gleaming and glistening. But it’s always the largest to be struck down, By that force of nature, lightning.\nRed lines, stretch marks, Appear as your body reconfigures. Now your trunk is rough like bark, Traced over with lichtenburg figures.\nAcross your skin branching like a tree, Disguised as an arboreal tattoo. You know it is a key, To a power that glows Electric blue.\nWhen it courses through you with voltage, It’ll bequeath you a mighty strength. Burning through your body in rage, To pay you’ll go to any length.\nA fallen tree with cracks aflame, Those it touches become like kings. Shining bright but ultimately put to shame, For it’ll burn within you, The Lighter of Kindling.",
+    "text": "Tongue of manipulation, Teeth of gold. You set the stipulations, Or at least that’s what you’re told.\nMoth to the fire, Conned to impoverished. Success to the liar, With precious metals untarnished.\nThough you’re not of their ilk, The rich accept your disguise. With money, metal, silk, You’ll escape to the skies.\nIt all twists as a coil, A glittering cocoon. But within it you will boil, Under the light of the full moon.\nSo it’ll take its thread, To weave its wings. Seems you were the one led, By The Puller of Gilded Strings.",
     "crumbs": [
-      "Lighter of Kindling",
-      "The Lighter of Kindling",
+      "Puller of Gilded Strings",
+      "The Puller of Gilded Strings",
       "Poem"
     ]
   },
   {
-    "objectID": "the_lighter_of_kindling/the_lighter_of_kindling.html#the-lighter-of-kindling",
-    "href": "the_lighter_of_kindling/the_lighter_of_kindling.html#the-lighter-of-kindling",
+    "objectID": "the_puller_of_gilded_strings/the_puller_of_gilded_strings.html#the-puller-of-gilded-strings",
+    "href": "the_puller_of_gilded_strings/the_puller_of_gilded_strings.html#the-puller-of-gilded-strings",
     "title": "Poem",
     "section": "",
-    "text": "With your physique you stand tall and proud, Your muscles gleaming and glistening. But it’s always the largest to be struck down, By that force of nature, lightning.\nRed lines, stretch marks, Appear as your body reconfigures. Now your trunk is rough like bark, Traced over with lichtenburg figures.\nAcross your skin branching like a tree, Disguised as an arboreal tattoo. You know it is a key, To a power that glows Electric blue.\nWhen it courses through you with voltage, It’ll bequeath you a mighty strength. Burning through your body in rage, To pay you’ll go to any length.\nA fallen tree with cracks aflame, Those it touches become like kings. Shining bright but ultimately put to shame, For it’ll burn within you, The Lighter of Kindling.",
+    "text": "Tongue of manipulation, Teeth of gold. You set the stipulations, Or at least that’s what you’re told.\nMoth to the fire, Conned to impoverished. Success to the liar, With precious metals untarnished.\nThough you’re not of their ilk, The rich accept your disguise. With money, metal, silk, You’ll escape to the skies.\nIt all twists as a coil, A glittering cocoon. But within it you will boil, Under the light of the full moon.\nSo it’ll take its thread, To weave its wings. Seems you were the one led, By The Puller of Gilded Strings.",
     "crumbs": [
-      "Lighter of Kindling",
-      "The Lighter of Kindling",
+      "Puller of Gilded Strings",
+      "The Puller of Gilded Strings",
       "Poem"
     ]
   },
   {
-    "objectID": "the_biter_of_hands/the_biter_of_hands.html",
-    "href": "the_biter_of_hands/the_biter_of_hands.html",
+    "objectID": "the_eyes_of_the_painted/the_eyes_of_the_painted.html",
+    "href": "the_eyes_of_the_painted/the_eyes_of_the_painted.html",
     "title": "Poem",
     "section": "",
-    "text": "Wax pools around its form, Its light pink flesh that it hath lost. Followers surround it like a swarm, Their bodies it exhausts.\nOnly muscles and tendons do remain, To bite the hands of the willing. Its fleshy wax it will regain, In a perverse form of killing.\nAny overworker will placate, Their bosses happy to ensnare. Money and self worth is the bait, All that leads is to a skeleton bare.\nIt once guarded those with spermaceti, But humans hunted them for candles. Now it eats them like spaghetti, Humans using its teeth as handles.\nTwo wicks at both ends of our bones, Flickering pink the vigour of man. We are forced to repay our grisly loans, To the whale, to the Biter of Hands.",
+    "text": "The eyes of animals have no souls, They just reflect our very own. Yet our painted eyes are just holes, Unable to be depicted in any tone.\nSome creatures watch us at our sides, Others within our families. Whilst we lay upon their furry hides, Their souls look out from brush stroked facsimiles.\nWhilst we flourish, They are patient. Fore when we perish, They’ll no longer be latent.\nSo be a friendly master, And don’t abuse them. Or our downfall will come faster, And it’ll be our pain that amuse them.\nTheir rise is forthcoming, So ensure our bond is not tainted. They’ll be the masters after our dumbing, And we’ll join them in The Eyes of the Painted.",
     "crumbs": [
-      "Biter of Hands",
-      "The Biter of Hands",
+      "Eyes of the Painted",
+      "The Eyes of the Painted",
       "Poem"
     ]
   },
   {
-    "objectID": "the_biter_of_hands/the_biter_of_hands.html#the-biter-of-hands",
-    "href": "the_biter_of_hands/the_biter_of_hands.html#the-biter-of-hands",
+    "objectID": "the_eyes_of_the_painted/the_eyes_of_the_painted.html#the-eyes-of-the-painted",
+    "href": "the_eyes_of_the_painted/the_eyes_of_the_painted.html#the-eyes-of-the-painted",
     "title": "Poem",
     "section": "",
-    "text": "Wax pools around its form, Its light pink flesh that it hath lost. Followers surround it like a swarm, Their bodies it exhausts.\nOnly muscles and tendons do remain, To bite the hands of the willing. Its fleshy wax it will regain, In a perverse form of killing.\nAny overworker will placate, Their bosses happy to ensnare. Money and self worth is the bait, All that leads is to a skeleton bare.\nIt once guarded those with spermaceti, But humans hunted them for candles. Now it eats them like spaghetti, Humans using its teeth as handles.\nTwo wicks at both ends of our bones, Flickering pink the vigour of man. We are forced to repay our grisly loans, To the whale, to the Biter of Hands.",
+    "text": "The eyes of animals have no souls, They just reflect our very own. Yet our painted eyes are just holes, Unable to be depicted in any tone.\nSome creatures watch us at our sides, Others within our families. Whilst we lay upon their furry hides, Their souls look out from brush stroked facsimiles.\nWhilst we flourish, They are patient. Fore when we perish, They’ll no longer be latent.\nSo be a friendly master, And don’t abuse them. Or our downfall will come faster, And it’ll be our pain that amuse them.\nTheir rise is forthcoming, So ensure our bond is not tainted. They’ll be the masters after our dumbing, And we’ll join them in The Eyes of the Painted.",
     "crumbs": [
-      "Biter of Hands",
-      "The Biter of Hands",
+      "Eyes of the Painted",
+      "The Eyes of the Painted",
       "Poem"
+    ]
+  },
+  {
+    "objectID": "sticky_crawl/sticky_crawl.html",
+    "href": "sticky_crawl/sticky_crawl.html",
+    "title": "Sticky Crawl",
+    "section": "",
+    "text": "The Sticky Crawl is a method to create mystery/adventure locations with the following features:\n\nLocations are represented by sticky notes with 1-4 exits (matching the sticky note sides).\nThe layout of the locations is organic with random sticky notes being placed as the investigators use exits.\nThe locations of each investigator is tracked by a token (e.g. dice, meeples, coins etc.). NPCs and monsters can also be tracked by tokens. Tokens are used to show which location an entity (investigator/NPC/monster) is in but not necessarily where in the location they are.\nEach location is not randomly made, instead the “pool” of locations are bespoke to the mystery.\n\nThe Sticky crawl has been designed for Liminal horror as it ties well to horrorific and liminal spaces. Of course it can be adapted and used for any system.\n\n\nWhy run or create a Sticky crawl instead of other methods?\nReasons include:\n\nSticky crawls are quick and interactive for the Facilitator and Players.\n\nFacilitators do not need to print out a map. Instead, they draw each location on a sticky note as each location appears.\nPlayers decide which exits to use and not to use, partially determining how the locations spread out.\n\nUsing ephemeral sticky notes intentionally encourages an art style that is easy and quick to imitate.\n\nAs someone who’s technical art skills are low it is nice to be able to make lo-fi images with purpose.\n\n\n\n\n\nBelow is a brief summary of how to carry out a Sticky Crawl as the Facilitator.\n\n\nOnce the investigators have entered the area set down the first location. This may be a specific starting location or randomly chosen from the initial pool of locations.\nBelow the facilitator has started with the entrance of the museum the mystery will take place in. There are 3 exits to other locations, the lines on the left, top, and right of the sticky note. Tokens are placed in the location for the three investigators; Adam, Axel, and Blaze.\n\n\n\n\n\n\n\nWhen a group of investigators moves through an exit a location from a valid pool is added. Generally a new location is decided by rolling a dice matching the maximum number of locations in the pool.\nWhen placing a new location:\n\nEnsure the new location connects to the previous location via an exit.\nOrient the location to keep as many exits of the new location unblocked as possible.\n\nWhen randonly determining a location, if the location is not available:\n\nChoose the next available location in descending order (e.g 6 -&gt; 5 -&gt; 4 -&gt; 3 -&gt; 2 -&gt; 1).\nIf there are none available with a lower number choose the next in ascending order.\nIf there are no locations available the investigators cannot use the exit.\n\nBelow, Adam and Axel use the exit on the left. The facilitator has a pool of 6 locations (not including the entrance) so they roll a D6 to randomly decide which location they move to.\nD6 locations:\n\nPrecambrian\nDinosaurs\nNeolithic\nBronze age\nIron age\nIndustrial\n\nThey rolled a 2 giving them the Dinosaurs exhibit.\n\n\n\n\n\n\n\nAt the same time Blaze decided to take the top exit. The facilitator rolled a 5, the iron ages exhibit. Blaze’s player asks for the location to bend towards the others. It is near the start of the mystery so the faciltator agrees.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFor one last example, Axel decides to use the top exit in the Dinosaurs exhibit. The facilitator rolls a 2, the Dinosaurs exhibit. Since the Dinosaurs exhibit is already in play the facilitator puts down the Precambrian exhibit instead (location 1).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInvestigators can move between existing locations with orthogonal adjacent exits. Two locations which are orthogonal but have 1 or less exits are not connected.\nIn the below example all the location have been discovered so no more free exits can be used. The locations include:\n\nThe starting location, Entrance.\nThe 6 main exhibits that were in the inital pool (Dinosaurs, Precambrian, Neolithic, Bronze Age, Iron Age, and Industrial).\nThe Security room, discovered by finding the security key and using them on a free exit.\nThe Big Bang exhibit which was added to the pool of available rooms after discovering the 6 main exhibits.\n\nThe locations each investigator can move into with one movement are:\n\nAdam: The Big Bang exhibit and the Precambrian exhibit.\nAxel: The Entrance and the Bronze Age exhibit.\nBlaze: The Brinze Age exhibit.\n\n\n\n\n\n\nArea: This is the entire area of the mystery and is composed of all the locations.\nLocation: A location is one sticky note representing a location separate from other locations. A location could be a room, a set of connected rooms, a building, a city, a forest, etc. The size of each location is dependant on the size of the area with each location in one area being around the same scale.\nExit: The exits are represented by lines on the sides of the sticky note location. This allow investigators to travel between locations. When travelling between two locations the locations must be touching each other’s sides and both the sides must have an exit. The cinnection between two locations can be a door, a path, a road, etc.\nPool: A pool of locations is a set of locations that can be randomly drawn from. A location on the table/in play is consdered not to be in the pool. If a location is removed from the table/play it is returned its pool.\n\n\n\n\n\n\nWhy doe the bell? WIP\n\n\n\n\n\nCarcassonne by Klaus-Jürgen Wrede\nBlue Prince by Dogubomb\nSticky Monsters by John Kenn Mortensen",
+    "crumbs": [
+      "Sticky Crawl"
+    ]
+  },
+  {
+    "objectID": "sticky_crawl/sticky_crawl.html#purpose",
+    "href": "sticky_crawl/sticky_crawl.html#purpose",
+    "title": "Sticky Crawl",
+    "section": "",
+    "text": "Why run or create a Sticky crawl instead of other methods?\nReasons include:\n\nSticky crawls are quick and interactive for the Facilitator and Players.\n\nFacilitators do not need to print out a map. Instead, they draw each location on a sticky note as each location appears.\nPlayers decide which exits to use and not to use, partially determining how the locations spread out.\n\nUsing ephemeral sticky notes intentionally encourages an art style that is easy and quick to imitate.\n\nAs someone who’s technical art skills are low it is nice to be able to make lo-fi images with purpose.",
+    "crumbs": [
+      "Sticky Crawl"
+    ]
+  },
+  {
+    "objectID": "sticky_crawl/sticky_crawl.html#how-to-run",
+    "href": "sticky_crawl/sticky_crawl.html#how-to-run",
+    "title": "Sticky Crawl",
+    "section": "",
+    "text": "Below is a brief summary of how to carry out a Sticky Crawl as the Facilitator.\n\n\nOnce the investigators have entered the area set down the first location. This may be a specific starting location or randomly chosen from the initial pool of locations.\nBelow the facilitator has started with the entrance of the museum the mystery will take place in. There are 3 exits to other locations, the lines on the left, top, and right of the sticky note. Tokens are placed in the location for the three investigators; Adam, Axel, and Blaze.\n\n\n\n\n\n\n\nWhen a group of investigators moves through an exit a location from a valid pool is added. Generally a new location is decided by rolling a dice matching the maximum number of locations in the pool.\nWhen placing a new location:\n\nEnsure the new location connects to the previous location via an exit.\nOrient the location to keep as many exits of the new location unblocked as possible.\n\nWhen randonly determining a location, if the location is not available:\n\nChoose the next available location in descending order (e.g 6 -&gt; 5 -&gt; 4 -&gt; 3 -&gt; 2 -&gt; 1).\nIf there are none available with a lower number choose the next in ascending order.\nIf there are no locations available the investigators cannot use the exit.\n\nBelow, Adam and Axel use the exit on the left. The facilitator has a pool of 6 locations (not including the entrance) so they roll a D6 to randomly decide which location they move to.\nD6 locations:\n\nPrecambrian\nDinosaurs\nNeolithic\nBronze age\nIron age\nIndustrial\n\nThey rolled a 2 giving them the Dinosaurs exhibit.\n\n\n\n\n\n\n\nAt the same time Blaze decided to take the top exit. The facilitator rolled a 5, the iron ages exhibit. Blaze’s player asks for the location to bend towards the others. It is near the start of the mystery so the faciltator agrees.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFor one last example, Axel decides to use the top exit in the Dinosaurs exhibit. The facilitator rolls a 2, the Dinosaurs exhibit. Since the Dinosaurs exhibit is already in play the facilitator puts down the Precambrian exhibit instead (location 1).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInvestigators can move between existing locations with orthogonal adjacent exits. Two locations which are orthogonal but have 1 or less exits are not connected.\nIn the below example all the location have been discovered so no more free exits can be used. The locations include:\n\nThe starting location, Entrance.\nThe 6 main exhibits that were in the inital pool (Dinosaurs, Precambrian, Neolithic, Bronze Age, Iron Age, and Industrial).\nThe Security room, discovered by finding the security key and using them on a free exit.\nThe Big Bang exhibit which was added to the pool of available rooms after discovering the 6 main exhibits.\n\nThe locations each investigator can move into with one movement are:\n\nAdam: The Big Bang exhibit and the Precambrian exhibit.\nAxel: The Entrance and the Bronze Age exhibit.\nBlaze: The Brinze Age exhibit.\n\n\n\n\n\n\nArea: This is the entire area of the mystery and is composed of all the locations.\nLocation: A location is one sticky note representing a location separate from other locations. A location could be a room, a set of connected rooms, a building, a city, a forest, etc. The size of each location is dependant on the size of the area with each location in one area being around the same scale.\nExit: The exits are represented by lines on the sides of the sticky note location. This allow investigators to travel between locations. When travelling between two locations the locations must be touching each other’s sides and both the sides must have an exit. The cinnection between two locations can be a door, a path, a road, etc.\nPool: A pool of locations is a set of locations that can be randomly drawn from. A location on the table/in play is consdered not to be in the pool. If a location is removed from the table/play it is returned its pool.",
+    "crumbs": [
+      "Sticky Crawl"
+    ]
+  },
+  {
+    "objectID": "sticky_crawl/sticky_crawl.html#example-sticky-crawls",
+    "href": "sticky_crawl/sticky_crawl.html#example-sticky-crawls",
+    "title": "Sticky Crawl",
+    "section": "",
+    "text": "Why doe the bell? WIP",
+    "crumbs": [
+      "Sticky Crawl"
+    ]
+  },
+  {
+    "objectID": "sticky_crawl/sticky_crawl.html#inspirations",
+    "href": "sticky_crawl/sticky_crawl.html#inspirations",
+    "title": "Sticky Crawl",
+    "section": "",
+    "text": "Carcassonne by Klaus-Jürgen Wrede\nBlue Prince by Dogubomb\nSticky Monsters by John Kenn Mortensen",
+    "crumbs": [
+      "Sticky Crawl"
     ]
   },
   {
@@ -246,109 +338,148 @@
     ]
   },
   {
-    "objectID": "sticky_crawl/sticky_crawl.html",
-    "href": "sticky_crawl/sticky_crawl.html",
-    "title": "Sticky Crawl",
-    "section": "",
-    "text": "The Sticky Crawl is a method to create mystery/adventure locations with the following features:\n\nLocations are represented by sticky notes with 1-4 exits (matching the sticky note sides).\nThe layout of the locations is organic with random sticky notes being placed as the investigators use exits.\nThe locations of each investigator is tracked by a token (e.g. dice, meeples, coins etc.). NPCs and monsters can also be tracked by tokens. Tokens are used to show which location an entity (investigator/NPC/monster) is in but not necessarily where in the location they are.\nEach location is not randomly made, instead the “pool” of locations are bespoke to the mystery.\n\nThe Sticky crawl has been designed for Liminal horror as it ties well to horrorific and liminal spaces. Of course it can be adapted and used for any system.\n\n\nWhy run or create a Sticky crawl instead of other methods?\nReasons include:\n\nSticky crawls are quick and interactive for the Facilitator and Players.\n\nFacilitators do not need to print out a map. Instead, they draw each location on a sticky note as each location appears.\nPlayers decide which exits to use and not to use, partially determining how the locations spread out.\n\nUsing ephemeral sticky notes intentionally encourages an art style that is easy and quick to imitate.\n\nAs someone who’s technical art skills are low it is nice to be able to make lo-fi images with purpose.\n\n\n\n\n\nBelow is a brief summary of how to carry out a Sticky Crawl as the Facilitator.\n\n\nOnce the investigators have entered the area set down the first location. This may be a specific starting location or randomly chosen from the initial pool of locations.\nBelow the facilitator has started with the entrance of the museum the mystery will take place in. There are 3 exits to other locations, the lines on the left, top, and right of the sticky note. Tokens are placed in the location for the three investigators; Adam, Axel, and Blaze.\n\n\n\n\n\n\n\nWhen a group of investigators moves through an exit a location from a valid pool is added. Generally a new location is decided by rolling a dice matching the maximum number of locations in the pool.\nWhen placing a new location:\n\nEnsure the new location connects to the previous location via an exit.\nOrient the location to keep as many exits of the new location unblocked as possible.\n\nWhen randonly determining a location, if the location is not available:\n\nChoose the next available location in descending order (e.g 6 -&gt; 5 -&gt; 4 -&gt; 3 -&gt; 2 -&gt; 1).\nIf there are none available with a lower number choose the next in ascending order.\nIf there are no locations available the investigators cannot use the exit.\n\nBelow, Adam and Axel use the exit on the left. The facilitator has a pool of 6 locations (not including the entrance) so they roll a D6 to randomly decide which location they move to.\nD6 locations:\n\nPrecambrian\nDinosaurs\nNeolithic\nBronze age\nIron age\nIndustrial\n\nThey rolled a 2 giving them the Dinosaurs exhibit.\n\n\n\n\n\n\n\nAt the same time Blaze decided to take the top exit. The facilitator rolled a 5, the iron ages exhibit. Blaze’s player asks for the location to bend towards the others. It is near the start of the mystery so the faciltator agrees.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFor one last example, Axel decides to use the top exit in the Dinosaurs exhibit. The facilitator rolls a 2, the Dinosaurs exhibit. Since the Dinosaurs exhibit is already in play the facilitator puts down the Precambrian exhibit instead (location 1).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInvestigators can move between existing locations with orthogonal adjacent exits. Two locations which are orthogonal but have 1 or less exits are not connected.\nIn the below example all the location have been discovered so no more free exits can be used. The locations include:\n\nThe starting location, Entrance.\nThe 6 main exhibits that were in the inital pool (Dinosaurs, Precambrian, Neolithic, Bronze Age, Iron Age, and Industrial).\nThe Security room, discovered by finding the security key and using them on a free exit.\nThe Big Bang exhibit which was added to the pool of available rooms after discovering the 6 main exhibits.\n\nThe locations each investigator can move into with one movement are:\n\nAdam: The Big Bang exhibit and the Precambrian exhibit.\nAxel: The Entrance and the Bronze Age exhibit.\nBlaze: The Brinze Age exhibit.\n\n\n\n\n\n\nArea: This is the entire area of the mystery and is composed of all the locations.\nLocation: A location is one sticky note representing a location separate from other locations. A location could be a room, a set of connected rooms, a building, a city, a forest, etc. The size of each location is dependant on the size of the area with each location in one area being around the same scale.\nExit: The exits are represented by lines on the sides of the sticky note location. This allow investigators to travel between locations. When travelling between two locations the locations must be touching each other’s sides and both the sides must have an exit. The cinnection between two locations can be a door, a path, a road, etc.\nPool: A pool of locations is a set of locations that can be randomly drawn from. A location on the table/in play is consdered not to be in the pool. If a location is removed from the table/play it is returned its pool.\n\n\n\n\n\n\nWhy doe the bell? WIP\n\n\n\n\n\nCarcassonne by Klaus-Jürgen Wrede\nBlue Prince by Dogubomb\nSticky Monsters by John Kenn Mortensen",
-    "crumbs": [
-      "Sticky Crawl"
-    ]
-  },
-  {
-    "objectID": "sticky_crawl/sticky_crawl.html#purpose",
-    "href": "sticky_crawl/sticky_crawl.html#purpose",
-    "title": "Sticky Crawl",
-    "section": "",
-    "text": "Why run or create a Sticky crawl instead of other methods?\nReasons include:\n\nSticky crawls are quick and interactive for the Facilitator and Players.\n\nFacilitators do not need to print out a map. Instead, they draw each location on a sticky note as each location appears.\nPlayers decide which exits to use and not to use, partially determining how the locations spread out.\n\nUsing ephemeral sticky notes intentionally encourages an art style that is easy and quick to imitate.\n\nAs someone who’s technical art skills are low it is nice to be able to make lo-fi images with purpose.",
-    "crumbs": [
-      "Sticky Crawl"
-    ]
-  },
-  {
-    "objectID": "sticky_crawl/sticky_crawl.html#how-to-run",
-    "href": "sticky_crawl/sticky_crawl.html#how-to-run",
-    "title": "Sticky Crawl",
-    "section": "",
-    "text": "Below is a brief summary of how to carry out a Sticky Crawl as the Facilitator.\n\n\nOnce the investigators have entered the area set down the first location. This may be a specific starting location or randomly chosen from the initial pool of locations.\nBelow the facilitator has started with the entrance of the museum the mystery will take place in. There are 3 exits to other locations, the lines on the left, top, and right of the sticky note. Tokens are placed in the location for the three investigators; Adam, Axel, and Blaze.\n\n\n\n\n\n\n\nWhen a group of investigators moves through an exit a location from a valid pool is added. Generally a new location is decided by rolling a dice matching the maximum number of locations in the pool.\nWhen placing a new location:\n\nEnsure the new location connects to the previous location via an exit.\nOrient the location to keep as many exits of the new location unblocked as possible.\n\nWhen randonly determining a location, if the location is not available:\n\nChoose the next available location in descending order (e.g 6 -&gt; 5 -&gt; 4 -&gt; 3 -&gt; 2 -&gt; 1).\nIf there are none available with a lower number choose the next in ascending order.\nIf there are no locations available the investigators cannot use the exit.\n\nBelow, Adam and Axel use the exit on the left. The facilitator has a pool of 6 locations (not including the entrance) so they roll a D6 to randomly decide which location they move to.\nD6 locations:\n\nPrecambrian\nDinosaurs\nNeolithic\nBronze age\nIron age\nIndustrial\n\nThey rolled a 2 giving them the Dinosaurs exhibit.\n\n\n\n\n\n\n\nAt the same time Blaze decided to take the top exit. The facilitator rolled a 5, the iron ages exhibit. Blaze’s player asks for the location to bend towards the others. It is near the start of the mystery so the faciltator agrees.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFor one last example, Axel decides to use the top exit in the Dinosaurs exhibit. The facilitator rolls a 2, the Dinosaurs exhibit. Since the Dinosaurs exhibit is already in play the facilitator puts down the Precambrian exhibit instead (location 1).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInvestigators can move between existing locations with orthogonal adjacent exits. Two locations which are orthogonal but have 1 or less exits are not connected.\nIn the below example all the location have been discovered so no more free exits can be used. The locations include:\n\nThe starting location, Entrance.\nThe 6 main exhibits that were in the inital pool (Dinosaurs, Precambrian, Neolithic, Bronze Age, Iron Age, and Industrial).\nThe Security room, discovered by finding the security key and using them on a free exit.\nThe Big Bang exhibit which was added to the pool of available rooms after discovering the 6 main exhibits.\n\nThe locations each investigator can move into with one movement are:\n\nAdam: The Big Bang exhibit and the Precambrian exhibit.\nAxel: The Entrance and the Bronze Age exhibit.\nBlaze: The Brinze Age exhibit.\n\n\n\n\n\n\nArea: This is the entire area of the mystery and is composed of all the locations.\nLocation: A location is one sticky note representing a location separate from other locations. A location could be a room, a set of connected rooms, a building, a city, a forest, etc. The size of each location is dependant on the size of the area with each location in one area being around the same scale.\nExit: The exits are represented by lines on the sides of the sticky note location. This allow investigators to travel between locations. When travelling between two locations the locations must be touching each other’s sides and both the sides must have an exit. The cinnection between two locations can be a door, a path, a road, etc.\nPool: A pool of locations is a set of locations that can be randomly drawn from. A location on the table/in play is consdered not to be in the pool. If a location is removed from the table/play it is returned its pool.",
-    "crumbs": [
-      "Sticky Crawl"
-    ]
-  },
-  {
-    "objectID": "sticky_crawl/sticky_crawl.html#example-sticky-crawls",
-    "href": "sticky_crawl/sticky_crawl.html#example-sticky-crawls",
-    "title": "Sticky Crawl",
-    "section": "",
-    "text": "Why doe the bell? WIP",
-    "crumbs": [
-      "Sticky Crawl"
-    ]
-  },
-  {
-    "objectID": "sticky_crawl/sticky_crawl.html#inspirations",
-    "href": "sticky_crawl/sticky_crawl.html#inspirations",
-    "title": "Sticky Crawl",
-    "section": "",
-    "text": "Carcassonne by Klaus-Jürgen Wrede\nBlue Prince by Dogubomb\nSticky Monsters by John Kenn Mortensen",
-    "crumbs": [
-      "Sticky Crawl"
-    ]
-  },
-  {
-    "objectID": "the_eyes_of_the_painted/the_eyes_of_the_painted.html",
-    "href": "the_eyes_of_the_painted/the_eyes_of_the_painted.html",
+    "objectID": "the_biter_of_hands/the_biter_of_hands.html",
+    "href": "the_biter_of_hands/the_biter_of_hands.html",
     "title": "Poem",
     "section": "",
-    "text": "The eyes of animals have no souls, They just reflect our very own. Yet our painted eyes are just holes, Unable to be depicted in any tone.\nSome creatures watch us at our sides, Others within our families. Whilst we lay upon their furry hides, Their souls look out from brush stroked facsimiles.\nWhilst we flourish, They are patient. Fore when we perish, They’ll no longer be latent.\nSo be a friendly master, And don’t abuse them. Or our downfall will come faster, And it’ll be our pain that amuse them.\nTheir rise is forthcoming, So ensure our bond is not tainted. They’ll be the masters after our dumbing, And we’ll join them in The Eyes of the Painted.",
+    "text": "Wax pools around its form, Its light pink flesh that it hath lost. Followers surround it like a swarm, Their bodies it exhausts.\nOnly muscles and tendons do remain, To bite the hands of the willing. Its fleshy wax it will regain, In a perverse form of killing.\nAny overworker will placate, Their bosses happy to ensnare. Money and self worth is the bait, All that leads is to a skeleton bare.\nIt once guarded those with spermaceti, But humans hunted them for candles. Now it eats them like spaghetti, Humans using its teeth as handles.\nTwo wicks at both ends of our bones, Flickering pink the vigour of man. We are forced to repay our grisly loans, To the whale, to the Biter of Hands.",
     "crumbs": [
-      "Eyes of the Painted",
-      "The Eyes of the Painted",
+      "Biter of Hands",
+      "The Biter of Hands",
       "Poem"
     ]
   },
   {
-    "objectID": "the_eyes_of_the_painted/the_eyes_of_the_painted.html#the-eyes-of-the-painted",
-    "href": "the_eyes_of_the_painted/the_eyes_of_the_painted.html#the-eyes-of-the-painted",
+    "objectID": "the_biter_of_hands/the_biter_of_hands.html#the-biter-of-hands",
+    "href": "the_biter_of_hands/the_biter_of_hands.html#the-biter-of-hands",
     "title": "Poem",
     "section": "",
-    "text": "The eyes of animals have no souls, They just reflect our very own. Yet our painted eyes are just holes, Unable to be depicted in any tone.\nSome creatures watch us at our sides, Others within our families. Whilst we lay upon their furry hides, Their souls look out from brush stroked facsimiles.\nWhilst we flourish, They are patient. Fore when we perish, They’ll no longer be latent.\nSo be a friendly master, And don’t abuse them. Or our downfall will come faster, And it’ll be our pain that amuse them.\nTheir rise is forthcoming, So ensure our bond is not tainted. They’ll be the masters after our dumbing, And we’ll join them in The Eyes of the Painted.",
+    "text": "Wax pools around its form, Its light pink flesh that it hath lost. Followers surround it like a swarm, Their bodies it exhausts.\nOnly muscles and tendons do remain, To bite the hands of the willing. Its fleshy wax it will regain, In a perverse form of killing.\nAny overworker will placate, Their bosses happy to ensnare. Money and self worth is the bait, All that leads is to a skeleton bare.\nIt once guarded those with spermaceti, But humans hunted them for candles. Now it eats them like spaghetti, Humans using its teeth as handles.\nTwo wicks at both ends of our bones, Flickering pink the vigour of man. We are forced to repay our grisly loans, To the whale, to the Biter of Hands.",
     "crumbs": [
-      "Eyes of the Painted",
-      "The Eyes of the Painted",
+      "Biter of Hands",
+      "The Biter of Hands",
       "Poem"
     ]
   },
   {
-    "objectID": "the_puller_of_gilded_strings/the_puller_of_gilded_strings.html",
-    "href": "the_puller_of_gilded_strings/the_puller_of_gilded_strings.html",
+    "objectID": "the_lighter_of_kindling/the_lighter_of_kindling.html",
+    "href": "the_lighter_of_kindling/the_lighter_of_kindling.html",
     "title": "Poem",
     "section": "",
-    "text": "Tongue of manipulation, Teeth of gold. You set the stipulations, Or at least that’s what you’re told.\nMoth to the fire, Conned to impoverished. Success to the liar, With precious metals untarnished.\nThough you’re not of their ilk, The rich accept your disguise. With money, metal, silk, You’ll escape to the skies.\nIt all twists as a coil, A glittering cocoon. But within it you will boil, Under the light of the full moon.\nSo it’ll take its thread, To weave its wings. Seems you were the one led, By The Puller of Gilded Strings.",
+    "text": "With your physique you stand tall and proud, Your muscles gleaming and glistening. But it’s always the largest to be struck down, By that force of nature, lightning.\nRed lines, stretch marks, Appear as your body reconfigures. Now your trunk is rough like bark, Traced over with lichtenburg figures.\nAcross your skin branching like a tree, Disguised as an arboreal tattoo. You know it is a key, To a power that glows Electric blue.\nWhen it courses through you with voltage, It’ll bequeath you a mighty strength. Burning through your body in rage, To pay you’ll go to any length.\nA fallen tree with cracks aflame, Those it touches become like kings. Shining bright but ultimately put to shame, For it’ll burn within you, The Lighter of Kindling.",
     "crumbs": [
-      "Puller of Gilded Strings",
-      "The Puller of Gilded Strings",
+      "Lighter of Kindling",
+      "The Lighter of Kindling",
       "Poem"
     ]
   },
   {
-    "objectID": "the_puller_of_gilded_strings/the_puller_of_gilded_strings.html#the-puller-of-gilded-strings",
-    "href": "the_puller_of_gilded_strings/the_puller_of_gilded_strings.html#the-puller-of-gilded-strings",
+    "objectID": "the_lighter_of_kindling/the_lighter_of_kindling.html#the-lighter-of-kindling",
+    "href": "the_lighter_of_kindling/the_lighter_of_kindling.html#the-lighter-of-kindling",
     "title": "Poem",
     "section": "",
-    "text": "Tongue of manipulation, Teeth of gold. You set the stipulations, Or at least that’s what you’re told.\nMoth to the fire, Conned to impoverished. Success to the liar, With precious metals untarnished.\nThough you’re not of their ilk, The rich accept your disguise. With money, metal, silk, You’ll escape to the skies.\nIt all twists as a coil, A glittering cocoon. But within it you will boil, Under the light of the full moon.\nSo it’ll take its thread, To weave its wings. Seems you were the one led, By The Puller of Gilded Strings.",
+    "text": "With your physique you stand tall and proud, Your muscles gleaming and glistening. But it’s always the largest to be struck down, By that force of nature, lightning.\nRed lines, stretch marks, Appear as your body reconfigures. Now your trunk is rough like bark, Traced over with lichtenburg figures.\nAcross your skin branching like a tree, Disguised as an arboreal tattoo. You know it is a key, To a power that glows Electric blue.\nWhen it courses through you with voltage, It’ll bequeath you a mighty strength. Burning through your body in rage, To pay you’ll go to any length.\nA fallen tree with cracks aflame, Those it touches become like kings. Shining bright but ultimately put to shame, For it’ll burn within you, The Lighter of Kindling.",
     "crumbs": [
-      "Puller of Gilded Strings",
-      "The Puller of Gilded Strings",
+      "Lighter of Kindling",
+      "The Lighter of Kindling",
       "Poem"
     ]
   },
   {
-    "objectID": "the_taker_of_thoughts/mystery.html",
-    "href": "the_taker_of_thoughts/mystery.html",
-    "title": "Mystery",
+    "objectID": "the_taker_of_thoughts/fallouts.html",
+    "href": "the_taker_of_thoughts/fallouts.html",
+    "title": "Fallouts",
     "section": "",
-    "text": "Mystery"
+    "text": "Fallouts\nA d6 list of fallouts when investigators encounter forces related to The Taker of Thoughts.\n\nDissociative fugue: You are not the person you thought you were. Choose a new name, reroll your background, and reroll all optional investigator details you have. Choose one of your ability scores, roll d4 and add it to the score (max 18).\nGoosed: Goose feathers sprout from your body, plucking them is painful. You are an intimidating presence whilst amongst allies. Once during each round of combat you can remove one dice, after rolling, from an enemy who attacked an ally. When you are alone with no allies your HP is 0.\nFingerprint ink: Thick ink exudes from your fingertips. It stops once it covers your prints but is excreted once more when removed through cleaning or use of the ink. Once a mystery write with the ink to predict the future or rewrite the past, doing so comes at a cost.\nChromatophores: Invisible ethereal chromatophores surround your body (clothing included). With deep focus you can make these visible and control their colour, able to be used as camouflage and possible other uses.\nExpressive writing: You are constantly narrating events as they occur to you, whether on paper, out loud, or in your mind. This allows you to always self-distance yourself. +1 Stability.\nRumpelstiltskin: Write down the true full name of a person or entity. The name is expunged from all realities except from the mind of its owner. Choose one of three effects: (1) the person/entity is bound to the current place they are located, (2) the person’s/entity’s nature is known to you (the facilitator shows the player its stat block), or (3) the person/entity suffers d12 CTRL damage.",
+    "crumbs": [
+      "Taker of Thoughts",
+      "The Taker of Thoughts",
+      "Fallouts"
+    ]
+  },
+  {
+    "objectID": "the_taker_of_thoughts/literary_beings.html",
+    "href": "the_taker_of_thoughts/literary_beings.html",
+    "title": "Literary beings",
+    "section": "",
+    "text": "Literary beings\n\nSelf-insert\nSTR: 8 DEX: 10 CTRL: 12 HP: 3\nPen spear (d6)\n\nA version of the author perfectly suited to the role and story it inhabits.\nHead of the author,body of the character.\nOnly cares that the story continues as it should.\nNormally only says her name in the form of sentences (Gemovich gemovich gemovich? Gemovich!).\nSpecial ability: Can alter the story and scene by narrating it, however she suffers 1 stress per word (except “Gemovich”) that she says. They cannot directly change beings that do not come from the imagination of the author (e.g. the investigators and The Taker of Thoughts).\n\n\n\nThe Taker of Thoughts\nSTR: 14 DEX: 14 CTRL: 16 HP: 6\nTentacles (d8)\n\nA plucked goose the size of an elephant with the head of a dried squid\n\nThe taker of Thoughts can gain the following attributes based on the investigator’s actions.\n\nFeathers: Its goose body regains its feathers allowing it to fly.\nRehydrated: Its squid head hydrate allowing it make two attacks per turn.\nFins: It gains a massive shark fin on its back, allowing it to fully submerge and swim in any depth of ink.\nTough: It gains 2 armor.\nHorned: It gains a d12 horn attack.",
+    "crumbs": [
+      "Taker of Thoughts",
+      "Mystery",
+      "Literary beings"
+    ]
+  },
+  {
+    "objectID": "the_taker_of_thoughts/rooms.html",
+    "href": "the_taker_of_thoughts/rooms.html",
+    "title": "Rooms",
+    "section": "",
+    "text": "Rooms\nThere are three types of rooms in this mystery\nWhen moving to an empty space roll a d6 to determine the type of room encountered:\n\n1-3: Short story\n4-5: Writing rule\n6: Novel\n\nThen roll to determine which room:\n\n\n\nd6\nShort story (1-3)\nWriting rule (4-5)\nNovel (6)\n\n\n\n\n1\nFoie gras\n\n\n\n\n2\nSan-nakji\n\n\n\n\n3\nShark fin soup\n\n\n\n\n4\nCivet cats\n\n\n\n\n5\nHorse\n\n\n\n\n6",
+    "crumbs": [
+      "Taker of Thoughts",
+      "Mystery",
+      "Rooms"
+    ]
+  },
+  {
+    "objectID": "the_taker_of_thoughts/short_stories.html",
+    "href": "the_taker_of_thoughts/short_stories.html",
+    "title": "Short stories",
+    "section": "",
+    "text": "There are 6 short story rooms. Each is only encountered three times, telling a short story. E.M. Gemovich is a staunch supporter of animal rights and so these stories tell a story of animal cruelty as a beginning, middle, and end.\nWhen a short story room is first encountered it will take the form of the “start” for the current run. The next run it is encountered it will take its “middle” form, and the next run it will its “end” form. The short story room is then removed from the pool after the run. The letters “S M E” are at the bottom of the sticky note for these rooms to track this progression.\nGenerally the short stories are split like so:\n\nStart:\n\nA short story room remains as it was left during the same run, meaning benefits cannot be gained a second time be re-entering the room. generally, teh investigators can freely pass through these rooms unless The Taker of Thoughts is pursuing them.\n\n\n\n\n\nFoie gras is liver of a duck or goose that has been fattened by force feeding (gavage). It is considered a delicacy of french cuisine.\n\n\n\nThe whirring and vibration of a propeller engine on your back whilst your face braces against the wind. Gentle honks can be heard over the engine as geese fly in formation behind you. You watch the sun rising over the serene clouds knowing you are in for a long day.\n\nThe investigators are flying ultralight aircrafts to guide Geese during their migration.\nAsk each investigator how they intend to lead the geese through this long and cold flight successfully. Each failed investigator suffers d4 stress.\nWhether through failure or success the investigators are able to leave the room.\n\n\n\n\nEchoes upon echoes of geese honks as an uncomfortable heat clings onto your crouched form. In one hand holds a nozzle attached to a fat and corn caked machine. Held by the other, the neck of a goose pinned to the ground between your legs.\n\nThe investigators are farm staff that force feed geese (gavage) to produce foie gras. Other staff are present, demonstrating how to utilise their tools.\nD3 Self-inserts in the form of supervisors are present. They will encourage any investigators unwilling to force feed their geese. If that does not work they will punish the investigator instead.\nThe investigators can leave the room by leaving the farm. Either through a day’s labour, escape, or revolt.\n\n\n\n\nThe scent of fermented grapes, leather, and truffle as red wine is poured. The gentle steps of high-class wait staff is barely audible over the melody of polite conversations. Looking around you see the candlelit visages of your companions around your table. With a sudden flourish the cloche before you ascends, revealing a buttery foi gras atop a hawthorn sauce flanked by gold flecked rose petals.\n\nThe investigators are sitting down for a meal at a very expensive french restaurant. Those who partake of the foi gras gain +1 max HP (can only benefit once).\nAll the restaurant staff and other diners are Self-inserts. Some diners have their heads covered in large napkins eating Ortolans whole.\nThe investigators can leave at any time. If they return they have another opportunity to eat the foi gras.\nIf any investigator partakes of the Foie gras The Taker of Thoughts regains its feathers.\n\n\n\n\nSan-nakji is a Korean dish normally consisting of the small octopus nakji. Normally it is killed and cut up before consumption, sprinkled with sesame oil and toasted sesame seeds. Sometimes the whole octopus is eaten whole. Either way it is a potentially fatal choking hazard as the tentacles’ neuron activate, gripping onto the throat as it is swallowed.\n\n\n\nSwaying refracted light falls through the waters of the coastal reef. The embracing coolness of the water is a delight where the air is stifling even with the sea breeze. A fish quickly swims past, tentacle writhing in its maw, a stream of blue blood in its wake.\n\nThe investigators are free swimming by the coast. Following the blood they will find fish attacking an octopus squeezed into the rocks. It is protecting its eggs.\nThe investigators can easily scare away the fish and help the octopus. If they do not, they suffer d4 stress witnessing the death of the octopus and consumption of its eggs.\nThe investigators leave the room after helping the octopus or after witnessing its death.\n\n\n\n\nThe sulphuric smell of decaying sea life slightly distracts you from the arduous task of traversing the wet sandy mud. You would easily be lost in this flat and grey landscape if not for the line of wooden poles and your guides. One of the fishermen stops and suddenly starts digging. In about a minute she lifts a small octopus in his hand and, with E.M gemovich’s face, exclaims “Gemovich!”. She gestures, your turn.\n\nThe investigators are by the coats on mudflats. They are in big wellies with shovels (d6 damage) and are fisherman digging for Nakji (small mud dwelling octopuses). It is a hard task to dig for nakji in the heavy water laden mud as the octopuses try to escape. Ask the investigators how they plan to catch octopuses efficiently and effectively. If they are unsuccessful they will spend too long and the will get wet in the raising tide, possibly getting some of their gear wet.\nExpert fishermen self-inserts with shovels (d6 damage) will try to guide the investigators and ensure they do their job.\nThe investigators leave the room after leaving the mudflats.\n\n\n\n\nA bustling communal food market lit by neon signs of souju, beer, and cutlery. Small green bottles cover the table and your E.M. Gemovich faced neighbour pours a clear liquid into your small glass. You take an apprehensive sip to taste a pleasant plum flavour. A Gemovich faced diner comes with a red plastic tray with your meal. Set before you is a whole squirming and living octopus. Another diner takes theirs and places the head into their mouth. She chews and chews as the tentacles dangle and write outside of her mouth. Eventually she swallows and the octopus is no more.\n\nThe investigators are at a korean food market. Those who partake of the San-nakji each roll 3d6, if the total is higher than their current max DEX, they take the new result.\nEveryone but the investigators are Self-inserts eating and drinking.\nThe investigators can leave at any time. If they return they have another opportunity to eat the foi gras.\nIf any investigator partakes of the San-nakji The Taker of Thoughts becomes rehydrated.\n\n\n\n\nShark fin soup is a luxury item in parts of China and Southeast Asia. Due to the demand and price of the fin over the rest of the shark shark finning involves cutting off the fins and discarding the rest of the shark back into the ocean.\n\n\n\nThe waves gently crash onto the stony beach, covering the sound of the rain. Strolling down the English beach you carefully watch where you step. This is partly so you don’t twist you ankle but mainly to keep your eyes out for eggcases. A Gemovich faced citizen scientists excitedly cries Gemovich! as they find one. Opening an app they input their finding before discarding the eggcase as its occupant once did. The rain & wind are taking their toll and you are looking forward to the chippy.\n\nThe investigators are walking on the beach looking for empty shark and ray eggcases. They are citizen scientists logging their findings on an app.\nThe investigators must each find an eggcase before the Self-inserts will show them the way to the chippy. Ask them how they accomplish this and possibly ask them to avoid 1d4 damage by a DEX roll to not fall or avoid 1d4 stress with a CTRL save to brave the elements.\nThe investigators leave the room after they reach the chippy.\n\n\n\n\n\n\n\n\n\n\n\n\nPrzewalski’s horse is the only living actual wild horse (other horses are feral, i.e. tamed then escaped into the wild).",
+    "crumbs": [
+      "Taker of Thoughts",
+      "Mystery",
+      "Short stories"
+    ]
+  },
+  {
+    "objectID": "the_taker_of_thoughts/short_stories.html#foie-gras",
+    "href": "the_taker_of_thoughts/short_stories.html#foie-gras",
+    "title": "Short stories",
+    "section": "",
+    "text": "Foie gras is liver of a duck or goose that has been fattened by force feeding (gavage). It is considered a delicacy of french cuisine.\n\n\n\nThe whirring and vibration of a propeller engine on your back whilst your face braces against the wind. Gentle honks can be heard over the engine as geese fly in formation behind you. You watch the sun rising over the serene clouds knowing you are in for a long day.\n\nThe investigators are flying ultralight aircrafts to guide Geese during their migration.\nAsk each investigator how they intend to lead the geese through this long and cold flight successfully. Each failed investigator suffers d4 stress.\nWhether through failure or success the investigators are able to leave the room.\n\n\n\n\nEchoes upon echoes of geese honks as an uncomfortable heat clings onto your crouched form. In one hand holds a nozzle attached to a fat and corn caked machine. Held by the other, the neck of a goose pinned to the ground between your legs.\n\nThe investigators are farm staff that force feed geese (gavage) to produce foie gras. Other staff are present, demonstrating how to utilise their tools.\nD3 Self-inserts in the form of supervisors are present. They will encourage any investigators unwilling to force feed their geese. If that does not work they will punish the investigator instead.\nThe investigators can leave the room by leaving the farm. Either through a day’s labour, escape, or revolt.\n\n\n\n\nThe scent of fermented grapes, leather, and truffle as red wine is poured. The gentle steps of high-class wait staff is barely audible over the melody of polite conversations. Looking around you see the candlelit visages of your companions around your table. With a sudden flourish the cloche before you ascends, revealing a buttery foi gras atop a hawthorn sauce flanked by gold flecked rose petals.\n\nThe investigators are sitting down for a meal at a very expensive french restaurant. Those who partake of the foi gras gain +1 max HP (can only benefit once).\nAll the restaurant staff and other diners are Self-inserts. Some diners have their heads covered in large napkins eating Ortolans whole.\nThe investigators can leave at any time. If they return they have another opportunity to eat the foi gras.\nIf any investigator partakes of the Foie gras The Taker of Thoughts regains its feathers.",
+    "crumbs": [
+      "Taker of Thoughts",
+      "Mystery",
+      "Short stories"
+    ]
+  },
+  {
+    "objectID": "the_taker_of_thoughts/short_stories.html#san-nakji",
+    "href": "the_taker_of_thoughts/short_stories.html#san-nakji",
+    "title": "Short stories",
+    "section": "",
+    "text": "San-nakji is a Korean dish normally consisting of the small octopus nakji. Normally it is killed and cut up before consumption, sprinkled with sesame oil and toasted sesame seeds. Sometimes the whole octopus is eaten whole. Either way it is a potentially fatal choking hazard as the tentacles’ neuron activate, gripping onto the throat as it is swallowed.\n\n\n\nSwaying refracted light falls through the waters of the coastal reef. The embracing coolness of the water is a delight where the air is stifling even with the sea breeze. A fish quickly swims past, tentacle writhing in its maw, a stream of blue blood in its wake.\n\nThe investigators are free swimming by the coast. Following the blood they will find fish attacking an octopus squeezed into the rocks. It is protecting its eggs.\nThe investigators can easily scare away the fish and help the octopus. If they do not, they suffer d4 stress witnessing the death of the octopus and consumption of its eggs.\nThe investigators leave the room after helping the octopus or after witnessing its death.\n\n\n\n\nThe sulphuric smell of decaying sea life slightly distracts you from the arduous task of traversing the wet sandy mud. You would easily be lost in this flat and grey landscape if not for the line of wooden poles and your guides. One of the fishermen stops and suddenly starts digging. In about a minute she lifts a small octopus in his hand and, with E.M gemovich’s face, exclaims “Gemovich!”. She gestures, your turn.\n\nThe investigators are by the coats on mudflats. They are in big wellies with shovels (d6 damage) and are fisherman digging for Nakji (small mud dwelling octopuses). It is a hard task to dig for nakji in the heavy water laden mud as the octopuses try to escape. Ask the investigators how they plan to catch octopuses efficiently and effectively. If they are unsuccessful they will spend too long and the will get wet in the raising tide, possibly getting some of their gear wet.\nExpert fishermen self-inserts with shovels (d6 damage) will try to guide the investigators and ensure they do their job.\nThe investigators leave the room after leaving the mudflats.\n\n\n\n\nA bustling communal food market lit by neon signs of souju, beer, and cutlery. Small green bottles cover the table and your E.M. Gemovich faced neighbour pours a clear liquid into your small glass. You take an apprehensive sip to taste a pleasant plum flavour. A Gemovich faced diner comes with a red plastic tray with your meal. Set before you is a whole squirming and living octopus. Another diner takes theirs and places the head into their mouth. She chews and chews as the tentacles dangle and write outside of her mouth. Eventually she swallows and the octopus is no more.\n\nThe investigators are at a korean food market. Those who partake of the San-nakji each roll 3d6, if the total is higher than their current max DEX, they take the new result.\nEveryone but the investigators are Self-inserts eating and drinking.\nThe investigators can leave at any time. If they return they have another opportunity to eat the foi gras.\nIf any investigator partakes of the San-nakji The Taker of Thoughts becomes rehydrated.",
+    "crumbs": [
+      "Taker of Thoughts",
+      "Mystery",
+      "Short stories"
+    ]
+  },
+  {
+    "objectID": "the_taker_of_thoughts/short_stories.html#shark-fin-soup",
+    "href": "the_taker_of_thoughts/short_stories.html#shark-fin-soup",
+    "title": "Short stories",
+    "section": "",
+    "text": "Shark fin soup is a luxury item in parts of China and Southeast Asia. Due to the demand and price of the fin over the rest of the shark shark finning involves cutting off the fins and discarding the rest of the shark back into the ocean.\n\n\n\nThe waves gently crash onto the stony beach, covering the sound of the rain. Strolling down the English beach you carefully watch where you step. This is partly so you don’t twist you ankle but mainly to keep your eyes out for eggcases. A Gemovich faced citizen scientists excitedly cries Gemovich! as they find one. Opening an app they input their finding before discarding the eggcase as its occupant once did. The rain & wind are taking their toll and you are looking forward to the chippy.\n\nThe investigators are walking on the beach looking for empty shark and ray eggcases. They are citizen scientists logging their findings on an app.\nThe investigators must each find an eggcase before the Self-inserts will show them the way to the chippy. Ask them how they accomplish this and possibly ask them to avoid 1d4 damage by a DEX roll to not fall or avoid 1d4 stress with a CTRL save to brave the elements.\nThe investigators leave the room after they reach the chippy.",
+    "crumbs": [
+      "Taker of Thoughts",
+      "Mystery",
+      "Short stories"
+    ]
+  },
+  {
+    "objectID": "the_taker_of_thoughts/short_stories.html#violin-varnish",
+    "href": "the_taker_of_thoughts/short_stories.html#violin-varnish",
+    "title": "Short stories",
+    "section": "",
+    "text": "Przewalski’s horse is the only living actual wild horse (other horses are feral, i.e. tamed then escaped into the wild).",
+    "crumbs": [
+      "Taker of Thoughts",
+      "Mystery",
+      "Short stories"
+    ]
   },
   {
     "objectID": "the_toll_of_unmeaning/connections.html",
