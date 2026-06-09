@@ -310,9 +310,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../RULES/COMBAT.html">Combat</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Combat</h1>
+        </a>     
     </div>
   </nav>
 </header>
@@ -379,7 +379,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#defence-outcomes" id="toc-defence-outcomes" class="nav-link" data-scroll-target="#defence-outcomes"><strong>Defence outcomes</strong></a></li>
   </ul></li>
   <li><a href="#action-dice-tracker" id="toc-action-dice-tracker" class="nav-link" data-scroll-target="#action-dice-tracker"><strong>Action dice tracker</strong></a></li>
-  <li><a href="#dice-threat-levels" id="toc-dice-threat-levels" class="nav-link" data-scroll-target="#dice-threat-levels"><strong>Dice threat levels</strong></a></li>
+  <li><a href="#dice-tracker-levels" id="toc-dice-tracker-levels" class="nav-link" data-scroll-target="#dice-tracker-levels"><strong>Dice tracker levels</strong></a></li>
   <li><a href="#outcomes" id="toc-outcomes" class="nav-link" data-scroll-target="#outcomes"><strong>Outcomes</strong></a></li>
   <li><a href="#combat-momentum" id="toc-combat-momentum" class="nav-link" data-scroll-target="#combat-momentum">Combat momentum</a></li>
   <li><a href="#complications-ultra-successes" id="toc-complications-ultra-successes" class="nav-link" data-scroll-target="#complications-ultra-successes"><strong>Complications &amp; ultra successes</strong></a></li>
@@ -392,7 +392,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Combat</h1>
+<h1 class="title d-none d-lg-block">Combat</h1>
 </div>
 
 
@@ -436,8 +436,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="defence-outcomes" class="level3">
 <h3 class="anchored" data-anchor-id="defence-outcomes"><strong>Defence outcomes</strong></h3>
 <p><strong>Failure:</strong> Character <strong>takes damage</strong></p>
-<p><strong>Partial success:</strong> Character suffers a <strong>defense complication</strong></p>
-<p><strong>Success:</strong> 1 <strong>defense dice</strong> removed (if any)</p>
+<p><strong>Partial success:</strong> Character suffers a <strong>defence complication</strong></p>
+<p><strong>Success:</strong> 1 <strong>defence dice</strong> removed (if any)</p>
 <p><strong>Ultra success:</strong> Immediately change to <strong>Offense phase</strong> &amp; something amazing occurs</p>
 </section>
 </section>
@@ -449,7 +449,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Defence</strong>: 3-7 dice, the higher the better for the enemy forces</p></li>
 </ul>
 <p>For each <strong>offense</strong> action 2 <strong>offense</strong> dice are used for the <strong>action roll</strong>. An extra <strong>offense</strong> dice can be used to gain advantage on the <strong>action roll</strong> if all players agree to it.</p>
-<p>For each <strong>defence</strong> action 2 <strong>defense</strong> dice are used for the <strong>action roll</strong>. The referee can use an extra <strong>defence</strong> dice to give the defender disadvantage on their <strong>action roll</strong>.</p>
+<p>For each <strong>defence</strong> action 2 <strong>defence</strong> dice are used for the <strong>action roll</strong>. The referee can use an extra <strong>defence</strong> dice to give the defender disadvantage on their <strong>action roll</strong>.</p>
 <p><strong>Note:</strong> Whenever three <strong>offense/defence</strong> dice are remaining the third dice is automatically used giving advantage/disadvantage.</p>
 <p><strong>Tag team actions</strong> count as <strong>1 action</strong> during an <strong>Offense or Defence phase</strong>.</p>
 <p>A <strong>Tag team action</strong> used during the <strong>Offense phase</strong> means:</p>
@@ -464,10 +464,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Tag team actions</strong> during a <strong>Defence phase</strong> are rarer. Whether one can occur in the specific instance is up to referee. One or both of the characters may take damage depending on the circumstance and the <strong>defense outcome</strong>.</p>
 </section>
-<section id="dice-threat-levels" class="level2">
-<h2 class="anchored" data-anchor-id="dice-threat-levels"><strong>Dice threat levels</strong></h2>
+<section id="dice-tracker-levels" class="level2">
+<h2 class="anchored" data-anchor-id="dice-tracker-levels"><strong>Dice tracker levels</strong></h2>
+<p>Below are examples of the amount of dice to give one side ofr their action dice tracker.</p>
 <ul>
-<li><p><strong>3 Dice:</strong> The forces crew have an overwhelming advantage. They may have ambushed their enemies or have carried out a pitch perfect plan leading to combat.</p></li>
 <li><p><strong>3 Dice:</strong> The combatants are unprepared or running low on momentum</p>
 <ul>
 <li>Poor training</li>
@@ -543,10 +543,10 @@ Something amazing</strong></td>
 <p>The player’s are encouraged to achieve goals whilst in combat. These could include:</p>
 <ul>
 <li><p>Trying to stop a bomb</p></li>
-<li><p>Outrunnign the enemy in a high speed race</p></li>
+<li><p>Outrunning the enemy in a high speed race</p></li>
 <li><p>Making it to the front of train</p></li>
 </ul>
-<p>A <a href="https://bladesinthedark.com/progress-clocks">tracker</a> of X spaces can be used to track the progress of the goal where each succesful <strong>offense/defense</strong> outcome marks off one space.</p>
+<p>A <a href="https://bladesinthedark.com/progress-clocks">tracker</a> of X spaces can be used to track the progress of the goal where each successful <strong>offense/defense</strong> outcome marks off one space.</p>
 </section>
 <section id="complications-ultra-successes" class="level2">
 <h2 class="anchored" data-anchor-id="complications-ultra-successes"><strong>Complications &amp; ultra successes</strong></h2>

@@ -1163,6 +1163,18 @@
     ]
   },
   {
+    "objectID": "BELIEFS/FLOWING_TRAITS.html#kinetic-transfer",
+    "href": "BELIEFS/FLOWING_TRAITS.html#kinetic-transfer",
+    "title": "Flowing traits",
+    "section": "Kinetic transfer",
+    "text": "Kinetic transfer\nWhen touching an item you can increase its speed up to 342m/s (just below sonic speeds). When it leaves your touch this effect stops with the item decelerating normally.\nSkateboard & +2 LIMBS",
+    "crumbs": [
+      "Beliefs",
+      "Protean",
+      "Flowing traits"
+    ]
+  },
+  {
     "objectID": "BELIEFS/FLOWING_TRAITS.html#limbless",
     "href": "BELIEFS/FLOWING_TRAITS.html#limbless",
     "title": "Flowing traits",
@@ -1216,6 +1228,18 @@
     "title": "Grounded traits",
     "section": "",
     "text": "Once per mission you can create 1 gravity lift. These cylinders of reverse gravity can be up to the diameter of a normal bicycle wheel. The cylinder extends straight up from the source of gravity of the celestial body/structure you are on. The reverse gravity has the same force as the gravity you are manipulating. The gravity lift lasts till you dismiss it or till the end of the mission.\nStabilise and thrust boots (1 use, prevents fall damage) & +1 EYES",
+    "crumbs": [
+      "Beliefs",
+      "Dotter of Tartarus",
+      "Grounded traits"
+    ]
+  },
+  {
+    "objectID": "BELIEFS/GROUNDED_TRAITS.html#hand-of-hematite",
+    "href": "BELIEFS/GROUNDED_TRAITS.html#hand-of-hematite",
+    "title": "Grounded traits",
+    "section": "Hand of Hematite",
+    "text": "Hand of Hematite\nOne of your arms, forearm to hand, is made of hematite. Hematite is an iron oxide stronger but more brittle than iron. Though your hand is articulated like a normal it is large and cumbersome, restricting use of normal sized weapons.\nHematite hand and forearm (1D6+1 DAMAGE, accessory) & -1 LIMBS",
     "crumbs": [
       "Beliefs",
       "Dotter of Tartarus",
@@ -1967,7 +1991,7 @@
     "href": "RULES/COMBAT.html#phases",
     "title": "Combat",
     "section": "Phases",
-    "text": "Phases\nOffense: Players take turns taking offense actions with either their PCs or allied NPCs. They normally narrate how they want to harm/hinder the enemy with the action roll determining the outcome. However, they may perform other tasks.\nDefence: The enemy attacks and the players narrate how they intend to avoid the damage/hindrance. The player performs a defence action turn to determine the outcome.\n\nOffense outcomes\nFailure: No damage dealt, 1 offense dice removed (if any)\nPartial success: Character deals damage but suffers an offense complication\nSuccess: Character deals damage\nUltra success: Character deals damage & something amazing occurs\n\n\nDefence outcomes\nFailure: Character takes damage\nPartial success: Character suffers a defense complication\nSuccess: 1 defense dice removed (if any)\nUltra success: Immediately change to Offense phase & something amazing occurs",
+    "text": "Phases\nOffense: Players take turns taking offense actions with either their PCs or allied NPCs. They normally narrate how they want to harm/hinder the enemy with the action roll determining the outcome. However, they may perform other tasks.\nDefence: The enemy attacks and the players narrate how they intend to avoid the damage/hindrance. The player performs a defence action turn to determine the outcome.\n\nOffense outcomes\nFailure: No damage dealt, 1 offense dice removed (if any)\nPartial success: Character deals damage but suffers an offense complication\nSuccess: Character deals damage\nUltra success: Character deals damage & something amazing occurs\n\n\nDefence outcomes\nFailure: Character takes damage\nPartial success: Character suffers a defence complication\nSuccess: 1 defence dice removed (if any)\nUltra success: Immediately change to Offense phase & something amazing occurs",
     "crumbs": [
       "Rules",
       "Combat"
@@ -1978,18 +2002,18 @@
     "href": "RULES/COMBAT.html#action-dice-tracker",
     "title": "Combat",
     "section": "Action dice tracker",
-    "text": "Action dice tracker\nAt the start of each phase a number of offense dice and defense dice are determined by the referee. The number of dice represents the threat level of each side.\n\nOffense: 3-7 dice, the higher the better for the player characters and their allies\nDefence: 3-7 dice, the higher the better for the enemy forces\n\nFor each offense action 2 offense dice are used for the action roll. An extra offense dice can be used to gain advantage on the action roll if all players agree to it.\nFor each defence action 2 defense dice are used for the action roll. The referee can use an extra defence dice to give the defender disadvantage on their action roll.\nNote: Whenever three offense/defence dice are remaining the third dice is automatically used giving advantage/disadvantage.\nTag team actions count as 1 action during an Offense or Defence phase.\nA Tag team action used during the Offense phase means:\n\nBoth characters can no longer act in the current phase \nOnly one of the character deals damage examples including:\n\nA sniper and their spotter\nPilot/driver positioning for a good shot\nThe supporter providing a distraction\n\n\nTag team actions during a Defence phase are rarer. Whether one can occur in the specific instance is up to referee. One or both of the characters may take damage depending on the circumstance and the defense outcome.",
+    "text": "Action dice tracker\nAt the start of each phase a number of offense dice and defense dice are determined by the referee. The number of dice represents the threat level of each side.\n\nOffense: 3-7 dice, the higher the better for the player characters and their allies\nDefence: 3-7 dice, the higher the better for the enemy forces\n\nFor each offense action 2 offense dice are used for the action roll. An extra offense dice can be used to gain advantage on the action roll if all players agree to it.\nFor each defence action 2 defence dice are used for the action roll. The referee can use an extra defence dice to give the defender disadvantage on their action roll.\nNote: Whenever three offense/defence dice are remaining the third dice is automatically used giving advantage/disadvantage.\nTag team actions count as 1 action during an Offense or Defence phase.\nA Tag team action used during the Offense phase means:\n\nBoth characters can no longer act in the current phase \nOnly one of the character deals damage examples including:\n\nA sniper and their spotter\nPilot/driver positioning for a good shot\nThe supporter providing a distraction\n\n\nTag team actions during a Defence phase are rarer. Whether one can occur in the specific instance is up to referee. One or both of the characters may take damage depending on the circumstance and the defense outcome.",
     "crumbs": [
       "Rules",
       "Combat"
     ]
   },
   {
-    "objectID": "RULES/COMBAT.html#dice-threat-levels",
-    "href": "RULES/COMBAT.html#dice-threat-levels",
+    "objectID": "RULES/COMBAT.html#dice-tracker-levels",
+    "href": "RULES/COMBAT.html#dice-tracker-levels",
     "title": "Combat",
-    "section": "Dice threat levels",
-    "text": "Dice threat levels\n\n3 Dice: The forces crew have an overwhelming advantage. They may have ambushed their enemies or have carried out a pitch perfect plan leading to combat.\n3 Dice: The combatants are unprepared or running low on momentum\n\nPoor training\nLow morale\nCaught completely off guard\n\n4 Dice: A lower threat than expected\n\nAmbushed whilst combat ready\nUnfamiliar terrain\nOutnumbered or outgunned\n\n5 Dice: The normal threat of trained combatants\n\nUnaware forces patrolling/guarding\nGoing into combat without a particular plan\n\n6 Dice: A higher threat than expected\n\nSuspicious forces ready for combat\nFamiliar terrain\nEffective gear against the enemy forces\n\n7 Dice: The combatants are a big threat\n\nAlert forces ready for combat\nA boss/leader is present\nA well executed plan",
+    "section": "Dice tracker levels",
+    "text": "Dice tracker levels\nBelow are examples of the amount of dice to give one side ofr their action dice tracker.\n\n3 Dice: The combatants are unprepared or running low on momentum\n\nPoor training\nLow morale\nCaught completely off guard\n\n4 Dice: A lower threat than expected\n\nAmbushed whilst combat ready\nUnfamiliar terrain\nOutnumbered or outgunned\n\n5 Dice: The normal threat of trained combatants\n\nUnaware forces patrolling/guarding\nGoing into combat without a particular plan\n\n6 Dice: A higher threat than expected\n\nSuspicious forces ready for combat\nFamiliar terrain\nEffective gear against the enemy forces\n\n7 Dice: The combatants are a big threat\n\nAlert forces ready for combat\nA boss/leader is present\nA well executed plan",
     "crumbs": [
       "Rules",
       "Combat"
@@ -2011,7 +2035,7 @@
     "href": "RULES/COMBAT.html#combat-momentum",
     "title": "Combat",
     "section": "Combat momentum",
-    "text": "Combat momentum\nThe player’s are encouraged to achieve goals whilst in combat. These could include:\n\nTrying to stop a bomb\nOutrunnign the enemy in a high speed race\nMaking it to the front of train\n\nA tracker of X spaces can be used to track the progress of the goal where each succesful offense/defense outcome marks off one space.",
+    "text": "Combat momentum\nThe player’s are encouraged to achieve goals whilst in combat. These could include:\n\nTrying to stop a bomb\nOutrunning the enemy in a high speed race\nMaking it to the front of train\n\nA tracker of X spaces can be used to track the progress of the goal where each successful offense/defense outcome marks off one space.",
     "crumbs": [
       "Rules",
       "Combat"
