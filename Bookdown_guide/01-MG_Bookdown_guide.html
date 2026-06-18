@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>MG Bookdown Guide</title>
   <meta name="description" content="NEOF book for the Introduction to command line bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.47 and GitBook 2.6.7" />
 
   <meta property="og:title" content="MG Bookdown Guide" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2025-08-21" />
+<meta name="date" content="2026-06-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,7 +52,7 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<link href="libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
 <script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <link href="libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet" />
 <link href="libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet" />
@@ -63,8 +63,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -74,7 +75,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -207,7 +208,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">MG Bookdown Guide</h1>
 <p class="author"><em>Matthew R. Gemmell</em></p>
-<p class="date"><em>2025-08-21</em></p>
+<p class="date"><em>2026-06-18</em></p>
 </div>
 <div id="mg-bookdown-guide" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> MG Bookdown Guide<a href="#mg-bookdown-guide" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -316,20 +317,20 @@ FOr convenience all the install commands are below:</p>
 <h3><span class="header-section-number">1.8.1</span> MCQ example<a href="#mcq-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Example code chunk:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode default Rchunk"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>```{r, echo = FALSE}</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>opts_p &lt;- c(&quot;__A1__&quot;, &quot;__A2__&quot;, answer=&quot;__A3__&quot;)</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>opts_p &lt;- c(&quot;**A1**&quot;, &quot;**A2**&quot;, answer=&quot;**A3**&quot;)</span>
 <span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>```</span>
 <span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>1. Question? `r longmcq(opts_p)`</span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>Question?
-<div id="radio_PYYAYQFUQQ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PYYAYQFUQQ" value=""></input> <span><strong>A1</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PYYAYQFUQQ" value=""></input> <span><strong>A2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PYYAYQFUQQ" value="answer"></input> <span><strong>A3</strong></span></label>
+<div id="radio_QGHZGXVSJE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QGHZGXVSJE" value=""></input> <span><strong>A1</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QGHZGXVSJE" value=""></input> <span><strong>A2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QGHZGXVSJE" value="answer"></input> <span><strong>A3</strong></span></label>
 </div></li>
 </ol>
 </div>
 <div id="template" class="section level3 hasAnchor" number="1.8.2">
 <h3><span class="header-section-number">1.8.2</span> template<a href="#template" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="sourceCode" id="cb9"><pre class="sourceCode default Rchunk"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>```{r, echo = FALSE}</span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>opts_p &lt;- c(&quot;__ __&quot;, &quot;__ __&quot;, &quot;__ __&quot;)</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>opts_p &lt;- c(&quot;** **&quot;, &quot;** **&quot;, &quot;** **&quot;)</span>
 <span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>```</span>
 <span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>`r longmcq(opts_p)`</span></code></pre></div>
 </div>
@@ -383,8 +384,8 @@ Title
 <p>You can add tooltips into R markdown with the <a href="https://tippy.john-coene.com/">Tippy R package</a> which uses <a href="https://atomiks.github.io/tippyjs/">Tippy.js</a>.</p>
 <p>A tooltip is text that appears when you hover your mouse over an item such as text, an example is below.</p>
 <p><u id='word'>Text</u></p>
-<span class="tippy html-widget html-fill-item" height="480" id="htmlwidget-523bb8ae5ff44f2e30b7" width="672"></span>
-<script type="application/json" data-for="htmlwidget-523bb8ae5ff44f2e30b7">{"x":{"element":"word","opts":{"content":"This is the tooltip text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="480" id="htmlwidget-c1de2cf8680c46e3a082" width="672"></span>
+<script type="application/json" data-for="htmlwidget-c1de2cf8680c46e3a082">{"x":{"element":"word","opts":{"content":"This is the tooltip text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 <p>The below code creates the above:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode default Rchunk"><code class="sourceCode default"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>&lt;u id=&#39;word&#39;&gt;Text&lt;/u&gt; </span>
 <span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a></span>
@@ -428,10 +429,10 @@ tooltips in one
 times but only needing one <code>tippy_this()</code> call for each ID.</p>
 <p>However, you must have each <code>tippy_this()</code> call needed for each <strong>.Rmd</strong> page on each relevant page.
 I suggest having one code block with all required <code>tippy_this()</code> calls for the required page at the bottom of that page.</p>
-<span class="tippy html-widget html-fill-item" height="480" id="htmlwidget-e86b24f12927970f0d45" width="672"></span>
-<script type="application/json" data-for="htmlwidget-e86b24f12927970f0d45">{"x":{"element":"multiple","opts":{"content":"More than one","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
-<span class="tippy html-widget html-fill-item" height="480" id="htmlwidget-a25974d554a6468b8ff7" width="672"></span>
-<script type="application/json" data-for="htmlwidget-a25974d554a6468b8ff7">{"x":{"element":"paragraph","opts":{"content":"a distinct section of a piece of writing","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="480" id="htmlwidget-1e6bb3750bfec38b9cae" width="672"></span>
+<script type="application/json" data-for="htmlwidget-1e6bb3750bfec38b9cae">{"x":{"element":"multiple","opts":{"content":"More than one","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="480" id="htmlwidget-94ceca07ea4d02c71102" width="672"></span>
+<script type="application/json" data-for="htmlwidget-94ceca07ea4d02c71102">{"x":{"element":"paragraph","opts":{"content":"a distinct section of a piece of writing","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 <p>Markdown code for the above text is:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode default Rchunk"><code class="sourceCode default"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>You can have </span>
 <span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>&lt;u id=&#39;multiple&#39;&gt;multiple&lt;/u&gt; </span>
@@ -472,7 +473,7 @@ I suggest having one code block with all required <code>tippy_this()</code> call
 <div id="ionicons" class="section level3 hasAnchor" number="1.10.2">
 <h3><span class="header-section-number">1.10.2</span> Ionicons<a href="#ionicons" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The below code can be used to add <svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#648fff;" xmlns="http://www.w3.org/2000/svg"> <path d="M416,80a48.05,48.05,0,0,0-48-48H144A48.05,48.05,0,0,0,96,80V432a48.05,48.05,0,0,0,48,48H368a48.05,48.05,0,0,0,48-48ZM168,432a24,24,0,1,1,24-24A24,24,0,0,1,168,432Zm0-80a24,24,0,1,1,24-24A24,24,0,0,1,168,352Zm0-80a24,24,0,1,1,24-24A24,24,0,0,1,168,272Zm88,160a24,24,0,1,1,24-24A24,24,0,0,1,256,432Zm0-80a24,24,0,1,1,24-24A24,24,0,0,1,256,352Zm0-80a24,24,0,1,1,24-24A24,24,0,0,1,256,272ZM368,408a24,24,0,0,1-48,0V328a24,24,0,0,1,48,0ZM344,272a24,24,0,1,1,24-24A24,24,0,0,1,344,272Zm19.31-100.69A16,16,0,0,1,352,176H160a16,16,0,0,1-16-16V96a16,16,0,0,1,16-16H352a16,16,0,0,1,16,16v64A16,16,0,0,1,363.31,171.31Z"></path></svg>.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode default Rchunk"><code class="sourceCode default"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a>`r icons::icon_style(icons::ionicons(&quot;calculator&quot;), fill = &quot;#648fff&quot;`</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode default Rchunk"><code class="sourceCode default"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a>`r icons::icon_style(icons::ionicons(&quot;calculator&quot;), fill = &quot;#648fff&quot;)`</span></code></pre></div>
 </div>
 <div id="bioicons" class="section level3 hasAnchor" number="1.10.3">
 <h3><span class="header-section-number">1.10.3</span> Bioicons<a href="#bioicons" class="anchor-section" aria-label="Anchor link to header"></a></h3>
