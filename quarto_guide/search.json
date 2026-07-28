@@ -1,54 +1,149 @@
 [
   {
-    "objectID": "setup/setup.html",
-    "href": "setup/setup.html",
-    "title": "Setup",
+    "objectID": "yml/yml_file.html",
+    "href": "yml/yml_file.html",
+    "title": "This site’s yml",
     "section": "",
-    "text": "To use quarto I would suggest using VScode (You can “Disable Ai Features” in the settings).\nTo install Quarto see The Quarto Get Started page.\n\n\nFor this site you will also want to follow the below install instruction.\n\n\nR in Visual Studio Code\n\n\n\nCode Spell Checker: Useful for spell checking normal words\nWhen using this click on a misspelt word (signified by squiggly underlining) and press “ctrl+.” to get a dropdown of suggestions\nTo change to GB spelling:\n\nGo to “Extension” on VScode (On far left, icon is three squares and a diamond)\nClick on the gear icon for Code Spell Checker\nClick on “Settings”\nChange “C Spell: Language” to “en-GB”\n\n\n\n\n\nYou can create a quarto project in 2 different way, a quarto command or copying a template.\n\n\nIn the command palette in VScode (the text bar at the top middle) type in the following:\n&gt;Quarto: Create Project\nFurther instructions are here: Quarto Website Quick Start\n\n\n\nOptionally, you can copy a template or other project from github and edit it.\nIf you already have the files you can then copy and paste to a new directory (ensure you don’t copy over any git files/directories if you do this).\nTo download all the files of a gihub repo:\n\nNavigate to the page via a browser (e.g. https://github.com/m-gemmell/Quarto_guide)\nClick on the green &lt;&gt; Code button\nSelect “Download ZIP”\n\n\n\n\n\nTheir are various R packages that are shown for various functions in quarto. Below are the install instructions for them all.\n\n#Webexercises\ninstall.packages(\"webexercises\")\n#Tippy tooltips\ninstall.packages(\"tippy\")\n#Reticulate to allow use of python in knitr\ninstall.packages(\"reticulate\")\n#Icons, below code also included in that section in this guide\ninstall.packages(\"remotes\")\nremotes::install_github(\"mitchelloharawild/icons\")\n#Download icon sets\nicons::download_fontawesome()\nicons::download_ionicons()\nicons::download_bioicons()",
+    "text": "This site’s yml",
     "crumbs": [
-      "Setup"
+      "yml",
+      "This site's yml"
     ]
   },
   {
-    "objectID": "setup/setup.html#extensions",
-    "href": "setup/setup.html#extensions",
-    "title": "Setup",
+    "objectID": "yml/website.html",
+    "href": "yml/website.html",
+    "title": "Website",
     "section": "",
-    "text": "For this site you will also want to follow the below install instruction.\n\n\nR in Visual Studio Code\n\n\n\nCode Spell Checker: Useful for spell checking normal words\nWhen using this click on a misspelt word (signified by squiggly underlining) and press “ctrl+.” to get a dropdown of suggestions\nTo change to GB spelling:\n\nGo to “Extension” on VScode (On far left, icon is three squares and a diamond)\nClick on the gear icon for Code Spell Checker\nClick on “Settings”\nChange “C Spell: Language” to “en-GB”",
+    "text": "The website segment is going to be the largest with many sub segments.\n\n\nThe main/overall options for the website segment I use are below:\n\nwebsite:\n  ## Turn Breadcrumbs off\n  bread-crumbs: false\n  ## Icon seen on tab\n  favicon: /images/favicon.png\n## Previous and next page links at bottom\n  page-navigation: true\n  ## Info seen when link is shared\n  title: \"Title\"\n  description: \"A description\"\n\nBreadcrumbs are the full path of a page is shown at the top, I keep this off.\n\n\n\n\nNavbar: Top navigation bar of website\n\nDetermines structure between segments\nLinks in hamburger menu if screen too narrow\n\nPage footer: Footer of page\nSidebar: Sidebar (i.e. left of page)\n\nDetermines structure within each segment",
     "crumbs": [
-      "Setup"
+      "yml",
+      "Website & structure",
+      "Website"
     ]
   },
   {
-    "objectID": "qmds/qmds.html",
-    "href": "qmds/qmds.html",
-    "title": "qmd files",
+    "objectID": "yml/website.html#main-options",
+    "href": "yml/website.html#main-options",
+    "title": "Website",
     "section": "",
-    "text": "Quarto uses .qmd which are essentially markdown files (.qmd = quarto markdown).\nTheir are 2 major parts in this section: Static, and Interactive.\n\n\n\nMarkdown: Link to markdown intro and cheatsheets\nImages: Adding and formatting images\nCallouts: Callout blocks (e.g. note, tip, warning, etc.)\nIcons:  ,  , etc.\nTables: Making tables by “hand” and displaying R data.frames contents nicely\nGithub code embed: Embedding code from a file in a github repo\n\n\n\n\n\nCode: Running and/or displaying code\nTippy tooltips: Hovering over underlined text for a tooltip\nWebexercises: Adding interactive quizzes (MCQs)\nVideos: Embedding youtube videos",
+    "text": "The main/overall options for the website segment I use are below:\n\nwebsite:\n  ## Turn Breadcrumbs off\n  bread-crumbs: false\n  ## Icon seen on tab\n  favicon: /images/favicon.png\n## Previous and next page links at bottom\n  page-navigation: true\n  ## Info seen when link is shared\n  title: \"Title\"\n  description: \"A description\"\n\nBreadcrumbs are the full path of a page is shown at the top, I keep this off.",
     "crumbs": [
-      "qmd",
-      "qmd files"
+      "yml",
+      "Website & structure",
+      "Website"
     ]
   },
   {
-    "objectID": "css/css.html",
-    "href": "css/css.html",
-    "title": "css",
+    "objectID": "yml/website.html#sub-segments",
+    "href": "yml/website.html#sub-segments",
+    "title": "Website",
     "section": "",
-    "text": "CSS stands for Cascading STyle Sheets and is a language for styling HTML web pages as well other documents.\nI specifically use .scss files (Sass: Syntactically Awesome Style Sheets). They have all the functionality of css files but more to make it easier.\n\n\nWe have set a light and dark theme for this website. Therefore we use 2 scss files:\n\nstyles_dark.scss for the dark theme\nstyles_light.scss for the light theme\n\nThese are designated in the format segment of our _quarto.yml file.\n\n\n\nAt the top of the css I import the fonts. To get the import text:\n\nGo to google fonts\nChoose a font\n\ne.g. Lexend\n\nOn the font page click “Get font” (top right)\nClick “&lt;&gt; Get embed code”\nI like to ensure only one font is chosen, bin any on the left that is not the one you want\nOn the Web tab choose “@import”\nCopy the embed code (you can exclude the &lt;style&gt; and &lt;/style))\nPaste into your scss",
+    "text": "Navbar: Top navigation bar of website\n\nDetermines structure between segments\nLinks in hamburger menu if screen too narrow\n\nPage footer: Footer of page\nSidebar: Sidebar (i.e. left of page)\n\nDetermines structure within each segment",
     "crumbs": [
-      "css"
+      "yml",
+      "Website & structure",
+      "Website"
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Overview",
+    "objectID": "yml/project_n_misc.html",
+    "href": "yml/project_n_misc.html",
+    "title": "Project and misc",
     "section": "",
-    "text": "The following website contains a quick guide/cookbook for creating websites with quarto.\n\n\nOnce you have created your various quarto files you can create your website’s html files with the following command in bash.\n\nquarto preview\n\n\n\n\n\n\n\nNote\n\n\n\nEnsue you are in the main directory of your quarto project when running the above.\n\n\nWhen you run the above it will create the files but also open a preview of the website in a browser. With the render-on-save: true in our _quarto.yml file the preview will update as you save changes in your files. However, this seems to be a bit consistent, to force the preview to update go to your _quart.yml file and save it. You can do this even if their are no changes to the _quarto.yml to save.\nYou can host your html files through various means. I use the free service GitHub pages.\n\n\n\nThe various parts, sections, and pages of this website provide a quick guide and resources for creating a quarto website. These include:\n\nSetup: Setting up quarto, VScode, and a quarto website project\n\nAlso includes install instructions for the various R packages described in this website\n\nqmd: Writing .qmd files with markdown\ncss: Setting the website theme, and the text font & colour\n\nThis shows the use of .scss files (Sass: Syntactically Awesome Style Sheets)\n\nyml: Setting the format, structure, and other global options for the website\n\n\n\n\nOther resources include:\n\nMain Quarto website\nQuarto: The practical Guide",
+    "text": "There are a few segments that can be included at the top of the yml file.\n\n\nThe type of project (i.e. is it a website, book, etc.)\nFor a normal quarto website you can have the following.\n\nproject:\n  type: website\n\n\n\n\n\n\n\nTip\n\n\n\nNote that the top line of a segment (i.e. project:) has no indentation. Then all lines in that segment have at least one level of indentations (e.g. type:website has one level).\n\n\nYou can also create:\n\nBooks\nManuscripts\nPresentations\n\nThere are also other Project options than just type:. For example you can set the output director with output-dir:.\n\n\n\nEditor options. We set this part to try to ensure our preview updates when we save.\n\neditor:\n  render-on-save: true\n\n\n\n\nTry to force the use of knitr.\n\nknitr: true",
     "crumbs": [
-      "Overview"
+      "yml",
+      "Project and misc"
     ]
+  },
+  {
+    "objectID": "yml/project_n_misc.html#project",
+    "href": "yml/project_n_misc.html#project",
+    "title": "Project and misc",
+    "section": "",
+    "text": "The type of project (i.e. is it a website, book, etc.)\nFor a normal quarto website you can have the following.\n\nproject:\n  type: website\n\n\n\n\n\n\n\nTip\n\n\n\nNote that the top line of a segment (i.e. project:) has no indentation. Then all lines in that segment have at least one level of indentations (e.g. type:website has one level).\n\n\nYou can also create:\n\nBooks\nManuscripts\nPresentations\n\nThere are also other Project options than just type:. For example you can set the output director with output-dir:.",
+    "crumbs": [
+      "yml",
+      "Project and misc"
+    ]
+  },
+  {
+    "objectID": "yml/project_n_misc.html#editor",
+    "href": "yml/project_n_misc.html#editor",
+    "title": "Project and misc",
+    "section": "",
+    "text": "Editor options. We set this part to try to ensure our preview updates when we save.\n\neditor:\n  render-on-save: true",
+    "crumbs": [
+      "yml",
+      "Project and misc"
+    ]
+  },
+  {
+    "objectID": "yml/project_n_misc.html#knitr",
+    "href": "yml/project_n_misc.html#knitr",
+    "title": "Project and misc",
+    "section": "",
+    "text": "Try to force the use of knitr.\n\nknitr: true",
+    "crumbs": [
+      "yml",
+      "Project and misc"
+    ]
+  },
+  {
+    "objectID": "yml/navbar.html",
+    "href": "yml/navbar.html",
+    "title": "Navbar",
+    "section": "",
+    "text": "The navbar is the top navigation part of the website.\nQuarto page on Website Navigation\n\n\nTemplate:\n\n  navbar:\n    #Title on top left of navbar\n    title: Title\n    #Image left of title\n    logo: \"images/logo.png\"\n    # When to collapse to hamburger menu\n    # lg is default\n    collapse-below: lg\n\n\n\n\n\n\n\nNote\n\n\n\nMind the indentation which is required.\n\n\n\n\n\n\n\n\nTip\n\n\n\nThe size of the logo is set in the css as .navbar-logo\n\n\n\n\n\nThis sub-segment determines the links of the parts to be displayed right of the title (left of navbar).\nThis site’s Navbar left:\n\n###Navbar left\n    left:\n      - text: \"Overview\"\n        href: index.qmd\n      - text: \"Setup\"\n        href: setup/setup.qmd\n      - text: \"qmd\"\n        href: qmds/qmds.qmd\n      - text: \"css\"\n        href: css/css.qmd\n      - text: \"yml\"\n        href: yml/yml.qmd\n\n\n\n\nThis sub-segment determines the various author’s links (e.g. bluesky and linkedin to include). By default a toggle for dark/light mode ( ) and a search button ( ) are included.\nMy personal links:\n\n###Navbar right\n    right:\n    # List of icons: https://icons.getbootstrap.com/\n      - icon: cup\n        href: https://ko-fi.com/waveofinspiration\n        aria-label: Ko-fi\n      - icon: bluesky\n        href: https://bsky.app/profile/m-gemmell.bsky.social\n        aria-label: BlueSky\n      - icon: github\n        href: https://github.com/m-gemmell/Quarto_guide\n        aria-label: GitHub\n\nNEOF links:\n\n###Navbar right\n    right:\n    - icon: house-fill\n      href: https://neof.org.uk/training/\n      aria-label: NEOF website\n    - icon: linkedin\n      href: https://www.linkedin.com/in/training-neof/\n      aria-label: LinkedIn\n    - icon: bluesky\n      href: https://bsky.app/profile/nerc-eof.bsky.social\n      aria-label: bluesky\n\nCGR links:\n\n###Navbar right\n    right:\n    - icon: house-fill\n      href: https://www.liverpool.ac.uk/genomic-research/\n      aria-label: CGR website\n    - icon: linkedin\n      href: https://www.linkedin.com/showcase/liverpool-shared-research-facilities\n      aria-label: LinkedIn",
+    "crumbs": [
+      "yml",
+      "Website & structure",
+      "Navbar"
+    ]
+  },
+  {
+    "objectID": "yml/navbar.html#main-options",
+    "href": "yml/navbar.html#main-options",
+    "title": "Navbar",
+    "section": "",
+    "text": "Template:\n\n  navbar:\n    #Title on top left of navbar\n    title: Title\n    #Image left of title\n    logo: \"images/logo.png\"\n    # When to collapse to hamburger menu\n    # lg is default\n    collapse-below: lg\n\n\n\n\n\n\n\nNote\n\n\n\nMind the indentation which is required.\n\n\n\n\n\n\n\n\nTip\n\n\n\nThe size of the logo is set in the css as .navbar-logo",
+    "crumbs": [
+      "yml",
+      "Website & structure",
+      "Navbar"
+    ]
+  },
+  {
+    "objectID": "yml/navbar.html#navbar-left",
+    "href": "yml/navbar.html#navbar-left",
+    "title": "Navbar",
+    "section": "",
+    "text": "This sub-segment determines the links of the parts to be displayed right of the title (left of navbar).\nThis site’s Navbar left:\n\n###Navbar left\n    left:\n      - text: \"Overview\"\n        href: index.qmd\n      - text: \"Setup\"\n        href: setup/setup.qmd\n      - text: \"qmd\"\n        href: qmds/qmds.qmd\n      - text: \"css\"\n        href: css/css.qmd\n      - text: \"yml\"\n        href: yml/yml.qmd",
+    "crumbs": [
+      "yml",
+      "Website & structure",
+      "Navbar"
+    ]
+  },
+  {
+    "objectID": "yml/navbar.html#navbar-right",
+    "href": "yml/navbar.html#navbar-right",
+    "title": "Navbar",
+    "section": "",
+    "text": "This sub-segment determines the various author’s links (e.g. bluesky and linkedin to include). By default a toggle for dark/light mode ( ) and a search button ( ) are included.\nMy personal links:\n\n###Navbar right\n    right:\n    # List of icons: https://icons.getbootstrap.com/\n      - icon: cup\n        href: https://ko-fi.com/waveofinspiration\n        aria-label: Ko-fi\n      - icon: bluesky\n        href: https://bsky.app/profile/m-gemmell.bsky.social\n        aria-label: BlueSky\n      - icon: github\n        href: https://github.com/m-gemmell/Quarto_guide\n        aria-label: GitHub\n\nNEOF links:\n\n###Navbar right\n    right:\n    - icon: house-fill\n      href: https://neof.org.uk/training/\n      aria-label: NEOF website\n    - icon: linkedin\n      href: https://www.linkedin.com/in/training-neof/\n      aria-label: LinkedIn\n    - icon: bluesky\n      href: https://bsky.app/profile/nerc-eof.bsky.social\n      aria-label: bluesky\n\nCGR links:\n\n###Navbar right\n    right:\n    - icon: house-fill\n      href: https://www.liverpool.ac.uk/genomic-research/\n      aria-label: CGR website\n    - icon: linkedin\n      href: https://www.linkedin.com/showcase/liverpool-shared-research-facilities\n      aria-label: LinkedIn",
+    "crumbs": [
+      "yml",
+      "Website & structure",
+      "Navbar"
+    ]
+  },
+  {
+    "objectID": "yml/editor.html",
+    "href": "yml/editor.html",
+    "title": "Editor",
+    "section": "",
+    "text": "Editor"
   },
   {
     "objectID": "qmds/webexercises.html",
@@ -56,6 +151,42 @@
     "title": "Webexercises",
     "section": "",
     "text": "webexercises is an R package that allows you to include interactive quizzes in quarto markdown (.qmd) and R markdown (.Rmd) created html pages.\nThis page includes:\n\nMCQ examples & template\nExpandable box example/template\nInstallation\nInitialisation for your quarto project\n\nThere are other widgets that I don’t find use for in the webexercises website.",
+    "crumbs": [
+      "qmd",
+      "Interactive",
+      "Webexercises"
+    ]
+  },
+  {
+    "objectID": "qmds/webexercises.html#example",
+    "href": "qmds/webexercises.html#example",
+    "title": "Webexercises",
+    "section": "Example",
+    "text": "Example\nMCQ:\n\nQuestion?\n\n A1 A2 A3\n\n\nCode:\n```{r, echo = FALSE}\nopts_p &lt;- c(\"**A1**\", \"**A2**\", answer=\"**A3**\")\n```\n1. Question? `r longmcq(opts_p)`",
+    "crumbs": [
+      "qmd",
+      "Interactive",
+      "Webexercises"
+    ]
+  },
+  {
+    "objectID": "qmds/webexercises.html#template",
+    "href": "qmds/webexercises.html#template",
+    "title": "Webexercises",
+    "section": "template",
+    "text": "template\n```{r, echo = FALSE}\nopts_p &lt;- c(\"** **\", \"** **\", \"** **\")\n```\n`r longmcq(opts_p)`",
+    "crumbs": [
+      "qmd",
+      "Interactive",
+      "Webexercises"
+    ]
+  },
+  {
+    "objectID": "qmds/webexercises.html#expandable-box",
+    "href": "qmds/webexercises.html#expandable-box",
+    "title": "Webexercises",
+    "section": "Expandable box",
+    "text": "Expandable box\nExpandable box:\n\n\nTitle\n\nContents\n\nCode:\n\n`r hide(\"Title\")`\nContents\n`r unhide()`\n\nOptionally, you may want to use a callout block.\n\n\n\n\n\n\nNoteTitle\n\n\n\n\n\nContents\n\n\n\n\n::: {.callout-note collapse=\"true\" title=\"Title\"}\nContents\n:::",
     "crumbs": [
       "qmd",
       "Interactive",
@@ -87,51 +218,132 @@
     ]
   },
   {
-    "objectID": "yml/yml.html",
-    "href": "yml/yml.html",
-    "title": "yml",
+    "objectID": "qmds/tippy_tooltips.html",
+    "href": "qmds/tippy_tooltips.html",
+    "title": "Tippy tooltips",
     "section": "",
-    "text": "The file _quarto.yml determines the overall structure of the quarto website. It includes various segments.\n\n\n\nProject: Determines what kind of project you create\n\nThis website focusses on creating a website project but you can also create books, manuscripts, and presentations with quarto\n\nWebsite: General website and options and the structure of the website\n\n\n\n\nOne note is that indentation is vital in the file. Everything must be indented to to correct amount or creating the site will fail.\nAn example can be see in the following link containing the _quarto.yml file for this website.\nThe websites _quarto.yml on github\n\n\n\nAs we are creating a website we will include a website section.\nThis contains a lot of sub segments so please see the",
-    "crumbs": [
-      "yml"
-    ]
-  },
-  {
-    "objectID": "yml/yml.html#the-project-type",
-    "href": "yml/yml.html#the-project-type",
-    "title": "yml",
-    "section": "",
-    "text": "The type of project (i.e. is it a website, book, etc.)\nFor a normal quarto website you can have the following.\n\nproject:\n  type: website\n\n\n\n\n\n\n\nTip\n\n\n\nNote that the top line of a segment (i.e. project:) has no indentation. Then all lines in that segment have at least one level of indentations (e.g. type:website has one level).\n\n\nYou can also create:\n\nBooks\nManuscripts\nPresentations\n\nThere are also other Project options than just type:. For example you can set the output director with output-dir:."
-  },
-  {
-    "objectID": "yml/project.html",
-    "href": "yml/project.html",
-    "title": "Project",
-    "section": "",
-    "text": "Project\nThe type of project (i.e. is it a website, book, etc.)\nFor a normal quarto website you can have the following.\n\nproject:\n  type: website\n\n\n\n\n\n\n\nTip\n\n\n\nNote that the top line of a segment (i.e. project:) has no indentation. Then all lines in that segment have at least one level of indentations (e.g. type:website has one level).\n\n\nYou can also create:\n\nBooks\nManuscripts\nPresentations\n\nThere are also other Project options than just type:. For example you can set the output director with output-dir:."
-  },
-  {
-    "objectID": "qmds/code.html",
-    "href": "qmds/code.html",
-    "title": "Code",
-    "section": "",
-    "text": "You can include various code blocks. We’ll demonstrate with R code initially.\n\n\nYou can include inline code.\nThis sentence ends with a number created by inline code, 1+1 = 2.\nThe above sentence in markdown code:\nThis sentence ends with a number created by inline code, 1+1 = `r 1+1`.\n\n\n\nCode block and output:\n\n1+1\n\n[1] 2\n\n\nCode block markdown code:\n```{r}\n1+1\n```\n\n\n\nTo show the code block but not the output add the option eval=FALSE\n\n#Below is some example code that we don't want markdown/quarto to run\n#We just want the code block to be displayed\nlong_function(x=long_data, y=more_data)\n\nCode block markdown code:\n```{r, eval=FALSE}\n#Below is some example code that we don't want markdown/quarto to run\n#We just want the code block to be displayed\nlong_function(x=long_data, y=more_data)\n```\n\n\n\nTo show only the output but not the code block add the option echo=FALSE\n\n\n[1] 1200\n\n\nCode block markdown code:\n```{r, echo=FALSE}\n100*12\n```\n\n\n\nLibraries need to be loaded for each page you want to use them.\nYou can add the below code block at the top of your markdown page to silently load the Tidyverse package. Otherwise your markdown file will have all the unneeded output from loading a library.\n```{r, echo=FALSE, warning=FALSE, results=FALSE, output=FALSE}\n#Load library so functions run smoothly\nlibrary(tidyverse)\n```\n\n\n\nYou can include bash and python code.\n\n\nPython code:\n\n1+1\n\nMarkdown code:\n```{python, eval=FALSE}\n1+1\n```\nMore information include installation instructions here: Quarto Using Python\n\n\n\nLinux code:\n\ncd ~/project_dir/analysis_1\n\n```{bash,eval=FALSE}\ncd ~/project_dir/analysis_1\n```\n\n\n\nIf your page has no R code and uses non-R languages you will need the below code at the top of each .qmd page that contains non R code. This will mean you will still produce .html pages. You need this even if you set eval=FALSE.\n\n---\nengine: knitr\n---\n\n\n\n\n\nYou can display the markdown code for a code block.\nCode block:\n\n1+1\n\n[1] 2\n\n\nMarkdown code for code block:\n```{r}\n1+1\n```\nMarkdown code for code block’s markdown code:\n````{verbatim}\n```{r, eval=TRUE}\n1 + 1\n```\n````\n\n\n\n\n\n\nNoteVerbatim a verbatim\n\n\n\n\n\nIf you want to verbatim a verbatim you’ll need to add an extra back tick (`).\nMarkdown code for last verbatim code:\n`````{verbatim}\n````{verbatim}\n```{r, eval=TRUE}\n1 + 1\n```\n````\n`````",
+    "text": "You can add tooltips into R markdown with the Tippy R package which uses Tippy.js.\n\n\nA tooltip is text that appears when you hover your mouse over an item such as text. Text with tooltips are signified by being underlined. Hover your cursor over the below text to see and example.\nText\n\n\n\n\n\n\n\n\n\nA tool tips needs 2 bits of “code”. The html code in the text and the R code to create the tippy tooltip.\n\n\nThe first is the inline HTML code to denote which word has which tooltip. This is shown below where we flank our word (Text) with html elements. These elements:\n\nUnderline our text &lt;u&gt;&lt;\\u&gt;\nSpecify the tippy tooltip to use id='word'\n\n&lt;u id='word'&gt;Text&lt;/u&gt; \n\n\n\n\n\n\nNoteTooltip location\n\n\n\nTippy tooltips can be placed anywhere in a sentence like here or here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe second bit of code is creating the tooltip. As this is R we create this in an R code block and set echo=FALSE so the code is not shown in the page.\n```{r, echo=FALSE}\n#Tippy tooltips\ntippy::tippy_this(elementId = \"word\", \n                  tooltip = \"This is the tooltip text\",\n                  arrow = TRUE, \n                  placement = \"bottom\")\n```\nThe options of the function are:\n\nelementId: Element to add the tooltip to via its ID.\ntooltip: Text to include in the tooltip.\narrow: Specifies if the tooltip will have an arrow pointing to the text the tooltip refers to.\nplacement: Placement of the tooltip relative to the text the tooltip refers to.\n\nOther options are available for tippy:tippy_this() based on Tippy.js props. For an example see how arrow= is used above compared to the Tippy.js arrow prop.\n\n\n\n\n\n\nNoteR code location\n\n\n\nThe R code for creating the tippy tooltip\n\n\n\n\n\n\nI would suggest adding the following to your styles_light.css and styles_dark.scss file to increase the text and box size of the tooltip.\n\n.tippy-tooltip {\n  font-size: 16px;\n  padding: 3px 5px;\n}\n\n\n\n\nYou can have multiple tooltips in one paragraph . You can even use the same tooltip multiple\ntimes but you only need one tippy_this() call for each ID.\nHowever, you must have each tippy_this() call needed for each .qmd page on each relevant page. I suggest having one code block with all required tippy_this() calls for the required page at the bottom of that page.\n\n\n\n\n\n\n\n\n\n\nMarkdown text for above:\nYou can have \n&lt;u id='multiple'&gt;multiple&lt;/u&gt; \ntooltips in one \n&lt;u id='paragraph'&gt;paragraph&lt;/u&gt; \n. You can even use the same tooltip \n&lt;u id='multiple'&gt;multiple&lt;/u&gt;  \ntimes but only needing one `tippy_this()` call for each ID.\n\nHowever, you must have each `tippy_this()` call needed for each __.Rmd__ page on each relevant page.\nI suggest having one code block with all required `tippy_this()` \ncalls for the required page at the bottom of that page.\nR code for above:\n```{r, echo=FALSE}\n#Tippy tooltips\ntippy::tippy_this(elementId = \"multiple\", \n                  tooltip = \"More than one\",\n                  arrow = TRUE, placement = \"bottom\")\ntippy::tippy_this(elementId = \"paragraph\", \n                  tooltip = \"a distinct section of a piece of writing\",\n                  arrow = TRUE, placement = \"bottom\")\n```\n\n\n\nSee install instructions in the setup page.",
     "crumbs": [
       "qmd",
       "Interactive",
-      "Code"
+      "Tippy tooltips"
     ]
   },
   {
-    "objectID": "qmds/code.html#non-r-code",
-    "href": "qmds/code.html#non-r-code",
-    "title": "Code",
+    "objectID": "qmds/tippy_tooltips.html#tooltips",
+    "href": "qmds/tippy_tooltips.html#tooltips",
+    "title": "Tippy tooltips",
     "section": "",
-    "text": "You can include bash and python code.\n\n\nPython code:\n\n1+1\n\nMarkdown code:\n```{python, eval=FALSE}\n1+1\n```\nMore information include installation instructions here: Quarto Using Python\n\n\n\nLinux code:\n\ncd ~/project_dir/analysis_1\n\n```{bash,eval=FALSE}\ncd ~/project_dir/analysis_1\n```\n\n\n\nIf your page has no R code and uses non-R languages you will need the below code at the top of each .qmd page that contains non R code. This will mean you will still produce .html pages. You need this even if you set eval=FALSE.\n\n---\nengine: knitr\n---",
+    "text": "A tooltip is text that appears when you hover your mouse over an item such as text. Text with tooltips are signified by being underlined. Hover your cursor over the below text to see and example.\nText",
     "crumbs": [
       "qmd",
       "Interactive",
-      "Code"
+      "Tippy tooltips"
+    ]
+  },
+  {
+    "objectID": "qmds/tippy_tooltips.html#code",
+    "href": "qmds/tippy_tooltips.html#code",
+    "title": "Tippy tooltips",
+    "section": "",
+    "text": "A tool tips needs 2 bits of “code”. The html code in the text and the R code to create the tippy tooltip.\n\n\nThe first is the inline HTML code to denote which word has which tooltip. This is shown below where we flank our word (Text) with html elements. These elements:\n\nUnderline our text &lt;u&gt;&lt;\\u&gt;\nSpecify the tippy tooltip to use id='word'\n\n&lt;u id='word'&gt;Text&lt;/u&gt; \n\n\n\n\n\n\nNoteTooltip location\n\n\n\nTippy tooltips can be placed anywhere in a sentence like here or here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe second bit of code is creating the tooltip. As this is R we create this in an R code block and set echo=FALSE so the code is not shown in the page.\n```{r, echo=FALSE}\n#Tippy tooltips\ntippy::tippy_this(elementId = \"word\", \n                  tooltip = \"This is the tooltip text\",\n                  arrow = TRUE, \n                  placement = \"bottom\")\n```\nThe options of the function are:\n\nelementId: Element to add the tooltip to via its ID.\ntooltip: Text to include in the tooltip.\narrow: Specifies if the tooltip will have an arrow pointing to the text the tooltip refers to.\nplacement: Placement of the tooltip relative to the text the tooltip refers to.\n\nOther options are available for tippy:tippy_this() based on Tippy.js props. For an example see how arrow= is used above compared to the Tippy.js arrow prop.\n\n\n\n\n\n\nNoteR code location\n\n\n\nThe R code for creating the tippy tooltip",
+    "crumbs": [
+      "qmd",
+      "Interactive",
+      "Tippy tooltips"
+    ]
+  },
+  {
+    "objectID": "qmds/tippy_tooltips.html#css",
+    "href": "qmds/tippy_tooltips.html#css",
+    "title": "Tippy tooltips",
+    "section": "",
+    "text": "I would suggest adding the following to your styles_light.css and styles_dark.scss file to increase the text and box size of the tooltip.\n\n.tippy-tooltip {\n  font-size: 16px;\n  padding: 3px 5px;\n}",
+    "crumbs": [
+      "qmd",
+      "Interactive",
+      "Tippy tooltips"
+    ]
+  },
+  {
+    "objectID": "qmds/tippy_tooltips.html#multilpe-instances",
+    "href": "qmds/tippy_tooltips.html#multilpe-instances",
+    "title": "Tippy tooltips",
+    "section": "",
+    "text": "You can have multiple tooltips in one paragraph . You can even use the same tooltip multiple\ntimes but you only need one tippy_this() call for each ID.\nHowever, you must have each tippy_this() call needed for each .qmd page on each relevant page. I suggest having one code block with all required tippy_this() calls for the required page at the bottom of that page.\n\n\n\n\n\n\n\n\n\n\nMarkdown text for above:\nYou can have \n&lt;u id='multiple'&gt;multiple&lt;/u&gt; \ntooltips in one \n&lt;u id='paragraph'&gt;paragraph&lt;/u&gt; \n. You can even use the same tooltip \n&lt;u id='multiple'&gt;multiple&lt;/u&gt;  \ntimes but only needing one `tippy_this()` call for each ID.\n\nHowever, you must have each `tippy_this()` call needed for each __.Rmd__ page on each relevant page.\nI suggest having one code block with all required `tippy_this()` \ncalls for the required page at the bottom of that page.\nR code for above:\n```{r, echo=FALSE}\n#Tippy tooltips\ntippy::tippy_this(elementId = \"multiple\", \n                  tooltip = \"More than one\",\n                  arrow = TRUE, placement = \"bottom\")\ntippy::tippy_this(elementId = \"paragraph\", \n                  tooltip = \"a distinct section of a piece of writing\",\n                  arrow = TRUE, placement = \"bottom\")\n```",
+    "crumbs": [
+      "qmd",
+      "Interactive",
+      "Tippy tooltips"
+    ]
+  },
+  {
+    "objectID": "qmds/tippy_tooltips.html#package-install",
+    "href": "qmds/tippy_tooltips.html#package-install",
+    "title": "Tippy tooltips",
+    "section": "",
+    "text": "See install instructions in the setup page.",
+    "crumbs": [
+      "qmd",
+      "Interactive",
+      "Tippy tooltips"
+    ]
+  },
+  {
+    "objectID": "qmds/qmds.html",
+    "href": "qmds/qmds.html",
+    "title": "qmd files",
+    "section": "",
+    "text": "Quarto uses .qmd which are essentially markdown files (.qmd = quarto markdown).\nTheir are 2 major parts in this section: Static, and Interactive.\n\n\n\nMarkdown: Link to markdown intro and cheatsheets\nImages: Adding and formatting images\nCallouts: Callout blocks (e.g. note, tip, warning, etc.)\nIcons:  ,  , etc.\nTables: Making tables by “hand” and displaying R data.frames contents nicely\nGithub code embed: Embedding code from a file in a github repo\n\n\n\n\n\nCode: Running and/or displaying code\nTippy tooltips: Hovering over underlined text for a tooltip\nWebexercises: Adding interactive quizzes (MCQs)\nVideos: Embedding youtube videos",
+    "crumbs": [
+      "qmd",
+      "qmd files"
+    ]
+  },
+  {
+    "objectID": "qmds/qmds.html#static",
+    "href": "qmds/qmds.html#static",
+    "title": "qmd files",
+    "section": "",
+    "text": "Markdown: Link to markdown intro and cheatsheets\nImages: Adding and formatting images\nCallouts: Callout blocks (e.g. note, tip, warning, etc.)\nIcons:  ,  , etc.\nTables: Making tables by “hand” and displaying R data.frames contents nicely\nGithub code embed: Embedding code from a file in a github repo",
+    "crumbs": [
+      "qmd",
+      "qmd files"
+    ]
+  },
+  {
+    "objectID": "qmds/qmds.html#interactive",
+    "href": "qmds/qmds.html#interactive",
+    "title": "qmd files",
+    "section": "",
+    "text": "Code: Running and/or displaying code\nTippy tooltips: Hovering over underlined text for a tooltip\nWebexercises: Adding interactive quizzes (MCQs)\nVideos: Embedding youtube videos",
+    "crumbs": [
+      "qmd",
+      "qmd files"
+    ]
+  },
+  {
+    "objectID": "qmds/images.html",
+    "href": "qmds/images.html",
+    "title": "Images",
+    "section": "",
+    "text": "Images\nThe below HTML code displays the image below it.\n\n![](/images/quarto_quarters.png){style=\"width:200px\" fig-align=\"center\"}\n\n\n\n\nYou can customise the display with various parts. Common inclusions for me are:\n\n![](/images/quarto_quarters.png){style=\"width:200px; border-radius:5px; background:white; border: white solid 5px\" fig-align=\"center\"}\n\n\n\n\n\n\nThe various options included above are:\n\nstyle=: Various style options\n\nwidth:: sets maximum width of image\n\nMax width of our site’s main are is 1200px, see yml format\nUseful to do this way so images don’t become tiny on a mobile phone.\nIf the width of the page is smaller than the set width it will interactively set the image to 100%\n\nborder-radius: adds curved corners, good for images with cornered background\n\n5px to 15px is generally a good range\n\nbackground: sets the background colour\nborder: sets the colour style and thickness of a border\n\nThese three options can be in any order\n\n\nfig-align= sets the alignment of the image\n\nTips:\n\nYou can use hexadecimals for colours (e.g. #111111)\nEnsure you have the ; between the different options in style=\"\"",
+    "crumbs": [
+      "qmd",
+      "Static",
+      "Images"
+    ]
+  },
+  {
+    "objectID": "qmds/github_code_embed.html",
+    "href": "qmds/github_code_embed.html",
+    "title": "Github code embed",
+    "section": "",
+    "text": "Github code embed\nTo embed code from a github page you can use the site https://emgithub.com/.\nTo do so:\n\nPut the link to the github file into the top bar\nChange the theme from Default to A 11 Y Dark or A 11 Y Light\n\nThe default does not work properly with the dark theme of our websites\n\nPress Go\nCopy the code form the &lt;iframe&gt; to embed\n\nThis displays the exact code as shown in the preview\nIf you use the &lt;script&gt; the code highlighting may be difficult to read due to your format and css settings\n\nPaste the code into your .qmd file\n\nFor example:\nGithub link: https://github.com/m-gemmell/Quarto_guide/blob/main/qmds/example_github_code.R\nThe script for embedding (A 11 Y Dark):\n\n&lt;iframe frameborder=\"0\" scrolling=\"no\" style=\"width:100%; height:120px;\" allow=\"clipboard-write\" src=\"https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fm-gemmell%2FQuarto_guide%2Fblob%2Fmain%2Fqmds%2Fexample_github_code.R&style=a11y-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on\"&gt;&lt;/iframe&gt;\n\nThe embed:\n\n\nThe same embed but with A 11 Light looks like so:",
+    "crumbs": [
+      "qmd",
+      "Static",
+      "Github code embed"
     ]
   },
   {
@@ -147,152 +359,23 @@
     ]
   },
   {
-    "objectID": "yml/yml.html#website",
-    "href": "yml/yml.html#website",
-    "title": "yml",
-    "section": "",
-    "text": "As we are creating a website we will include a website section.\nThis contains a lot of sub segments so please see the",
-    "crumbs": [
-      "yml"
-    ]
-  },
-  {
-    "objectID": "yml/yml.html#segments",
-    "href": "yml/yml.html#segments",
-    "title": "yml",
-    "section": "",
-    "text": "Project: Determines what kind of project you create\n\nThis website focusses on creating a website project but you can also create books, manuscripts, and presentations with quarto\n\nWebsite: General website and options and the structure of the website",
-    "crumbs": [
-      "yml"
-    ]
-  },
-  {
-    "objectID": "yml/yml.html#indentation",
-    "href": "yml/yml.html#indentation",
-    "title": "yml",
-    "section": "",
-    "text": "One note is that indentation is vital in the file. Everything must be indented to to correct amount or creating the site will fail.\nAn example can be see in the following link containing the _quarto.yml file for this website.\nThe websites _quarto.yml on github",
-    "crumbs": [
-      "yml"
-    ]
-  },
-  {
-    "objectID": "yml/website.html",
-    "href": "yml/website.html",
-    "title": "Website",
-    "section": "",
-    "text": "The website segment is going to be the largest with many sub segments.\n\n\nThe main/overall options for the website segment I use are below:\n\nwebsite:\n  ## Turn Breadcrumbs off\n  bread-crumbs: false\n  ## Icon seen on tab\n  favicon: /images/favicon.png\n## Previous and next page links at bottom\n  page-navigation: true\n  ## Info seen when link is shared\n  title: \"Title\"\n  description: \"A description\"\n\nBreadcrumbs are the full path of a page is shown at the top, I keep this off.\n\n\n\n\nNavbar: Top navigation bar of website\n\nDetermines structure between segments\nLinks in hamburger menu if screen too narrow\n\nPage footer: Footer of page\nSidebar: Sidebar (i.e. left of page)\n\nDetermines structure within each segment",
-    "crumbs": [
-      "yml",
-      "Website & structure",
-      "Website"
-    ]
-  },
-  {
-    "objectID": "yml/website_options.html",
-    "href": "yml/website_options.html",
-    "title": "Website options",
-    "section": "",
-    "text": "Website options",
-    "crumbs": [
-      "yml",
-      "Website & structure",
-      "Website options"
-    ]
-  },
-  {
-    "objectID": "yml/page_footer.html",
-    "href": "yml/page_footer.html",
-    "title": "Page footer",
-    "section": "",
-    "text": "Page footer\nFooter to include various links and images.\nThis website:\n\n##Page footer\n  page-footer:\n    left: |\n      ![](/images/quarto_quarters.png){width=50}\n    center: |\n      [![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K6IRLA0)\n\nNEOF:\n\n##Page footer\n  page-footer:\n    left: |\n      [![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png){fig-alt=\"CC BY-SA 4.0\" height=30px}](https://creativecommons.org/licenses/by-nc-sa/4.0/)\n    center: |\n      [![](/images/NEOF_rounded_corners.png){fig-alt=\"NEOF\" height=60px}](https://neof.org.uk/)\n\nCGR:\n\n##Page footer\n  page-footer:\n    center: |\n      [![](/images/CGR_large.png){fig-alt=\"CGR\" height=60px}](https://www.liverpool.ac.uk/genomic-research/)",
-    "crumbs": [
-      "yml",
-      "Website & structure",
-      "Page footer"
-    ]
-  },
-  {
-    "objectID": "yml/format.html",
-    "href": "yml/format.html",
-    "title": "Format",
-    "section": "",
-    "text": "Format\nGlobal format including themes of website\n\n#Format\nformat:\n  html:\n###Include table of contents\n### \"On this page\" right of page\n    toc: true\n\n###Page size\n    grid:\n####Width of sidebar\n      sidebar-width: 200px\n####Max width of main page\n      body-width: 1200px\n####Width of empty margin at right of toc\n#### needed to give room for long headers\n      margin-width: 150px\n####Space separating body from sidebar and toc  \n      gutter-width: 10px\n###Code highlighting style\n### a11y is accessible and auto switches between dark and light mode\n    highlight-style: a11y\n\n###Themes\n###HTML themes: https://quarto.org/docs/output-formats/html-themes.html\n    theme:\n####Dark theme with scss file\n      dark: [darkly, styles_dark.scss]\n####Light theme with scss\n      light: [styles_light.scss]\n####Any text not determined in scss files will be mainfont\n    mainfont: Lexend\n\n####Code will overflow in code blocks\n####set to scroll for scroll (i.e. horizontal scroll at bottom of block)\n    code-overflow: wrap\n###Paths for webexercises files\n    css: include/webex.css\n    include-after-body: include/webex.js\n\nHighlight\nAccessible code highlighting via a11y project.\nHow to incorporate in quarto via A Quarto tip a day",
-    "crumbs": [
-      "yml",
-      "Format"
-    ]
-  },
-  {
-    "objectID": "yml/navbar.html",
-    "href": "yml/navbar.html",
-    "title": "Navbar",
-    "section": "",
-    "text": "The navbar is the top navigation part of the website.\nQuarto page on Website Navigation\n\n\nTemplate:\n\n  navbar:\n    #Title on top left of navbar\n    title: Title\n    #Image left of title\n    logo: \"images/logo.png\"\n    # When to collapse to hamburger menu\n    # lg is default\n    collapse-below: lg\n\n\n\n\n\n\n\nNote\n\n\n\nMind the indentation which is required.\n\n\n\n\n\n\n\n\nTip\n\n\n\nThe size of the logo is set in the css as .navbar-logo\n\n\n\n\n\nThis sub-segment determines the links of the parts to be displayed right of the title (left of navbar).\nThis site’s Navbar left:\n\n###Navbar left\n    left:\n      - text: \"Overview\"\n        href: index.qmd\n      - text: \"Setup\"\n        href: setup/setup.qmd\n      - text: \"qmd\"\n        href: qmds/qmds.qmd\n      - text: \"css\"\n        href: css/css.qmd\n      - text: \"yml\"\n        href: yml/yml.qmd\n\n\n\n\nThis sub-segment determines the various author’s links (e.g. bluesky and linkedin to include). By default a toggle for dark/light mode ( ) and a search button ( ) are included.\nMy personal links:\n\n###Navbar right\n    right:\n    # List of icons: https://icons.getbootstrap.com/\n      - icon: cup\n        href: https://ko-fi.com/waveofinspiration\n        aria-label: Ko-fi\n      - icon: bluesky\n        href: https://bsky.app/profile/m-gemmell.bsky.social\n        aria-label: BlueSky\n      - icon: github\n        href: https://github.com/m-gemmell/Quarto_guide\n        aria-label: GitHub\n\nNEOF links:\n\n###Navbar right\n    right:\n    - icon: house-fill\n      href: https://neof.org.uk/training/\n      aria-label: NEOF website\n    - icon: linkedin\n      href: https://www.linkedin.com/in/training-neof/\n      aria-label: LinkedIn\n    - icon: bluesky\n      href: https://bsky.app/profile/nerc-eof.bsky.social\n      aria-label: bluesky\n\nCGR links:\n\n###Navbar right\n    right:\n    - icon: house-fill\n      href: https://www.liverpool.ac.uk/genomic-research/\n      aria-label: CGR website\n    - icon: linkedin\n      href: https://www.linkedin.com/showcase/liverpool-shared-research-facilities\n      aria-label: LinkedIn",
-    "crumbs": [
-      "yml",
-      "Website & structure",
-      "Navbar"
-    ]
-  },
-  {
-    "objectID": "yml/sidebar.html",
-    "href": "yml/sidebar.html",
-    "title": "Sidebar",
-    "section": "",
-    "text": "This determines the structure of the segments and what is shown in the sidebar (left).\nWebsites are made out of:\n\nParts\nSections\nPages\n\nMore info: Quarto Side Navigation\n\n\nThe start up of the sidebar segment up to the end of the qmd section.\n\n##Sidebar\n  sidebar:\n###Overview part \n    - id: Overview\n      title: \"Overview\"\n      style: \"floating\"\n      contents:\n#####Index page\n        - href: index.qmd\n###Setup part\n    - id: Setup\n      title: \"Setup\"\n      style: \"floating\"\n      collapse-level: 2\n      contents:\n      - href: setup/setup.qmd\n###qmd part\n    - id: qmd\n      title: \"qmd\"\n      style: \"floating\"\n      collapse-level: 2\n      contents:\n      - href: qmds/qmds.qmd\n####Static section\n      - section: \"Static\"\n        contents:\n        - href: qmds/markdown.qmd\n        - href: qmds/images.qmd\n        - href: qmds/callouts.qmd\n        - href: qmds/icons.qmd\n        - href: qmds/tables.qmd\n        - href: qmds/github_code_embed.qmd\n####Interactive section\n      - section: \"Interactive\"\n        contents:\n        - href: qmds/code.qmd\n        - href: qmds/tippy_tooltips.qmd\n        - href: qmds/webexercises.qmd\n        - href: qmds/videos.qmd\n\n\n\n\n\nstyle: : Either “docked” or “floating”\ncollapse-level: : How many levels there are before sections are collapsed\n\n1: All sections are collapsed\n2: Sub-sections and beyond are collapsed\nNumbers continue but generally I won’t even have sub-sections so its normally a choice between 1 and 2 for me",
-    "crumbs": [
-      "yml",
-      "Website & structure",
-      "Sidebar"
-    ]
-  },
-  {
-    "objectID": "index.html#authoring-a-website",
-    "href": "index.html#authoring-a-website",
-    "title": "Overview",
-    "section": "",
-    "text": "Once you have created your various quarto files you can create your website’s html files with the following command in bash.\n\nquarto preview\n\n\n\n\n\n\n\nNote\n\n\n\nEnsue you are in the main directory of your quarto project when running the above.\n\n\nWhen you run the above it will create the files but also open a preview of the website in a browser. With the render-on-save: true in our _quarto.yml file the preview will update as you save changes in your files. However, this seems to be a bit consistent, to force the preview to update go to your _quart.yml file and save it. You can do this even if their are no changes to the _quarto.yml to save.\nYou can host your html files through various means. I use the free service GitHub pages.",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#further-resources",
-    "href": "index.html#further-resources",
-    "title": "Overview",
-    "section": "",
-    "text": "Other resources include:\n\nMain Quarto website\nQuarto: The practical Guide",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#creating-quarto-files",
-    "href": "index.html#creating-quarto-files",
-    "title": "Overview",
-    "section": "",
-    "text": "The various parts, sections, and pages of this website provide a quick guide and resources for creating a quarto website. These include:\n\nSetup: Setting up quarto, VScode, and a quarto website project\n\nAlso includes install instructions for the various R packages described in this website\n\nqmd: Writing .qmd files with markdown\ncss: Setting the website theme, and the text font & colour\n\nThis shows the use of .scss files (Sass: Syntactically Awesome Style Sheets)\n\nyml: Setting the format, structure, and other global options for the website",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "setup/setup.html#create-quarto-website-project",
-    "href": "setup/setup.html#create-quarto-website-project",
-    "title": "Setup",
-    "section": "",
-    "text": "You can create a quarto project in 2 different way, a quarto command or copying a template.\n\n\nIn the command palette in VScode (the text bar at the top middle) type in the following:\n&gt;Quarto: Create Project\nFurther instructions are here: Quarto Website Quick Start\n\n\n\nOptionally, you can copy a template or other project from github and edit it.\nIf you already have the files you can then copy and paste to a new directory (ensure you don’t copy over any git files/directories if you do this).\nTo download all the files of a gihub repo:\n\nNavigate to the page via a browser (e.g. https://github.com/m-gemmell/Quarto_guide)\nClick on the green &lt;&gt; Code button\nSelect “Download ZIP”",
-    "crumbs": [
-      "Setup"
-    ]
-  },
-  {
     "objectID": "qmds/callouts.html#note",
     "href": "qmds/callouts.html#note",
     "title": "Callouts",
     "section": "",
     "text": "Note\n\n\n\nThis is a note.\n\n\nCode:\n\n::: {.callout-note}\nThis is a note.\n:::",
+    "crumbs": [
+      "qmd",
+      "Static",
+      "Callouts"
+    ]
+  },
+  {
+    "objectID": "qmds/callouts.html#tip",
+    "href": "qmds/callouts.html#tip",
+    "title": "Callouts",
+    "section": "",
+    "text": "Tip\n\n\n\nCallout blocks are nice to alert people to certain information.\n\n\nCode:\n\n::: {.callout-tip}\nCallout blocks are nice to alert people to certain information.\n:::",
     "crumbs": [
       "qmd",
       "Static",
@@ -360,162 +443,193 @@
     ]
   },
   {
-    "objectID": "qmds/callouts.html#read-the-note-below",
-    "href": "qmds/callouts.html#read-the-note-below",
-    "title": "Callouts",
+    "objectID": "css/light_scss.html",
+    "href": "css/light_scss.html",
+    "title": "Light scss",
     "section": "",
-    "text": "Read the title above",
+    "text": "Light scss",
     "crumbs": [
-      "qmd",
-      "Callouts"
+      "css",
+      "Dark and Light",
+      "Light scss"
     ]
   },
   {
-    "objectID": "qmds/qmds.html#images",
-    "href": "qmds/qmds.html#images",
-    "title": "qmd files",
+    "objectID": "css/css.html",
+    "href": "css/css.html",
+    "title": "css",
     "section": "",
-    "text": "The below HTML code displays the image below it.\n\n![](/images/quarto_quarters.png){style=\"width:200px\" fig-align=\"center\"}\n\n\n\n\nYou can customise the display with various parts. Common inclusions for me are:\n\n![](/images/quarto_quarters.png){style=\"width:200px; border-radius:5px; background:white; border: white solid 5px\" fig-align=\"center\"}",
+    "text": "CSS stands for Cascading STyle Sheets and is a language for styling HTML web pages as well other documents.\nI specifically use .scss files (Sass: Syntactically Awesome Style Sheets). They have all the functionality of css files but more to make it easier.\n\n\nWe have set a light and dark theme for this website. Therefore we use 2 scss files:\n\nstyles_dark.scss for the dark theme\nstyles_light.scss for the light theme\n\nThese are designated in the format segment of our _quarto.yml file.\n\n\n\nAt the top of the css I import the fonts. To get the import text:\n\nGo to google fonts\nChoose a font\n\ne.g. Lexend\n\nOn the font page click “Get font” (top right)\nClick “&lt;&gt; Get embed code”\nI like to ensure only one font is chosen, bin any on the left that is not the one you want\nOn the Web tab choose “@import”\nCopy the embed code (you can exclude the &lt;style&gt; and &lt;/style))\nPaste into your scss",
     "crumbs": [
-      "qmd",
-      "qmd files"
+      "css"
     ]
   },
   {
-    "objectID": "yml/editor.html",
-    "href": "yml/editor.html",
-    "title": "Editor",
+    "objectID": "css/css.html#files",
+    "href": "css/css.html#files",
+    "title": "css",
     "section": "",
-    "text": "Editor"
-  },
-  {
-    "objectID": "qmds/images.html",
-    "href": "qmds/images.html",
-    "title": "Images",
-    "section": "",
-    "text": "Images\nThe below HTML code displays the image below it.\n\n![](/images/quarto_quarters.png){style=\"width:200px\" fig-align=\"center\"}\n\n\n\n\nYou can customise the display with various parts. Common inclusions for me are:\n\n![](/images/quarto_quarters.png){style=\"width:200px; border-radius:5px; background:white; border: white solid 5px\" fig-align=\"center\"}\n\n\n\n\n\n\nThe various options included above are:\n\nstyle=: Various style options\n\nwidth:: sets maximum width of image\n\nMax width of our site’s main are is 1200px, see yml format\nUseful to do this way so images don’t become tiny on a mobile phone.\nIf the width of the page is smaller than the set width it will interactively set the image to 100%\n\nborder-radius: adds curved corners, good for images with cornered background\n\n5px to 15px is generally a good range\n\nbackground: sets the background colour\nborder: sets the colour style and thickness of a border\n\nThese three options can be in any order\n\n\nfig-align= sets the alignment of the image\n\nTips:\n\nYou can use hexadecimals for colours (e.g. #111111)\nEnsure you have the ; between the different options in style=\"\"",
+    "text": "We have set a light and dark theme for this website. Therefore we use 2 scss files:\n\nstyles_dark.scss for the dark theme\nstyles_light.scss for the light theme\n\nThese are designated in the format segment of our _quarto.yml file.",
     "crumbs": [
-      "qmd",
-      "Static",
-      "Images"
+      "css"
     ]
   },
   {
-    "objectID": "qmds/tippy_tooltips.html",
-    "href": "qmds/tippy_tooltips.html",
-    "title": "Tippy tooltips",
+    "objectID": "css/css.html#fonts",
+    "href": "css/css.html#fonts",
+    "title": "css",
     "section": "",
-    "text": "You can add tooltips into R markdown with the Tippy R package which uses Tippy.js.\n\n\nA tooltip is text that appears when you hover your mouse over an item such as text. Text with tooltips are signified by being underlined. Hover your cursor over the below text to see and example.\nText\n\n\n\n\n\n\n\n\n\nA tool tips needs 2 bits of “code”. The html code in the text and the R code to create the tippy tooltip.\n\n\nThe first is the inline HTML code to denote which word has which tooltip. This is shown below where we flank our word (Text) with html elements. These elements:\n\nUnderline our text &lt;u&gt;&lt;\\u&gt;\nSpecify the tippy tooltip to use id='word'\n\n&lt;u id='word'&gt;Text&lt;/u&gt; \n\n\n\n\n\n\nNoteTooltip location\n\n\n\nTippy tooltips can be placed anywhere in a sentence like here or here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe second bit of code is creating the tooltip. As this is R we create this in an R code block and set echo=FALSE so the code is not shown in the page.\n```{r, echo=FALSE}\n#Tippy tooltips\ntippy::tippy_this(elementId = \"word\", \n                  tooltip = \"This is the tooltip text\",\n                  arrow = TRUE, \n                  placement = \"bottom\")\n```\nThe options of the function are:\n\nelementId: Element to add the tooltip to via its ID.\ntooltip: Text to include in the tooltip.\narrow: Specifies if the tooltip will have an arrow pointing to the text the tooltip refers to.\nplacement: Placement of the tooltip relative to the text the tooltip refers to.\n\nOther options are available for tippy:tippy_this() based on Tippy.js props. For an example see how arrow= is used above compared to the Tippy.js arrow prop.\n\n\n\n\n\n\nNoteR code location\n\n\n\nThe R code for creating the tippy tooltip\n\n\n\n\n\n\nI would suggest adding the following to your styles_light.css and styles_dark.scss file to increase the text and box size of the tooltip.\n\n.tippy-tooltip {\n  font-size: 16px;\n  padding: 3px 5px;\n}\n\n\n\n\nYou can have multiple tooltips in one paragraph . You can even use the same tooltip multiple\ntimes but you only need one tippy_this() call for each ID.\nHowever, you must have each tippy_this() call needed for each .qmd page on each relevant page. I suggest having one code block with all required tippy_this() calls for the required page at the bottom of that page.\n\n\n\n\n\n\n\n\n\n\nMarkdown text for above:\nYou can have \n&lt;u id='multiple'&gt;multiple&lt;/u&gt; \ntooltips in one \n&lt;u id='paragraph'&gt;paragraph&lt;/u&gt; \n. You can even use the same tooltip \n&lt;u id='multiple'&gt;multiple&lt;/u&gt;  \ntimes but only needing one `tippy_this()` call for each ID.\n\nHowever, you must have each `tippy_this()` call needed for each __.Rmd__ page on each relevant page.\nI suggest having one code block with all required `tippy_this()` \ncalls for the required page at the bottom of that page.\nR code for above:\n```{r, echo=FALSE}\n#Tippy tooltips\ntippy::tippy_this(elementId = \"multiple\", \n                  tooltip = \"More than one\",\n                  arrow = TRUE, placement = \"bottom\")\ntippy::tippy_this(elementId = \"paragraph\", \n                  tooltip = \"a distinct section of a piece of writing\",\n                  arrow = TRUE, placement = \"bottom\")\n```\n\n\n\nSee install instructions in the setup page.",
+    "text": "At the top of the css I import the fonts. To get the import text:\n\nGo to google fonts\nChoose a font\n\ne.g. Lexend\n\nOn the font page click “Get font” (top right)\nClick “&lt;&gt; Get embed code”\nI like to ensure only one font is chosen, bin any on the left that is not the one you want\nOn the Web tab choose “@import”\nCopy the embed code (you can exclude the &lt;style&gt; and &lt;/style))\nPaste into your scss",
+    "crumbs": [
+      "css"
+    ]
+  },
+  {
+    "objectID": "css/dark_scss.html",
+    "href": "css/dark_scss.html",
+    "title": "Dark scss",
+    "section": "",
+    "text": "Dark scss",
+    "crumbs": [
+      "css",
+      "Dark and Light",
+      "Dark scss"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Overview",
+    "section": "",
+    "text": "The following website contains a quick guide/cookbook for creating websites with quarto.\n\n\nOnce you have created your various quarto files you can create your website’s html files with the following command in bash.\n\nquarto preview\n\n\n\n\n\n\n\nNote\n\n\n\nEnsue you are in the main directory of your quarto project when running the above.\n\n\nWhen you run the above it will create the files but also open a preview of the website in a browser. With the render-on-save: true in our _quarto.yml file the preview will update as you save changes in your files. However, this seems to be a bit consistent, to force the preview to update go to your _quart.yml file and save it. You can do this even if their are no changes to the _quarto.yml to save.\nYou can host your html files through various means. I use the free service GitHub pages.\n\n\n\nThe various parts, sections, and pages of this website provide a quick guide and resources for creating a quarto website. These include:\n\nSetup: Setting up quarto, VScode, and a quarto website project\n\nAlso includes install instructions for the various R packages described in this website\n\nqmd: Writing .qmd files with markdown\ncss: Setting the website theme, and the text font & colour\n\nThis shows the use of .scss files (Sass: Syntactically Awesome Style Sheets)\n\nyml: Setting the format, structure, and other global options for the website\n\n\n\n\nOther resources include:\n\nMain Quarto website\nQuarto: The practical Guide",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#authoring-a-website",
+    "href": "index.html#authoring-a-website",
+    "title": "Overview",
+    "section": "",
+    "text": "Once you have created your various quarto files you can create your website’s html files with the following command in bash.\n\nquarto preview\n\n\n\n\n\n\n\nNote\n\n\n\nEnsue you are in the main directory of your quarto project when running the above.\n\n\nWhen you run the above it will create the files but also open a preview of the website in a browser. With the render-on-save: true in our _quarto.yml file the preview will update as you save changes in your files. However, this seems to be a bit consistent, to force the preview to update go to your _quart.yml file and save it. You can do this even if their are no changes to the _quarto.yml to save.\nYou can host your html files through various means. I use the free service GitHub pages.",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#creating-quarto-files",
+    "href": "index.html#creating-quarto-files",
+    "title": "Overview",
+    "section": "",
+    "text": "The various parts, sections, and pages of this website provide a quick guide and resources for creating a quarto website. These include:\n\nSetup: Setting up quarto, VScode, and a quarto website project\n\nAlso includes install instructions for the various R packages described in this website\n\nqmd: Writing .qmd files with markdown\ncss: Setting the website theme, and the text font & colour\n\nThis shows the use of .scss files (Sass: Syntactically Awesome Style Sheets)\n\nyml: Setting the format, structure, and other global options for the website",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#further-resources",
+    "href": "index.html#further-resources",
+    "title": "Overview",
+    "section": "",
+    "text": "Other resources include:\n\nMain Quarto website\nQuarto: The practical Guide",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "qmds/code.html",
+    "href": "qmds/code.html",
+    "title": "Code",
+    "section": "",
+    "text": "You can include various code blocks. We’ll demonstrate with R code initially.\n\n\nYou can include inline code.\nThis sentence ends with a number created by inline code, 1+1 = 2.\nThe above sentence in markdown code:\nThis sentence ends with a number created by inline code, 1+1 = `r 1+1`.\n\n\n\nCode block and output:\n\n1+1\n\n[1] 2\n\n\nCode block markdown code:\n```{r}\n1+1\n```\n\n\n\nTo show the code block but not the output add the option eval=FALSE\n\n#Below is some example code that we don't want markdown/quarto to run\n#We just want the code block to be displayed\nlong_function(x=long_data, y=more_data)\n\nCode block markdown code:\n```{r, eval=FALSE}\n#Below is some example code that we don't want markdown/quarto to run\n#We just want the code block to be displayed\nlong_function(x=long_data, y=more_data)\n```\n\n\n\nTo show only the output but not the code block add the option echo=FALSE\n\n\n[1] 1200\n\n\nCode block markdown code:\n```{r, echo=FALSE}\n100*12\n```\n\n\n\nLibraries need to be loaded for each page you want to use them.\nYou can add the below code block at the top of your markdown page to silently load the Tidyverse package. Otherwise your markdown file will have all the unneeded output from loading a library.\n```{r, echo=FALSE, warning=FALSE, results=FALSE, output=FALSE}\n#Load library so functions run smoothly\nlibrary(tidyverse)\n```\n\n\n\nYou can include bash and python code.\n\n\nPython code:\n\n1+1\n\nMarkdown code:\n```{python, eval=FALSE}\n1+1\n```\nMore information include installation instructions here: Quarto Using Python\n\n\n\nLinux code:\n\ncd ~/project_dir/analysis_1\n\n```{bash,eval=FALSE}\ncd ~/project_dir/analysis_1\n```\n\n\n\nIf your page has no R code and uses non-R languages you will need the below code at the top of each .qmd page that contains non R code. This will mean you will still produce .html pages. You need this even if you set eval=FALSE.\n\n---\nengine: knitr\n---\n\n\n\n\n\nYou can display the markdown code for a code block.\nCode block:\n\n1+1\n\n[1] 2\n\n\nMarkdown code for code block:\n```{r}\n1+1\n```\nMarkdown code for code block’s markdown code:\n````{verbatim}\n```{r, eval=TRUE}\n1 + 1\n```\n````\n\n\n\n\n\n\nNoteVerbatim a verbatim\n\n\n\n\n\nIf you want to verbatim a verbatim you’ll need to add an extra back tick (`).\nMarkdown code for last verbatim code:\n`````{verbatim}\n````{verbatim}\n```{r, eval=TRUE}\n1 + 1\n```\n````\n`````",
     "crumbs": [
       "qmd",
       "Interactive",
-      "Tippy tooltips"
+      "Code"
     ]
   },
   {
-    "objectID": "qmds/webexercises.html#example",
-    "href": "qmds/webexercises.html#example",
-    "title": "Webexercises",
-    "section": "Example",
-    "text": "Example\nMCQ:\n\nQuestion?\n\n A1 A2 A3\n\n\nCode:\n```{r, echo = FALSE}\nopts_p &lt;- c(\"**A1**\", \"**A2**\", answer=\"**A3**\")\n```\n1. Question? `r longmcq(opts_p)`",
-    "crumbs": [
-      "qmd",
-      "Interactive",
-      "Webexercises"
-    ]
-  },
-  {
-    "objectID": "qmds/webexercises.html#template",
-    "href": "qmds/webexercises.html#template",
-    "title": "Webexercises",
-    "section": "template",
-    "text": "template\n```{r, echo = FALSE}\nopts_p &lt;- c(\"** **\", \"** **\", \"** **\")\n```\n`r longmcq(opts_p)`",
-    "crumbs": [
-      "qmd",
-      "Interactive",
-      "Webexercises"
-    ]
-  },
-  {
-    "objectID": "qmds/webexercises.html#expandable-box",
-    "href": "qmds/webexercises.html#expandable-box",
-    "title": "Webexercises",
-    "section": "Expandable box",
-    "text": "Expandable box\nExpandable box:\n\n\nTitle\n\nContents\n\nCode:\n\n`r hide(\"Title\")`\nContents\n`r unhide()`\n\nOptionally, you may want to use a callout block.\n\n\n\n\n\n\nNoteTitle\n\n\n\n\n\nContents\n\n\n\n\n::: {.callout-note collapse=\"true\" title=\"Title\"}\nContents\n:::",
-    "crumbs": [
-      "qmd",
-      "Interactive",
-      "Webexercises"
-    ]
-  },
-  {
-    "objectID": "qmds/tippy_tooltips.html#css",
-    "href": "qmds/tippy_tooltips.html#css",
-    "title": "Tippy tooltips",
+    "objectID": "qmds/code.html#inline-code",
+    "href": "qmds/code.html#inline-code",
+    "title": "Code",
     "section": "",
-    "text": "I would suggest adding the following to your styles_light.css and styles_dark.scss file to increase the text and box size of the tooltip.\n\n.tippy-tooltip {\n  font-size: 16px;\n  padding: 3px 5px;\n}",
+    "text": "You can include inline code.\nThis sentence ends with a number created by inline code, 1+1 = 2.\nThe above sentence in markdown code:\nThis sentence ends with a number created by inline code, 1+1 = `r 1+1`.",
     "crumbs": [
       "qmd",
       "Interactive",
-      "Tippy tooltips"
+      "Code"
     ]
   },
   {
-    "objectID": "qmds/tippy_tooltips.html#multilpe-instances",
-    "href": "qmds/tippy_tooltips.html#multilpe-instances",
-    "title": "Tippy tooltips",
+    "objectID": "qmds/code.html#code-block",
+    "href": "qmds/code.html#code-block",
+    "title": "Code",
     "section": "",
-    "text": "You can have multiple tooltips in one paragraph . You can even use the same tooltip multiple\ntimes but you only need one tippy_this() call for each ID.\nHowever, you must have each tippy_this() call needed for each .qmd page on each relevant page. I suggest having one code block with all required tippy_this() calls for the required page at the bottom of that page.\n\n\n\n\n\n\n\n\n\n\nMarkdown text for above:\nYou can have \n&lt;u id='multiple'&gt;multiple&lt;/u&gt; \ntooltips in one \n&lt;u id='paragraph'&gt;paragraph&lt;/u&gt; \n. You can even use the same tooltip \n&lt;u id='multiple'&gt;multiple&lt;/u&gt;  \ntimes but only needing one `tippy_this()` call for each ID.\n\nHowever, you must have each `tippy_this()` call needed for each __.Rmd__ page on each relevant page.\nI suggest having one code block with all required `tippy_this()` \ncalls for the required page at the bottom of that page.\nR code for above:\n```{r, echo=FALSE}\n#Tippy tooltips\ntippy::tippy_this(elementId = \"multiple\", \n                  tooltip = \"More than one\",\n                  arrow = TRUE, placement = \"bottom\")\ntippy::tippy_this(elementId = \"paragraph\", \n                  tooltip = \"a distinct section of a piece of writing\",\n                  arrow = TRUE, placement = \"bottom\")\n```",
+    "text": "Code block and output:\n\n1+1\n\n[1] 2\n\n\nCode block markdown code:\n```{r}\n1+1\n```",
     "crumbs": [
       "qmd",
       "Interactive",
-      "Tippy tooltips"
+      "Code"
     ]
   },
   {
-    "objectID": "qmds/tippy_tooltips.html#tooltips",
-    "href": "qmds/tippy_tooltips.html#tooltips",
-    "title": "Tippy tooltips",
+    "objectID": "qmds/code.html#display-code-block",
+    "href": "qmds/code.html#display-code-block",
+    "title": "Code",
     "section": "",
-    "text": "A tooltip is text that appears when you hover your mouse over an item such as text. Text with tooltips are signified by being underlined. Hover your cursor over the below text to see and example.\nText",
+    "text": "To show the code block but not the output add the option eval=FALSE\n\n#Below is some example code that we don't want markdown/quarto to run\n#We just want the code block to be displayed\nlong_function(x=long_data, y=more_data)\n\nCode block markdown code:\n```{r, eval=FALSE}\n#Below is some example code that we don't want markdown/quarto to run\n#We just want the code block to be displayed\nlong_function(x=long_data, y=more_data)\n```",
     "crumbs": [
       "qmd",
       "Interactive",
-      "Tippy tooltips"
+      "Code"
     ]
   },
   {
-    "objectID": "qmds/tippy_tooltips.html#code",
-    "href": "qmds/tippy_tooltips.html#code",
-    "title": "Tippy tooltips",
+    "objectID": "qmds/code.html#display-output",
+    "href": "qmds/code.html#display-output",
+    "title": "Code",
     "section": "",
-    "text": "A tool tips needs 2 bits of “code”. The html code in the text and the R code to create the tippy tooltip.\n\n\nThe first is the inline HTML code to denote which word has which tooltip. This is shown below where we flank our word (Text) with html elements. These elements:\n\nUnderline our text &lt;u&gt;&lt;\\u&gt;\nSpecify the tippy tooltip to use id='word'\n\n&lt;u id='word'&gt;Text&lt;/u&gt; \n\n\n\n\n\n\nNoteTooltip location\n\n\n\nTippy tooltips can be placed anywhere in a sentence like here or here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe second bit of code is creating the tooltip. As this is R we create this in an R code block and set echo=FALSE so the code is not shown in the page.\n```{r, echo=FALSE}\n#Tippy tooltips\ntippy::tippy_this(elementId = \"word\", \n                  tooltip = \"This is the tooltip text\",\n                  arrow = TRUE, \n                  placement = \"bottom\")\n```\nThe options of the function are:\n\nelementId: Element to add the tooltip to via its ID.\ntooltip: Text to include in the tooltip.\narrow: Specifies if the tooltip will have an arrow pointing to the text the tooltip refers to.\nplacement: Placement of the tooltip relative to the text the tooltip refers to.\n\nOther options are available for tippy:tippy_this() based on Tippy.js props. For an example see how arrow= is used above compared to the Tippy.js arrow prop.\n\n\n\n\n\n\nNoteR code location\n\n\n\nThe R code for creating the tippy tooltip",
+    "text": "To show only the output but not the code block add the option echo=FALSE\n\n\n[1] 1200\n\n\nCode block markdown code:\n```{r, echo=FALSE}\n100*12\n```",
     "crumbs": [
       "qmd",
       "Interactive",
-      "Tippy tooltips"
+      "Code"
     ]
   },
   {
-    "objectID": "setup/setup.html#r-package-installs",
-    "href": "setup/setup.html#r-package-installs",
-    "title": "Setup",
+    "objectID": "qmds/code.html#libraries",
+    "href": "qmds/code.html#libraries",
+    "title": "Code",
     "section": "",
-    "text": "Their are various R packages that are shown for various functions in quarto. Below are the install instructions for them all.\n\n#Webexercises\ninstall.packages(\"webexercises\")\n#Tippy tooltips\ninstall.packages(\"tippy\")\n#Reticulate to allow use of python in knitr\ninstall.packages(\"reticulate\")\n#Icons, below code also included in that section in this guide\ninstall.packages(\"remotes\")\nremotes::install_github(\"mitchelloharawild/icons\")\n#Download icon sets\nicons::download_fontawesome()\nicons::download_ionicons()\nicons::download_bioicons()",
-    "crumbs": [
-      "Setup"
-    ]
-  },
-  {
-    "objectID": "qmds/tippy_tooltips.html#package-install",
-    "href": "qmds/tippy_tooltips.html#package-install",
-    "title": "Tippy tooltips",
-    "section": "",
-    "text": "See install instructions in the setup page.",
+    "text": "Libraries need to be loaded for each page you want to use them.\nYou can add the below code block at the top of your markdown page to silently load the Tidyverse package. Otherwise your markdown file will have all the unneeded output from loading a library.\n```{r, echo=FALSE, warning=FALSE, results=FALSE, output=FALSE}\n#Load library so functions run smoothly\nlibrary(tidyverse)\n```",
     "crumbs": [
       "qmd",
       "Interactive",
-      "Tippy tooltips"
+      "Code"
+    ]
+  },
+  {
+    "objectID": "qmds/code.html#non-r-code",
+    "href": "qmds/code.html#non-r-code",
+    "title": "Code",
+    "section": "",
+    "text": "You can include bash and python code.\n\n\nPython code:\n\n1+1\n\nMarkdown code:\n```{python, eval=FALSE}\n1+1\n```\nMore information include installation instructions here: Quarto Using Python\n\n\n\nLinux code:\n\ncd ~/project_dir/analysis_1\n\n```{bash,eval=FALSE}\ncd ~/project_dir/analysis_1\n```\n\n\n\nIf your page has no R code and uses non-R languages you will need the below code at the top of each .qmd page that contains non R code. This will mean you will still produce .html pages. You need this even if you set eval=FALSE.\n\n---\nengine: knitr\n---",
+    "crumbs": [
+      "qmd",
+      "Interactive",
+      "Code"
+    ]
+  },
+  {
+    "objectID": "qmds/code.html#verbatim",
+    "href": "qmds/code.html#verbatim",
+    "title": "Code",
+    "section": "",
+    "text": "You can display the markdown code for a code block.\nCode block:\n\n1+1\n\n[1] 2\n\n\nMarkdown code for code block:\n```{r}\n1+1\n```\nMarkdown code for code block’s markdown code:\n````{verbatim}\n```{r, eval=TRUE}\n1 + 1\n```\n````\n\n\n\n\n\n\nNoteVerbatim a verbatim\n\n\n\n\n\nIf you want to verbatim a verbatim you’ll need to add an extra back tick (`).\nMarkdown code for last verbatim code:\n`````{verbatim}\n````{verbatim}\n```{r, eval=TRUE}\n1 + 1\n```\n````\n`````",
+    "crumbs": [
+      "qmd",
+      "Interactive",
+      "Code"
     ]
   },
   {
@@ -528,30 +642,6 @@
       "qmd",
       "Static",
       "Icons"
-    ]
-  },
-  {
-    "objectID": "qmds/icons.html#installing-icons",
-    "href": "qmds/icons.html#installing-icons",
-    "title": "Icons",
-    "section": "",
-    "text": "See install and icon set download instructions in the setup page.",
-    "crumbs": [
-      "qmd",
-      "Static",
-      "Icons"
-    ]
-  },
-  {
-    "objectID": "qmds/callouts.html#tip",
-    "href": "qmds/callouts.html#tip",
-    "title": "Callouts",
-    "section": "",
-    "text": "Tip\n\n\n\nCallout blocks are nice to alert people to certain information.\n\n\nCode:\n\n::: {.callout-tip}\nCallout blocks are nice to alert people to certain information.\n:::",
-    "crumbs": [
-      "qmd",
-      "Static",
-      "Callouts"
     ]
   },
   {
@@ -615,157 +705,27 @@
     ]
   },
   {
-    "objectID": "qmds/videos.html",
-    "href": "qmds/videos.html",
-    "title": "Videos",
+    "objectID": "qmds/icons.html#installing-icons",
+    "href": "qmds/icons.html#installing-icons",
+    "title": "Icons",
     "section": "",
-    "text": "You can embed online hosted videos on a site. Here we show how to do this for youtube videos.\n\n\nAdd the following code to where you want the URL to be embedded. Change the link to the embed link of your video.\n\n&lt;div class=\"container\"&gt;\n&lt;iframe src=\"https://www.youtube.com/embed/U_RkeDVU2cg\" \nframeborder=\"0\" allowfullscreen class=\"video\"&gt;&lt;/iframe&gt;\n&lt;/div&gt;\n\n\n\n\n\n\n\n\n\nTo ensure the video embed takes up the entire width of the page you can include the following in your .scss files.\n\n.container {\n    position: relative;\n    width: 100%;\n    height: 0;\n    padding-bottom: 56.25%;\n}\n.video {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n}",
-    "crumbs": [
-      "qmd",
-      "Interactive",
-      "Videos"
-    ]
-  },
-  {
-    "objectID": "qmds/videos.html#embed-code",
-    "href": "qmds/videos.html#embed-code",
-    "title": "Videos",
-    "section": "",
-    "text": "Add the following code to where you want the URL to be embedded. Change the link to the embed link of your video.\n\n&lt;div class=\"container\"&gt;\n&lt;iframe src=\"https://www.youtube.com/embed/U_RkeDVU2cg\" \nframeborder=\"0\" allowfullscreen class=\"video\"&gt;&lt;/iframe&gt;\n&lt;/div&gt;",
-    "crumbs": [
-      "qmd",
-      "Interactive",
-      "Videos"
-    ]
-  },
-  {
-    "objectID": "qmds/videos.html#styling",
-    "href": "qmds/videos.html#styling",
-    "title": "Videos",
-    "section": "",
-    "text": "To ensure the video embed takes up the entire width of the page you can include the following in your .scss files.\n\n.container {\n    position: relative;\n    width: 100%;\n    height: 0;\n    padding-bottom: 56.25%;\n}\n.video {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n}",
-    "crumbs": [
-      "qmd",
-      "Interactive",
-      "Videos"
-    ]
-  },
-  {
-    "objectID": "css/css.html#files",
-    "href": "css/css.html#files",
-    "title": "css",
-    "section": "",
-    "text": "We have set a light and dark theme for this website. Therefore we use 2 scss files:\n\nstyles_dark.scss for the dark theme\nstyles_light.scss for the light theme\n\nThese are designated in the format segment of our _quarto.yml file.",
-    "crumbs": [
-      "css"
-    ]
-  },
-  {
-    "objectID": "css/light_scss.html",
-    "href": "css/light_scss.html",
-    "title": "Light scss",
-    "section": "",
-    "text": "Light scss",
-    "crumbs": [
-      "css",
-      "Dark and Light",
-      "Light scss"
-    ]
-  },
-  {
-    "objectID": "css/dark_scss.html",
-    "href": "css/dark_scss.html",
-    "title": "Dark scss",
-    "section": "",
-    "text": "Dark scss",
-    "crumbs": [
-      "css",
-      "Dark and Light",
-      "Dark scss"
-    ]
-  },
-  {
-    "objectID": "qmds/github_code_embed.html",
-    "href": "qmds/github_code_embed.html",
-    "title": "Github code embed",
-    "section": "",
-    "text": "Github code embed\nTo embed code from a github page you can use the site https://emgithub.com/.\nTo do so:\n\nPut the link to the github file into the top bar\nChange the theme from Default to A 11 Y Dark or A 11 Y Light\n\nThe default does not work properly with the dark theme of our websites\n\nPress Go\nCopy the code form the &lt;iframe&gt; to embed\n\nThis displays the exact code as shown in the preview\nIf you use the &lt;script&gt; the code highlighting may be difficult to read due to your format and css settings\n\nPaste the code into your .qmd file\n\nFor example:\nGithub link: https://github.com/m-gemmell/Quarto_guide/blob/main/qmds/example_github_code.R\nThe script for embedding (A 11 Y Dark):\n\n&lt;iframe frameborder=\"0\" scrolling=\"no\" style=\"width:100%; height:120px;\" allow=\"clipboard-write\" src=\"https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fm-gemmell%2FQuarto_guide%2Fblob%2Fmain%2Fqmds%2Fexample_github_code.R&style=a11y-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on\"&gt;&lt;/iframe&gt;\n\nThe embed:\n\n\nThe same embed but with A 11 Light looks like so:",
+    "text": "See install and icon set download instructions in the setup page.",
     "crumbs": [
       "qmd",
       "Static",
-      "Github code embed"
+      "Icons"
     ]
   },
   {
-    "objectID": "qmds/code.html#code-block",
-    "href": "qmds/code.html#code-block",
-    "title": "Code",
+    "objectID": "qmds/markdown.html",
+    "href": "qmds/markdown.html",
+    "title": "Markdown",
     "section": "",
-    "text": "Code block and output:\n\n1+1\n\n[1] 2\n\n\nCode block markdown code:\n```{r}\n1+1\n```",
+    "text": "Markdown\nQuarto markdown basics page\n\n\n\n\n\n\nSource: https://opensource.posit.co/resources/cheatsheets/rmarkdown/",
     "crumbs": [
       "qmd",
-      "Interactive",
-      "Code"
-    ]
-  },
-  {
-    "objectID": "qmds/code.html#display-code-block",
-    "href": "qmds/code.html#display-code-block",
-    "title": "Code",
-    "section": "",
-    "text": "To show the code block but not the output add the option eval=FALSE\n\n#Below is some example code that we don't want markdown/quarto to run\n#We just want the code block to be displayed\nlong_function(x=long_data, y=more_data)\n\nCode block markdown code:\n```{r, eval=FALSE}\n#Below is some example code that we don't want markdown/quarto to run\n#We just want the code block to be displayed\nlong_function(x=long_data, y=more_data)\n```",
-    "crumbs": [
-      "qmd",
-      "Interactive",
-      "Code"
-    ]
-  },
-  {
-    "objectID": "qmds/code.html#display-output",
-    "href": "qmds/code.html#display-output",
-    "title": "Code",
-    "section": "",
-    "text": "To show only the output but not the code block add the option echo=FALSE\n\n\n[1] 1200\n\n\nCode block markdown code:\n```{r, echo=FALSE}\n100*12\n```",
-    "crumbs": [
-      "qmd",
-      "Interactive",
-      "Code"
-    ]
-  },
-  {
-    "objectID": "qmds/code.html#inline-code",
-    "href": "qmds/code.html#inline-code",
-    "title": "Code",
-    "section": "",
-    "text": "You can include inline code.\nThis sentence ends with a number created by inline code, 1+1 = 2.\nThe above sentence in markdown code:\nThis sentence ends with a number created by inline code, 1+1 = `r 1+1`.",
-    "crumbs": [
-      "qmd",
-      "Interactive",
-      "Code"
-    ]
-  },
-  {
-    "objectID": "qmds/code.html#verbatim",
-    "href": "qmds/code.html#verbatim",
-    "title": "Code",
-    "section": "",
-    "text": "You can display the markdown code for a code block.\nCode block:\n\n1+1\n\n[1] 2\n\n\nMarkdown code for code block:\n```{r}\n1+1\n```\nMarkdown code for code block’s markdown code:\n````{verbatim}\n```{r, eval=TRUE}\n1 + 1\n```\n````\n\n\n\n\n\n\nNoteVerbatim a verbatim\n\n\n\n\n\nIf you want to verbatim a verbatim you’ll need to add an extra back tick (`).\nMarkdown code for last verbatim code:\n`````{verbatim}\n````{verbatim}\n```{r, eval=TRUE}\n1 + 1\n```\n````\n`````",
-    "crumbs": [
-      "qmd",
-      "Interactive",
-      "Code"
-    ]
-  },
-  {
-    "objectID": "qmds/code.html#libraries",
-    "href": "qmds/code.html#libraries",
-    "title": "Code",
-    "section": "",
-    "text": "Libraries need to be loaded for each page you want to use them.\nYou can add the below code block at the top of your markdown page to silently load the Tidyverse package. Otherwise your markdown file will have all the unneeded output from loading a library.\n```{r, echo=FALSE, warning=FALSE, results=FALSE, output=FALSE}\n#Load library so functions run smoothly\nlibrary(tidyverse)\n```",
-    "crumbs": [
-      "qmd",
-      "Interactive",
-      "Code"
+      "Static",
+      "Markdown"
     ]
   },
   {
@@ -805,162 +765,114 @@
     ]
   },
   {
-    "objectID": "qmds/markdown.html",
-    "href": "qmds/markdown.html",
-    "title": "Markdown",
+    "objectID": "qmds/videos.html",
+    "href": "qmds/videos.html",
+    "title": "Videos",
     "section": "",
-    "text": "Markdown\nQuarto markdown basics page\n\n\n\n\n\n\nSource: https://opensource.posit.co/resources/cheatsheets/rmarkdown/",
+    "text": "You can embed online hosted videos on a site. Here we show how to do this for youtube videos.\n\n\nAdd the following code to where you want the URL to be embedded. Change the link to the embed link of your video.\n\n&lt;div class=\"container\"&gt;\n&lt;iframe src=\"https://www.youtube.com/embed/U_RkeDVU2cg\" \nframeborder=\"0\" allowfullscreen class=\"video\"&gt;&lt;/iframe&gt;\n&lt;/div&gt;\n\n\n\n\n\n\n\n\n\nTo ensure the video embed takes up the entire width of the page you can include the following in your .scss files.\n\n.container {\n    position: relative;\n    width: 100%;\n    height: 0;\n    padding-bottom: 56.25%;\n}\n.video {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n}",
     "crumbs": [
       "qmd",
-      "Static",
-      "Markdown"
+      "Interactive",
+      "Videos"
     ]
   },
   {
-    "objectID": "qmds/qmds.html#static",
-    "href": "qmds/qmds.html#static",
-    "title": "qmd files",
+    "objectID": "qmds/videos.html#embed-code",
+    "href": "qmds/videos.html#embed-code",
+    "title": "Videos",
     "section": "",
-    "text": "Markdown: Link to markdown intro and cheatsheets\nImages: Adding and formatting images\nCallouts: Callout blocks (e.g. note, tip, warning, etc.)\nIcons:  ,  , etc.\nTables: Making tables by “hand” and displaying R data.frames contents nicely\nGithub code embed: Embedding code from a file in a github repo",
+    "text": "Add the following code to where you want the URL to be embedded. Change the link to the embed link of your video.\n\n&lt;div class=\"container\"&gt;\n&lt;iframe src=\"https://www.youtube.com/embed/U_RkeDVU2cg\" \nframeborder=\"0\" allowfullscreen class=\"video\"&gt;&lt;/iframe&gt;\n&lt;/div&gt;",
     "crumbs": [
       "qmd",
-      "qmd files"
+      "Interactive",
+      "Videos"
     ]
   },
   {
-    "objectID": "qmds/qmds.html#interactive",
-    "href": "qmds/qmds.html#interactive",
-    "title": "qmd files",
+    "objectID": "qmds/videos.html#styling",
+    "href": "qmds/videos.html#styling",
+    "title": "Videos",
     "section": "",
-    "text": "Code: Running and/or displaying code\nTippy tooltips: Hovering over underlined text for a tooltip\nWebexercises: Adding interactive quizzes (MCQs)\nVideos: Embedding youtube videos",
+    "text": "To ensure the video embed takes up the entire width of the page you can include the following in your .scss files.\n\n.container {\n    position: relative;\n    width: 100%;\n    height: 0;\n    padding-bottom: 56.25%;\n}\n.video {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n}",
     "crumbs": [
       "qmd",
-      "qmd files"
+      "Interactive",
+      "Videos"
     ]
   },
   {
-    "objectID": "yml/yml_file.html",
-    "href": "yml/yml_file.html",
-    "title": "This site’s yml",
+    "objectID": "setup/setup.html",
+    "href": "setup/setup.html",
+    "title": "Setup",
     "section": "",
-    "text": "This site’s yml",
+    "text": "To use quarto I would suggest using VScode (You can “Disable Ai Features” in the settings).\nTo install Quarto see The Quarto Get Started page.\n\n\nFor this site you will also want to follow the below install instruction.\n\n\nR in Visual Studio Code\n\n\n\nCode Spell Checker: Useful for spell checking normal words\nWhen using this click on a misspelt word (signified by squiggly underlining) and press “ctrl+.” to get a dropdown of suggestions\nTo change to GB spelling:\n\nGo to “Extension” on VScode (On far left, icon is three squares and a diamond)\nClick on the gear icon for Code Spell Checker\nClick on “Settings”\nChange “C Spell: Language” to “en-GB”\n\n\n\n\n\nYou can create a quarto project in 2 different way, a quarto command or copying a template.\n\n\nIn the command palette in VScode (the text bar at the top middle) type in the following:\n&gt;Quarto: Create Project\nFurther instructions are here: Quarto Website Quick Start\n\n\n\nOptionally, you can copy a template or other project from github and edit it.\nIf you already have the files you can then copy and paste to a new directory (ensure you don’t copy over any git files/directories if you do this).\nTo download all the files of a gihub repo:\n\nNavigate to the page via a browser (e.g. https://github.com/m-gemmell/Quarto_guide)\nClick on the green &lt;&gt; Code button\nSelect “Download ZIP”\n\n\n\n\n\nTheir are various R packages that are shown for various functions in quarto. Below are the install instructions for them all.\n\n#Webexercises\ninstall.packages(\"webexercises\")\n#Tippy tooltips\ninstall.packages(\"tippy\")\n#Reticulate to allow use of python in knitr\ninstall.packages(\"reticulate\")\n#Icons, below code also included in that section in this guide\ninstall.packages(\"remotes\")\nremotes::install_github(\"mitchelloharawild/icons\")\n#Download icon sets\nicons::download_fontawesome()\nicons::download_ionicons()\nicons::download_bioicons()",
+    "crumbs": [
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "setup/setup.html#extensions",
+    "href": "setup/setup.html#extensions",
+    "title": "Setup",
+    "section": "",
+    "text": "For this site you will also want to follow the below install instruction.\n\n\nR in Visual Studio Code\n\n\n\nCode Spell Checker: Useful for spell checking normal words\nWhen using this click on a misspelt word (signified by squiggly underlining) and press “ctrl+.” to get a dropdown of suggestions\nTo change to GB spelling:\n\nGo to “Extension” on VScode (On far left, icon is three squares and a diamond)\nClick on the gear icon for Code Spell Checker\nClick on “Settings”\nChange “C Spell: Language” to “en-GB”",
+    "crumbs": [
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "setup/setup.html#create-quarto-website-project",
+    "href": "setup/setup.html#create-quarto-website-project",
+    "title": "Setup",
+    "section": "",
+    "text": "You can create a quarto project in 2 different way, a quarto command or copying a template.\n\n\nIn the command palette in VScode (the text bar at the top middle) type in the following:\n&gt;Quarto: Create Project\nFurther instructions are here: Quarto Website Quick Start\n\n\n\nOptionally, you can copy a template or other project from github and edit it.\nIf you already have the files you can then copy and paste to a new directory (ensure you don’t copy over any git files/directories if you do this).\nTo download all the files of a gihub repo:\n\nNavigate to the page via a browser (e.g. https://github.com/m-gemmell/Quarto_guide)\nClick on the green &lt;&gt; Code button\nSelect “Download ZIP”",
+    "crumbs": [
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "setup/setup.html#r-package-installs",
+    "href": "setup/setup.html#r-package-installs",
+    "title": "Setup",
+    "section": "",
+    "text": "Their are various R packages that are shown for various functions in quarto. Below are the install instructions for them all.\n\n#Webexercises\ninstall.packages(\"webexercises\")\n#Tippy tooltips\ninstall.packages(\"tippy\")\n#Reticulate to allow use of python in knitr\ninstall.packages(\"reticulate\")\n#Icons, below code also included in that section in this guide\ninstall.packages(\"remotes\")\nremotes::install_github(\"mitchelloharawild/icons\")\n#Download icon sets\nicons::download_fontawesome()\nicons::download_ionicons()\nicons::download_bioicons()",
+    "crumbs": [
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "yml/format.html",
+    "href": "yml/format.html",
+    "title": "Format",
+    "section": "",
+    "text": "Format\nGlobal format including themes of website\n\n#Format\nformat:\n  html:\n###Include table of contents\n### \"On this page\" right of page\n    toc: true\n\n###Page size\n    grid:\n####Width of sidebar\n      sidebar-width: 200px\n####Max width of main page\n      body-width: 1200px\n####Width of empty margin at right of toc\n#### needed to give room for long headers\n      margin-width: 150px\n####Space separating body from sidebar and toc  \n      gutter-width: 10px\n###Code highlighting style\n### a11y is accessible and auto switches between dark and light mode\n    highlight-style: a11y\n\n###Themes\n###HTML themes: https://quarto.org/docs/output-formats/html-themes.html\n    theme:\n####Dark theme with scss file\n      dark: [darkly, styles_dark.scss]\n####Light theme with scss\n      light: [styles_light.scss]\n####Any text not determined in scss files will be mainfont\n    mainfont: Lexend\n\n####Code will overflow in code blocks\n####set to scroll for scroll (i.e. horizontal scroll at bottom of block)\n    code-overflow: wrap\n###Paths for webexercises files\n    css: include/webex.css\n    include-after-body: include/webex.js\n\nHighlight\nAccessible code highlighting via a11y project.\nHow to incorporate in quarto via A Quarto tip a day",
     "crumbs": [
       "yml",
-      "This site's yml"
+      "Format"
     ]
   },
   {
-    "objectID": "yml/project_n_misc.html",
-    "href": "yml/project_n_misc.html",
-    "title": "Project and misc",
+    "objectID": "yml/page_footer.html",
+    "href": "yml/page_footer.html",
+    "title": "Page footer",
     "section": "",
-    "text": "There are a few segments that can be included at the top of the yml file.\n\n\nThe type of project (i.e. is it a website, book, etc.)\nFor a normal quarto website you can have the following.\n\nproject:\n  type: website\n\n\n\n\n\n\n\nTip\n\n\n\nNote that the top line of a segment (i.e. project:) has no indentation. Then all lines in that segment have at least one level of indentations (e.g. type:website has one level).\n\n\nYou can also create:\n\nBooks\nManuscripts\nPresentations\n\nThere are also other Project options than just type:. For example you can set the output director with output-dir:.\n\n\n\nEditor options. We set this part to try to ensure our preview updates when we save.\n\neditor:\n  render-on-save: true\n\n\n\n\nTry to force the use of knitr.\n\nknitr: true",
-    "crumbs": [
-      "yml",
-      "Project and misc"
-    ]
-  },
-  {
-    "objectID": "yml/project_n_misc.html#project",
-    "href": "yml/project_n_misc.html#project",
-    "title": "Project and misc",
-    "section": "",
-    "text": "The type of project (i.e. is it a website, book, etc.)\nFor a normal quarto website you can have the following.\n\nproject:\n  type: website\n\n\n\n\n\n\n\nTip\n\n\n\nNote that the top line of a segment (i.e. project:) has no indentation. Then all lines in that segment have at least one level of indentations (e.g. type:website has one level).\n\n\nYou can also create:\n\nBooks\nManuscripts\nPresentations\n\nThere are also other Project options than just type:. For example you can set the output director with output-dir:.",
-    "crumbs": [
-      "yml",
-      "Project and misc"
-    ]
-  },
-  {
-    "objectID": "yml/project_n_misc.html#editor",
-    "href": "yml/project_n_misc.html#editor",
-    "title": "Project and misc",
-    "section": "",
-    "text": "Editor options. We set this part to try to ensure our preview updates when we save.\n\neditor:\n  render-on-save: true",
-    "crumbs": [
-      "yml",
-      "Project and misc"
-    ]
-  },
-  {
-    "objectID": "yml/project_n_misc.html#knitr",
-    "href": "yml/project_n_misc.html#knitr",
-    "title": "Project and misc",
-    "section": "",
-    "text": "Try to force the use of knitr.\n\nknitr: true",
-    "crumbs": [
-      "yml",
-      "Project and misc"
-    ]
-  },
-  {
-    "objectID": "yml/website.html#main-options",
-    "href": "yml/website.html#main-options",
-    "title": "Website",
-    "section": "",
-    "text": "The main/overall options for the website segment I use are below:\n\nwebsite:\n  ## Turn Breadcrumbs off\n  bread-crumbs: false\n  ## Icon seen on tab\n  favicon: /images/favicon.png\n## Previous and next page links at bottom\n  page-navigation: true\n  ## Info seen when link is shared\n  title: \"Title\"\n  description: \"A description\"\n\nBreadcrumbs are the full path of a page is shown at the top, I keep this off.",
+    "text": "Page footer\nFooter to include various links and images.\nThis website:\n\n##Page footer\n  page-footer:\n    left: |\n      ![](/images/quarto_quarters.png){width=50}\n    center: |\n      [![](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K3K6IRLA0)\n\nNEOF:\n\n##Page footer\n  page-footer:\n    left: |\n      [![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png){fig-alt=\"CC BY-SA 4.0\" height=30px}](https://creativecommons.org/licenses/by-nc-sa/4.0/)\n    center: |\n      [![](/images/NEOF_rounded_corners.png){fig-alt=\"NEOF\" height=60px}](https://neof.org.uk/)\n\nCGR:\n\n##Page footer\n  page-footer:\n    center: |\n      [![](/images/CGR_large.png){fig-alt=\"CGR\" height=60px}](https://www.liverpool.ac.uk/genomic-research/)",
     "crumbs": [
       "yml",
       "Website & structure",
-      "Website"
+      "Page footer"
     ]
   },
   {
-    "objectID": "yml/website.html#sub-segments",
-    "href": "yml/website.html#sub-segments",
-    "title": "Website",
+    "objectID": "yml/sidebar.html",
+    "href": "yml/sidebar.html",
+    "title": "Sidebar",
     "section": "",
-    "text": "Navbar: Top navigation bar of website\n\nDetermines structure between segments\nLinks in hamburger menu if screen too narrow\n\nPage footer: Footer of page\nSidebar: Sidebar (i.e. left of page)\n\nDetermines structure within each segment",
+    "text": "This determines the structure of the segments and what is shown in the sidebar (left).\nWebsites are made out of:\n\nParts\nSections\nPages\n\nMore info: Quarto Side Navigation\n\n\nThe start up of the sidebar segment up to the end of the qmd section.\n\n##Sidebar\n  sidebar:\n###Overview part \n    - id: Overview\n      title: \"Overview\"\n      style: \"floating\"\n      contents:\n#####Index page\n        - href: index.qmd\n###Setup part\n    - id: Setup\n      title: \"Setup\"\n      style: \"floating\"\n      collapse-level: 2\n      contents:\n      - href: setup/setup.qmd\n###qmd part\n    - id: qmd\n      title: \"qmd\"\n      style: \"floating\"\n      collapse-level: 2\n      contents:\n      - href: qmds/qmds.qmd\n####Static section\n      - section: \"Static\"\n        contents:\n        - href: qmds/markdown.qmd\n        - href: qmds/images.qmd\n        - href: qmds/callouts.qmd\n        - href: qmds/icons.qmd\n        - href: qmds/tables.qmd\n        - href: qmds/github_code_embed.qmd\n####Interactive section\n      - section: \"Interactive\"\n        contents:\n        - href: qmds/code.qmd\n        - href: qmds/tippy_tooltips.qmd\n        - href: qmds/webexercises.qmd\n        - href: qmds/videos.qmd\n\n\n\n\n\nstyle: : Either “docked” or “floating”\ncollapse-level: : How many levels there are before sections are collapsed\n\n1: All sections are collapsed\n2: Sub-sections and beyond are collapsed\nNumbers continue but generally I won’t even have sub-sections so its normally a choice between 1 and 2 for me",
     "crumbs": [
       "yml",
       "Website & structure",
-      "Website"
-    ]
-  },
-  {
-    "objectID": "yml/navbar.html#main-options",
-    "href": "yml/navbar.html#main-options",
-    "title": "Navbar",
-    "section": "",
-    "text": "Template:\n\n  navbar:\n    #Title on top left of navbar\n    title: Title\n    #Image left of title\n    logo: \"images/logo.png\"\n    # When to collapse to hamburger menu\n    # lg is default\n    collapse-below: lg\n\n\n\n\n\n\n\nNote\n\n\n\nMind the indentation which is required.\n\n\n\n\n\n\n\n\nTip\n\n\n\nThe size of the logo is set in the css as .navbar-logo",
-    "crumbs": [
-      "yml",
-      "Website & structure",
-      "Navbar"
-    ]
-  },
-  {
-    "objectID": "yml/navbar.html#navbar-left",
-    "href": "yml/navbar.html#navbar-left",
-    "title": "Navbar",
-    "section": "",
-    "text": "This sub-segment determines the links of the parts to be displayed right of the title (left of navbar).\nThis site’s Navbar left:\n\n###Navbar left\n    left:\n      - text: \"Overview\"\n        href: index.qmd\n      - text: \"Setup\"\n        href: setup/setup.qmd\n      - text: \"qmd\"\n        href: qmds/qmds.qmd\n      - text: \"css\"\n        href: css/css.qmd\n      - text: \"yml\"\n        href: yml/yml.qmd",
-    "crumbs": [
-      "yml",
-      "Website & structure",
-      "Navbar"
-    ]
-  },
-  {
-    "objectID": "yml/navbar.html#navbar-right",
-    "href": "yml/navbar.html#navbar-right",
-    "title": "Navbar",
-    "section": "",
-    "text": "This sub-segment determines the various author’s links (e.g. bluesky and linkedin to include). By default a toggle for dark/light mode ( ) and a search button ( ) are included.\nMy personal links:\n\n###Navbar right\n    right:\n    # List of icons: https://icons.getbootstrap.com/\n      - icon: cup\n        href: https://ko-fi.com/waveofinspiration\n        aria-label: Ko-fi\n      - icon: bluesky\n        href: https://bsky.app/profile/m-gemmell.bsky.social\n        aria-label: BlueSky\n      - icon: github\n        href: https://github.com/m-gemmell/Quarto_guide\n        aria-label: GitHub\n\nNEOF links:\n\n###Navbar right\n    right:\n    - icon: house-fill\n      href: https://neof.org.uk/training/\n      aria-label: NEOF website\n    - icon: linkedin\n      href: https://www.linkedin.com/in/training-neof/\n      aria-label: LinkedIn\n    - icon: bluesky\n      href: https://bsky.app/profile/nerc-eof.bsky.social\n      aria-label: bluesky\n\nCGR links:\n\n###Navbar right\n    right:\n    - icon: house-fill\n      href: https://www.liverpool.ac.uk/genomic-research/\n      aria-label: CGR website\n    - icon: linkedin\n      href: https://www.linkedin.com/showcase/liverpool-shared-research-facilities\n      aria-label: LinkedIn",
-    "crumbs": [
-      "yml",
-      "Website & structure",
-      "Navbar"
-    ]
-  },
-  {
-    "objectID": "index.html#license",
-    "href": "index.html#license",
-    "title": "Overview",
-    "section": "",
-    "text": "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.",
-    "crumbs": [
-      "Overview"
+      "Sidebar"
     ]
   },
   {
@@ -969,18 +881,6 @@
     "title": "Sidebar",
     "section": "",
     "text": "The start up of the sidebar segment up to the end of the qmd section.\n\n##Sidebar\n  sidebar:\n###Overview part \n    - id: Overview\n      title: \"Overview\"\n      style: \"floating\"\n      contents:\n#####Index page\n        - href: index.qmd\n###Setup part\n    - id: Setup\n      title: \"Setup\"\n      style: \"floating\"\n      collapse-level: 2\n      contents:\n      - href: setup/setup.qmd\n###qmd part\n    - id: qmd\n      title: \"qmd\"\n      style: \"floating\"\n      collapse-level: 2\n      contents:\n      - href: qmds/qmds.qmd\n####Static section\n      - section: \"Static\"\n        contents:\n        - href: qmds/markdown.qmd\n        - href: qmds/images.qmd\n        - href: qmds/callouts.qmd\n        - href: qmds/icons.qmd\n        - href: qmds/tables.qmd\n        - href: qmds/github_code_embed.qmd\n####Interactive section\n      - section: \"Interactive\"\n        contents:\n        - href: qmds/code.qmd\n        - href: qmds/tippy_tooltips.qmd\n        - href: qmds/webexercises.qmd\n        - href: qmds/videos.qmd",
-    "crumbs": [
-      "yml",
-      "Website & structure",
-      "Sidebar"
-    ]
-  },
-  {
-    "objectID": "yml/sidebar.html#section-options",
-    "href": "yml/sidebar.html#section-options",
-    "title": "Sidebar",
-    "section": "",
-    "text": "style: : Either “docked” or “floating”\ncollapse-level: : How many levels there are before sections are collapsed\n\n1: All sections are collapsed\n2: Sub-sections and beyond are collapsed\nNUmbers continue but generally I won’t even have sub-sections so its normally a choice between 1 and 2 for me\n\nalign:",
     "crumbs": [
       "yml",
       "Website & structure",
@@ -1000,13 +900,43 @@
     ]
   },
   {
-    "objectID": "css/css.html#fonts",
-    "href": "css/css.html#fonts",
-    "title": "css",
+    "objectID": "yml/yml.html",
+    "href": "yml/yml.html",
+    "title": "yml",
     "section": "",
-    "text": "At the top of the css I import the fonts. To get the import text:\n\nGo to google fonts\nChoose a font\n\ne.g. Lexend\n\nOn the font page click “Get font” (top right)\nClick “&lt;&gt; Get embed code”\nI like to ensure only one font is chosen, bin any on the left that is not the one you want\nOn the Web tab choose “@import”\nCopy the embed code (you can exclude the &lt;style&gt; and &lt;/style))\nPaste into your scss",
+    "text": "The file _quarto.yml determines the overall structure of the quarto website. It includes various segments.\n\n\n\nProject: Determines what kind of project you create\n\nThis website focusses on creating a website project but you can also create books, manuscripts, and presentations with quarto\n\nWebsite: General website and options and the structure of the website\n\n\n\n\nOne note is that indentation is vital in the file. Everything must be indented to to correct amount or creating the site will fail.\nAn example can be see in the following link containing the _quarto.yml file for this website.\nThe websites _quarto.yml on github\n\n\n\nAs we are creating a website we will include a website section.\nThis contains a lot of sub segments so please see the",
     "crumbs": [
-      "css"
+      "yml"
+    ]
+  },
+  {
+    "objectID": "yml/yml.html#segments",
+    "href": "yml/yml.html#segments",
+    "title": "yml",
+    "section": "",
+    "text": "Project: Determines what kind of project you create\n\nThis website focusses on creating a website project but you can also create books, manuscripts, and presentations with quarto\n\nWebsite: General website and options and the structure of the website",
+    "crumbs": [
+      "yml"
+    ]
+  },
+  {
+    "objectID": "yml/yml.html#indentation",
+    "href": "yml/yml.html#indentation",
+    "title": "yml",
+    "section": "",
+    "text": "One note is that indentation is vital in the file. Everything must be indented to to correct amount or creating the site will fail.\nAn example can be see in the following link containing the _quarto.yml file for this website.\nThe websites _quarto.yml on github",
+    "crumbs": [
+      "yml"
+    ]
+  },
+  {
+    "objectID": "yml/yml.html#website",
+    "href": "yml/yml.html#website",
+    "title": "yml",
+    "section": "",
+    "text": "As we are creating a website we will include a website section.\nThis contains a lot of sub segments so please see the",
+    "crumbs": [
+      "yml"
     ]
   }
 ]
