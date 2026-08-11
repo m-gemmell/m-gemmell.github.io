@@ -339,7 +339,7 @@
     "href": "qmds/github_code_embed.html",
     "title": "Github code embed",
     "section": "",
-    "text": "Github code embed\nTo embed code from a github page you can use the site https://emgithub.com/.\nTo do so:\n\nPut the link to the github file into the top bar\nChange the theme from Default to A 11 Y Dark or A 11 Y Light\n\nThe default does not work properly with the dark theme of our websites\n\nPress Go\nCopy the code form the &lt;iframe&gt; to embed\n\nThis displays the exact code as shown in the preview\nIf you use the &lt;script&gt; the code highlighting may be difficult to read due to your format and css settings\n\nPaste the code into your .qmd file\n\nFor example:\nGithub link: https://github.com/m-gemmell/Quarto_guide/blob/main/qmds/example_github_code.R\nThe script for embedding (A 11 Y Dark):\n\n&lt;iframe frameborder=\"0\" scrolling=\"no\" style=\"width:100%; height:120px;\" allow=\"clipboard-write\" src=\"https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fm-gemmell%2FQuarto_guide%2Fblob%2Fmain%2Fqmds%2Fexample_github_code.R&style=a11y-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on\"&gt;&lt;/iframe&gt;\n\nThe embed:\n\n\nThe same embed but with A 11 Light looks like so:",
+    "text": "To embed code from a github page you can use the site https://emgithub.com/. The major benefit of this is that the embedded script will be automatically updated when the file/code in the github repo is updated.\nTo do so:\n\nPut the link to the github file into the top bar\nChange the theme from Default to A 11 Y Dark or A 11 Y Light\n\nThe default does not work properly with the dark theme of our websites\n\nPress Go\nCopy the code form the &lt;iframe&gt; to embed\n\nThis displays the exact code as shown in the preview\nIf you use the &lt;script&gt; the code highlighting may be difficult to read due to your format and css settings\n\nPaste the code into your .qmd file\n\nFor example:\nGithub link: https://github.com/m-gemmell/Quarto_guide/blob/main/qmds/example_github_code.R\nThe script for embedding (A 11 Y Dark):\n\n&lt;iframe frameborder=\"0\" scrolling=\"no\" style=\"width:100%; height:120px;\" allow=\"clipboard-write\" src=\"https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fm-gemmell%2FQuarto_guide%2Fblob%2Fmain%2Fqmds%2Fexample_github_code.R&style=a11y-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on\"&gt;&lt;/iframe&gt;\n\nThe embed:\n\n\nThe same embed but with A 11 Light looks like so:\n\n\n\n\nThe style= part is used to set your width and height. These can be set in percentage (%) or pixels (px).\n\n\nWhen you set width by a percentage it sets the width based on the page width. Therefore, if you set width:100% it will take up 100% of the available width (e.g. 1200 pixels on a page with width of 1200 pixels).\n\n\n\nWhen you set height by a percentage it sets the height based on the default height of 150 pixels. Therefore, height:100% equates to height:150px no matter what.\nThis is unfortunate as our embedded code will update whenever the file/code on the github repo updates. Though this is wanted it means if the height (number of lines) increases the bottom will get cut-off due to the setting of height: (in style=).\nA work around is to set your height: to a value much larger than produced by the website above. If the height is much larger than the actual code the embed will only take up as much height as it needs. See this in action below where we set the height to 5,000 pixels (height:5000).\nThe script with height of 5,000 pixels:\n\n&lt;iframe frameborder=\"0\" scrolling=\"no\" style=\"width:100%; height:5000px;\" allow=\"clipboard-write\" src=\"https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fm-gemmell%2FQuarto_guide%2Fblob%2Fmain%2Fqmds%2Fexample_github_code.R&style=a11y-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on\"&gt;&lt;/iframe&gt;\n\nThe embed where height was set to 5,000 pixels but it only uses the height it needs (120 pixels):",
     "crumbs": [
       "qmd",
       "Static",
@@ -447,7 +447,7 @@
     "href": "css/light_scss.html",
     "title": "Light scss",
     "section": "",
-    "text": "Light scss",
+    "text": "Light scss\nLink to embedded code below",
     "crumbs": [
       "css",
       "Dark and Light",
@@ -845,7 +845,7 @@
     "href": "yml/format.html",
     "title": "Format",
     "section": "",
-    "text": "Format\nGlobal format including themes of website\n\n#Format\nformat:\n  html:\n###Include table of contents\n### \"On this page\" right of page\n    toc: true\n\n###Page size\n    grid:\n####Width of sidebar\n      sidebar-width: 200px\n####Max width of main page\n      body-width: 1200px\n####Width of empty margin at right of toc\n#### needed to give room for long headers\n      margin-width: 150px\n####Space separating body from sidebar and toc  \n      gutter-width: 10px\n###Code highlighting style\n### a11y is accessible and auto switches between dark and light mode\n    highlight-style: a11y\n\n###Themes\n###HTML themes: https://quarto.org/docs/output-formats/html-themes.html\n    theme:\n####Dark theme with scss file\n      dark: [darkly, styles_dark.scss]\n####Light theme with scss\n      light: [styles_light.scss]\n####Any text not determined in scss files will be mainfont\n    mainfont: Lexend\n\n####Code will overflow in code blocks\n####set to scroll for scroll (i.e. horizontal scroll at bottom of block)\n    code-overflow: wrap\n###Paths for webexercises files\n    css: include/webex.css\n    include-after-body: include/webex.js\n\nHighlight\nAccessible code highlighting via a11y project.\nHow to incorporate in quarto via A Quarto tip a day",
+    "text": "Format\nGlobal format including themes of website\n\n#Format\nformat:\n  html:\n###Include table of contents\n### \"On this page\" right of page\n    toc: true\n\n###Page size\n    grid:\n####Width of sidebar\n      sidebar-width: 200px\n####Max width of main page\n      body-width: 1200px\n####Width of empty margin at right of toc\n#### needed to give room for long headers\n      margin-width: 150px\n####Space separating body from sidebar and toc  \n      gutter-width: 10px\n\n###Code highlighting style\n### a11y is accessible and auto switches between dark and light mode\n    highlight-style: a11y\n\n####Code will overflow in code blocks\n####set to scroll for scroll (i.e. horizontal scroll at bottom of block)\n    code-overflow: wrap\n\n###Themes\n###HTML themes: https://quarto.org/docs/output-formats/html-themes.html\n    theme:\n####Dark theme with scss file\n      dark: [darkly, styles_dark.scss]\n####Light theme with scss\n      light: [styles_light.scss]\n####Any text not determined in scss files will be mainfont\n    mainfont: Lexend\n\n###Paths for webexercises files\n    css: include/webex.css\n    include-after-body: include/webex.js\n\nHighlight\nAccessible code highlighting via a11y project.\nHow to incorporate in quarto via A Quarto tip a day",
     "crumbs": [
       "yml",
       "Format"
@@ -904,7 +904,7 @@
     "href": "yml/yml.html",
     "title": "yml",
     "section": "",
-    "text": "The file _quarto.yml determines the overall structure of the quarto website. It includes various segments.\n\n\n\nProject: Determines what kind of project you create\n\nThis website focusses on creating a website project but you can also create books, manuscripts, and presentations with quarto\n\nWebsite: General website and options and the structure of the website\n\n\n\n\nOne note is that indentation is vital in the file. Everything must be indented to to correct amount or creating the site will fail.\nAn example can be see in the following link containing the _quarto.yml file for this website.\nThe websites _quarto.yml on github\n\n\n\nAs we are creating a website we will include a website section.\nThis contains a lot of sub segments so please see the",
+    "text": "The file _quarto.yml determines the overall structure of the quarto website. It includes various segments.\n\n\n\nProject: Determines what kind of project you create\n\nThis website focusses on creating a website project but you can also create books, manuscripts, and presentations with quarto\n\nWebsite: General website and options and the structure of the website\nFormat: GLobal format options including format of pages, code highlighting, themes, font,, and including css files\n\n\n\n\nOne note is that indentation is vital in the file. Everything must be indented to to correct amount or creating the site will fail.\nAn example can be see in the following link containing the _quarto.yml file for this website.\nThe websites _quarto.yml on github",
     "crumbs": [
       "yml"
     ]
@@ -935,6 +935,40 @@
     "title": "yml",
     "section": "",
     "text": "As we are creating a website we will include a website section.\nThis contains a lot of sub segments so please see the",
+    "crumbs": [
+      "yml"
+    ]
+  },
+  {
+    "objectID": "qmds/github_code_embed.html#setting-width-amd-height",
+    "href": "qmds/github_code_embed.html#setting-width-amd-height",
+    "title": "Github code embed",
+    "section": "",
+    "text": "The style= part is used to set your width and height. These can be set in percentage (%) or pixels (px).\n\n\nWhen you set width by a percentage it sets the width based on the page width. Therefore, if you set width:100% it will take up 100% of the available width (e.g. 1200 pixels on a page with width of 1200 pixels).\n\n\n\nWhen you set height by a percentage it sets the height based on the default height of 150 pixels. Therefore, height:100% equates to height:150px no matter what.\nThis is unfortunate as our embedded code will update whenever the file/code on the github repo updates. Though this is wanted it means if the height (number of lines) increases the bottom will get cut-off due to the setting of height: (in style=).\nA work around is to set your height: to a value much larger than produced by the website above. If the height is much larger than the actual code the embed will only take up as much height as it needs. See this in action below where we set the height to 5,000 pixels (height:5000).\nThe script with height of 5,000 pixels:\n\n&lt;iframe frameborder=\"0\" scrolling=\"no\" style=\"width:100%; height:5000px;\" allow=\"clipboard-write\" src=\"https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fm-gemmell%2FQuarto_guide%2Fblob%2Fmain%2Fqmds%2Fexample_github_code.R&style=a11y-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on\"&gt;&lt;/iframe&gt;\n\nThe embed where height was set to 5,000 pixels but it only uses the height it needs (120 pixels):",
+    "crumbs": [
+      "qmd",
+      "Static",
+      "Github code embed"
+    ]
+  },
+  {
+    "objectID": "qmds/github_code_embed.html#setting-width-and-height",
+    "href": "qmds/github_code_embed.html#setting-width-and-height",
+    "title": "Github code embed",
+    "section": "",
+    "text": "The style= part is used to set your width and height. These can be set in percentage (%) or pixels (px).\n\n\nWhen you set width by a percentage it sets the width based on the page width. Therefore, if you set width:100% it will take up 100% of the available width (e.g. 1200 pixels on a page with width of 1200 pixels).\n\n\n\nWhen you set height by a percentage it sets the height based on the default height of 150 pixels. Therefore, height:100% equates to height:150px no matter what.\nThis is unfortunate as our embedded code will update whenever the file/code on the github repo updates. Though this is wanted it means if the height (number of lines) increases the bottom will get cut-off due to the setting of height: (in style=).\nA work around is to set your height: to a value much larger than produced by the website above. If the height is much larger than the actual code the embed will only take up as much height as it needs. See this in action below where we set the height to 5,000 pixels (height:5000).\nThe script with height of 5,000 pixels:\n\n&lt;iframe frameborder=\"0\" scrolling=\"no\" style=\"width:100%; height:5000px;\" allow=\"clipboard-write\" src=\"https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fm-gemmell%2FQuarto_guide%2Fblob%2Fmain%2Fqmds%2Fexample_github_code.R&style=a11y-dark&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on\"&gt;&lt;/iframe&gt;\n\nThe embed where height was set to 5,000 pixels but it only uses the height it needs (120 pixels):",
+    "crumbs": [
+      "qmd",
+      "Static",
+      "Github code embed"
+    ]
+  },
+  {
+    "objectID": "yml/yml.html#sections",
+    "href": "yml/yml.html#sections",
+    "title": "yml",
+    "section": "",
+    "text": "Project: Determines what kind of project you create\n\nThis website focusses on creating a website project but you can also create books, manuscripts, and presentations with quarto\n\nWebsite: General website and options and the structure of the website\nFormat: GLobal format options including format of pages, code highlighting, themes, font,, and including css files",
     "crumbs": [
       "yml"
     ]

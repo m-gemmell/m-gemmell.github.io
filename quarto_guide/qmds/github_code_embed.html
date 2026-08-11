@@ -455,7 +455,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#github-code-embed" id="toc-github-code-embed" class="nav-link active" data-scroll-target="#github-code-embed">Github code embed</a></li>
+  <li><a href="#github-code-embed" id="toc-github-code-embed" class="nav-link active" data-scroll-target="#github-code-embed">Github code embed</a>
+  <ul class="collapse">
+  <li><a href="#setting-width-and-height" id="toc-setting-width-and-height" class="nav-link" data-scroll-target="#setting-width-and-height">Setting width and height</a>
+  <ul class="collapse">
+  <li><a href="#width" id="toc-width" class="nav-link" data-scroll-target="#width">Width</a></li>
+  <li><a href="#height" id="toc-height" class="nav-link" data-scroll-target="#height">Height</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -468,7 +475,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="github-code-embed" class="level1">
 <h1>Github code embed</h1>
-<p>To embed code from a github page you can use the site <a href="https://emgithub.com/">https://emgithub.com/</a>.</p>
+<p>To embed code from a github page you can use the site <a href="https://emgithub.com/">https://emgithub.com/</a>. The major benefit of this is that the embedded script will be automatically updated when the file/code in the github repo is updated.</p>
 <p>To do so:</p>
 <ol type="1">
 <li>Put the link to the github file into the top bar</li>
@@ -496,8 +503,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The same embed but with A 11 Light looks like so:</p>
 <iframe frameborder="0" scrolling="no" style="width:100%; height:120px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fm-gemmell%2FQuarto_guide%2Fblob%2Fmain%2Fqmds%2Fexample_github_code.R&amp;style=a11y-light&amp;type=code&amp;showBorder=on&amp;showLineNumbers=on&amp;showFileMeta=on&amp;showFullPath=on&amp;showCopy=on">
 </iframe>
+<section id="setting-width-and-height" class="level2">
+<h2 class="anchored" data-anchor-id="setting-width-and-height">Setting width and height</h2>
+<p>The <code>style=</code> part is used to set your width and height. These can be set in percentage (<code>%</code>) or pixels (<code>px</code>).</p>
+<section id="width" class="level3">
+<h3 class="anchored" data-anchor-id="width">Width</h3>
+<p>When you set width by a percentage it sets the width based on the page width. Therefore, if you set <code>width:100%</code> it will take up 100% of the available width (e.g.&nbsp;1200 pixels on a page with width of 1200 pixels).</p>
+</section>
+<section id="height" class="level3">
+<h3 class="anchored" data-anchor-id="height">Height</h3>
+<p>When you set height by a percentage it sets the height based on the default height of 150 pixels. Therefore, <code>height:100%</code> equates to <code>height:150px</code> no matter what.</p>
+<p>This is unfortunate as our embedded code will update whenever the file/code on the github repo updates. Though this is wanted it means if the height (number of lines) increases the bottom will get cut-off due to the setting of <code>height:</code> (in <code>style=</code>).</p>
+<p>A work around is to set your <code>height:</code> to a value much larger than produced by the website above. If the height is much larger than the actual code the embed will only take up as much height as it needs. See this in action below where we set the height to 5,000 pixels (<code>height:5000</code>).</p>
+<p>The script with height of 5,000 pixels:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>iframe <span class="va">frameborder</span><span class="op">=</span><span class="st">"0"</span> <span class="va">scrolling</span><span class="op">=</span><span class="st">"no"</span> <span class="va">style</span><span class="op">=</span><span class="st">"width:100%; height:5000px;"</span> <span class="va">allow</span><span class="op">=</span><span class="st">"clipboard-write"</span> <span class="va">src</span><span class="op">=</span><span class="st">"https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fm-gemmell%2FQuarto_guide%2Fblob%2Fmain%2Fqmds%2Fexample_github_code.R&amp;style=a11y-dark&amp;type=code&amp;showBorder=on&amp;showLineNumbers=on&amp;showFileMeta=on&amp;showFullPath=on&amp;showCopy=on"</span><span class="op">&gt;&lt;</span>/iframe<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The embed where height was set to 5,000 pixels but it only uses the height it needs (120 pixels):</p>
+<iframe frameborder="0" scrolling="no" style="width:100%; height:5000px;" allow="clipboard-write" src="https://emgithub.com/iframe.html?target=https%3A%2F%2Fgithub.com%2Fm-gemmell%2FQuarto_guide%2Fblob%2Fmain%2Fqmds%2Fexample_github_code.R&amp;style=a11y-dark&amp;type=code&amp;showBorder=on&amp;showLineNumbers=on&amp;showFileMeta=on&amp;showFullPath=on&amp;showCopy=on">
+</iframe>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
