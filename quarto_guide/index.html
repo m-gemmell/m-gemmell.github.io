@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -75,12 +78,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-5a2acb6f4ed5aeb23a104ba421924b87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3419ea62b3ca2d77d3d547f86109e84e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-eaeb381c6b7494c50009502241a4985c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ee0e945e86d16400581ceb923bc98653.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7c63447129950cdf2aaac41ba8a88410.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-37a216eecdf72f2205faecdd6f3ccf5c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-fbf135a87ec3d9126eaed902e593a2f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -373,6 +376,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
   <ul class="collapse">
+  <li><a href="#preview" id="toc-preview" class="nav-link" data-scroll-target="#preview">Preview</a></li>
   <li><a href="#authoring-a-website" id="toc-authoring-a-website" class="nav-link" data-scroll-target="#authoring-a-website">Authoring a website</a></li>
   <li><a href="#creating-quarto-files" id="toc-creating-quarto-files" class="nav-link" data-scroll-target="#creating-quarto-files">Creating quarto files</a></li>
   <li><a href="#further-resources" id="toc-further-resources" class="nav-link" data-scroll-target="#further-resources">Further resources</a></li>
@@ -395,9 +399,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>The following website contains a quick guide/cookbook for creating websites with quarto.</p>
-<section id="authoring-a-website" class="level2">
-<h2 class="anchored" data-anchor-id="authoring-a-website">Authoring a website</h2>
-<p>Once you have created your various quarto files you can create your website’s html files with the following command in bash.</p>
+<section id="preview" class="level2">
+<h2 class="anchored" data-anchor-id="preview">Preview</h2>
+<p>As you are working on the site you can preview it. This will open up the website on a browser.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -416,6 +420,28 @@ Note
 </div>
 <p>When you run the above it will create the files but also open a preview of the website in a browser. With the <code>render-on-save: true</code> in our <a href="./yml/editor.html"><code>_quarto.yml</code> file</a> the preview will update as you save changes in your files. However, this seems to be a bit consistent, to force the preview to update go to your <code>_quart.yml</code> file and save it. You can do this even if their are no changes to the <code>_quarto.yml</code> to save.</p>
 <p>You can host your html files through various means. I use the free service <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">GitHub pages</a>.</p>
+</section>
+<section id="authoring-a-website" class="level2">
+<h2 class="anchored" data-anchor-id="authoring-a-website">Authoring a website</h2>
+<p>Previewing the site (above) is quick as it only rebuilds pages that have been edited. However, this may cause some pages to not have the correct options in the navbar.</p>
+<p>To fully recreate the website you can render it:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ensue you are in the main directory of your quarto project when running the above.</p>
+</div>
+</div>
+<p>This command can take quite a while as it remakes all the pages of the website. However, it is very good to one when you have made the final version of the site or a major change.</p>
 </section>
 <section id="creating-quarto-files" class="level2">
 <h2 class="anchored" data-anchor-id="creating-quarto-files">Creating quarto files</h2>
@@ -1069,7 +1095,7 @@ window.onload = function() {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><img src=".\images/quarto_quarters.png" class="img-fluid" width="50"></p>
+<p><img src="./images/quarto_quarters.png" class="img-fluid" width="50"></p>
 </div>   
     <div class="nav-footer-center">
 <p><a href="https://ko-fi.com/K3K6IRLA0"><img src="https://ko-fi.com/img/githubbutton_sm.svg" class="img-fluid"></a></p>

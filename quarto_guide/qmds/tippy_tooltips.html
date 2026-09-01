@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -77,12 +80,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-5a2acb6f4ed5aeb23a104ba421924b87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3419ea62b3ca2d77d3d547f86109e84e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-eaeb381c6b7494c50009502241a4985c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ee0e945e86d16400581ceb923bc98653.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-7c63447129950cdf2aaac41ba8a88410.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-37a216eecdf72f2205faecdd6f3ccf5c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-fbf135a87ec3d9126eaed902e593a2f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -111,21 +114,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <link href="../site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
-
 <script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-
 <link href="../site_libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet">
-
 <link href="../site_libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet">
-
 <link href="../site_libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet">
-
 <link href="../site_libs/tippyjs-3.2.0/themes/translucent.css" rel="stylesheet">
-
 <script src="../site_libs/tippyjs-3.2.0/tippy.all.min.js"></script>
-
 <script src="../site_libs/tippy-binding-0.1.0/tippy.js"></script>
-
 
 
 <link rel="stylesheet" href="../include/webex.css">
@@ -502,8 +497,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><u id="word">Text</u></p>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-a7baaa065be7cf7f1e4a" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-a7baaa065be7cf7f1e4a">{"x":{"element":"word","opts":{"content":"This is the tooltip text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d3e71fdeeb9a2d4e6fb5" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-d3e71fdeeb9a2d4e6fb5">{"x":{"element":"word","opts":{"content":"This is the tooltip text","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -533,12 +528,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-d026f925aca51393cdd6" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-d026f925aca51393cdd6">{"x":{"element":"here","opts":{"content":"This is word has a tooltip","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-6273f895c68b9de1cc71" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-6273f895c68b9de1cc71">{"x":{"element":"here","opts":{"content":"This is word has a tooltip","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-be5b3f420a5398a8a9c8" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-be5b3f420a5398a8a9c8">{"x":{"element":"here2","opts":{"content":"This word also has a tooltip","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-323edebd73504044fe2e" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-323edebd73504044fe2e">{"x":{"element":"here2","opts":{"content":"This word also has a tooltip","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -592,12 +587,12 @@ times but you only need one <code>tippy_this()</code> call for each ID.</p>
 <p>However, you must have each <code>tippy_this()</code> call needed for each <strong>.qmd</strong> page on each relevant page. I suggest having one code block with all required <code>tippy_this()</code> calls for the required page at the bottom of that page.</p>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-7ade7317c4fc7523e2ae" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-7ade7317c4fc7523e2ae">{"x":{"element":"multiple","opts":{"content":"More than one","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-b191ce3e6e6038d5caab" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-b191ce3e6e6038d5caab">{"x":{"element":"multiple","opts":{"content":"More than one","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-44377657cc9a49465b4e" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-44377657cc9a49465b4e">{"x":{"element":"paragraph","opts":{"content":"a distinct section of a piece of writing","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="464px" id="htmlwidget-f024891d1fb77e6af447" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-f024891d1fb77e6af447">{"x":{"element":"paragraph","opts":{"content":"a distinct section of a piece of writing","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p>Markdown text for above:</p>
@@ -1267,7 +1262,7 @@ window.onload = function() {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p><img src="..\images/quarto_quarters.png" class="img-fluid" width="50"></p>
+<p><img src="../images/quarto_quarters.png" class="img-fluid" width="50"></p>
 </div>   
     <div class="nav-footer-center">
 <p><a href="https://ko-fi.com/K3K6IRLA0"><img src="https://ko-fi.com/img/githubbutton_sm.svg" class="img-fluid"></a></p>
