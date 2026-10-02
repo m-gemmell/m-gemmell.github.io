@@ -136,7 +136,7 @@
     "href": "qmds/webexercises.html",
     "title": "Webexercises",
     "section": "",
-    "text": "webexercises is an R package that allows you to include interactive quizzes in quarto markdown (.qmd) and R markdown (.Rmd) created html pages.\nThis page includes:\n\nMCQ examples & template\nExpandable box example/template\nInstallation\nInitialisation for your quarto project\n\nThere are other widgets that I don’t find use for in the webexercises website.",
+    "text": "webexercises is an R package that allows you to include interactive quizzes in quarto markdown (.qmd) and R markdown (.Rmd) created html pages.\nThis page includes:\n\nMCQ examples & template\nExpandable box example/template\nInstallation\nInitialisation for your quarto project\n\nThere are other widgets that I don’t find use for in the webexercises website.\n\n\n\n\nMCQ:\n\nQuestion?\n\n A1 A2 A3\n\n\nCode:\n```{r, echo = FALSE}\nopts_p &lt;- c(\"**A1**\", \"**A2**\", answer=\"**A3**\")\n```\n1. Question? `r longmcq(opts_p)`\n\n\n\n```{r, echo = FALSE}\nopts_p &lt;- c(\"** **\", \"** **\", \"** **\")\n```\n`r longmcq(opts_p)`\n\n\n\n\nExpandable box:\n\n\nTitle\n\nContents\n\nCode:\n\n`r hide(\"Title\")`\nContents\n`r unhide()`\n\nOptionally, you may want to use a callout block.\n\n\n\n\n\n\nNoteTitle\n\n\n\n\n\nContents\n\n\n\n\n::: {.callout-note collapse=\"true\" title=\"Title\"}\nContents\n:::\n\n\n\n\nSee install instruction in the setup page.\n\n\n\nOpen the main directory of your quarto site (directory that contains the index.qmd and _quarto.yml). Run the following command in an R terminal:\n\nlibrary(\"webexercises\")\nwebexercises::add_to_quarto()\n\nThis will add the following:\nA webex.css and webex.js in an include directory. For a nice MCQ presentation i change the .webex-radiogroup label in webex.css to:\n\n.webex-radiogroup label {\n  /*Text colour*/\n  color: : #aaaaaa;\n  margin-left: 2em;\n  margin-bottom: 0.25em;\n  text-indent: -1em;\n  padding-left: 0.5em;\n  font-weight: 400;\n  display: block;\n  /*Set border of text to solid and dark grey*/\n  border: 2px solid #808080;\n  border-radius: 0.25em;\n}\n\nAdditionally, a webexercises.qmd file is created. This contains examples of the various different quizzes. I delete this.",
     "crumbs": [
       "qmd",
       "Interactive",
@@ -144,23 +144,11 @@
     ]
   },
   {
-    "objectID": "qmds/webexercises.html#example",
-    "href": "qmds/webexercises.html#example",
+    "objectID": "qmds/webexercises.html#mcqs",
+    "href": "qmds/webexercises.html#mcqs",
     "title": "Webexercises",
-    "section": "Example",
-    "text": "Example\nMCQ:\n\nQuestion?\n\n A1 A2 A3\n\n\nCode:\n```{r, echo = FALSE}\nopts_p &lt;- c(\"**A1**\", \"**A2**\", answer=\"**A3**\")\n```\n1. Question? `r longmcq(opts_p)`",
-    "crumbs": [
-      "qmd",
-      "Interactive",
-      "Webexercises"
-    ]
-  },
-  {
-    "objectID": "qmds/webexercises.html#template",
-    "href": "qmds/webexercises.html#template",
-    "title": "Webexercises",
-    "section": "template",
-    "text": "template\n```{r, echo = FALSE}\nopts_p &lt;- c(\"** **\", \"** **\", \"** **\")\n```\n`r longmcq(opts_p)`",
+    "section": "",
+    "text": "MCQ:\n\nQuestion?\n\n A1 A2 A3\n\n\nCode:\n```{r, echo = FALSE}\nopts_p &lt;- c(\"**A1**\", \"**A2**\", answer=\"**A3**\")\n```\n1. Question? `r longmcq(opts_p)`\n\n\n\n```{r, echo = FALSE}\nopts_p &lt;- c(\"** **\", \"** **\", \"** **\")\n```\n`r longmcq(opts_p)`",
     "crumbs": [
       "qmd",
       "Interactive",
@@ -171,8 +159,8 @@
     "objectID": "qmds/webexercises.html#expandable-box",
     "href": "qmds/webexercises.html#expandable-box",
     "title": "Webexercises",
-    "section": "Expandable box",
-    "text": "Expandable box\nExpandable box:\n\n\nTitle\n\nContents\n\nCode:\n\n`r hide(\"Title\")`\nContents\n`r unhide()`\n\nOptionally, you may want to use a callout block.\n\n\n\n\n\n\nNoteTitle\n\n\n\n\n\nContents\n\n\n\n\n::: {.callout-note collapse=\"true\" title=\"Title\"}\nContents\n:::",
+    "section": "",
+    "text": "Expandable box:\n\n\nTitle\n\nContents\n\nCode:\n\n`r hide(\"Title\")`\nContents\n`r unhide()`\n\nOptionally, you may want to use a callout block.\n\n\n\n\n\n\nNoteTitle\n\n\n\n\n\nContents\n\n\n\n\n::: {.callout-note collapse=\"true\" title=\"Title\"}\nContents\n:::",
     "crumbs": [
       "qmd",
       "Interactive",
@@ -183,8 +171,8 @@
     "objectID": "qmds/webexercises.html#install",
     "href": "qmds/webexercises.html#install",
     "title": "Webexercises",
-    "section": "Install",
-    "text": "Install\nSee install instruction in the setup page.",
+    "section": "",
+    "text": "See install instruction in the setup page.",
     "crumbs": [
       "qmd",
       "Interactive",
@@ -195,8 +183,8 @@
     "objectID": "qmds/webexercises.html#initialise",
     "href": "qmds/webexercises.html#initialise",
     "title": "Webexercises",
-    "section": "Initialise",
-    "text": "Initialise\nOpen the main directory of your quarto site (directory that contains the index.qmd and _quarto.yml). Run the following command in an R terminal:\n\nlibrary(\"webexercises\")\nwebexercises::add_to_quarto()\n\nThis will add the following:\nA webex.css and webex.js in an include directory. For a nice MCQ presentation i change the .webex-radiogroup label in webex.css to:\n\n.webex-radiogroup label {\n  /*Text colour*/\n  color: : #aaaaaa;\n  margin-left: 2em;\n  margin-bottom: 0.25em;\n  text-indent: -1em;\n  padding-left: 0.5em;\n  font-weight: 400;\n  display: block;\n  /*Set border of text to solid and dark grey*/\n  border: 2px solid #808080;\n  border-radius: 0.25em;\n}\n\nAdditionally, a webexercises.qmd file is created. This contains examples of the various different quizzes. I delete this.",
+    "section": "",
+    "text": "Open the main directory of your quarto site (directory that contains the index.qmd and _quarto.yml). Run the following command in an R terminal:\n\nlibrary(\"webexercises\")\nwebexercises::add_to_quarto()\n\nThis will add the following:\nA webex.css and webex.js in an include directory. For a nice MCQ presentation i change the .webex-radiogroup label in webex.css to:\n\n.webex-radiogroup label {\n  /*Text colour*/\n  color: : #aaaaaa;\n  margin-left: 2em;\n  margin-bottom: 0.25em;\n  text-indent: -1em;\n  padding-left: 0.5em;\n  font-weight: 400;\n  display: block;\n  /*Set border of text to solid and dark grey*/\n  border: 2px solid #808080;\n  border-radius: 0.25em;\n}\n\nAdditionally, a webexercises.qmd file is created. This contains examples of the various different quizzes. I delete this.",
     "crumbs": [
       "qmd",
       "Interactive",
